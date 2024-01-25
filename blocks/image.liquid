@@ -1,0 +1,83 @@
+{% style %}
+  #shopify-block-{{ block.id }} img {
+    aspect-ratio: {{ block.settings.ratio }};
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-block-{{ block.id }} {
+      width: {{ block.settings.width }}%;
+    }
+
+    .layout--row > #shopify-block-{{ block.id }} {
+      width: calc({{ block.settings.width }}% - var(--layout-gap));
+    }
+  }
+{% endstyle %}
+
+{%- if block.settings.image -%}
+  {{
+    block.settings.image
+    | image_url: width: 3840
+    | image_tag: width: section.settings.image.width, widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+  }}
+{%- else -%}
+  <div
+    class="placeholder-image"
+    style="aspect-ratio:{% if block.settings.ratio == 'auto' %}1{% else %}{{ block.settings.ratio }}{% endif %};"
+  >
+    {{ 'detailed-apparel-1' | placeholder_svg_tag: 'image-placeholder-svg' }}
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Image",
+  "class": "image-block",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "range",
+      "id": "width",
+      "label": "Width",
+      "min": 20,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "paragraph",
+      "content": "Width is automatically optimized for mobile."
+    },
+    {
+      "type": "select",
+      "id": "ratio",
+      "label": "Image ratio",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Adapt to image"
+        },
+        {
+          "value": "1",
+          "label": "Square"
+        },
+        {
+          "value": "16 / 9",
+          "label": "Landscape"
+        },
+        {
+          "value": "2 / 3",
+          "label": "Portrait"
+        }
+      ],
+      "default": "auto"
+    }
+  ],
+  "presets": [{ "name": "Image" }]
+}
+{% endschema %}

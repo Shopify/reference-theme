@@ -1,0 +1,176 @@
+{% style %}
+  .section-content-wrapper--{{ section.id }} {
+    padding-block-start: {{ section.settings.padding_top}}px;
+    padding-block-end: {{ section.settings.padding_bottom}}px;
+    flex-direction: {{ section.settings.direction }};
+    {% if section.settings.direction == 'row' %}
+      justify-content: {{ section.settings.justify_content }};
+    {% else %}
+      align-items: {{ section.settings.justify_content }};
+    {% endif %}
+  }
+{% endstyle %}
+
+<div
+  class="color-{{ section.settings.color_scheme }} page-width{% if section.settings.full_width %} page-width--full{% endif %} featured-product-section"
+>
+  <div class="layout layout--{{ section.settings.direction }} section-content-wrapper section-content-wrapper--{{ section.id }}">
+    {% content_for "blocks" %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Featured product",
+  "class": "section--group",
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "Content direction",
+      "options": [
+        {
+          "value": "row",
+          "label": "Horizontal"
+        },
+        {
+          "value": "column",
+          "label": "Vertical"
+        }
+      ],
+      "default": "row"
+    },
+    {
+      "type": "select",
+      "id": "justify_content",
+      "label": "Content position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Start"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "End"
+        }
+      ],
+      "default": "flex-start"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Make section full width",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 30
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured product",
+      "blocks": [
+        {
+          "type": "product-medias",
+          "settings": {
+            "product": "{{ section.settings.product }}",
+            "media_featured": true,
+            "width": 50
+          }
+        },
+        {
+          "type": "group",
+          "settings": {
+            "direction": "column",
+            "width": 45
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "settings": {
+                "text": "<p>{{ section.settings.product.vendor }}<\/p>"
+              }
+            },
+            {
+              "type": "text",
+              "settings": {
+                "text": "<h1>{{ section.settings.product.title }}<\/h1>"
+              }
+            },
+            {
+              "type": "price",
+              "settings": {
+                "product": "{{ section.settings.product }}"
+              }
+            },
+            {
+              "type": "variant-picker",
+              "settings": {
+                "product": "{{ section.settings.product }}"
+              }
+            },
+            {
+              "type": "quantity-selector",
+              "settings": {
+                "product": "{{ section.settings.product }}"
+              }
+            },
+            {
+              "type": "buy-buttons",
+              "settings": {
+                "product": "{{ section.settings.product }}"
+              }
+            },
+            {
+              "type": "link",
+              "settings": {
+                "label": "View full details",
+                "style_class": "link",
+                "icon": "arrow",
+                "icon_position": "right"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,45 @@
+{% liquid
+  assign target = product
+  if block.settings.product != blank
+    assign target = block.settings.product
+  endif
+
+  assign product_form_id = 'product-form-' | append: section.id | append: product.id
+%}
+
+<product-inputs
+  class="quantity-block"
+  {{ block.shopify_attributes }}
+  data-section="{{ section.id }}{{ target.id }}"
+  data-input-name="quantity"
+>
+  <label for="product-{{ block.id }}-{{ target.id }}">Quantity</label>
+  <quantity-input class="quantity-button-wrapper">
+    <button class="quantity-button minus-button" type="button" name="minus">-</button>
+    <input
+      type="number"
+      id="product-{{ block.id }}-{{ target.id }}"
+      class="quantity-input"
+      name="quantity"
+      min="1"
+      value="1"
+      form="{{ product_form_id }}"
+    >
+    <button class="quantity-button plus-button" type="button" name="plus">+</button>
+  </quantity-input>
+</product-inputs>
+
+{% schema %}
+{
+  "name": "Product (quantity select)",
+  "tag": null,
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    }
+  ],
+  "presets": [{ "name": "Product (quantity select)" }]
+}
+{% endschema %}

@@ -1,0 +1,300 @@
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "f3655535-32dc-4b1a-8f58-041cd0dce0ec": {
+      "type": "custom-section",
+      "blocks": {
+        "5b635cb0-c1b4-408f-a776-d6977e4ff9d4": {
+          "type": "group",
+          "settings": {
+            "direction": "row",
+            "justify_content": "center",
+            "color_scheme": "scheme-3",
+            "width": 100,
+            "padding": 32
+          },
+          "blocks": {
+            "9cc54c93-6a58-4e2a-9d88-52487650a55a": {
+              "type": "link",
+              "settings": {
+                "link": "",
+                "label": "",
+                "style_class": "link",
+                "open_in_new_tab": false,
+                "icon": "facebook",
+                "icon_position": "left"
+              }
+            },
+            "fe27ca06-6185-474c-8c9a-40107d6c28df": {
+              "type": "link",
+              "settings": {
+                "link": "",
+                "label": "",
+                "style_class": "link",
+                "open_in_new_tab": false,
+                "icon": "instagram",
+                "icon_position": "left"
+              }
+            },
+            "d930cb7c-bf9b-4d68-9858-0476cb895b19": {
+              "type": "link",
+              "settings": {
+                "link": "",
+                "label": "",
+                "style_class": "link",
+                "open_in_new_tab": false,
+                "icon": "pinterest",
+                "icon_position": "left"
+              }
+            },
+            "02a44ad5-639e-4850-b541-ccd97beae61b": {
+              "type": "link",
+              "settings": {
+                "link": "",
+                "label": "",
+                "style_class": "link",
+                "open_in_new_tab": false,
+                "icon": "snapchat",
+                "icon_position": "left"
+              }
+            },
+            "710961e1-8fee-48b8-a16e-bedc585eb74e": {
+              "type": "link",
+              "settings": {
+                "link": "",
+                "label": "",
+                "style_class": "link",
+                "open_in_new_tab": false,
+                "icon": "tiktok",
+                "icon_position": "left"
+              }
+            },
+            "40095e17-a6ec-47d5-ac80-7167ad63f29e": {
+              "type": "link",
+              "settings": {
+                "link": "",
+                "label": "",
+                "style_class": "link",
+                "open_in_new_tab": false,
+                "icon": "tumblr",
+                "icon_position": "left"
+              }
+            },
+            "61868283-b9f6-4e7b-9937-76d1dc8b5dfe": {
+              "type": "link",
+              "settings": {
+                "link": "",
+                "label": "",
+                "style_class": "link",
+                "open_in_new_tab": false,
+                "icon": "twitter",
+                "icon_position": "left"
+              }
+            }
+          },
+          "block_order": [
+            "9cc54c93-6a58-4e2a-9d88-52487650a55a",
+            "fe27ca06-6185-474c-8c9a-40107d6c28df",
+            "d930cb7c-bf9b-4d68-9858-0476cb895b19",
+            "02a44ad5-639e-4850-b541-ccd97beae61b",
+            "710961e1-8fee-48b8-a16e-bedc585eb74e",
+            "40095e17-a6ec-47d5-ac80-7167ad63f29e",
+            "61868283-b9f6-4e7b-9937-76d1dc8b5dfe"
+          ]
+        },
+        "group_VFkXXa": {
+          "type": "group",
+          "settings": {
+            "direction": "row",
+            "justify_content": "flex-start",
+            "color_scheme": "scheme-3",
+            "width": 100,
+            "padding": 16
+          },
+          "blocks": {
+            "group_reBQFj": {
+              "type": "group",
+              "settings": {
+                "direction": "column",
+                "justify_content": "flex-start",
+                "color_scheme": "scheme-3",
+                "width": 40,
+                "padding": 16
+              },
+              "blocks": {
+                "heading_F6mpHV": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "Get to know us",
+                    "heading_size": "h3",
+                    "alignment": "start"
+                  }
+                },
+                "link_AJyYJ4": {
+                  "type": "link",
+                  "settings": {
+                    "link": "",
+                    "label": "Button label",
+                    "style_class": "link",
+                    "open_in_new_tab": false,
+                    "icon": "arrow",
+                    "icon_position": "right"
+                  }
+                },
+                "link_BGUyPc": {
+                  "type": "link",
+                  "settings": {
+                    "link": "",
+                    "label": "Button label",
+                    "style_class": "link",
+                    "open_in_new_tab": false,
+                    "icon": "arrow",
+                    "icon_position": "right"
+                  }
+                }
+              },
+              "block_order": [
+                "heading_F6mpHV",
+                "link_AJyYJ4",
+                "link_BGUyPc"
+              ]
+            },
+            "separator_block_jAUr7a": {
+              "type": "separator-block",
+              "settings": {
+                "direction": "vertical",
+                "color": "#d4d4d4",
+                "size": 100,
+                "margin": 0,
+                "thickness": "1",
+                "style_class": "solid"
+              }
+            },
+            "group_XWypQL": {
+              "type": "group",
+              "settings": {
+                "direction": "column",
+                "justify_content": "flex-start",
+                "color_scheme": "scheme-3",
+                "width": 50,
+                "padding": 16
+              },
+              "blocks": {
+                "heading_aGWxfA": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "Our mission",
+                    "heading_size": "h3",
+                    "alignment": "start"
+                  }
+                },
+                "text_mWDYXd": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+                    "text_style": "",
+                    "alignment": "start"
+                  }
+                }
+              },
+              "block_order": [
+                "heading_aGWxfA",
+                "text_mWDYXd"
+              ]
+            }
+          },
+          "block_order": [
+            "group_reBQFj",
+            "separator_block_jAUr7a",
+            "group_XWypQL"
+          ]
+        },
+        "8a18b664-2c69-4e8a-b6ae-a5cf39d3ad38": {
+          "type": "group",
+          "settings": {
+            "direction": "column",
+            "justify_content": "flex-end",
+            "color_scheme": "scheme-3",
+            "width": 100,
+            "padding": 0
+          },
+          "blocks": {
+            "group_L9Ac4q": {
+              "type": "group",
+              "settings": {
+                "direction": "row",
+                "justify_content": "flex-end",
+                "color_scheme": "scheme-3",
+                "width": 50,
+                "padding": 0
+              },
+              "blocks": {
+                "payment_icons_WqtUxN": {
+                  "type": "payment-icons",
+                  "settings": {
+                  }
+                }
+              },
+              "block_order": [
+                "payment_icons_WqtUxN"
+              ]
+            },
+            "group_WQUiKt": {
+              "type": "group",
+              "settings": {
+                "direction": "row",
+                "justify_content": "flex-end",
+                "color_scheme": "scheme-3",
+                "width": 50,
+                "padding": 0
+              },
+              "blocks": {
+                "text_wwA6m9": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>© 2023, <a href=\"\/\" title=\"\/\">Store name<\/a><\/p>",
+                    "text_style": "text-block--caption",
+                    "alignment": "start"
+                  }
+                },
+                "text_Lgry8R": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><a href=\"https:\/\/www.shopify.com\/?utm_campaign=poweredby&utm_medium=shopify&utm_source=onlinestore\" target=\"_blank\" title=\"https:\/\/www.shopify.com\/?utm_campaign=poweredby&utm_medium=shopify&utm_source=onlinestore\">Powered by Shopify<\/a><\/p>",
+                    "text_style": "text-block--caption",
+                    "alignment": "start"
+                  }
+                }
+              },
+              "block_order": [
+                "text_wwA6m9",
+                "text_Lgry8R"
+              ]
+            }
+          },
+          "block_order": [
+            "group_L9Ac4q",
+            "group_WQUiKt"
+          ]
+        }
+      },
+      "block_order": [
+        "5b635cb0-c1b4-408f-a776-d6977e4ff9d4",
+        "group_VFkXXa",
+        "8a18b664-2c69-4e8a-b6ae-a5cf39d3ad38"
+      ],
+      "settings": {
+        "direction": "column",
+        "justify_content": "flex-start",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    }
+  },
+  "order": [
+    "f3655535-32dc-4b1a-8f58-041cd0dce0ec"
+  ]
+}

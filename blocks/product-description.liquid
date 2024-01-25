@@ -1,0 +1,23 @@
+{% liquid
+  assign target = product
+  if block.settings.product != blank
+    assign target = block.settings.product
+  endif
+%}
+
+{{ target.description }}
+
+{% schema %}
+{
+  "name": "Product (description)",
+  "class": "description-block",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    }
+  ],
+  "presets": [{ "name": "Product (description)" }]
+}
+{% endschema %}

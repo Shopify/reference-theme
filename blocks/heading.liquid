@@ -1,0 +1,65 @@
+{% comment %} Should make a setting to decide which type of heading we're outputting instead of a heading size one. {% endcomment %}
+<h2 class="{{ block.settings.heading_size }} text-{{ block.settings.alignment }}" {{ block.shopify_attributes }}>
+  {{ block.settings.heading }}
+</h2>
+
+{% schema %}
+{
+  "name": "Heading",
+  "tag": null,
+  "class": "heading-block",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Size",
+      "options": [
+        {
+          "value": "h3",
+          "label": "Small"
+        },
+        {
+          "value": "h2",
+          "label": "Medium"
+        },
+        {
+          "value": "h1",
+          "label": "Large"
+        },
+        {
+          "value": "h0",
+          "label": "Extra Large"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Start"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "End"
+        }
+      ],
+      "default": "start"
+    }
+  ],
+  "presets": [{ "name": "Heading" }]
+}
+{% endschema %}

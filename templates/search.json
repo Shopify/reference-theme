@@ -1,0 +1,31 @@
+{
+  "sections": {
+    "group": {
+      "type": "custom-section",
+      "blocks": {
+        "text_bckUWt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This template is not available in the Theme blocks developer preview.<\/p>",
+            "text_style": "",
+            "alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "text_bckUWt"
+      ],
+      "settings": {
+        "direction": "row",
+        "justify_content": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "group"
+  ]
+}

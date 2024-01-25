@@ -1,0 +1,219 @@
+{% style %}
+  .section-content-wrapper--{{ section.id }} {
+    padding-block-start: {{ section.settings.padding_top}}px;
+    padding-block-end: {{ section.settings.padding_bottom}}px;
+  }
+
+  .image-banner--{{ section.id }} .image-banner__image-wrapper:after {
+    opacity: {{ section.settings.overlay_opacity | times: 1.00 | divided_by: 100 }};
+  }
+
+  .image-banner--adapt {
+    aspect-ratio: {{ section.settings.first_image.aspect_ratio }};
+  }
+{% endstyle %}
+
+<div class="color-{{ section.settings.color_scheme }} image-banner image-banner--{{ section.id }} image-banner--{{ section.settings.banner_height }} page-width{% if section.settings.first_image != blank and section.settings.second_image != blank %} image-banner--two-images{% endif %}{% if section.settings.full_width %} page-width--full{% endif %}">
+  <div class="image-banner__image-wrapper">
+    {%- if section.settings.first_image != blank -%}
+      {{
+        section.settings.first_image
+        | image_url: width: 3840
+        | image_tag: width: section.settings.image.width, widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+      }}
+    {%- endif %}
+    {%- if section.settings.second_image != blank -%}
+      {{
+        section.settings.second_image
+        | image_url: width: 3840
+        | image_tag: width: section.settings.image.width, widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+      }}
+    {%- endif %}
+    {%- if section.settings.first_image == blank and section.settings.second_image == blank -%}
+      <div class="placeholder-image">
+        {{ 'hero-apparel-2' | placeholder_svg_tag: 'image-banner-placeholder-svg' }}
+      </div>
+    {%- endif -%}
+  </div>
+  <div class="section-content-wrapper section-content-wrapper--{{ section.id }} content-{{ section.settings.content_position }}">
+    {% content_for "blocks" %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image banner",
+  "class": "section--group",
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "first_image",
+      "label": "First image"
+    },
+    {
+      "type": "image_picker",
+      "id": "second_image",
+      "label": "Second image"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "banner_height",
+      "label": "Banner height",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "Adapt to first image"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "adapt"
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "label": "Content position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "Top left"
+        },
+        {
+          "value": "top-center",
+          "label": "Top center"
+        },
+        {
+          "value": "top-right",
+          "label": "Top right"
+        },
+        {
+          "value": "middle-left",
+          "label": "Middle left"
+        },
+        {
+          "value": "middle-center",
+          "label": "Middle center"
+        },
+        {
+          "value": "middle-right",
+          "label": "Middle right"
+        },
+        {
+          "value": "bottom-left",
+          "label": "Bottom left"
+        },
+        {
+          "value": "bottom-center",
+          "label": "Bottom center"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Bottom right"
+        }
+      ],
+      "default": "middle-center"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Make section full width",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 30
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image banner",
+      "settings": {
+        "banner_height": "large",
+        "content_position": "middle-left",
+        "color_scheme": "scheme-4",
+        "full_width": true
+      },
+      "blocks": [
+        {
+          "type": "group",
+          "settings": {
+            "direction": "column",
+            "width": 50,
+            "padding": 50
+          },
+          "blocks": [
+            {
+              "type": "heading",
+              "settings": {
+                "heading": "Browse our latest products",
+                "heading_size": "h1"
+              }
+            },
+            {
+              "type": "text",
+              "settings": {
+                "text": "<p>Give customers details about the banner image(s) or content on the template.<\/p>"
+              }
+            },
+            {
+              "type": "link",
+              "settings": {
+                "link": "#",
+                "label": "Shop all",
+                "style_class": "button-secondary"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

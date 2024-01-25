@@ -1,0 +1,62 @@
+<div
+  class="text-block text-block--{{ block.id }} {{ block.settings.text_style }} text-{{ block.settings.alignment }}"
+  {{ block.shopify_attributes }}
+>
+  {{ block.settings.text }}
+</div>
+
+{% schema %}
+{
+  "name": "Text",
+  "tag": null,
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+    },
+    {
+      "type": "select",
+      "id": "text_style",
+      "label": "Style",
+      "options": [
+        {
+          "value": "",
+          "label": "Body"
+        },
+        {
+          "value": "text-block--subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "value": "text-block--caption",
+          "label": "Caption"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Start"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "End"
+        }
+      ],
+      "default": "start"
+    }
+  ],
+  "presets": [{ "name": "Text" }]
+}
+{% endschema %}

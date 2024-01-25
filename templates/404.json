@@ -1,0 +1,52 @@
+{
+  "sections": {
+    "group": {
+      "type": "custom-section",
+      "blocks": {
+        "heading_HzQryn": {
+          "type": "heading",
+          "settings": {
+            "heading": "404",
+            "heading_size": "h0",
+            "alignment": "start"
+          }
+        },
+        "text_4KQrBa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Page not found.<\/p>",
+            "text_style": "",
+            "alignment": "start"
+          }
+        },
+        "link_xg7d8w": {
+          "type": "link",
+          "settings": {
+            "link": "\/",
+            "label": "Go to Home page",
+            "style_class": "button",
+            "open_in_new_tab": false,
+            "icon": "none",
+            "icon_position": "left"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HzQryn",
+        "text_4KQrBa",
+        "link_xg7d8w"
+      ],
+      "settings": {
+        "direction": "column",
+        "justify_content": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "group"
+  ]
+}

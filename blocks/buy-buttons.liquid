@@ -1,0 +1,100 @@
+{% liquid
+  assign product = block.settings.product | default: product
+%}
+
+{% style %}
+  #ProductSubmitButton-{{ section.id }}-{{ product.id }} {
+    border: 1px solid rgb(var(--color-secondary-button-text));
+    background: rgba(var(--color-secondary-button), 1);
+    color: rgb(var(--color-secondary-button-text));
+  }
+{% endstyle %}
+
+{%- if product != blank -%}
+  {%- assign product_form_id = 'product-form-' | append: section.id | append: product.id | append: block.id -%}
+
+  <product-form data-section="{{ section.id }}{{ product.id }}">
+    {%- form 'product',
+      product,
+      id: product_form_id,
+      class: 'form',
+      novalidate: 'novalidate',
+      data-type: 'add-to-cart-form'
+    -%}
+      <input
+        type="hidden"
+        name="id"
+        value="{{ product.selected_or_first_available_variant.id }}"
+        {% if product.selected_or_first_available_variant.available == false %}
+          disabled
+        {% endif %}
+      >
+      <input
+        type="hidden"
+        name="quantity"
+        value="1"
+        min="1"
+        {% if product.selected_or_first_available_variant.available == false %}
+          disabled
+        {% endif %}
+      >
+
+      <div class="product-form__buttons">
+        <button
+          id="ProductSubmitButton-{{ section.id }}-{{ product.id }}"
+          class="button button--add-to-cart button--full-width"
+          type="submit"
+          name="add"
+          {% if product.selected_or_first_available_variant.available == false %}
+            disabled
+          {% endif %}
+        >
+          <span>
+            {%- if product.selected_or_first_available_variant.available == false -%}
+              Sold out
+            {%- else -%}
+              Add to cart
+            {%- endif -%}
+          </span>
+        </button>
+        {%- if block.settings.show_dynamic_checkout -%}
+          {{ form | payment_button }}
+        {%- endif -%}
+      </div>
+    {%- endform -%}
+  </product-form>
+{%- else -%}
+  <div class="product-form">
+    <div class="product-form__buttons form">
+      <button
+        type="submit"
+        name="add"
+        class="product-form__submit button button--full-width button--primary"
+        disabled
+      >
+        Sold out
+      </button>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Product (buy buttons)",
+  "class": "buy-buttons-block",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dynamic_checkout",
+      "label": "Show dynamic checkout buttons",
+      "default": true
+    }
+  ],
+  "presets": [{ "name": "Product (buy buttons)" }]
+}
+{% endschema %}

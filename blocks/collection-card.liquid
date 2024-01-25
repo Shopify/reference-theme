@@ -1,0 +1,111 @@
+{% style %}
+  #shopify-block-{{ block.id }} img {
+    aspect-ratio: {{ block.settings.ratio }};
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-block-{{ block.id }} {
+      width: {{ block.settings.width }}%;
+    }
+
+    .layout--row > #shopify-block-{{ block.id }} {
+      width: calc({{ block.settings.width }}% - var(--layout-gap));
+    }
+  }
+{% endstyle %}
+
+{%- if block.settings.collection != blank -%}
+  <div class="resource-card__image-wrapper">
+    {%- if block.settings.collection.featured_image -%}
+      {{ block.settings.collection.featured_image | image_url: width: 1000 | image_tag: widths: '200, 400, 800, 1000' }}
+    {%- endif -%}
+  </div>
+  <a href="{{ block.settings.collection.url }}" class="link link--with-icon">
+    {{ block.settings.collection.title }}
+    <svg
+      class="icon"
+      aria-hidden="true"
+      focusable="false"
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+    >
+      {%- render 'icons', icon: 'arrow' -%}
+    </svg>
+  </a>
+{%- else -%}
+  <div
+    class="resource-card__image-wrapper placeholder-image"
+    style="aspect-ratio:{% if block.settings.ratio == 'auto' %}1{% else %}{{ block.settings.ratio }}{% endif %};"
+  >
+    {{ 'collection-apparel-1' | placeholder_svg_tag: 'product-placeholder-svg' }}
+  </div>
+  <a href="#" class="link link--with-icon">
+    <span>Your collection's name</span>
+    <svg
+      class="icon"
+      aria-hidden="true"
+      focusable="false"
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+    >
+      {%- render 'icons', icon: 'arrow' -%}
+    </svg>
+  </a>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Collection card",
+  "class": "resource-card",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "width",
+      "label": "Width",
+      "min": 20,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "paragraph",
+      "content": "Width is automatically optimized for mobile."
+    },
+    {
+      "type": "select",
+      "id": "ratio",
+      "label": "Image ratio",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Adapt to image"
+        },
+        {
+          "value": "1",
+          "label": "Square"
+        },
+        {
+          "value": "16 / 9",
+          "label": "Landscape"
+        },
+        {
+          "value": "2 / 3",
+          "label": "Portrait"
+        }
+      ],
+      "default": "auto"
+    }
+  ],
+  "presets": [{ "name": "Collection card" }]
+}
+{% endschema %}

@@ -1,0 +1,89 @@
+{% style %}
+  #shopify-block-{{ block.id }} img  {
+    aspect-ratio: {{ block.settings.ratio }};
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-block-{{ block.id }} {
+      width: {{ block.settings.width }}%;
+    }
+
+    .layout--row > #shopify-block-{{ block.id }} {
+      width: calc({{ block.settings.width }}% - var(--layout-gap));
+    }
+  }
+{% endstyle %}
+
+{% if block.settings.product != blank %}
+  <div class="resource-card__image-wrapper">
+    {%- if block.settings.product.featured_image -%}
+      {{ block.settings.product.featured_image | image_url: width: 1000 | image_tag: widths: '200, 400, 800, 1000' }}
+    {%- endif -%}
+  </div>
+  <a href="{{ block.settings.product.url }}" class="link">
+    {{ block.settings.product.title }}
+  </a>
+  <p>{{ block.settings.product.price | money_with_currency }}</p>
+{%- else -%}
+  <div
+    class="resource-card__image-wrapper placeholder-image"
+    style="aspect-ratio:{% if block.settings.ratio == 'auto' %}1{% else %}{{ block.settings.ratio }}{% endif %};"
+  >
+    {{ 'product-apparel-1' | placeholder_svg_tag: 'product-placeholder-svg' }}
+  </div>
+  <a href="#" class="link">Example product title </a>
+  <p>{{ 1999 | money_with_currency }}</p>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Product card",
+  "class": "resource-card",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "range",
+      "id": "width",
+      "label": "Width",
+      "min": 20,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "paragraph",
+      "content": "Width is automatically optimized for mobile."
+    },
+    {
+      "type": "select",
+      "id": "ratio",
+      "label": "Image ratio",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Adapt to image"
+        },
+        {
+          "value": "1",
+          "label": "Square"
+        },
+        {
+          "value": "16 / 9",
+          "label": "Landscape"
+        },
+        {
+          "value": "2 / 3",
+          "label": "Portrait"
+        }
+      ],
+      "default": "auto"
+    }
+  ],
+  "presets": [{ "name": "Product card" }]
+}
+{% endschema %}

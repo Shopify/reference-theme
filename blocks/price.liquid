@@ -1,0 +1,30 @@
+{%- liquid
+  assign target = product
+  if block.settings.product != blank
+    assign target = block.settings.product.selected_or_first_available_variant
+  endif
+
+  assign compare_at_price = target.compare_at_price
+  assign price = target.price | default: 1999
+  assign money_price = price | money_with_currency
+-%}
+
+{%- if compare_at_price -%}
+  <s>{{ compare_at_price | money_with_currency }}</s>
+{%- endif -%}
+{{ money_price }}
+
+{% schema %}
+{
+  "name": "Product (price)",
+  "class": "price-block",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    }
+  ],
+  "presets": [{ "name": "Product (price)" }]
+}
+{% endschema %}

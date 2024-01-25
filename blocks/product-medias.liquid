@@ -1,0 +1,119 @@
+{% liquid
+  assign target = product
+  if block.settings.product != blank
+    assign target = block.settings.product
+  endif
+%}
+
+{% style %}
+  @media screen and (min-width: 750px) {
+    .media-block--{{ block.id }} {
+      width: {{ block.settings.width }}%;
+    }
+
+    .layout--row > .media-block--{{ block.id }} {
+      width: calc({{ block.settings.width }}% - var(--layout-gap));
+    }
+  }
+{% endstyle %}
+
+<media-gallery
+  class="media-block media-block--{{ block.id }} {{ block.settings.direction }}"
+  {{ block.shopify_attributes }}
+  data-section="{{ section.id }}{{ target.id }}"
+>
+  {%- for media in target.media -%}
+    {% liquid
+      assign show_media = true
+      if block.settings.media_featured and media != target.featured_media
+        assign show_media = false
+      endif
+    %}
+
+    {% if show_media %}
+      {% case media.media_type %}
+        {% when 'image' %}
+          <div data-media-id="{{ media.id }}">
+            {{
+              media
+              | image_url: width: 3840
+              | image_tag: widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+            }}
+          </div>
+        {% when 'external_video' %}
+          <div data-media-id="{{ media.id }}">
+            {{ media | external_video_tag }}
+          </div>
+        {% when 'video' %}
+          <div data-media-id="{{ media.id }}">
+            {{ media | video_tag: controls: true }}
+          </div>
+        {% when 'model' %}
+          <div data-media-id="{{ media.id }}">
+            {{ media | model_viewer_tag }}
+          </div>
+        {% else %}
+          <div data-media-id="{{ media.id }}">
+            {{ media | media_tag }}
+          </div>
+      {% endcase %}
+    {% endif %}
+  {%- endfor -%}
+
+  {%- if target == blank -%}
+    <div class="placeholder-image">
+      {{ 'product-apparel-2' | placeholder_svg_tag: 'image-placeholder-svg' }}
+    </div>
+  {%- endif -%}
+</media-gallery>
+
+{% schema %}
+{
+  "name": "Product (medias)",
+  "tag": null,
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "Content direction",
+      "options": [
+        {
+          "value": "row",
+          "label": "Horizontal"
+        },
+        {
+          "value": "column",
+          "label": "Vertical"
+        }
+      ],
+      "default": "row"
+    },
+    {
+      "type": "range",
+      "id": "width",
+      "label": "Width",
+      "min": 20,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "paragraph",
+      "content": "Width is automatically optimized for mobile."
+    },
+    {
+      "type": "checkbox",
+      "id": "media_featured",
+      "label": "Show only the featured media",
+      "default": false
+    }
+  ],
+  "presets": [{ "name": "Product (media)" }]
+}
+{% endschema %}

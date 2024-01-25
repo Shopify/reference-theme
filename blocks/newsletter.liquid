@@ -1,0 +1,75 @@
+{%- form 'customer' -%}
+  <input type="hidden" name="contact[tags]" value="newsletter">
+  <div>
+    <div class="newsletter-block__form-inputs">
+      <input
+        id="NewsletterForm--{{ block.id }}"
+        type="email"
+        name="contact[email]"
+        class="field__input"
+        value="{{ form.email }}"
+        aria-required="true"
+        autocorrect="off"
+        autocapitalize="off"
+        autocomplete="email"
+        {% if form.errors %}
+          autofocus
+          aria-invalid="true"
+          aria-describedby="Newsletter-error--{{ block.id }}"
+        {% elsif form.posted_successfully? %}
+          aria-describedby="Newsletter-success--{{ block.id }}"
+        {% endif %}
+        placeholder="Email address"
+        required
+      >
+      <label for="NewsletterForm--{{ block.id }}">Email</label>
+      <button
+        type="submit"
+        class="newsletter-form__button button button--primary"
+        name="commit"
+        id="Subscribe"
+        aria-label="Sign up for newsletters"
+      >
+        <svg
+          viewBox="0 0 14 10"
+          fill="none"
+          aria-hidden="true"
+          focusable="false"
+          class="icon icon-arrow"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
+        </svg>
+      </button>
+    </div>
+    {%- if form.errors -%}
+      <small id="Newsletter-error--{{ block.id }}">
+        {{- form.errors.translated_fields.email | capitalize }}
+        {{ form.errors.messages.email -}}
+      </small>
+    {%- endif -%}
+    {%- if form.posted_successfully? -%}
+      <h3
+        id="Newsletter-success--{{ block.id }}"
+        tabindex="-1"
+        autofocus
+      >
+        Successfuly submitted 👍
+      </h3>
+    {%- endif -%}
+  </div>
+{%- endform -%}
+
+{% schema %}
+{
+  "name": "Email form",
+  "class": "newsletter-block",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Each email subscription creates a customer account. [Learn more](https://help.shopify.com/manual/customers)"
+    }
+  ],
+  "presets": [{ "name": "Email form" }]
+}
+{% endschema %}

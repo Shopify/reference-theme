@@ -1,0 +1,69 @@
+{%- liquid
+  assign product = block.settings.product | default: product
+  assign product_form_id = 'product-form-' | append: section.id | append: product.id
+-%}
+
+<product-inputs
+  id="variant-selects-{{ section.id }}"
+  class="variant-block"
+  data-url="{{ product.url }}"
+  data-section="{{ section.id }}{{ product.id }}"
+  data-input-name="id"
+  {{ block.shopify_attributes }}
+>
+  <div
+    {% if product.has_only_default_variant %}
+      hidden
+    {% endif %}
+  >
+    <label for="Variants-{{ section.id }}">Options</label>
+    <div class="variant-select">
+      <select
+        name="id"
+        id="Variants-{{ section.id }}"
+        form="{{ product_form_id }}"
+      >
+        {%- for variant in product.variants -%}
+          <option
+            {% if variant == product.selected_or_first_available_variant %}
+              selected="selected"
+            {% endif %}
+            {% if variant.available == false %}
+              disabled
+            {% endif %}
+            value="{{ variant.id }}"
+          >
+            {%- liquid
+              echo variant.title
+              echo variant.price | money | strip_html | prepend: ' - '
+              if variant.available == false
+                echo 'Sold out' | prepend: ' - '
+              endif
+            -%}
+          </option>
+        {%- endfor -%}
+        {%- unless product.variants -%}
+          <option>Product variant</option>
+        {%- endunless -%}
+      </select>
+      <svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
+      </svg>
+    </div>
+  </div>
+</product-inputs>
+
+{% schema %}
+{
+  "name": "Product (variant picker)",
+  "tag": null,
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    }
+  ],
+  "presets": [{ "name": "Product (variant picker)" }]
+}
+{% endschema %}

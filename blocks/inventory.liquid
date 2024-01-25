@@ -1,0 +1,91 @@
+{% liquid
+  assign product = block.settings.product | default: product
+%}
+
+<p
+  class="inventory-block"
+  {{ block.shopify_attributes }}
+  id="Inventory-{{ section.id }}"
+  role="status"
+>
+  {%- if product == blank -%}Inventory: No product selected{%- endif -%}
+  {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
+    {%- if product.selected_or_first_available_variant.inventory_quantity > 0 -%}
+      {%- if product.selected_or_first_available_variant.inventory_quantity <= block.settings.inventory_threshold -%}
+        <svg width="15" height="15" aria-hidden="true">
+          <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(238,148,65, 0.3)"/>
+          <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(238,148,65)"/>
+        </svg>
+        {%- if block.settings.show_inventory_quantity -%}
+          <span>
+            Low stock:
+            {{- product.selected_or_first_available_variant.inventory_quantity -}}
+          </span>
+        {%- else -%}
+          <span>Low stock</span>
+        {%- endif -%}
+      {%- else -%}
+        <svg width="15" height="15" aria-hidden="true">
+          <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(62,214,96, 0.3)"/>
+          <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(62,214,96)"/>
+        </svg>
+        {%- if block.settings.show_inventory_quantity -%}
+          <span>
+            In stock:
+            {{- product.selected_or_first_available_variant.inventory_quantity -}}
+          </span>
+        {%- else -%}
+          <span>In stock</span>
+        {%- endif -%}
+      {%- endif -%}
+    {%- else -%}
+      {%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
+        <svg width="15" height="15" aria-hidden="true">
+          <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(62,214,96, 0.3)"/>
+          <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(62,214,96)"/>
+        </svg>
+        <span>Out of stock - pre order</span>
+      {%- else -%}
+        <svg width="15" height="15" aria-hidden="true">
+          <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(200,200,200, 0.3)"/>
+          <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(200,200,200)"/>
+        </svg>
+        <span>Out of stock</span>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
+</p>
+
+{% schema %}
+{
+  "name": "Product (inventory)",
+  "tag": null,
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "range",
+      "id": "inventory_threshold",
+      "label": "Low inventory threshold",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "paragraph",
+      "content": "Choose 0 to always show in stock if available."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_inventory_quantity",
+      "label": "Show inventory count",
+      "default": false
+    }
+  ],
+  "presets": [{ "name": "Product (inventory)" }]
+}
+{% endschema %}

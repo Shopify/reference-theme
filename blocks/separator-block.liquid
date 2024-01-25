@@ -1,0 +1,139 @@
+{% style %}
+  .separator--{{ block.id }} > hr {
+    width: {{ block.settings.size }}%;
+    border-color: {{ block.settings.color }};
+    border-style: {{ block.settings.style_class }};
+    border-width: {{ block.settings.thickness }}px 0 0 0;
+    margin: {{ block.settings.margin }}px auto;
+  }
+
+  .layout > .separator-block--horizontal {
+    width: {{ block.settings.size }}%;
+  }
+
+  .separator--{{ block.id }}:where(.separator-block--vertical) > hr {
+    width: {{ block.settings.size }}%;
+    border-width: {{ block.settings.thickness }}px 0 0 0;
+    margin: {{ block.settings.margin }}px auto;
+  }
+
+  @media screen and (min-width: 750px) {
+    .separator--{{ block.id }}:where(.separator-block--vertical) > hr {
+      height: {{ block.settings.size }}%;
+      border-width: 0 {{ block.settings.thickness }}px 0 0;
+      margin: auto {{ block.settings.margin }}px;
+    }
+  }
+{% endstyle %}
+<div
+  class="separator-block separator--{{ block.id }} separator-block--{{ block.settings.direction }}"
+  {{ block.shopify_attributes }}
+>
+  <hr>
+</div>
+
+{% schema %}
+{
+  "name": "Separator line",
+  "tag": null,
+  "settings": [
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "Direction",
+      "options": [
+        {
+          "value": "horizontal",
+          "label": "Horizontal"
+        },
+        {
+          "value": "vertical",
+          "label": "Vertical"
+        }
+      ],
+      "info": "The separator is always horizontal on mobile.",
+      "default": "horizontal"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "size",
+      "label": "Length",
+      "min": 20,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "margin",
+      "label": "Margin",
+      "info": "The margin between the separator and other content",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "thickness",
+      "label": "Thickness",
+      "options": [
+        {
+          "value": "1",
+          "label": "Thin"
+        },
+        {
+          "value": "3",
+          "label": "Medium"
+        },
+        {
+          "value": "5",
+          "label": "Thick"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "select",
+      "id": "style_class",
+      "label": "Style",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "dotted",
+          "label": "Dotted"
+        },
+        {
+          "value": "dashed",
+          "label": "Dashed"
+        }
+      ],
+      "default": "solid"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Separator (horizontal)"
+    },
+    {
+      "name": "Separator (vertical)",
+      "settings": {
+        "direction": "vertical",
+        "color": "#d4d4d4",
+        "margin": 0
+      }
+    }
+  ]
+}
+{% endschema %}

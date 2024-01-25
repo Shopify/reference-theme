@@ -1,0 +1,112 @@
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "40cdc232-8dd8-427c-b8ab-98fcf3523e60": {
+      "type": "custom-section",
+      "blocks": {
+        "9358ead7-959e-4cdd-b971-5a08e53c7729": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to the Theme blocks developer preview<\/p>",
+            "text_style": "",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "9358ead7-959e-4cdd-b971-5a08e53c7729"
+      ],
+      "settings": {
+        "direction": "row",
+        "justify_content": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 6,
+        "padding_bottom": 6
+      }
+    },
+    "f80fab76-22f9-452e-ad08-16b13cc02cd6": {
+      "type": "custom-section",
+      "blocks": {
+        "group_QwzE6T": {
+          "type": "group",
+          "settings": {
+            "direction": "row",
+            "justify_content": "flex-start",
+            "color_scheme": "",
+            "width": 20,
+            "padding": 0
+          },
+          "blocks": {
+            "heading_HeFnwz": {
+              "type": "heading",
+              "settings": {
+                "heading": "<a href=\"\/\" title=\"\/\">Store name<\/a>",
+                "heading_size": "h2",
+                "alignment": "start"
+              }
+            }
+          },
+          "block_order": [
+            "heading_HeFnwz"
+          ]
+        },
+        "group_MMGbDg": {
+          "type": "group",
+          "settings": {
+            "direction": "row",
+            "justify_content": "flex-end",
+            "color_scheme": "",
+            "width": 80,
+            "padding": 0
+          },
+          "blocks": {
+            "link_gCx6K6": {
+              "type": "link",
+              "settings": {
+                "link": "https:\/\/github.com\/Shopify\/reference-theme\/discussions",
+                "label": "Github discussion board",
+                "style_class": "link",
+                "open_in_new_tab": true,
+                "icon": "chat_bubble",
+                "icon_position": "left"
+              }
+            },
+            "link_qxd3Gx": {
+              "type": "link",
+              "settings": {
+                "link": "https:\/\/shopify.dev\/docs\/themes\/architecture\/blocks",
+                "label": "Developer documentation",
+                "style_class": "link",
+                "open_in_new_tab": true,
+                "icon": "question_mark",
+                "icon_position": "left"
+              }
+            }
+          },
+          "block_order": [
+            "link_gCx6K6",
+            "link_qxd3Gx"
+          ]
+        }
+      },
+      "block_order": [
+        "group_QwzE6T",
+        "group_MMGbDg"
+      ],
+      "settings": {
+        "direction": "row",
+        "justify_content": "start",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    }
+  },
+  "order": [
+    "40cdc232-8dd8-427c-b8ab-98fcf3523e60",
+    "f80fab76-22f9-452e-ad08-16b13cc02cd6"
+  ]
+}
