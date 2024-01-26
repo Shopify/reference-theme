@@ -110,3 +110,4 @@ The theme editor now includes drag and drop interactions in the power preview fo
 ## Theme block presets
 
 Like sections, blocks can have presets. This allows blocks to be used in more flexible ways.
+
