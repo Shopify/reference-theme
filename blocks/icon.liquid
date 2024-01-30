@@ -1,6 +1,13 @@
+{% style %}
+  .icon-block-{{ block.id }} {
+    width: {{ block.settings.width }}px;
+  }
+{% endstyle %}
+
+{% assign icon_block_class = 'icon-block-' | append: block.id %}
 {%- if block.settings.icon != 'none' and block.settings.image_upload == blank -%}
   <svg
-    class="icon icon-block icon-block--{{ block.id }}"
+    class="{{ icon_block_class }}"
     aria-hidden="true"
     focusable="false"
     xmlns="http://www.w3.org/2000/svg"
@@ -9,26 +16,20 @@
     viewBox="0 0 20 20"
     {{ block.shopify_attributes }}
   >
-    {% style %}
-      .icon-block--{{ block.id }} {
-        width: {{ block.settings.width }}px;
-      }
-    {% endstyle %}
-
     {%- render 'icons', icon: block.settings.icon -%}
   </svg>
 {%- elsif block.settings.image_upload != blank -%}
   {{
     block.settings.image_upload
-    | image_url: width: 1000
-    | image_tag: widths: '50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000'
+    | image_url: width: 500
+    | image_tag: widths: '50, 100, 200, 300, 400, 500', class: icon_block_class
   }}
 {%- endif -%}
 
 {% schema %}
 {
   "name": "Icon",
-  "tag": null,
+  "class": "icon-block",
   "settings": [
     {
       "type": "select",

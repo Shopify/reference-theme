@@ -31,10 +31,7 @@
 {
   "name": "Group",
   "tag": null,
-  "blocks": [
-    { "type": "@theme" },
-    { "type": "@app" }
-  ],
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
     {
       "type": "select",
@@ -203,6 +200,10 @@
     },
     {
       "name": "Icon with text",
+      "settings": {
+        "justify_content": "center",
+        "padding": 0
+      },
       "blocks": [
         {
           "type": "group",
@@ -210,20 +211,19 @@
             "direction": "column",
             "justify_content": "center",
             "width": 33,
-            "padding": 35
+            "padding": 0
           },
           "blocks": [
             {
               "type": "icon",
               "settings": {
-                "icon": "dairy_free",
-                "width": 50
+                "icon": "dairy_free"
               }
             },
             {
-              "type": "text",
+              "type": "heading",
               "settings": {
-                "text": "<p>Pair text with an icon to highlight aspects of your business.</p>",
+                "heading_size": "h3",
                 "alignment": "center"
               }
             }
@@ -235,20 +235,19 @@
             "direction": "column",
             "justify_content": "center",
             "width": 33,
-            "padding": 35
+            "padding": 0
           },
           "blocks": [
             {
               "type": "icon",
               "settings": {
-                "icon": "carrot",
-                "width": 50
+                "icon": "carrot"
               }
             },
             {
-              "type": "text",
+              "type": "heading",
               "settings": {
-                "text": "<p>Pair text with an icon to highlight aspects of your business.</p>",
+                "heading_size": "h3",
                 "alignment": "center"
               }
             }
@@ -260,20 +259,19 @@
             "direction": "column",
             "justify_content": "center",
             "width": 33,
-            "padding": 35
+            "padding": 0
           },
           "blocks": [
             {
               "type": "icon",
               "settings": {
-                "icon": "nut_free",
-                "width": 50
+                "icon": "nut_free"
               }
             },
             {
-              "type": "text",
+              "type": "heading",
               "settings": {
-                "text": "<p>Pair text with an icon to highlight aspects of your business.</p>",
+                "heading_size": "h3",
                 "alignment": "center"
               }
             }

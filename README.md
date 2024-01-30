@@ -54,7 +54,7 @@ For more details, see the [theme block documentation](https://shopify.dev/docs/t
 
 Note that a preset is required for a theme block to appear in the editor, the same as for sections.
 
-Also, if the outermost element of a block needs to have properties outside of a specific tag and class, you can use `"tag": null` to remove the auto-wrapper tag. If you do this, the block can only have one top level element in its Liquid body and that element must include `{ block.shopify_attributes }}` to work properly in the editor. See [theme block documentation](https://shopify.dev/docs/themes/architecture/blocks/theme-blocks) for more details.
+Also, if the outermost element of a block needs to have properties outside of a specific tag and class, you can use `"tag": null` to remove the auto-wrapper tag. If you do this, the block can only have one top level element in its Liquid body and that element must include `{{ block.shopify_attributes }}` to work properly in the editor. See [theme block documentation](https://shopify.dev/docs/themes/architecture/blocks/theme-blocks) for more details.
 
 ## Accepting theme blocks in sections
 
@@ -110,3 +110,5 @@ The theme editor now includes drag and drop interactions in the power preview fo
 ## Theme block presets
 
 Like sections, blocks can have presets. This allows blocks to be used in more flexible ways.
+
+A block must have at least one preset to appear for selection in the Theme Editor.

@@ -1,5 +1,6 @@
 :root {
   --layout-gap: 15px;
+  --page-width: 1200px;
 }
 
 * {
@@ -12,8 +13,6 @@ html {
 }
 
 body {
-  --page-width: 1200px;
-
   font-size: 62.5%;
   margin: 0;
   font-size: 1.6rem;
@@ -751,6 +750,11 @@ details[open] > summary .icon-caret {
 
 /* Icon */
 .icon-block {
-  height: auto;
+  display: flex;
   fill: currentColor;
+ }
+
+ .icon-block > svg,
+ .icon-block > img {
+  height: auto;
  }

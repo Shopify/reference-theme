@@ -9,7 +9,7 @@
             "direction": "column",
             "justify_content": "flex-start",
             "color_scheme": "scheme-1",
-            "width": 60,
+            "width": 50,
             "padding": 50
           },
           "blocks": {
@@ -690,7 +690,7 @@
             "direction": "column",
             "justify_content": "flex-start",
             "color_scheme": "scheme-1",
-            "width": 60,
+            "width": 50,
             "padding": 50
           },
           "blocks": {
