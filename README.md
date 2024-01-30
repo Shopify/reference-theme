@@ -4,7 +4,7 @@ This theme has been created to show an implementation of theme blocks. It is des
 
 # Getting the reference theme
 
-To use the reference theme, [create a new development store](https://help.shopify.com/en/partners/dashboard/managing-stores/development-stores) and select the "Theme blocks" developer preview.
+To install the reference theme, [create a new development store](https://help.shopify.com/en/partners/dashboard/managing-stores/development-stores) and select the "Theme blocks" developer preview.
 
 Then, download the `.zip` from the [latest release](https://github.com/Shopify/reference-theme/releases) in this repository and upload it in `Online store > Themes > Add theme`.
 
