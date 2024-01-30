@@ -7,9 +7,9 @@
           "type": "product-medias",
           "settings": {
             "product": "{{ section.settings.product }}",
-            "direction": "row",
-            "width": 45,
-            "media_featured": true
+            "direction": "column",
+            "width": 50,
+            "media_featured": false
           }
         },
         "c0e7c161-3f86-4580-b1d2-5d6f96428237": {
@@ -18,7 +18,7 @@
             "direction": "column",
             "justify_content": "flex-start",
             "color_scheme": "",
-            "width": 55,
+            "width": 45,
             "padding": 16
           },
           "blocks": {
@@ -68,6 +68,83 @@
               "settings": {
                 "product": "{{ section.settings.product }}"
               }
+            },
+            "group_a3Nwet": {
+              "type": "group",
+              "settings": {
+                "direction": "row",
+                "justify_content": "flex-start",
+                "color_scheme": "",
+                "width": 100,
+                "padding": 0
+              },
+              "blocks": {
+                "collapsible_row_WEBEnL": {
+                  "type": "collapsible-row",
+                  "settings": {
+                    "summary": "Materials",
+                    "icon": "dryer"
+                  },
+                  "blocks": {
+                    "text_YBKTLB": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Designed for life in and out of the water, these shorts feature hydrophobic fabric for quick-drying comfort and two side pockets for your essentials.<\/p>",
+                        "text_style": "",
+                        "alignment": "start"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_YBKTLB"
+                  ]
+                },
+                "collapsible_row_EYqA3x": {
+                  "type": "collapsible-row",
+                  "settings": {
+                    "summary": "Shipping and returns",
+                    "icon": "truck"
+                  },
+                  "blocks": {
+                    "text_MgMBnY": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>We offer free worldwide express shipping on all orders. You'll receive your order an estimated 1–4 days after shipment.<\/p>",
+                        "text_style": "",
+                        "alignment": "start"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_MgMBnY"
+                  ]
+                },
+                "collapsible_row_9p3U44": {
+                  "type": "collapsible-row",
+                  "settings": {
+                    "summary": "Care instructions",
+                    "icon": "heart"
+                  },
+                  "blocks": {
+                    "text_WMFJKg": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Use a soft damp cloth and a drop of mild soap to remove any haze. Air dry.<\/p>",
+                        "text_style": "",
+                        "alignment": "start"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_WMFJKg"
+                  ]
+                }
+              },
+              "block_order": [
+                "collapsible_row_WEBEnL",
+                "collapsible_row_EYqA3x",
+                "collapsible_row_9p3U44"
+              ]
             }
           },
           "block_order": [
@@ -77,7 +154,8 @@
             "0ab4dad4-d9a4-4064-8512-5d6974e32100",
             "13857f6b-f089-4d09-8bf0-f55ec052560d",
             "7e6064f3-e925-4883-b434-2d96eb09a467",
-            "41c0675b-741c-4bc1-8edb-5291a98632e6"
+            "41c0675b-741c-4bc1-8edb-5291a98632e6",
+            "group_a3Nwet"
           ]
         }
       },
@@ -88,7 +166,7 @@
       "settings": {
         "product": "{{ product }}",
         "direction": "row",
-        "justify_content": "flex-start",
+        "justify_content": "center",
         "color_scheme": "",
         "full_width": false,
         "padding_top": 30,

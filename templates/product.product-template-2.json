@@ -83,14 +83,14 @@
             "padding": 20
           },
           "blocks": {
-            "quantity_selector_FrQfyV": {
-              "type": "quantity-selector",
+            "variant_picker_KxMkDb": {
+              "type": "variant-picker",
               "settings": {
                 "product": ""
               }
             },
-            "variant_picker_KxMkDb": {
-              "type": "variant-picker",
+            "quantity_selector_FrQfyV": {
+              "type": "quantity-selector",
               "settings": {
                 "product": ""
               }
@@ -104,8 +104,8 @@
             }
           },
           "block_order": [
-            "quantity_selector_FrQfyV",
             "variant_picker_KxMkDb",
+            "quantity_selector_FrQfyV",
             "buy_buttons_JFE8hq"
           ]
         }
