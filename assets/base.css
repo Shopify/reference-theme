@@ -505,7 +505,7 @@ button, .button {
 
 .newsletter-block input {
   width: 100%;
-  padding: 2.2rem 4.4rem 0.8rem 1.2rem;
+  padding: 22px 44px 8px 12px;
   background: var(--gradient-background);
   color: rgb(var(--color-foreground));
 }
@@ -514,7 +514,7 @@ button, .button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 1.2rem;
+  left: 12px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -540,7 +540,7 @@ button, .button {
 }
 
 .newsletter-block svg {
-  width: 1.5rem;
+  width: 15px;
 }
 
 /* Price block */
@@ -663,7 +663,7 @@ button, .button {
 
 .variant-select svg {
   position: absolute;
-  height: 0.6rem;
+  height: 6px;
   top: 50%;
   transform: translatey(-50%);
   right: 1rem;
@@ -715,7 +715,7 @@ button, .button {
 /* Collapsible row */
 details {
   width: 100%;
-  border-block-start: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border-block-start: 1px solid rgba(var(--color-foreground), 0.08);
 }
 
 summary {
@@ -723,7 +723,7 @@ summary {
   align-items: center;
   gap: 10px;
   position: relative;
-  padding-block: 1.5rem;
+  padding-block: 15px;
   padding-inline: 0;
   cursor: pointer;
   list-style: none;
@@ -736,8 +736,8 @@ summary:hover {
 
 summary .icon-caret {
   margin-inline-start: auto;
-  height: 0.6rem;
-  margin-right: 1.5rem;
+  height: 6px;
+  margin-right: 15px;
 }
 
 details[open] > summary .icon-caret {
@@ -745,16 +745,16 @@ details[open] > summary .icon-caret {
 }
 
 .summary-content {
-  padding-inline: 0.6rem;
+  padding-inline: 6px;
 }
 
 /* Icon */
 .icon-block {
   display: flex;
   fill: currentColor;
- }
+}
 
- .icon-block > svg,
- .icon-block > img {
+.icon-block > svg,
+.icon-block > img {
   height: auto;
- }
+}
