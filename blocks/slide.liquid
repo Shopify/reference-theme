@@ -1,0 +1,128 @@
+{%- liquid
+  assign blockIndex = 0
+  for sectionBlock in section.blocks
+    assign blockIndex = blockIndex | plus: 1
+    if block.id == sectionBlock.id
+      break
+    endif
+  endfor
+-%}
+
+<div
+  id="slide-{{ block.id }}"
+  class="slideshow__slide"
+  aria-hidden="{% if blockIndex == 1 %}false{%else%}true{% endif %}"
+  {{ block.shopify_attributes }}
+>
+  {% style %}
+    #slide-{{ block.id }} .slide__content {
+      flex-direction: {{ block.settings.direction }};
+    }
+
+    {%- if section.settings.slide_height == 'adapt_image' and blockIndex == 1 and block.settings.image != blank -%}
+      #slideshow-{{ section.id }} .slideshow__slides,
+      #slideshow-{{ section.id }} .slideshow__slide {
+        min-height: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}vw;
+      }
+    {%- endif -%}
+  {% endstyle %}
+
+  <div class="slide__image-container">
+    {%- if block.settings.image -%}
+      {%- liquid
+        assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
+        assign sizes = '100vw'
+        assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+      -%}
+      {%- if blockIndex == 1 -%}
+        {{
+          block.settings.image
+          | image_url: width: 3840
+          | image_tag: height: height, sizes: sizes, widths: widths, loading: 'eager'
+        }}
+      {%- else -%}
+        {{
+          block.settings.image
+          | image_url: width: 3840
+          | image_tag: height: height, sizes: sizes, widths: widths, loading: 'lazy'
+        }}
+      {%- endif -%}
+    {%- else -%}
+      {%- assign placeholder_slide = blockIndex | modulo: 2 -%}
+      {%- if placeholder_slide == 1 -%}
+        {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- else -%}
+        {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+  <div class="slide__content">
+    {% content_for "blocks" %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Slide",
+  "tag": null,
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "Content direction",
+      "options": [
+        {
+          "value": "row",
+          "label": "Horizontal"
+        },
+        {
+          "value": "column",
+          "label": "Vertical"
+        }
+      ],
+      "default": "row"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slide",
+      "blocks": [
+        {
+          "type": "group",
+          "settings": {
+            "direction": "column",
+            "justify_content": "center",
+            "width": 50
+          },
+          "blocks": [
+            {
+              "type": "heading",
+              "settings": {
+                "heading": "Slide 1"
+              }
+            },
+            {
+              "type": "text",
+              "settings": {
+                "text": "<p>This is the first slide</p>"
+              }
+            },
+            {
+              "type": "link",
+              "settings": {
+                "label": "Link for slide 1"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
