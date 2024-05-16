@@ -1,5 +1,245 @@
 {
   "sections": {
+    "slideshow_Rakkxn": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_gJTWQi": {
+          "type": "slide",
+          "settings": {
+            "direction": "row"
+          },
+          "blocks": {
+            "group_Gxr6eh": {
+              "type": "group",
+              "settings": {
+                "direction": "column",
+                "justify_content": "center",
+                "color_scheme": "",
+                "width": 50,
+                "padding": 16
+              },
+              "blocks": {
+                "heading_KpqkUU": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "Slide 1",
+                    "heading_size": "h2",
+                    "alignment": "start"
+                  }
+                },
+                "text_cV79qq": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>This is the first slide<\/p>",
+                    "text_style": "",
+                    "alignment": "start"
+                  }
+                },
+                "link_yfqMPA": {
+                  "type": "link",
+                  "settings": {
+                    "link": "",
+                    "label": "Link for slide 1",
+                    "style_class": "button",
+                    "open_in_new_tab": false,
+                    "icon": "none",
+                    "icon_position": "left"
+                  }
+                }
+              },
+              "block_order": [
+                "heading_KpqkUU",
+                "text_cV79qq",
+                "link_yfqMPA"
+              ]
+            }
+          },
+          "block_order": [
+            "group_Gxr6eh"
+          ]
+        },
+        "slide_QNDpJe": {
+          "type": "slide",
+          "settings": {
+            "direction": "row"
+          },
+          "blocks": {
+            "group_4cGCGA": {
+              "type": "group",
+              "settings": {
+                "direction": "column",
+                "justify_content": "center",
+                "color_scheme": "",
+                "width": 50,
+                "padding": 16
+              },
+              "blocks": {
+                "heading_fAcC9x": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "Slide 1",
+                    "heading_size": "h2",
+                    "alignment": "start"
+                  }
+                },
+                "text_tLnGbD": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>This is the first slide<\/p>",
+                    "text_style": "",
+                    "alignment": "start"
+                  }
+                },
+                "link_cY9AWR": {
+                  "type": "link",
+                  "settings": {
+                    "link": "",
+                    "label": "Link for slide 1",
+                    "style_class": "button",
+                    "open_in_new_tab": false,
+                    "icon": "none",
+                    "icon_position": "left"
+                  }
+                }
+              },
+              "block_order": [
+                "heading_fAcC9x",
+                "text_tLnGbD",
+                "link_cY9AWR"
+              ]
+            }
+          },
+          "block_order": [
+            "group_4cGCGA"
+          ]
+        },
+        "slide_467qH8": {
+          "type": "slide",
+          "settings": {
+            "direction": "row"
+          },
+          "blocks": {
+            "group_yVdBeV": {
+              "type": "group",
+              "settings": {
+                "direction": "column",
+                "justify_content": "center",
+                "color_scheme": "",
+                "width": 50,
+                "padding": 16
+              },
+              "blocks": {
+                "heading_AQcnBe": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "Slide 2",
+                    "heading_size": "h2",
+                    "alignment": "start"
+                  }
+                },
+                "text_kKQgyK": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>This is the second slide<\/p>",
+                    "text_style": "",
+                    "alignment": "start"
+                  }
+                },
+                "link_RKN9kF": {
+                  "type": "link",
+                  "settings": {
+                    "link": "",
+                    "label": "Link for slide 2",
+                    "style_class": "button",
+                    "open_in_new_tab": false,
+                    "icon": "none",
+                    "icon_position": "left"
+                  }
+                }
+              },
+              "block_order": [
+                "heading_AQcnBe",
+                "text_kKQgyK",
+                "link_RKN9kF"
+              ]
+            }
+          },
+          "block_order": [
+            "group_yVdBeV"
+          ]
+        },
+        "slide_xrKqzt": {
+          "type": "slide",
+          "settings": {
+            "direction": "row"
+          },
+          "blocks": {
+            "group_PEXHkd": {
+              "type": "group",
+              "settings": {
+                "direction": "column",
+                "justify_content": "center",
+                "color_scheme": "",
+                "width": 50,
+                "padding": 16
+              },
+              "blocks": {
+                "heading_AarHai": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "Slide 3",
+                    "heading_size": "h2",
+                    "alignment": "start"
+                  }
+                },
+                "text_hYNwMx": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>This is the third slide<\/p>",
+                    "text_style": "",
+                    "alignment": "start"
+                  }
+                },
+                "link_mAXKxc": {
+                  "type": "link",
+                  "settings": {
+                    "link": "",
+                    "label": "Link for slide 3",
+                    "style_class": "button",
+                    "open_in_new_tab": false,
+                    "icon": "none",
+                    "icon_position": "left"
+                  }
+                }
+              },
+              "block_order": [
+                "heading_AarHai",
+                "text_hYNwMx",
+                "link_mAXKxc"
+              ]
+            }
+          },
+          "block_order": [
+            "group_PEXHkd"
+          ]
+        }
+      },
+      "block_order": [
+        "slide_gJTWQi",
+        "slide_QNDpJe",
+        "slide_467qH8",
+        "slide_xrKqzt"
+      ],
+      "settings": {
+        "slide_height": "medium",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "pagination_style": "counter",
+        "transition_style": "left",
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
+    },
     "ebbb2677-3b85-472b-a4f6-5e49246f17f3": {
       "type": "image-banner",
       "blocks": {
@@ -1038,6 +1278,7 @@
     }
   },
   "order": [
+    "slideshow_Rakkxn",
     "ebbb2677-3b85-472b-a4f6-5e49246f17f3",
     "group_LTaNjd",
     "7123840b-d7bc-4862-909e-0784a0217faa",
