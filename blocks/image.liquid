@@ -1,38 +1,24 @@
-{% style %}
-  #shopify-block-{{ block.id }} img {
-    aspect-ratio: {{ block.settings.ratio }};
-  }
-
-  @media screen and (min-width: 750px) {
-    #shopify-block-{{ block.id }} {
-      width: {{ block.settings.width }}%;
-    }
-
-    .layout--row > #shopify-block-{{ block.id }} {
-      width: calc({{ block.settings.width }}% - var(--layout-gap));
-    }
-  }
-{% endstyle %}
-
-{%- if block.settings.image -%}
-  {{
-    block.settings.image
-    | image_url: width: 3840
-    | image_tag: width: section.settings.image.width, widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-  }}
-{%- else -%}
-  <div
-    class="placeholder-image"
-    style="aspect-ratio:{% if block.settings.ratio == 'auto' %}1{% else %}{{ block.settings.ratio }}{% endif %};"
-  >
-    {{ 'detailed-apparel-1' | placeholder_svg_tag: 'image-placeholder-svg' }}
-  </div>
-{%- endif -%}
+<div
+  class="{{ block.settings | class_list }} image-block image-block--{{ block.settings.object_fit }}"
+  {{ block.shopify_attributes }}
+>
+  {%- if block.settings.image -%}
+    {{
+      block.settings.image
+      | image_url: width: 3840
+      | image_tag: width: block.settings.image.width, widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+    }}
+  {%- else -%}
+    <div class="placeholder-image">
+      {{ 'detailed-apparel-1' | placeholder_svg_tag: 'image-placeholder-svg' }}
+    </div>
+  {%- endif -%}
+</div>
 
 {% schema %}
 {
   "name": "Image",
-  "class": "image-block",
+  "tag": null,
   "settings": [
     {
       "type": "image_picker",
@@ -40,42 +26,39 @@
       "label": "Image"
     },
     {
-      "type": "range",
-      "id": "width",
-      "label": "Width",
-      "min": 20,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "default": 100
-    },
-    {
-      "type": "paragraph",
-      "content": "Width is automatically optimized for mobile."
-    },
-    {
       "type": "select",
-      "id": "ratio",
-      "label": "Image ratio",
+      "id": "object_fit",
+      "label": "Image containment",
       "options": [
         {
-          "value": "auto",
-          "label": "Adapt to image"
+          "value": "cover",
+          "label": "Cover"
         },
         {
-          "value": "1",
-          "label": "Square"
-        },
-        {
-          "value": "16 / 9",
-          "label": "Landscape"
-        },
-        {
-          "value": "2 / 3",
-          "label": "Portrait"
+          "value": "contain",
+          "label": "Contain"
         }
       ],
-      "default": "auto"
+      "default": "cover"
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing"
+    },
+    {
+      "type": "style.size_panel",
+      "id": "size",
+      "label": "Size",
+      "default": {
+        "width": "100%",
+        "flex-grow": "1"
+      }
+    },
+    {
+      "type": "style.layout_panel",
+      "id": "layout",
+      "label": "Layout"
     }
   ],
   "presets": [{ "name": "Image" }]

@@ -1,0 +1,115 @@
+<div class="slideshow__controls flex-item">
+  <button
+    class="slideshow-control slideshow-control--previous button-secondary"
+    aria-label="Previous slide"
+  >
+    <svg
+      class="icon icon-previous"
+      viewBox="0 0 10 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      focusable="false"
+      aria-hidden="true"
+    >
+      {%- render 'icon', icon: 'previous'  -%}
+    </svg>
+  </button>
+
+  {% case block.settings.pagination_style %}
+    {% when 'dots' %}
+      {% for block in section.blocks %}
+        <button
+          class="slideshow-control slideshow-controls__link button-unstyled{% if forloop.first %} slideshow-controls__link--active{% endif %}"
+          aria-label="Slide {{ forloop.index }} of {{ forloop.length }}"
+          data-slide-number="{{ forloop.index0 }}"
+        >
+          <span class="slideshow-controls__dot"></span>
+        </button>
+      {% endfor %}
+
+    {% when 'counter' %}
+      <span class="current-slide-indicator">1/{{ section.blocks.size }}</span>
+
+    {% when 'numbers' %}
+      {% for block in section.blocks %}
+        <button
+          class="slideshow-control slideshow-controls__link button-unstyled{% if forloop.first %} slideshow-controls__link--active{% endif %}"
+          aria-label="Slide {{ forloop.index }} of {{ forloop.length }}"
+          data-slide-number="{{ forloop.index0 }}"
+        >
+          {{ forloop.index }}
+        </button>
+      {% endfor %}
+  {% endcase %}
+  <button
+    class="slideshow-control slideshow-control--next button-secondary"
+    aria-label="Next slide"
+  >
+    <svg
+      class="icon icon-next"
+      viewBox="0 0 10 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      focusable="false"
+      aria-hidden="true"
+    >
+      {%- render 'icon', icon: 'next' -%}
+    </svg>
+  </button>
+  {% if section.settings.autoplay %}
+    <button
+      type="button"
+      class="slideshow-control slideshow-control--autoplay button-secondary"
+      aria-label="Pause slideshow"
+    >
+      <svg
+        class="icon icon-pause"
+        viewBox="0 0 10 14"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        focusable="false"
+        aria-hidden="true"
+      >
+        {%- render 'icon', icon: 'pause' -%}
+      </svg>
+      <svg
+        class="icon icon-play"
+        viewBox="0 0 10 14"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        focusable="false"
+        aria-hidden="true"
+      >
+        {%- render 'icon', icon: 'play' -%}
+      </svg>
+    </button>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Slideshow controls",
+  "settings": [
+    {
+      "type": "select",
+      "id": "pagination_style",
+      "options": [
+        {
+          "value": "dots",
+          "label": "Dots"
+        },
+        {
+          "value": "counter",
+          "label": "Counter"
+        },
+        {
+          "value": "numbers",
+          "label": "Numbers"
+        }
+      ],
+      "label": "Pagination style",
+      "default": "counter"
+    }
+  ]
+}
+{% endschema %}

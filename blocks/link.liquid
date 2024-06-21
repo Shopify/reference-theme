@@ -1,6 +1,6 @@
 <a
   href="{{ block.settings.link }}"
-  class="link-block link-block-icon-{{ block.settings.icon_position }} {{ block.settings.style_class }}{% if block.settings.icon != "none" %} link--with-icon{% endif %}"
+  class="{{ block.settings | class_list }} link-block link-block-icon-{{ block.settings.icon_position }} {{ block.settings.style_class }}{% if block.settings.icon != "none" %} link--with-icon{% endif %}"
   {%- if block.settings.open_in_new_tab -%}
     target="_blank" rel="noopener noreferrer"
   {%- endif -%}
@@ -17,7 +17,7 @@
       viewBox="0 0 20 20"
       {{ block.shopify_attributes }}
     >
-      {%- render 'icons', icon: block.settings.icon -%}
+      {%- render 'icon', icon: block.settings.icon -%}
     </svg>
   {%- endif -%}
   {{ block.settings.label }}
@@ -300,6 +300,24 @@
         }
       ],
       "default": "left"
+    },
+    {
+      "type": "style.size_panel",
+      "id": "size",
+      "label": "Size",
+      "default": {
+        "width": "auto",
+        "flex-grow": "0",
+        "flex-shrink": "0"
+      }
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing",
+      "default": {
+        "padding": "0"
+      }
     }
   ],
   "presets": [
@@ -313,21 +331,30 @@
     {
       "name": "Button (primary)",
       "settings": {
-        "label": "Primary button label"
+        "label": "Primary button label",
+        "spacing": {
+          "padding": "10px 30px"
+        }
       }
     },
     {
       "name": "Button (secondary)",
       "settings": {
         "label": "Secondary button label",
-        "style_class": "button-secondary"
+        "style_class": "button-secondary",
+        "spacing": {
+          "padding": "10px 30px"
+        }
       }
     },
     {
       "name": "Button (with icon)",
       "settings": {
         "icon": "arrow",
-        "icon_position": "right"
+        "icon_position": "right",
+        "spacing": {
+          "padding": "10px 30px"
+        }
       }
     }
   ]

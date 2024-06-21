@@ -16,7 +16,7 @@
     viewBox="0 0 20 20"
     {{ block.shopify_attributes }}
   >
-    {%- render 'icons', icon: block.settings.icon -%}
+    {%- render 'icon', icon: block.settings.icon -%}
   </svg>
 {%- elsif block.settings.image_upload != blank -%}
   {{
@@ -257,10 +257,14 @@
       "label": "Custom icon"
     },
     {
+      "type": "header",
+      "content": "Size"
+    },
+    {
       "type": "range",
       "id": "width",
       "label": "Width",
-      "min": 44,
+      "min": 22,
       "max": 200,
       "step": 2,
       "unit": "px",
