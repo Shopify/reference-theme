@@ -1,0 +1,81 @@
+<div class="slideshow__controls flex-item">
+  {% if section.blocks.size > 1 %}
+    <button
+      class="slideshow-control slideshow-control--previous button-secondary"
+      aria-label="Previous slide"
+    >
+      {%- render 'icon-previous' -%}
+    </button>
+
+    {% case block.settings.pagination_style %}
+      {% when 'dots' %}
+        {% for block in section.blocks %}
+          <button
+            class="slideshow-control slideshow-controls__link{% if forloop.first %} slideshow-controls__link--active{% endif %}"
+            aria-label="Slide {{ forloop.index }} of {{ forloop.length }}"
+            data-slide-number="{{ forloop.index0 }}"
+          >
+            <span class="slideshow-controls__dot"></span>
+          </button>
+        {% endfor %}
+
+      {% when 'counter' %}
+        <span class="current-slide-indicator">1/{{ section.blocks.size }}</span>
+
+      {% when 'numbers' %}
+        {% for block in section.blocks %}
+          <button
+            class="slideshow-control slideshow-controls__link{% if forloop.first %} slideshow-controls__link--active{% endif %}"
+            aria-label="Slide {{ forloop.index }} of {{ forloop.length }}"
+            data-slide-number="{{ forloop.index0 }}"
+          >
+            {{ forloop.index }}
+          </button>
+        {% endfor %}
+    {% endcase %}
+    <button
+      class="slideshow-control slideshow-control--next button-secondary"
+      aria-label="Next slide"
+    >
+      {%- render 'icon-next' -%}
+    </button>
+    {% if section.settings.autoplay %}
+      <button
+        type="button"
+        class="slideshow-control slideshow-control--autoplay button-secondary"
+        aria-label="Pause slideshow"
+      >
+        {%- render 'icon-pause' -%}
+        {%- render 'icon-play' -%}
+      </button>
+    {% endif %}
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Slideshow controls",
+  "settings": [
+    {
+      "type": "select",
+      "id": "pagination_style",
+      "options": [
+        {
+          "value": "dots",
+          "label": "Dots"
+        },
+        {
+          "value": "counter",
+          "label": "Counter"
+        },
+        {
+          "value": "numbers",
+          "label": "Numbers"
+        }
+      ],
+      "label": "Pagination style",
+      "default": "counter"
+    }
+  ]
+}
+{% endschema %}

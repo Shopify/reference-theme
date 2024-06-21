@@ -1,0 +1,93 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} .container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  #shopify-section-{{ section.id }} .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+  }
+
+  #shopify-section-{{ section.id }} .content .text-wrapper {
+    text-align: center;
+  }
+{%- endstyle -%}
+
+<div class="container">
+  {%- for block in section.blocks -%}
+    <div class="content">
+      {%- if block.settings.image -%}
+        {{
+          block.settings.image
+          | image_url: width: 3840
+          | image_tag: width: block.settings.image.width, widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+        }}
+      {%- else -%}
+        <div
+          class="placeholder-image"
+          style="aspect-ratio: 1;"
+        >
+          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'image-placeholder-svg' }}
+        </div>
+      {%- endif -%}
+      <h3>{{ block.settings.heading }}</h3>
+      <div class="text-wrapper">{{ block.settings.text }}</div>
+      <a href="{{ block.settings.button_link }}"> {{ block.settings.button_label }} </a>
+    </div>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Multicolumn",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Hello from multicolumn"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Share information about your brand.</p>"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multicolumn",
+      "blocks": [{ "type": "column" }, { "type": "column" }, { "type": "column" }]
+    }
+  ]
+}
+{% endschema %}
