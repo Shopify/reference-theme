@@ -1,0 +1,89 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} .container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  #shopify-section-{{ section.id }} .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+{%- endstyle -%}
+
+
+<div class="container">
+  {%- if section.settings.image -%}
+    {{ section.settings.image | image_url: width: 1200 | image_tag }}
+  {%- else -%}
+    <div class="placeholder-image">
+      {{ 'detailed-apparel-1' | placeholder_svg_tag: 'image-placeholder-svg' }}
+    </div>
+  {%- endif -%}
+  <div class="text-content">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {% when 'heading' %}
+          <h3>{{ block.settings.heading }}</h3>
+        {% when 'link' %}
+          <a href="{{ block.settings.button_link }}"> {{ block.settings.button_label }} </a>
+      {% endcase %}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image with text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Hello from image with text"
+        }
+      ]
+    },
+    {
+      "type": "link",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text",
+      "blocks": [
+        { "type": "heading" },
+        { "type": "link" }
+      ]
+    }
+  ]
+}
+{% endschema %}

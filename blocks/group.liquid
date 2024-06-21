@@ -1,284 +1,44 @@
-{% style %}
-  .group-block--{{ block.id }} {
-    padding: {{ block.settings.padding }}px;
-    flex-direction: {{ block.settings.direction }};
-    {% if block.settings.direction == 'row' %}
-      justify-content: {{ block.settings.justify_content }};
-    {% else %}
-      align-items: {{ block.settings.justify_content }};
-    {% endif %}
-  }
-
-  @media screen and (min-width: 750px) {
-    .group-block--{{ block.id }} {
-      width: {{ block.settings.width }}%;
-    }
-
-    .layout--row > .group-block--{{ block.id }} {
-      width: calc({{ block.settings.width }}% - var(--layout-gap));
-    }
-  }
-{% endstyle %}
-
-<div
-  class="group-block group-block--{{ block.id }} layout layout--{{ block.settings.direction }} color-{{ block.settings.color_scheme }}"
-  {{ block.shopify_attributes }}
->
-  {% content_for "blocks" %}
+<div class="group {{ block.settings | class_list }}">
+  {% content_for 'blocks' %}
 </div>
 
 {% schema %}
 {
   "name": "Group",
   "tag": null,
-  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "blocks": [{"type": "@theme"}, {"type": "@app"}],
   "settings": [
     {
-      "type": "select",
-      "id": "direction",
-      "label": "Content direction",
-      "options": [
-        {
-          "value": "row",
-          "label": "Horizontal"
-        },
-        {
-          "value": "column",
-          "label": "Vertical"
+      "type": "style.layout_panel",
+      "id": "layout",
+      "label": "Layout",
+      "default": {
+        "flex-direction": "row"
+      }
+    },
+    {
+      "type": "style.size_panel",
+      "id": "size",
+      "label": "Size",
+      "default": {
+        "width": "100%",
+        "height": "auto"
+      }
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing",
+      "default": {
+        "padding": "20px",
+        "@media (--mobile)": {
+          "padding": "10px"
         }
-      ],
-      "default": "row"
-    },
-    {
-      "type": "select",
-      "id": "justify_content",
-      "label": "Content position",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "Start"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "flex-end",
-          "label": "End"
-        }
-      ],
-      "default": "flex-start"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "Color scheme",
-      "default": "scheme-1"
-    },
-    {
-      "type": "range",
-      "id": "width",
-      "label": "Width",
-      "min": 20,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "default": 100
-    },
-    {
-      "type": "paragraph",
-      "content": "Width is automatically optimized for mobile."
-    },
-    {
-      "type": "range",
-      "id": "padding",
-      "label": "Padding",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 16
+      }
     }
   ],
   "presets": [
-    {
-      "name": "Group"
-    },
-    {
-      "name": "Column",
-      "settings": {
-        "direction": "column",
-        "width": 25,
-        "padding": 0
-      },
-      "blocks": [
-        {
-          "type": "image",
-          "settings": {
-            "ratio": "1"
-          }
-        },
-        {
-          "type": "group",
-          "settings": {
-            "padding": 0
-          },
-          "blocks": [
-            {
-              "type": "heading",
-              "settings": {
-                "heading": "Column",
-                "heading_size": "h3"
-              }
-            },
-            {
-              "type": "text",
-              "settings": {
-                "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Row",
-      "settings": {
-        "direction": "column"
-      },
-      "blocks": [
-        {
-          "type": "group",
-          "settings": {
-            "padding": 0
-          },
-          "blocks": [
-            {
-              "type": "image",
-              "settings": {
-                "width": 50
-              }
-            },
-            {
-              "type": "group",
-              "settings": {
-                "direction": "column",
-                "width": 50,
-                "padding": 60
-              },
-              "blocks": [
-                {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Caption<\/p>",
-                    "text_style": "text-block--caption"
-                  }
-                },
-                {
-                  "type": "heading",
-                  "settings": {
-                    "heading": "Row"
-                  }
-                },
-                {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-                  }
-                },
-                {
-                  "type": "link",
-                  "settings": {
-                    "style_class": "button-secondary"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Icon with text",
-      "settings": {
-        "justify_content": "center",
-        "padding": 0
-      },
-      "blocks": [
-        {
-          "type": "group",
-          "settings": {
-            "direction": "column",
-            "justify_content": "center",
-            "width": 33,
-            "padding": 0
-          },
-          "blocks": [
-            {
-              "type": "icon",
-              "settings": {
-                "icon": "dairy_free"
-              }
-            },
-            {
-              "type": "heading",
-              "settings": {
-                "heading_size": "h3",
-                "alignment": "center"
-              }
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "settings": {
-            "direction": "column",
-            "justify_content": "center",
-            "width": 33,
-            "padding": 0
-          },
-          "blocks": [
-            {
-              "type": "icon",
-              "settings": {
-                "icon": "carrot"
-              }
-            },
-            {
-              "type": "heading",
-              "settings": {
-                "heading_size": "h3",
-                "alignment": "center"
-              }
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "settings": {
-            "direction": "column",
-            "justify_content": "center",
-            "width": 33,
-            "padding": 0
-          },
-          "blocks": [
-            {
-              "type": "icon",
-              "settings": {
-                "icon": "nut_free"
-              }
-            },
-            {
-              "type": "heading",
-              "settings": {
-                "heading_size": "h3",
-                "alignment": "center"
-              }
-            }
-          ]
-        }
-      ]
-    }
+    {"name": "Group"}
   ]
 }
 {% endschema %}
