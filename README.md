@@ -112,3 +112,38 @@ The theme editor now includes drag and drop interactions in the power preview fo
 Like sections, blocks can have presets. This allows blocks to be used in more flexible ways.
 
 A block must have at least one preset to appear for selection in the Theme Editor.
+
+## Theme block targeting
+
+A section or group that accepts theme blocks can indicate either that it accepts all blocks (and apps) by adding `"blocks": [{ "type": "@theme" }, { "type": "@app" }]` to the schema.  Or it can target specific blocks by adding `"blocks": [{ "type": "slide" }]`
+
+## Static theme blocks
+
+Theme blocks can be referenced directly in Liquid using `content_for` as follows:
+
+```
+  {% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}
+```
+
+Settings for these blocks can be configured by the merchant via the theme editor.  They can also be configured by the theme developer in presets.  Their usage in presets is the same as a normal theme block except it includes  `"static": true` and requires a matching `id` to the one in the corresponding Liquid.
+
+## Styles
+
+Style settings can now be added to sections and blocks.  These are new input setting types that offer CSS styles for merchants to customize.
+
+Currently the categories that exist are:
+
+* `"type": "style.size_panel"` - This panel includes CSS properties like `width`, `height`, and `flex-grow`.
+* `"type": "style.spacing_panel"` - This panel includes CSS properties like `flex-direction`, `justify-content`, and `align items`.
+* `"type": "style.layout_panel"` - This panel includes CSS properties like `padding` and `margin`.
+
+These settings are applied via the new filter `class_list`, which renders the set of classes that correspond to the used style settings within a section or block.  It is used as follows: `<div class="{{ block.settings | class_list }}">`.  In a section, `section.settings` is used instead.
+
+You can also apply different classes to different elements, for example:
+
+```
+<div class="{{ block.settings.size | class_list }}">...</div>
+<div class="{{ block.settings.layout | class_list }}">...</div>
+```
+
+As with a normal setting, it is accessed via its ID.

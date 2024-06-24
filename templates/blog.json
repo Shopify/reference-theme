@@ -16,12 +16,13 @@
         "text_aAcgpA"
       ],
       "settings": {
-        "direction": "row",
-        "justify_content": "center",
-        "color_scheme": "scheme-2",
-        "full_width": true,
-        "padding_top": 100,
-        "padding_bottom": 100
+        "layout": {
+          "justify-content": "center"
+        },
+        "spacing": {
+          "padding": "100px 0px"
+        },
+        "color_scheme": "scheme-2"
       }
     }
   },

@@ -37,12 +37,14 @@
         "link_xg7d8w"
       ],
       "settings": {
-        "direction": "column",
-        "justify_content": "center",
-        "color_scheme": "scheme-2",
-        "full_width": true,
-        "padding_top": 100,
-        "padding_bottom": 100
+        "layout": {
+          "flex-direction": "column",
+          "justify-content": "center"
+        },
+        "spacing": {
+          "padding": "100px 0"
+        },
+        "color_scheme": "scheme-2"
       }
     }
   },
