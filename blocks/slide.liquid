@@ -11,14 +11,10 @@
 <div
   id="slide-{{ block.id }}"
   class="slideshow__slide"
-  aria-hidden="{% if blockIndex == 1 %}false{%else%}true{% endif %}"
+  aria-hidden="{% if blockIndex == 1 %}false{% else %}true{% endif %}"
   {{ block.shopify_attributes }}
 >
   {% style %}
-    #slide-{{ block.id }} .slide__content {
-      flex-direction: {{ block.settings.direction }};
-    }
-
     {%- if section.settings.slide_height == 'adapt_image' and blockIndex == 1 and block.settings.image != blank -%}
       #slideshow-{{ section.id }} .slideshow__slides,
       #slideshow-{{ section.id }} .slideshow__slide {
@@ -56,7 +52,7 @@
       {%- endif -%}
     {%- endif -%}
   </div>
-  <div class="slide__content">
+  <div class="{{ block.settings | class_list }} slide__content">
     {% content_for "blocks" %}
   </div>
 </div>
@@ -73,20 +69,27 @@
       "label": "Image"
     },
     {
-      "type": "select",
-      "id": "direction",
-      "label": "Content direction",
-      "options": [
-        {
-          "value": "row",
-          "label": "Horizontal"
-        },
-        {
-          "value": "column",
-          "label": "Vertical"
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing",
+      "default": {
+        "padding": "20px"
+      }
+    },
+    {
+      "type": "style.layout_panel",
+      "id": "layout",
+      "label": "Layout",
+      "default": {
+        "flex-direction": "row",
+        "gap": "20px",
+        "justify-content": "center",
+        "align-items": "center",
+
+        "@media (--mobile)": {
+          "flex-wrap": "wrap"
         }
-      ],
-      "default": "row"
+      }
     }
   ],
   "presets": [
@@ -96,27 +99,43 @@
         {
           "type": "group",
           "settings": {
-            "direction": "column",
-            "justify_content": "center",
-            "width": 50
+            "layout": {
+              "flex-direction": "column",
+              "justify-content": "start"
+            },
+            "spacing": {
+              "padding": "50px"
+            },
+            "size": {
+              "width": "50%",
+              "flex-grow": "0",
+
+              "@media (--mobile)": {
+                "width": "90%"
+              }
+            }
           },
           "blocks": [
             {
               "type": "heading",
               "settings": {
-                "heading": "Slide 1"
+                "heading": "Image slide",
+                "heading_size": "h1"
               }
             },
             {
               "type": "text",
               "settings": {
-                "text": "<p>This is the first slide</p>"
+                "text": "<p>Tell your brand's story through images</p>"
               }
             },
             {
               "type": "link",
               "settings": {
-                "label": "Link for slide 1"
+                "label": "Button label",
+                "spacing": {
+                  "padding": "10px 30px"
+                }
               }
             }
           ]

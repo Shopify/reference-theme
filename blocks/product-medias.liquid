@@ -5,20 +5,8 @@
   endif
 %}
 
-{% style %}
-  @media screen and (min-width: 750px) {
-    .media-block--{{ block.id }} {
-      width: {{ block.settings.width }}%;
-    }
-
-    .layout--row > .media-block--{{ block.id }} {
-      width: calc({{ block.settings.width }}% - var(--layout-gap));
-    }
-  }
-{% endstyle %}
-
 <media-gallery
-  class="media-block media-block--{{ block.id }} {{ block.settings.direction }}"
+  class="{{ block.settings | class_list }} media-block media-block--{{ block.id }} {{ block.settings.direction }}"
   {{ block.shopify_attributes }}
   data-section="{{ section.id }}{{ target.id }}"
 >
@@ -78,40 +66,27 @@
       "label": "Product"
     },
     {
-      "type": "select",
-      "id": "direction",
-      "label": "Content direction",
-      "options": [
-        {
-          "value": "row",
-          "label": "Horizontal"
-        },
-        {
-          "value": "column",
-          "label": "Vertical"
-        }
-      ],
-      "default": "row"
-    },
-    {
-      "type": "range",
-      "id": "width",
-      "label": "Width",
-      "min": 20,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "default": 100
-    },
-    {
-      "type": "paragraph",
-      "content": "Width is automatically optimized for mobile."
-    },
-    {
       "type": "checkbox",
       "id": "media_featured",
       "label": "Show only the featured media",
       "default": false
+    },
+    {
+      "type": "style.size_panel",
+      "id": "size",
+      "label": "Size",
+      "default": {
+        "width": "auto",
+
+        "@media (--mobile)": {
+          "width": "100%"
+        }
+      }
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing"
     }
   ],
   "presets": [{ "name": "Product (media)" }]

@@ -1,0 +1,23 @@
+{% content_for "block", type: "icon", id: "collapsible-row-icon" %}
+
+<span>{{ block.settings.summary }}</span>
+
+<svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+  {%- render 'icon', icon: 'caret' -%}
+</svg>
+
+{% schema %}
+{
+  "name": "Collapsible row summary",
+  "tag": "summary",
+  "blocks": [{ "type": "icon" }],
+  "settings": [
+    {
+      "type": "text",
+      "id": "summary",
+      "label": "Heading",
+      "default": "Collapsible row"
+    }
+  ]
+}
+{% endschema %}

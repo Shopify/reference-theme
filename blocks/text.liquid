@@ -1,5 +1,5 @@
 <div
-  class="text-block text-block--{{ block.id }} {{ block.settings.text_style }} text-{{ block.settings.alignment }}"
+  class="{{ block.settings | class_list }} text-block {{ block.settings.text_style }} text-{{ block.settings.alignment }}"
   {{ block.shopify_attributes }}
 >
   {{ block.settings.text }}
@@ -26,11 +26,11 @@
           "label": "Body"
         },
         {
-          "value": "text-block--subtitle",
+          "value": "text-block-subtitle",
           "label": "Subtitle"
         },
         {
-          "value": "text-block--caption",
+          "value": "text-block-caption",
           "label": "Caption"
         }
       ],
@@ -55,6 +55,23 @@
         }
       ],
       "default": "start"
+    },
+    {
+      "type": "style.size_panel",
+      "id": "size",
+      "label": "Size",
+      "default": {
+        "width": "fit-content",
+
+        "@media (--mobile)": {
+          "width": "100%"
+        }
+      }
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing"
     }
   ],
   "presets": [{ "name": "Text" }]

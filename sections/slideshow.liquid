@@ -1,12 +1,8 @@
-{{ 'slideshow.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'slideshow-component.js' | asset_url }}" defer="defer"></script>
-
 <slideshow-component
   id="slideshow-{{ section.id }}"
-  class="slideshow flex-item slideshow--{{ section.settings.slide_height }}"
+  class="slideshow slideshow--{{ section.settings.slide_height }}"
   data-active-slide="0"
   data-autoplay="{{ section.settings.autoplay }}"
-  data-transition-style="{{ section.settings.transition_style }}"
   {% if section.settings.autoplay %}
     aria-live="polite"
     data-autoplay-speed="{{ section.settings.autoplay_speed }}"
@@ -16,67 +12,21 @@
     {% content_for "blocks" %}
   </div>
 
-  <div class="slideshow__controls flex-item">
-    {% if section.blocks.size > 1 %}
-      <button
-        class="slideshow-control slideshow-control--previous button-secondary"
-        aria-label="Previous slide"
-      >
-        {%- render 'icon-previous' -%}
-      </button>
-
-      {% case section.settings.pagination_style %}
-        {% when 'dots' %}
-          {% for block in section.blocks %}
-            <button
-              class="slideshow-control slideshow-controls__link{% if forloop.first %} slideshow-controls__link--active{% endif %}"
-              aria-label="Slide {{ forloop.index }} of {{ forloop.length }}"
-              data-slide-number="{{ forloop.index0 }}"
-            >
-              <span class="slideshow-controls__dot"></span>
-            </button>
-          {% endfor %}
-
-        {% when 'counter' %}
-          <span class="current-slide-indicator">1/{{ section.blocks.size }}</span>
-
-        {% when 'numbers' %}
-          {% for block in section.blocks %}
-            <button
-              class="slideshow-control slideshow-controls__link{% if forloop.first %} slideshow-controls__link--active{% endif %}"
-              aria-label="Slide {{ forloop.index }} of {{ forloop.length }}"
-              data-slide-number="{{ forloop.index0 }}"
-            >
-              {{ forloop.index }}
-            </button>
-          {% endfor %}
-      {% endcase %}
-      <button
-        class="slideshow-control slideshow-control--next button-secondary"
-        aria-label="Next slide"
-      >
-        {%- render 'icon-next' -%}
-      </button>
-      {% if section.settings.autoplay %}
-        <button
-          type="button"
-          class="slideshow-control slideshow-control--autoplay button-secondary"
-          aria-label="Pause slideshow"
-        >
-          {%- render 'icon-pause' -%}
-          {%- render 'icon-play' -%}
-        </button>
-      {% endif %}
-    {% endif %}
-  </div>
+  {% if section.blocks.size > 1 %}
+    {% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}
+  {% endif %}
 </slideshow-component>
 
 {% schema %}
 {
   "name": "Slideshow",
-  "class": "section--group",
+  "class": "section--has-background",
   "blocks": [{ "type": "slide" }],
   "settings": [
+    {
+      "type": "header",
+      "content": "Slideshow height"
+    },
     {
       "type": "select",
       "id": "slide_height",
@@ -103,75 +53,7 @@
     },
     {
       "type": "header",
-      "content": "Section padding"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "label": "Top padding",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 30
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "label": "Bottom padding",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 30
-    },
-    {
-      "type": "header",
       "content": "Slideshow style"
-    },
-    {
-      "type": "select",
-      "id": "pagination_style",
-      "options": [
-        {
-          "value": "dots",
-          "label": "Dots"
-        },
-        {
-          "value": "counter",
-          "label": "Counter"
-        },
-        {
-          "value": "numbers",
-          "label": "Numbers"
-        }
-      ],
-      "label": "Pagination style",
-      "default": "counter"
-    },
-    {
-      "type": "select",
-      "id": "transition_style",
-      "options": [
-        {
-          "value": "left",
-          "label": "Slide left"
-        },
-        {
-          "value": "right",
-          "label": "Slide right"
-        },
-        {
-          "value": "top",
-          "label": "Slide up"
-        },
-        {
-          "value": "bottom",
-          "label": "Slide down"
-        }
-      ],
-      "label": "Transition",
-      "default": "left"
     },
     {
       "type": "checkbox",
@@ -200,27 +82,47 @@
             {
               "type": "group",
               "settings": {
-                "direction": "column",
-                "justify_content": "center",
-                "width": 50
+                "layout": {
+                  "flex-direction": "column",
+                  "justify-content": "flex-start"
+                },
+                "size": {
+                  "width": "50%",
+                  "flex-grow": "0",
+
+                  "@media (--mobile)": {
+                    "width": "100%"
+                  }
+                },
+                "spacing": {
+                  "padding": "50px",
+
+                  "@media (--mobile)": {
+                    "padding": "20px"
+                  }
+                }
               },
               "blocks": [
                 {
                   "type": "heading",
                   "settings": {
-                    "heading": "Slide 1"
+                    "heading": "Image slide",
+                    "heading_size": "h1"
                   }
                 },
                 {
                   "type": "text",
                   "settings": {
-                    "text": "<p>This is the first slide</p>"
+                    "text": "<p>Tell your brand's story through images</p>"
                   }
                 },
                 {
                   "type": "link",
                   "settings": {
-                    "label": "Link for slide 1"
+                    "label": "Button label",
+                    "spacing": {
+                      "padding": "10px 30px"
+                    }
                   }
                 }
               ]
@@ -233,60 +135,47 @@
             {
               "type": "group",
               "settings": {
-                "direction": "column",
-                "justify_content": "center",
-                "width": 50
-              },
-              "blocks": [
-                {
-                  "type": "heading",
-                  "settings": {
-                    "heading": "Slide 2"
+                "layout": {
+                  "flex-direction": "column",
+                  "justify-content": "flex-start"
+                },
+                "size": {
+                  "width": "50%",
+                  "flex-grow": "0",
+
+                  "@media (--mobile)": {
+                    "width": "100%"
                   }
                 },
-                {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>This is the second slide</p>"
-                  }
-                },
-                {
-                  "type": "link",
-                  "settings": {
-                    "label": "Link for slide 2"
+                "spacing": {
+                  "padding": "50px",
+
+                  "@media (--mobile)": {
+                    "padding": "20px"
                   }
                 }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "slide",
-          "blocks": [
-            {
-              "type": "group",
-              "settings": {
-                "direction": "column",
-                "justify_content": "center",
-                "width": 50
               },
               "blocks": [
                 {
                   "type": "heading",
                   "settings": {
-                    "heading": "Slide 3"
+                    "heading": "Image slide",
+                    "heading_size": "h1"
                   }
                 },
                 {
                   "type": "text",
                   "settings": {
-                    "text": "<p>This is the third slide</p>"
+                    "text": "<p>Tell your brand's story through images</p>"
                   }
                 },
                 {
                   "type": "link",
                   "settings": {
-                    "label": "Link for slide 3"
+                    "label": "Button label",
+                    "spacing": {
+                      "padding": "10px 30px"
+                    }
                   }
                 }
               ]

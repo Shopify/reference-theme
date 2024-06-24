@@ -1,99 +1,47 @@
-{% style %}
-  .section-content-wrapper--{{ section.id }} {
-    padding-block-start: {{ section.settings.padding_top}}px;
-    padding-block-end: {{ section.settings.padding_bottom}}px;
-    flex-direction: {{ section.settings.direction }};
-    {% if section.settings.direction == 'row' %}
-      justify-content: {{ section.settings.justify_content }};
-    {% else  %}
-      align-items: {{ section.settings.justify_content }};
-    {% endif %}
-  }
-{% endstyle %}
+{% stylesheet %}{% endstylesheet %}
 
-<div class="color-{{ section.settings.color_scheme }} page-width{% if section.settings.full_width %} page-width--full{% endif %}">
-  <div class="section-content-wrapper section-content-wrapper--{{ section.id }} layout layout--{{ section.settings.direction }}">
-    {% content_for "blocks" %}
-  </div>
+<div class="full-width {{ section.settings | class_list }} color-{{ section.settings.color_scheme }}">
+  {% content_for "blocks" %}
 </div>
 
 {% schema %}
 {
   "name": "Custom section",
-  "class": "section--group",
+  "class": "section--has-background",
   "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
     {
-      "type": "select",
-      "id": "direction",
-      "label": "Content direction",
-      "options": [
-        {
-          "value": "row",
-          "label": "Horizontal"
-        },
-        {
-          "value": "column",
-          "label": "Vertical"
-        }
-      ],
-      "default": "row"
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing",
+      "default": {
+        "padding": "20px"
+      }
     },
     {
-      "type": "select",
-      "id": "justify_content",
-      "label": "Content position",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "Start"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "flex-end",
-          "label": "End"
+      "type": "style.layout_panel",
+      "id": "layout",
+      "label": "Layout",
+      "default": {
+        "flex-direction": "row",
+        "gap": "20px",
+        "justify-content": "center",
+        "align-items": "center",
+
+        "@media (--mobile)": {
+          "flex-wrap": "wrap"
         }
-      ],
-      "default": "flex-start"
+      }
+    },
+    {
+      "type": "header",
+      "content": "Color"
     },
     {
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "Color scheme",
       "default": "scheme-1"
-    },
-    {
-      "type": "checkbox",
-      "id": "full_width",
-      "label": "Make section full width",
-      "default": false
-    },
-    {
-      "type": "header",
-      "content": "Section padding"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "label": "Top padding",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 30
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "label": "Bottom padding",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 30
     }
   ],
   "presets": [
@@ -103,24 +51,43 @@
     {
       "name": "Image with text",
       "settings": {
-        "padding_top": 48,
-        "padding_bottom": 48
+        "spacing": {
+          "padding": "40px 20px"
+        }
       },
       "blocks": [
         {
           "type": "image",
           "settings": {
-            "width": 45,
-            "ratio": "1"
+            "size": {
+              "width": "100%",
+              "flex-grow": "1",
+              "height": "100%",
+
+              "@media (--mobile)": {
+                "height": "auto"
+              }
+            }
           }
         },
         {
           "type": "group",
           "settings": {
-            "direction": "column",
-            "color_scheme": "scheme-3",
-            "width": 50,
-            "padding": 60
+            "layout": {
+              "flex-direction": "column"
+            },
+            "size": {
+              "width": "100%",
+              "height": "100%",
+
+              "@media (--mobile)": {
+                "height": "auto"
+              }
+            },
+            "spacing": {
+              "padding": "60px"
+            },
+            "color_scheme": "scheme-3"
           },
           "blocks": [
             {
@@ -137,7 +104,12 @@
               }
             },
             {
-              "type": "link"
+              "type": "link",
+              "settings": {
+                "spacing": {
+                  "padding": "10px 30px"
+                }
+              }
             }
           ]
         }
@@ -146,8 +118,14 @@
     {
       "name": "Collapsible content",
       "settings": {
-        "direction": "column",
-        "justify_content": "center"
+        "layout": {
+          "flex-direction": "column",
+          "align-items": "flex-start",
+          "justify-content": "center"
+        },
+        "spacing": {
+          "padding": "40px 20px"
+        }
       },
       "blocks": [
         {
@@ -159,15 +137,50 @@
         {
           "type": "group",
           "settings": {
-            "direction": "column",
-            "padding": 16
+            "layout": {
+              "flex-direction": "column",
+              "gap": "0px"
+            }
           },
           "blocks": [
             {
               "type": "collapsible-row",
               "blocks": [
                 {
-                  "type": "text"
+                  "type": "collapsible-row-summary",
+                  "static": true,
+                  "id": "collapsible-row-summary",
+                  "blocks": [
+                    {
+                      "type": "icon",
+                      "id": "collapsible-row-icon",
+                      "static": true,
+                      "settings": {
+                        "icon": "check_mark",
+                        "width": 22
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "group",
+                  "settings": {
+                    "layout": {
+                      "flex-direction": "column",
+                      "align-items": "flex-start"
+                    },
+                    "spacing": {
+                      "padding": "15px"
+                    }
+                  },
+                  "blocks": [
+                    {
+                      "type": "heading"
+                    },
+                    {
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -175,7 +188,40 @@
               "type": "collapsible-row",
               "blocks": [
                 {
-                  "type": "text"
+                  "type": "collapsible-row-summary",
+                  "static": true,
+                  "id": "collapsible-row-summary",
+                  "blocks": [
+                    {
+                      "type": "icon",
+                      "id": "collapsible-row-icon",
+                      "static": true,
+                      "settings": {
+                        "icon": "check_mark",
+                        "width": 22
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "group",
+                  "settings": {
+                    "layout": {
+                      "flex-direction": "column",
+                      "align-items": "flex-start"
+                    },
+                    "spacing": {
+                      "padding": "15px"
+                    }
+                  },
+                  "blocks": [
+                    {
+                      "type": "heading"
+                    },
+                    {
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -183,7 +229,40 @@
               "type": "collapsible-row",
               "blocks": [
                 {
-                  "type": "text"
+                  "type": "collapsible-row-summary",
+                  "static": true,
+                  "id": "collapsible-row-summary",
+                  "blocks": [
+                    {
+                      "type": "icon",
+                      "id": "collapsible-row-icon",
+                      "static": true,
+                      "settings": {
+                        "icon": "check_mark",
+                        "width": 22
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "group",
+                  "settings": {
+                    "layout": {
+                      "flex-direction": "column",
+                      "align-items": "flex-start"
+                    },
+                    "spacing": {
+                      "padding": "15px"
+                    }
+                  },
+                  "blocks": [
+                    {
+                      "type": "heading"
+                    },
+                    {
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             },
@@ -191,7 +270,40 @@
               "type": "collapsible-row",
               "blocks": [
                 {
-                  "type": "text"
+                  "type": "collapsible-row-summary",
+                  "static": true,
+                  "id": "collapsible-row-summary",
+                  "blocks": [
+                    {
+                      "type": "icon",
+                      "id": "collapsible-row-icon",
+                      "static": true,
+                      "settings": {
+                        "icon": "check_mark",
+                        "width": 22
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "group",
+                  "settings": {
+                    "layout": {
+                      "flex-direction": "column",
+                      "align-items": "flex-start"
+                    },
+                    "spacing": {
+                      "padding": "15px"
+                    }
+                  },
+                  "blocks": [
+                    {
+                      "type": "heading"
+                    },
+                    {
+                      "type": "text"
+                    }
+                  ]
                 }
               ]
             }
@@ -202,9 +314,13 @@
     {
       "name": "Collection list",
       "settings": {
-        "direction": "column",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "layout": {
+          "flex-direction": "column",
+          "align-items": "flex-start"
+        },
+        "spacing": {
+          "padding": "60px 20px"
+        }
       },
       "blocks": [
         {
@@ -216,36 +332,26 @@
         {
           "type": "group",
           "settings": {
-            "padding": 0
+            "spacing": {
+              "padding": "0"
+            }
           },
           "blocks": [
             {
-              "type": "collection-card",
-              "settings": {
-                "width": 33,
-                "ratio": "1"
-              }
+              "type": "collection-card"
             },
             {
-              "type": "collection-card",
-              "settings": {
-                "width": 33,
-                "ratio": "1"
-              }
+              "type": "collection-card"
             },
             {
-              "type": "collection-card",
-              "settings": {
-                "width": 33,
-                "ratio": "1"
-              }
+              "type": "collection-card"
             }
           ]
         }
       ]
     },
     {
-      "name": "Collage (2 columns)",
+      "name": "Collage",
       "blocks": [
         {
           "type": "heading",
@@ -256,27 +362,48 @@
         {
           "type": "group",
           "settings": {
-            "padding": 0
+            "spacing": {
+              "padding": "0"
+            }
           },
           "blocks": [
             {
               "type": "group",
               "settings": {
-                "direction": "column",
-                "width": 25,
-                "padding": 0
+                "layout": {
+                  "flex-direction": "column"
+                },
+                "size": {
+                  "width": "25%",
+                  "height": "100%",
+
+                  "@media (--mobile)": {
+                    "height": "auto",
+                    "width": "100%"
+                  }
+                },
+                "spacing": {
+                  "padding": "0"
+                }
               },
               "blocks": [
                 {
                   "type": "image",
                   "settings": {
-                    "ratio": "2 \/ 3"
+                    "size": {
+                      "width": "100%",
+                      "height": "100%"
+                    }
                   }
                 },
                 {
                   "type": "collection-card",
                   "settings": {
-                    "ratio": "2 \/ 3"
+                    "ratio": "2 \/ 3",
+                    "size": {
+                      "width": "100%",
+                      "height": "100%"
+                    }
                   }
                 }
               ]
@@ -284,7 +411,13 @@
             {
               "type": "collection-card",
               "settings": {
-                "width": 74,
+                "size": {
+                  "width": "75%",
+
+                  "@media (--mobile)": {
+                    "width": "100%"
+                  }
+                },
                 "ratio": "1"
               }
             }
@@ -292,103 +425,44 @@
         }
       ],
       "settings": {
-        "direction": "column",
-        "full_width": true,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    {
-      "name": "Collage (3 columns)",
-      "settings": {
-        "direction": "column",
-        "full_width": true,
-        "padding_top": 60,
-        "padding_bottom": 60
-      },
-      "blocks": [
-        {
-          "type": "heading",
-          "settings": {
-            "heading": "Multimedia collage"
-          }
+        "layout": {
+          "flex-direction": "column",
+          "align-items": "flex-start"
         },
-        {
-          "type": "group",
-          "settings": {
-            "padding": 0
-          },
-          "blocks": [
-            {
-              "type": "group",
-              "settings": {
-                "direction": "column",
-                "width": 25,
-                "padding": 0
-              },
-              "blocks": [
-                {
-                  "type": "image",
-                  "settings": {
-                    "ratio": "2 \/ 3"
-                  }
-                },
-                {
-                  "type": "product-card",
-                  "settings": {
-                    "ratio": "1"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "image",
-              "settings": {
-                "width": 50,
-                "ratio": "1"
-              }
-            },
-            {
-              "type": "group",
-              "settings": {
-                "direction": "column",
-                "width": 25,
-                "padding": 0
-              },
-              "blocks": [
-                {
-                  "type": "product-card"
-                },
-                {
-                  "type": "image",
-                  "settings": {
-                    "ratio": "2 \/ 3"
-                  }
-                }
-              ]
-            }
-          ]
+        "spacing": {
+          "padding": "60px 20px"
         }
-      ]
+      }
     },
     {
       "name": "Rich text",
       "settings": {
-        "direction": "column",
-        "justify_content": "center"
+        "layout": {
+          "flex-direction": "column",
+          "justify-content": "center"
+        },
+        "spacing": {
+          "padding": "40px 20px"
+        }
       },
       "blocks": [
         {
           "type": "group",
           "settings": {
-            "width": 75,
-            "justify_content": "center"
+            "layout": {
+              "flex-direction": "column",
+              "justify-content": "center"
+            },
+            "size": {
+              "width": "75%"
+            }
           },
           "blocks": [
             {
               "type": "heading",
               "settings": {
-                "heading_size": "h1"
+                "heading_size": "h1",
+                "alignment": "center"
               }
             },
             {
@@ -398,550 +472,188 @@
               }
             },
             {
-              "type": "link"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Multirow",
-      "blocks": [
-        {
-          "type": "group",
-          "blocks": [
-            {
-              "type": "image",
+              "type": "link",
               "settings": {
-                "width": 50
-              }
-            },
-            {
-              "type": "group",
-              "settings": {
-                "width": 50,
-                "direction": "column",
-                "padding": 60
-              },
-              "blocks": [
-                {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Caption</p>",
-                    "text_style": "text-block--caption"
-                  }
-                },
-                {
-                  "type": "heading",
-                  "settings": {
-                    "heading": "Row",
-                    "heading_size": "h2"
-                  }
-                },
-                {
-                  "type": "text"
-                },
-                {
-                  "type": "link",
-                  "settings": {
-                    "style_class": "button-secondary"
-                  }
+                "spacing": {
+                  "padding": "10px 30px"
                 }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "blocks": [
-            {
-              "type": "group",
-              "settings": {
-                "width": 50,
-                "direction": "column",
-                "padding": 60
-              },
-              "blocks": [
-                {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Caption</p>",
-                    "text_style": "text-block--caption"
-                  }
-                },
-                {
-                  "type": "heading",
-                  "settings": {
-                    "heading": "Row",
-                    "heading_size": "h2"
-                  }
-                },
-                {
-                  "type": "text"
-                },
-                {
-                  "type": "link",
-                  "settings": {
-                    "style_class": "button-secondary"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "image",
-              "settings": {
-                "width": 50
               }
             }
           ]
-        },
-        {
-          "type": "group",
-          "blocks": [
-            {
-              "type": "image",
-              "settings": {
-                "width": 50
-              }
-            },
-            {
-              "type": "group",
-              "settings": {
-                "width": 50,
-                "direction": "column",
-                "padding": 60
-              },
-              "blocks": [
-                {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Caption</p>",
-                    "text_style": "text-block--caption"
-                  }
-                },
-                {
-                  "type": "heading",
-                  "settings": {
-                    "heading": "Row",
-                    "heading_size": "h2"
-                  }
-                },
-                {
-                  "type": "text"
-                },
-                {
-                  "type": "link",
-                  "settings": {
-                    "style_class": "button-secondary"
-                  }
-                }
-              ]
-            }
-          ]
         }
       ]
     },
     {
-      "name": "Multicolumn (2 columns)",
-      "blocks": [
-        {
-          "type": "heading",
-          "settings": {
-            "heading": "Multicolumn",
-            "heading_size": "h2"
-          }
-        },
-        {
-          "type": "group",
-          "settings": {
-            "padding": 0
-          },
-          "blocks": [
-            {
-              "type": "group",
-              "settings": {
-                "direction": "column",
-                "width": 50,
-                "padding": 0
-              },
-              "blocks": [
-                {
-                  "type": "image",
-                  "settings": {
-                    "ratio": "1"
-                  }
-                },
-                {
-                  "type": "group",
-                  "settings": {
-                    "color_scheme": "scheme-3"
-                  },
-                  "blocks": [
-                    {
-                      "type": "heading",
-                      "settings": {
-                        "heading": "Column",
-                        "heading_size": "h3"
-                      }
-                    },
-                    {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-                      }
-                    },
-                    {
-                      "type": "group",
-                      "settings": {
-                        "color_scheme": "scheme-3"
-                      },
-                      "blocks": [
-                        {
-                          "type": "link",
-                          "settings": {
-                            "style_class": "button-secondary"
-                          }
-                        },
-                        {
-                          "type": "link",
-                          "settings": {
-                            "style_class": "button-secondary"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "group",
-              "settings": {
-                "direction": "column",
-                "width": 50,
-                "padding": 0
-              },
-              "blocks": [
-                {
-                  "type": "image",
-                  "settings": {
-                    "ratio": "1"
-                  }
-                },
-                {
-                  "type": "group",
-                  "settings": {
-                    "color_scheme": "scheme-3"
-                  },
-                  "blocks": [
-                    {
-                      "type": "heading",
-                      "settings": {
-                        "heading": "Column",
-                        "heading_size": "h3"
-                      }
-                    },
-                    {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-                      }
-                    },
-                    {
-                      "type": "group",
-                      "settings": {
-                        "color_scheme": "scheme-3"
-                      },
-                      "blocks": [
-                        {
-                          "type": "link",
-                          "settings": {
-                            "style_class": "button-secondary"
-                          }
-                        },
-                        {
-                          "type": "link",
-                          "settings": {
-                            "style_class": "button-secondary"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Multicolumn (3 columns)",
-      "blocks": [
-        {
-          "type": "heading",
-          "settings": {
-            "heading": "Multicolumn",
-            "heading_size": "h2"
-          }
-        },
-        {
-          "type": "group",
-          "settings": {
-            "padding": 0
-          },
-          "blocks": [
-            {
-              "type": "group",
-              "settings": {
-                "direction": "column",
-                "width": 33,
-                "padding": 0
-              },
-              "blocks": [
-                {
-                  "type": "image",
-                  "settings": {
-                    "ratio": "1"
-                  }
-                },
-                {
-                  "type": "heading",
-                  "settings": {
-                    "heading": "Column",
-                    "heading_size": "h3"
-                  }
-                },
-                {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "group",
-              "settings": {
-                "direction": "column",
-                "width": 33,
-                "padding": 0
-              },
-              "blocks": [
-                {
-                  "type": "image",
-                  "settings": {
-                    "ratio": "1"
-                  }
-                },
-                {
-                  "type": "heading",
-                  "settings": {
-                    "heading": "Column",
-                    "heading_size": "h3"
-                  }
-                },
-                {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "group",
-              "settings": {
-                "direction": "column",
-                "width": 33,
-                "padding": 0
-              },
-              "blocks": [
-                {
-                  "type": "image",
-                  "settings": {
-                    "ratio": "1"
-                  }
-                },
-                {
-                  "type": "heading",
-                  "settings": {
-                    "heading": "Column",
-                    "heading_size": "h3"
-                  }
-                },
-                {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "settings": {
-            "justify_content": "center",
-            "padding": 20
-          },
-          "blocks": [
-            {
-              "type": "link"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Multicolumn (4 columns)",
-      "blocks": [
-        {
-          "type": "heading",
-          "settings": {
-            "heading": "Multicolumn",
-            "heading_size": "h2"
-          }
-        },
-        {
-          "type": "group",
-          "settings": {
-            "padding": 0
-          },
-          "blocks": [
-            {
-              "type": "image",
-              "settings": {
-                "width": 25,
-                "ratio": "auto"
-              }
-            },
-            {
-              "type": "group",
-              "settings": {
-                "direction": "column",
-                "width": 25,
-                "padding": 0
-              },
-              "blocks": [
-                {
-                  "type": "image",
-                  "settings": {
-                    "ratio": "1"
-                  }
-                },
-                {
-                  "type": "heading",
-                  "settings": {
-                    "heading": "Column",
-                    "heading_size": "h3"
-                  }
-                },
-                {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "group",
-              "settings": {
-                "direction": "column",
-                "width": 25,
-                "padding": 0
-              },
-              "blocks": [
-                {
-                  "type": "image",
-                  "settings": {
-                    "ratio": "1"
-                  }
-                },
-                {
-                  "type": "heading",
-                  "settings": {
-                    "heading": "Column",
-                    "heading_size": "h3"
-                  }
-                },
-                {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "group",
-              "settings": {
-                "direction": "column",
-                "width": 25,
-                "padding": 0
-              },
-              "blocks": [
-                {
-                  "type": "image",
-                  "settings": {
-                    "ratio": "1"
-                  }
-                },
-                {
-                  "type": "heading",
-                  "settings": {
-                    "heading": "Column",
-                    "heading_size": "h3"
-                  }
-                },
-                {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "settings": {
-            "justify_content": "center",
-            "padding": 20
-          },
-          "blocks": [
-            {
-              "type": "link"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Email signup (1 column)",
+      "name": "Multicolumn",
       "settings": {
-        "direction": "column",
-        "justify_content": "center",
+        "layout": {
+          "flex-direction": "column",
+          "align-items": "flex-start"
+        },
+        "spacing": {
+          "padding": "40px 20px"
+        }
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "settings": {
+            "heading": "Multicolumn",
+            "heading_size": "h2"
+          }
+        },
+        {
+          "type": "group",
+          "settings": {
+            "spacing": {
+              "padding": "0"
+            }
+          },
+          "blocks": [
+            {
+              "type": "group",
+              "settings": {
+                "color_scheme": "scheme-3",
+                "layout": {
+                  "flex-direction": "column",
+                  "align-items": "flex-start"
+                },
+                "size": {
+                  "width": "100%"
+                },
+                "spacing": {
+                  "padding": "20px"
+                }
+              },
+              "blocks": [
+                {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "Column",
+                    "heading_size": "h3"
+                  }
+                },
+                {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "settings": {
+                "color_scheme": "scheme-3",
+                "layout": {
+                  "flex-direction": "column",
+                  "align-items": "flex-start"
+                },
+                "size": {
+                  "width": "100%"
+                },
+                "spacing": {
+                  "padding": "20px"
+                }
+              },
+              "blocks": [
+                {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "Column",
+                    "heading_size": "h3"
+                  }
+                },
+                {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "settings": {
+                "color_scheme": "scheme-3",
+                "layout": {
+                  "flex-direction": "column",
+                  "align-items": "flex-start"
+                },
+                "size": {
+                  "width": "100%"
+                },
+                "spacing": {
+                  "padding": "20px"
+                }
+              },
+              "blocks": [
+                {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "Column",
+                    "heading_size": "h3"
+                  }
+                },
+                {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "settings": {
+            "layout": {
+              "justify-content": "center"
+            },
+            "spacing": {
+              "padding": "0px"
+            }
+          },
+          "blocks": [
+            {
+              "type": "link",
+              "settings": {
+                "spacing": {
+                  "padding": "10px 30px"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Email signup",
+      "settings": {
+        "layout": {
+          "flex-direction": "column",
+          "align-items": "center"
+        },
         "color_scheme": "scheme-2",
-        "full_width": true,
-        "padding_top": 50,
-        "padding_bottom": 50
+        "spacing": {
+          "padding": "60px 20px"
+        }
       },
       "blocks": [
         {
           "type": "heading",
           "settings": {
             "heading": "Subscribe to our newsletter",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "alignment": "center"
           }
         },
         {
           "type": "text",
           "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>",
+            "alignment": "center"
           }
         },
         {
@@ -952,22 +664,30 @@
     {
       "name": "Icon with text",
       "settings": {
-        "direction": "row",
-        "justify_content": "center",
-        "color_scheme": "scheme-2",
-        "full_width": true,
-        "padding_top": 30,
-        "padding_bottom": 30
+        "layout": {
+          "flex-direction": "row",
+          "justify-content": "center"
+        },
+        "spacing": {
+          "padding": "40px 20px"
+        },
+        "color_scheme": "scheme-2"
       },
       "blocks": [
         {
           "type": "group",
           "settings": {
-            "direction": "column",
-            "justify_content": "center",
-            "color_scheme": "scheme-2",
-            "width": 33,
-            "padding": 35
+            "layout": {
+              "flex-direction": "column",
+              "justify-content": "center"
+            },
+            "size": {
+              "width": "100%"
+            },
+            "spacing": {
+              "padding": "35px"
+            },
+            "color_scheme": "scheme-2"
           },
           "blocks": [
             {
@@ -982,7 +702,7 @@
               "settings": {
                 "heading": "Heading",
                 "heading_size": "h3",
-                "alignment": "start"
+                "alignment": "center"
               }
             },
             {
@@ -998,11 +718,17 @@
         {
           "type": "group",
           "settings": {
-            "direction": "column",
-            "justify_content": "center",
+            "layout": {
+              "flex-direction": "column",
+              "justify-content": "center"
+            },
             "color_scheme": "scheme-2",
-            "width": 33,
-            "padding": 35
+            "size": {
+              "width": "100%"
+            },
+            "spacing": {
+              "padding": "35px"
+            }
           },
           "blocks": [
             {
@@ -1017,7 +743,7 @@
               "settings": {
                 "heading": "Heading",
                 "heading_size": "h3",
-                "alignment": "start"
+                "alignment": "center"
               }
             },
             {
@@ -1033,11 +759,17 @@
         {
           "type": "group",
           "settings": {
-            "direction": "column",
-            "justify_content": "center",
-            "color_scheme": "scheme-2",
-            "width": 33,
-            "padding": 35
+            "layout": {
+              "flex-direction": "column",
+              "justify-content": "center"
+            },
+            "size": {
+              "width": "100%"
+            },
+            "spacing": {
+              "padding": "35px"
+            },
+            "color_scheme": "scheme-2"
           },
           "blocks": [
             {
@@ -1052,7 +784,7 @@
               "settings": {
                 "heading": "Heading",
                 "heading_size": "h3",
-                "alignment": "start"
+                "alignment": "center"
               }
             },
             {
@@ -1062,54 +794,6 @@
                 "text_style": "",
                 "alignment": "center"
               }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Email signup (2 columns)",
-      "settings": {
-        "justify_content": "center",
-        "color_scheme": "scheme-2",
-        "full_width": true,
-        "padding_top": 50,
-        "padding_bottom": 50
-      },
-      "blocks": [
-        {
-          "type": "group",
-          "settings": {
-            "color_scheme": "scheme-4",
-            "width": 50,
-            "padding": 0
-          },
-          "blocks": [
-            {
-              "type": "heading",
-              "settings": {
-                "heading": "Subscribe to our newsletter",
-                "heading_size": "h1"
-              }
-            }
-          ]
-        },
-        {
-          "type": "group",
-          "settings": {
-            "color_scheme": "scheme-4",
-            "width": 50,
-            "padding": 0
-          },
-          "blocks": [
-            {
-              "type": "text",
-              "settings": {
-                "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
-              }
-            },
-            {
-              "type": "newsletter"
             }
           ]
         }
