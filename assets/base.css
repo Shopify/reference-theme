@@ -260,7 +260,7 @@ button,
 }
 
 /* Image block */
-.image-block img {
+.image-block :is(img, .placeholder-image) {
   height: 100%;
 }
 
@@ -500,6 +500,10 @@ a {
 .media-block.column > div {
   max-width: 100%;
   width: 100%;
+}
+
+.media-block .placeholder-image {
+  height: 100%;
 }
 
 /* Quantity selector block */
