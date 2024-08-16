@@ -9,6 +9,7 @@ class EmblaSlider extends HTMLElement {
   }
   connectedCallback() {
     this.shadow = this.attachShadow({ mode: "open" });
+    console.log(this.childNodes)
     this.shadow.innerHTML = `
       <div part="embla">
         <div part="embla__container">
