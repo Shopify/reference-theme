@@ -160,13 +160,13 @@ class EmblaSlider extends HTMLElement {
   }
   updateLoopProperty(){
     if(window.matchMedia(EmblaSlider.BREAKPOINT_SMALL)){
-      this.options.breakpoints[EmblaSlider.BREAKPOINT_SMALL].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
+      !!this.options.breakpoints[EmblaSlider.BREAKPOINT_SMALL].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
     }
     else if(window.matchMedia(EmblaSlider.BREAKPOINT_MEDIUM)){
-      this.options.breakpoints[EmblaSlider.BREAKPOINT_MEDIUM].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
+      !!this.options.breakpoints[EmblaSlider.BREAKPOINT_MEDIUM].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
     }
     else{
-      this.options.loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
+      !!this.options.loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
     }
   }
   buildOptions(){
