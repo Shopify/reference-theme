@@ -1,7 +1,7 @@
 embla-slider{
   overflow: hidden;
-  --gap: 20px;
-  --slides-per-page: 3;
+  --gap: 0px;
+  --slides-per-page: 1;
   --gaps-per-page: calc(var(--slides-per-page) - 1);
 }
 embla-slider.is-draggable{

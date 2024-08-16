@@ -112,5 +112,28 @@
         }
       }
     ]
+  },
+  {
+    "name": "Responsiveness",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Breakpoints"
+      },
+      {
+        "type": "number",
+        "id": "breakpoint_small",
+        "label": "Small",
+        "default": 769,
+        "info": "Defines the upper bound for small devices (phones)."
+      },
+      {
+        "type": "number",
+        "id": "breakpoint_medium",
+        "label": "Medium",
+        "default": 993,
+        "info": "Defines the upper bound for medium devices (tablets)."
+      }
+    ]
   }
 ]

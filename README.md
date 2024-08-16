@@ -150,7 +150,8 @@ As with a normal setting, it is accessed via its ID.
 
 
 ## Codeing Guidelines
-
+### Files 
+- file names should should be formatted as ```kebab-case```
 ### HTML 
  - use as less containers as possible
 ### Liquid 

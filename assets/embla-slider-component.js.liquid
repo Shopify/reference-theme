@@ -14,6 +14,8 @@ const EMBLA_SLIDER_NAME = 'embla-slider'
 const EMBLA_PROGRESS_NAME = 'embla-progress'
 const EMBLA_THUMBNAIL_NAME = 'embla-thumbnail'
 
+const camelize = s => s.replace(/-./g, x=>x[1].toUpperCase())
+
 customElements.define(EMBLA_SLIDE_NAME, class extends HTMLElement{});
 customElements.define(EMBLA_CONTAINER_NAME, class extends HTMLElement{});
 class EmblaThumbnail extends HTMLElement{
@@ -21,7 +23,6 @@ class EmblaThumbnail extends HTMLElement{
     super();
   }
   connectedCallback() {
-    this.index = Number(this.getAttribute("index"))
     this.addEventListener('click', () => {
         const slider = this.closest(EMBLA_SLIDER_NAME) || document.getElementById(this.for)
         slider.api.scrollTo(this.index)
@@ -108,6 +109,10 @@ class EmblaProgress extends HTMLElement{
 }
 customElements.define(EMBLA_PROGRESS_NAME, EmblaProgress);
 class EmblaSlider extends HTMLElement {
+  BREAKPOINT_SMALL  = '(max-width: {{settings.breakpoint_small}}px)'
+  BREAKPOINT_MEDIUM = '(max-width: {{settings.breakpoint_medium}}px)'
+  OPTIONS_PROPERTIES = ["options", "options-medium", "options-small"]
+
   constructor() {
     super();
   }
@@ -119,8 +124,19 @@ class EmblaSlider extends HTMLElement {
       // EmblaCarouselFade(),
       EmblaCarouselClassNames(),
     ]
-    this.options = { loop: false }
-    this.api = EmblaCarousel(this, this.options, this.plugins)
+    const options = { 
+      ...this.options,
+      container: this.querySelector(EMBLA_CONTAINER_NAME),
+      breakpoints:{
+        [EmblaSlider.BREAKPOINT_MEDIUM]: { 
+          ...this.optionsMedium
+        },
+        [EmblaSlider.BREAKPOINT_SMALL]: { 
+          ...this.optionsSmall
+        },
+      },
+    }
+    this.api = EmblaCarousel(this, options, this.plugins)
 
     this.api.on('slideschanged', () => {
 
@@ -155,11 +171,27 @@ class EmblaSlider extends HTMLElement {
     progress.forEach(n => n.update())
   }
   static get observedAttributes() {
-    return ["id"];
+    return ["id", ...EmblaSlider.OPTIONS_PROPERTIES];
   }
   attributeChangedCallback(property, oldValue, newValue) {
     if (oldValue === newValue) return;
-    this[ property ] = newValue;
+    const jsProperty = camelize(property)
+    if (EmblaSlider.OPTIONS_PROPERTIES.includes(property)){
+      // parse string before assignment
+      this[ jsProperty ] = Object.fromEntries(newValue.split(',').map(option => {
+        const [key, value] = option.split(':')
+        if(value.match(/true|false/g)){ // is boolean value
+          return [key.trim(), value.trim() == "true"]
+        }
+        if(value.match(/[0-9]+/g)){ // is number
+          return [key.trim(), Number(value.trim())]
+        }
+        return [key.trim(), value.trim()]
+      }));
+      return;
+    }
+    this[ jsProperty ] = newValue;
   }
+
 }
 customElements.define(EMBLA_SLIDER_NAME, EmblaSlider);

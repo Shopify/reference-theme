@@ -1,12 +1,21 @@
 
 <script type="module" src="{{ 'embla-slider-component.js' | asset_url }}"></script>
 <link rel="stylesheet" href="{{ 'embla-slider-component.css' | asset_url }}">
-<div class="" style="display: flex;flex-direction: column;">
+<div class="flex column">
   <embla-prev for="slider-{{section.id}}"> Prev </embla-prev>
   <embla-next for="slider-{{section.id}}"> Next </embla-next>
   <embla-progress for="slider-{{section.id}}"></embla-progress>
-
-  <embla-slider id="slider-{{section.id}}">
+  <style>
+    #slider-{{section.id}}{
+      --slides-per-page: 3;
+      --gap: 20px;
+    }
+  </style>
+  <embla-slider id="slider-{{section.id}}"
+    option="loop: true, duration: 25"
+    option-medium="loop: false, containScroll: trimSnaps"
+    option-small="loop: false"
+  >
     <embla-slides>
       {% for i in (1..7) %}
         <embla-slide class="">Slide {{ i }}</embla-slide>
@@ -16,8 +25,8 @@
     <embla-next> Next </embla-next>
     <embla-progress></embla-progress>
   </embla-slider>
-  
-  <div class="" style="display:flex;">
+
+  <div class="flex row">
     {% for i in (1..7) %}
       <embla-thumbnail for="slider-{{section.id}}" index="{{ forloop.index0 }}">Thumbnail {{ i }}</embla-thumbnail>
     {% endfor %}
@@ -33,6 +42,9 @@
     {
       "name": "Embla Test"
     }
+  ],
+  "settings": [
+    
   ]
 }
 {% endschema %}
