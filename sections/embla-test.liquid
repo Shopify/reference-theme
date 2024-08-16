@@ -1,0 +1,45 @@
+<style>
+  .embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+</style>
+
+<div class="embla">
+  <div class="embla__container">
+    <div class="embla__slide">Slide 1</div>
+    <div class="embla__slide">Slide 2</div>
+    <div class="embla__slide">Slide 3</div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  import "{{ 'embla-carousel.umd.js' | asset_url }}"
+  import "{{ 'embla-carousel-autoplay.umd.js' | asset_url }}"
+
+  const emblaNode = document.querySelector('.embla')
+  const options = { loop: false }
+  const emblaApi = EmblaCarousel(emblaNode, options)
+
+  console.log(emblaApi.slideNodes()) // Access API
+</script>
+
+
+{% schema %}
+{
+  "name": "Embla Test",
+  "class": "section--has-background",
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "presets": [
+    {
+      "name": "Embla Test"
+    }
+  ]
+}
+{% endschema %}

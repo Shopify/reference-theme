@@ -1,0 +1,22 @@
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+/* Slide covers 30% of the viewport 
+.embla__slide:nth-child(1) {
+  flex: 0 0 30%; 
+  min-width: 0;
+}
+Slide covers 60% of the viewport 
+.embla__slide:nth-child(2) {
+  flex: 0 0 60%;  
+  min-width: 0;
+}
+  */

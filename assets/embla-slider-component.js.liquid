@@ -1,0 +1,27 @@
+import "{{ 'embla-carousel.umd.js' | asset_url }}"
+import "{{ 'embla-carousel-autoplay.umd.js' | asset_url }}"
+
+const emblaNode = document.querySelector('.embla')
+const options = { loop: false }
+const plugins = [EmblaCarouselAutoplay()]
+const emblaApi = EmblaCarousel(emblaNode, options, plugins)
+
+console.log(emblaApi.slideNodes()) // Access API
+
+class EmblaSlider extends HTMLElement {
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+
+  }
+  static get observedAttributes() {
+    return ["name", "value", "id", "open"];
+  }
+  attributeChangedCallback(property, oldValue, newValue) {
+    if (oldValue === newValue) return;
+
+    this[ property ] = newValue;
+  }
+}
+customElements.define('embla-slider', EmblaSlider);
