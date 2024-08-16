@@ -2,6 +2,7 @@ embla-slider{
   overflow: hidden;
   --gap: 20px;
   --slides-per-page: 3;
+  --gaps-per-page: calc(var(--slides-per-page) - 1);
 }
 embla-slider.is-draggable{
   cursor: grab;
@@ -16,7 +17,8 @@ embla-container {
   gap: var(--gap);
 }
 embla-slide {
-  flex: 0 0 calc(100% - calc(var(--slides-per-page) - 1) * var(--gap) / var(--slides-per-page));
+  --total-gap: calc(var(--gaps-per-page) * var(--gap));
+  flex: 0 0 calc(calc(100% - var(--total-gap)) / var(--slides-per-page));
   min-width: 0;
   text-align:center;
   background-color: lightgray;
