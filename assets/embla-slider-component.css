@@ -53,4 +53,5 @@ embla-progress::after{
 }
 embla-thumbnail{
   display:block;
+  cursor: pointer;
 }
