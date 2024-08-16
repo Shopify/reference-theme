@@ -16,7 +16,7 @@ embla-container {
   gap: var(--gap);
 }
 embla-slide {
-  flex: 0 0 calc(100% - calc(var(--slides-per-page) - 1) * var(--gap) / var(--slides--per-page));
+  flex: 0 0 calc(100% - calc(var(--slides-per-page) - 1) * var(--gap) / var(--slides-per-page));
   min-width: 0;
   text-align:center;
   background-color: lightgray;
