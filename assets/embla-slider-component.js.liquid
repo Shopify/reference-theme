@@ -18,8 +18,8 @@ class EmblaSlider extends HTMLElement {
       </div>
     `
     const options = { loop: false }
-
-    const emblaApi = EmblaCarousel(this, options, EmblaSlider.plugins)
+    const emblaNode = this.shadow.querySelector('[part="embla"]')
+    const emblaApi = EmblaCarousel(emblaNode, options, EmblaSlider.plugins)
     console.log("slideNodes", emblaApi.slideNodes()) // Access API
 
   }
