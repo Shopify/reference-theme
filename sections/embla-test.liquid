@@ -44,8 +44,8 @@
   const options = { loop: false }
   const emblaApi = EmblaCarousel(viewportNode, options)
 
-  prevButtonNode.addEventListener('click', embla.scrollPrev, false)
-  nextButtonNode.addEventListener('click', embla.scrollNext, false)
+  prevButtonNode.addEventListener('click', emblaApi.scrollPrev, false)
+  nextButtonNode.addEventListener('click', emblaApi.scrollNext, false)
   
 
   console.log(emblaApi.slideNodes()) // Access API
