@@ -1,7 +1,7 @@
 
 <script type="module" src="{{ 'embla-slider-component.js' | asset_url }}"></script>
 <link rel="stylesheet" href="{{ 'embla-slider-component.css' | asset_url }}">
-<div class="flex column">
+<div class="">
   <embla-prev for="slider-{{section.id}}"> Prev </embla-prev>
   <embla-next for="slider-{{section.id}}"> Next </embla-next>
   <embla-progress for="slider-{{section.id}}"></embla-progress>
@@ -26,7 +26,7 @@
     <embla-progress></embla-progress>
   </embla-slider>
 
-  <div class="flex row">
+  <div class="">
     {% for i in (1..7) %}
       <embla-thumbnail for="slider-{{section.id}}" index="{{ forloop.index0 }}">Thumbnail {{ i }}</embla-thumbnail>
     {% endfor %}
