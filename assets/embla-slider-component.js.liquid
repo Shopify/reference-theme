@@ -57,10 +57,10 @@ class EmblaSlider extends HTMLElement {
   connectedCallback() {
     this.plugins = [
       // EmblaCarouselAutoplay({ playOnInit: false, delay: 3000 }),
-      // AutoScroll({ playOnInit: false }),
-      AutoHeight(),
-      // Fade(),
-      ClassNames(),
+      // EmblaCarouselAutoScroll({ playOnInit: false }),
+      EmblaCarouselAutoHeight(),
+      // EmblaCarouselFade(),
+      EmblaCarouselClassNames(),
     ]
     this.options = { loop: false }
     this.api = EmblaCarousel(this, this.options, this.plugins)
