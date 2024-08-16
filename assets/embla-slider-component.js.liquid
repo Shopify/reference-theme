@@ -12,7 +12,7 @@ class EmblaSlider extends HTMLElement {
     this.shadow.innerHTML = `
       <div part="embla">
         <div part="embla__container">
-          ${Array.from(this.childNodes).map(slide => `<div part="embla__slide">${slide.innerHTML}</div>`)}
+          ${Array.from(this.childNodes).map(slide => `<div part="embla__slide">${slide.innerHTML}</div>`).join('')}
         </div>
       </div>
     `
