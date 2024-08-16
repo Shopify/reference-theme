@@ -147,3 +147,17 @@ You can also apply different classes to different elements, for example:
 ```
 
 As with a normal setting, it is accessed via its ID.
+
+
+## Codeing Guidelines
+
+### HTML 
+ - use as less containers as possible
+### Liquid 
+ - variables should should be formatted as ```snake_case```
+### CSS 
+ - variables should should be formatted as ```kebab-case```
+### JS 
+ - variables & functions should be formatted as ```camelCase```
+ - do not use ```var``` use ```const``` where ever possible and ```let``` when necessary
+ - use arrow functions ```() => {}``` where possible 
