@@ -149,10 +149,12 @@ class EmblaSlider extends HTMLElement {
     this.api.on('init', () => {
       this.updateControls()
       this.updateProgress()
+      this.updateThumbnails()
     })
     this.api.on('reInit', () => {
       this.updateControls()
       this.updateProgress()
+      this.updateThumbnails()
     })
     this.api.on('scroll', () => {
       this.updateProgress()
