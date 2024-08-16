@@ -17,6 +17,7 @@ embla-container {
   gap: var(--gap);
 }
 embla-slide {
+  display:block;
   --total-gap: calc(var(--gaps-per-page) * var(--gap));
   flex: 0 0 calc(calc(100% - var(--total-gap)) / var(--slides-per-page));
   min-width: 0;
@@ -25,6 +26,7 @@ embla-slide {
 }
 embla-next,
 embla-prev{
+  display:block;
   cursor: pointer;
 }
 embla-next[disabled],
@@ -33,6 +35,7 @@ embla-prev[disabled]{
 }
 
 embla-progress{
+  display:block;
   background-color: lightgray;
   width: 200px;
   height: 5px;
@@ -47,4 +50,7 @@ embla-progress::after{
   top: 0;
   width: var(--progress);
   background-color: gray;
+}
+embla-thumbnail{
+  display:block;
 }
