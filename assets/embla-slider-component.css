@@ -1,12 +1,12 @@
-embla-slider::part(embla) {
+embla-slider{
   overflow: hidden;
 }
-embla-slider::part(embla__container) {
+embla-container {
   display: flex;
   align-items: flex-start;
   transition: height 0.2s;
 }
-embla-slider::part(embla__slide) {
+embla-slide {
   flex: 0 0 100%;
   min-width: 0;
   text-align:center;
