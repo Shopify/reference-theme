@@ -161,16 +161,16 @@ class EmblaSlider extends HTMLElement {
   updateLoopProperty(){
     console.log("loop")
     if(window.matchMedia(EmblaSlider.BREAKPOINT_SMALL)){
-      this.options.breakpoints[EmblaSlider.BREAKPOINT_SMALL].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
       console.log("small")
+      this.options.breakpoints[EmblaSlider.BREAKPOINT_SMALL].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
     }
     else if(window.matchMedia(EmblaSlider.BREAKPOINT_MEDIUM)){
-      this.options.breakpoints[EmblaSlider.BREAKPOINT_MEDIUM].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
       console.log("medium")
+      this.options.breakpoints[EmblaSlider.BREAKPOINT_MEDIUM].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
     }
     else{
-      this.options.loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
       console.log("large")
+      this.options.loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
     }
   }
   buildOptions(){
@@ -215,7 +215,6 @@ class EmblaSlider extends HTMLElement {
     return ["id", ...EmblaSlider.OPTIONS_PROPERTIES];
   }
   attributeChangedCallback(property, oldValue, newValue) {
-    console.log(`Attribute changed`, property, oldValue, newValue)
     if (oldValue === newValue) return;
     const jsProperty = camelize(property)
     if (EmblaSlider.OPTIONS_PROPERTIES.includes(property)){
