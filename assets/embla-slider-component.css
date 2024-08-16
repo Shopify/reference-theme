@@ -31,3 +31,19 @@ embla-next[disabled],
 embla-prev[disabled]{
   cursor: not-allowed;
 }
+
+embla-progress{
+  background-color: lightgray;
+  width: 100px;
+  height: 5px;
+  position: relative;
+}
+embla-progress::after{
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--progress);
+}
