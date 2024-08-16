@@ -117,6 +117,9 @@ class EmblaSlider extends HTMLElement {
     super();
   }
   connectedCallback() {
+
+    EmblaSlider.observedAttributes.forEach(o => this.attributeChangedCallback(o, null, this.getAttribute(o))) 
+
     this.plugins = [
       // EmblaCarouselAutoplay({ playOnInit: false, delay: 3000 }),
       // EmblaCarouselAutoScroll({ playOnInit: false }),
