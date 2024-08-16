@@ -14,7 +14,6 @@ embla-slides {
   display: flex;
   align-items: flex-start;
   transition: height 0.2s;
-  /* gap: var(--gap); */
 }
 embla-slide {
   display:block;
@@ -23,7 +22,12 @@ embla-slide {
   min-width: 0;
   text-align:center;
   background-color: lightgray;
+}
+embla-slider[loop] embla-slide{
   margin-right: var(--gap);
+}
+embla-slider:not([loop]) embla-slides{
+  gap: var(--gap);
 }
 embla-next,
 embla-prev{
