@@ -9,18 +9,18 @@ class EmblaSlider extends HTMLElement {
   }
   connectedCallback() {
     this.shadow = this.attachShadow({ mode: "open" });
-    console.log(this.childNodes)
+    console.log("childNodes",this.children)
     this.shadow.innerHTML = `
       <div part="embla">
         <div part="embla__container">
-          ${Array.from(this.childNodes).map(slide => `<div part="embla__slide">${slide.innerHTML}</div>`).join('')}
+          ${Array.from(this.children).map(slide => `<div part="embla__slide">${slide.innerHTML}</div>`).join('')}
         </div>
       </div>
     `
     const options = { loop: false }
 
     const emblaApi = EmblaCarousel(this, options, EmblaSlider.plugins)
-    console.log(emblaApi.slideNodes()) // Access API
+    console.log("slideNodes", emblaApi.slideNodes()) // Access API
 
   }
   static get observedAttributes() {
