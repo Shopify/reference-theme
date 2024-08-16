@@ -21,13 +21,14 @@ class EmblaThumbnail extends HTMLElement{
     super();
   }
   connectedCallback() {
+    this.index = Number(this.getAttribute("index"))
     this.addEventListener('click', () => {
         const slider = this.closest(EMBLA_SLIDER_NAME) || document.getElementById(this.for)
-        slider.api?.scrolTo(Number(this.slide))
+        slider.api?.scrolTo(Number(this.index))
     })
   }
   static get observedAttributes() {
-    return ["for", "slide"];
+    return ["for", "index"];
   }
   attributeChangedCallback(property, oldValue, newValue) {
     if (oldValue === newValue) return;

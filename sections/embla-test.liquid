@@ -16,7 +16,7 @@
     <embla-next> Next </embla-next>
     <embla-progress></embla-progress>
     {% for i in (1..7) %}
-      <embla-thumbnail for="slider-{{section.id}}" slide="{{ forloop.index0 }}">Thumbnail {{ i }}</embla-thumbnail>
+      <embla-thumbnail for="slider-{{section.id}}" index="{{ forloop.index0 }}">Thumbnail {{ i }}</embla-thumbnail>
     {% endfor %}
   </embla-slider>
 </div>
