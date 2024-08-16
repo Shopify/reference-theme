@@ -118,8 +118,8 @@ class EmblaSlider extends HTMLElement {
   }
   connectedCallback() {
 
-    EmblaSlider.observedAttributes.forEach(o => this.attributeChangedCallback(o, null, this.getAttribute(o))) 
-    console.log(this)
+    // EmblaSlider.observedAttributes.forEach(o => this.attributeChangedCallback(o, null, this.getAttribute(o))) 
+    // console.log(this)
     this.plugins = [
       // EmblaCarouselAutoplay({ playOnInit: false, delay: 3000 }),
       // EmblaCarouselAutoScroll({ playOnInit: false }),
@@ -128,22 +128,22 @@ class EmblaSlider extends HTMLElement {
       EmblaCarouselClassNames(),
     ]
     const options = { 
-      ...this.options,
-      // container: this.querySelector(EMBLA_CONTAINER_NAME),
-      breakpoints:{
-        [EmblaSlider.BREAKPOINT_MEDIUM]: { 
-          ...this.optionsMedium
-        },
-        [EmblaSlider.BREAKPOINT_SMALL]: { 
-          ...this.optionsSmall
-        },
-      },
+      // ...this.options,
+      // // container: this.querySelector(EMBLA_CONTAINER_NAME),
+      // breakpoints:{
+      //   [EmblaSlider.BREAKPOINT_MEDIUM]: { 
+      //     ...this.optionsMedium
+      //   },
+      //   [EmblaSlider.BREAKPOINT_SMALL]: { 
+      //     ...this.optionsSmall
+      //   },
+      // },
     }
     this.api = EmblaCarousel(this, options, this.plugins)
 
-    this.api.on('slideschanged', () => {
+    // this.api.on('slideschanged', () => {
 
-    })
+    // })
     this.api.on('select', () => {
       this.updateControls()
     })
@@ -178,23 +178,24 @@ class EmblaSlider extends HTMLElement {
   }
   attributeChangedCallback(property, oldValue, newValue) {
     if (oldValue === newValue) return;
-    const jsProperty = camelize(property)
-    if (EmblaSlider.OPTIONS_PROPERTIES.includes(property)){
-      // parse string before assignment
-      this[ jsProperty ] = Object.fromEntries(newValue.split(',').map(option => {
-        const [key, value] = option.split(':')
-        if(value.match(/true|false/g)){ // is boolean value
-          return [key.trim(), value.trim() == "true"]
-        }
-        if(value.match(/[0-9]+/g)){ // is number
-          return [key.trim(), Number(value.trim())]
-        }
-        return [key.trim(), value.trim()]
-      }));
-      console.log(jsProperty, this[ jsProperty ])
-      return;
-    }
-    this[ jsProperty ] = newValue;
+    // const jsProperty = camelize(property)
+    // if (EmblaSlider.OPTIONS_PROPERTIES.includes(property)){
+    //   // parse string before assignment
+    //   this[ jsProperty ] = Object.fromEntries(newValue.split(',').map(option => {
+    //     const [key, value] = option.split(':')
+    //     if(value.match(/true|false/g)){ // is boolean value
+    //       return [key.trim(), value.trim() == "true"]
+    //     }
+    //     if(value.match(/[0-9]+/g)){ // is number
+    //       return [key.trim(), Number(value.trim())]
+    //     }
+    //     return [key.trim(), value.trim()]
+    //   }));
+    //   console.log(jsProperty, this[ jsProperty ])
+    //   return;
+    // }
+    // this[ jsProperty ] = newValue;
+    this[ property ] = newValue;
   }
 
 }
