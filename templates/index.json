@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "slideshow_UNkwik": {
@@ -6,6 +15,8 @@
         "slide_mEbteL": {
           "type": "slide",
           "settings": {
+            "spacing": {
+            },
             "layout": {
               "flex-direction": "row"
             }
@@ -14,24 +25,28 @@
             "group_AYLEbA": {
               "type": "group",
               "settings": {
-                "layout": {
-                  "flex-direction": "column",
-                  "justify-content": "flex-start"
-                },
                 "size": {
                   "width": "50%",
                   "flex-grow": "0",
-
                   "@media (--mobile)": {
                     "width": "100%"
                   }
                 },
                 "spacing": {
-                  "padding": "50px",
-
+                  "padding-block-start": "50px",
+                  "padding-inline-end": "50px",
+                  "padding-block-end": "50px",
+                  "padding-inline-start": "50px",
                   "@media (--mobile)": {
-                    "padding": "20px"
+                    "padding-block-start": "20px",
+                    "padding-inline-end": "20px",
+                    "padding-block-end": "20px",
+                    "padding-inline-start": "20px"
                   }
+                },
+                "layout": {
+                  "flex-direction": "column",
+                  "justify-content": "flex-start"
                 },
                 "color_scheme": ""
               },
@@ -41,15 +56,23 @@
                   "settings": {
                     "heading": "Image slide",
                     "heading_size": "h1",
-                    "alignment": "start"
+                    "alignment": "start",
+                    "size": {
+                    },
+                    "spacing": {
+                    }
                   }
                 },
                 "text_BFbgT7": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Tell your brand's story through images</p>",
+                    "text": "<p>Tell your brand's story through images<\/p>",
                     "text_style": "",
-                    "alignment": "start"
+                    "alignment": "start",
+                    "size": {
+                    },
+                    "spacing": {
+                    }
                   }
                 },
                 "link_U9yyFk": {
@@ -61,11 +84,14 @@
                     "open_in_new_tab": false,
                     "icon": "none",
                     "icon_position": "left",
-                    "spacing": {
-                      "padding": "10px 30px"
-                    },
                     "size": {
                       "width": "auto"
+                    },
+                    "spacing": {
+                      "padding-block-start": "10px",
+                      "padding-inline-end": "30px",
+                      "padding-block-end": "10px",
+                      "padding-inline-start": "30px"
                     }
                   }
                 }
@@ -84,6 +110,8 @@
         "slide_aWAGX7": {
           "type": "slide",
           "settings": {
+            "spacing": {
+            },
             "layout": {
               "flex-direction": "row"
             }
@@ -92,24 +120,28 @@
             "group_tX6xMR": {
               "type": "group",
               "settings": {
-                "layout": {
-                  "flex-direction": "column",
-                  "justify-content": "flex-start"
-                },
                 "size": {
                   "width": "50%",
                   "flex-grow": "0",
-
                   "@media (--mobile)": {
                     "width": "100%"
                   }
                 },
                 "spacing": {
-                  "padding": "50px",
-
+                  "padding-block-start": "50px",
+                  "padding-inline-end": "50px",
+                  "padding-block-end": "50px",
+                  "padding-inline-start": "50px",
                   "@media (--mobile)": {
-                    "padding": "20px"
+                    "padding-block-start": "20px",
+                    "padding-inline-end": "20px",
+                    "padding-block-end": "20px",
+                    "padding-inline-start": "20px"
                   }
+                },
+                "layout": {
+                  "flex-direction": "column",
+                  "justify-content": "flex-start"
                 },
                 "color_scheme": ""
               },
@@ -119,15 +151,23 @@
                   "settings": {
                     "heading": "Image slide",
                     "heading_size": "h1",
-                    "alignment": "start"
+                    "alignment": "start",
+                    "size": {
+                    },
+                    "spacing": {
+                    }
                   }
                 },
                 "text_ertfGh": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Tell your brand's story through images</p>",
+                    "text": "<p>Tell your brand's story through images<\/p>",
                     "text_style": "",
-                    "alignment": "start"
+                    "alignment": "start",
+                    "size": {
+                    },
+                    "spacing": {
+                    }
                   }
                 },
                 "link_cgTzUH": {
@@ -139,11 +179,14 @@
                     "open_in_new_tab": false,
                     "icon": "none",
                     "icon_position": "left",
-                    "spacing": {
-                      "padding": "10px 30px"
-                    },
                     "size": {
                       "width": "auto"
+                    },
+                    "spacing": {
+                      "padding-block-start": "10px",
+                      "padding-inline-end": "30px",
+                      "padding-block-end": "10px",
+                      "padding-inline-start": "30px"
                     }
                   }
                 }
@@ -170,7 +213,12 @@
       "block_order": [
         "slide_mEbteL",
         "slide_aWAGX7"
-      ]
+      ],
+      "settings": {
+        "slide_height": "medium",
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
     },
     "65a25908-415f-40aa-a6d4-00985cafbfac": {
       "type": "custom-section",
@@ -180,21 +228,28 @@
           "settings": {
             "heading": "Collections",
             "heading_size": "h2",
-            "alignment": "start"
+            "alignment": "start",
+            "size": {
+            },
+            "spacing": {
+            }
           }
         },
         "ff102392-368f-41d9-883a-9c1cd4be4d84": {
           "type": "group",
           "settings": {
-            "layout": {
-              "flex-direction": "row",
-              "justify-content": "flex-start"
-            },
             "size": {
               "width": "100%"
             },
             "spacing": {
-              "padding": "0"
+              "padding-block-start": "0px",
+              "padding-inline-end": "0px",
+              "padding-block-end": "0px",
+              "padding-inline-start": "0px"
+            },
+            "layout": {
+              "flex-direction": "row",
+              "justify-content": "flex-start"
             },
             "color_scheme": ""
           },
@@ -202,19 +257,34 @@
             "4b76e504-9f68-46b8-a889-725b04a52125": {
               "type": "collection-card",
               "settings": {
-                "collection": ""
+                "collection": "",
+                "size": {
+                },
+                "spacing": {
+                },
+                "ratio": "auto"
               }
             },
             "fa489ade-cc68-4a10-9b84-e7060b1a50dc": {
               "type": "collection-card",
               "settings": {
-                "collection": ""
+                "collection": "",
+                "size": {
+                },
+                "spacing": {
+                },
+                "ratio": "auto"
               }
             },
             "ef24d42e-05f9-42af-a984-2b83969ebd60": {
               "type": "collection-card",
               "settings": {
-                "collection": ""
+                "collection": "",
+                "size": {
+                },
+                "spacing": {
+                },
+                "ratio": "auto"
               }
             }
           },
@@ -230,13 +300,16 @@
         "ff102392-368f-41d9-883a-9c1cd4be4d84"
       ],
       "settings": {
+        "spacing": {
+          "padding-block-start": "60px",
+          "padding-inline-end": "20px",
+          "padding-block-end": "60px",
+          "padding-inline-start": "20px"
+        },
         "layout": {
           "flex-direction": "column",
           "justify-content": "flex-start",
           "align-items": "flex-start"
-        },
-        "spacing": {
-          "padding": "60px 20px"
         },
         "color_scheme": ""
       }
@@ -248,6 +321,8 @@
           "type": "image",
           "settings": {
             "object_fit": "cover",
+            "spacing": {
+            },
             "size": {
               "width": "100%",
               "height": "100%",
@@ -404,6 +479,8 @@
                   "type": "image",
                   "settings": {
                     "object_fit": "cover",
+                    "spacing": {
+                    },
                     "size": {
                       "width": "100%",
                       "height": "100%"
@@ -477,42 +554,55 @@
           "settings": {
             "heading": "Collapsible content",
             "heading_size": "h2",
-            "alignment": "start"
+            "alignment": "start",
+            "size": {
+            },
+            "spacing": {
+            }
           }
         },
         "group_iabYjG": {
           "type": "group",
           "settings": {
-            "layout": {
-              "flex-direction": "column",
-              "justify-content": "flex-start",
-              "gap": "0px"
-            },
             "size": {
               "width": "100%"
             },
             "spacing": {
-              "padding": "0"
+              "padding-block-start": "0px",
+              "padding-inline-end": "0px",
+              "padding-block-end": "0px",
+              "padding-inline-start": "0px"
+            },
+            "layout": {
+              "flex-direction": "column",
+              "justify-content": "flex-start",
+              "row-gap": "0px",
+              "column-gap": "0px"
             },
             "color_scheme": ""
           },
           "blocks": {
             "collapsible_row_CAhPBm": {
               "type": "collapsible-row",
+              "settings": {
+              },
               "blocks": {
                 "group_igxqEV": {
                   "type": "group",
                   "settings": {
-                    "layout": {
-                      "flex-direction": "column",
-                      "justify-content": "flex-start",
-                      "align-items": "flex-start"
-                    },
                     "size": {
                       "width": "100%"
                     },
                     "spacing": {
-                      "padding": "10px"
+                      "padding-block-start": "10px",
+                      "padding-inline-end": "10px",
+                      "padding-block-end": "10px",
+                      "padding-inline-start": "10px"
+                    },
+                    "layout": {
+                      "flex-direction": "column",
+                      "justify-content": "flex-start",
+                      "align-items": "flex-start"
                     },
                     "color_scheme": ""
                   },
@@ -522,7 +612,11 @@
                       "settings": {
                         "heading": "Heading",
                         "heading_size": "h2",
-                        "alignment": "start"
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
                       }
                     },
                     "text_PkQ8zn": {
@@ -530,7 +624,11 @@
                       "settings": {
                         "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
                         "text_style": "",
-                        "alignment": "start"
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
                       }
                     }
                   },
@@ -566,20 +664,25 @@
             },
             "collapsible_row_dmGd3n": {
               "type": "collapsible-row",
+              "settings": {
+              },
               "blocks": {
                 "group_mgPLTf": {
                   "type": "group",
                   "settings": {
-                    "layout": {
-                      "flex-direction": "column",
-                      "justify-content": "flex-start",
-                      "align-items": "flex-start"
-                    },
                     "size": {
                       "width": "100%"
                     },
                     "spacing": {
-                      "padding": "10px"
+                      "padding-block-start": "10px",
+                      "padding-inline-end": "10px",
+                      "padding-block-end": "10px",
+                      "padding-inline-start": "10px"
+                    },
+                    "layout": {
+                      "flex-direction": "column",
+                      "justify-content": "flex-start",
+                      "align-items": "flex-start"
                     },
                     "color_scheme": ""
                   },
@@ -589,7 +692,11 @@
                       "settings": {
                         "heading": "Heading",
                         "heading_size": "h2",
-                        "alignment": "start"
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
                       }
                     },
                     "text_Vkg9zR": {
@@ -597,7 +704,11 @@
                       "settings": {
                         "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
                         "text_style": "",
-                        "alignment": "start"
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
                       }
                     }
                   },
@@ -633,20 +744,25 @@
             },
             "collapsible_row_qEqear": {
               "type": "collapsible-row",
+              "settings": {
+              },
               "blocks": {
                 "group_BqmeC9": {
                   "type": "group",
                   "settings": {
-                    "layout": {
-                      "flex-direction": "column",
-                      "justify-content": "flex-start",
-                      "align-items": "flex-start"
-                    },
                     "size": {
                       "width": "100%"
                     },
                     "spacing": {
-                      "padding": "10px"
+                      "padding-block-start": "10px",
+                      "padding-inline-end": "10px",
+                      "padding-block-end": "10px",
+                      "padding-inline-start": "10px"
+                    },
+                    "layout": {
+                      "flex-direction": "column",
+                      "justify-content": "flex-start",
+                      "align-items": "flex-start"
                     },
                     "color_scheme": ""
                   },
@@ -656,7 +772,11 @@
                       "settings": {
                         "heading": "Heading",
                         "heading_size": "h2",
-                        "alignment": "start"
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
                       }
                     },
                     "text_knXnFF": {
@@ -664,7 +784,11 @@
                       "settings": {
                         "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
                         "text_style": "",
-                        "alignment": "start"
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
                       }
                     }
                   },
@@ -700,19 +824,24 @@
             },
             "collapsible_row_n8DJ9W": {
               "type": "collapsible-row",
+              "settings": {
+              },
               "blocks": {
                 "group_gtJd6c": {
                   "type": "group",
                   "settings": {
-                    "layout": {
-                      "flex-direction": "row",
-                      "justify-content": "flex-start"
-                    },
                     "size": {
                       "width": "100%"
                     },
                     "spacing": {
-                      "padding": "10px"
+                      "padding-block-start": "10px",
+                      "padding-inline-end": "10px",
+                      "padding-block-end": "10px",
+                      "padding-inline-start": "10px"
+                    },
+                    "layout": {
+                      "flex-direction": "row",
+                      "justify-content": "flex-start"
                     },
                     "color_scheme": ""
                   },
@@ -722,7 +851,11 @@
                       "settings": {
                         "heading": "Heading",
                         "heading_size": "h2",
-                        "alignment": "start"
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
                       }
                     },
                     "text_PHPiVJ": {
@@ -730,7 +863,11 @@
                       "settings": {
                         "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
                         "text_style": "",
-                        "alignment": "start"
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
                       }
                     }
                   },
@@ -778,12 +915,15 @@
         "group_iabYjG"
       ],
       "settings": {
+        "spacing": {
+          "padding-block-start": "60px",
+          "padding-inline-end": "20px",
+          "padding-block-end": "60px",
+          "padding-inline-start": "20px"
+        },
         "layout": {
           "flex-direction": "column",
           "align-items": "flex-start"
-        },
-        "spacing": {
-          "padding": "60px 20px"
         },
         "color_scheme": ""
       }
@@ -816,7 +956,13 @@
           }
         },
         "newsletter_nfLQzr": {
-          "type": "newsletter"
+          "type": "newsletter",
+          "settings": {
+            "size": {
+            },
+            "spacing": {
+            }
+          }
         }
       },
       "block_order": [
@@ -844,21 +990,26 @@
         "group_hwEiRw": {
           "type": "group",
           "settings": {
-            "layout": {
-              "flex-direction": "column",
-              "justify-content": "center"
-            },
-            "color_scheme": "scheme-2",
             "size": {
               "width": "100%"
             },
             "spacing": {
-              "padding": "35px",
-
+              "padding-block-start": "35px",
+              "padding-inline-end": "35px",
+              "padding-block-end": "35px",
+              "padding-inline-start": "35px",
               "@media (--mobile)": {
-                "padding": "15px"
+                "padding-block-start": "15px",
+                "padding-inline-end": "15px",
+                "padding-block-end": "15px",
+                "padding-inline-start": "15px"
               }
-            }
+            },
+            "layout": {
+              "flex-direction": "column",
+              "justify-content": "center"
+            },
+            "color_scheme": "scheme-2"
           },
           "blocks": {
             "icon_xwdHtL": {
@@ -873,7 +1024,11 @@
               "settings": {
                 "heading": "Heading",
                 "heading_size": "h3",
-                "alignment": "center"
+                "alignment": "center",
+                "size": {
+                },
+                "spacing": {
+                }
               }
             },
             "text_gJfdq3": {
@@ -881,7 +1036,11 @@
               "settings": {
                 "text": "<p>Pair text with an icon to highlight aspects of your business.<\/p>",
                 "text_style": "",
-                "alignment": "center"
+                "alignment": "center",
+                "size": {
+                },
+                "spacing": {
+                }
               }
             }
           },
@@ -894,21 +1053,26 @@
         "group_KyK7Ha": {
           "type": "group",
           "settings": {
-            "layout": {
-              "flex-direction": "column",
-              "justify-content": "center"
-            },
-            "color_scheme": "scheme-2",
             "size": {
               "width": "100%"
             },
             "spacing": {
-              "padding": "35px",
-
+              "padding-block-start": "35px",
+              "padding-inline-end": "35px",
+              "padding-block-end": "35px",
+              "padding-inline-start": "35px",
               "@media (--mobile)": {
-                "padding": "15px"
+                "padding-block-start": "15px",
+                "padding-inline-end": "15px",
+                "padding-block-end": "15px",
+                "padding-inline-start": "15px"
               }
-            }
+            },
+            "layout": {
+              "flex-direction": "column",
+              "justify-content": "center"
+            },
+            "color_scheme": "scheme-2"
           },
           "blocks": {
             "icon_RqBeKL": {
@@ -923,7 +1087,11 @@
               "settings": {
                 "heading": "Heading",
                 "heading_size": "h3",
-                "alignment": "center"
+                "alignment": "center",
+                "size": {
+                },
+                "spacing": {
+                }
               }
             },
             "text_9dxFC9": {
@@ -931,7 +1099,11 @@
               "settings": {
                 "text": "<p>Pair text with an icon to highlight aspects of your business.<\/p>",
                 "text_style": "",
-                "alignment": "center"
+                "alignment": "center",
+                "size": {
+                },
+                "spacing": {
+                }
               }
             }
           },
@@ -944,21 +1116,26 @@
         "group_rUTJ6Y": {
           "type": "group",
           "settings": {
-            "layout": {
-              "flex-direction": "column",
-              "justify-content": "center"
-            },
-            "color_scheme": "scheme-2",
             "size": {
               "width": "100%"
             },
             "spacing": {
-              "padding": "35px",
-
+              "padding-block-start": "35px",
+              "padding-inline-end": "35px",
+              "padding-block-end": "35px",
+              "padding-inline-start": "35px",
               "@media (--mobile)": {
-                "padding": "15px"
+                "padding-block-start": "15px",
+                "padding-inline-end": "15px",
+                "padding-block-end": "15px",
+                "padding-inline-start": "15px"
               }
-            }
+            },
+            "layout": {
+              "flex-direction": "column",
+              "justify-content": "center"
+            },
+            "color_scheme": "scheme-2"
           },
           "blocks": {
             "icon_zgezqB": {
@@ -973,7 +1150,11 @@
               "settings": {
                 "heading": "Heading",
                 "heading_size": "h3",
-                "alignment": "center"
+                "alignment": "center",
+                "size": {
+                },
+                "spacing": {
+                }
               }
             },
             "text_TNH97M": {
@@ -981,7 +1162,11 @@
               "settings": {
                 "text": "<p>Pair text with an icon to highlight aspects of your business.<\/p>",
                 "text_style": "",
-                "alignment": "center"
+                "alignment": "center",
+                "size": {
+                },
+                "spacing": {
+                }
               }
             }
           },
@@ -998,14 +1183,22 @@
         "group_rUTJ6Y"
       ],
       "settings": {
+        "spacing": {
+          "padding-block-start": "40px",
+          "padding-inline-end": "20px",
+          "padding-block-end": "40px",
+          "padding-inline-start": "20px"
+        },
         "layout": {
           "flex-direction": "row",
           "justify-content": "center"
         },
-        "spacing": {
-          "padding": "40px 20px"
-        },
         "color_scheme": "scheme-2"
+      }
+    },
+    "embla_test_NEwhwd": {
+      "type": "embla-test",
+      "settings": {
       }
     }
   },
@@ -1016,6 +1209,7 @@
     "custom_section_UB43TV",
     "custom_section_MiX6gV",
     "custom_section_YmTwNm",
-    "custom_section_gbgWDY"
+    "custom_section_gbgWDY",
+    "embla_test_NEwhwd"
   ]
 }
