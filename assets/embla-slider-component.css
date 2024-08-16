@@ -34,7 +34,7 @@ embla-prev[disabled]{
 
 embla-progress{
   background-color: lightgray;
-  width: 100px;
+  width: 200px;
   height: 5px;
   position: relative;
 }
@@ -46,4 +46,5 @@ embla-progress::after{
   left: 0;
   top: 0;
   width: var(--progress);
+  background-color: gray;
 }
