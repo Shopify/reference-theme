@@ -16,11 +16,16 @@
 </style>
 
 <div class="embla">
-  <div class="embla__container">
-    <div class="embla__slide">Slide 1 Original</div>
-    <div class="embla__slide">Slide 2 Original</div>
-    <div class="embla__slide">Slide 3 Original</div>
+  <div class="embla__viewport">
+    <div class="embla__container">
+      <div class="embla__slide">Slide 1 Original</div>
+      <div class="embla__slide">Slide 2 Original</div>
+      <div class="embla__slide">Slide 3 Original</div>
+    </div>
+    <button class="embla__prev">Prev</button>
+    <button class="embla__next">Next</button>
   </div>
+  
 </div>
 
 <script type="module" src="{{ 'embla-slider-component.js' | asset_url }}"></script>
@@ -30,9 +35,18 @@
   import "{{ 'embla-carousel.umd.js' | asset_url }}"
   import "{{ 'embla-carousel-autoplay.umd.js' | asset_url }}"
 
-  const emblaNode = document.querySelector('.embla')
+  const rootNode = document.querySelector('.embla')
+  const viewportNode = rootNode.querySelector('.embla__viewport')
+
+  // Grab button nodes
+  const prevButtonNode = rootNode.querySelector('.embla__prev')
+  const nextButtonNode = rootNode.querySelector('.embla__next')
   const options = { loop: false }
-  const emblaApi = EmblaCarousel(emblaNode, options)
+  const emblaApi = EmblaCarousel(viewportNode, options)
+
+  prevButtonNode.addEventListener('click', embla.scrollPrev, false)
+  nextButtonNode.addEventListener('click', embla.scrollNext, false)
+  
 
   console.log(emblaApi.slideNodes()) // Access API
 </script>
@@ -42,7 +56,13 @@
     <embla-slide class="">Slide 1 Component</embla-slide>
     <embla-slide class="">Slide 2 Component</embla-slide>
     <embla-slide class="">Slide 3 Component</embla-slide>
+    <embla-slide class="">Slide 4 Component</embla-slide>
+    <embla-slide class="">Slide 5 Component</embla-slide>
+    <embla-slide class="">Slide 6 Component</embla-slide>
+    <embla-slide class="">Slide 7 Component</embla-slide>
   </embla-container>
+  <es-prev> Prev </es-prev>
+  <es-next> Next </es-next>
 </embla-slider>
 
 

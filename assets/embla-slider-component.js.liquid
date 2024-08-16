@@ -1,18 +1,67 @@
 import "{{ 'embla-carousel.umd.js' | asset_url }}"
 import "{{ 'embla-carousel-autoplay.umd.js' | asset_url }}"
+import "{{ 'embla-carousel-auto-scroll.umd.js' | asset_url }}"
+import "{{ 'embla-carousel-auto-height.umd.js' | asset_url }}"
+import "{{ 'embla-carousel-class-names.umd.js' | asset_url }}"
+import "{{ 'embla-carousel-fade.umd.js' | asset_url }}"
+import "{{ 'embla-carousel-wheel-gestures.umd.js' | asset_url }}"
 
 customElements.define('embla-slide', class extends HTMLElement{});
 customElements.define('embla-container', class extends HTMLElement{});
-
-class EmblaSlider extends HTMLElement {
-  static plugins = [EmblaCarouselAutoplay()]
+class EmblaNext extends HTMLElement{
   constructor() {
     super();
   }
   connectedCallback() {
-    const options = { loop: false }
-    const emblaApi = EmblaCarousel(this, options, EmblaSlider.plugins)
-    console.log("slideNodes", emblaApi.slideNodes()) // Access API
+    this.addEventListener('click', () => {
+        const slider = this.closest('embla-slider') || document.getElementById(this.for)
+        slider.api.scrollNext()
+    })
+  }
+  static get observedAttributes() {
+    return ["for"];
+  }
+  attributeChangedCallback(property, oldValue, newValue) {
+    if (oldValue === newValue) return;
+    this[ property ] = newValue;
+  }
+}
+customElements.define('es-next', EmblaNext);
+class EmblaPrev extends HTMLElement{
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    this.addEventListener('click', () => {
+        const slider = this.closest('embla-slider') || document.getElementById(this.for)
+        slider.api.scrollPrev()
+    })
+  }
+  static get observedAttributes() {
+    return ["for"];
+  }
+  attributeChangedCallback(property, oldValue, newValue) {
+    if (oldValue === newValue) return;
+    this[ property ] = newValue;
+  }
+}
+customElements.define('es-prev', EmblaPrev);
+customElements.define('es-progress', class extends HTMLElement{});
+
+class EmblaSlider extends HTMLElement {
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    this.plugins = [
+      // EmblaCarouselAutoplay({ playOnInit: false, delay: 3000 }),
+      // AutoScroll({ playOnInit: false }),
+      AutoHeight(),
+      // Fade(),
+      ClassNames(),
+    ]
+    this.options = { loop: false }
+    this.api = EmblaCarousel(this, this.options, this.plugins)
 
   }
   static get observedAttributes() {

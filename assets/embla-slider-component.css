@@ -7,7 +7,8 @@ embla-container {
   transition: height 0.2s;
 }
 embla-slide {
-  flex: 0 0 100%;
+  flex: 0 0 33.3333%;
+  gap: 20px;
   min-width: 0;
   text-align:center;
   background-color: lightgray;
