@@ -109,7 +109,7 @@ class EmblaProgress extends HTMLElement{
 }
 customElements.define(EMBLA_PROGRESS_NAME, EmblaProgress);
 class EmblaSlider extends HTMLElement {
-  static VERSION = "0.7.3"
+  static VERSION = "0.7.4"
   static BREAKPOINT_SMALL  = '(max-width: {{settings.breakpoint_small}}px)';
   static BREAKPOINT_MEDIUM = '(max-width: {{settings.breakpoint_medium}}px)';
   static OPTIONS_PROPERTIES = ["options", "options-medium", "options-small"];
@@ -183,23 +183,25 @@ class EmblaSlider extends HTMLElement {
     const jsProperty = camelize(property)
     if (EmblaSlider.OPTIONS_PROPERTIES.includes(property)){
       // parse string before assignment
-      this[ jsProperty ] = Object.fromEntries(newValue.split(',').map(option => {
-        const [key, value] = option.split(':')
-        if(value.match(/true|false/g)){ // is boolean value
-          return [key.trim(), value.trim() == "true"]
-        }
-        if(value.match(/[0-9]+/g)){ // is number
-          return [key.trim(), Number(value.trim())]
-        }
-        return [key.trim(), value.trim()]
-      }));
+      this[ jsProperty ] = this.parseOptions(newValue)
       console.log(jsProperty, this[ jsProperty ])
       return;
     }
     this[ jsProperty ] = newValue;
     // this[ property ] = newValue;
   }
-
+  parseOptions(options){
+    return Object.fromEntries(options.split(',').map(option => {
+      const [key, value] = option.split(':')
+      if(value.match(/true|false/g)){ // is boolean value
+        return [key.trim(), value.trim() == "true"]
+      }
+      if(value.match(/[0-9]+/g)){ // is number
+        return [key.trim(), Number(value.trim())]
+      }
+      return [key.trim(), value.trim()]
+    }));
+  }
 }
 window.EmblaSlider = EmblaSlider
 customElements.define(EMBLA_SLIDER_NAME, EmblaSlider);
