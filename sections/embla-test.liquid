@@ -15,11 +15,11 @@
     options="loop: true, duration: 25, containScroll: trimSnaps, align: start"
     options-medium="loop: false, containScroll: trimSnaps"
     options-small="loop: false"
-    autoplay="2000"
+    {% comment %} autoplay="2000" {% endcomment %}
   >
     <embla-slides>
       {% for i in (1..7) %}
-        <embla-slide class="">Slide {{ i }}</embla-slide>
+        <div class="">Slide {{ i }}</div>
       {% endfor %}
     </embla-slides>
     <embla-prev> Prev </embla-prev>
