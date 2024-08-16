@@ -149,8 +149,8 @@ class EmblaSlider extends HTMLElement {
 
     // })
     
-    this.api.on('resize', () => {
-      console.log(this.getBoundingClientRect())
+    window.addEventListener('resize', () => {
+      console.log(window.innerWidth)
     })
     this.api.on('select', () => {
       this.updateControls()
