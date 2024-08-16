@@ -10,7 +10,7 @@ embla-slider.is-draggable{
 embla-slider.is-dragging{
   cursor: grabbing;
 }
-embla-container {
+embla-slides {
   display: flex;
   align-items: flex-start;
   transition: height 0.2s;
