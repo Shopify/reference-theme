@@ -1,22 +1,29 @@
 import "{{ 'embla-carousel.umd.js' | asset_url }}"
 import "{{ 'embla-carousel-autoplay.umd.js' | asset_url }}"
 
-const emblaNode = document.querySelector('.embla')
-const options = { loop: false }
-const plugins = [EmblaCarouselAutoplay()]
-const emblaApi = EmblaCarousel(emblaNode, options, plugins)
-
-console.log(emblaApi.slideNodes()) // Access API
 
 class EmblaSlider extends HTMLElement {
+  static plugins = [EmblaCarouselAutoplay()]
   constructor() {
     super();
   }
   connectedCallback() {
+    this.shadow = this.attachShadow({ mode: "open" });
+    this.shadow.innerHTML = `
+      <div part="embla">
+        <div part="embla__container">
+          ${Array.from(this.childNodes).map(slide => `<div part="embla__slide">${slide.innerHTML}</div>`)}
+        </div>
+      </div>
+    `
+    const options = { loop: false }
+
+    const emblaApi = EmblaCarousel(this, options, EmblaSlider.plugins)
+    console.log(emblaApi.slideNodes()) // Access API
 
   }
   static get observedAttributes() {
-    return ["name", "value", "id", "open"];
+    return [];
   }
   attributeChangedCallback(property, oldValue, newValue) {
     if (oldValue === newValue) return;
