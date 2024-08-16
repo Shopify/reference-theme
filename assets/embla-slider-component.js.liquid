@@ -134,20 +134,8 @@ class EmblaSlider extends HTMLElement {
     this.buildOptions()
     this.api = EmblaCarousel(this, this.options, this.plugins)
 
-    // this.api.on('slideschanged', () => {
-
-    // })
-    
     window.addEventListener('resize', () => {
-      if(window.matchMedia(EmblaSlider.BREAKPOINT_SMALL)){
-        this.options[EmblaSlider.BREAKPOINT_SMALL].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
-      }
-      else if(window.matchMedia(EmblaSlider.BREAKPOINT_MEDIUM)){
-        this.options[EmblaSlider.BREAKPOINT_MEDIUM].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
-      }
-      else{
-        this.options.loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
-      }
+      this.updateLoopProperty()
     })
     this.api.on('select', () => {
       this.updateControls()
@@ -168,6 +156,17 @@ class EmblaSlider extends HTMLElement {
     })
     this.api.on('destroy', () => {})
   }
+  updateLoopProperty(){
+    if(window.matchMedia(EmblaSlider.BREAKPOINT_SMALL)){
+      this.options[EmblaSlider.BREAKPOINT_SMALL].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
+    }
+    else if(window.matchMedia(EmblaSlider.BREAKPOINT_MEDIUM)){
+      this.options[EmblaSlider.BREAKPOINT_MEDIUM].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
+    }
+    else{
+      this.options.loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
+    }
+  }
   buildOptions(){
     this.options = { 
       ...this.options,
@@ -183,6 +182,18 @@ class EmblaSlider extends HTMLElement {
         },
       },
     }
+  }
+  parseOptions(options){
+    return Object.fromEntries(options.split(',').map(option => {
+      const [key, value] = option.split(':')
+      if(value.match(/true|false/g)){ // is boolean value
+        return [key.trim(), value.trim() == "true"]
+      }
+      if(value.match(/[0-9]+/g)){ // is number
+        return [key.trim(), Number(value.trim())]
+      }
+      return [key.trim(), value.trim()]
+    }));
   }
   updateControls(){
     const nexts = [...document.querySelectorAll(`${EMBLA_NEXT_NAME}[for="${this.id}"]`), ...this.querySelectorAll(`${EMBLA_NEXT_NAME}`)]
@@ -209,18 +220,7 @@ class EmblaSlider extends HTMLElement {
     }
     this[ jsProperty ] = newValue;
   }
-  parseOptions(options){
-    return Object.fromEntries(options.split(',').map(option => {
-      const [key, value] = option.split(':')
-      if(value.match(/true|false/g)){ // is boolean value
-        return [key.trim(), value.trim() == "true"]
-      }
-      if(value.match(/[0-9]+/g)){ // is number
-        return [key.trim(), Number(value.trim())]
-      }
-      return [key.trim(), value.trim()]
-    }));
-  }
+  
 }
 window.EmblaSlider = EmblaSlider
 customElements.define(EMBLA_SLIDER_NAME, EmblaSlider);
