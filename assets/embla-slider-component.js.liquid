@@ -145,9 +145,14 @@ class EmblaSlider extends HTMLElement {
     }
     this.api = EmblaCarousel(this, options, this.plugins)
 
+    this.
     // this.api.on('slideschanged', () => {
 
     // })
+    
+    this.api.on('resize', () => {
+      console.log(this.innerWidth)
+    })
     this.api.on('select', () => {
       this.updateControls()
     })
