@@ -188,6 +188,7 @@ class EmblaSlider extends HTMLElement {
         }
         return [key.trim(), value.trim()]
       }));
+      console.log(jsProperty, this[ jsProperty ])
       return;
     }
     this[ jsProperty ] = newValue;
