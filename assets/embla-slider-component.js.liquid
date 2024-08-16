@@ -25,7 +25,7 @@ class EmblaThumbnail extends HTMLElement{
     this.addEventListener('click', () => {
         const slider = this.closest(EMBLA_SLIDER_NAME) || document.getElementById(this.for)
         console.log(slider, slider.api, slider.api.scrollTo)
-        slider.api?.scrolTo(Number(this.index))
+        slider.api?.scrolTo(3)
     })
   }
   static get observedAttributes() {
