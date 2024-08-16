@@ -1,15 +1,27 @@
 embla-slider{
   overflow: hidden;
+  --gap: 20px;
+  --slides-per-page: 3;
+}
+embla-slider.is-draggable{
+  cursor: grab;
+}
+embla-slider.is-dragging{
+  cursor: grabbing;
 }
 embla-container {
   display: flex;
   align-items: flex-start;
   transition: height 0.2s;
+  gap: var(--gap);
 }
 embla-slide {
-  flex: 0 0 33.3333%;
-  gap: 20px;
+  flex: 0 0 calc(100% - calc(var(--slides-per-page) - 1) * var(--gap) / var(--slides--per-page));
   min-width: 0;
   text-align:center;
   background-color: lightgray;
+}
+es-next,
+es-prev{
+  cursor: pointer;
 }
