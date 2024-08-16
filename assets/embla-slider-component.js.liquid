@@ -109,10 +109,10 @@ class EmblaProgress extends HTMLElement{
 }
 customElements.define(EMBLA_PROGRESS_NAME, EmblaProgress);
 class EmblaSlider extends HTMLElement {
-  static VERSION = "0.7.0"
-  static BREAKPOINT_SMALL  = '(max-width: {{settings.breakpoint_small}}px)';
-  static BREAKPOINT_MEDIUM = '(max-width: {{settings.breakpoint_medium}}px)';
-  static OPTIONS_PROPERTIES = ["options", "options-medium", "options-small"];
+  static version = "0.7.0"
+  static breakpointSmall  = '(max-width: {{settings.breakpoint_mall}}px)';
+  static breakpointMedium = '(max-width: {{settings.breakpoint_medium}}px)';
+  static optionProperties = ["options", "options-medium", "options-small"];
 
   constructor() {
     super();
@@ -132,10 +132,10 @@ class EmblaSlider extends HTMLElement {
       // ...this.options,
       // // container: this.querySelector(EMBLA_CONTAINER_NAME),
       // breakpoints:{
-      //   [EmblaSlider.BREAKPOINT_MEDIUM]: { 
+      //   [EmblaSlider.breakpointMedium]: { 
       //     ...this.optionsMedium
       //   },
-      //   [EmblaSlider.BREAKPOINT_SMALL]: { 
+      //   [EmblaSlider.breakpointSmall]: { 
       //     ...this.optionsSmall
       //   },
       // },
@@ -175,12 +175,12 @@ class EmblaSlider extends HTMLElement {
     progress.forEach(n => n.update())
   }
   static get observedAttributes() {
-    return ["id", ...EmblaSlider.OPTIONS_PROPERTIES];
+    return ["id", ...EmblaSlider.optionProperties];
   }
   attributeChangedCallback(property, oldValue, newValue) {
     if (oldValue === newValue) return;
     // const jsProperty = camelize(property)
-    // if (EmblaSlider.OPTIONS_PROPERTIES.includes(property)){
+    // if (EmblaSlider.optionProperties.includes(property)){
     //   // parse string before assignment
     //   this[ jsProperty ] = Object.fromEntries(newValue.split(',').map(option => {
     //     const [key, value] = option.split(':')
@@ -200,4 +200,5 @@ class EmblaSlider extends HTMLElement {
   }
 
 }
+window.EmblaSlder = EmblaSlider
 customElements.define(EMBLA_SLIDER_NAME, EmblaSlider);
