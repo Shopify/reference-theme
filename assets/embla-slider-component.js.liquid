@@ -118,26 +118,29 @@ class EmblaSlider extends HTMLElement {
     super();
   }
   connectedCallback() {
-
-    // EmblaSlider.observedAttributes.forEach(o => this.attributeChangedCallback(o, null, this.getAttribute(o))) 
-    // this.options = this.parseOptions(this.getAttribute('options'))
-    // this.optionsSmall = this.parseOptions(this.getAttribute('options-small'))
-    // this.optionsMedium = this.parseOptions(this.getAttribute('options-medium'))
-
+    this.autoplay = this.getAttribute('autoplay') || 0
+    this.pauseOnHover = this.hasAttribute('pause-on-hover')
     this.plugins = [
-      // EmblaCarouselAutoplay({ playOnInit: false, delay: 3000 }),
       // EmblaCarouselAutoScroll({ playOnInit: false }),
-      EmblaCarouselAutoHeight(),
       // EmblaCarouselFade(),
+      EmblaCarouselAutoHeight(),
       EmblaCarouselClassNames(),
     ]
+    if(this.autoplay != 0){
+      this.plugins.push(EmblaCarouselAutoplay({
+        stopOnMouseEnter: this.pauseOnHover,
+        delay: this.autoplay,
+        playOnInit: true
+      })) 
+    }
+
     this.buildOptions()
-    this.updateLoopProperty()
+    this.updateAttributeByResponsiveOptions('loop')
 
     this.api = EmblaCarousel(this, this.options, this.plugins)
 
     window.addEventListener('resize', () => {
-      this.updateLoopProperty()
+      this.updateAttributeByResponsiveOptions('loop')
     })
     this.api.on('select', () => {
       this.updateControls()
@@ -158,19 +161,18 @@ class EmblaSlider extends HTMLElement {
     })
     this.api.on('destroy', () => {})
   }
-  updateLoopProperty(){
-    console.log("loop")
+  updateAttributeByResponsiveOptions(attribute){
     if(window.matchMedia(EmblaSlider.BREAKPOINT_SMALL).matches){
-      console.log("small")
-      this.options.breakpoints[EmblaSlider.BREAKPOINT_SMALL].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
+      const optionValue = this.options.breakpoints[EmblaSlider.BREAKPOINT_SMALL][camelize(attribute)]
+      optionValue ? this.setAttribute(attribute, true) : this.removeAttribute(attribute)
     }
     else if(window.matchMedia(EmblaSlider.BREAKPOINT_MEDIUM).matches){
-      console.log("medium")
-      this.options.breakpoints[EmblaSlider.BREAKPOINT_MEDIUM].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
+      const optionValue = this.options.breakpoints[EmblaSlider.BREAKPOINT_MEDIUM][camelize(attribute)]
+      optionValue ? this.setAttribute(attribute, true) : this.removeAttribute(attribute)
     }
     else{
-      console.log("large")
-      this.options.loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
+      const optionValue = this.options[camelize(attribute)]
+      optionValue ? this.setAttribute(attribute, true) : this.removeAttribute(attribute)
     }
   }
   buildOptions(){
