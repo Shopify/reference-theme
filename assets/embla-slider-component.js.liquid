@@ -12,9 +12,29 @@ const EMBLA_NEXT_NAME = 'embla-next'
 const EMBLA_PREV_NAME = 'embla-prev'
 const EMBLA_SLIDER_NAME = 'embla-slider'
 const EMBLA_PROGRESS_NAME = 'embla-progress'
+const EMBLA_THUMBNAIL_NAME = 'embla-thumbnail'
 
 customElements.define(EMBLA_SLIDE_NAME, class extends HTMLElement{});
 customElements.define(EMBLA_CONTAINER_NAME, class extends HTMLElement{});
+class EmblaThumbnail extends HTMLElement{
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    this.addEventListener('click', () => {
+        const slider = this.closest(EMBLA_SLIDER_NAME) || document.getElementById(this.for)
+        slider.api?.scrolTo(this.slide)
+    })
+  }
+  static get observedAttributes() {
+    return ["for", "slide"];
+  }
+  attributeChangedCallback(property, oldValue, newValue) {
+    if (oldValue === newValue) return;
+    this[ property ] = newValue;
+  }
+}
+customElements.define(EMBLA_THUMBNAIL_NAME, EmblaThumbnail);
 class EmblaNext extends HTMLElement{
   constructor() {
     super();
@@ -86,7 +106,6 @@ class EmblaProgress extends HTMLElement{
   }
 }
 customElements.define(EMBLA_PROGRESS_NAME, EmblaProgress);
-
 class EmblaSlider extends HTMLElement {
   constructor() {
     super();

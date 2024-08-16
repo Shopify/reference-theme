@@ -4,21 +4,20 @@
 <div class="" style="display: flex;flex-direction: column;">
   <embla-prev for="slider-{{section.id}}"> Prev </embla-prev>
   <embla-next for="slider-{{section.id}}"> Next </embla-next>
-  <embla-progress for="slider-{{section.id}}"> </embla-progress>
+  <embla-progress for="slider-{{section.id}}"></embla-progress>
 
   <embla-slider id="slider-{{section.id}}">
     <embla-container>
-      <embla-slide class="">Slide 1 Component</embla-slide>
-      <embla-slide class="">Slide 2 Component</embla-slide>
-      <embla-slide class="">Slide 3 Component</embla-slide>
-      <embla-slide class="">Slide 4 Component</embla-slide>
-      <embla-slide class="">Slide 5 Component</embla-slide>
-      <embla-slide class="">Slide 6 Component</embla-slide>
-      <embla-slide class="">Slide 7 Component</embla-slide>
+      {% for i in (1..7) %}
+        <embla-slide class="">Slide {{ i }}</embla-slide>
+      {% endfor %}
     </embla-container>
     <embla-prev> Prev </embla-prev>
     <embla-next> Next </embla-next>
-    <embla-progress> </embla-progress>
+    <embla-progress></embla-progress>
+    {% for i in (1..7) %}
+      <embla-thumbnail for="slider-{{section.id}}" slide="{{ forloop.index0 }}">Thumbnai {{ i }}</embla-thumbnail>
+    {% endfor %}
   </embla-slider>
 </div>
 
