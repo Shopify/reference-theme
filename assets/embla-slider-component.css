@@ -23,7 +23,11 @@ embla-slide {
   text-align:center;
   background-color: lightgray;
 }
-es-next,
-es-prev{
+embla-next,
+embla-prev{
   cursor: pointer;
+}
+embla-next[disabled],
+embla-prev[disabled]{
+  cursor: not-allowed;
 }

@@ -6,18 +6,30 @@ import "{{ 'embla-carousel-class-names.umd.js' | asset_url }}"
 import "{{ 'embla-carousel-fade.umd.js' | asset_url }}"
 import "{{ 'embla-carousel-wheel-gestures.umd.js' | asset_url }}"
 
-customElements.define('embla-slide', class extends HTMLElement{});
-customElements.define('embla-container', class extends HTMLElement{});
+const EMBLA_SLIDE_NAME = 'embla-slide'
+const EMBLA_CONTAINER_NAME = 'embla-container'
+const EMBLA_NEXT_NAME = 'embla-next'
+const EMBLA_PREV_NAME = 'embla-prev'
+const EMBLA_SLIDER_NAME = 'embla-slider'
+const EMBLA_PROGRESS_NAME = 'embla-progress'
+
+customElements.define(EMBLA_SLIDE_NAME, class extends HTMLElement{});
+customElements.define(EMBLA_CONTAINER_NAME, class extends HTMLElement{});
 class EmblaNext extends HTMLElement{
   constructor() {
     super();
   }
   connectedCallback() {
     this.addEventListener('click', () => {
-        const slider = this.closest('embla-slider') || document.getElementById(this.for)
-        console.log(slider)
+        const slider = this.closest(EMBLA_SLIDER_NAME) || document.getElementById(this.for)
         slider.api?.scrollNext()
     })
+  }
+  disable(){
+    this.setAttribute("disabled", true)
+  }
+  enable(){
+    this.removeAttribute("disabled")
   }
   static get observedAttributes() {
     return ["for"];
@@ -27,15 +39,14 @@ class EmblaNext extends HTMLElement{
     this[ property ] = newValue;
   }
 }
-customElements.define('es-next', EmblaNext);
+customElements.define(EMBLA_NEXT_NAME, EmblaNext);
 class EmblaPrev extends HTMLElement{
   constructor() {
     super();
   }
   connectedCallback() {
     this.addEventListener('click', () => {
-        const slider = this.closest('embla-slider') || document.getElementById(this.for)
-        console.log(slider)
+        const slider = this.closest(EMBLA_SLIDER_NAME) || document.getElementById(this.for)
         slider.api?.scrollPrev()
     })
   }
@@ -47,8 +58,28 @@ class EmblaPrev extends HTMLElement{
     this[ property ] = newValue;
   }
 }
-customElements.define('es-prev', EmblaPrev);
-customElements.define('es-progress', class extends HTMLElement{});
+customElements.define(EMBLA_PREV_NAME, EmblaPrev);
+class EmblaProgress extends HTMLElement{
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    
+  }
+  update(){
+    const slider = this.closest(EMBLA_SLIDER_NAME) || document.getElementById(this.for)
+    const progress = Math.max(0, Math.min(1, slider.api?.scrollProgress() ?? 0))
+    this.style.setProperty('--progress', `${progress * 100}%`);
+  }
+  static get observedAttributes() {
+    return ["for"];
+  }
+  attributeChangedCallback(property, oldValue, newValue) {
+    if (oldValue === newValue) return;
+    this[ property ] = newValue;
+  }
+}
+customElements.define(EMBLA_PROGRESS_NAME, EmblaProgress);
 
 class EmblaSlider extends HTMLElement {
   constructor() {
@@ -65,13 +96,44 @@ class EmblaSlider extends HTMLElement {
     this.options = { loop: false }
     this.api = EmblaCarousel(this, this.options, this.plugins)
 
+    this.api.on('slideschanged', () => {
+
+    })
+    this.api.on('select', () => {
+      this.updateControls()
+    })
+    this.api.on('init', () => {
+      this.updateControls()
+      this.updateProgress()
+    })
+    this.api.on('reInit', () => {
+      this.updateControls()
+      this.updateProgress()
+    })
+    this.api.on('scroll', () => {
+      this.updateProgress()
+    })
+    this.api.on('slideFocus', () => {
+      this.updateProgress()
+    })
+    this.api.on('destroy', () => {})
+  }
+  updateControls(){
+    const nexts = [...document.querySelectorAll(`${EMBLA_NEXT_NAME}[for="${this.id}"]`), ...this.querySelectorAll(`${EMBLA_NEXT_NAME}`)]
+    nexts.forEach(n => this.api.canScrollNext() ? n.enable() : n.disable())
+    const prevs = [...document.querySelectorAll(`${EMBLA_PREV_NAME}[for="${this.id}"]`), ...this.querySelectorAll(`${EMBLA_PREV_NAME}`)]
+    prevs.forEach(n => this.api.canScrollPrev() ? n.enable() : n.disable())
+  }
+  updateProgress(){
+    const progress = [...document.querySelectorAll(`${EMBLA_PROGRESS_NAME}[for="${this.id}"]`), ...this.querySelectorAll(`${EMBLA_PROGRESS_NAME}`)]
+    progress.forEach(n => n.update())
   }
   static get observedAttributes() {
-    return [];
+    return ["id"];
   }
   attributeChangedCallback(property, oldValue, newValue) {
     if (oldValue === newValue) return;
     this[ property ] = newValue;
   }
 }
-customElements.define('embla-slider', EmblaSlider);
+customElements.define(EMBLA_SLIDER_NAME, EmblaSlider);
