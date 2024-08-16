@@ -50,6 +50,12 @@ class EmblaPrev extends HTMLElement{
         slider.api?.scrollPrev()
     })
   }
+  disable(){
+    this.setAttribute("disabled", true)
+  }
+  enable(){
+    this.removeAttribute("disabled")
+  }
   static get observedAttributes() {
     return ["for"];
   }
