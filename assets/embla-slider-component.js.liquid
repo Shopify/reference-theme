@@ -109,7 +109,7 @@ class EmblaProgress extends HTMLElement{
 }
 customElements.define(EMBLA_PROGRESS_NAME, EmblaProgress);
 class EmblaSlider extends HTMLElement {
-  static VERSION = "0.7.2"
+  static VERSION = "0.7.3"
   static BREAKPOINT_SMALL  = '(max-width: {{settings.breakpoint_small}}px)';
   static BREAKPOINT_MEDIUM = '(max-width: {{settings.breakpoint_medium}}px)';
   static OPTIONS_PROPERTIES = ["options", "options-medium", "options-small"];
@@ -119,7 +119,7 @@ class EmblaSlider extends HTMLElement {
   }
   connectedCallback() {
 
-    EmblaSlider.observedAttributes.forEach(o => this.attributeChangedCallback(o, null, this.getAttribute(o))) 
+    // EmblaSlider.observedAttributes.forEach(o => this.attributeChangedCallback(o, null, this.getAttribute(o))) 
     
     this.plugins = [
       // EmblaCarouselAutoplay({ playOnInit: false, delay: 3000 }),
