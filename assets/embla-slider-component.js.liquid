@@ -160,11 +160,11 @@ class EmblaSlider extends HTMLElement {
   }
   updateLoopProperty(){
     console.log("loop")
-    if(window.matchMedia(EmblaSlider.BREAKPOINT_SMALL)){
+    if(window.matchMedia(EmblaSlider.BREAKPOINT_SMALL).matches){
       console.log("small")
       this.options.breakpoints[EmblaSlider.BREAKPOINT_SMALL].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
     }
-    else if(window.matchMedia(EmblaSlider.BREAKPOINT_MEDIUM)){
+    else if(window.matchMedia(EmblaSlider.BREAKPOINT_MEDIUM).matches){
       console.log("medium")
       this.options.breakpoints[EmblaSlider.BREAKPOINT_MEDIUM].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
     }
