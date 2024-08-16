@@ -131,26 +131,23 @@ class EmblaSlider extends HTMLElement {
       // EmblaCarouselFade(),
       EmblaCarouselClassNames(),
     ]
-    const options = { 
-      ...this.options,
-      // container: this.querySelector(EMBLA_CONTAINER_NAME),
-      breakpoints:{
-        [EmblaSlider.BREAKPOINT_MEDIUM]: { 
-          ...this.optionsMedium
-        },
-        [EmblaSlider.BREAKPOINT_SMALL]: { 
-          ...this.optionsSmall
-        },
-      },
-    }
-    this.api = EmblaCarousel(this, options, this.plugins)
+    this.buildOptions()
+    this.api = EmblaCarousel(this, this.options, this.plugins)
 
     // this.api.on('slideschanged', () => {
 
     // })
     
     window.addEventListener('resize', () => {
-      console.log(window.innerWidth)
+      if(window.matchMedia(EmblaSlider.BREAKPOINT_SMALL)){
+        this.options[EmblaSlider.BREAKPOINT_SMALL].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
+      }
+      else if(window.matchMedia(EmblaSlider.BREAKPOINT_MEDIUM)){
+        this.options[EmblaSlider.BREAKPOINT_MEDIUM].loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
+      }
+      else{
+        this.options.loop ? this.setAttribute('loop', true) : this.removeAttribute('loop')
+      }
     })
     this.api.on('select', () => {
       this.updateControls()
@@ -170,6 +167,22 @@ class EmblaSlider extends HTMLElement {
       this.updateProgress()
     })
     this.api.on('destroy', () => {})
+  }
+  buildOptions(){
+    this.options = { 
+      ...this.options,
+      // container: this.querySelector(EMBLA_CONTAINER_NAME),
+      breakpoints:{
+        [EmblaSlider.BREAKPOINT_MEDIUM]: { 
+          ...this.options,
+          ...this.optionsMedium
+        },
+        [EmblaSlider.BREAKPOINT_SMALL]: { 
+          ...this.options,
+          ...this.optionsSmall
+        },
+      },
+    }
   }
   updateControls(){
     const nexts = [...document.querySelectorAll(`${EMBLA_NEXT_NAME}[for="${this.id}"]`), ...this.querySelectorAll(`${EMBLA_NEXT_NAME}`)]
@@ -191,11 +204,10 @@ class EmblaSlider extends HTMLElement {
     if (EmblaSlider.OPTIONS_PROPERTIES.includes(property)){
       // parse string before assignment
       this[ jsProperty ] = this.parseOptions(newValue)
-      console.log(jsProperty, this[ jsProperty ])
+      this.buildOptions()
       return;
     }
     this[ jsProperty ] = newValue;
-    // this[ property ] = newValue;
   }
   parseOptions(options){
     return Object.fromEntries(options.split(',').map(option => {
