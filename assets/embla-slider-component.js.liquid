@@ -119,7 +119,7 @@ class EmblaSlider extends HTMLElement {
   connectedCallback() {
 
     EmblaSlider.observedAttributes.forEach(o => this.attributeChangedCallback(o, null, this.getAttribute(o))) 
-
+    console.log(this)
     this.plugins = [
       // EmblaCarouselAutoplay({ playOnInit: false, delay: 3000 }),
       // EmblaCarouselAutoScroll({ playOnInit: false }),
