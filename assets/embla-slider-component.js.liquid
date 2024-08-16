@@ -15,7 +15,8 @@ class EmblaNext extends HTMLElement{
   connectedCallback() {
     this.addEventListener('click', () => {
         const slider = this.closest('embla-slider') || document.getElementById(this.for)
-        slider.api.scrollNext()
+        console.log(slider)
+        slider.api?.scrollNext()
     })
   }
   static get observedAttributes() {
@@ -34,7 +35,8 @@ class EmblaPrev extends HTMLElement{
   connectedCallback() {
     this.addEventListener('click', () => {
         const slider = this.closest('embla-slider') || document.getElementById(this.for)
-        slider.api.scrollPrev()
+        console.log(slider)
+        slider.api?.scrollPrev()
     })
   }
   static get observedAttributes() {
