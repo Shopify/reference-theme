@@ -1,6 +1,6 @@
-<div class="slideshow__controls flex-item">
-  <button
-    class="slideshow-control slideshow-control--previous button-secondary"
+<div class="">
+  <embla-prev
+    class=""
     aria-label="Previous slide"
   >
     <svg
@@ -13,8 +13,8 @@
     >
       {%- render 'icon', icon: 'previous'  -%}
     </svg>
-  </button>
-
+  </embla-prev>
+{% comment %} 
   {% case block.settings.pagination_style %}
     {% when 'dots' %}
       {% for block in section.blocks %}
@@ -40,8 +40,8 @@
           {{ forloop.index }}
         </button>
       {% endfor %}
-  {% endcase %}
-  <button
+  {% endcase %} {% endcomment %}
+  <embla-next
     class="slideshow-control slideshow-control--next button-secondary"
     aria-label="Next slide"
   >
@@ -55,7 +55,8 @@
     >
       {%- render 'icon', icon: 'next' -%}
     </svg>
-  </button>
+  </embla-next>
+{% comment %}   
   {% if section.settings.autoplay %}
     <button
       type="button"
@@ -83,33 +84,35 @@
         {%- render 'icon', icon: 'play' -%}
       </svg>
     </button>
-  {% endif %}
+  {% endif %} {% endcomment %}
 </div>
+{% comment %} 
+{
+  "type": "select",
+  "id": "pagination_style",
+  "options": [
+    {
+      "value": "dots",
+      "label": "Dots"
+    },
+    {
+      "value": "counter",
+      "label": "Counter"
+    },
+    {
+      "value": "numbers",
+      "label": "Numbers"
+    }
+  ],
+  "label": "Pagination style",
+  "default": "counter"
+} {% endcomment %}
 
 {% schema %}
 {
   "name": "Slideshow controls",
   "settings": [
-    {
-      "type": "select",
-      "id": "pagination_style",
-      "options": [
-        {
-          "value": "dots",
-          "label": "Dots"
-        },
-        {
-          "value": "counter",
-          "label": "Counter"
-        },
-        {
-          "value": "numbers",
-          "label": "Numbers"
-        }
-      ],
-      "label": "Pagination style",
-      "default": "counter"
-    }
+   
   ]
 }
 {% endschema %}

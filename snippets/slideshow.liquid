@@ -1,0 +1,26 @@
+<style>
+  #slider-{{section.id}}{
+    --slides-per-page: 3;
+    --gap: 20px;
+  }
+</style>
+
+<embla-slider id="slideshow-{{id}}"
+  options="loop: true, duration: 25, containScroll: trimSnaps, align: start"
+  options-medium="loop: false, containScroll: trimSnaps"
+  options-small="loop: false"
+  {% comment %} autoplay="2000" {% endcomment %}
+>
+  <embla-slides>
+      {% content_for "blocks", type: "slide" %}
+  </embla-slides>
+
+  {% if section.blocks.size > 1 %}
+    {% content_for "block", type: "slideshow-controls" %}
+  {% endif %}
+
+  {% comment %} {% if section.blocks.size > 1 %}
+    {% content_for "block", type: "slideshow-progress" %}
+  {% endif %} {% endcomment %}
+
+</embla-slider>

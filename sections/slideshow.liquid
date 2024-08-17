@@ -1,29 +1,7 @@
-<slideshow-component
-  id="slideshow-{{ section.id }}"
-  class="slideshow slideshow--{{ section.settings.slide_height }}"
-  data-active-slide="0"
-  data-autoplay="{{ section.settings.autoplay }}"
-  {% if section.settings.autoplay %}
-    aria-live="polite"
-    data-autoplay-speed="{{ section.settings.autoplay_speed }}"
-  {% endif %}
->
-  <div class="slideshow__slides">
-    {% content_for "blocks" %}
-  </div>
+{% render 'slideshow', id: section.id %}
 
-  {% if section.blocks.size > 1 %}
-    {% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}
-  {% endif %}
-</slideshow-component>
-
-{% schema %}
-{
-  "name": "Slideshow",
-  "class": "section--has-background",
-  "blocks": [{ "type": "slide" }],
-  "settings": [
-    {
+{% comment %} 
+ {
       "type": "header",
       "content": "Slideshow height"
     },
@@ -70,7 +48,16 @@
       "step": 1,
       "unit": "s",
       "default": 5
-    }
+    } 
+{% endcomment %}
+
+{% schema %}
+{
+  "name": "Slideshow",
+  "class": "section--has-background",
+  "blocks": [{ "type": "slide" }],
+  "settings": [
+   
   ],
   "presets": [
     {
