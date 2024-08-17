@@ -33,6 +33,30 @@
         "width": "100%",
         "flex-grow": "1"
       }
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing",
+      "default": {
+        "padding": "20px"
+      }
+    },
+    {
+      "type": "style.layout_panel",
+      "id": "layout",
+      "label": "Layout",
+      "default": {
+        "flex-direction": "row",
+        "flex-wrap": "nowrap",
+        "gap": "20px",
+        "justify-content": "center",
+        "align-items": "center",
+
+        "@media (--mobile)": {
+          "flex-wrap": "wrap"
+        }
+      }
     } 
   ],
   "presets": [
