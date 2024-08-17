@@ -1,6 +1,5 @@
 embla-slider{
   overflow: hidden;
-  width: 100%;
   --gap: 0px;
   --slides-per-page: 1;
   --gaps-per-page: calc(var(--slides-per-page) - 1);
