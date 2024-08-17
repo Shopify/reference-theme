@@ -8,6 +8,7 @@ import "{{ 'embla-carousel-wheel-gestures.umd.js' | asset_url }}"
 
 const EMBLA_SLIDE_NAME = 'embla-slide'
 const EMBLA_CONTAINER_NAME = 'embla-slides'
+const EMBLA_VIEWPORT_NAME = 'embla-viewport'
 const EMBLA_NEXT_NAME = 'embla-next'
 const EMBLA_PREV_NAME = 'embla-prev'
 const EMBLA_SLIDER_NAME = 'embla-slider'
@@ -17,6 +18,8 @@ const EMBLA_THUMBNAIL_NAME = 'embla-thumbnail'
 const camelize = s => s.replace(/-./g, x=>x[1].toUpperCase())
 
 customElements.define(EMBLA_CONTAINER_NAME, class extends HTMLElement{});
+customElements.define(EMBLA_SLIDE_NAME, class extends HTMLElement{});
+customElements.define(EMBLA_VIEWPORT_NAME, class extends HTMLElement{});
 class EmblaThumbnail extends HTMLElement{
   constructor() {
     super();
@@ -137,7 +140,9 @@ class EmblaSlider extends HTMLElement {
     this.buildOptions()
     this.updateAttributeByResponsiveOptions('loop')
 
-    this.api = EmblaCarousel(this, this.options, this.plugins)
+    this.viewport = document.querySelector(EMBLA_VIEWPORT_NAME)
+
+    this.api = EmblaCarousel(this.viewport, this.options, this.plugins)
 
     window.addEventListener('resize', () => {
       this.updateAttributeByResponsiveOptions('loop')
