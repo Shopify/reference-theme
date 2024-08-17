@@ -6,7 +6,7 @@
   }
 </style>
 
-<embla-slider id="slideshow-{{section.id}}"
+<embla-slider id="slideshow-{{section.id}}" class="{{ section.settings | class_list }}"
   options="loop: true, duration: 25, containScroll: trimSnaps, align: start"
   options-medium="loop: false, containScroll: trimSnaps"
   options-small="loop: false"
@@ -96,6 +96,15 @@
       "id": "gap",
       "label": "Gap (px)",
       "default": 0
+    },
+    {
+      "type": "style.size_panel",
+      "id": "size",
+      "label": "Size",
+      "default": {
+        "width": "100%",
+        "flex-grow": "1"
+      }
     } 
   ],
   "presets": [
