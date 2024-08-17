@@ -13,11 +13,11 @@
   {% comment %} autoplay="2000" {% endcomment %}
 >
   <embla-slides>
-    {% content_for "blocks", type: "slide" %}
+    {% content_for "blocks" %}
   </embla-slides>
 
   {% if  section.blocks.size > 1 %}
-    {% content_for "block", type: "slideshow-controls" %}
+    {% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}
   {% endif %}
 
   {% comment %} {% if section.blocks.size > 1 %}
