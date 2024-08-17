@@ -884,3 +884,10 @@ slideshow-component .slideshow__slide {
     transform: translateX(100%);
   }
 }
+
+.is-relative{
+  position: relative;
+}
+.is-absolute{
+  position: absolute;
+}

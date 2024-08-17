@@ -1,5 +1,5 @@
 <div
-  class="{{ block.settings | class_list }} group-block group-block--{{ block.id }} color-{{ block.settings.color_scheme }}"
+  class="{{ block.settings | class_list }} {{ block.settings.position }} group-block group-block--{{ block.id }} color-{{ block.settings.color_scheme }}"
   {{ block.shopify_attributes }}
 >
   {% content_for "blocks" %}
@@ -17,19 +17,19 @@
       "label": "Position",
       "options": [
         {
-          "value": "static",
+          "value": "",
           "label": "static"
         },
         {
-          "value": "relative",
+          "value": "is-relative",
           "label": "relative"
         },
         {
-          "value": "absolute",
+          "value": "is-absolute",
           "label": "absolute"
         }
       ],
-      "default": "static"
+      "default": ""
     },
     {
       "type": "style.size_panel",
