@@ -45,6 +45,7 @@ embla-slider{
         position: absolute;
         /* transform: translateX(-100%); */
         transition: none;
+        opacity: 1;
         width: 100%;
         height: 100%;
         background-color: currentColor;
