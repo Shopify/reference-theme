@@ -4,40 +4,45 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
-  &.embla-dot{
-    background-color: currentColor;
-    border-radius: 100%;
-    cursor: pointer;
-    display: inline-block;
-    height: 6px;
-    opacity: 0.4;
-    vertical-align: middle;
-    width: 6px;
-    &.is-selected{
+  &.embla-dots{
+    & embla-thumbnail{
       background-color: currentColor;
-      height: 9px;
-      opacity: 1;
-      width: 9px;
+      border-radius: 100%;
+      cursor: pointer;
+      display: inline-block;
+      height: 6px;
+      opacity: 0.4;
+      vertical-align: middle;
+      width: 6px;
+      &.is-selected{
+        background-color: currentColor;
+        height: 9px;
+        opacity: 1;
+        width: 9px;
+      }
     }
+    
   }
-  &.embla-bar{
-    position: relative;
-    background-color: currentColor;
-    height: 6px;
-    opacity: 0.4;
-    overflow: hidden;
-    position: relative;
-    vertical-align: top;
-    width: 120px;
-    &.is-selected::after{
-      content: "";
-      display: block;
-      position: absolute;
-      transform: translateX(-100%);
-      transition: none;
-      width: 100%;
-      height: 100%;
+  &.embla-bars{
+    & embla-thumbnail{
+      position: relative;
       background-color: currentColor;
+      height: 6px;
+      opacity: 0.4;
+      overflow: hidden;
+      position: relative;
+      vertical-align: top;
+      width: 120px;
+      &.is-selected::after{
+        content: "";
+        display: block;
+        position: absolute;
+        transform: translateX(-100%);
+        transition: none;
+        width: 100%;
+        height: 100%;
+        background-color: currentColor;
+      }
     }
   }
 }
