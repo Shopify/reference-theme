@@ -25,6 +25,7 @@
             "group_AYLEbA": {
               "type": "group",
               "settings": {
+                "position": "static",
                 "size": {
                   "width": "50%",
                   "flex-grow": "0",
@@ -120,6 +121,7 @@
             "group_tX6xMR": {
               "type": "group",
               "settings": {
+                "position": "static",
                 "size": {
                   "width": "50%",
                   "flex-grow": "0",
@@ -238,6 +240,7 @@
         "ff102392-368f-41d9-883a-9c1cd4be4d84": {
           "type": "group",
           "settings": {
+            "position": "static",
             "size": {
               "width": "100%"
             },
@@ -335,6 +338,7 @@
         "group_BcTBGi": {
           "type": "group",
           "settings": {
+            "position": "static",
             "size": {
               "width": "100%",
               "height": "100%",
@@ -439,6 +443,7 @@
         "group_LrBxgw": {
           "type": "group",
           "settings": {
+            "position": "static",
             "size": {
             },
             "spacing": {
@@ -455,6 +460,7 @@
             "group_A3Jhra": {
               "type": "group",
               "settings": {
+                "position": "static",
                 "size": {
                   "width": "25%",
                   "height": "100%",
@@ -564,6 +570,7 @@
         "group_iabYjG": {
           "type": "group",
           "settings": {
+            "position": "static",
             "size": {
               "width": "100%"
             },
@@ -590,6 +597,7 @@
                 "group_igxqEV": {
                   "type": "group",
                   "settings": {
+                    "position": "static",
                     "size": {
                       "width": "100%"
                     },
@@ -670,6 +678,7 @@
                 "group_mgPLTf": {
                   "type": "group",
                   "settings": {
+                    "position": "static",
                     "size": {
                       "width": "100%"
                     },
@@ -750,6 +759,7 @@
                 "group_BqmeC9": {
                   "type": "group",
                   "settings": {
+                    "position": "static",
                     "size": {
                       "width": "100%"
                     },
@@ -830,6 +840,7 @@
                 "group_gtJd6c": {
                   "type": "group",
                   "settings": {
+                    "position": "static",
                     "size": {
                       "width": "100%"
                     },
@@ -990,6 +1001,7 @@
         "group_hwEiRw": {
           "type": "group",
           "settings": {
+            "position": "static",
             "size": {
               "width": "100%"
             },
@@ -1053,6 +1065,7 @@
         "group_KyK7Ha": {
           "type": "group",
           "settings": {
+            "position": "static",
             "size": {
               "width": "100%"
             },
@@ -1116,6 +1129,7 @@
         "group_rUTJ6Y": {
           "type": "group",
           "settings": {
+            "position": "static",
             "size": {
               "width": "100%"
             },
@@ -1200,6 +1214,64 @@
       "type": "embla-test",
       "settings": {
       }
+    },
+    "custom_section_eKe4dX": {
+      "type": "custom-section",
+      "blocks": {
+        "group_7G9X8q": {
+          "type": "group",
+          "settings": {
+            "position": "relative",
+            "size": {
+            },
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          },
+          "blocks": {
+            "image_PLakUk": {
+              "type": "image",
+              "settings": {
+                "object_fit": "cover",
+                "spacing": {
+                },
+                "size": {
+                  "height": "500px"
+                }
+              }
+            },
+            "group_p6qeqi": {
+              "type": "group",
+              "settings": {
+                "position": "absolute",
+                "size": {
+                },
+                "spacing": {
+                },
+                "layout": {
+                },
+                "color_scheme": ""
+              }
+            }
+          },
+          "block_order": [
+            "image_PLakUk",
+            "group_p6qeqi"
+          ]
+        }
+      },
+      "block_order": [
+        "group_7G9X8q"
+      ],
+      "settings": {
+        "spacing": {
+        },
+        "layout": {
+        },
+        "color_scheme": ""
+      }
     }
   },
   "order": [
@@ -1210,6 +1282,7 @@
     "custom_section_MiX6gV",
     "custom_section_YmTwNm",
     "custom_section_gbgWDY",
-    "embla_test_NEwhwd"
+    "embla_test_NEwhwd",
+    "custom_section_eKe4dX"
   ]
 }
