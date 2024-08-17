@@ -1221,7 +1221,7 @@
         "group_7G9X8q": {
           "type": "group",
           "settings": {
-            "position": "relative",
+            "position": "is-relative",
             "size": {
             },
             "spacing": {
@@ -1245,7 +1245,7 @@
             "group_p6qeqi": {
               "type": "group",
               "settings": {
-                "position": "absolute",
+                "position": "is-absolute",
                 "size": {
                 },
                 "spacing": {
