@@ -12,6 +12,26 @@
   "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
     {
+      "type": "select",
+      "id": "position",
+      "label": "Position",
+      "options": [
+        {
+          "value": "static",
+          "label": "static"
+        },
+        {
+          "value": "relative",
+          "label": "relative"
+        },
+        {
+          "value": "absolute",
+          "label": "absolute"
+        }
+      ],
+      "default": "static"
+    },
+    {
       "type": "style.size_panel",
       "id": "size",
       "label": "Size",
