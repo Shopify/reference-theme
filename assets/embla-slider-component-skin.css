@@ -1,4 +1,10 @@
+embla-slider{
+  position: relative;  
+}
 .embla-navigation{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   display:flex;
   flex-direction: row;
   justify-content: center;
@@ -37,7 +43,7 @@
         content: "";
         display: block;
         position: absolute;
-        transform: translateX(-100%);
+        /* transform: translateX(-100%); */
         transition: none;
         width: 100%;
         height: 100%;
