@@ -121,13 +121,16 @@ class EmblaSlider extends HTMLElement {
   }
   connectedCallback() {
     this.autoplay = this.getAttribute('autoplay') || 0
+    this.autoHeight = this.getAttribute('auto-height') || false
     this.pauseOnHover = this.hasAttribute('pause-on-hover')
     this.plugins = [
       // EmblaCarouselAutoScroll({ playOnInit: false }),
       // EmblaCarouselFade(),
-      EmblaCarouselAutoHeight(),
       EmblaCarouselClassNames(),
     ]
+    if(this.autoHeight){
+      this.plugins.push(EmblaCarouselAutoHeight())
+    }
     // Todo: responsible?
     if(this.autoplay != 0){
       this.plugins.push(EmblaCarouselAutoplay({
