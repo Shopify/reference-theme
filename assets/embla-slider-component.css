@@ -4,6 +4,9 @@ embla-slider{
   --slides-per-page: 1;
   --gaps-per-page: calc(var(--slides-per-page) - 1);
 }
+embla-viewport{
+  display:block;
+}
 embla-viewport.is-draggable{
   cursor: grab;
 }
