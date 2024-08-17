@@ -15,10 +15,10 @@
   <embla-slides>
     {% content_for "blocks" %}
   </embla-slides>
-{% comment %} 
+
   {% if  section.blocks.size > 1 %}
     {% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}
-  {% endif %} {% endcomment %}
+  {% endif %}
 
   {% if section.blocks.size > 1 %}
     {% content_for "block", type: "slideshow-progress", id: "slideshow-progress" %}

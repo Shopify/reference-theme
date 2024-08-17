@@ -3,7 +3,7 @@
     class=""
     aria-label="Previous slide"
   >
-    <svg
+    {% comment %} <svg
       class="icon icon-previous"
       viewBox="0 0 10 14"
       fill="none"
@@ -12,7 +12,8 @@
       aria-hidden="true"
     >
       {%- render 'icon', icon: 'previous'  -%}
-    </svg>
+    </svg> {% endcomment %}
+    Prev
   </embla-prev>
 {% comment %} 
   {% case block.settings.pagination_style %}
@@ -45,7 +46,7 @@
     class="slideshow-control slideshow-control--next button-secondary"
     aria-label="Next slide"
   >
-    <svg
+    {% comment %} <svg
       class="icon icon-next"
       viewBox="0 0 10 14"
       fill="none"
@@ -54,7 +55,8 @@
       aria-hidden="true"
     >
       {%- render 'icon', icon: 'next' -%}
-    </svg>
+    </svg> {% endcomment %}
+    Next
   </embla-next>
 {% comment %}   
   {% if section.settings.autoplay %}

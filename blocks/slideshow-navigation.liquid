@@ -4,7 +4,8 @@
 >
 {% for block in section.blocks %}
   <embla-thumbnail
-    class=""
+    class="{{ block.settings.navigation_style }}"
+    {{ block.shopify_attributes }}
     aria-label="Slide {{ forloop.index }} of {{ forloop.length }}"
     index="{{ forloop.index0 }}"
   >
@@ -12,33 +13,27 @@
   </embla-thumbnail>
 {% endfor %}
 </div>
-{% comment %} 
-{
-  "type": "select",
-  "id": "pagination_style",
-  "options": [
-    {
-      "value": "dots",
-      "label": "Dots"
-    },
-    {
-      "value": "counter",
-      "label": "Counter"
-    },
-    {
-      "value": "numbers",
-      "label": "Numbers"
-    }
-  ],
-  "label": "Pagination style",
-  "default": "counter"
-} {% endcomment %}
 
 {% schema %}
 {
-  "name": "Slideshow thumbnails",
+  "name": "Slideshow navigation",
   "settings": [
-   
+    {
+      "type": "select",
+      "id": "navigation_style",
+      "options": [
+        {
+          "value": "embla-dot",
+          "label": "Dots"
+        },
+        {
+          "value": "embla-bar",
+          "label": "Bars"
+        }
+      ],
+      "label": "Navigation style",
+      "default": "bars"
+    } 
   ]
 }
 {% endschema %}
