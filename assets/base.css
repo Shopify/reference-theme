@@ -891,3 +891,9 @@ slideshow-component .slideshow__slide {
 .is-absolute{
   position: absolute;
 }
+.overflow-hidden{
+  overflow: hidden;
+}
+.overflow-scroll{
+  overflow: scroll;
+}

@@ -1,5 +1,5 @@
 <div
-  class="{{ block.settings | class_list }} {{ block.settings.position }} group-block group-block--{{ block.id }} color-{{ block.settings.color_scheme }}"
+  class="{{ block.settings | class_list }} {{ block.settings.position }} {{ block.settings.overflow }} group-block group-block--{{ block.id }} color-{{ block.settings.color_scheme }}"
   {{ block.shopify_attributes }}
 >
   {% content_for "blocks" %}
@@ -27,6 +27,26 @@
         {
           "value": "is-absolute",
           "label": "absolute"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "select",
+      "id": "overflow",
+      "label": "Overflow",
+      "options": [
+        {
+          "value": "",
+          "label": "visible"
+        },
+        {
+          "value": "overflow-hidden",
+          "label": "hidden"
+        },
+        {
+          "value": "overflow-scroll",
+          "label": "scroll"
         }
       ],
       "default": ""
