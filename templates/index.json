@@ -15,6 +15,9 @@
         "slide_mEbteL": {
           "type": "slide",
           "settings": {
+            "size": {
+              "height": "500px"
+            }
           },
           "blocks": {
             "group_AYLEbA": {
@@ -107,6 +110,9 @@
         "slide_aWAGX7": {
           "type": "slide",
           "settings": {
+            "size": {
+              "height": "500px"
+            }
           },
           "blocks": {
             "group_tX6xMR": {
