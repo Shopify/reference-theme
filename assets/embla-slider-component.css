@@ -4,10 +4,10 @@ embla-slider{
   --slides-per-page: 1;
   --gaps-per-page: calc(var(--slides-per-page) - 1);
 }
-embla-slider.is-draggable{
+embla-viewport.is-draggable{
   cursor: grab;
 }
-embla-slider.is-dragging{
+embla-viewport.is-dragging{
   cursor: grabbing;
 }
 embla-slides {
