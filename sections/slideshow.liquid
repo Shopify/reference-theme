@@ -1,8 +1,8 @@
 
 <style>
   #slideshow-{{section.id}}{
-    --slides-per-page: 3;
-    --gap: 20px;
+    --slides-per-page: {{section.settings.slides_per_page}};
+    --gap:  {{section.settings.gap}}px;
   }
 </style>
 
@@ -82,7 +82,21 @@
   "class": "section--has-background",
   "blocks": [{ "type": "slide" }],
   "settings": [
-   
+    {
+      "type": "range",
+      "id": "slides_per_page",
+      "label": "Slides per page",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "number",
+      "id": "gap",
+      "label": "Gap (px)",
+      "default": 0
+    } 
   ],
   "presets": [
     {
