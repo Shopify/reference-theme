@@ -1,6 +1,8 @@
-embla-thumbnail{
+.embla-navigation{
   display:flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
   &.embla-dot{
     background-color: currentColor;
@@ -18,11 +20,6 @@ embla-thumbnail{
       width: 9px;
     }
   }
-}
-embla-thumbnail{
-  display:flex;
-  flex-direction: row;
-  gap: 5px;
   &.embla-bar{
     position: relative;
     background-color: currentColor;
