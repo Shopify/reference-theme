@@ -1,0 +1,44 @@
+<div
+  class=""
+  aria-label="Slideshow thumbnails"
+>
+{% for block in section.blocks %}
+  <embla-thumbnail
+    class=""
+    aria-label="Slide {{ forloop.index }} of {{ forloop.length }}"
+    data-slide-number="{{ forloop.index0 }}"
+  >
+    {{ forloop.index }}
+  </embla-thumbnail>
+{% endfor %}
+</div>
+{% comment %} 
+{
+  "type": "select",
+  "id": "pagination_style",
+  "options": [
+    {
+      "value": "dots",
+      "label": "Dots"
+    },
+    {
+      "value": "counter",
+      "label": "Counter"
+    },
+    {
+      "value": "numbers",
+      "label": "Numbers"
+    }
+  ],
+  "label": "Pagination style",
+  "default": "counter"
+} {% endcomment %}
+
+{% schema %}
+{
+  "name": "Slideshow thumbnails",
+  "settings": [
+   
+  ]
+}
+{% endschema %}
