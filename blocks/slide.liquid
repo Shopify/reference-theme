@@ -1,61 +1,23 @@
 {%- liquid
-  assign blockIndex = 0
-  for sectionBlock in section.blocks
-    assign blockIndex = blockIndex | plus: 1
-    if block.id == sectionBlock.id
+  assign block_index = 0
+  for section_blocks in section.blocks
+    assign block_index = block_index | plus: 1
+    if block.id == section_blocks.id
       break
     endif
   endfor
 -%}
-
-<div
+{% comment %} aria-hidden="{% if block_index == 1 %}false{% else %}true{% endif %}" {% endcomment %}
+<embla-slide
   id="slide-{{ block.id }}"
+  index="{{ block_index }}"
   class="slideshow__slide"
-  aria-hidden="{% if blockIndex == 1 %}false{% else %}true{% endif %}"
   {{ block.shopify_attributes }}
 >
-  {% style %}
-    {%- if section.settings.slide_height == 'adapt_image' and blockIndex == 1 and block.settings.image != blank -%}
-      #slideshow-{{ section.id }} .slideshow__slides,
-      #slideshow-{{ section.id }} .slideshow__slide {
-        min-height: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}vw;
-      }
-    {%- endif -%}
-  {% endstyle %}
-
-  <div class="slide__image-container">
-    {%- if block.settings.image -%}
-      {%- liquid
-        assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
-        assign sizes = '100vw'
-        assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-      -%}
-      {%- if blockIndex == 1 -%}
-        {{
-          block.settings.image
-          | image_url: width: 3840
-          | image_tag: height: height, sizes: sizes, widths: widths, loading: 'eager'
-        }}
-      {%- else -%}
-        {{
-          block.settings.image
-          | image_url: width: 3840
-          | image_tag: height: height, sizes: sizes, widths: widths, loading: 'lazy'
-        }}
-      {%- endif -%}
-    {%- else -%}
-      {%- assign placeholder_slide = blockIndex | modulo: 2 -%}
-      {%- if placeholder_slide == 1 -%}
-        {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
-      {%- else -%}
-        {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-      {%- endif -%}
-    {%- endif -%}
-  </div>
   <div class="{{ block.settings | class_list }} slide__content">
     {% content_for "blocks" %}
   </div>
-</div>
+</embla-slide>
 
 {% schema %}
 {
@@ -63,34 +25,7 @@
   "tag": null,
   "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Image"
-    },
-    {
-      "type": "style.spacing_panel",
-      "id": "spacing",
-      "label": "Spacing",
-      "default": {
-        "padding": "20px"
-      }
-    },
-    {
-      "type": "style.layout_panel",
-      "id": "layout",
-      "label": "Layout",
-      "default": {
-        "flex-direction": "row",
-        "gap": "20px",
-        "justify-content": "center",
-        "align-items": "center",
-
-        "@media (--mobile)": {
-          "flex-wrap": "wrap"
-        }
-      }
-    }
+    
   ],
   "presets": [
     {
