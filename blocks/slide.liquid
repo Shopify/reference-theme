@@ -7,11 +7,11 @@
     endif
   endfor
 -%}
-{% comment %} aria-hidden="{% if block_index == 1 %}false{% else %}true{% endif %}" {% endcomment %}
+
 <embla-slide
   id="slide-{{ block.id }}"
   index="{{ block_index }}"
-  class="slideshow__slide"
+  class="{{ block_index.settings | class_list }}"
   {{ block.shopify_attributes }}
 >
   <div class="{{ block.settings | class_list }}">
@@ -25,7 +25,15 @@
   "tag": null,
   "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
-    
+    {
+      "type": "style.size_panel",
+      "id": "size",
+      "label": "Size",
+      "default": {
+        "width": "100%",
+        "flex-grow": "1"
+      }
+    } 
   ],
   "presets": [
     {
