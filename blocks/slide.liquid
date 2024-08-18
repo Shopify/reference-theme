@@ -11,7 +11,7 @@
 <embla-slide
   id="slide-{{ block.id }}"
   index="{{ block_index }}"
-  class="{{ block_index.settings | class_list }} {{ block.settings.position }}"
+  class="{{ block_index.settings | class_list }} {{ block.settings.position }} {{ block.settings.overflow }}"
   {{ block.shopify_attributes }}
 >
   <div class="{{ block.settings | class_list }}">
@@ -45,6 +45,30 @@
         {
           "value": "is-absolute",
           "label": "absolute"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "Overflow"
+    },
+    {
+      "type": "select",
+      "id": "overflow",
+      "label": "Overflow",
+      "options": [
+        {
+          "value": "",
+          "label": "visible"
+        },
+        {
+          "value": "overflow-hidden",
+          "label": "hidden"
+        },
+        {
+          "value": "overflow-scroll",
+          "label": "scroll"
         }
       ],
       "default": ""
