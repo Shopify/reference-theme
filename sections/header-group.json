@@ -150,7 +150,7 @@
         "size": {
         },
         "loop": "false",
-        "autoplay_speed": 0,
+        "autoplay_speed": 4,
         "color_scheme": "scheme-2"
       }
     },
