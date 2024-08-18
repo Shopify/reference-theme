@@ -649,3 +649,16 @@ details[open] > summary .icon-caret {
 .overflow-scroll{
   overflow: scroll;
 }
+.page-width{
+  max-width: 1200px;
+  width:100%;
+  margin-inline: auto;
+}
+/* .page-width--small{
+  max-width: 993px;
+  width:100%;
+  margin-inline: auto;
+}
+.page-width--right{
+  margin-right: calc(max(calc(100% - 993px), 0) / 2);
+} */

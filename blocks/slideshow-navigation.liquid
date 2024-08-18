@@ -1,6 +1,6 @@
 {% if block.settings.navigation_style != "" %}
   <div
-    class="embla-navigation {{ block.settings.navigation_style }} color-{{ block.settings.color_scheme }}"
+    class="embla-navigation {{ block.settings.navigation_style }} color-{{ block.settings.color_scheme }} {{ block.settings.page_width }}"
     aria-label="Slideshow thumbnails"
   >
     {% for block in section.blocks %}
@@ -19,6 +19,22 @@
 {
   "name": "Slideshow navigation",
   "settings": [
+    {
+      "type": "select",
+      "id": "page_width",
+      "options": [
+        {
+          "value": "",
+          "label": "none"
+        },
+        {
+          "value": "page-width",
+          "label": "normal"
+        }
+      ],
+      "label": "Page width",
+      "default": ""
+    },
     {
       "type": "select",
       "id": "navigation_style",
