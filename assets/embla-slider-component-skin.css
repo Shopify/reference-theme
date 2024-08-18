@@ -88,6 +88,7 @@ embla-slider:not([autoplay]) .embla-navigation.embla-dots embla-thumbnail.is-sel
 /* Controls - Prev & Next */
 .embla-controls{
   &.embla-simple{
+    display:flex;
     transform: translateY(50%);
     position: absolute;
     right: 0;
