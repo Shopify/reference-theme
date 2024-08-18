@@ -1,6 +1,10 @@
 embla-slider{
   position: relative;  
 }
+embla-slider:not([autoplay]) .embla-navigation.embla-dots embla-thumbnail.is-selected{
+  background-color: currentColor;
+  opacity: 1;
+}
 .embla-navigation{
   position: absolute;
   bottom: 0;
