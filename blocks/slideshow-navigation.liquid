@@ -1,6 +1,7 @@
-{% if block.settings.navigation_style != "" %}
+{% assign navigation_style = block.settings.navigation_style %}
+{% if navigation_style != "" %}
   <div
-    class="embla-navigation {{ block.settings.navigation_style }} color-{{ block.settings.color_scheme }}"
+    class="embla-navigation {{ navigation_style }} color-{{ block.settings.color_scheme }}"
     aria-label="Slideshow thumbnails"
   >
     {% for block in section.blocks %}
@@ -10,7 +11,7 @@
         aria-label="Slide {{ forloop.index }} of {{ forloop.length }}"
         index="{{ forloop.index0 }}"
       >
-        {% if block.settings.navigation_style == "embla-dots" %}
+        {% if navigation_style == "embla-dots" %}
           <svg width="120" height="120" viewBox="0 0 120 120">
               <circle cx="60" cy="60" r="54" fill="none" stroke="#e6e6e6" stroke-width="12" />
               <circle class="percent ninety" cx="60" cy="60" r="54" fill="none" stroke="#f77a52" stroke-width="12" pathLength="100" />
