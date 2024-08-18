@@ -17,6 +17,10 @@
           "settings": {
             "size": {
               "height": "500px"
+            },
+            "spacing": {
+            },
+            "layout": {
             }
           },
           "blocks": {
@@ -112,6 +116,10 @@
           "settings": {
             "size": {
               "height": "500px"
+            },
+            "spacing": {
+            },
+            "layout": {
             }
           },
           "blocks": {
@@ -218,7 +226,8 @@
           "type": "slideshow-navigation",
           "static": true,
           "settings": {
-            "navigation_style": "embla-bars"
+            "navigation_style": "embla-bars",
+            "color_scheme": "scheme-4"
           }
         }
       },
