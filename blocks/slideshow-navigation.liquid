@@ -1,7 +1,7 @@
 {% assign navigation_style = block.settings.navigation_style %}
 {% if navigation_style != "" %}
   <div
-    class="embla-navigation {{ navigation_style }} color-{{ block.settings.color_scheme }}"
+    class="embla-navigation {{ block.settings | class_list }} {{ navigation_style }} color-{{ block.settings.color_scheme }}"
     aria-label="Slideshow thumbnails"
   >
     {% for block in section.blocks %}
@@ -45,6 +45,11 @@
       ],
       "label": "Navigation style",
       "default": "embla-bars"
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing"
     },
     {
       "type": "color_scheme",
