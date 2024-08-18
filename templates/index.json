@@ -263,6 +263,9 @@
           "static": true,
           "settings": {
             "navigation_style": "embla-dots",
+            "spacing": {
+              "padding-block-end": "5px"
+            },
             "color_scheme": "scheme-4"
           }
         }
