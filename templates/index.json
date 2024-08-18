@@ -17,7 +17,7 @@
           "settings": {
             "position": "is-relative",
             "size": {
-              "height": "500px"
+              "height": "100%"
             },
             "spacing": {
             },
