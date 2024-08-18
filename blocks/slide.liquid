@@ -1,7 +1,7 @@
 {%- liquid
   assign block_index = 0
   for section_blocks in section.blocks
-    assign block_index = block_index | plus: 1
+    assign block_index = block_index
     if block.id == section_blocks.id
       break
     endif
@@ -11,10 +11,12 @@
 <embla-slide
   id="slide-{{ block.id }}"
   index="{{ block_index }}"
-  class="{{ block.settings | class_list }} {{ block.settings.position }} {{ block.settings.overflow }}"
+  class=""
   {{ block.shopify_attributes }}
 >
-  {% content_for "blocks" %}
+  <div class="{{ block.settings | class_list }} {{ block.settings.position }} {{ block.settings.overflow }}">
+    {% content_for "blocks" %}
+  </div>
 </embla-slide>
 
 {% schema %}
