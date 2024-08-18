@@ -1,7 +1,7 @@
 {%- liquid
   assign block_index = 0
   for section_blocks in section.blocks
-    assign block_index = block_index | plus: 1
+    assign block_index = block_index
     if block.id == section_blocks.id
       break
     endif
