@@ -18,6 +18,7 @@
       {% content_for "blocks" %}
     </embla-slides>
   </embla-viewport>
+  
   {% if  section.blocks.size > 1 %}
     {% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}
   {% endif %}
