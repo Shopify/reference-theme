@@ -150,8 +150,7 @@
         "size": {
         },
         "loop": true,
-        "draggable": false,
-        "autoplay_speed": 4,
+        "autoplay_speed": 7,
         "color_scheme": "scheme-2"
       }
     },
