@@ -149,9 +149,10 @@ embla-slide{
     transform: translateX(100px);
   }
 }
-.fade-left{
-  transition: opacity transform 0.3s;
+embla-slide.is-snapped{
+  
   & > * {
+    transition: opacity transform 0.3s;
     transform: translateX(0);
   }
 }
