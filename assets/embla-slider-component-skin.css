@@ -23,7 +23,7 @@ embla-slider{
       width: 6px;
       &.is-selected{
         position: relative;
-        background: linear-gradient(to right, transparent 50%, currentColor 0);
+        background: #000 linear-gradient(to right, transparent 50%, currentColor 0);
         height: 9px;
         opacity: 1;
         width: 9px;
@@ -42,7 +42,7 @@ embla-slider{
         position: absolute;
         inset: 2px;
         border-radius: 50%;
-        background-color: black;
+        background-color: #000;
       }
       &.is-selected::before{
         background: currentColor;
