@@ -1,17 +1,20 @@
-<div class="embla-controls">
-  <embla-prev
-    class=""
-    aria-label="Previous slide"
-  >
-    {% render 'icons', icon: 'chevron-right' %}
-  </embla-prev>
-  <embla-next
-    class="slideshow-control slideshow-control--next button-secondary"
-    aria-label="Next slide"
-  >
-    {% render 'icons', icon: 'chevron-right' %}
-  </embla-next>
-</div>
+{% if block.settings.control_style != "" %}
+  <div class="embla-controls {{ block.settings.control_style }}">
+    <embla-prev
+      class=""
+      aria-label="Previous slide"
+    >
+      {% render 'icons', icon: 'chevron-right' %}
+    </embla-prev>
+    <embla-next
+      class="slideshow-control slideshow-control--next button-secondary"
+      aria-label="Next slide"
+    >
+      {% render 'icons', icon: 'chevron-right' %}
+    </embla-next>
+  </div>
+{% endif %}
+
 
 {% comment %} 
 {
@@ -39,7 +42,23 @@
 {
   "name": "Slideshow controls",
   "settings": [
-   
+    {
+      "type": "select",
+      "id": "control_style",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "embla-simple",
+          "label": "Simple"
+        }
+        
+      ],
+      "label": "Control style",
+      "default": "none"
+    }
   ]
 }
 {% endschema %}
