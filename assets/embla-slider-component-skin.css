@@ -1,5 +1,6 @@
 embla-slider{
   position: relative;  
+  --autoplay-speed: attr(autoplay);
 }
 .embla-navigation{
   position: absolute;
