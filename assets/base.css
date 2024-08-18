@@ -175,12 +175,6 @@ p {
   gap: var(--layout-gap);
 }
 
-.section--has-background {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
 .full-width {
   width: 100%;
 }
