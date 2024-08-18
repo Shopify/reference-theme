@@ -214,6 +214,7 @@
           "type": "slideshow-controls",
           "static": true,
           "settings": {
+            "control_style": "embla-simple"
           }
         },
         "slideshow-progress": {
