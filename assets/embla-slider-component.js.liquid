@@ -1,10 +1,10 @@
-import EmblaCarousel from "{{ 'embla-carousel.umd.js' | asset_url }}"
-import Autoplay from "{{ 'embla-carousel-autoplay.umd.js' | asset_url }}"
-import AutoScroll from "{{ 'embla-carousel-auto-scroll.umd.js' | asset_url }}"
-import AutoHeight from "{{ 'embla-carousel-auto-height.umd.js' | asset_url }}"
-import ClassNames from "{{ 'embla-carousel-class-names.umd.js' | asset_url }}"
-import Fade from "{{ 'embla-carousel-fade.umd.js' | asset_url }}"
-import WheelGestures from "{{ 'embla-carousel-wheel-gestures.umd.js' | asset_url }}"
+import "{{ 'embla-carousel.umd.js' | asset_url }}"
+import "{{ 'embla-carousel-autoplay.umd.js' | asset_url }}"
+import "{{ 'embla-carousel-auto-scroll.umd.js' | asset_url }}"
+import "{{ 'embla-carousel-auto-height.umd.js' | asset_url }}"
+import "{{ 'embla-carousel-class-names.umd.js' | asset_url }}"
+import "{{ 'embla-carousel-fade.umd.js' | asset_url }}"
+import "{{ 'embla-carousel-wheel-gestures.umd.js' | asset_url }}"
 
 const EMBLA_SLIDE_NAME = 'embla-slide'
 const EMBLA_CONTAINER_NAME = 'embla-slides'
@@ -126,16 +126,16 @@ class EmblaSlider extends HTMLElement {
     this.autoHeight = this.getAttribute('auto-height') || false
     this.pauseOnHover = this.hasAttribute('pause-on-hover')
     this.plugins = [
-      // AutoScroll({ playOnInit: false }),
-      // Fade(),
-      ClassNames(),
+      // EmblaCarouselAutoScroll({ playOnInit: false }),
+      // EmblaCarouselFade(),
+      EmblaCarouselClassNames(),
     ]
     if(this.autoHeight){
-      this.plugins.push(AutoHeight())
+      this.plugins.push(EmblaCarouselAutoHeight())
     }
     // Todo: responsible?
     if(this.autoplay != 0){
-      this.plugins.push(Autoplay({
+      this.plugins.push(EmblaCarouselAutoplay({
         stopOnMouseEnter: this.pauseOnHover,
         delay: this.autoplay,
         playOnInit: true
