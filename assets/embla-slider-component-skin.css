@@ -118,46 +118,51 @@ embla-slider{
   }
 }
 
-
 embla-thumbnail {
   width: 100px; /* Set the size of the progress bar */
   height: 100px;
   position: absolute; /* Enable clipping */
   clip: rect(0px, 100px, 100px, 50px); /* Hide half of the progress bar */
+}
+/* Set the sizes of the elements that make up the progress bar */
+embla-thumbnail::before,
+embla-thumbnail::after{
+  width: 80px;
+  height: 80px;
+  border: 10px solid green;
+  border-radius: 50px;
+  position: absolute;
+  clip: rect(0px, 50px, 100px, 0px);
+}
+/* Using the data attributes for the animation selectors. */
+/* Base settings for all animated elements */
+embla-thumbnail,
+embla-thumbnail::before,
+embla-thumbnail::after{
   -webkit-animation-iteration-count: 1;  /* Only run once */
   -webkit-animation-fill-mode: forwards; /* Hold the last keyframe */
   -webkit-animation-timing-function:linear; /* Linear animation */
-  &::before,
-  &::after{
-    -webkit-animation-iteration-count: 1;  /* Only run once */
-    -webkit-animation-fill-mode: forwards; /* Hold the last keyframe */
-    -webkit-animation-timing-function:linear; /* Linear animation */
-    content: "";
-    display: block;
-    width: 9px;
-    height: 9px;
-    border: 2px solid currentColor;
-    border-radius: 50px;
-    position: absolute;
-    clip: rect(0px, 50px, 100px, 0px);
-  }
 }
 
-embla-thumbnail {
+embla-thumbnail{
   -webkit-animation-duration: 0.01s; /* Complete keyframes asap */
   -webkit-animation-delay: 3s; /* Wait half of the animation */
   -webkit-animation-name: close-wrapper; /* Keyframes name */
-  &::before {
-    -webkit-animation-duration: 6s; /* Full animation time */
-    -webkit-animation-name: left-spin;
-  }
-  &::after {
-    -webkit-animation-duration: 3s; /* Half animation time */
-    -webkit-animation-name: right-spin;
-  }
+}
+embla-thumbnail::before,
+embla-thumbnail::after{
+  content: "";
+  display: block;
+}
+embla-thumbnail::before {
+  -webkit-animation-duration: 6s; /* Full animation time */
+  -webkit-animation-name: left-spin;
 }
 
-
+embla-thumbnail::after {
+  -webkit-animation-duration: 3s; /* Half animation time */
+  -webkit-animation-name: right-spin;
+}
 /* Rotate the right side of the progress bar from 0 to 180 degrees */
 @-webkit-keyframes right-spin {
   from {
