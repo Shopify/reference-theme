@@ -16,6 +16,7 @@
           "type": "slide",
           "settings": {
             "position": "is-relative",
+            "overflow": "overflow-hidden",
             "size": {
               "height": "100%"
             },
@@ -127,6 +128,7 @@
           "type": "slide",
           "settings": {
             "position": "is-relative",
+            "overflow": "overflow-hidden",
             "size": {
               "height": "500px"
             },
