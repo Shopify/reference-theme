@@ -148,6 +148,7 @@
         "slides_per_page": 1,
         "gap": 0,
         "size": {
+          "height": "auto"
         },
         "loop": true,
         "autoplay_speed": 7,
