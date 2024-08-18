@@ -124,9 +124,9 @@ class EmblaSlider extends HTMLElement {
   connectedCallback() {
     this.autoplay = this.getAttribute('autoplay') || 0
     this.style.setProperty('--autoplay-speed', `${this.autoplay}ms`);
-    this.autoHeight = this.getAttribute('auto-height') || false
-    this.autoScroll = this.getAttribute('auto-scroll') || false
-    this.fade = this.getAttribute('fade') || false
+    this.autoHeight = this.hasAttribute('auto-height') || false
+    this.autoScroll = this.hasAttribute('auto-scroll') || false
+    this.fade = this.hasAttribute('fade') || false
     this.pauseOnHover = this.hasAttribute('pause-on-hover')
     this.plugins = [
       EmblaCarouselClassNames(),
