@@ -58,7 +58,7 @@ embla-slider{
       }
       &.is-selected::after{
         transform: translateX(0%);
-        /* transition: transform var(--autoplay-speed); */
+        transition: transform var(--autoplay-speed);
       }
     }
   }
