@@ -7,11 +7,11 @@
 </style>
 
 <embla-slider id="slideshow-{{section.id}}" class="{{ section.settings | class_list }} color-{{ section.settings.color_scheme }}"
-  options="loop: true, duration: 25, containScroll: trimSnaps, align: start"
-  options-medium="loop: false, containScroll: trimSnaps"
-  options-small="loop: false"
+  options="loop: {{ section.settings.loop }}, containScroll: trimSnaps, align: start"
   auto-height
-  {% comment %} autoplay="2000" {% endcomment %}
+  {% if section.settings.autoplay_speed != 0 %}
+    autoplay="{{ section.settings.autoplay_speed }}"
+  {% endif %}
 >
   <embla-viewport>
     <embla-slides>
@@ -27,56 +27,6 @@
   {% endif %}
 
 </embla-slider>
-{% comment %} 
- {
-      "type": "header",
-      "content": "Slideshow height"
-    },
-    {
-      "type": "select",
-      "id": "slide_height",
-      "options": [
-        {
-          "value": "adapt_image",
-          "label": "Adapt to first image"
-        },
-        {
-          "value": "small",
-          "label": "Small"
-        },
-        {
-          "value": "medium",
-          "label": "Medium"
-        },
-        {
-          "value": "large",
-          "label": "Large"
-        }
-      ],
-      "default": "medium",
-      "label": "Slide height"
-    },
-    {
-      "type": "header",
-      "content": "Slideshow style"
-    },
-    {
-      "type": "checkbox",
-      "id": "autoplay",
-      "label": "Autoplay",
-      "default": false
-    },
-    {
-      "type": "range",
-      "id": "autoplay_speed",
-      "label": "Autoplay speed",
-      "min": 3,
-      "max": 7,
-      "step": 1,
-      "unit": "s",
-      "default": 5
-    } 
-{% endcomment %}
 
 {% schema %}
 {
@@ -107,6 +57,33 @@
         "flex-grow": "1"
       }
     },
+    {
+      "type": "select",
+      "id": "loop",
+      "label": "Loop",
+      "options": [
+        {
+          "value": "true",
+          "label": "on"
+        },
+        {
+          "value": "false",
+          "label": "off"
+        }
+      ],
+      "default": "on"
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "Autoplay speed",
+      "min": 0,
+      "max": 7,
+      "step": 1,
+      "unit": "s",
+      "default": 0,
+      "info": "0 = off"
+    } ,
     {
       "type": "header",
       "content": "Color"
