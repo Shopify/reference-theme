@@ -11,43 +11,141 @@
   "type": "header",
   "name": "Header",
   "sections": {
-    "40cdc232-8dd8-427c-b8ab-98fcf3523e60": {
-      "type": "custom-section",
+    "slideshow_fWrG39": {
+      "type": "slideshow",
       "blocks": {
-        "9358ead7-959e-4cdd-b971-5a08e53c7729": {
-          "type": "text",
+        "slide_JNdQCe": {
+          "type": "slide",
           "settings": {
-            "text": "<p>Welcome to the Flex sections developer preview<\/p>",
-            "text_style": "",
-            "alignment": "center",
+            "position": "",
+            "overflow": "",
             "size": {
-              "width": "100%"
             },
             "spacing": {
-              "padding-block-start": "0px",
-              "padding-inline-end": "20px",
-              "padding-block-end": "0px",
-              "padding-inline-start": "20px"
+              "padding-block-start": "5px",
+              "padding-block-end": "5px",
+              "padding-inline-end": "0px",
+              "padding-inline-start": "0px"
+            },
+            "layout": {
+              "row-gap": "0px",
+              "column-gap": "0px",
+              "flex-wrap": "nowrap"
             }
+          },
+          "blocks": {
+            "heading_WhYUfX": {
+              "type": "heading",
+              "settings": {
+                "heading": "<strong>Free shipping<\/strong>",
+                "heading_size": "h3",
+                "alignment": "start",
+                "size": {
+                  "width": "auto",
+                  "flex-grow": "0"
+                },
+                "spacing": {
+                }
+              }
+            },
+            "text_hcmgDH": {
+              "type": "text",
+              "settings": {
+                "text": "<p>On all orders over 100€<\/p>",
+                "text_style": "",
+                "alignment": "start",
+                "size": {
+                },
+                "spacing": {
+                }
+              }
+            }
+          },
+          "block_order": [
+            "heading_WhYUfX",
+            "text_hcmgDH"
+          ]
+        },
+        "slide_VdtqgU": {
+          "type": "slide",
+          "settings": {
+            "position": "",
+            "overflow": "",
+            "size": {
+            },
+            "spacing": {
+              "padding-block-start": "5px",
+              "padding-block-end": "5px",
+              "padding-inline-end": "0px",
+              "padding-inline-start": "0px"
+            },
+            "layout": {
+              "row-gap": "0px",
+              "column-gap": "0px",
+              "flex-wrap": "nowrap"
+            }
+          },
+          "blocks": {
+            "heading_qTaDhF": {
+              "type": "heading",
+              "settings": {
+                "heading": "<strong>Hassle-free returns<\/strong>",
+                "heading_size": "h3",
+                "alignment": "start",
+                "size": {
+                  "width": "auto",
+                  "flex-grow": "0"
+                },
+                "spacing": {
+                }
+              }
+            },
+            "text_pKHxKT": {
+              "type": "text",
+              "settings": {
+                "text": "<p>30-day postage paid returns<\/p>",
+                "text_style": "",
+                "alignment": "start",
+                "size": {
+                },
+                "spacing": {
+                }
+              }
+            }
+          },
+          "block_order": [
+            "heading_qTaDhF",
+            "text_pKHxKT"
+          ]
+        },
+        "slideshow-controls": {
+          "type": "slideshow-controls",
+          "static": true,
+          "settings": {
+            "page_width": "",
+            "control_style": "",
+            "spacing": {
+            },
+            "color_scheme": ""
+          }
+        },
+        "slideshow-navigation": {
+          "type": "slideshow-navigation",
+          "static": true,
+          "settings": {
+            "navigation_style": "",
+            "color_scheme": ""
           }
         }
       },
       "block_order": [
-        "9358ead7-959e-4cdd-b971-5a08e53c7729"
+        "slide_JNdQCe",
+        "slide_VdtqgU"
       ],
       "settings": {
-        "position": "",
-        "overflow": "",
-        "page_width": "",
-        "spacing": {
-          "padding-block-start": "6px",
-          "padding-inline-end": "0px",
-          "padding-block-end": "6px",
-          "padding-inline-start": "0px"
-        },
-        "layout": {
-          "flex-direction": "row",
-          "justify-content": "center"
+        "slides_per_page": 1,
+        "gap": 0,
+        "size": {
         },
         "color_scheme": "scheme-2"
       }
@@ -196,149 +294,10 @@
         },
         "color_scheme": ""
       }
-    },
-    "slideshow_fWrG39": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_JNdQCe": {
-          "type": "slide",
-          "settings": {
-            "position": "",
-            "overflow": "",
-            "size": {
-            },
-            "spacing": {
-              "padding-block-start": "0px",
-              "padding-block-end": "0px",
-              "padding-inline-end": "0px",
-              "padding-inline-start": "0px"
-            },
-            "layout": {
-              "row-gap": "0px",
-              "column-gap": "0px",
-              "flex-wrap": "nowrap"
-            }
-          },
-          "blocks": {
-            "heading_WhYUfX": {
-              "type": "heading",
-              "settings": {
-                "heading": "<strong>Free shipping<\/strong>",
-                "heading_size": "h3",
-                "alignment": "start",
-                "size": {
-                  "width": "auto",
-                  "flex-grow": "0"
-                },
-                "spacing": {
-                }
-              }
-            },
-            "text_hcmgDH": {
-              "type": "text",
-              "settings": {
-                "text": "<p>On all orders over 100€<\/p>",
-                "text_style": "",
-                "alignment": "start",
-                "size": {
-                },
-                "spacing": {
-                }
-              }
-            }
-          },
-          "block_order": [
-            "heading_WhYUfX",
-            "text_hcmgDH"
-          ]
-        },
-        "slide_VdtqgU": {
-          "type": "slide",
-          "settings": {
-            "position": "",
-            "overflow": "",
-            "size": {
-            },
-            "spacing": {
-              "padding-block-start": "0px",
-              "padding-block-end": "0px",
-              "padding-inline-end": "0px",
-              "padding-inline-start": "0px"
-            },
-            "layout": {
-              "row-gap": "0px",
-              "column-gap": "0px",
-              "flex-wrap": "nowrap"
-            }
-          },
-          "blocks": {
-            "heading_qTaDhF": {
-              "type": "heading",
-              "settings": {
-                "heading": "<strong>Hassle-free returns<\/strong>",
-                "heading_size": "h3",
-                "alignment": "start",
-                "size": {
-                  "width": "auto",
-                  "flex-grow": "0"
-                },
-                "spacing": {
-                }
-              }
-            },
-            "text_pKHxKT": {
-              "type": "text",
-              "settings": {
-                "text": "<p>30-day postage paid returns<\/p>",
-                "text_style": "",
-                "alignment": "start",
-                "size": {
-                },
-                "spacing": {
-                }
-              }
-            }
-          },
-          "block_order": [
-            "heading_qTaDhF",
-            "text_pKHxKT"
-          ]
-        },
-        "slideshow-controls": {
-          "type": "slideshow-controls",
-          "static": true,
-          "settings": {
-            "page_width": "",
-            "control_style": "",
-            "spacing": {
-            },
-            "color_scheme": ""
-          }
-        },
-        "slideshow-navigation": {
-          "type": "slideshow-navigation",
-          "static": true,
-          "settings": {
-            "navigation_style": "",
-            "color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide_JNdQCe",
-        "slide_VdtqgU"
-      ],
-      "settings": {
-        "slides_per_page": 1,
-        "gap": 0,
-        "size": {
-        }
-      }
     }
   },
   "order": [
-    "40cdc232-8dd8-427c-b8ab-98fcf3523e60",
-    "f80fab76-22f9-452e-ad08-16b13cc02cd6",
-    "slideshow_fWrG39"
+    "slideshow_fWrG39",
+    "f80fab76-22f9-452e-ad08-16b13cc02cd6"
   ]
 }
