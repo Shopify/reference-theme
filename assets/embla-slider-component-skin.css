@@ -39,7 +39,7 @@ embla-slider{
           }
           & .progress{
             stroke-dashoffset: 0;
-            transition: stroke-dashoffset var(--autoplay-speed);
+            transition: stroke-dashoffset var(--autoplay-speed) linear;
           }
         }
       }
