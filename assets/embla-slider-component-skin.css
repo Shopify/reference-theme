@@ -17,8 +17,8 @@ embla-slider{
       height: 6px;
       opacity: 0.4;
       width: 6px;
+      position: relative;
       &.is-selected{
-        position: relative;
         background-color: transparent;
         width: 9px;
         height: 9px;
