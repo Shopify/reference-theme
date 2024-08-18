@@ -1,6 +1,11 @@
 embla-slider{
   position: relative;  
 }
+embla-slider[fade]{
+  & embla-slide{
+    transition: opacity 0.4s;
+  }  
+}
 /* Navigation */
 .embla-navigation{
   position: absolute;
