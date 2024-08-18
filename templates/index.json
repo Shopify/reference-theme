@@ -282,7 +282,7 @@
         "gap": 0,
         "loop": true,
         "effect": "fade-left",
-        "autoplay_speed": 7,
+        "autoplay_speed": 0,
         "color_scheme": ""
       }
     },
