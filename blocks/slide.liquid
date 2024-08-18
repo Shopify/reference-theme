@@ -11,7 +11,7 @@
 <embla-slide
   id="slide-{{ block.id }}"
   index="{{ block_index }}"
-  class="{{ block_index.settings | class_list }}"
+  class="{{ block_index.settings | class_list }} {{ block.settings.position }}"
   {{ block.shopify_attributes }}
 >
   <div class="{{ block.settings | class_list }}">
@@ -25,6 +25,30 @@
   "tag": null,
   "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
+    {
+      "type": "header",
+      "content": "Position"
+    },
+    {
+      "type": "select",
+      "id": "position",
+      "label": "Position",
+      "options": [
+        {
+          "value": "",
+          "label": "static"
+        },
+        {
+          "value": "is-relative",
+          "label": "relative"
+        },
+        {
+          "value": "is-absolute",
+          "label": "absolute"
+        }
+      ],
+      "default": ""
+    },
     {
       "type": "style.size_panel",
       "id": "size",
