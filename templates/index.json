@@ -277,7 +277,7 @@
         "size": {
           "height": "auto"
         },
-        "loop": false,
+        "loop": true,
         "autoplay_speed": 7,
         "color_scheme": ""
       }
