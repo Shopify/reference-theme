@@ -26,6 +26,14 @@ embla-slider{
         opacity: 1;
         width: 9px;
       }
+      &::before{
+        content: "";
+        display:block;
+      }
+      &::after{
+        content: "";
+        display:block;
+      }
     }
     
   }
