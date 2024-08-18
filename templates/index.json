@@ -275,8 +275,10 @@
         "slides_per_page": 1,
         "gap": 0,
         "size": {
-          "height": "500px"
+          "height": "auto"
         },
+        "loop": false,
+        "autoplay_speed": 7,
         "color_scheme": ""
       }
     },
