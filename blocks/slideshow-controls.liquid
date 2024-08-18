@@ -1,42 +1,20 @@
 {% if block.settings.control_style != "" %}
+  {% assign color_schema_class = "color-" | append: block.settings.color_scheme %}
   <div class="embla-controls {{ block.settings.control_style }}">
     <embla-prev
-      class=""
+      class="{{ color_schema_class }}"
       aria-label="Previous slide"
     >
-      {% render 'icons', icon: 'chevron-right' %}
+      {% render 'icons', icon: 'chevron-left' %}
     </embla-prev>
     <embla-next
-      class="slideshow-control slideshow-control--next button-secondary"
+      class="{{ color_schema_class }}"
       aria-label="Next slide"
     >
       {% render 'icons', icon: 'chevron-right' %}
     </embla-next>
   </div>
 {% endif %}
-
-
-{% comment %} 
-{
-  "type": "select",
-  "id": "pagination_style",
-  "options": [
-    {
-      "value": "dots",
-      "label": "Dots"
-    },
-    {
-      "value": "counter",
-      "label": "Counter"
-    },
-    {
-      "value": "numbers",
-      "label": "Numbers"
-    }
-  ],
-  "label": "Pagination style",
-  "default": "counter"
-} {% endcomment %}
 
 {% schema %}
 {
@@ -58,7 +36,13 @@
       ],
       "label": "Control style",
       "default": ""
-    }
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    } 
   ]
 }
 {% endschema %}

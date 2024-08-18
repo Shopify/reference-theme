@@ -72,5 +72,24 @@ embla-slider{
     align-items: center;
     border-radius: 50%;
     padding: 10px;
+    box-shadow: 0 .125rem .625rem currentColor;
   }
 }
+/* .embla-progress::before{
+  display:block;
+  background-color: currentColor;
+  opacity: .4;
+  width: 200px;
+  height: 5px;
+  position: relative;
+}
+.embla-progress::after{
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--progress);
+  background-color: gray;
+} */
