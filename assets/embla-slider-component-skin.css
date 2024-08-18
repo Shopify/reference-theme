@@ -11,6 +11,7 @@ embla-slider{
   align-items: center;
   gap: 5px;
   &.embla-dots{
+    --p: 35%;
     & embla-thumbnail{
       background-color: currentColor;
       border-radius: 100%;
@@ -21,7 +22,7 @@ embla-slider{
       vertical-align: middle;
       width: 6px;
       &.is-selected{
-        background-color: currentColor;
+        background: linear-gradient(to right, transparent 50%, currentColor 0);
         height: 9px;
         opacity: 1;
         width: 9px;
@@ -29,10 +30,21 @@ embla-slider{
       &::before{
         content: "";
         display:block;
+        height:100%;
+        margin-left: 50%;
+        transform-origin: left;
+        border-radius: 0 100% 100% 0/50%;
       }
       &::after{
         content: "";
         display:block;
+        position: absolute;
+        inset: 2px;
+        border-radius: 50%;
+      }
+      &::before{
+        background: currentColor;
+        transform: rotate(calc((var(--p) - 50) * 0.01turn ));
       }
     }
     
