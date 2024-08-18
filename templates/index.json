@@ -262,7 +262,7 @@
           "type": "slideshow-navigation",
           "static": true,
           "settings": {
-            "navigation_style": "embla-bars",
+            "navigation_style": "embla-dots",
             "color_scheme": "scheme-4"
           }
         }
