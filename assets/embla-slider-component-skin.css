@@ -120,7 +120,7 @@ embla-thumbnail {
   display: block;
   width: var(--size); /* Set the size of the progress bar */
   height: var(--size);
-  position: absolute; /* Enable clipping */
+  /* position: absolute; Enable clipping */
   clip: rect(0px, var(--size), var(--size), var(--half-size)); /* Hide half of the progress bar */
 }
 /* Set the sizes of the elements that make up the progress bar */
@@ -128,7 +128,7 @@ embla-thumbnail::before,
 embla-thumbnail::after{
   width: calc(var(--size) - (2 * var(--border-width)));
   height: calc(var(--size) - (2 * var(--border-width)));
-  border: var(--border-width) solid green;
+  border: var(--border-width) solid currentColor;
   border-radius: 50%;
   position: absolute;
   clip: rect(0px, var(--half-size), var(--size), 0px);
