@@ -12,6 +12,9 @@
   {% if section.settings.autoplay_speed != 0 %}
     autoplay="{{ section.settings.autoplay_speed | times: 1000 }}"
   {% endif %}
+  {% if section.settings.effect contains "fade" %}
+   fade
+  {% endif %}
 >
   <embla-viewport>
     <embla-slides>
@@ -35,6 +38,19 @@
   "blocks": [{ "type": "slide" }],
   "settings": [
     {
+      "type": "style.size_panel",
+      "id": "size",
+      "label": "Size",
+      "default": {
+        "width": "100%",
+        "flex-grow": "1"
+      }
+    },
+    {
+      "type": "header",
+      "content": "Slider"
+    },
+    {
       "type": "range",
       "id": "slides_per_page",
       "label": "Slides per page",
@@ -50,19 +66,26 @@
       "default": 0
     },
     {
-      "type": "style.size_panel",
-      "id": "size",
-      "label": "Size",
-      "default": {
-        "width": "100%",
-        "flex-grow": "1"
-      }
-    },
-    {
       "type": "checkbox",
       "id": "loop",
       "label": "Loop",
       "default": false
+    },
+    {
+      "type": "select",
+      "id": "effect",
+      "label": "Effect",
+      "options": [
+        {
+          "value": "fade-left",
+          "label": "Fade left"
+        },
+        {
+          "value": "slide",
+          "label": "Slide"
+        }
+      ],
+      "default": "slide"
     },
     {
       "type": "range",
