@@ -143,3 +143,19 @@ embla-slider:not([autoplay]) .embla-navigation.embla-dots embla-thumbnail.is-sel
     background-color: gray;
   }
 }
+
+@keyframes fadeInLeft {
+  0% {
+     opacity: 0;
+     transform: translateX(-20px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+}  
+
+.fade-left{
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
