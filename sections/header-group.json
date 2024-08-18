@@ -227,6 +227,8 @@
                 "heading_size": "h3",
                 "alignment": "start",
                 "size": {
+                  "width": "auto",
+                  "flex-grow": "0"
                 },
                 "spacing": {
                 }
@@ -250,7 +252,7 @@
             "text_hcmgDH"
           ]
         },
-        "slide_zGKEAY": {
+        "slide_VdtqgU": {
           "type": "slide",
           "settings": {
             "position": "",
@@ -258,62 +260,48 @@
             "size": {
             },
             "spacing": {
+              "padding-block-start": "0px",
+              "padding-block-end": "0px",
+              "padding-inline-end": "0px",
+              "padding-inline-start": "0px"
             },
             "layout": {
+              "row-gap": "0px",
+              "column-gap": "0px",
+              "flex-wrap": "nowrap"
             }
           },
           "blocks": {
-            "group_eEMcY6": {
-              "type": "group",
+            "heading_qTaDhF": {
+              "type": "heading",
               "settings": {
-                "position": "",
-                "overflow": "",
+                "heading": "<strong>Hassle-free returns<\/strong>",
+                "heading_size": "h3",
+                "alignment": "start",
                 "size": {
-                  "width": "50%",
-                  "flex-grow": "0",
-                  "@media (--mobile)": {
-                    "width": "100%"
-                  }
+                  "width": "auto",
+                  "flex-grow": "0"
                 },
                 "spacing": {
-                  "padding-block-start": "50px",
-                  "padding-inline-end": "50px",
-                  "padding-block-end": "50px",
-                  "padding-inline-start": "50px",
-                  "@media (--mobile)": {
-                    "padding-block-start": "20px",
-                    "padding-inline-end": "20px",
-                    "padding-block-end": "20px",
-                    "padding-inline-start": "20px"
-                  }
-                },
-                "layout": {
-                  "flex-direction": "column",
-                  "justify-content": "flex-start"
-                },
-                "color_scheme": ""
-              },
-              "blocks": {
-                "text_zh7HYV": {
-                  "type": "text",
-                  "settings": {
-                    "text": "",
-                    "text_style": "",
-                    "alignment": "start",
-                    "size": {
-                    },
-                    "spacing": {
-                    }
-                  }
                 }
-              },
-              "block_order": [
-                "text_zh7HYV"
-              ]
+              }
+            },
+            "text_pKHxKT": {
+              "type": "text",
+              "settings": {
+                "text": "<p>30-day postage paid returns<\/p>",
+                "text_style": "",
+                "alignment": "start",
+                "size": {
+                },
+                "spacing": {
+                }
+              }
             }
           },
           "block_order": [
-            "group_eEMcY6"
+            "heading_qTaDhF",
+            "text_pKHxKT"
           ]
         },
         "slideshow-controls": {
@@ -338,7 +326,7 @@
       },
       "block_order": [
         "slide_JNdQCe",
-        "slide_zGKEAY"
+        "slide_VdtqgU"
       ],
       "settings": {
         "slides_per_page": 1,
