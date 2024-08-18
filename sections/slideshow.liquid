@@ -6,7 +6,7 @@
   }
 </style>
 
-<embla-slider id="slideshow-{{section.id}}" class="{{ section.settings | class_list }}"
+<embla-slider id="slideshow-{{section.id}}" class="{{ section.settings | class_list }} color-{{ section.settings.color_scheme }}"
   options="loop: true, duration: 25, containScroll: trimSnaps, align: start"
   options-medium="loop: false, containScroll: trimSnaps"
   options-small="loop: false"
@@ -106,6 +106,16 @@
         "width": "100%",
         "flex-grow": "1"
       }
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
     } 
   ],
   "presets": [
