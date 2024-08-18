@@ -16,10 +16,15 @@
           "type": "slide",
           "settings": {
             "position": "is-relative",
+            "overflow": "overflow-hidden",
             "size": {
               "height": "500px"
             },
             "spacing": {
+              "padding-block-start": "0px",
+              "padding-block-end": "0px",
+              "padding-inline-end": "0px",
+              "padding-inline-start": "0px"
             },
             "layout": {
             }
@@ -32,6 +37,7 @@
                 "spacing": {
                 },
                 "size": {
+                  "height": "auto"
                 }
               }
             },
@@ -127,10 +133,15 @@
           "type": "slide",
           "settings": {
             "position": "is-relative",
+            "overflow": "overflow-hidden",
             "size": {
               "height": "500px"
             },
             "spacing": {
+              "padding-block-start": "0px",
+              "padding-block-end": "0px",
+              "padding-inline-end": "0px",
+              "padding-inline-start": "0px"
             },
             "layout": {
             }
