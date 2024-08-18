@@ -227,6 +227,8 @@
                 "heading_size": "h3",
                 "alignment": "start",
                 "size": {
+                  "width": "auto",
+                  "flex-grow": "0"
                 },
                 "spacing": {
                 }
