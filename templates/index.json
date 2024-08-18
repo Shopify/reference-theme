@@ -18,7 +18,7 @@
             "position": "is-relative",
             "overflow": "overflow-hidden",
             "size": {
-              "height": "100%"
+              "height": "500px"
             },
             "spacing": {
               "padding-block-start": "0px",
@@ -37,6 +37,7 @@
                 "spacing": {
                 },
                 "size": {
+                  "height": "auto"
                 }
               }
             },
