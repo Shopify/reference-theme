@@ -26,6 +26,9 @@ embla-slider{
           position: absolute;
           top: 0;
           left: 0;
+          & .shadow{
+            opacity: 0.4;
+          }
           & .progress{
             --val: 65;
             stroke-dasharray: 100;
