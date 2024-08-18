@@ -150,6 +150,14 @@ class EmblaSlider extends HTMLElement {
     window.addEventListener('resize', () => {
       this.updateAttributeByResponsiveOptions('loop')
     })
+    window.addEventListener('shopify:block:select', (e) => {
+      const blockId = e.detail.blockId;
+      const blockIndex = Array.from(this.slides).findIndex((slide) =>
+          slide.hasAttribute('data-shopify-editor-block') &&
+          JSON.parse(slide.getAttribute('data-shopify-editor-block')).id == blockId
+      );
+      if (blockIndex != -1) this.embla.scrollTo(Number(blockIndex));
+    });
     this.api.on('select', () => {
       this.updateControls()
       this.updateThumbnails()
