@@ -5,6 +5,7 @@ embla-slider{
 }
 embla-viewport{
   display:block;
+  overflow: hidden;
 }
 embla-viewport.is-draggable{
   cursor: grab;
