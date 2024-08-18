@@ -145,7 +145,7 @@ class EmblaSlider extends HTMLElement {
     this.buildOptions()
     this.updateAttributeByResponsiveOptions('loop')
 
-    this.viewport = document.querySelector(EMBLA_VIEWPORT_NAME)
+    this.viewport = this.querySelector(EMBLA_VIEWPORT_NAME)
 
     this.api = EmblaCarousel(this.viewport, this.options, this.plugins)
 
