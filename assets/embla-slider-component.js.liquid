@@ -159,7 +159,7 @@ class EmblaSlider extends HTMLElement {
           slide.hasAttribute('data-shopify-editor-block') &&
           JSON.parse(slide.getAttribute('data-shopify-editor-block')).id == blockId
       );
-      if (blockIndex != -1) this.embla.scrollTo(Number(blockIndex));
+      if (blockIndex != -1) this.api.scrollTo(Number(blockIndex));
     });
     
     this.api.on('select', () => {
