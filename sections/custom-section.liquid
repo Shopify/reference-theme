@@ -1,6 +1,6 @@
 {% stylesheet %}{% endstylesheet %}
 
-<div class="full-width {{ section.settings | class_list }} color-{{ section.settings.color_scheme }}">
+<div class="full-width {{ section.settings | class_list }} color-{{ section.settings.color_scheme }} {{ block.settings.page_width }}  {{ block.settings.position }} {{ block.settings.overflow }}">
   {% content_for "blocks" %}
 </div>
 
@@ -9,6 +9,74 @@
   "name": "Custom section",
   "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
+    {
+      "type": "header",
+      "content": "Position"
+    },
+    {
+      "type": "select",
+      "id": "position",
+      "label": "Position",
+      "options": [
+        {
+          "value": "",
+          "label": "static"
+        },
+        {
+          "value": "is-relative",
+          "label": "relative"
+        },
+        {
+          "value": "is-absolute",
+          "label": "absolute"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "Overflow"
+    },
+    {
+      "type": "select",
+      "id": "overflow",
+      "label": "Overflow",
+      "options": [
+        {
+          "value": "",
+          "label": "visible"
+        },
+        {
+          "value": "overflow-hidden",
+          "label": "hidden"
+        },
+        {
+          "value": "overflow-scroll",
+          "label": "scroll"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "Page width"
+    },
+    {
+      "type": "select",
+      "id": "page_width",
+      "options": [
+        {
+          "value": "",
+          "label": "none"
+        },
+        {
+          "value": "page-width",
+          "label": "normal"
+        }
+      ],
+      "label": "Page width",
+      "default": ""
+    },
     {
       "type": "style.spacing_panel",
       "id": "spacing",
