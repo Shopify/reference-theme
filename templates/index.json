@@ -278,7 +278,7 @@
           "height": "auto"
         },
         "loop": true,
-        "autoplay_speed": 5,
+        "autoplay_speed": 0,
         "color_scheme": ""
       }
     },
