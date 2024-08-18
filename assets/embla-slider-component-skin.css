@@ -12,9 +12,12 @@ embla-slider{
   gap: 5px;
   &.embla-dots{
     & embla-thumbnail{
-     
+      border-radius: 50%;
+      height: 6px;
+      opacity: 0.4;
+      width: 6px;
       &.is-selected{
-       
+        
       }
     }
     
@@ -111,7 +114,8 @@ embla-slider{
     background-color: gray;
   }
 }
-embla-thumbnail {
+
+embla-thumbnail.is-selected {
   --duration: 6s;
   --half-duration: calc(var(--duration) / 2);
   --size: 9px;
@@ -120,12 +124,12 @@ embla-thumbnail {
   display: block;
   width: var(--size); /* Set the size of the progress bar */
   height: var(--size);
-  /* position: absolute; Enable clipping */
+  position: absolute; /* Enable clipping */
   clip: rect(0px, var(--size), var(--size), var(--half-size)); /* Hide half of the progress bar */
 }
 /* Set the sizes of the elements that make up the progress bar */
-embla-thumbnail::before,
-embla-thumbnail::after{
+embla-thumbnail.is-selected::before,
+embla-thumbnail.is-selected::after{
   width: calc(var(--size) - (2 * var(--border-width)));
   height: calc(var(--size) - (2 * var(--border-width)));
   border: var(--border-width) solid currentColor;
@@ -135,30 +139,30 @@ embla-thumbnail::after{
 }
 /* Using the data attributes for the animation selectors. */
 /* Base settings for all animated elements */
-embla-thumbnail,
-embla-thumbnail::before,
-embla-thumbnail::after{
+embla-thumbnail.is-selected,
+embla-thumbnail.is-selected::before,
+embla-thumbnail.is-selected::after{
   -webkit-animation-iteration-count: 1;  /* Only run once */
   -webkit-animation-fill-mode: forwards; /* Hold the last keyframe */
   -webkit-animation-timing-function:linear; /* Linear animation */
 }
 
-embla-thumbnail{
+embla-thumbnail.is-selected{
   -webkit-animation-duration: 0.0s; /* Complete keyframes asap */
   -webkit-animation-delay: var(--half-duration); /* Wait half of the animation */
   -webkit-animation-name: close-wrapper; /* Keyframes name */
 }
-embla-thumbnail::before,
-embla-thumbnail::after{
+embla-thumbnail.is-selected::before,
+embla-thumbnail.is-selected::after{
   content: "";
   display: block;
 }
-embla-thumbnail::before {
+embla-thumbnail.is-selected::before {
   -webkit-animation-duration: var(--duration); /* Full animation time */
   -webkit-animation-name: left-spin;
 }
 
-embla-thumbnail::after {
+embla-thumbnail.is-selected::after {
   -webkit-animation-duration: var(--half-duration); /* Half animation time */
   -webkit-animation-name: right-spin;
 }
