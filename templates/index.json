@@ -251,6 +251,10 @@
           "settings": {
             "page_width": "page-width",
             "control_style": "embla-simple",
+            "spacing": {
+              "padding-inline-start": "20px",
+              "padding-inline-end": "20px"
+            },
             "color_scheme": ""
           }
         },
