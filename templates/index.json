@@ -1285,11 +1285,6 @@
         "color_scheme": "scheme-2"
       }
     },
-    "embla_test_NEwhwd": {
-      "type": "embla-test",
-      "settings": {
-      }
-    },
     "custom_section_eKe4dX": {
       "type": "custom-section",
       "blocks": {
@@ -1459,7 +1454,6 @@
     "custom_section_MiX6gV",
     "custom_section_YmTwNm",
     "custom_section_gbgWDY",
-    "embla_test_NEwhwd",
     "custom_section_eKe4dX"
   ]
 }
