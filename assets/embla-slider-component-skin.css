@@ -11,40 +11,16 @@ embla-slider{
   align-items: center;
   gap: 5px;
   &.embla-dots{
-    --p: 35;
     & embla-thumbnail{
       background-color: currentColor;
       border-radius: 50%;
-      /* cursor: pointer; */
-      /* display: inline-block; */
       height: 6px;
       opacity: 0.4;
-      /* vertical-align: middle; */
       width: 6px;
       &.is-selected{
-        position: relative;
-        background: #000 linear-gradient(to right, transparent 50%, currentColor 0);
         height: 9px;
         opacity: 1;
         width: 9px;
-      }
-      &.is-selected::before{
-        content: "";
-        display:block;
-        height:100%;
-        margin-left: 50%;
-        transform-origin: left;
-        border-radius: 0 100% 100% 0/50%;
-        background: currentColor;
-        transform: rotate(calc((var(--p) - 50) * 0.01turn ));
-      }
-      &.is-selected::after{
-        content: "";
-        /* display:block; */
-        position: absolute;
-        inset: 2px;
-        border-radius: 50%;
-        background-color: #000;
       }
     }
     
@@ -139,5 +115,70 @@ embla-slider{
     top: 0;
     width: var(--progress);
     background-color: gray;
+  }
+}
+
+
+embla-thumbnail {
+  width: 100px; /* Set the size of the progress bar */
+  height: 100px;
+  position: absolute; /* Enable clipping */
+  clip: rect(0px, 100px, 100px, 50px); /* Hide half of the progress bar */
+  -webkit-animation-iteration-count: 1;  /* Only run once */
+  -webkit-animation-fill-mode: forwards; /* Hold the last keyframe */
+  -webkit-animation-timing-function:linear; /* Linear animation */
+  &::before,
+  &::after{
+    -webkit-animation-iteration-count: 1;  /* Only run once */
+    -webkit-animation-fill-mode: forwards; /* Hold the last keyframe */
+    -webkit-animation-timing-function:linear; /* Linear animation */
+    content: "";
+    display: block;
+    width: 9px;
+    height: 9px;
+    border: 2px solid currentColor;
+    border-radius: 50px;
+    position: absolute;
+    clip: rect(0px, 50px, 100px, 0px);
+  }
+}
+
+embla-thumbnail {
+  -webkit-animation-duration: 0.01s; /* Complete keyframes asap */
+  -webkit-animation-delay: 3s; /* Wait half of the animation */
+  -webkit-animation-name: close-wrapper; /* Keyframes name */
+  &::before {
+    -webkit-animation-duration: 6s; /* Full animation time */
+    -webkit-animation-name: left-spin;
+  }
+  &::after {
+    -webkit-animation-duration: 3s; /* Half animation time */
+    -webkit-animation-name: right-spin;
+  }
+}
+
+
+/* Rotate the right side of the progress bar from 0 to 180 degrees */
+@-webkit-keyframes right-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+  }
+}
+/* Rotate the left side of the progress bar from 0 to 360 degrees */
+@-webkit-keyframes left-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+/* Set the wrapper clip to auto, effectively removing the clip */
+@-webkit-keyframes close-wrapper {
+  to {
+    clip: rect(auto, auto, auto, auto);
   }
 }
