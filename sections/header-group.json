@@ -149,6 +149,8 @@
         "gap": 0,
         "size": {
         },
+        "loop": "false",
+        "autoplay_speed": 4,
         "color_scheme": "scheme-2"
       }
     },
