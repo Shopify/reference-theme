@@ -10,7 +10,7 @@
   options="loop: {{ section.settings.loop }}, containScroll: trimSnaps, align: start"
   auto-height
   {% if section.settings.autoplay_speed != 0 %}
-    autoplay="{{ section.settings.autoplay_speed }}"
+    autoplay="{{ section.settings.autoplay_speed | times: 1000 }}"
   {% endif %}
 >
   <embla-viewport>
@@ -18,7 +18,7 @@
       {% content_for "blocks" %}
     </embla-slides>
   </embla-viewport>
-  
+
   {% if  section.blocks.size > 1 %}
     {% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}
   {% endif %}
