@@ -167,6 +167,7 @@ class EmblaSlider extends HTMLElement {
       this.updateThumbnails()
     })
     this.api.on('init', () => {
+      console.log("Init")
       this.updateControls()
       this.updateProgress()
       this.updateThumbnails()
