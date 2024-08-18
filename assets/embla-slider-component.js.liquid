@@ -125,16 +125,21 @@ class EmblaSlider extends HTMLElement {
     this.autoplay = this.getAttribute('autoplay') || 0
     this.style.setProperty('--autoplay-speed', `${this.autoplay}ms`);
     this.autoHeight = this.getAttribute('auto-height') || false
+    this.autoScroll = this.getAttribute('auto-scroll') || false
+    this.fade = this.getAttribute('fade') || false
     this.pauseOnHover = this.hasAttribute('pause-on-hover')
     this.plugins = [
-      // EmblaCarouselAutoScroll({ playOnInit: false }),
-      // EmblaCarouselFade(),
       EmblaCarouselClassNames(),
     ]
     if(this.autoHeight){
+      this.plugins.push(EmblaCarouselAutoScroll({ playOnInit: false }))
+    }
+    if(this.autoScroll){
       this.plugins.push(EmblaCarouselAutoHeight())
     }
-    // Todo: responsible?
+    if(this.fade){
+      this.plugins.push( EmblaCarouselFade())
+    }
     if(this.autoplay != 0){
       this.plugins.push(EmblaCarouselAutoplay({
         stopOnMouseEnter: this.pauseOnHover,

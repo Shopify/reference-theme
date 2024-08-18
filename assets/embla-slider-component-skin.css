@@ -1,10 +1,7 @@
 embla-slider{
   position: relative;  
 }
-embla-slider:not([autoplay]) .embla-navigation.embla-dots embla-thumbnail.is-selected{
-  background-color: currentColor;
-  opacity: 1;
-}
+/* Navigation */
 .embla-navigation{
   position: absolute;
   bottom: 0;
@@ -84,7 +81,11 @@ embla-slider:not([autoplay]) .embla-navigation.embla-dots embla-thumbnail.is-sel
     }
   }
 }
-
+embla-slider:not([autoplay]) .embla-navigation.embla-dots embla-thumbnail.is-selected{
+  background-color: currentColor;
+  opacity: 1;
+}
+/* Controls - Prev & Next */
 .embla-controls{
   &.embla-simple{
     display:flex;
@@ -114,7 +115,7 @@ embla-slider:not([autoplay]) .embla-navigation.embla-dots embla-thumbnail.is-sel
     }
   }
 }
-
+/* Progress bar */
 .embla-progress{
   position: relative;
   width: 100%;
