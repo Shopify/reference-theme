@@ -117,22 +117,27 @@ embla-slider{
     background-color: gray;
   }
 }
-
 embla-thumbnail {
-  width: 100px; /* Set the size of the progress bar */
-  height: 100px;
+  --duration: 6s;
+  --half-duration: calc(var(--duration) / 2);
+  --size: 9px;
+  --half-size: calc(var(--size) / 2);
+  --border-width: 2px;
+  display: block;
+  width: var(--size); /* Set the size of the progress bar */
+  height: var(--size);
   position: absolute; /* Enable clipping */
-  clip: rect(0px, 100px, 100px, 50px); /* Hide half of the progress bar */
+  clip: rect(0px, var(--size), var(--size), var(--half-size)); /* Hide half of the progress bar */
 }
 /* Set the sizes of the elements that make up the progress bar */
 embla-thumbnail::before,
 embla-thumbnail::after{
-  width: 80px;
-  height: 80px;
-  border: 10px solid green;
-  border-radius: 50px;
+  width: calc(var(--size) - (2 * var(--border-width)));
+  height: calc(var(--size) - (2 * var(--border-width)));
+  border: var(--border-width) solid green;
+  border-radius: 50%;
   position: absolute;
-  clip: rect(0px, 50px, 100px, 0px);
+  clip: rect(0px, var(--half-size), var(--size), 0px);
 }
 /* Using the data attributes for the animation selectors. */
 /* Base settings for all animated elements */
@@ -145,8 +150,8 @@ embla-thumbnail::after{
 }
 
 embla-thumbnail{
-  -webkit-animation-duration: 0.01s; /* Complete keyframes asap */
-  -webkit-animation-delay: 3s; /* Wait half of the animation */
+  -webkit-animation-duration: 0.0s; /* Complete keyframes asap */
+  -webkit-animation-delay: var(--half-duration); /* Wait half of the animation */
   -webkit-animation-name: close-wrapper; /* Keyframes name */
 }
 embla-thumbnail::before,
@@ -155,12 +160,12 @@ embla-thumbnail::after{
   display: block;
 }
 embla-thumbnail::before {
-  -webkit-animation-duration: 6s; /* Full animation time */
+  -webkit-animation-duration: var(--duration); /* Full animation time */
   -webkit-animation-name: left-spin;
 }
 
 embla-thumbnail::after {
-  -webkit-animation-duration: 3s; /* Half animation time */
+  -webkit-animation-duration: var(--half-duration); /* Half animation time */
   -webkit-animation-name: right-spin;
 }
 /* Rotate the right side of the progress bar from 0 to 180 degrees */
