@@ -7,7 +7,7 @@
 </style>
 
 <embla-slider id="slideshow-{{section.id}}" class="{{ section.settings | class_list }} color-{{ section.settings.color_scheme }}"
-  options="loop: {{ section.settings.loop }}, watchDrag: {{ section.settings.draggable }}, containScroll: trimSnaps, align: start"
+  options="loop: {{ section.settings.loop }}, containScroll: trimSnaps, align: start"
   auto-height
   {% if section.settings.autoplay_speed != 0 %}
     autoplay="{{ section.settings.autoplay_speed | times: 1000 }}"
@@ -63,12 +63,6 @@
       "id": "loop",
       "label": "Loop",
       "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "draggable",
-      "label": "Draggable",
-      "default": true
     },
     {
       "type": "range",
