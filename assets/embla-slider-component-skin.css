@@ -64,8 +64,9 @@ embla-slider{
   flex-direction: row;
   align-items: center;
   gap: 5px;
-  transform: translateY(-50%);
+  transform: translateY(50%);
   position: absolute;
+  right: 0;
   bottom: 0;
   & embla-next,
   & embla-prev{
