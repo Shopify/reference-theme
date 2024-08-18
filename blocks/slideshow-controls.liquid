@@ -1,6 +1,6 @@
-{% if block.settings.control_style != "" %}
+{% if block.settings.control_style != "" %} 
   {% assign color_schema_class = "color-" | append: block.settings.color_scheme %}
-  <div class="embla-controls {{ block.settings.control_style }}">
+  <div class="embla-controls {{ block.settings.control_style }}  {{ block.settings.page_width }}">
     <embla-prev
       class="{{ color_schema_class }}"
       aria-label="Previous slide"
@@ -20,6 +20,22 @@
 {
   "name": "Slideshow controls",
   "settings": [
+    {
+      "type": "select",
+      "id": "page_width",
+      "options": [
+        {
+          "value": "",
+          "label": "none"
+        },
+        {
+          "value": "page-width",
+          "label": "normal"
+        }
+      ],
+      "label": "Page width",
+      "default": ""
+    },
     {
       "type": "select",
       "id": "control_style",
