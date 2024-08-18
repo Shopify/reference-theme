@@ -15,6 +15,7 @@
         "slide_mEbteL": {
           "type": "slide",
           "settings": {
+            "position": "is-relative",
             "size": {
               "height": "500px"
             },
@@ -125,6 +126,7 @@
         "slide_aWAGX7": {
           "type": "slide",
           "settings": {
+            "position": "is-relative",
             "size": {
               "height": "500px"
             },
@@ -236,7 +238,8 @@
           "type": "slideshow-controls",
           "static": true,
           "settings": {
-            "control_style": "embla-simple"
+            "control_style": "embla-simple",
+            "color_scheme": ""
           }
         },
         "slideshow-progress": {
