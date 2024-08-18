@@ -275,12 +275,13 @@
         "slide_aWAGX7"
       ],
       "settings": {
-        "slides_per_page": 1,
-        "gap": 0,
         "size": {
           "height": "auto"
         },
+        "slides_per_page": 1,
+        "gap": 0,
         "loop": true,
+        "effect": "fade-left",
         "autoplay_speed": 7,
         "color_scheme": ""
       }
