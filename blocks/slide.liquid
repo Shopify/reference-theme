@@ -11,12 +11,10 @@
 <embla-slide
   id="slide-{{ block.id }}"
   index="{{ block_index }}"
-  class="{{ block_index.settings | class_list }} {{ block.settings.position }} {{ block.settings.overflow }}"
+  class="{{ block.settings | class_list }} {{ block.settings.position }} {{ block.settings.overflow }}"
   {{ block.shopify_attributes }}
 >
-  <div class="{{ block.settings | class_list }}">
-    {% content_for "blocks" %}
-  </div>
+  {% content_for "blocks" %}
 </embla-slide>
 
 {% schema %}
