@@ -12,6 +12,7 @@ embla-slider{
   gap: 5px;
   &.embla-dots{
     & embla-thumbnail{
+      background-color: currentColor;
       border-radius: 50%;
       height: 6px;
       opacity: 0.4;
