@@ -143,16 +143,3 @@ embla-slider:not([autoplay]) .embla-navigation.embla-dots embla-thumbnail.is-sel
     background-color: gray;
   }
 }
-
-embla-slide{
-  & > * {
-    transform: translateX(100px);
-  }
-}
-embla-slide.is-snapped{
-  
-  & > * {
-    transition: opacity transform 0.3s;
-    transform: translateX(0);
-  }
-}
