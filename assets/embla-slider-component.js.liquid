@@ -123,6 +123,7 @@ class EmblaSlider extends HTMLElement {
   }
   connectedCallback() {
     this.autoplay = this.getAttribute('autoplay') || 0
+    this.style.setProperty('--progress', `${this.autoplay}ms`);
     this.autoHeight = this.getAttribute('auto-height') || false
     this.pauseOnHover = this.hasAttribute('pause-on-hover')
     this.plugins = [
