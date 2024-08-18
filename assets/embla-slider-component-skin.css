@@ -63,6 +63,7 @@ embla-slider{
   &.embla-simple{
     display:flex;
     flex-direction: row;
+    justify-content: right;
     align-items: center;
     gap: 5px;
     transform: translateY(50%);
