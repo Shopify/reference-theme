@@ -1,6 +1,6 @@
 {% if block.settings.control_style != "" %} 
   {% assign color_schema_class = "color-" | append: block.settings.color_scheme %}
-  <div class="embla-controls {{ block.settings.control_style }}  {{ block.settings.page_width }}">
+  <div class="embla-controls {{ block.settings | class_list }} {{ block.settings.control_style }}  {{ block.settings.page_width }}">
     <embla-prev
       class="{{ color_schema_class }}"
       aria-label="Previous slide"
