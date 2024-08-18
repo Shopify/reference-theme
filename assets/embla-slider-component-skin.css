@@ -18,6 +18,12 @@ embla-slider{
       opacity: 0.4;
       width: 6px;
       position: relative;
+      & svg {
+        & .progress{
+          stroke-dasharray: 100;
+          stroke-dashoffset: 100;
+        }
+      }
       &.is-selected{
         background-color: transparent;
         width: 9px;
@@ -32,9 +38,8 @@ embla-slider{
             opacity: 0.4;
           }
           & .progress{
-            --val: 65;
-            stroke-dasharray: 100;
-            stroke-dashoffset: calc(100 - var(--val));
+            stroke-dashoffset: 0;
+            transition: stroke-dashoffset var(--autoplay-speed);
           }
         }
       }
