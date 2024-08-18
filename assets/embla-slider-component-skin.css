@@ -35,6 +35,8 @@ embla-slider{
         margin-left: 50%;
         transform-origin: left;
         border-radius: 0 100% 100% 0/50%;
+        background: currentColor;
+        transform: rotate(calc((var(--p) - 50) * 0.01turn ));
       }
       &.is-selected::after{
         content: "";
@@ -43,10 +45,6 @@ embla-slider{
         inset: 2px;
         border-radius: 50%;
         background-color: #000;
-      }
-      &.is-selected::before{
-        background: currentColor;
-        transform: rotate(calc((var(--p) - 50) * 0.01turn ));
       }
     }
     
