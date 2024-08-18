@@ -258,12 +258,6 @@
             "color_scheme": ""
           }
         },
-        "slideshow-progress": {
-          "type": "slideshow-progress",
-          "static": true,
-          "settings": {
-          }
-        },
         "slideshow-navigation": {
           "type": "slideshow-navigation",
           "static": true,
@@ -282,7 +276,8 @@
         "gap": 0,
         "size": {
           "height": "500px"
-        }
+        },
+        "color_scheme": ""
       }
     },
     "65a25908-415f-40aa-a6d4-00985cafbfac": {
@@ -367,6 +362,9 @@
         "ff102392-368f-41d9-883a-9c1cd4be4d84"
       ],
       "settings": {
+        "position": "",
+        "overflow": "",
+        "page_width": "",
         "spacing": {
           "padding-block-start": "60px",
           "padding-inline-end": "20px",
@@ -479,6 +477,9 @@
         "group_BcTBGi"
       ],
       "settings": {
+        "position": "",
+        "overflow": "",
+        "page_width": "",
         "spacing": {
           "padding-block-start": "40px",
           "padding-inline-end": "20px",
@@ -606,6 +607,9 @@
         "group_LrBxgw"
       ],
       "settings": {
+        "position": "",
+        "overflow": "",
+        "page_width": "",
         "spacing": {
           "padding-block-start": "60px",
           "padding-inline-end": "20px",
@@ -998,6 +1002,9 @@
         "group_iabYjG"
       ],
       "settings": {
+        "position": "",
+        "overflow": "",
+        "page_width": "",
         "spacing": {
           "padding-block-start": "60px",
           "padding-inline-end": "20px",
@@ -1054,6 +1061,9 @@
         "newsletter_nfLQzr"
       ],
       "settings": {
+        "position": "",
+        "overflow": "",
+        "page_width": "",
         "spacing": {
           "padding-block-start": "60px",
           "padding-inline-end": "20px",
@@ -1272,6 +1282,9 @@
         "group_rUTJ6Y"
       ],
       "settings": {
+        "position": "",
+        "overflow": "",
+        "page_width": "",
         "spacing": {
           "padding-block-start": "40px",
           "padding-inline-end": "20px",
@@ -1438,6 +1451,9 @@
         "group_7G9X8q"
       ],
       "settings": {
+        "position": "",
+        "overflow": "",
+        "page_width": "",
         "spacing": {
         },
         "layout": {

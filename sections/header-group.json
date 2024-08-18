@@ -20,6 +20,7 @@
             "position": "",
             "overflow": "",
             "size": {
+              "width": "auto"
             },
             "spacing": {
               "padding-block-start": "5px",
@@ -28,8 +29,8 @@
               "padding-inline-start": "0px"
             },
             "layout": {
-              "row-gap": "0px",
-              "column-gap": "0px",
+              "row-gap": "5px",
+              "column-gap": "5px",
               "flex-wrap": "nowrap"
             }
           },
@@ -72,6 +73,7 @@
             "position": "",
             "overflow": "",
             "size": {
+              "width": "auto"
             },
             "spacing": {
               "padding-block-start": "5px",
@@ -80,8 +82,8 @@
               "padding-inline-start": "0px"
             },
             "layout": {
-              "row-gap": "0px",
-              "column-gap": "0px",
+              "row-gap": "5px",
+              "column-gap": "5px",
               "flex-wrap": "nowrap"
             }
           },
