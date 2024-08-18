@@ -10,7 +10,7 @@
   options="loop: {{ section.settings.loop }}, containScroll: trimSnaps, align: start"
   auto-height
   {% if section.settings.autoplay_speed != 0 %}
-    autoplay="{{ section.settings.autoplay_speed | times: 1000 }}"
+    autoplay="{{ section.settings.autoplay_speed }}"
   {% endif %}
 >
   <embla-viewport>
