@@ -2,7 +2,7 @@ embla-slider{
   position: relative;  
 }
 embla-slider[fade]{
-  & embla-slide{
+  & embla-slide.is-snapped{
     transition: opacity 0.4s;
   }  
 }
