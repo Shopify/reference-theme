@@ -6,7 +6,7 @@
       "type": "custom-section",
       "blocks": {
         "5b635cb0-c1b4-408f-a776-d6977e4ff9d4": {
-          "type": "group",
+          "type": "container",
           "settings": {
             "layout": {
               "flex-direction": "row",
@@ -114,7 +114,7 @@
           ]
         },
         "group_VFkXXa": {
-          "type": "group",
+          "type": "container",
           "settings": {
             "layout": {
               "flex-direction": "row",
@@ -135,7 +135,7 @@
           },
           "blocks": {
             "group_reBQFj": {
-              "type": "group",
+              "type": "container",
               "settings": {
                 "layout": {
                   "flex-direction": "column",
@@ -190,7 +190,7 @@
               ]
             },
             "group_XWypQL": {
-              "type": "group",
+              "type": "container",
               "settings": {
                 "layout": {
                   "flex-direction": "column",
@@ -236,7 +236,7 @@
           ]
         },
         "8a18b664-2c69-4e8a-b6ae-a5cf39d3ad38": {
-          "type": "group",
+          "type": "container",
           "settings": {
             "layout": {
               "flex-direction": "column",
@@ -253,7 +253,7 @@
           },
           "blocks": {
             "group_L9Ac4q": {
-              "type": "group",
+              "type": "container",
               "settings": {
                 "layout": {
                   "flex-direction": "row",
@@ -283,7 +283,7 @@
               ]
             },
             "group_WQUiKt": {
-              "type": "group",
+              "type": "container",
               "settings": {
                 "layout": {
                   "flex-direction": "row",

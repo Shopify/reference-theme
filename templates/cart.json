@@ -1,6 +1,6 @@
 {
   "sections": {
-    "group": {
+    "container": {
       "type": "custom-section",
       "blocks": {
         "text_tVEjK7": {
@@ -27,6 +27,6 @@
     }
   },
   "order": [
-    "group"
+    "container"
   ]
 }

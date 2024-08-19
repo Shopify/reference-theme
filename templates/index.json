@@ -37,7 +37,7 @@
               }
             },
             "group_NWMRtf": {
-              "type": "group",
+              "type": "container",
               "settings": {
                 "position": "",
                 "overflow": "",
@@ -146,7 +146,7 @@
               }
             },
             "group_AYLEbA": {
-              "type": "group",
+              "type": "container",
               "settings": {
                 "position": "is-absolute",
                 "overflow": "",
@@ -262,7 +262,7 @@
               }
             },
             "group_tX6xMR": {
-              "type": "group",
+              "type": "container",
               "settings": {
                 "position": "is-absolute",
                 "overflow": "",
@@ -411,7 +411,7 @@
           }
         },
         "ff102392-368f-41d9-883a-9c1cd4be4d84": {
-          "type": "group",
+          "type": "container",
           "settings": {
             "position": "static",
             "overflow": "",
@@ -513,7 +513,7 @@
           }
         },
         "group_BcTBGi": {
-          "type": "group",
+          "type": "container",
           "settings": {
             "position": "static",
             "overflow": "",
@@ -622,7 +622,7 @@
           }
         },
         "group_LrBxgw": {
-          "type": "group",
+          "type": "container",
           "settings": {
             "position": "static",
             "overflow": "",
@@ -640,7 +640,7 @@
           },
           "blocks": {
             "group_A3Jhra": {
-              "type": "group",
+              "type": "container",
               "settings": {
                 "position": "static",
                 "overflow": "",
@@ -754,7 +754,7 @@
           }
         },
         "group_iabYjG": {
-          "type": "group",
+          "type": "container",
           "settings": {
             "position": "static",
             "overflow": "",
@@ -782,7 +782,7 @@
               },
               "blocks": {
                 "group_igxqEV": {
-                  "type": "group",
+                  "type": "container",
                   "settings": {
                     "position": "static",
                     "overflow": "",
@@ -864,7 +864,7 @@
               },
               "blocks": {
                 "group_mgPLTf": {
-                  "type": "group",
+                  "type": "container",
                   "settings": {
                     "position": "static",
                     "overflow": "",
@@ -946,7 +946,7 @@
               },
               "blocks": {
                 "group_BqmeC9": {
-                  "type": "group",
+                  "type": "container",
                   "settings": {
                     "position": "static",
                     "overflow": "",
@@ -1028,7 +1028,7 @@
               },
               "blocks": {
                 "group_gtJd6c": {
-                  "type": "group",
+                  "type": "container",
                   "settings": {
                     "position": "static",
                     "overflow": "",
@@ -1196,7 +1196,7 @@
       "type": "custom-section",
       "blocks": {
         "group_hwEiRw": {
-          "type": "group",
+          "type": "container",
           "settings": {
             "position": "static",
             "overflow": "",
@@ -1261,7 +1261,7 @@
           ]
         },
         "group_KyK7Ha": {
-          "type": "group",
+          "type": "container",
           "settings": {
             "position": "static",
             "overflow": "",
@@ -1326,7 +1326,7 @@
           ]
         },
         "group_rUTJ6Y": {
-          "type": "group",
+          "type": "container",
           "settings": {
             "position": "static",
             "overflow": "",
@@ -1417,7 +1417,7 @@
       "type": "custom-section",
       "blocks": {
         "group_7G9X8q": {
-          "type": "group",
+          "type": "container",
           "settings": {
             "position": "is-relative",
             "overflow": "overflow-hidden",
@@ -1446,7 +1446,7 @@
               }
             },
             "group_p6qeqi": {
-              "type": "group",
+              "type": "container",
               "settings": {
                 "position": "is-absolute",
                 "overflow": "",
@@ -1487,7 +1487,7 @@
                   }
                 },
                 "group_iGGjap": {
-                  "type": "group",
+                  "type": "container",
                   "settings": {
                     "position": "",
                     "overflow": "",

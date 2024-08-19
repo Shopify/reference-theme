@@ -22,7 +22,7 @@
     </embla-slides>
   </embla-viewport>
 
-  {% if  section.blocks.size > 1 and section.settings.controls %}
+  {% if section.blocks.size > 1 and section.settings.controls %}
     {% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}
   {% endif %}
 
@@ -129,7 +129,7 @@
           "type": "slide",
           "blocks": [
             {
-              "type": "group",
+              "type": "container",
               "settings": {
                 "layout": {
                   "flex-direction": "column",
@@ -182,7 +182,7 @@
           "type": "slide",
           "blocks": [
             {
-              "type": "group",
+              "type": "container",
               "settings": {
                 "layout": {
                   "flex-direction": "column",

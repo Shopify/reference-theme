@@ -1,6 +1,6 @@
 {
   "sections": {
-    "group": {
+    "container": {
       "type": "custom-section",
       "blocks": {
         "text_aAcgpA": {
@@ -27,6 +27,6 @@
     }
   },
   "order": [
-    "group"
+    "container"
   ]
 }

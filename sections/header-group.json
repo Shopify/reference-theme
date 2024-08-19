@@ -159,7 +159,7 @@
       "type": "custom-section",
       "blocks": {
         "group_QwzE6T": {
-          "type": "group",
+          "type": "container",
           "settings": {
             "position": "",
             "overflow": "",
@@ -200,7 +200,7 @@
           ]
         },
         "group_MMGbDg": {
-          "type": "group",
+          "type": "container",
           "settings": {
             "position": "",
             "overflow": "",

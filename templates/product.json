@@ -18,7 +18,7 @@
           }
         },
         "c0e7c161-3f86-4580-b1d2-5d6f96428237": {
-          "type": "group",
+          "type": "container",
           "settings": {
             "layout": {
               "flex-direction": "column",
@@ -84,7 +84,7 @@
               }
             },
             "group_a3Nwet": {
-              "type": "group",
+              "type": "container",
               "settings": {
                 "layout": {
                   "flex-direction": "column",
