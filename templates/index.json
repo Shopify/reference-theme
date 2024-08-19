@@ -12,6 +12,110 @@
     "slideshow_UNkwik": {
       "type": "slideshow",
       "blocks": {
+        "slide_Ve87aJ": {
+          "type": "slide",
+          "settings": {
+            "position": "",
+            "overflow": "",
+            "size": {
+              "height": "500px"
+            },
+            "spacing": {
+            },
+            "layout": {
+            }
+          },
+          "blocks": {
+            "image_KgCcLp": {
+              "type": "image",
+              "settings": {
+                "object_fit": "cover",
+                "spacing": {
+                },
+                "size": {
+                }
+              }
+            },
+            "group_NWMRtf": {
+              "type": "group",
+              "settings": {
+                "position": "",
+                "overflow": "",
+                "size": {
+                  "width": "50%",
+                  "flex-grow": "0",
+                  "@media (--mobile)": {
+                    "width": "90%"
+                  }
+                },
+                "spacing": {
+                  "padding-block-start": "50px",
+                  "padding-inline-end": "50px",
+                  "padding-block-end": "50px",
+                  "padding-inline-start": "50px"
+                },
+                "layout": {
+                  "flex-direction": "column"
+                },
+                "color_scheme": ""
+              },
+              "blocks": {
+                "heading_RTYTB6": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "Image slide",
+                    "heading_size": "h1",
+                    "alignment": "start",
+                    "size": {
+                    },
+                    "spacing": {
+                    }
+                  }
+                },
+                "text_9TFyxe": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Tell your brand's story through images<\/p>",
+                    "text_style": "",
+                    "alignment": "start",
+                    "size": {
+                    },
+                    "spacing": {
+                    }
+                  }
+                },
+                "link_YRqAdt": {
+                  "type": "link",
+                  "settings": {
+                    "link": "",
+                    "label": "Button label",
+                    "style_class": "button",
+                    "open_in_new_tab": false,
+                    "icon": "none",
+                    "icon_position": "left",
+                    "size": {
+                    },
+                    "spacing": {
+                      "padding-block-start": "10px",
+                      "padding-inline-end": "30px",
+                      "padding-block-end": "10px",
+                      "padding-inline-start": "30px"
+                    }
+                  }
+                }
+              },
+              "block_order": [
+                "heading_RTYTB6",
+                "text_9TFyxe",
+                "link_YRqAdt"
+              ]
+            }
+          },
+          "block_order": [
+            "image_KgCcLp",
+            "group_NWMRtf"
+          ]
+        },
         "slide_mEbteL": {
           "type": "slide",
           "settings": {
@@ -273,6 +377,7 @@
         }
       },
       "block_order": [
+        "slide_Ve87aJ",
         "slide_mEbteL",
         "slide_aWAGX7"
       ],
@@ -285,8 +390,8 @@
         "loop": true,
         "controls": true,
         "navigation": true,
-        "effect": "fade-left",
-        "autoplay_speed": 4,
+        "effect": "slide",
+        "autoplay_speed": 0,
         "color_scheme": ""
       }
     },
