@@ -1,33 +1,8 @@
 {
   "sections": {
-    "container": {
-      "type": "container",
-      "blocks": {
-        "text_bckUWt": {
-          "type": "text",
-          "settings": {
-            "text": "<p>This template is not available in the Theme blocks developer preview.<\/p>",
-            "text_style": "",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "text_bckUWt"
-      ],
-      "settings": {
-        "layout": {
-          "flex-direction": "row",
-          "justify-content": "center"
-        },
-        "spacing": {
-          "padding": "100px 0px"
-        },
-        "color_scheme": "scheme-2"
-      }
-    }
+   
   },
   "order": [
-    "container"
+    
   ]
 }

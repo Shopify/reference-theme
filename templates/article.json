@@ -1,32 +1,8 @@
 {
   "sections": {
-    "container": {
-      "type": "container",
-      "blocks": {
-        "text_Yazh3p": {
-          "type": "text",
-          "settings": {
-            "text": "<p>This template is not available in the Theme blocks developer preview.<\/p>",
-            "text_style": "",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "text_Yazh3p"
-      ],
-      "settings": {
-        "layout": {
-          "justify-content": "center"
-        },
-        "spacing": {
-          "padding": "100px 0px"
-        },
-        "color_scheme": "scheme-2"
-      }
-    }
+   
   },
   "order": [
-    "container"
+    
   ]
 }
