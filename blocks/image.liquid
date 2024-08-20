@@ -4,9 +4,10 @@
 {% endif %}
 
 <div
-  class="{{ block.settings | class_list }} image-wrapper {{ block.settings.object_fit }}"
+  class="{{ block.settings | class_list }}"
   {{ block.shopify_attributes }}
 >
+  <div class="image-wrapper {{ block.settings.object_fit }}">
     {% render 'image-element', 
       image: block.settings.image, 
       fit: block.settings.object_fit,
@@ -14,6 +15,7 @@
       loading: loading,
       sizes: '100vw'
     %}
+  </div>
 </div>
 
 {% schema %}
