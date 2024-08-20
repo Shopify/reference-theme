@@ -11,9 +11,140 @@
   "type": "header",
   "name": "Header",
   "sections": {
-    
+    "slideshow_c3d3CE": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_bBaNea": {
+          "type": "slide",
+          "settings": {
+            "page_width": "page-width",
+            "position": "",
+            "overflow": "",
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          },
+          "blocks": {
+            "heading_c8LpRd": {
+              "type": "heading",
+              "settings": {
+                "heading": "Free Shipping",
+                "heading_size": "h2",
+                "alignment": "start",
+                "size": {
+                },
+                "spacing": {
+                }
+              }
+            },
+            "text_re7eYF": {
+              "type": "text",
+              "settings": {
+                "text": "<p>On all orders above 100€<\/p>",
+                "text_style": "",
+                "alignment": "start",
+                "size": {
+                },
+                "spacing": {
+                }
+              }
+            }
+          },
+          "block_order": [
+            "heading_c8LpRd",
+            "text_re7eYF"
+          ]
+        },
+        "slide_cXnPiU": {
+          "type": "slide",
+          "settings": {
+            "page_width": "page-width",
+            "position": "",
+            "overflow": "",
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          },
+          "blocks": {
+            "heading_4VerUx": {
+              "type": "heading",
+              "settings": {
+                "heading": "Heading",
+                "heading_size": "h2",
+                "alignment": "start",
+                "size": {
+                },
+                "spacing": {
+                }
+              }
+            },
+            "text_YyLFLh": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Share information about your brand with your customers. <\/p>",
+                "text_style": "",
+                "alignment": "start",
+                "size": {
+                },
+                "spacing": {
+                }
+              }
+            }
+          },
+          "block_order": [
+            "heading_4VerUx",
+            "text_YyLFLh"
+          ]
+        },
+        "slideshow-controls": {
+          "type": "slideshow-controls",
+          "disabled": true,
+          "static": true,
+          "settings": {
+            "page_width": "full-width",
+            "control_style": "embla-simple",
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          }
+        },
+        "slideshow-navigation": {
+          "type": "slideshow-navigation",
+          "disabled": true,
+          "static": true,
+          "settings": {
+            "navigation_style": "embla-bars",
+            "spacing": {
+            },
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_bBaNea",
+        "slide_cXnPiU"
+      ],
+      "settings": {
+        "size": {
+        },
+        "slides_per_page": 1,
+        "gap": 0,
+        "loop": false,
+        "controls": true,
+        "navigation": true,
+        "effect": "slide",
+        "autoplay_speed": 7,
+        "color_scheme": "scheme-2"
+      }
+    }
   },
   "order": [
-
+    "slideshow_c3d3CE"
   ]
 }
