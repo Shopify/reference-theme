@@ -36,64 +36,95 @@
                 "spacing": {
                 },
                 "size": {
-                  "height": "auto"
+                  "height": "500px"
                 }
               }
             },
             "simple_overlay_Cw87KX": {
               "type": "simple-overlay",
               "settings": {
-                "color_scheme": ""
+                "overflow": "",
+                "spacing": {
+                  "padding-block-start": "20px",
+                  "padding-block-end": "20px",
+                  "padding-inline-start": "20px",
+                  "padding-inline-end": "20px"
+                },
+                "layout": {
+                  "flex-direction": "column"
+                },
+                "color_scheme": "scheme-4"
               },
               "blocks": {
-                "heading_mQpPQX": {
-                  "type": "heading",
+                "container_a9LVJY": {
+                  "type": "container",
                   "settings": {
-                    "heading": "Heading",
-                    "heading_size": "h2",
-                    "alignment": "start",
+                    "position": "",
+                    "overflow": "",
                     "size": {
+                      "width": "auto"
                     },
                     "spacing": {
-                    }
-                  }
-                },
-                "text_zzRVWr": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
-                    "text_style": "",
-                    "alignment": "start",
-                    "size": {
                     },
-                    "spacing": {
-                    }
-                  }
-                },
-                "link_mL6QfW": {
-                  "type": "link",
-                  "settings": {
-                    "link": "",
-                    "label": "Primary button label",
-                    "style_class": "button",
-                    "open_in_new_tab": false,
-                    "icon": "none",
-                    "icon_position": "left",
-                    "size": {
+                    "layout": {
+                      "flex-direction": "column"
                     },
-                    "spacing": {
-                      "padding-block-start": "10px",
-                      "padding-inline-end": "30px",
-                      "padding-block-end": "10px",
-                      "padding-inline-start": "30px"
+                    "color_scheme": ""
+                  },
+                  "blocks": {
+                    "heading_V9kc9T": {
+                      "type": "heading",
+                      "settings": {
+                        "heading": "Heading",
+                        "heading_size": "h2",
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
+                      }
+                    },
+                    "text_jGCyzT": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+                        "text_style": "",
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
+                      }
+                    },
+                    "link_wGrwPi": {
+                      "type": "link",
+                      "settings": {
+                        "link": "",
+                        "label": "Primary button label",
+                        "style_class": "button",
+                        "open_in_new_tab": false,
+                        "icon": "none",
+                        "icon_position": "left",
+                        "size": {
+                        },
+                        "spacing": {
+                          "padding-block-start": "10px",
+                          "padding-inline-end": "30px",
+                          "padding-block-end": "10px",
+                          "padding-inline-start": "30px"
+                        }
+                      }
                     }
-                  }
+                  },
+                  "block_order": [
+                    "heading_V9kc9T",
+                    "text_jGCyzT",
+                    "link_wGrwPi"
+                  ]
                 }
               },
               "block_order": [
-                "heading_mQpPQX",
-                "text_zzRVWr",
-                "link_mL6QfW"
+                "container_a9LVJY"
               ]
             }
           },
