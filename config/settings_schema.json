@@ -263,6 +263,41 @@
     ]
   },
   {
+    "name": "Buttons",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Primary"
+      },
+      {
+        "type": "color_scheme",
+        "id": "button_primary_color_scheme",
+        "label": "Color scheme",
+        "default": "scheme-1"
+      },
+      {
+        "type": "header",
+        "content": "Secondary"
+      },
+      {
+        "type": "color_scheme",
+        "id": "button_secondary_color_scheme",
+        "label": "Color scheme",
+        "default": "scheme-1"
+      },
+      {
+        "type": "header",
+        "content": "Tertiary"
+      },
+      {
+        "type": "color_scheme",
+        "id": "button_tertiary_color_scheme",
+        "label": "Color scheme",
+        "default": "scheme-1"
+      }
+    ]
+  },
+  {
     "name": "Color scheme",
     "settings": [
       {
