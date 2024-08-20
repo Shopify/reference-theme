@@ -72,24 +72,17 @@
                       "type": "heading",
                       "settings": {
                         "heading": "Heading",
-                        "heading_size": "h2",
-                        "alignment": "start",
-                        "size": {
-                        },
-                        "spacing": {
-                        }
+                        "html_tag": "p",
+                        "heading_style": "h4",
+                        "alignment": "center"
                       }
                     },
                     "text_t73kDV": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
-                        "text_style": "",
-                        "alignment": "start",
-                        "size": {
-                        },
-                        "spacing": {
-                        }
+                        "text_style": "p",
+                        "alignment": "center"
                       }
                     },
                     "link_QkQHgd": {
@@ -175,24 +168,17 @@
                       "type": "heading",
                       "settings": {
                         "heading": "Heading",
-                        "heading_size": "h2",
-                        "alignment": "start",
-                        "size": {
-                        },
-                        "spacing": {
-                        }
+                        "html_tag": "p",
+                        "heading_style": "h4",
+                        "alignment": "center"
                       }
                     },
                     "text_mFAQDV": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
-                        "text_style": "",
-                        "alignment": "start",
-                        "size": {
-                        },
-                        "spacing": {
-                        }
+                        "text_style": "p",
+                        "alignment": "center"
                       }
                     },
                     "link_J9dWiP": {
