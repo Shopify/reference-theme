@@ -20,6 +20,8 @@
   }
 }
 
-.overlay{
-  background: radial-gradient(rgba(0,0,0,var(--colorImageOverlayTextShadow)) 0%,transparent 60%);
+.shopify-block-overlay{
+  & .shopify-block-container{
+    background: radial-gradient(rgba(0,0,0,0.2) 0%,transparent 60%);
+  }
 }
