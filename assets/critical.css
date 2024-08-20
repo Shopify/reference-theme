@@ -157,13 +157,13 @@ a {
   top: var(--right);
 }
 
-.text-left{
+.text-start{
   text-align: left;
 }
 .text-center{
   text-align: center;
 }
-.text-right{
+.text-end{
   text-align: right;
 }
 
