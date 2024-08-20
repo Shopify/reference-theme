@@ -66,7 +66,8 @@
                     "position": "",
                     "overflow": "",
                     "size": {
-                      "width": "50%"
+                      "width": "50%",
+                      "flex-grow": "0"
                     },
                     "spacing": {
                     },
@@ -127,7 +128,7 @@
             "simple_overlay_9CwXAf"
           ]
         },
-        "slide_tDNzwc": {
+        "slide_rNUhbx": {
           "type": "slide",
           "settings": {
             "page_width": "full-width",
@@ -140,7 +141,7 @@
             "color_scheme": ""
           },
           "blocks": {
-            "image_98jUzT": {
+            "image_xDXERb": {
               "type": "image",
               "settings": {
                 "object_fit": "cover",
@@ -151,7 +152,7 @@
                 }
               }
             },
-            "simple_overlay_ERa4GC": {
+            "simple_overlay_UXLqHx": {
               "type": "simple-overlay",
               "settings": {
                 "overflow": "",
@@ -159,15 +160,17 @@
                 },
                 "layout": {
                 },
-                "color_scheme": ""
+                "color_scheme": "scheme-4"
               },
               "blocks": {
-                "container_xdc9Va": {
+                "container_Qggtdq": {
                   "type": "container",
                   "settings": {
                     "position": "",
                     "overflow": "",
                     "size": {
+                      "width": "50%",
+                      "flex-grow": "0"
                     },
                     "spacing": {
                     },
@@ -177,7 +180,7 @@
                     "color_scheme": ""
                   },
                   "blocks": {
-                    "heading_Tw7Hqc": {
+                    "heading_xmPgXb": {
                       "type": "heading",
                       "settings": {
                         "heading": "Heading",
@@ -189,7 +192,7 @@
                         }
                       }
                     },
-                    "text_3q3KbV": {
+                    "text_mFAQDV": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
@@ -201,7 +204,7 @@
                         }
                       }
                     },
-                    "link_79wYX3": {
+                    "link_J9dWiP": {
                       "type": "link",
                       "settings": {
                         "link": "",
@@ -212,20 +215,20 @@
                     }
                   },
                   "block_order": [
-                    "heading_Tw7Hqc",
-                    "text_3q3KbV",
-                    "link_79wYX3"
+                    "heading_xmPgXb",
+                    "text_mFAQDV",
+                    "link_J9dWiP"
                   ]
                 }
               },
               "block_order": [
-                "container_xdc9Va"
+                "container_Qggtdq"
               ]
             }
           },
           "block_order": [
-            "image_98jUzT",
-            "simple_overlay_ERa4GC"
+            "image_xDXERb",
+            "simple_overlay_UXLqHx"
           ]
         },
         "slideshow-controls": {
@@ -254,7 +257,7 @@
       },
       "block_order": [
         "slide_wQgtTL",
-        "slide_tDNzwc"
+        "slide_rNUhbx"
       ],
       "settings": {
         "size": {
