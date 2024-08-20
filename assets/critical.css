@@ -154,3 +154,13 @@ a {
   left:0;
   top:0;
 }
+
+.image-wrapper{
+
+  &.cover{
+    object-fit: cover;
+  }
+  &.contain{
+    object-fit: contain;
+  }
+}
