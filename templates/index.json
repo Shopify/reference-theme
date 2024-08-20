@@ -53,14 +53,14 @@
                     "position": "",
                     "overflow": "",
                     "size": {
-                      "width": "50%",
+                      "width": "45%",
                       "flex-grow": "0"
                     },
                     "spacing": {
-                      "padding-block-start": "20px",
-                      "padding-block-end": "20px",
-                      "padding-inline-start": "20px",
-                      "padding-inline-end": "20px"
+                      "padding-block-start": "40px",
+                      "padding-block-end": "40px",
+                      "padding-inline-start": "40px",
+                      "padding-inline-end": "40px"
                     },
                     "layout": {
                       "flex-direction": "column"
