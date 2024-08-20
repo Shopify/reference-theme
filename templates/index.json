@@ -12,10 +12,265 @@
     "main": {
       "type": "container",
       "settings": {
+        "page_width": "page-width",
+        "position": "",
+        "overflow": "",
+        "spacing": {
+        },
+        "layout": {
+        },
+        "color_scheme": ""
+      }
+    },
+    "slideshow_yAwtwT": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_wQgtTL": {
+          "type": "slide",
+          "settings": {
+            "page_width": "full-width",
+            "position": "is-relative",
+            "overflow": "overflow-hidden",
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          },
+          "blocks": {
+            "image_AAMMwf": {
+              "type": "image",
+              "settings": {
+                "object_fit": "cover",
+                "spacing": {
+                },
+                "size": {
+                  "height": "500px"
+                }
+              }
+            },
+            "simple_overlay_9CwXAf": {
+              "type": "simple-overlay",
+              "settings": {
+                "overflow": "",
+                "spacing": {
+                },
+                "layout": {
+                },
+                "color_scheme": ""
+              },
+              "blocks": {
+                "container_YRmAdi": {
+                  "type": "container",
+                  "settings": {
+                    "position": "",
+                    "overflow": "",
+                    "size": {
+                    },
+                    "spacing": {
+                    },
+                    "layout": {
+                      "flex-direction": "column"
+                    },
+                    "color_scheme": ""
+                  },
+                  "blocks": {
+                    "heading_xaKTGP": {
+                      "type": "heading",
+                      "settings": {
+                        "heading": "Heading",
+                        "heading_size": "h2",
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
+                      }
+                    },
+                    "text_t73kDV": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+                        "text_style": "",
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
+                      }
+                    },
+                    "link_QkQHgd": {
+                      "type": "link",
+                      "settings": {
+                        "link": "",
+                        "label": "Primary button label",
+                        "button_style": "btn btn--primary",
+                        "open_in_new_tab": false
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "heading_xaKTGP",
+                    "text_t73kDV",
+                    "link_QkQHgd"
+                  ]
+                }
+              },
+              "block_order": [
+                "container_YRmAdi"
+              ]
+            }
+          },
+          "block_order": [
+            "image_AAMMwf",
+            "simple_overlay_9CwXAf"
+          ]
+        },
+        "slide_tDNzwc": {
+          "type": "slide",
+          "settings": {
+            "page_width": "full-width",
+            "position": "is-relative",
+            "overflow": "overflow-hidden",
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          },
+          "blocks": {
+            "image_98jUzT": {
+              "type": "image",
+              "settings": {
+                "object_fit": "cover",
+                "spacing": {
+                },
+                "size": {
+                  "height": "500px"
+                }
+              }
+            },
+            "simple_overlay_ERa4GC": {
+              "type": "simple-overlay",
+              "settings": {
+                "overflow": "",
+                "spacing": {
+                },
+                "layout": {
+                },
+                "color_scheme": ""
+              },
+              "blocks": {
+                "container_xdc9Va": {
+                  "type": "container",
+                  "settings": {
+                    "position": "",
+                    "overflow": "",
+                    "size": {
+                    },
+                    "spacing": {
+                    },
+                    "layout": {
+                      "flex-direction": "column"
+                    },
+                    "color_scheme": ""
+                  },
+                  "blocks": {
+                    "heading_Tw7Hqc": {
+                      "type": "heading",
+                      "settings": {
+                        "heading": "Heading",
+                        "heading_size": "h2",
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
+                      }
+                    },
+                    "text_3q3KbV": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+                        "text_style": "",
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
+                      }
+                    },
+                    "link_79wYX3": {
+                      "type": "link",
+                      "settings": {
+                        "link": "",
+                        "label": "Primary button label",
+                        "button_style": "btn btn--primary",
+                        "open_in_new_tab": false
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "heading_Tw7Hqc",
+                    "text_3q3KbV",
+                    "link_79wYX3"
+                  ]
+                }
+              },
+              "block_order": [
+                "container_xdc9Va"
+              ]
+            }
+          },
+          "block_order": [
+            "image_98jUzT",
+            "simple_overlay_ERa4GC"
+          ]
+        },
+        "slideshow-controls": {
+          "type": "slideshow-controls",
+          "static": true,
+          "settings": {
+            "page_width": "page-width",
+            "control_style": "embla-simple",
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          }
+        },
+        "slideshow-navigation": {
+          "type": "slideshow-navigation",
+          "static": true,
+          "settings": {
+            "navigation_style": "embla-bars",
+            "spacing": {
+            },
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_wQgtTL",
+        "slide_tDNzwc"
+      ],
+      "settings": {
+        "size": {
+        },
+        "slides_per_page": 1,
+        "gap": 0,
+        "loop": false,
+        "controls": true,
+        "navigation": true,
+        "effect": "slide",
+        "autoplay_speed": 0,
+        "color_scheme": ""
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "slideshow_yAwtwT"
   ]
 }
