@@ -6,7 +6,7 @@
   }
 </style>
 
-<embla-slider id="slideshow-{{section.id}}" class="{{ section.settings | class_list }} {{ section.settings.position }} color-{{ section.settings.color_scheme }}"
+<embla-slider id="slideshow-{{section.id}}" class="{{ section.settings | class_list }} color-{{ section.settings.color_scheme }}"
   options="loop: {{ section.settings.loop }}, containScroll: trimSnaps, align: start"
   auto-height
   {% if section.settings.autoplay_speed != 0 %}
@@ -22,11 +22,11 @@
     </embla-slides>
   </embla-viewport>
 
-  {% if section.blocks.size > 1 and section.settings.controls %}
+  {% if section.blocks.size > 1 %}
     {% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}
   {% endif %}
 
-  {% if section.blocks.size > 1 and section.settings.navigation %}
+  {% if section.blocks.size > 1 %}
     {% content_for "block", type: "slideshow-navigation", id: "slideshow-navigation" %}
   {% endif %}
 
@@ -37,26 +37,6 @@
   "name": "Slideshow",
   "blocks": [{ "type": "slide" }],
   "settings": [
-    {
-      "type": "header",
-      "content": "Position"
-    },
-    {
-      "type": "select",
-      "id": "position",
-      "label": "Position",
-      "options": [
-        {
-          "value": "",
-          "label": "static"
-        },
-        {
-          "value": "is-relative",
-          "label": "relative"
-        }
-      ],
-      "default": ""
-    },
     {
       "type": "style.size_panel",
       "id": "size",
@@ -90,18 +70,6 @@
       "id": "loop",
       "label": "Loop",
       "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "controls",
-      "label": "Controls",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "navigation",
-      "label": "Navigation",
-      "default": true
     },
     {
       "type": "select",
