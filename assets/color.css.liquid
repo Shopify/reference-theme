@@ -5,18 +5,17 @@
     :root,
   {%- endif %}
   .color-{{ scheme.id }} {
-    --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+    --color-background: {{ scheme.settings.background }};
   {% if scheme.settings.background_gradient != empty %}
     --gradient-background: {{ scheme.settings.background_gradient }};
   {% else %}
     --gradient-background: {{ scheme.settings.background }};
   {% endif %}
-
-  --color-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+  --color-foreground: {{ scheme.settings.text }};
  }
 {% endfor %}
 
 {{ scheme_classes }} {
-  color: rgba(var(--color-foreground), 1);
+  color: var(--color-foreground);
   background: var(--gradient-background);
 }
