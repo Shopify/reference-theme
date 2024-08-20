@@ -130,6 +130,7 @@ class EmblaSlider extends HTMLElement {
     this.pauseOnHover = this.hasAttribute('pause-on-hover')
     this.plugins = [
       EmblaCarouselClassNames(),
+      EmblaCarouselWheelGestures(),
     ]
     if(this.autoHeight){
       this.plugins.push(EmblaCarouselAutoScroll({ playOnInit: false }))
