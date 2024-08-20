@@ -1,4 +1,4 @@
-
+{% assign scheme_classes = 'body' %}
 {% for scheme in settings.color_schemes -%}
   {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
   {% if forloop.index == 1 -%}
@@ -16,7 +16,7 @@
  }
 {% endfor %}
 
-{{ scheme_classes | prepend: 'body' }} {
+{{ scheme_classes }} {
   color: rgba(var(--color-foreground), 1);
   background: var(--gradient-background);
 }
