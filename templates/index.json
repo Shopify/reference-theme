@@ -101,18 +101,8 @@
                       "settings": {
                         "link": "",
                         "label": "Primary button label",
-                        "style_class": "button",
-                        "open_in_new_tab": false,
-                        "icon": "none",
-                        "icon_position": "left",
-                        "size": {
-                        },
-                        "spacing": {
-                          "padding-block-start": "10px",
-                          "padding-inline-end": "30px",
-                          "padding-block-end": "10px",
-                          "padding-inline-start": "30px"
-                        }
+                        "style_class": "btn--primary",
+                        "open_in_new_tab": false
                       }
                     }
                   },
