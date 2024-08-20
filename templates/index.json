@@ -247,7 +247,7 @@
             "navigation_style": "embla-bars",
             "spacing": {
             },
-            "color_scheme": ""
+            "color_scheme": "scheme-4"
           }
         }
       },
@@ -256,14 +256,11 @@
         "slide_tDNzwc"
       ],
       "settings": {
-        "position": "is-relative",
         "size": {
         },
         "slides_per_page": 1,
         "gap": 0,
         "loop": false,
-        "controls": true,
-        "navigation": true,
         "effect": "slide",
         "autoplay_speed": 0,
         "color_scheme": ""
