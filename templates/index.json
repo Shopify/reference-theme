@@ -65,7 +65,7 @@
                     "layout": {
                       "flex-direction": "column"
                     },
-                    "color_scheme": ""
+                    "color_scheme": "scheme-4"
                   },
                   "blocks": {
                     "heading_xaKTGP": {
@@ -73,7 +73,7 @@
                       "settings": {
                         "heading": "Heading",
                         "html_tag": "p",
-                        "heading_style": "h4",
+                        "heading_style": "h1",
                         "alignment": "center"
                       }
                     },
@@ -169,7 +169,7 @@
                       "settings": {
                         "heading": "Heading",
                         "html_tag": "p",
-                        "heading_style": "h4",
+                        "heading_style": "h1",
                         "alignment": "center"
                       }
                     },
