@@ -111,21 +111,226 @@
   ],
   "presets": [
     {
-      "name": "Slideshow",
+      "name": "Hero Slideshow",
       "blocks": [
         {
           "type": "slide",
+          "settings": {
+            "page_width": "full-width",
+            "position": "is-relative",
+            "overflow": "overflow-hidden",
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          },
           "blocks": [
-            
+            {
+              "type": "image",
+              "settings": {
+                "object_fit": "cover",
+                "spacing": {
+                },
+                "size": {
+                  "height": "500px"
+                }
+              }
+            },
+            {
+              "type": "simple-overlay",
+              "settings": {
+                "overflow": "",
+                "spacing": {
+                },
+                "layout": {
+                },
+                "color_scheme": "scheme-4"
+              },
+              "blocks": [
+                {
+                  "type": "container",
+                  "settings": {
+                    "position": "",
+                    "overflow": "",
+                    "size": {
+                      "width": "50%",
+                      "flex-grow": "0"
+                    },
+                    "spacing": {
+                    },
+                    "layout": {
+                      "flex-direction": "column"
+                    },
+                    "color_scheme": ""
+                  },
+                  "blocks": [
+                    {
+                      "type": "heading",
+                      "settings": {
+                        "heading": "Heading",
+                        "heading_size": "h2",
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+                        "text_style": "",
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
+                      }
+                    },
+                    {
+                      "type": "link",
+                      "settings": {
+                        "link": "",
+                        "label": "Primary button label",
+                        "button_style": "btn btn--primary",
+                        "open_in_new_tab": false
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
           "type": "slide",
+          "settings": {
+            "page_width": "full-width",
+            "position": "is-relative",
+            "overflow": "overflow-hidden",
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          },
           "blocks": [
-            
+            {
+              "type": "image",
+              "settings": {
+                "object_fit": "cover",
+                "spacing": {
+                },
+                "size": {
+                  "height": "500px"
+                }
+              }
+            },
+            {
+              "type": "simple-overlay",
+              "settings": {
+                "overflow": "",
+                "spacing": {
+                },
+                "layout": {
+                },
+                "color_scheme": "scheme-4"
+              },
+              "blocks": [
+                {
+                  "type": "container",
+                  "settings": {
+                    "position": "",
+                    "overflow": "",
+                    "size": {
+                      "width": "50%",
+                      "flex-grow": "0"
+                    },
+                    "spacing": {
+                    },
+                    "layout": {
+                      "flex-direction": "column"
+                    },
+                    "color_scheme": ""
+                  },
+                  "blocks": [
+                    {
+                      "type": "heading",
+                      "settings": {
+                        "heading": "Heading",
+                        "heading_size": "h2",
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+                        "text_style": "",
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
+                      }
+                    },
+                    {
+                      "type": "link",
+                      "settings": {
+                        "link": "",
+                        "label": "Primary button label",
+                        "button_style": "btn btn--primary",
+                        "open_in_new_tab": false
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
           ]
+        },
+        {
+          "type": "slideshow-controls",
+          "id": "slideshow-controls",
+          "static": true,
+          "settings": {
+            "page_width": "page-width",
+            "control_style": "embla-simple",
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          }
+        },
+        {
+          "type": "slideshow-navigation",
+          "id": "slideshow-controls",
+          "static": true,
+          "settings": {
+            "navigation_style": "embla-bars",
+            "spacing": {
+            },
+            "color_scheme": "scheme-4"
+          }
         }
-      ]
+      ],
+      "settings": {
+        "size": {
+        },
+        "slides_per_page": 1,
+        "gap": 0,
+        "loop": false,
+        "effect": "slide",
+        "autoplay_speed": 0,
+        "color_scheme": ""
+      }
     }
   ]
 }

@@ -27,10 +27,6 @@
         {
           "value": "is-relative",
           "label": "relative"
-        },
-        {
-          "value": "is-absolute",
-          "label": "absolute"
         }
       ],
       "default": ""
@@ -60,21 +56,9 @@
       "default": ""
     },
     {
-      "type": "style.size_panel",
-      "id": "size",
-      "label": "Size",
-      "default": {
-        "width": "100%",
-        "flex-grow": "1"
-      }
-    },
-    {
       "type": "style.spacing_panel",
       "id": "spacing",
-      "label": "Spacing",
-      "default": {
-        "padding": "20px"
-      }
+      "label": "Spacing"
     },
     {
       "type": "style.layout_panel",
@@ -82,11 +66,9 @@
       "label": "Layout",
       "default": {
         "flex-direction": "row",
-        "flex-wrap": "nowrap",
         "gap": "20px",
         "justify-content": "center",
         "align-items": "center",
-
         "@media (--mobile)": {
           "flex-wrap": "wrap"
         }
@@ -106,34 +88,6 @@
   "presets": [
     {
       "name": "Container"
-    },
-    {
-      "name": "Column",
-      "settings": {
-        "color_scheme": "scheme-3",
-        "layout": {
-          "flex-direction": "column",
-          "align-items": "flex-start"
-        },
-        "spacing": {
-          "padding": "20px"
-        }
-      },
-      "blocks": [
-        {
-          "type": "heading",
-          "settings": {
-            "heading": "Column",
-            "heading_size": "h3"
-          }
-        },
-        {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-          }
-        }
-      ]
     }
   ]
 }
