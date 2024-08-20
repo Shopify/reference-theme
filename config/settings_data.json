@@ -9,6 +9,11 @@
 */
 {
   "current": {
+    "button_primary_color_scheme": "scheme-2",
+    "button_tertiary_color_scheme": "scheme-3",
+    "content_for_index": [
+
+    ],
     "color_schemes": {
       "scheme-1": {
         "settings": {
