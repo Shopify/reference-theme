@@ -25,9 +25,7 @@ embla-slider[fade]{
       width: 6px;
       position: relative;
       & svg {
-        position: absolute;
-        top: 0;
-        left: 0;
+        display:none;
         & .progress{
           stroke-dasharray: 100;
           stroke-dashoffset: 100;
@@ -39,7 +37,11 @@ embla-slider[fade]{
         height: 9px;
         opacity: 1;
         & svg {
+          display:block;
           transform: rotate(-90deg);
+          position: absolute;
+          top: 0;
+          left: 0;
           & .shadow{
             opacity: 0.4;
           }
