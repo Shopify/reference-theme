@@ -1,6 +1,6 @@
 {% comment %} Should make a setting to decide which type of heading we're outputting instead of a heading size one. {% endcomment %}
 <{{block.settings.html_tag}}
-  class="shopify-block-heading {{ block.settings | class_list }} {{ block.settings.heading_size }} text-{{ block.settings.alignment }}"
+  class="shopify-block-heading {{ block.settings | class_list }} {{ block.settings.heading_style }} text-{{ block.settings.alignment }}"
   {{ block.shopify_attributes }}
 >
   {{ block.settings.heading }}
