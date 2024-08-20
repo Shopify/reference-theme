@@ -101,7 +101,7 @@
                       "settings": {
                         "link": "",
                         "label": "Primary button label",
-                        "style_class": "btn--primary",
+                        "style_class": "btn--secondary",
                         "open_in_new_tab": false
                       }
                     }
