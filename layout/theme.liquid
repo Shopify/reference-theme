@@ -24,19 +24,13 @@
 
     {{ content_for_header }}
 
-    {%- liquid
-      assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-      assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-      assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-    %}
-
-
-    {%- unless settings.type_body_font.system? -%}
-      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
-    {%- endunless -%}
-    {%- unless settings.type_header_font.system? -%}
-      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
-    {%- endunless -%}
+    {% for i in 1..9 %}
+      {% assign font_weight = i | times: 100 %}
+      {% assign font = settings.font_family_primary | font_modify: "weight", font_weight %}
+      {% unless font.system? %}
+        <link rel="preload" as="font" href="{{ font | font_url }}" type="font/woff2" crossorigin>
+      {% endunless %}
+    {% endfor %}
 
     {{ 'critical.css' | asset_url | stylesheet_tag }}
     {{ 'color.css' | asset_url | stylesheet_tag }}

@@ -3,7 +3,7 @@
 {% for i in 1..9 %}
   {% assign font_weight = i | times: 100 %}
   {% assign font_family = settings.font_family_primary.family %}
-  {% assign font = settings.font_family_primary | font_modify: weight: font_weight %}
+  {% assign font = settings.font_family_primary | font_modify: "weight", font_weight %}
   @font-face {
     font-family: "{{ font_family }}";
     font-weight: {{ font_weight }}
