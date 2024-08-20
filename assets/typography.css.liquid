@@ -1,9 +1,23 @@
 
 
-{{ settings.font_family_primary | font_face: font_display: 'swap' }}
+{% for i in 1..9 %}
+  {% assign font_weight = i | times: 100 %}
+  {% assign font_family = settings.font_family_primary.family %}
+  {% assign font = settings.font_family_primary | font_modify: weight: font_weight %}
+  @font-face {
+    font-family: "{{ font_family }}";
+    font-weight: {{ font_weight }}
+    src: 
+      local("{{ font_family }}"),
+      local("{{ font_family }}"),
+      url("{{ font | font_url }}") format("woff2"),
+      url("{{ font | font_url: "woff" }}") format("woff");
+  }
+{% endfor %}
 
 ::root{
   --font-family-primary: "{{settings.font_family_primary.family}}", {{settings.font_family_primary.fallback_families}};
+  --font-family-secondary: "{{settings.font_family_primary.family}}", {{settings.font_family_primary.fallback_families}};
 }
 /* font style */
 
