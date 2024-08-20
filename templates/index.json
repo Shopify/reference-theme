@@ -28,7 +28,12 @@
             "image_AAMMwf": {
               "type": "image",
               "settings": {
-                "object_fit": "cover"
+                "object_fit": "cover",
+                "size": {
+                  "height": "500px",
+                  "width": "100%",
+                  "flex-grow": "1"
+                }
               }
             },
             "simple_overlay_9CwXAf": {
@@ -130,7 +135,12 @@
             "image_xDXERb": {
               "type": "image",
               "settings": {
-                "object_fit": "cover"
+                "object_fit": "cover",
+                "size": {
+                  "width": "100%",
+                  "flex-grow": "1",
+                  "height": "500px"
+                }
               }
             },
             "simple_overlay_UXLqHx": {
