@@ -256,6 +256,7 @@
         "slide_tDNzwc"
       ],
       "settings": {
+        "position": "is-relative",
         "size": {
         },
         "slides_per_page": 1,
