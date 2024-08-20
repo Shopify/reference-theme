@@ -1,6 +1,6 @@
 <a
   href="{{ block.settings.link }}"
-  class="btn {{ block.settings.button_style }}"
+  class="{{ block.settings.button_style }}"
   {%- if block.settings.open_in_new_tab -%}
     target="_blank" rel="noopener noreferrer"
   {%- endif -%}
@@ -31,19 +31,19 @@
       "label": "Style",
       "options": [
         {
-          "value": "btn--primary",
+          "value": "btn btn--primary",
           "label": "Primary"
         },
         {
-          "value": "btn--secondary",
+          "value": "btn btn--secondary",
           "label": "Secondary"
         },
         {
-          "value": "btn--tertiary",
+          "value": "btn btn--tertiary",
           "label": "Tertiary"
         },
         {
-          "value": "btn--link",
+          "value": "link",
           "label": "Link"
         }
       ],
@@ -61,28 +61,28 @@
       "name": "Button (link)",
       "settings": {
         "label": "Link label",
-        "style_class": "link"
+        "button_style": "link"
       }
     },
     {
       "name": "Button (primary)",
       "settings": {
         "label": "Primary button label",
-        "style_class": "btn--primary",
+        "button_style": "btn btn--primary",
       }
     },
     {
       "name": "Button (secondary)",
       "settings": {
         "label": "Secondary button label",
-        "style_class": "btn--secondary",
+        "button_style": "btn btn--secondary",
       }
     },
     {
       "name": "Button (tertiary)",
       "settings": {
         "label": "Tertiary button label",
-        "style_class": "btn--tertiary",
+        "button_style": "btn btn--tertiary",
       }
     }
   ]
