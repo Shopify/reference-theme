@@ -270,30 +270,47 @@
         "content": "Primary"
       },
       {
-        "type": "color_scheme",
-        "id": "button_primary_color_scheme",
-        "label": "Color scheme",
-        "default": "scheme-1"
+        "type": "color",
+        "id": "button_primary_background_color",
+        "label": "Background Color",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "button_primary_color",
+        "label": "Color",
+        "default": "#fff"
       },
       {
         "type": "header",
         "content": "Secondary"
       },
       {
-        "type": "color_scheme",
-        "id": "button_secondary_color_scheme",
-        "label": "Color scheme",
-        "default": "scheme-1"
+        "type": "color",
+        "id": "button_secondary_background_color",
+        "label": "Background Color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "button_secondary_color",
+        "label": "Color",
+        "default": "#000"
       },
       {
         "type": "header",
         "content": "Tertiary"
       },
       {
-        "type": "color_scheme",
-        "id": "button_tertiary_color_scheme",
-        "label": "Color scheme",
-        "default": "scheme-1"
+        "type": "color",
+        "id": "button_tertiary_background_color",
+        "label": "Background Color"
+      },
+      {
+        "type": "color",
+        "id": "button_tertiary_color",
+        "label": "Color",
+        "default": "#000"
       }
     ]
   },
