@@ -1,8 +1,19 @@
+{% assign loading = 'lazy' %}
+{% if section.index < 2 %}
+  {% assign loading = 'eager' %}
+{% endif %}
+
 <div
   class="{{ block.settings | class_list }} image-wrapper {{ block.settings.object_fit }}"
   {{ block.shopify_attributes }}
 >
-    {% render 'image-element' %}
+    {% render 'image-element', 
+      image: block.settings.image, 
+      fit: block.settings.object_fit,
+      aspect_ratio: 'auto',
+      loading: loading,
+      sizes: '100vw'
+    %}
 </div>
 
 {% schema %}
