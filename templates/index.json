@@ -231,7 +231,7 @@
           "type": "slideshow-controls",
           "static": true,
           "settings": {
-            "page_width": "full-width",
+            "page_width": "page-width",
             "control_style": "embla-simple",
             "spacing": {
             },
