@@ -9,19 +9,6 @@
 */
 {
   "sections": {
-    "main": {
-      "type": "container",
-      "settings": {
-        "page_width": "page-width",
-        "position": "",
-        "overflow": "",
-        "spacing": {
-        },
-        "layout": {
-        },
-        "color_scheme": ""
-      }
-    },
     "slideshow_yAwtwT": {
       "type": "slideshow",
       "blocks": {
@@ -272,7 +259,6 @@
     }
   },
   "order": [
-    "main",
     "slideshow_yAwtwT"
   ]
 }
