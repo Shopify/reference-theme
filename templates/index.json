@@ -101,7 +101,7 @@
                       "settings": {
                         "link": "",
                         "label": "Primary button label",
-                        "style_class": "btn--primary",
+                        "button_style": "btn btn--primary",
                         "open_in_new_tab": false
                       }
                     }
@@ -121,6 +121,117 @@
           "block_order": [
             "image_wUVYd3",
             "simple_overlay_Cw87KX"
+          ]
+        },
+        "slide_if6ajQ": {
+          "type": "slide",
+          "settings": {
+            "page_width": "full-width",
+            "position": "is-relative",
+            "overflow": "overflow-hidden",
+            "spacing": {
+              "padding-block-start": "0px",
+              "padding-block-end": "0px",
+              "padding-inline-end": "0px",
+              "padding-inline-start": "0px"
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          },
+          "blocks": {
+            "image_9brPLw": {
+              "type": "image",
+              "settings": {
+                "object_fit": "cover",
+                "spacing": {
+                },
+                "size": {
+                  "height": "500px"
+                }
+              }
+            },
+            "simple_overlay_6fywKx": {
+              "type": "simple-overlay",
+              "settings": {
+                "overflow": "",
+                "spacing": {
+                  "padding-block-start": "20px",
+                  "padding-block-end": "20px",
+                  "padding-inline-start": "20px",
+                  "padding-inline-end": "20px"
+                },
+                "layout": {
+                  "flex-direction": "column"
+                },
+                "color_scheme": "scheme-4"
+              },
+              "blocks": {
+                "container_UPTXd8": {
+                  "type": "container",
+                  "settings": {
+                    "position": "",
+                    "overflow": "",
+                    "size": {
+                      "width": "auto"
+                    },
+                    "spacing": {
+                    },
+                    "layout": {
+                      "flex-direction": "column"
+                    },
+                    "color_scheme": ""
+                  },
+                  "blocks": {
+                    "heading_TcDWcL": {
+                      "type": "heading",
+                      "settings": {
+                        "heading": "Heading",
+                        "heading_size": "h2",
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
+                      }
+                    },
+                    "text_6DPrKQ": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+                        "text_style": "",
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
+                      }
+                    },
+                    "link_d94hjT": {
+                      "type": "link",
+                      "settings": {
+                        "link": "",
+                        "label": "Primary button label",
+                        "button_style": "btn btn--primary",
+                        "open_in_new_tab": false
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "heading_TcDWcL",
+                    "text_6DPrKQ",
+                    "link_d94hjT"
+                  ]
+                }
+              },
+              "block_order": [
+                "container_UPTXd8"
+              ]
+            }
+          },
+          "block_order": [
+            "image_9brPLw",
+            "simple_overlay_6fywKx"
           ]
         },
         "slideshow-controls": {
@@ -151,7 +262,8 @@
         }
       },
       "block_order": [
-        "slide_mEbteL"
+        "slide_mEbteL",
+        "slide_if6ajQ"
       ],
       "settings": {
         "size": {
