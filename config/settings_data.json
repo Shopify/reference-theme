@@ -11,6 +11,12 @@
   "current": {
     "font_family_primary": "basic_commercial_n4",
     "font_family_secondary": "basic_commercial_n4",
+    "font_size_h4": 20,
+    "font_size_h5": 18,
+    "font_size_h6": 16,
+    "font_size_large": 16,
+    "font_size_p": 14,
+    "font_size_small": 12,
     "content_for_index": [
 
     ],
