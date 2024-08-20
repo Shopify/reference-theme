@@ -5,7 +5,7 @@
   {% assign font_family = settings.font_family_primary.family %}
   {% assign font = settings.font_family_primary | font_modify: "weight", font_weight %}
   @font-face {
-    font-family: "{{ font_family }}";
+    font-family: {{ font_family }};
     font-weight: {{ font_weight }}
     src: 
       local("{{ font_family }}"),
@@ -31,9 +31,11 @@
     {% assign selector = selector | prepend: 'body, ' %}
   {% endif %}
   {{selector}}{
-    font-family: var({{settings[font_family] }});
+    font-family: var({{settings[font_family]}});
     font-size: {{ settings[font_size] | append: 'px' }};
     font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: 1.05px;
     margin: 0;
     @media (max-width: 750px){
       font-size: {{ settings[font_size] | append: 'px' }};
