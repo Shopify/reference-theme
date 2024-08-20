@@ -14,15 +14,7 @@ button,
     {% assign setting_name = "button_" | append: button_style | append: "_color_scheme" %}
     {% assign scheme = settings[setting_name] %}
     &.btn--{{button_style}}{% if button_style == "secondary" %}, {{shopify_buttons}}{% endif %}{
-      --button-{{button_style}}-color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
-      {% if scheme.settings.background_gradient != empty %}
-        --button-{{button_style}}-gradient-background: {{ scheme.settings.background_gradient }};
-      {% else %}
-        --button-{{button_style}}-gradient-background: {{ scheme.settings.background }};
-      {% endif %}
-      --button-{{button_style}}-color-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
-      color: rgba(var(--button-{{button_style}}-color-foreground), 1);
-      background: var(--button-{{button_style}}-gradient-background);
+     
     }
   {% endfor %}
 }
