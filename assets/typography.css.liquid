@@ -1,13 +1,9 @@
 
 
-/* font-face
-@font-face {
-  font-family: {{settings.font_family_primary.family}};
-  src: url("{{ '[font-file-name]' | asset_url }}") format("[font-format]");
-}*/
-{{ settings.type_header_font | font_face: font_display: 'swap' }}
+{{ settings.font_family_primary | font_face: font_display: 'swap' }}
+
 ::root{
-  --font-family-primary: {{settings.font_family_primary.family}}, {{settings.font_family_primary.fallback_families}};
+  --font-family-primary: "{{settings.font_family_primary.family}}", {{settings.font_family_primary.fallback_families}};
 }
 /* font style */
 
