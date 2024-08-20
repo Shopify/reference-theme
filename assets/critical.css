@@ -178,8 +178,7 @@ p {
 .full-width {
   width: 100%;
 }
-
-/* Buttons */
+/* 
 button,
 .button {
   cursor: pointer;
@@ -187,7 +186,7 @@ button,
 }
 
 .button,
-.button-secondary,
+.btn--secondary,
 .shopify-payment-button__button.shopify-payment-button__button--unbranded {
   --fill-link-icon-color: var(--color-button-text);
   border: 0;
@@ -201,7 +200,7 @@ button,
   font-size: calc(var(--font-body-scale) * 1.5rem);
 }
 
-.button-secondary {
+.btn--secondary {
   --fill-link-icon-color: var(--color-secondary-button-text);
   background-color: rgba(var(--color-secondary-button), 1);
   color: rgb(var(--color-secondary-button-text));
@@ -232,8 +231,8 @@ button,
   border-radius: 4px;
   padding-block: 12px;
   padding-inline: 12px;
-}
-
+} */
+/* 
 .shopify-payment-button .shopify-payment-button__button {
   width: 100%;
   line-height: normal;
@@ -248,7 +247,7 @@ button,
 
 .shopify-payment-button__more-options.shopify-payment-button__button--hidden {
   display: none;
-}
+} */
 
 .product-form__buttons > * {
   width: 100%;

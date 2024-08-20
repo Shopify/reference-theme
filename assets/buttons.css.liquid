@@ -1,12 +1,21 @@
+button,
 .btn{
-  padding: 5px 10px;
+  cursor: pointer;
+  padding: 10px 30px;
+  -webkit-appearance: none;
+  appearance: none;
+  width: fit-content;
+  text-decoration: none;
+  border: none;
+  border-radius: none;
   color: rgba(var(--color-foreground), 1);
   background: var(--gradient-background);
   {% assign button_styles = "primary,secondary,tertiary" | split: ',' %}
+  {% assign shopify_buttons = ".shopify-payment-button__button.shopify-payment-button__button--unbranded" %}
   {% for button_style in button_styles %}
     {% assign setting_name = "button_" | append: button_style | append: "_color_scheme" %}
     {% assign scheme = settings[setting_name] %}
-    &.btn--{{button_style}}{
+    &.btn--{{button_style}}{% if button_style == "secondary" %}, {{shopify_buttons}}{% endif %}{
       --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
       {% if scheme.settings.background_gradient != empty %}
         --gradient-background: {{ scheme.settings.background_gradient }};

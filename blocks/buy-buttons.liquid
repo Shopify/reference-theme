@@ -45,7 +45,7 @@
         <div class="{{ block.settings.layout | class_list }} product-form__buttons">
           <button
             id="ProductSubmitButton-{{ section.id }}-{{ product.id }}"
-            class="button button--add-to-cart"
+            class="btn btn--add-to-cart"
             type="submit"
             name="add"
             {% if product.selected_or_first_available_variant.available == false %}
@@ -73,7 +73,7 @@
         <button
           type="submit"
           name="add"
-          class="product-form__submit button button--add-to-cart button--primary"
+          class="product-form__submit btn btn--add-to-cart btn--primary"
           disabled
         >
           No product!
