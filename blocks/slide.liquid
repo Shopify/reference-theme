@@ -28,6 +28,26 @@
   "settings": [
     {
       "type": "header",
+      "content": "Page width"
+    },
+    {
+      "type": "select",
+      "id": "page_width",
+      "label": "Page width",
+      "options": [
+        {
+          "value": "full-width",
+          "label": "Full width"
+        },
+        {
+          "value": "page-width",
+          "label": "Page width"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
       "content": "Position"
     },
     {
@@ -42,10 +62,6 @@
         {
           "value": "is-relative",
           "label": "relative"
-        },
-        {
-          "value": "is-absolute",
-          "label": "absolute"
         }
       ],
       "default": ""
@@ -75,21 +91,9 @@
       "default": ""
     },
     {
-      "type": "style.size_panel",
-      "id": "size",
-      "label": "Size",
-      "default": {
-        "width": "100%",
-        "flex-grow": "1"
-      }
-    },
-    {
       "type": "style.spacing_panel",
       "id": "spacing",
-      "label": "Spacing",
-      "default": {
-        "padding": "20px"
-      }
+      "label": "Spacing"
     },
     {
       "type": "style.layout_panel",
@@ -97,16 +101,24 @@
       "label": "Layout",
       "default": {
         "flex-direction": "row",
-        "flex-wrap": "nowrap",
         "gap": "20px",
         "justify-content": "center",
         "align-items": "center",
-
         "@media (--mobile)": {
           "flex-wrap": "wrap"
         }
       }
-    } 
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
   ],
   "presets": [
     {
