@@ -30,7 +30,6 @@
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
     %}
 
-    {% render 'css-variables' %}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -39,7 +38,10 @@
       <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
 
-    {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'critical.css' | asset_url | stylesheet_tag }}
+    {{ 'color.css' | asset_url | stylesheet_tag }}
+    {{ 'typography.css' | asset_url | stylesheet_tag }}
+    {{ 'minimal-skin.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
 
     <script type="module" src="{{ 'embla-slider-component.js' | asset_url }}"></script>

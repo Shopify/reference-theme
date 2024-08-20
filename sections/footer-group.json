@@ -3,7 +3,7 @@
   "name": "Footer group",
   "sections": {
     "f3655535-32dc-4b1a-8f58-041cd0dce0ec": {
-      "type": "custom-section",
+      "type": "container",
       "blocks": {
         "5b635cb0-c1b4-408f-a776-d6977e4ff9d4": {
           "type": "container",

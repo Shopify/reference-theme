@@ -75,7 +75,7 @@ You can also do this directly in the JSON file. You must include a `"blocks"` ke
 {
   "sections": {
     "example-section": {
-      "type": "custom-section",
+      "type": "container",
       "blocks": {
         "example-block": {
           "type": "heading",

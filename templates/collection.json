@@ -1,7 +1,7 @@
 {
   "sections": {
     "container": {
-      "type": "custom-section",
+      "type": "container",
       "blocks": {
         "text_RBVHTC": {
           "type": "text",

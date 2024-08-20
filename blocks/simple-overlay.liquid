@@ -1,0 +1,31 @@
+<div
+  class="is-absolute color-{{ block.settings.color_scheme }}"
+  {{ block.shopify_attributes }}
+>
+  {% content_for "blocks" %}
+</div>
+
+{% schema %}
+{
+  "name": "Container",
+  "tag": null,
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Simple Overlay"
+    }
+  ]
+}
+{% endschema %}

@@ -1,14 +1,35 @@
 {% stylesheet %}{% endstylesheet %}
 
-<div class="full-width {{ section.settings | class_list }} color-{{ section.settings.color_scheme }} {{ section.settings.page_width }}  {{ section.settings.position }} {{ section.settings.overflow }}">
+<div class="{{section.settings.page_width}} {{ section.settings | class_list }} color-{{ section.settings.color_scheme }} {{ section.settings.position }} {{ section.settings.overflow }}">
   {% content_for "blocks" %}
 </div>
 
 {% schema %}
 {
-  "name": "Custom section",
+  "name": "Container",
+  "tag": "section",
   "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
+    {
+      "type": "header",
+      "content": "Page width"
+    },
+    {
+      "type": "select",
+      "id": "page_width",
+      "label": "Page width",
+      "options": [
+        {
+          "value": "full-width",
+          "label": "Full width"
+        },
+        {
+          "value": "page-width",
+          "label": "Page width"
+        }
+      ],
+      "default": ""
+    },
     {
       "type": "header",
       "content": "Position"
@@ -25,10 +46,6 @@
         {
           "value": "is-relative",
           "label": "relative"
-        },
-        {
-          "value": "is-absolute",
-          "label": "absolute"
         }
       ],
       "default": ""
@@ -58,32 +75,9 @@
       "default": ""
     },
     {
-      "type": "header",
-      "content": "Page width"
-    },
-    {
-      "type": "select",
-      "id": "page_width",
-      "options": [
-        {
-          "value": "",
-          "label": "none"
-        },
-        {
-          "value": "page-width",
-          "label": "normal"
-        }
-      ],
-      "label": "Page width",
-      "default": ""
-    },
-    {
       "type": "style.spacing_panel",
       "id": "spacing",
-      "label": "Spacing",
-      "default": {
-        "padding": "20px"
-      }
+      "label": "Spacing"
     },
     {
       "type": "style.layout_panel",
@@ -94,7 +88,6 @@
         "gap": "20px",
         "justify-content": "center",
         "align-items": "center",
-
         "@media (--mobile)": {
           "flex-wrap": "wrap"
         }
@@ -113,7 +106,7 @@
   ],
   "presets": [
     {
-      "name": "Custom section"
+      "name": "Container"
     },
     {
       "name": "Image with text",

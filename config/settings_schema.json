@@ -12,43 +12,221 @@
     "settings": [
       {
         "type": "header",
-        "content": "Headings"
+        "content": "Font Familys"
       },
       {
         "type": "font_picker",
-        "id": "type_header_font",
+        "id": "primary_font",
         "default": "assistant_n4",
-        "label": "Heading fonts"
+        "label": "Primary fonts"
       },
       {
-        "type": "range",
-        "id": "heading_scale",
-        "min": 100,
-        "max": 150,
-        "step": 5,
-        "unit": "%",
-        "label": "Font size scale",
-        "default": 100
+        "type": "font_picker",
+        "id": "secondary_font",
+        "default": "assistant_n4",
+        "label": "Secondary font"
       },
       {
         "type": "header",
-        "content": "Body"
+        "content": "Font Styles"
       },
       {
-        "type": "font_picker",
-        "id": "type_body_font",
-        "default": "assistant_n4",
-        "label": "Body font"
+        "type": "number",
+        "id": "font_size_h1",
+        "label": "Font Size h1",
+        "default": 40
       },
       {
-        "type": "range",
-        "id": "body_scale",
-        "min": 100,
-        "max": 130,
-        "step": 5,
-        "unit": "%",
-        "label": "Font size scale",
-        "default": 100
+        "type": "select",
+        "id": "font_family_h1",
+        "label": "Font family h1",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
+      },
+      {
+        "type": "number",
+        "id": "font_size_h2",
+        "label": "Font Size h2",
+        "default": 32
+      },
+      {
+        "type": "select",
+        "id": "font_family_h2",
+        "label": "Font family h2",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
+      },
+      {
+        "type": "number",
+        "id": "font_size_h3",
+        "label": "Font Size h3",
+        "default": 24
+      },
+      {
+        "type": "select",
+        "id": "font_family_h3",
+        "label": "Font family h3",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
+      },
+      {
+        "type": "number",
+        "id": "font_size_h4",
+        "label": "Font Size h4",
+        "default": 22
+      },
+      {
+        "type": "select",
+        "id": "font_family_h4",
+        "label": "Font family h4",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
+      },
+      {
+        "type": "number",
+        "id": "font_size_h5",
+        "label": "Font Size h5",
+        "default": 20
+      },
+      {
+        "type": "select",
+        "id": "font_family_h5",
+        "label": "Font family h5",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
+      },
+      {
+        "type": "number",
+        "id": "font_size_h6",
+        "label": "Font Size h6",
+        "default": 18
+      },
+      {
+        "type": "select",
+        "id": "font_family_h6",
+        "label": "Font family h6",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
+      },
+      {
+        "type": "number",
+        "id": "font_size_large",
+        "label": "Font Size large",
+        "default": 18
+      },
+      {
+        "type": "select",
+        "id": "font_family_large",
+        "label": "Font family large",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
+      },
+      {
+        "type": "number",
+        "id": "font_size_p",
+        "label": "Font Size p",
+        "default": 16
+      },
+      {
+        "type": "select",
+        "id": "font_family_p",
+        "label": "Font family p",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
+      },
+      {
+        "type": "number",
+        "id": "font_size_small",
+        "label": "Font Size small",
+        "default": 14
+      },
+      {
+        "type": "select",
+        "id": "font_family_small",
+        "label": "Font family small",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
       }
     ]
   },

@@ -400,7 +400,7 @@
       }
     },
     "65a25908-415f-40aa-a6d4-00985cafbfac": {
-      "type": "custom-section",
+      "type": "container",
       "blocks": {
         "41e666be-a592-4acf-9961-469beb09b1eb": {
           "type": "heading",
@@ -499,7 +499,7 @@
       }
     },
     "custom_section_6gDiLb": {
-      "type": "custom-section",
+      "type": "container",
       "blocks": {
         "image_qLBgRH": {
           "type": "image",
@@ -611,7 +611,7 @@
       }
     },
     "custom_section_UB43TV": {
-      "type": "custom-section",
+      "type": "container",
       "blocks": {
         "heading_N7jmpy": {
           "type": "heading",
@@ -743,7 +743,7 @@
       }
     },
     "custom_section_MiX6gV": {
-      "type": "custom-section",
+      "type": "container",
       "blocks": {
         "heading_y84T7H": {
           "type": "heading",
@@ -1138,7 +1138,7 @@
       }
     },
     "custom_section_YmTwNm": {
-      "type": "custom-section",
+      "type": "container",
       "blocks": {
         "heading_HebfQi": {
           "type": "heading",
@@ -1197,7 +1197,7 @@
       }
     },
     "custom_section_gbgWDY": {
-      "type": "custom-section",
+      "type": "container",
       "blocks": {
         "group_hwEiRw": {
           "type": "container",
@@ -1418,7 +1418,7 @@
       }
     },
     "custom_section_eKe4dX": {
-      "type": "custom-section",
+      "type": "container",
       "blocks": {
         "group_7G9X8q": {
           "type": "container",

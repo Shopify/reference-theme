@@ -156,7 +156,7 @@
       }
     },
     "f80fab76-22f9-452e-ad08-16b13cc02cd6": {
-      "type": "custom-section",
+      "type": "container",
       "blocks": {
         "group_QwzE6T": {
           "type": "container",
