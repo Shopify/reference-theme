@@ -16,30 +16,30 @@
       },
       {
         "type": "font_picker",
-        "id": "primary_font",
+        "id": "font_family_primary",
         "default": "assistant_n4",
-        "label": "Primary fonts"
+        "label": "Primary font"
       },
       {
         "type": "font_picker",
-        "id": "secondary_font",
+        "id": "font_family_secondary",
         "default": "assistant_n4",
         "label": "Secondary font"
       },
       {
         "type": "header",
-        "content": "Font Styles"
+        "content": "Font Style H1"
       },
       {
         "type": "number",
         "id": "font_size_h1",
-        "label": "Font Size h1",
+        "label": "Font Size",
         "default": 40
       },
       {
         "type": "select",
         "id": "font_family_h1",
-        "label": "Font family h1",
+        "label": "Font family",
         "options": [
           {
             "value": "--font-family-primary",
@@ -53,15 +53,19 @@
         "default": "--font-family-primary"
       },
       {
+        "type": "header",
+        "content": "Font Style H2"
+      },
+      {
         "type": "number",
         "id": "font_size_h2",
-        "label": "Font Size h2",
+        "label": "Font Size",
         "default": 32
       },
       {
         "type": "select",
         "id": "font_family_h2",
-        "label": "Font family h2",
+        "label": "Font family",
         "options": [
           {
             "value": "--font-family-primary",
@@ -75,15 +79,19 @@
         "default": "--font-family-primary"
       },
       {
+        "type": "header",
+        "content": "Font Style H3"
+      },
+      {
         "type": "number",
         "id": "font_size_h3",
-        "label": "Font Size h3",
+        "label": "Font Size",
         "default": 24
       },
       {
         "type": "select",
         "id": "font_family_h3",
-        "label": "Font family h3",
+        "label": "Font family",
         "options": [
           {
             "value": "--font-family-primary",
@@ -97,15 +105,19 @@
         "default": "--font-family-primary"
       },
       {
+        "type": "header",
+        "content": "Font Style H4"
+      },
+      {
         "type": "number",
         "id": "font_size_h4",
-        "label": "Font Size h4",
+        "label": "Font Size",
         "default": 22
       },
       {
         "type": "select",
         "id": "font_family_h4",
-        "label": "Font family h4",
+        "label": "Font family",
         "options": [
           {
             "value": "--font-family-primary",
@@ -119,15 +131,19 @@
         "default": "--font-family-primary"
       },
       {
+        "type": "header",
+        "content": "Font Style H5"
+      },
+      {
         "type": "number",
         "id": "font_size_h5",
-        "label": "Font Size h5",
+        "label": "Font Size",
         "default": 20
       },
       {
         "type": "select",
         "id": "font_family_h5",
-        "label": "Font family h5",
+        "label": "Font family",
         "options": [
           {
             "value": "--font-family-primary",
@@ -141,15 +157,19 @@
         "default": "--font-family-primary"
       },
       {
+        "type": "header",
+        "content": "Font Style H6"
+      },
+      {
         "type": "number",
         "id": "font_size_h6",
-        "label": "Font Size h6",
+        "label": "Font Size",
         "default": 18
       },
       {
         "type": "select",
         "id": "font_family_h6",
-        "label": "Font family h6",
+        "label": "Font family",
         "options": [
           {
             "value": "--font-family-primary",
@@ -163,15 +183,19 @@
         "default": "--font-family-primary"
       },
       {
+        "type": "header",
+        "content": "Font Style Body large"
+      },
+      {
         "type": "number",
         "id": "font_size_large",
-        "label": "Font Size large",
+        "label": "Font Size",
         "default": 18
       },
       {
         "type": "select",
         "id": "font_family_large",
-        "label": "Font family large",
+        "label": "Font family",
         "options": [
           {
             "value": "--font-family-primary",
@@ -185,15 +209,19 @@
         "default": "--font-family-primary"
       },
       {
+        "type": "header",
+        "content": "Font Style Body"
+      },
+      {
         "type": "number",
         "id": "font_size_p",
-        "label": "Font Size p",
+        "label": "Font Size",
         "default": 16
       },
       {
         "type": "select",
         "id": "font_family_p",
-        "label": "Font family p",
+        "label": "Font family",
         "options": [
           {
             "value": "--font-family-primary",
@@ -207,15 +235,19 @@
         "default": "--font-family-primary"
       },
       {
+        "type": "header",
+        "content": "Font Style Body small"
+      },
+      {
         "type": "number",
         "id": "font_size_small",
-        "label": "Font Size small",
+        "label": "Font Size",
         "default": 14
       },
       {
         "type": "select",
         "id": "font_family_small",
-        "label": "Font family small",
+        "label": "Font family",
         "options": [
           {
             "value": "--font-family-primary",

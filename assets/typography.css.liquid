@@ -15,7 +15,7 @@
 {% for font_style in font_styles %}
   {% assign font_family = 'font_family_' | append: font_style %}
   {% assign font_size = 'font_size_' | append: font_style %}
-  {% assign selector = font_styles | append: ', .' | append: font_styles %}
+  {% assign selector = font_style | append: ', .' | append: font_style %}
   {{selector}}{
     font-family: var({{settings[font_family] }});
     font-size: {{ settings[font_size] | append: 'px' }};
