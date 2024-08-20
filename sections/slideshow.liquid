@@ -6,7 +6,7 @@
   }
 </style>
 
-<embla-slider id="slideshow-{{section.id}}" class="{{ section.settings | class_list }} color-{{ section.settings.color_scheme }}"
+<embla-slider id="slideshow-{{section.id}}" class="{{ section.settings | class_list }} {{ section.settings.position }} color-{{ section.settings.color_scheme }}"
   options="loop: {{ section.settings.loop }}, containScroll: trimSnaps, align: start"
   auto-height
   {% if section.settings.autoplay_speed != 0 %}
