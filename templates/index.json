@@ -96,12 +96,12 @@
                         }
                       }
                     },
-                    "link_wGrwPi": {
+                    "link_wrTwqD": {
                       "type": "link",
                       "settings": {
                         "link": "",
                         "label": "Primary button label",
-                        "style_class": "btn--secondary",
+                        "style_class": "btn--primary",
                         "open_in_new_tab": false
                       }
                     }
@@ -109,7 +109,7 @@
                   "block_order": [
                     "heading_V9kc9T",
                     "text_jGCyzT",
-                    "link_wGrwPi"
+                    "link_wrTwqD"
                   ]
                 }
               },
