@@ -1,8 +1,10 @@
 {
   "sections": {
-   
+    "main": {
+      "type": "container"
+    }
   },
   "order": [
-    
+    "main"
   ]
 }
