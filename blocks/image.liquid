@@ -11,9 +11,9 @@
 <div
   class="shopify-block-image {{ block.settings | class_list }}"
   {{ block.shopify_attributes }}
-  style="--aspect-ratio: {{aspect_ratio}};"
 >
-  <div class="image-wrapper {{ block.settings.object_fit }}">
+  <div class="image-wrapper {{ block.settings.object_fit }}"
+  style="--aspect-ratio: {{aspect_ratio}};">
     {% render 'image-element', 
       image: block.settings.image, 
       fit: block.settings.object_fit,
