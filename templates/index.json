@@ -33,7 +33,9 @@
                   "height": "500px",
                   "width": "100%",
                   "flex-grow": "1"
-                }
+                },
+                "aspect_ratio_type": "auto",
+                "aspect_ratio": 1
               }
             },
             "simple_overlay_9CwXAf": {
@@ -133,7 +135,9 @@
                   "width": "100%",
                   "flex-grow": "1",
                   "height": "500px"
-                }
+                },
+                "aspect_ratio_type": "auto",
+                "aspect_ratio": 1
               }
             },
             "simple_overlay_UXLqHx": {
@@ -325,7 +329,9 @@
               "width": "100%",
               "flex-grow": "1",
               "height": "auto"
-            }
+            },
+            "aspect_ratio_type": "custom",
+            "aspect_ratio": 1
           }
         }
       },
