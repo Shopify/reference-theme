@@ -8,6 +8,7 @@
   {% assign aspect_ratio = block.settings.aspect_ratio %}
 {% endif %}
 
+
 <div
   class="shopify-block-image {{ block.settings | class_list }}"
   {{ block.shopify_attributes }}
@@ -20,7 +21,7 @@
       aspect_ratio: aspect_ratio,
       loading: loading,
       sizes: '100vw',
-      placeholder: "lifestyle-1"
+      placeholder: block.settings.placeholder
     %}
   </div>
 </div>
@@ -80,8 +81,79 @@
       "id": "aspect_ratio",
       "label": "Custom aspect ratio",
       "default": 1
+    },
+    {
+      "type": "select",
+      "id": "placeholder",
+      "label": "Placeholder",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "collection-1",
+          "label": "Collection 1"
+        },
+        {
+          "value": "collection-2",
+          "label": "Collection 2"
+        },
+        {
+          "value": "collection-3",
+          "label": "Collection 3"
+        },
+        {
+          "value": "collection-4",
+          "label": "Collection 4"
+        },
+        {
+          "value": "collection-5",
+          "label": "Collection 5"
+        },
+        {
+          "value": "collection-6",
+          "label": "Collection 6"
+        },
+        {
+          "value": "lifestyle-1",
+          "label": "Lifestyle 1"
+        },
+        {
+          "value": "lifestyle-2",
+          "label": "Lifestyle 2"
+        },
+        {
+          "value": "product-1",
+          "label": "Product 1"
+        },
+        {
+          "value": "product-2",
+          "label": "Product 2"
+        },
+        {
+          "value": "product-3",
+          "label": "Product 3"
+        },
+        {
+          "value": "product-4",
+          "label": "Product 4"
+        },
+        {
+          "value": "product-5",
+          "label": "Product 5"
+        },
+        {
+          "value": "product-6",
+          "label": "Product 6"
+        }
+      ],
+      "default": "image",
+      "info": "A placeholder allows you to prototype a section without the actual content."
     }
   ],
-  "presets": [{ "name": "Image" }]
+  "presets": [
+    { "name": "Image" }
+  ]
 }
 {% endschema %}
