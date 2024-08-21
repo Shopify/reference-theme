@@ -246,9 +246,93 @@
         "autoplay_speed": 0,
         "color_scheme": ""
       }
+    },
+    "container_kwzRMC": {
+      "type": "container",
+      "blocks": {
+        "image_9pAGXL": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "size": {
+              "width": "100%",
+              "flex-grow": "1"
+            }
+          }
+        },
+        "container_RyTLjV": {
+          "type": "container",
+          "settings": {
+            "position": "",
+            "overflow": "",
+            "size": {
+              "width": "100%",
+              "flex-grow": "1"
+            },
+            "spacing": {
+            },
+            "layout": {
+              "flex-direction": "column"
+            },
+            "color_scheme": ""
+          },
+          "blocks": {
+            "heading_GK6CgU": {
+              "type": "heading",
+              "settings": {
+                "heading": "Heading",
+                "html_tag": "p",
+                "heading_style": "h4",
+                "alignment": "left"
+              }
+            },
+            "text_FUUWaw": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+                "text_style": "p",
+                "alignment": "left"
+              }
+            },
+            "link_C6wdQR": {
+              "type": "link",
+              "settings": {
+                "link": "",
+                "label": "Secondary button label",
+                "button_style": "btn btn--secondary",
+                "open_in_new_tab": false
+              }
+            }
+          },
+          "block_order": [
+            "heading_GK6CgU",
+            "text_FUUWaw",
+            "link_C6wdQR"
+          ]
+        }
+      },
+      "block_order": [
+        "image_9pAGXL",
+        "container_RyTLjV"
+      ],
+      "settings": {
+        "page_width": "page-width",
+        "position": "",
+        "overflow": "",
+        "spacing": {
+          "padding-block-start": "40px",
+          "padding-block-end": "40px"
+        },
+        "layout": {
+          "row-gap": "40px",
+          "column-gap": "40px"
+        },
+        "color_scheme": ""
+      }
     }
   },
   "order": [
-    "slideshow_yAwtwT"
+    "slideshow_yAwtwT",
+    "container_kwzRMC"
   ]
 }
