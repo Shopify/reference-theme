@@ -327,7 +327,8 @@
           "row-gap": "40px",
           "column-gap": "40px",
           "justify-content": "flex-start",
-          "align-items": "center"
+          "align-items": "center",
+          "flex-wrap": "nowrap"
         },
         "color_scheme": ""
       }
