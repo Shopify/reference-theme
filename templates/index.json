@@ -323,7 +323,8 @@
             "object_fit": "cover",
             "size": {
               "width": "100%",
-              "flex-grow": "1"
+              "flex-grow": "1",
+              "height": "auto"
             }
           }
         }
