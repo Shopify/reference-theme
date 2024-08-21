@@ -35,7 +35,8 @@
                   "flex-grow": "1"
                 },
                 "aspect_ratio_type": "auto",
-                "aspect_ratio": 1
+                "aspect_ratio": 1,
+                "placeholder": "lifestyle-1"
               }
             },
             "simple_overlay_9CwXAf": {
@@ -137,7 +138,8 @@
                   "height": "500px"
                 },
                 "aspect_ratio_type": "auto",
-                "aspect_ratio": 1
+                "aspect_ratio": 1,
+                "placeholder": "lifestyle-2"
               }
             },
             "simple_overlay_UXLqHx": {
@@ -165,7 +167,7 @@
                     "layout": {
                       "flex-direction": "column"
                     },
-                    "color_scheme": ""
+                    "color_scheme": "scheme-4"
                   },
                   "blocks": {
                     "heading_xmPgXb": {
@@ -331,7 +333,8 @@
               "height": "auto"
             },
             "aspect_ratio_type": "custom",
-            "aspect_ratio": 1
+            "aspect_ratio": 1,
+            "placeholder": "image"
           }
         }
       },
