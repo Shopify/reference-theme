@@ -250,16 +250,6 @@
     "container_kwzRMC": {
       "type": "container",
       "blocks": {
-        "image_9pAGXL": {
-          "type": "image",
-          "settings": {
-            "object_fit": "cover",
-            "size": {
-              "width": "100%",
-              "flex-grow": "1"
-            }
-          }
-        },
         "container_RyTLjV": {
           "type": "container",
           "settings": {
@@ -270,20 +260,35 @@
               "flex-grow": "1"
             },
             "spacing": {
+              "padding-block-start": "20px",
+              "padding-block-end": "20px",
+              "padding-inline-end": "20px",
+              "padding-inline-start": "0px"
             },
             "layout": {
               "flex-direction": "column",
-              "align-items": "flex-start"
+              "align-items": "flex-start",
+              "row-gap": "20px",
+              "column-gap": "20px"
             },
             "color_scheme": ""
           },
           "blocks": {
+            "heading_HVURpU": {
+              "type": "heading",
+              "settings": {
+                "heading": "Heading",
+                "html_tag": "p",
+                "heading_style": "h6",
+                "alignment": "center"
+              }
+            },
             "heading_GK6CgU": {
               "type": "heading",
               "settings": {
                 "heading": "Heading",
                 "html_tag": "p",
-                "heading_style": "h4",
+                "heading_style": "h3",
                 "alignment": "left"
               }
             },
@@ -306,15 +311,26 @@
             }
           },
           "block_order": [
+            "heading_HVURpU",
             "heading_GK6CgU",
             "text_FUUWaw",
             "link_C6wdQR"
           ]
+        },
+        "image_9pAGXL": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "size": {
+              "width": "100%",
+              "flex-grow": "1"
+            }
+          }
         }
       },
       "block_order": [
-        "image_9pAGXL",
-        "container_RyTLjV"
+        "container_RyTLjV",
+        "image_9pAGXL"
       ],
       "settings": {
         "page_width": "page-width",
