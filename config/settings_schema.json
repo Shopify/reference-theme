@@ -37,10 +37,10 @@
         "default": 40
       },
       {
-        "type": "number",
+        "type": "text",
         "id": "line_height_h1",
         "label": "Line height",
-        "default": 1.2
+        "default": "1.2"
       },
       {
         "type": "select",
@@ -70,10 +70,10 @@
         "default": 34
       },
       {
-        "type": "number",
+        "type": "text",
         "id": "line_height_h2",
         "label": "Line height",
-        "default": 1.24
+        "default": "1.24"
       },
       {
         "type": "select",
@@ -102,10 +102,10 @@
         "default": 28
       },
       {
-        "type": "number",
+        "type": "text",
         "id": "line_height_h3",
         "label": "Line height",
-        "default": 1.21
+        "default": "1.21"
       },
       {
         "type": "select",
@@ -134,10 +134,10 @@
         "default": 24
       },
       {
-        "type": "number",
+        "type": "text",
         "id": "line_height_h4",
         "label": "Line height",
-        "default": 1.25
+        "default": "1.25"
       },
       {
         "type": "select",
@@ -166,10 +166,10 @@
         "default": 20
       },
       {
-        "type": "number",
+        "type": "text",
         "id": "line_height_h5",
         "label": "Line height",
-        "default": 1.3
+        "default": "1.3"
       },
       {
         "type": "select",
@@ -198,10 +198,10 @@
         "default": 16
       },
       {
-        "type": "number",
+        "type": "text",
         "id": "line_height_h6",
         "label": "Line height",
-        "default": 1.38
+        "default": "1.38"
       },
       {
         "type": "select",
@@ -230,10 +230,10 @@
         "default": 18
       },
       {
-        "type": "number",
+        "type": "text",
         "id": "line_height_large",
         "label": "Line height",
-        "default": 1.5
+        "default": "1.5"
       },
       {
         "type": "select",
@@ -262,10 +262,10 @@
         "default": 16
       },
       {
-        "type": "number",
+        "type": "text",
         "id": "line_height_p",
         "label": "Line height",
-        "default": 1.5
+        "default": "1.5"
       },
       {
         "type": "select",
@@ -294,10 +294,10 @@
         "default": 14
       },
       {
-        "type": "number",
+        "type": "text",
         "id": "line_height_small",
         "label": "Line height",
-        "default": 1.5
+        "default": "1.5"
       },
       {
         "type": "select",
