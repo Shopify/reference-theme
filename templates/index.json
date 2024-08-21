@@ -299,7 +299,7 @@
               "settings": {
                 "link": "",
                 "label": "Secondary button label",
-                "button_style": "btn btn--secondary",
+                "button_style": "btn btn--primary",
                 "open_in_new_tab": false
               }
             }
