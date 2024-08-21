@@ -315,6 +315,17 @@
     ]
   },
   {
+    "name": "Media",
+    "settings": [
+      {
+        "type": "color",
+        "id": "media_background",
+        "label": "Background Color",
+        "default": "#e1e1e1"
+      }
+    ]
+  },
+  {
     "name": "Color scheme",
     "settings": [
       {
