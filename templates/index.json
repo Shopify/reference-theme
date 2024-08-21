@@ -53,14 +53,14 @@
                     "position": "",
                     "overflow": "",
                     "size": {
-                      "width": "50%",
+                      "width": "45%",
                       "flex-grow": "0"
                     },
                     "spacing": {
-                      "padding-block-start": "20px",
-                      "padding-block-end": "20px",
-                      "padding-inline-start": "20px",
-                      "padding-inline-end": "20px"
+                      "padding-block-start": "40px",
+                      "padding-block-end": "40px",
+                      "padding-inline-start": "40px",
+                      "padding-inline-end": "40px"
                     },
                     "layout": {
                       "flex-direction": "column"
@@ -246,9 +246,114 @@
         "autoplay_speed": 0,
         "color_scheme": ""
       }
+    },
+    "container_kwzRMC": {
+      "type": "container",
+      "blocks": {
+        "container_RyTLjV": {
+          "type": "container",
+          "settings": {
+            "position": "",
+            "overflow": "",
+            "size": {
+              "width": "100%",
+              "flex-grow": "1"
+            },
+            "spacing": {
+              "padding-block-start": "20px",
+              "padding-block-end": "20px",
+              "padding-inline-end": "20px",
+              "padding-inline-start": "0px"
+            },
+            "layout": {
+              "flex-direction": "column",
+              "align-items": "flex-start",
+              "row-gap": "20px",
+              "column-gap": "20px"
+            },
+            "color_scheme": ""
+          },
+          "blocks": {
+            "heading_HVURpU": {
+              "type": "heading",
+              "settings": {
+                "heading": "Heading",
+                "html_tag": "p",
+                "heading_style": "h6",
+                "alignment": "center"
+              }
+            },
+            "heading_GK6CgU": {
+              "type": "heading",
+              "settings": {
+                "heading": "Heading",
+                "html_tag": "p",
+                "heading_style": "h3",
+                "alignment": "left"
+              }
+            },
+            "text_FUUWaw": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+                "text_style": "p",
+                "alignment": "left"
+              }
+            },
+            "link_C6wdQR": {
+              "type": "link",
+              "settings": {
+                "link": "",
+                "label": "Secondary button label",
+                "button_style": "btn btn--primary",
+                "open_in_new_tab": false
+              }
+            }
+          },
+          "block_order": [
+            "heading_HVURpU",
+            "heading_GK6CgU",
+            "text_FUUWaw",
+            "link_C6wdQR"
+          ]
+        },
+        "image_9pAGXL": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "size": {
+              "width": "100%",
+              "flex-grow": "1",
+              "height": "auto"
+            }
+          }
+        }
+      },
+      "block_order": [
+        "container_RyTLjV",
+        "image_9pAGXL"
+      ],
+      "settings": {
+        "page_width": "page-width",
+        "position": "",
+        "overflow": "",
+        "spacing": {
+          "padding-block-start": "40px",
+          "padding-block-end": "40px"
+        },
+        "layout": {
+          "row-gap": "40px",
+          "column-gap": "40px",
+          "justify-content": "flex-start",
+          "align-items": "center",
+          "flex-wrap": "nowrap"
+        },
+        "color_scheme": ""
+      }
     }
   },
   "order": [
-    "slideshow_yAwtwT"
+    "slideshow_yAwtwT",
+    "container_kwzRMC"
   ]
 }
