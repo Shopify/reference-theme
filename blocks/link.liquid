@@ -6,12 +6,14 @@
   {%- endif -%}
   {{ block.shopify_attributes }}
 >
-  {{ block.settings.label }}
+  <span>
+    {{ block.settings.label }}
+  </span>
 </a>
 
 {% schema %}
 {
-  "name": "Button",
+  "name": "Link",
   "tag": null,
   "settings": [
     {

@@ -3,15 +3,21 @@
   {% assign loading = 'eager' %}
 {% endif %}
 
+{% assign aspect_ratio = 'auto' %}
+{% if block.settings.aspect_ratio_type == "custom" %}
+  {% assign aspect_ratio = block.settings.aspect_ratio %}
+{% endif %}
+
 <div
   class="shopify-block-image {{ block.settings | class_list }}"
   {{ block.shopify_attributes }}
+  style="--aspect-ratio: {{aspect_ratio}};"
 >
   <div class="image-wrapper {{ block.settings.object_fit }}">
     {% render 'image-element', 
       image: block.settings.image, 
       fit: block.settings.object_fit,
-      aspect_ratio: 'auto',
+      aspect_ratio: aspect_ratio,
       loading: loading,
       sizes: '100vw',
       placeholder: "lifestyle-1"
@@ -52,6 +58,28 @@
       "default": {
         "width": "auto",
       }
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio_type",
+      "label": "Aspect Ratio",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Auto"
+        },
+        {
+          "value": "custom",
+          "label": "Custom"
+        }
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "number",
+      "id": "aspect_ratio",
+      "label": "Custom aspect ratio",
+      "default": 1
     }
   ],
   "presets": [{ "name": "Image" }]

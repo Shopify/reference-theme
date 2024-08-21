@@ -1,6 +1,7 @@
 :root {
   --layout-gap: 15px;
   --page-width: 1200px;
+  --site-gutter: 40px;
 }
 
 * {
@@ -8,17 +9,25 @@
   word-break: break-word;
 }
 
-html {
-  /* font-size: calc(var(--font-body-scale) * 62.5%); */
-}
-
+p,
 body {
   margin: 0;
 }
 
-p {
-  margin: 0;
+/* layout  */
+html .page-width{
+  width: 100%;
+  max-width: var(--page-width);
+  margin-inline: auto;
+  padding-inline: var(--site-gutter);
+  @media (max-width: 750px){
+    --site-gutter: 20px;
+  }
 }
+.full-width {
+  width: 100%;
+}
+
 .shopify-section {
   display: flex;
   justify-content: center;
@@ -28,21 +37,7 @@ p {
   width: 100%;
 }
 
-.section-content-wrapper {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: var(--page-width);
-  margin-inline: auto;
-  gap: var(--layout-gap);
-}
-
-.full-width {
-  width: 100%;
-}
-
-/* Link block & links */
+/* links */
 .link,
 a {
   display: inline-flex;
@@ -50,31 +45,24 @@ a {
   justify-content: flex-start;
   color: rgb(var(--color-foreground));
   text-decoration: none;
+  cursor: pointer;
 }
-
+/* positioning */
 .is-relative{
   position: relative;
 }
 .is-absolute{
   position: absolute;
 }
+/* overflow */
 .overflow-hidden{
   overflow: hidden;
 }
 .overflow-scroll{
   overflow: scroll;
 }
-.page-width{
-  --page-width: 1200px;
-  --site-gutter: 40px;
-  width: 100%;
-  max-width: var(--page-width);
-  margin-inline: auto;
-  padding-inline: var(--site-gutter);
-  @media (max-width: 750px){
-    --site-gutter: 20px;
-  }
-}
+
+/* Flex System */
 .flex{
   --gap: 0px;
   display: flex;
@@ -146,7 +134,7 @@ a {
     }
   }
 }
-
+/* Overlay */
 .shopify-block-overlay{
   --left: 0;
   --right: 0;
@@ -156,7 +144,7 @@ a {
   left: var(--left);
   top: var(--right);
 }
-
+/* Text Alignment */
 .text-start{
   text-align: left;
 }
@@ -166,7 +154,7 @@ a {
 .text-end{
   text-align: right;
 }
-
+/* Image */
 .image-wrapper{
   width:100%;
   height:100%;

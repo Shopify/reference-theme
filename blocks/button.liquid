@@ -1,0 +1,69 @@
+<button type="{{ block.settings.type }}">
+  <span class="button-label">
+    {{ block.settings.label }}
+  </span>
+  <svg aria-hidden="true" focusable="false" class="button-spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+  </svg>
+</button>
+
+{% comment %} Todo: loading & disabled state {% endcomment %}
+{% comment %} Todo: Only inside forms {% endcomment %}
+{% comment %} Todo: custom actions for type button? {% endcomment %}
+{% schema %}
+{
+  "name": "Button",
+  "tag": null,
+  "settings": [
+    {
+      "type": "select",
+      "id": "type",
+      "label": "Type",
+      "options": [
+        {
+          "value": "submit",
+          "label": "Submit"
+        },
+        {
+          "value": "reset",
+          "label": "Reset"
+        },
+        {
+          "value": "button",
+          "label": "Button"
+        }
+      ],
+      "default": "submit"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label",
+      "default": "Button label"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Style",
+      "options": [
+        {
+          "value": "btn btn--primary",
+          "label": "Primary"
+        },
+        {
+          "value": "btn btn--secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "btn btn--tertiary",
+          "label": "Tertiary"
+        }
+      ],
+      "default": "btn btn--primary"
+    }
+  ],
+  "presets": [
+    
+  ]
+}
+{% endschema %}
