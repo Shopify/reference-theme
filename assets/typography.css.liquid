@@ -26,21 +26,44 @@
 {% for font_style in font_styles %}
   {% assign font_family = 'font_family_' | append: font_style %}
   {% assign font_size = 'font_size_' | append: font_style %}
+  {% assign font_size_mobile = 'font_size_' | append: font_style | append: '_mobile' %}
   {% assign line_height = 'line_height_' | append: font_style %}
   {% assign selector = font_style | append: ', .' | append: font_style %}
   {% if font_style == 'p' %}
     {% assign selector = selector | prepend: 'body, ' %}
   {% endif %}
   {{selector}}{
+    --font-size: {{ settings[font_size] | append: 'px' }};
+    --font-size-mobile: {{ settings[font_size_mobile] | append: 'px' }};
     font-family: var({{settings[font_family]}});
-    font-size: {{ settings[font_size] | append: 'px' }};
+    font-size: var(--font-size);
     font-weight: normal;
     line-height: {{settings[line_height]}};
     letter-spacing: 1.05px;
     margin: 0;
     color: currentColor;
     @media (max-width: 750px){
-      font-size: {{ settings[font_size] | append: 'px' }};
+      font-size: var(--font-size-mobile);
     }
   }
 {% endfor %}
+
+:root {
+  /* Define the breakpoints and font sizes */
+  --breakpoint-min: 320px; /* The minimum width where the scaling starts */
+  --breakpoint-max: 1200px; /* The maximum width where the scaling ends */
+  --font-size-min: 16px; /* Font size at the minimum breakpoint */
+  --font-size-max: 32px; /* Font size at the maximum breakpoint */
+}
+
+.element {
+  font-size: clamp(
+    var(--font-size-min), 
+    calc(
+      var(--font-size-min) + 
+      (var(--font-size-max) - var(--font-size-min)) * 
+      ((100vw - var(--breakpoint-min)) / (var(--breakpoint-max) - var(--breakpoint-min)))
+    ), 
+    var(--font-size-max)
+  );
+}

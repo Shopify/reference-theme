@@ -37,6 +37,12 @@
         "default": 40
       },
       {
+        "type": "number",
+        "id": "font_size_h1_mobile",
+        "label": "Font Size (mobile)",
+        "default": 32
+      },
+      {
         "type": "text",
         "id": "line_height_h1",
         "label": "Line height",
@@ -68,6 +74,12 @@
         "id": "font_size_h2",
         "label": "Font Size",
         "default": 34
+      },
+      {
+        "type": "number",
+        "id": "font_size_h2_mobile",
+        "label": "Font Size (mobile)",
+        "default": 28
       },
       {
         "type": "text",
@@ -102,6 +114,12 @@
         "default": 28
       },
       {
+        "type": "number",
+        "id": "font_size_h3_mobile",
+        "label": "Font Size (mobile)",
+        "default": 24
+      },
+      {
         "type": "text",
         "id": "line_height_h3",
         "label": "Line height",
@@ -132,6 +150,12 @@
         "id": "font_size_h4",
         "label": "Font Size",
         "default": 24
+      },
+      {
+        "type": "number",
+        "id": "font_size_h4_mobile",
+        "label": "Font Size (mobile)",
+        "default": 20
       },
       {
         "type": "text",
@@ -166,6 +190,12 @@
         "default": 20
       },
       {
+        "type": "number",
+        "id": "font_size_h5_mobile",
+        "label": "Font Size (mobile)",
+        "default": 18
+      },
+      {
         "type": "text",
         "id": "line_height_h5",
         "label": "Line height",
@@ -195,6 +225,12 @@
         "type": "number",
         "id": "font_size_h6",
         "label": "Font Size",
+        "default": 16
+      },
+      {
+        "type": "number",
+        "id": "font_size_h6_mobile",
+        "label": "Font Size (mobile)",
         "default": 16
       },
       {
@@ -230,6 +266,12 @@
         "default": 18
       },
       {
+        "type": "number",
+        "id": "font_size_large_mobile",
+        "label": "Font Size (mobile)",
+        "default": 16
+      },
+      {
         "type": "text",
         "id": "line_height_large",
         "label": "Line height",
@@ -262,6 +304,12 @@
         "default": 16
       },
       {
+        "type": "number",
+        "id": "font_size_p_mobile",
+        "label": "Font Size (mobile)",
+        "default": 14
+      },
+      {
         "type": "text",
         "id": "line_height_p",
         "label": "Line height",
@@ -292,6 +340,12 @@
         "id": "font_size_small",
         "label": "Font Size",
         "default": 14
+      },
+      {
+        "type": "number",
+        "id": "font_size_small_mobile",
+        "label": "Font Size (mobile)",
+        "default": 12
       },
       {
         "type": "text",
