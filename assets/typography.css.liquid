@@ -39,7 +39,7 @@
     --font-size: {{ settings[font_size] | append: 'px' }};
     --font-size-mobile: {{ settings[font_size_mobile] | append: 'px' }};
     font-family: var({{settings[font_family]}});
-    font-size: font-size: clamp(
+    font-size: clamp(
       var(--font-size-mobile), 
       calc(
         var(--font-size-mobile) + 
