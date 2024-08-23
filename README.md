@@ -158,6 +158,7 @@ As with a normal setting, it is accessed via its ID.
  - variables should should be formatted as ```snake_case```
 ### CSS 
  - variables should should be formatted as ```kebab-case```
+ - use '--' for variants of a class Example: ```btn btn--secondary```
 ### JS 
  - variables & functions should be formatted as ```camelCase```
  - do not use ```var``` use ```const``` where ever possible and ```let``` when necessary

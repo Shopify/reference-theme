@@ -1,6 +1,6 @@
 :root{
-  --mobile-screen-width: 390px;
-  --desktop-screen-width: 1440px;
+  --screen-width-mobile: 390px;
+  --screen-width-desktop: 1440px;
 }
 
 {% for i in 1..9 %}
@@ -41,11 +41,7 @@
     font-family: var({{settings[font_family]}});
     font-size: clamp(
       var(--font-size-mobile), 
-      calc(
-        var(--font-size-mobile) + 
-        (var(--font-size) - var(--font-size-mobile)) * 
-        ((100vw - var(--mobile-screen-width)) / (var(--desktop-screen-width) - var(--mobile-screen-width)))
-      ), 
+      calc(var(--font-size-mobile) + (var(--font-size) - var(--font-size-mobile)) * (100vw - var(--screen-width-mobile)) / (var(--screen-width-desktop) - var(--screen-width-mobile))), 
       var(--font-size)
     );
     font-weight: normal;
