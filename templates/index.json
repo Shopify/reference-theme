@@ -343,6 +343,7 @@
         "image_9pAGXL"
       ],
       "settings": {
+        "title": "Image with Text",
         "page_width": "page-width",
         "position": "",
         "overflow": "",
@@ -470,6 +471,7 @@
         "simple_overlay_pPFpEn"
       ],
       "settings": {
+        "title": "Image with Text Box",
         "page_width": "full-width",
         "position": "is-relative",
         "overflow": "overflow-hidden",
@@ -570,6 +572,7 @@
         "container_fEXzMB"
       ],
       "settings": {
+        "title": "Image with Text",
         "page_width": "page-width",
         "position": "",
         "overflow": "",
