@@ -370,7 +370,7 @@
             "size": {
               "width": "100%",
               "flex-grow": "1",
-              "height": "500px"
+              "height": "700px"
             },
             "aspect_ratio_type": "auto",
             "aspect_ratio": 1,
@@ -437,7 +437,7 @@
                 "text_Kk7KiV": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Share information about your brand with your customers.<\/p>",
+                    "text": "<p>Share information about your brand with your customers. <\/p>",
                     "text_style": "p",
                     "alignment": "left"
                   }
