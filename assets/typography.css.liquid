@@ -17,6 +17,7 @@
 :root{
   --screen-width-mobile: 360;
   --screen-width-desktop: 1440;
+  --screen-width-span: calc(var(--screen-width-desktop) - var(--screen-width-mobile));
   --font-family-primary: {{settings.font_family_primary.family}}, {{settings.font_family_primary.fallback_families}};
   --font-family-secondary: {{settings.font_family_primary.family}}, {{settings.font_family_primary.fallback_families}};
 }
@@ -36,8 +37,8 @@
   {{selector}}{
     --font-size-min: {{ settings[font_size_mobile] }};
     --font-size-max: {{ settings[font_size] }};
-    --font-size-optimal: calc(calc(var(--font-size-min) * 1px) + (var(--font-size-max) - var(--font-size-min)) * (100vw - calc(var(--screen-width-mobile) * 1px)) / (var(--screen-width-desktop) - var(--screen-width-mobile)));
-    
+    --font-size-optimal: calc(calc(var(--font-size-min) * 1px) + (var(--font-size-max) - var(--font-size-min)) * (100vw - calc(var(--screen-width-mobile) * 1px)) / var(--screen-width-span));
+
     font-family: var({{settings[font_family]}});
     font-size: clamp(calc(var(--font-size-min) * 1px), var(--font-size-optimal), calc(var(--font-size-max) * 1px));
     font-weight: normal;
