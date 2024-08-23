@@ -24,13 +24,7 @@
 
     {{ content_for_header }}
 
-    {% for i in 1..9 %}
-      {% assign font_weight = i | times: 100 %}
-      {% assign font = settings.font_family_primary | font_modify: "weight", font_weight %}
-      {% unless font.system? %}
-        <link rel="preload" as="font" href="{{ font | font_url }}" type="font/woff2" crossorigin>
-      {% endunless %}
-    {% endfor %}
+    {% render 'preload-fonts' %}
 
     {{ 'critical.css' | asset_url | stylesheet_tag }}
     {{ 'color.css' | asset_url | stylesheet_tag }}

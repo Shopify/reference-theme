@@ -1,0 +1,11 @@
+{% for i in 1..9 %}
+  {% assign font_weight = i | times: 100 %}
+  {% assign font = settings.font_family_primary | font_modify: "weight", font_weight %}
+  {% unless font.system? %}
+    {{  font | font_url | preload_tag: as: 'font' }}
+  {% endunless %}
+  {% assign font = settings.font_family_secondary | font_modify: "weight", font_weight %}
+  {% unless font.system? %}
+    {{  font | font_url | preload_tag: as: 'font' }}
+  {% endunless %}
+{% endfor %}
