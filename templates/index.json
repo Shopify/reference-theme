@@ -489,13 +489,14 @@
           "settings": {
             "overflow": "",
             "spacing": {
-              "padding-block-start": "40px",
-              "padding-block-end": "40px",
-              "padding-inline-start": "40px",
-              "padding-inline-end": "40px"
+              "padding-block-start": "60px",
+              "padding-block-end": "60px",
+              "padding-inline-start": "60px",
+              "padding-inline-end": "60px"
             },
             "layout": {
-              "align-items": "flex-start"
+              "align-items": "flex-start",
+              "justify-content": "flex-start"
             },
             "color_scheme": "scheme-4"
           },
@@ -509,6 +510,10 @@
                   "width": "30%"
                 },
                 "spacing": {
+                  "padding-block-start": "30px",
+                  "padding-block-end": "30px",
+                  "padding-inline-start": "30px",
+                  "padding-inline-end": "30px"
                 },
                 "layout": {
                   "flex-direction": "column",
@@ -539,7 +544,7 @@
                 "text_Kk7KiV": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+                    "text": "<p>Share information about your brand with your customers.<\/p>",
                     "text_style": "p",
                     "alignment": "left"
                   }
