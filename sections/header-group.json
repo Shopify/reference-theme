@@ -125,6 +125,8 @@
         "slide_8bjEmy"
       ],
       "settings": {
+        "title": "Slideshow",
+        "page_width": "full-width",
         "size": {
         },
         "slides_per_page": 1,
