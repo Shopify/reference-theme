@@ -135,9 +135,39 @@
         "autoplay_speed": 7,
         "color_scheme": "scheme-2"
       }
+    },
+    "container_A3mrUk": {
+      "type": "container",
+      "blocks": {
+        "heading_CJHPWc": {
+          "type": "heading",
+          "settings": {
+            "heading": "Modular Theme",
+            "html_tag": "p",
+            "heading_style": "h5",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CJHPWc"
+      ],
+      "settings": {
+        "page_width": "page-width",
+        "position": "",
+        "overflow": "",
+        "spacing": {
+          "padding-block-start": "20px",
+          "padding-block-end": "20px"
+        },
+        "layout": {
+        },
+        "color_scheme": ""
+      }
     }
   },
   "order": [
-    "slideshow_c3d3CE"
+    "slideshow_c3d3CE",
+    "container_A3mrUk"
   ]
 }
