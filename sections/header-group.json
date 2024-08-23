@@ -11,131 +11,6 @@
   "type": "header",
   "name": "Header",
   "sections": {
-    "slideshow_c3d3CE": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_bBaNea": {
-          "type": "slide",
-          "settings": {
-            "page_width": "page-width",
-            "position": "",
-            "overflow": "",
-            "spacing": {
-              "padding-block-start": "5px",
-              "padding-block-end": "5px"
-            },
-            "layout": {
-              "row-gap": "5px",
-              "column-gap": "5px"
-            },
-            "color_scheme": "scheme-2"
-          },
-          "blocks": {
-            "heading_c8LpRd": {
-              "type": "heading",
-              "settings": {
-                "heading": "Free Shipping",
-                "html_tag": "p",
-                "heading_style": "h6",
-                "alignment": "right"
-              }
-            },
-            "text_re7eYF": {
-              "type": "text",
-              "settings": {
-                "text": "<p>On all orders above 100€<\/p>",
-                "text_style": "large",
-                "alignment": "left"
-              }
-            }
-          },
-          "block_order": [
-            "heading_c8LpRd",
-            "text_re7eYF"
-          ]
-        },
-        "slide_cXnPiU": {
-          "type": "slide",
-          "settings": {
-            "page_width": "page-width",
-            "position": "",
-            "overflow": "",
-            "spacing": {
-              "padding-block-start": "5px",
-              "padding-block-end": "5px"
-            },
-            "layout": {
-              "row-gap": "5px",
-              "column-gap": "5px",
-              "align-items": "baseline"
-            },
-            "color_scheme": "scheme-2"
-          },
-          "blocks": {
-            "heading_4VerUx": {
-              "type": "heading",
-              "settings": {
-                "heading": "Heading",
-                "html_tag": "p",
-                "heading_style": "h6",
-                "alignment": "right"
-              }
-            },
-            "text_YyLFLh": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Share information about you.<\/p>",
-                "text_style": "large",
-                "alignment": "left"
-              }
-            }
-          },
-          "block_order": [
-            "heading_4VerUx",
-            "text_YyLFLh"
-          ]
-        },
-        "slideshow-controls": {
-          "type": "slideshow-controls",
-          "disabled": true,
-          "static": true,
-          "settings": {
-            "page_width": "full-width",
-            "control_style": "embla-simple",
-            "spacing": {
-            },
-            "layout": {
-            },
-            "color_scheme": ""
-          }
-        },
-        "slideshow-navigation": {
-          "type": "slideshow-navigation",
-          "disabled": true,
-          "static": true,
-          "settings": {
-            "navigation_style": "embla-bars",
-            "spacing": {
-            },
-            "color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide_bBaNea",
-        "slide_cXnPiU"
-      ],
-      "settings": {
-        "size": {
-        },
-        "slides_per_page": 1,
-        "gap": 0,
-        "loop": true,
-        "effect": "slide",
-        "autoplay_speed": 7,
-        "color_scheme": "scheme-2"
-      }
-    },
     "container_A3mrUk": {
       "type": "container",
       "blocks": {
@@ -167,7 +42,6 @@
     }
   },
   "order": [
-    "slideshow_c3d3CE",
     "container_A3mrUk"
   ]
 }
