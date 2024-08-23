@@ -11,6 +11,130 @@
   "type": "header",
   "name": "Header",
   "sections": {
+    "slideshow_NxYUz7": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_Ta933P": {
+          "type": "slide",
+          "settings": {
+            "page_width": "page-width",
+            "position": "is-relative",
+            "overflow": "",
+            "spacing": {
+              "padding-block-start": "5px",
+              "padding-block-end": "5px"
+            },
+            "layout": {
+              "row-gap": "5px",
+              "column-gap": "5px"
+            },
+            "color_scheme": "scheme-2"
+          },
+          "blocks": {
+            "heading_exef7X": {
+              "type": "heading",
+              "settings": {
+                "heading": "Heading",
+                "html_tag": "p",
+                "heading_style": "h6",
+                "alignment": "right"
+              }
+            },
+            "text_FPDTnq": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Share information about you.<\/p>",
+                "text_style": "p",
+                "alignment": "left"
+              }
+            }
+          },
+          "block_order": [
+            "heading_exef7X",
+            "text_FPDTnq"
+          ]
+        },
+        "slide_8bjEmy": {
+          "type": "slide",
+          "settings": {
+            "page_width": "page-width",
+            "position": "",
+            "overflow": "",
+            "spacing": {
+              "padding-block-start": "5px",
+              "padding-block-end": "5px"
+            },
+            "layout": {
+              "row-gap": "5px",
+              "column-gap": "5px"
+            },
+            "color_scheme": "scheme-2"
+          },
+          "blocks": {
+            "heading_mqarGJ": {
+              "type": "heading",
+              "settings": {
+                "heading": "Heading",
+                "html_tag": "p",
+                "heading_style": "h6",
+                "alignment": "right"
+              }
+            },
+            "text_MqQPhD": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Share information about you.<\/p>",
+                "text_style": "p",
+                "alignment": "left"
+              }
+            }
+          },
+          "block_order": [
+            "heading_mqarGJ",
+            "text_MqQPhD"
+          ]
+        },
+        "slideshow-controls": {
+          "type": "slideshow-controls",
+          "disabled": true,
+          "static": true,
+          "settings": {
+            "page_width": "full-width",
+            "control_style": "embla-simple",
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          }
+        },
+        "slideshow-navigation": {
+          "type": "slideshow-navigation",
+          "disabled": true,
+          "static": true,
+          "settings": {
+            "navigation_style": "embla-bars",
+            "spacing": {
+            },
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_Ta933P",
+        "slide_8bjEmy"
+      ],
+      "settings": {
+        "size": {
+        },
+        "slides_per_page": 1,
+        "gap": 0,
+        "loop": false,
+        "effect": "slide",
+        "autoplay_speed": 7,
+        "color_scheme": "scheme-2"
+      }
+    },
     "container_A3mrUk": {
       "type": "container",
       "blocks": {
@@ -43,6 +167,7 @@
     }
   },
   "order": [
+    "slideshow_NxYUz7",
     "container_A3mrUk"
   ]
 }
