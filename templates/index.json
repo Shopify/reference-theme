@@ -366,7 +366,7 @@
         "form_ktiPe3": {
           "type": "form",
           "settings": {
-            "type": "contact",
+            "type": "localization",
             "size": {
             },
             "spacing": {
@@ -379,25 +379,30 @@
             "select_FphGD3": {
               "type": "select",
               "settings": {
-                "type": "custom",
+                "type": "country",
                 "name": "custom-select"
-              },
-              "blocks": {
-                "option_6dEYbK": {
-                  "type": "option",
-                  "settings": {
-                    "name": "Custom Option",
-                    "value": "custom-value"
-                  }
-                }
-              },
-              "block_order": [
-                "option_6dEYbK"
-              ]
+              }
+            },
+            "select_pRNHw7": {
+              "type": "select",
+              "settings": {
+                "type": "language",
+                "name": "custom-select"
+              }
+            },
+            "button_YyURRU": {
+              "type": "button",
+              "settings": {
+                "type": "submit",
+                "label": "Button label",
+                "button_style": "btn btn--primary"
+              }
             }
           },
           "block_order": [
-            "select_FphGD3"
+            "select_FphGD3",
+            "select_pRNHw7",
+            "button_YyURRU"
           ]
         }
       },
