@@ -55,3 +55,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .large, p, .p, small, .sma
   animation: fade-up ease;
   animation-timeline: view(90svh 0px);
 }
+
+image-wrapper {
+  animation: fade-in ease;
+  animation-timeline: view(90svh 0px);
+}
