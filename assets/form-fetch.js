@@ -20,7 +20,7 @@ class FormFetch extends HTMLElement {
       .then(text => {
         const div = document.createElement('div')
         div.innerHTML = text.trim()
-        this.appendChild('div')
+        this.appendChild(div)
       })
       .catch(console.error)
     })
