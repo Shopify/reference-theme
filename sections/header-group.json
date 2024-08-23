@@ -130,7 +130,7 @@
         },
         "slides_per_page": 1,
         "gap": 0,
-        "loop": false,
+        "loop": true,
         "effect": "slide",
         "autoplay_speed": 7,
         "color_scheme": "scheme-2"
