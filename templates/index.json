@@ -370,7 +370,7 @@
             "size": {
               "width": "100%",
               "flex-grow": "1",
-              "height": "700px"
+              "height": "600px"
             },
             "aspect_ratio_type": "auto",
             "aspect_ratio": 1,
