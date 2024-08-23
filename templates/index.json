@@ -393,7 +393,7 @@
             "button_YyURRU": {
               "type": "button",
               "settings": {
-                "type": "submit",
+                "type": "button",
                 "label": "Button label",
                 "button_style": "btn btn--primary"
               }
