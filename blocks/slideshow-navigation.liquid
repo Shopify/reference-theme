@@ -2,7 +2,6 @@
 {% if navigation_style != "" %}
   <div
     class="shopify-block-slideshow-navigation embla-navigation {{ block.settings | class_list }} {{ navigation_style }} color-{{ block.settings.color_scheme }}"
-    aria-label="Slideshow thumbnails"
   >
     {% for block in section.blocks %}
       <embla-thumbnail
