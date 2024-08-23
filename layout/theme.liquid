@@ -39,8 +39,6 @@
         {{ 'minimal-skin.css' | asset_url | stylesheet_tag }}
     {% endcase %}
     
-    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-
     <script type="module" src="{{ 'embla-slider-component.js' | asset_url }}"></script>
     <link rel="stylesheet" href="{{ 'embla-slider-component.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'embla-slider-component-skin.css' | asset_url }}">
