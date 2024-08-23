@@ -379,9 +379,21 @@
             "select_FphGD3": {
               "type": "select",
               "settings": {
-                "type": "country",
-                "name": ""
-              }
+                "type": "custom",
+                "name": "custom-select"
+              },
+              "blocks": {
+                "option_6dEYbK": {
+                  "type": "option",
+                  "settings": {
+                    "name": "Custom Option",
+                    "value": "custom-value"
+                  }
+                }
+              },
+              "block_order": [
+                "option_6dEYbK"
+              ]
             }
           },
           "block_order": [
