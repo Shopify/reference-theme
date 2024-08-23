@@ -51,6 +51,7 @@
 
 /* text */
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .large, p, .p, small, .small{
-  animation: 1s ease 0s 1 fade-up;
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .large, p, .p, small, .small, .btn{
+  animation: fade-up ease;
+  animation-timeline: view(90svh);
 }
