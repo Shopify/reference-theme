@@ -466,11 +466,127 @@
         },
         "color_scheme": ""
       }
+    },
+    "container_qKiFGf": {
+      "type": "container",
+      "blocks": {
+        "image_aXPtd4": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "size": {
+              "width": "100%",
+              "flex-grow": "1",
+              "height": "500px"
+            },
+            "aspect_ratio_type": "auto",
+            "aspect_ratio": 1,
+            "placeholder": "image"
+          }
+        },
+        "simple_overlay_pPFpEn": {
+          "type": "simple-overlay",
+          "settings": {
+            "overflow": "",
+            "spacing": {
+              "padding-block-start": "40px",
+              "padding-block-end": "40px",
+              "padding-inline-start": "40px",
+              "padding-inline-end": "40px"
+            },
+            "layout": {
+              "align-items": "flex-start"
+            },
+            "color_scheme": "scheme-4"
+          },
+          "blocks": {
+            "container_iEEzC6": {
+              "type": "container",
+              "settings": {
+                "position": "",
+                "overflow": "",
+                "size": {
+                  "width": "30%"
+                },
+                "spacing": {
+                },
+                "layout": {
+                  "flex-direction": "column",
+                  "align-items": "flex-start",
+                  "justify-content": "center"
+                },
+                "color_scheme": "scheme-1"
+              },
+              "blocks": {
+                "heading_68NnnY": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "Heading",
+                    "html_tag": "p",
+                    "heading_style": "h6",
+                    "alignment": "center"
+                  }
+                },
+                "heading_d8D9MY": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "Heading",
+                    "html_tag": "p",
+                    "heading_style": "h4",
+                    "alignment": "center"
+                  }
+                },
+                "text_Kk7KiV": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+                    "text_style": "p",
+                    "alignment": "left"
+                  }
+                },
+                "link_RKwNdn": {
+                  "type": "link",
+                  "settings": {
+                    "link": "",
+                    "label": "Primary button label",
+                    "button_style": "btn btn--primary",
+                    "open_in_new_tab": false
+                  }
+                }
+              },
+              "block_order": [
+                "heading_68NnnY",
+                "heading_d8D9MY",
+                "text_Kk7KiV",
+                "link_RKwNdn"
+              ]
+            }
+          },
+          "block_order": [
+            "container_iEEzC6"
+          ]
+        }
+      },
+      "block_order": [
+        "image_aXPtd4",
+        "simple_overlay_pPFpEn"
+      ],
+      "settings": {
+        "page_width": "full-width",
+        "position": "is-relative",
+        "overflow": "overflow-hidden",
+        "spacing": {
+        },
+        "layout": {
+        },
+        "color_scheme": ""
+      }
     }
   },
   "order": [
     "slideshow_yAwtwT",
     "container_kwzRMC",
-    "container_MfKhrP"
+    "container_MfKhrP",
+    "container_qKiFGf"
   ]
 }
