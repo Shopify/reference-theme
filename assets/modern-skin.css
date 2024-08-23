@@ -7,11 +7,11 @@
 
 @keyframes fade-up {
   from {
-    transform: translateY(100%);
+    translate: 0 100%;
     opacity: 0;
   }
   to {
-    transform: translateY(0%);
+    translate: 0 0%;
     opacity: 1;
   }
 }
@@ -19,9 +19,11 @@
 @keyframes fade-in {
   from {
     opacity: 0;
+    scale: 0.8;
   }
   to {
     opacity: 1;
+    scale: 1;
   }
 }
 
@@ -56,7 +58,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .large, p, .p, small, .sma
   animation-timeline: view(90svh 0px);
 }
 
-image-wrapper {
+.image-wrapper > img, 
+.image-wrapper > svg{
   animation: fade-in ease;
   animation-timeline: view(90svh 0px);
 }
