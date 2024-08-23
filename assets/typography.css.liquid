@@ -1,6 +1,6 @@
 :root{
-  --screen-width-mobile: 390px;
-  --screen-width-desktop: 1440px;
+  --screen-width-mobile: 390;
+  --screen-width-desktop: 1440;
 }
 
 {% for i in 1..9 %}
@@ -38,7 +38,9 @@
   {{selector}}{
     --font-size: {{ settings[font_size] | append: 'px' }};
     --font-size-mobile: {{ settings[font_size_mobile] | append: 'px' }};
-    --font-size-optimal: calc(var(--font-size-mobile) + (var(--font-size) - var(--font-size-mobile)) * (100vw - var(--screen-width-mobile)) / (var(--screen-width-desktop) - var(--screen-width-mobile)));
+    --font-size-max: {{ settings[font_size] }};
+    --font-size-min: {{ settings[font_size_mobile] }};
+    --font-size-optimal: calc(var(--font-size-min) + (var(--font-size-max) - var(--font-size-min)) * (100vw - var(--screen-width-mobile)) / (var(--screen-width-desktop) - var(--screen-width-mobile)));
     font-family: var({{settings[font_family]}});
     font-size: clamp(var(--font-size-mobile), var(--font-size-optimal), var(--font-size));
     font-weight: normal;
