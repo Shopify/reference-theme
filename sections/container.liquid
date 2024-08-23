@@ -1,30 +1,13 @@
-{%- liquid
-  assign block_index = 0
-  for section_blocks in section.blocks
-    assign block_index = block_index
-    if block.id == section_blocks.id
-      break
-    endif
-  endfor
--%}
+{% stylesheet %}{% endstylesheet %}
 
-<embla-slide
-  id="slide-{{ block.id }}"
-  index="{{ block_index }}"
-  class="shopify-block-slide"
-  {{ block.shopify_attributes }}
->
-  <div 
-    class="{{ block.settings | class_list }} {{ block.settings.position }} {{ block.settings.overflow }}"
-  >
-    {% content_for "blocks" %}
-  </div>
-</embla-slide>
+<div class="{{section.settings.page_width}} {{ section.settings | class_list }} color-{{ section.settings.color_scheme }} {{ section.settings.position }} {{ section.settings.overflow }}">
+  {% content_for "blocks" %}
+</div>
 
 {% schema %}
 {
-  "name": "Slide",
-  "tag": null,
+  "name": "Container",
+  "tag": "section",
   "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
     {
@@ -123,10 +106,7 @@
   ],
   "presets": [
     {
-      "name": "Slide",
-      "blocks": [
-       
-      ]
+      "name": "Container"
     }
   ]
 }

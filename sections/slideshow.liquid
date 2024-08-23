@@ -1,129 +1,226 @@
-<slideshow-component
-  id="slideshow-{{ section.id }}"
-  class="slideshow slideshow--{{ section.settings.slide_height }}"
-  data-active-slide="0"
-  data-autoplay="{{ section.settings.autoplay }}"
-  {% if section.settings.autoplay %}
-    aria-live="polite"
-    data-autoplay-speed="{{ section.settings.autoplay_speed }}"
+
+<style>
+  #slideshow-{{section.id}}{
+    --slides-per-page: {{section.settings.slides_per_page}};
+    --gap:  {{section.settings.gap}}px;
+  }
+</style>
+
+<embla-slider id="slideshow-{{section.id}}" 
+  class="{{ section.settings | class_list }} {{ section.settings.page_width }} color-{{ section.settings.color_scheme }}"
+  options="loop: {{ section.settings.loop }}, containScroll: trimSnaps, align: start"
+  auto-height
+  {% if section.settings.autoplay_speed != 0 %}
+    autoplay="{{ section.settings.autoplay_speed | times: 1000 }}"
+  {% endif %}
+  {% if section.settings.effect contains "fade" %}
+    fade
   {% endif %}
 >
-  <div class="slideshow__slides">
-    {% content_for "blocks" %}
-  </div>
+  <embla-viewport>
+    <embla-slides>
+      {% content_for "blocks" %}
+    </embla-slides>
+  </embla-viewport>
 
   {% if section.blocks.size > 1 %}
     {% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}
   {% endif %}
-</slideshow-component>
+
+  {% if section.blocks.size > 1 %}
+    {% content_for "block", type: "slideshow-navigation", id: "slideshow-navigation" %}
+  {% endif %}
+
+</embla-slider>
 
 {% schema %}
 {
   "name": "Slideshow",
-  "class": "section--has-background",
+  "tag": "section",
   "blocks": [{ "type": "slide" }],
   "settings": [
     {
       "type": "header",
-      "content": "Slideshow height"
+      "content": "Page width"
     },
     {
       "type": "select",
-      "id": "slide_height",
+      "id": "page_width",
+      "label": "Page width",
       "options": [
         {
-          "value": "adapt_image",
-          "label": "Adapt to first image"
+          "value": "full-width",
+          "label": "Full width"
         },
         {
-          "value": "small",
-          "label": "Small"
-        },
-        {
-          "value": "medium",
-          "label": "Medium"
-        },
-        {
-          "value": "large",
-          "label": "Large"
+          "value": "page-width",
+          "label": "Page width"
         }
       ],
-      "default": "medium",
-      "label": "Slide height"
+      "default": "page-width"
+    },
+    {
+      "type": "style.size_panel",
+      "id": "size",
+      "label": "Size",
+      "default": {
+        "width": "100%",
+        "flex-grow": "1"
+      }
     },
     {
       "type": "header",
-      "content": "Slideshow style"
+      "content": "Slider"
+    },
+    {
+      "type": "range",
+      "id": "slides_per_page",
+      "label": "Slides per page",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "number",
+      "id": "gap",
+      "label": "Gap (px)",
+      "default": 0
     },
     {
       "type": "checkbox",
-      "id": "autoplay",
-      "label": "Autoplay",
+      "id": "loop",
+      "label": "Loop",
       "default": false
+    },
+    {
+      "type": "select",
+      "id": "effect",
+      "label": "Effect",
+      "options": [
+        {
+          "value": "fade",
+          "label": "Fade"
+        },
+        {
+          "value": "slide",
+          "label": "Slide"
+        }
+      ],
+      "default": "slide"
     },
     {
       "type": "range",
       "id": "autoplay_speed",
       "label": "Autoplay speed",
-      "min": 3,
+      "min": 0,
       "max": 7,
       "step": 1,
       "unit": "s",
-      "default": 5
-    }
+      "default": 0,
+      "info": "0 = off"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    } 
   ],
   "presets": [
     {
-      "name": "Slideshow",
+      "name": "Hero Slideshow",
       "blocks": [
         {
           "type": "slide",
+          "settings": {
+            "page_width": "full-width",
+            "position": "is-relative",
+            "overflow": "overflow-hidden",
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          },
           "blocks": [
             {
-              "type": "group",
+              "type": "image",
               "settings": {
-                "layout": {
-                  "flex-direction": "column",
-                  "justify-content": "flex-start"
+                "object_fit": "cover",
+                "spacing": {
                 },
                 "size": {
-                  "width": "50%",
-                  "flex-grow": "0",
-
-                  "@media (--mobile)": {
-                    "width": "100%"
-                  }
-                },
-                "spacing": {
-                  "padding": "50px",
-
-                  "@media (--mobile)": {
-                    "padding": "20px"
-                  }
+                  "height": "500px"
                 }
+              }
+            },
+            {
+              "type": "simple-overlay",
+              "settings": {
+                "overflow": "",
+                "spacing": {
+                },
+                "layout": {
+                },
+                "color_scheme": "scheme-4"
               },
               "blocks": [
                 {
-                  "type": "heading",
+                  "type": "container",
                   "settings": {
-                    "heading": "Image slide",
-                    "heading_size": "h1"
-                  }
-                },
-                {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Tell your brand's story through images</p>"
-                  }
-                },
-                {
-                  "type": "link",
-                  "settings": {
-                    "label": "Button label",
+                    "position": "",
+                    "overflow": "",
+                    "size": {
+                      "width": "50%",
+                      "flex-grow": "0"
+                    },
                     "spacing": {
-                      "padding": "10px 30px"
+                    },
+                    "layout": {
+                      "flex-direction": "column"
+                    },
+                    "color_scheme": ""
+                  },
+                  "blocks": [
+                    {
+                      "type": "heading",
+                      "settings": {
+                        "heading": "Heading",
+                        "heading_size": "h2",
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+                        "text_style": "",
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
+                      }
+                    },
+                    {
+                      "type": "link",
+                      "settings": {
+                        "link": "",
+                        "label": "Primary button label",
+                        "button_style": "btn btn--primary",
+                        "open_in_new_tab": false
+                      }
                     }
-                  }
+                  ]
                 }
               ]
             }
@@ -131,58 +228,131 @@
         },
         {
           "type": "slide",
+          "settings": {
+            "page_width": "full-width",
+            "position": "is-relative",
+            "overflow": "overflow-hidden",
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          },
           "blocks": [
             {
-              "type": "group",
+              "type": "image",
               "settings": {
-                "layout": {
-                  "flex-direction": "column",
-                  "justify-content": "flex-start"
+                "object_fit": "cover",
+                "spacing": {
                 },
                 "size": {
-                  "width": "50%",
-                  "flex-grow": "0",
-
-                  "@media (--mobile)": {
-                    "width": "100%"
-                  }
-                },
-                "spacing": {
-                  "padding": "50px",
-
-                  "@media (--mobile)": {
-                    "padding": "20px"
-                  }
+                  "height": "500px"
                 }
+              }
+            },
+            {
+              "type": "simple-overlay",
+              "settings": {
+                "overflow": "",
+                "spacing": {
+                },
+                "layout": {
+                },
+                "color_scheme": "scheme-4"
               },
               "blocks": [
                 {
-                  "type": "heading",
+                  "type": "container",
                   "settings": {
-                    "heading": "Image slide",
-                    "heading_size": "h1"
-                  }
-                },
-                {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Tell your brand's story through images</p>"
-                  }
-                },
-                {
-                  "type": "link",
-                  "settings": {
-                    "label": "Button label",
+                    "position": "",
+                    "overflow": "",
+                    "size": {
+                      "width": "50%",
+                      "flex-grow": "0"
+                    },
                     "spacing": {
-                      "padding": "10px 30px"
+                    },
+                    "layout": {
+                      "flex-direction": "column"
+                    },
+                    "color_scheme": ""
+                  },
+                  "blocks": [
+                    {
+                      "type": "heading",
+                      "settings": {
+                        "heading": "Heading",
+                        "heading_size": "h2",
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+                        "text_style": "",
+                        "alignment": "start",
+                        "size": {
+                        },
+                        "spacing": {
+                        }
+                      }
+                    },
+                    {
+                      "type": "link",
+                      "settings": {
+                        "link": "",
+                        "label": "Primary button label",
+                        "button_style": "btn btn--primary",
+                        "open_in_new_tab": false
+                      }
                     }
-                  }
+                  ]
                 }
               ]
             }
           ]
+        },
+        {
+          "type": "slideshow-controls",
+          "id": "slideshow-controls",
+          "static": true,
+          "settings": {
+            "page_width": "page-width",
+            "control_style": "embla-simple",
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          }
+        },
+        {
+          "type": "slideshow-navigation",
+          "id": "slideshow-controls",
+          "static": true,
+          "settings": {
+            "navigation_style": "embla-bars",
+            "spacing": {
+            },
+            "color_scheme": "scheme-4"
+          }
         }
-      ]
+      ],
+      "settings": {
+        "size": {
+        },
+        "slides_per_page": 1,
+        "gap": 0,
+        "loop": false,
+        "effect": "slide",
+        "autoplay_speed": 0,
+        "color_scheme": ""
+      }
     }
   ]
 }

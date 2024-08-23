@@ -1,5 +1,5 @@
 <div
-  class="{{ block.settings | class_list }} text-block {{ block.settings.text_style }} text-{{ block.settings.alignment }}"
+  class="shopify-block-text {{ block.settings | class_list }} {{ block.settings.text_style }} text-{{ block.settings.alignment }}"
   {{ block.shopify_attributes }}
 >
   {{ block.settings.text }}
@@ -22,56 +22,25 @@
       "label": "Style",
       "options": [
         {
-          "value": "",
+          "value": "large",
+          "label": "Body large"
+        },
+        {
+          "value": "p",
           "label": "Body"
         },
         {
-          "value": "text-block-subtitle",
-          "label": "Subtitle"
-        },
-        {
-          "value": "text-block-caption",
-          "label": "Caption"
+          "value": "small",
+          "label": "Body small"
         }
       ],
-      "default": ""
+      "default": "p"
     },
     {
-      "type": "select",
+      "type": "text_alignment",
       "id": "alignment",
-      "label": "Alignment",
-      "options": [
-        {
-          "value": "start",
-          "label": "Start"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "end",
-          "label": "End"
-        }
-      ],
-      "default": "start"
-    },
-    {
-      "type": "style.size_panel",
-      "id": "size",
-      "label": "Size",
-      "default": {
-        "width": "auto",
-
-        "@media (--mobile)": {
-          "width": "100%"
-        }
-      }
-    },
-    {
-      "type": "style.spacing_panel",
-      "id": "spacing",
-      "label": "Spacing"
+      "label": "Text alignment",
+      "default": "center"
     }
   ],
   "presets": [{ "name": "Text" }]

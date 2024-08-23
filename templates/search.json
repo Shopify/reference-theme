@@ -1,33 +1,21 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
-    "group": {
-      "type": "custom-section",
-      "blocks": {
-        "text_bckUWt": {
-          "type": "text",
-          "settings": {
-            "text": "<p>This template is not available in the Theme blocks developer preview.<\/p>",
-            "text_style": "",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "text_bckUWt"
-      ],
+    "main": {
+      "type": "container",
       "settings": {
-        "layout": {
-          "flex-direction": "row",
-          "justify-content": "center"
-        },
-        "spacing": {
-          "padding": "100px 0px"
-        },
-        "color_scheme": "scheme-2"
       }
     }
   },
   "order": [
-    "group"
+    "main"
   ]
 }

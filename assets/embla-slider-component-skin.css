@@ -1,0 +1,148 @@
+embla-slider{
+  position: relative;  
+}
+embla-slider[fade]{
+  & embla-slide.is-snapped{
+    transition: opacity 0.4s;
+  }  
+}
+/* Navigation */
+.embla-navigation{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  &.embla-dots{
+    & embla-thumbnail{
+      background-color: currentColor;
+      border-radius: 50%;
+      height: 6px;
+      opacity: 0.4;
+      width: 6px;
+      position: relative;
+      & svg {
+        display:none;
+        & .progress{
+          stroke-dasharray: 100;
+          stroke-dashoffset: 100;
+        }
+      }
+      &.is-selected{
+        background-color: transparent;
+        width: 9px;
+        height: 9px;
+        opacity: 1;
+        & svg {
+          display:block;
+          transform: rotate(-90deg);
+          position: absolute;
+          top: 0;
+          left: 0;
+          & .shadow{
+            opacity: 0.4;
+          }
+          & .progress{
+            stroke-dashoffset: 0;
+            transition: stroke-dashoffset var(--autoplay-speed) linear;
+          }
+        }
+      }
+    }
+    
+  }
+  &.embla-bars{
+    & embla-thumbnail{
+      position: relative;
+      height: 6px;
+      overflow: hidden;
+      position: relative;
+      vertical-align: top;
+      width: 120px;
+      &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: currentColor;
+        width: 100%;
+        height: 100%;
+        opacity: 0.4;
+      }
+      &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        transform: translateX(-100%);
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        background-color: currentColor;
+      }
+      &.is-selected::after{
+        transform: translateX(0%);
+        transition: transform var(--autoplay-speed) linear;
+      }
+    }
+  }
+}
+embla-slider:not([autoplay]) .embla-navigation.embla-dots embla-thumbnail.is-selected{
+  background-color: currentColor;
+  opacity: 1;
+}
+/* Controls - Prev & Next */
+.embla-controls{
+  &.embla-simple{
+    display:flex;
+    transform: translateY(50%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    & embla-next,
+    & embla-prev{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 5px 5px #0000001a;
+      &:hover{
+        transform: scale(1.12);
+      }
+      &:active{
+        transform: scale(1.0);
+      }
+    }
+  }
+}
+/* Progress bar */
+.embla-progress{
+  position: relative;
+  width: 100%;
+  height: 6px;
+  &::before{
+    content: "";
+    display:block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: currentColor;
+    opacity: .4;
+  }
+  &::after{
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+    left: 0;
+    top: 0;
+    width: var(--progress);
+    background-color: gray;
+  }
+}

@@ -1,0 +1,59 @@
+{% assign navigation_style = block.settings.navigation_style %}
+{% if navigation_style != "" %}
+  <div
+    class="shopify-block-slideshow-navigation embla-navigation {{ block.settings | class_list }} {{ navigation_style }} color-{{ block.settings.color_scheme }}"
+    aria-label="Slideshow thumbnails"
+  >
+    {% for block in section.blocks %}
+      <embla-thumbnail
+        class=""
+        {{ block.shopify_attributes }}
+        aria-label="Slide {{ forloop.index }} of {{ forloop.length }}"
+        index="{{ forloop.index0 }}"
+      >
+        {% if navigation_style == "embla-dots" %}
+          <svg width="9" height="9" viewBox="0 0 9 9">
+              <circle class="shadow" cx="4.5" cy="4.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2" />
+              <circle class="progress" cx="4.5" cy="4.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2" pathLength="100" />
+          </svg>
+        {% endif %}
+      </embla-thumbnail>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Slideshow navigation",
+  "tag": null,
+  "settings": [
+    {
+      "type": "select",
+      "id": "navigation_style",
+      "options": [
+        {
+          "value": "embla-dots",
+          "label": "Dots"
+        },
+        {
+          "value": "embla-bars",
+          "label": "Bars"
+        }
+      ],
+      "label": "Navigation style",
+      "default": "embla-bars"
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    } 
+  ]
+}
+{% endschema %}

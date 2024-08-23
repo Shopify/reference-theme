@@ -1,0 +1,49 @@
+embla-slider{
+  --gap: 0px;
+  --slides-per-page: 1;
+  --gaps-per-page: calc(var(--slides-per-page) - 1);
+}
+embla-viewport{
+  display:block;
+  overflow: hidden;
+}
+embla-viewport.is-draggable{
+  cursor: grab;
+}
+embla-viewport.is-dragging{
+  cursor: grabbing;
+}
+embla-slides {
+  display: flex;
+  align-items: flex-start;
+  transition: height 0.2s;
+}
+embla-slide {
+  display:block;
+  --total-gap: calc(var(--gaps-per-page) * var(--gap));
+  flex: 0 0 calc(calc(100% - var(--total-gap)) / var(--slides-per-page));
+  min-width: 0;
+  text-align:center;
+}
+embla-slider[loop] embla-slide{
+  margin-right: var(--gap);
+}
+embla-slider:not([loop]) embla-slides{
+  gap: var(--gap);
+}
+embla-next,
+embla-prev{
+  display:block;
+  cursor: pointer;
+}
+embla-next[disabled],
+embla-prev[disabled]{
+  cursor: not-allowed;
+}
+embla-progress{
+  display:block;
+}
+embla-thumbnail{
+  display:block;
+  cursor: pointer;
+}

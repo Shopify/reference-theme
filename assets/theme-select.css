@@ -1,0 +1,78 @@
+
+theme-select{
+    display: block;
+    position: relative;
+    --background: #fff;
+    --border-width: 1px;
+    --border-color: #000;
+    --divider-color: #0008;
+    --hover-color: #0001;
+    --padding-block: 3px;
+    --padding-inline: 5px;
+    --padding: var(--padding-block) var(--padding-inline);
+}
+theme-select::part(selected-value){
+    --icon-total-size: calc(10 + calc(2 * 2));
+    --icon-total-size-sq: calc(var(--icon-total-size) * var(--icon-total-size));
+    --icon-diagonal-sq: calc(var(--icon-total-size-sq) + var(--icon-total-size-sq));
+    --icon-diagonal: calc(sqrt(var(--icon-diagonal-sq)) * 1px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: var(--border-width) solid var(--border-color);
+    padding: var(--padding);
+    padding-right: calc(var(--icon-diagonal) + calc(2 * var(--padding-inline)));
+    background-color: var(--background);
+    cursor: pointer;
+}
+theme-select:not([open])::part(dropdown){
+    display:none;
+}
+theme-select::part(dropdown){
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    width: calc(100% - 2 * var(--border-width));
+    border: var(--border-width) solid var(--border-color);
+    border-top: none;
+    background-color: var(--background);
+}
+theme-select::part(option){
+    display: block;
+    padding: var(--padding);
+    word-wrap: normal;
+    white-space: normal;
+    border-bottom: var(--border-width) solid var(--divider-color);
+    cursor: pointer;
+}
+
+theme-select::part(selected-value)::after{
+    content: '';
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 7.5px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid currentColor;
+    border-left: 2px solid currentColor;
+    transform-origin: center center;
+    pointer-events: none;
+    transform: translate(-50%,-75%) rotate(-135deg) ;
+}
+theme-select[open]::part(selected-value)::after{
+    transform: translate(-50%,0%) rotate(45deg) ;
+}
+theme-select::part(option):hover{
+    background-color: var(--hover-color);
+}
+theme-select::part(disabled):hover{
+    background-color: unset;
+    cursor: not-allowed;
+}

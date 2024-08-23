@@ -1,1021 +1,368 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
-    "slideshow_UNkwik": {
+    "slideshow_yAwtwT": {
       "type": "slideshow",
       "blocks": {
-        "slide_mEbteL": {
+        "slide_wQgtTL": {
           "type": "slide",
           "settings": {
+            "page_width": "full-width",
+            "position": "is-relative",
+            "overflow": "overflow-hidden",
+            "spacing": {
+            },
             "layout": {
-              "flex-direction": "row"
-            }
+            },
+            "color_scheme": ""
           },
           "blocks": {
-            "group_AYLEbA": {
-              "type": "group",
+            "image_AAMMwf": {
+              "type": "image",
               "settings": {
-                "layout": {
-                  "flex-direction": "column",
-                  "justify-content": "flex-start"
-                },
+                "object_fit": "cover",
                 "size": {
-                  "width": "50%",
-                  "flex-grow": "0",
-
-                  "@media (--mobile)": {
-                    "width": "100%"
-                  }
+                  "height": "500px",
+                  "width": "100%",
+                  "flex-grow": "1"
                 },
+                "aspect_ratio_type": "auto",
+                "aspect_ratio": 1,
+                "placeholder": "lifestyle-1"
+              }
+            },
+            "simple_overlay_9CwXAf": {
+              "type": "simple-overlay",
+              "settings": {
+                "overflow": "",
                 "spacing": {
-                  "padding": "50px",
-
-                  "@media (--mobile)": {
-                    "padding": "20px"
-                  }
                 },
-                "color_scheme": ""
+                "layout": {
+                },
+                "color_scheme": "scheme-4"
               },
               "blocks": {
-                "heading_kCqTbY": {
-                  "type": "heading",
+                "container_YRmAdi": {
+                  "type": "container",
                   "settings": {
-                    "heading": "Image slide",
-                    "heading_size": "h1",
-                    "alignment": "start"
-                  }
-                },
-                "text_BFbgT7": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Tell your brand's story through images</p>",
-                    "text_style": "",
-                    "alignment": "start"
-                  }
-                },
-                "link_U9yyFk": {
-                  "type": "link",
-                  "settings": {
-                    "link": "",
-                    "label": "Button label",
-                    "style_class": "button",
-                    "open_in_new_tab": false,
-                    "icon": "none",
-                    "icon_position": "left",
-                    "spacing": {
-                      "padding": "10px 30px"
-                    },
+                    "position": "",
+                    "overflow": "",
                     "size": {
-                      "width": "auto"
+                      "width": "45%",
+                      "flex-grow": "0"
+                    },
+                    "spacing": {
+                      "padding-block-start": "40px",
+                      "padding-block-end": "40px",
+                      "padding-inline-start": "40px",
+                      "padding-inline-end": "40px"
+                    },
+                    "layout": {
+                      "flex-direction": "column"
+                    },
+                    "color_scheme": "scheme-4"
+                  },
+                  "blocks": {
+                    "heading_xaKTGP": {
+                      "type": "heading",
+                      "settings": {
+                        "heading": "Heading",
+                        "html_tag": "p",
+                        "heading_style": "h1",
+                        "alignment": "center"
+                      }
+                    },
+                    "text_t73kDV": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+                        "text_style": "p",
+                        "alignment": "center"
+                      }
+                    },
+                    "link_QkQHgd": {
+                      "type": "link",
+                      "settings": {
+                        "link": "",
+                        "label": "Primary button label",
+                        "button_style": "btn btn--primary",
+                        "open_in_new_tab": false
+                      }
                     }
-                  }
+                  },
+                  "block_order": [
+                    "heading_xaKTGP",
+                    "text_t73kDV",
+                    "link_QkQHgd"
+                  ]
                 }
               },
               "block_order": [
-                "heading_kCqTbY",
-                "text_BFbgT7",
-                "link_U9yyFk"
+                "container_YRmAdi"
               ]
             }
           },
           "block_order": [
-            "group_AYLEbA"
+            "image_AAMMwf",
+            "simple_overlay_9CwXAf"
           ]
         },
-        "slide_aWAGX7": {
+        "slide_rNUhbx": {
           "type": "slide",
           "settings": {
+            "page_width": "full-width",
+            "position": "is-relative",
+            "overflow": "overflow-hidden",
+            "spacing": {
+            },
             "layout": {
-              "flex-direction": "row"
-            }
+            },
+            "color_scheme": ""
           },
           "blocks": {
-            "group_tX6xMR": {
-              "type": "group",
+            "image_xDXERb": {
+              "type": "image",
               "settings": {
-                "layout": {
-                  "flex-direction": "column",
-                  "justify-content": "flex-start"
-                },
+                "object_fit": "cover",
                 "size": {
-                  "width": "50%",
-                  "flex-grow": "0",
-
-                  "@media (--mobile)": {
-                    "width": "100%"
-                  }
+                  "width": "100%",
+                  "flex-grow": "1",
+                  "height": "500px"
                 },
+                "aspect_ratio_type": "auto",
+                "aspect_ratio": 1,
+                "placeholder": "lifestyle-2"
+              }
+            },
+            "simple_overlay_UXLqHx": {
+              "type": "simple-overlay",
+              "settings": {
+                "overflow": "",
                 "spacing": {
-                  "padding": "50px",
-
-                  "@media (--mobile)": {
-                    "padding": "20px"
-                  }
                 },
-                "color_scheme": ""
+                "layout": {
+                },
+                "color_scheme": "scheme-4"
               },
               "blocks": {
-                "heading_Uk7RcX": {
-                  "type": "heading",
+                "container_Qggtdq": {
+                  "type": "container",
                   "settings": {
-                    "heading": "Image slide",
-                    "heading_size": "h1",
-                    "alignment": "start"
-                  }
-                },
-                "text_ertfGh": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Tell your brand's story through images</p>",
-                    "text_style": "",
-                    "alignment": "start"
-                  }
-                },
-                "link_cgTzUH": {
-                  "type": "link",
-                  "settings": {
-                    "link": "",
-                    "label": "Button label",
-                    "style_class": "button",
-                    "open_in_new_tab": false,
-                    "icon": "none",
-                    "icon_position": "left",
-                    "spacing": {
-                      "padding": "10px 30px"
-                    },
+                    "position": "",
+                    "overflow": "",
                     "size": {
-                      "width": "auto"
+                      "width": "50%",
+                      "flex-grow": "0"
+                    },
+                    "spacing": {
+                    },
+                    "layout": {
+                      "flex-direction": "column"
+                    },
+                    "color_scheme": "scheme-4"
+                  },
+                  "blocks": {
+                    "heading_xmPgXb": {
+                      "type": "heading",
+                      "settings": {
+                        "heading": "Heading",
+                        "html_tag": "p",
+                        "heading_style": "h1",
+                        "alignment": "center"
+                      }
+                    },
+                    "text_mFAQDV": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+                        "text_style": "p",
+                        "alignment": "center"
+                      }
+                    },
+                    "link_J9dWiP": {
+                      "type": "link",
+                      "settings": {
+                        "link": "",
+                        "label": "Primary button label",
+                        "button_style": "btn btn--primary",
+                        "open_in_new_tab": false
+                      }
                     }
-                  }
+                  },
+                  "block_order": [
+                    "heading_xmPgXb",
+                    "text_mFAQDV",
+                    "link_J9dWiP"
+                  ]
                 }
               },
               "block_order": [
-                "heading_Uk7RcX",
-                "text_ertfGh",
-                "link_cgTzUH"
+                "container_Qggtdq"
               ]
             }
           },
           "block_order": [
-            "group_tX6xMR"
+            "image_xDXERb",
+            "simple_overlay_UXLqHx"
           ]
         },
         "slideshow-controls": {
           "type": "slideshow-controls",
           "static": true,
           "settings": {
-            "pagination_style": "counter"
+            "page_width": "page-width",
+            "control_style": "embla-simple",
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          }
+        },
+        "slideshow-navigation": {
+          "type": "slideshow-navigation",
+          "static": true,
+          "settings": {
+            "navigation_style": "embla-bars",
+            "spacing": {
+            },
+            "color_scheme": "scheme-4"
           }
         }
       },
       "block_order": [
-        "slide_mEbteL",
-        "slide_aWAGX7"
-      ]
-    },
-    "65a25908-415f-40aa-a6d4-00985cafbfac": {
-      "type": "custom-section",
-      "blocks": {
-        "41e666be-a592-4acf-9961-469beb09b1eb": {
-          "type": "heading",
-          "settings": {
-            "heading": "Collections",
-            "heading_size": "h2",
-            "alignment": "start"
-          }
+        "slide_wQgtTL",
+        "slide_rNUhbx"
+      ],
+      "settings": {
+        "size": {
         },
-        "ff102392-368f-41d9-883a-9c1cd4be4d84": {
-          "type": "group",
+        "slides_per_page": 1,
+        "gap": 0,
+        "loop": false,
+        "effect": "slide",
+        "autoplay_speed": 0,
+        "color_scheme": ""
+      }
+    },
+    "container_kwzRMC": {
+      "type": "container",
+      "blocks": {
+        "container_RyTLjV": {
+          "type": "container",
           "settings": {
-            "layout": {
-              "flex-direction": "row",
-              "justify-content": "flex-start"
-            },
+            "position": "",
+            "overflow": "",
             "size": {
-              "width": "100%"
+              "width": "100%",
+              "flex-grow": "1"
             },
             "spacing": {
-              "padding": "0"
+              "padding-block-start": "20px",
+              "padding-block-end": "20px",
+              "padding-inline-end": "20px",
+              "padding-inline-start": "0px"
+            },
+            "layout": {
+              "flex-direction": "column",
+              "align-items": "flex-start",
+              "row-gap": "20px",
+              "column-gap": "20px"
             },
             "color_scheme": ""
           },
           "blocks": {
-            "4b76e504-9f68-46b8-a889-725b04a52125": {
-              "type": "collection-card",
+            "heading_HVURpU": {
+              "type": "heading",
               "settings": {
-                "collection": ""
+                "heading": "Heading",
+                "html_tag": "p",
+                "heading_style": "h6",
+                "alignment": "center"
               }
             },
-            "fa489ade-cc68-4a10-9b84-e7060b1a50dc": {
-              "type": "collection-card",
+            "heading_GK6CgU": {
+              "type": "heading",
               "settings": {
-                "collection": ""
+                "heading": "Heading",
+                "html_tag": "p",
+                "heading_style": "h3",
+                "alignment": "left"
               }
             },
-            "ef24d42e-05f9-42af-a984-2b83969ebd60": {
-              "type": "collection-card",
+            "text_FUUWaw": {
+              "type": "text",
               "settings": {
-                "collection": ""
+                "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+                "text_style": "p",
+                "alignment": "left"
+              }
+            },
+            "link_C6wdQR": {
+              "type": "link",
+              "settings": {
+                "link": "",
+                "label": "Secondary button label",
+                "button_style": "btn btn--primary",
+                "open_in_new_tab": false
               }
             }
           },
           "block_order": [
-            "4b76e504-9f68-46b8-a889-725b04a52125",
-            "fa489ade-cc68-4a10-9b84-e7060b1a50dc",
-            "ef24d42e-05f9-42af-a984-2b83969ebd60"
+            "heading_HVURpU",
+            "heading_GK6CgU",
+            "text_FUUWaw",
+            "link_C6wdQR"
           ]
-        }
-      },
-      "block_order": [
-        "41e666be-a592-4acf-9961-469beb09b1eb",
-        "ff102392-368f-41d9-883a-9c1cd4be4d84"
-      ],
-      "settings": {
-        "layout": {
-          "flex-direction": "column",
-          "justify-content": "flex-start",
-          "align-items": "flex-start"
         },
-        "spacing": {
-          "padding": "60px 20px"
-        },
-        "color_scheme": ""
-      }
-    },
-    "custom_section_6gDiLb": {
-      "type": "custom-section",
-      "blocks": {
-        "image_qLBgRH": {
+        "image_9pAGXL": {
           "type": "image",
           "settings": {
             "object_fit": "cover",
             "size": {
               "width": "100%",
-              "height": "100%",
-              "@media (--mobile)": {
-                "height": "auto"
-              }
-            }
+              "flex-grow": "1",
+              "height": "auto"
+            },
+            "aspect_ratio_type": "custom",
+            "aspect_ratio": 1,
+            "placeholder": "image"
           }
-        },
-        "group_BcTBGi": {
-          "type": "group",
-          "settings": {
-            "size": {
-              "width": "100%",
-              "height": "100%",
-              "@media (--mobile)": {
-                "height": "auto"
-              }
-            },
-            "spacing": {
-              "padding-block-start": "60px",
-              "padding-inline-end": "60px",
-              "padding-block-end": "60px",
-              "padding-inline-start": "60px"
-            },
-            "layout": {
-              "flex-direction": "column"
-            },
-            "color_scheme": "scheme-3"
-          },
-          "blocks": {
-            "heading_zQL3DW": {
-              "type": "heading",
-              "settings": {
-                "heading": "Image with text",
-                "heading_size": "h1",
-                "alignment": "start",
-                "size": {
-                },
-                "spacing": {
-                }
-              }
-            },
-            "text_mEFQnx": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-                "text_style": "",
-                "alignment": "start",
-                "size": {
-                },
-                "spacing": {
-                }
-              }
-            },
-            "link_Jq4Bj3": {
-              "type": "link",
-              "settings": {
-                "link": "",
-                "label": "Button label",
-                "style_class": "button",
-                "open_in_new_tab": false,
-                "icon": "none",
-                "icon_position": "left",
-                "size": {
-                },
-                "spacing": {
-                  "padding-block-start": "10px",
-                  "padding-inline-end": "30px",
-                  "padding-block-end": "10px",
-                  "padding-inline-start": "30px"
-                }
-              }
-            }
-          },
-          "block_order": [
-            "heading_zQL3DW",
-            "text_mEFQnx",
-            "link_Jq4Bj3"
-          ]
         }
       },
       "block_order": [
-        "image_qLBgRH",
-        "group_BcTBGi"
+        "container_RyTLjV",
+        "image_9pAGXL"
       ],
       "settings": {
+        "page_width": "page-width",
+        "position": "",
+        "overflow": "",
         "spacing": {
-          "padding-block-start": "40px",
-          "padding-inline-end": "20px",
-          "padding-block-end": "40px",
-          "padding-inline-start": "20px"
+          "padding-block-start": "80px",
+          "padding-block-end": "80px"
         },
         "layout": {
+          "row-gap": "40px",
+          "column-gap": "40px",
+          "justify-content": "flex-start",
+          "align-items": "center",
+          "flex-wrap": "nowrap"
         },
         "color_scheme": ""
-      }
-    },
-    "custom_section_UB43TV": {
-      "type": "custom-section",
-      "blocks": {
-        "heading_N7jmpy": {
-          "type": "heading",
-          "settings": {
-            "heading": "Multimedia collage",
-            "heading_size": "h2",
-            "alignment": "start",
-            "size": {
-            },
-            "spacing": {
-            }
-          }
-        },
-        "group_LrBxgw": {
-          "type": "group",
-          "settings": {
-            "size": {
-            },
-            "spacing": {
-              "padding-block-start": "0px",
-              "padding-inline-end": "0px",
-              "padding-block-end": "0px",
-              "padding-inline-start": "0px"
-            },
-            "layout": {
-            },
-            "color_scheme": ""
-          },
-          "blocks": {
-            "group_A3Jhra": {
-              "type": "group",
-              "settings": {
-                "size": {
-                  "width": "25%",
-                  "height": "100%",
-                  "@media (--mobile)": {
-                    "height": "auto",
-                    "width": "100%"
-                  }
-                },
-                "spacing": {
-                  "padding-block-start": "0px",
-                  "padding-inline-end": "0px",
-                  "padding-block-end": "0px",
-                  "padding-inline-start": "0px"
-                },
-                "layout": {
-                  "flex-direction": "column"
-                },
-                "color_scheme": ""
-              },
-              "blocks": {
-                "image_HxUm9V": {
-                  "type": "image",
-                  "settings": {
-                    "object_fit": "cover",
-                    "size": {
-                      "width": "100%",
-                      "height": "100%"
-                    }
-                  }
-                },
-                "collection_card_hXFmdj": {
-                  "type": "collection-card",
-                  "settings": {
-                    "collection": "",
-                    "size": {
-                      "width": "100%",
-                      "height": "100%"
-                    },
-                    "spacing": {
-                    },
-                    "ratio": "2 \/ 3"
-                  }
-                }
-              },
-              "block_order": [
-                "image_HxUm9V",
-                "collection_card_hXFmdj"
-              ]
-            },
-            "collection_card_WcXMHL": {
-              "type": "collection-card",
-              "settings": {
-                "collection": "",
-                "size": {
-                  "width": "75%",
-                  "@media (--mobile)": {
-                    "width": "100%"
-                  }
-                },
-                "spacing": {
-                },
-                "ratio": "1"
-              }
-            }
-          },
-          "block_order": [
-            "group_A3Jhra",
-            "collection_card_WcXMHL"
-          ]
-        }
-      },
-      "block_order": [
-        "heading_N7jmpy",
-        "group_LrBxgw"
-      ],
-      "settings": {
-        "spacing": {
-          "padding-block-start": "60px",
-          "padding-inline-end": "20px",
-          "padding-block-end": "60px",
-          "padding-inline-start": "20px"
-        },
-        "layout": {
-          "flex-direction": "column",
-          "align-items": "flex-start"
-        },
-        "color_scheme": ""
-      }
-    },
-    "custom_section_MiX6gV": {
-      "type": "custom-section",
-      "blocks": {
-        "heading_y84T7H": {
-          "type": "heading",
-          "settings": {
-            "heading": "Collapsible content",
-            "heading_size": "h2",
-            "alignment": "start"
-          }
-        },
-        "group_iabYjG": {
-          "type": "group",
-          "settings": {
-            "layout": {
-              "flex-direction": "column",
-              "justify-content": "flex-start",
-              "gap": "0px"
-            },
-            "size": {
-              "width": "100%"
-            },
-            "spacing": {
-              "padding": "0"
-            },
-            "color_scheme": ""
-          },
-          "blocks": {
-            "collapsible_row_CAhPBm": {
-              "type": "collapsible-row",
-              "blocks": {
-                "group_igxqEV": {
-                  "type": "group",
-                  "settings": {
-                    "layout": {
-                      "flex-direction": "column",
-                      "justify-content": "flex-start",
-                      "align-items": "flex-start"
-                    },
-                    "size": {
-                      "width": "100%"
-                    },
-                    "spacing": {
-                      "padding": "10px"
-                    },
-                    "color_scheme": ""
-                  },
-                  "blocks": {
-                    "heading_YjGWBG": {
-                      "type": "heading",
-                      "settings": {
-                        "heading": "Heading",
-                        "heading_size": "h2",
-                        "alignment": "start"
-                      }
-                    },
-                    "text_PkQ8zn": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
-                        "text_style": "",
-                        "alignment": "start"
-                      }
-                    }
-                  },
-                  "block_order": [
-                    "heading_YjGWBG",
-                    "text_PkQ8zn"
-                  ]
-                },
-                "collapsible-row-summary": {
-                  "type": "collapsible-row-summary",
-                  "static": true,
-                  "settings": {
-                    "summary": "Collapsible row"
-                  },
-                  "blocks": {
-                    "collapsible-row-icon": {
-                      "type": "icon",
-                      "static": true,
-                      "settings": {
-                        "icon": "check_mark",
-                        "width": 22
-                      }
-                    }
-                  },
-                  "block_order": [
-
-                  ]
-                }
-              },
-              "block_order": [
-                "group_igxqEV"
-              ]
-            },
-            "collapsible_row_dmGd3n": {
-              "type": "collapsible-row",
-              "blocks": {
-                "group_mgPLTf": {
-                  "type": "group",
-                  "settings": {
-                    "layout": {
-                      "flex-direction": "column",
-                      "justify-content": "flex-start",
-                      "align-items": "flex-start"
-                    },
-                    "size": {
-                      "width": "100%"
-                    },
-                    "spacing": {
-                      "padding": "10px"
-                    },
-                    "color_scheme": ""
-                  },
-                  "blocks": {
-                    "heading_UHa3p9": {
-                      "type": "heading",
-                      "settings": {
-                        "heading": "Heading",
-                        "heading_size": "h2",
-                        "alignment": "start"
-                      }
-                    },
-                    "text_Vkg9zR": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
-                        "text_style": "",
-                        "alignment": "start"
-                      }
-                    }
-                  },
-                  "block_order": [
-                    "heading_UHa3p9",
-                    "text_Vkg9zR"
-                  ]
-                },
-                "collapsible-row-summary": {
-                  "type": "collapsible-row-summary",
-                  "static": true,
-                  "settings": {
-                    "summary": "Collapsible row"
-                  },
-                  "blocks": {
-                    "collapsible-row-icon": {
-                      "type": "icon",
-                      "static": true,
-                      "settings": {
-                        "icon": "check_mark",
-                        "width": 22
-                      }
-                    }
-                  },
-                  "block_order": [
-
-                  ]
-                }
-              },
-              "block_order": [
-                "group_mgPLTf"
-              ]
-            },
-            "collapsible_row_qEqear": {
-              "type": "collapsible-row",
-              "blocks": {
-                "group_BqmeC9": {
-                  "type": "group",
-                  "settings": {
-                    "layout": {
-                      "flex-direction": "column",
-                      "justify-content": "flex-start",
-                      "align-items": "flex-start"
-                    },
-                    "size": {
-                      "width": "100%"
-                    },
-                    "spacing": {
-                      "padding": "10px"
-                    },
-                    "color_scheme": ""
-                  },
-                  "blocks": {
-                    "heading_zWmidf": {
-                      "type": "heading",
-                      "settings": {
-                        "heading": "Heading",
-                        "heading_size": "h2",
-                        "alignment": "start"
-                      }
-                    },
-                    "text_knXnFF": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
-                        "text_style": "",
-                        "alignment": "start"
-                      }
-                    }
-                  },
-                  "block_order": [
-                    "heading_zWmidf",
-                    "text_knXnFF"
-                  ]
-                },
-                "collapsible-row-summary": {
-                  "type": "collapsible-row-summary",
-                  "static": true,
-                  "settings": {
-                    "summary": "Collapsible row"
-                  },
-                  "blocks": {
-                    "collapsible-row-icon": {
-                      "type": "icon",
-                      "static": true,
-                      "settings": {
-                        "icon": "check_mark",
-                        "width": 22
-                      }
-                    }
-                  },
-                  "block_order": [
-
-                  ]
-                }
-              },
-              "block_order": [
-                "group_BqmeC9"
-              ]
-            },
-            "collapsible_row_n8DJ9W": {
-              "type": "collapsible-row",
-              "blocks": {
-                "group_gtJd6c": {
-                  "type": "group",
-                  "settings": {
-                    "layout": {
-                      "flex-direction": "row",
-                      "justify-content": "flex-start"
-                    },
-                    "size": {
-                      "width": "100%"
-                    },
-                    "spacing": {
-                      "padding": "10px"
-                    },
-                    "color_scheme": ""
-                  },
-                  "blocks": {
-                    "heading_DgNRJD": {
-                      "type": "heading",
-                      "settings": {
-                        "heading": "Heading",
-                        "heading_size": "h2",
-                        "alignment": "start"
-                      }
-                    },
-                    "text_PHPiVJ": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
-                        "text_style": "",
-                        "alignment": "start"
-                      }
-                    }
-                  },
-                  "block_order": [
-                    "heading_DgNRJD",
-                    "text_PHPiVJ"
-                  ]
-                },
-                "collapsible-row-summary": {
-                  "type": "collapsible-row-summary",
-                  "static": true,
-                  "settings": {
-                    "summary": "Collapsible row"
-                  },
-                  "blocks": {
-                    "collapsible-row-icon": {
-                      "type": "icon",
-                      "static": true,
-                      "settings": {
-                        "icon": "check_mark",
-                        "width": 22
-                      }
-                    }
-                  },
-                  "block_order": [
-
-                  ]
-                }
-              },
-              "block_order": [
-                "group_gtJd6c"
-              ]
-            }
-          },
-          "block_order": [
-            "collapsible_row_CAhPBm",
-            "collapsible_row_dmGd3n",
-            "collapsible_row_qEqear",
-            "collapsible_row_n8DJ9W"
-          ]
-        }
-      },
-      "block_order": [
-        "heading_y84T7H",
-        "group_iabYjG"
-      ],
-      "settings": {
-        "layout": {
-          "flex-direction": "column",
-          "align-items": "flex-start"
-        },
-        "spacing": {
-          "padding": "60px 20px"
-        },
-        "color_scheme": ""
-      }
-    },
-    "custom_section_YmTwNm": {
-      "type": "custom-section",
-      "blocks": {
-        "heading_HebfQi": {
-          "type": "heading",
-          "settings": {
-            "heading": "Subscribe to our newsletter",
-            "heading_size": "h2",
-            "alignment": "center",
-            "size": {
-            },
-            "spacing": {
-            }
-          }
-        },
-        "text_b37mxx": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>",
-            "text_style": "",
-            "alignment": "center",
-            "size": {
-            },
-            "spacing": {
-            }
-          }
-        },
-        "newsletter_nfLQzr": {
-          "type": "newsletter"
-        }
-      },
-      "block_order": [
-        "heading_HebfQi",
-        "text_b37mxx",
-        "newsletter_nfLQzr"
-      ],
-      "settings": {
-        "spacing": {
-          "padding-block-start": "60px",
-          "padding-inline-end": "20px",
-          "padding-block-end": "60px",
-          "padding-inline-start": "20px"
-        },
-        "layout": {
-          "flex-direction": "column",
-          "align-items": "center"
-        },
-        "color_scheme": "scheme-2"
-      }
-    },
-    "custom_section_gbgWDY": {
-      "type": "custom-section",
-      "blocks": {
-        "group_hwEiRw": {
-          "type": "group",
-          "settings": {
-            "layout": {
-              "flex-direction": "column",
-              "justify-content": "center"
-            },
-            "color_scheme": "scheme-2",
-            "size": {
-              "width": "100%"
-            },
-            "spacing": {
-              "padding": "35px",
-
-              "@media (--mobile)": {
-                "padding": "15px"
-              }
-            }
-          },
-          "blocks": {
-            "icon_xwdHtL": {
-              "type": "icon",
-              "settings": {
-                "icon": "return",
-                "width": 50
-              }
-            },
-            "heading_RkUtPK": {
-              "type": "heading",
-              "settings": {
-                "heading": "Heading",
-                "heading_size": "h3",
-                "alignment": "center"
-              }
-            },
-            "text_gJfdq3": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Pair text with an icon to highlight aspects of your business.<\/p>",
-                "text_style": "",
-                "alignment": "center"
-              }
-            }
-          },
-          "block_order": [
-            "icon_xwdHtL",
-            "heading_RkUtPK",
-            "text_gJfdq3"
-          ]
-        },
-        "group_KyK7Ha": {
-          "type": "group",
-          "settings": {
-            "layout": {
-              "flex-direction": "column",
-              "justify-content": "center"
-            },
-            "color_scheme": "scheme-2",
-            "size": {
-              "width": "100%"
-            },
-            "spacing": {
-              "padding": "35px",
-
-              "@media (--mobile)": {
-                "padding": "15px"
-              }
-            }
-          },
-          "blocks": {
-            "icon_RqBeKL": {
-              "type": "icon",
-              "settings": {
-                "icon": "truck",
-                "width": 50
-              }
-            },
-            "heading_hdw3ft": {
-              "type": "heading",
-              "settings": {
-                "heading": "Heading",
-                "heading_size": "h3",
-                "alignment": "center"
-              }
-            },
-            "text_9dxFC9": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Pair text with an icon to highlight aspects of your business.<\/p>",
-                "text_style": "",
-                "alignment": "center"
-              }
-            }
-          },
-          "block_order": [
-            "icon_RqBeKL",
-            "heading_hdw3ft",
-            "text_9dxFC9"
-          ]
-        },
-        "group_rUTJ6Y": {
-          "type": "group",
-          "settings": {
-            "layout": {
-              "flex-direction": "column",
-              "justify-content": "center"
-            },
-            "color_scheme": "scheme-2",
-            "size": {
-              "width": "100%"
-            },
-            "spacing": {
-              "padding": "35px",
-
-              "@media (--mobile)": {
-                "padding": "15px"
-              }
-            }
-          },
-          "blocks": {
-            "icon_zgezqB": {
-              "type": "icon",
-              "settings": {
-                "icon": "chat_bubble",
-                "width": 50
-              }
-            },
-            "heading_QjnkWX": {
-              "type": "heading",
-              "settings": {
-                "heading": "Heading",
-                "heading_size": "h3",
-                "alignment": "center"
-              }
-            },
-            "text_TNH97M": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Pair text with an icon to highlight aspects of your business.<\/p>",
-                "text_style": "",
-                "alignment": "center"
-              }
-            }
-          },
-          "block_order": [
-            "icon_zgezqB",
-            "heading_QjnkWX",
-            "text_TNH97M"
-          ]
-        }
-      },
-      "block_order": [
-        "group_hwEiRw",
-        "group_KyK7Ha",
-        "group_rUTJ6Y"
-      ],
-      "settings": {
-        "layout": {
-          "flex-direction": "row",
-          "justify-content": "center"
-        },
-        "spacing": {
-          "padding": "40px 20px"
-        },
-        "color_scheme": "scheme-2"
       }
     }
   },
   "order": [
-    "slideshow_UNkwik",
-    "65a25908-415f-40aa-a6d4-00985cafbfac",
-    "custom_section_6gDiLb",
-    "custom_section_UB43TV",
-    "custom_section_MiX6gV",
-    "custom_section_YmTwNm",
-    "custom_section_gbgWDY"
+    "slideshow_yAwtwT",
+    "container_kwzRMC"
   ]
 }

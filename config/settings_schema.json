@@ -12,43 +12,425 @@
     "settings": [
       {
         "type": "header",
-        "content": "Headings"
+        "content": "Font Familys"
       },
       {
         "type": "font_picker",
-        "id": "type_header_font",
+        "id": "font_family_primary",
         "default": "assistant_n4",
-        "label": "Heading fonts"
+        "label": "Primary font"
       },
       {
-        "type": "range",
-        "id": "heading_scale",
-        "min": 100,
-        "max": 150,
-        "step": 5,
-        "unit": "%",
-        "label": "Font size scale",
-        "default": 100
+        "type": "font_picker",
+        "id": "font_family_secondary",
+        "default": "assistant_n4",
+        "label": "Secondary font"
       },
       {
         "type": "header",
-        "content": "Body"
+        "content": "Font Style H1"
       },
       {
-        "type": "font_picker",
-        "id": "type_body_font",
-        "default": "assistant_n4",
-        "label": "Body font"
+        "type": "number",
+        "id": "font_size_h1",
+        "label": "Font Size",
+        "default": 40
       },
       {
-        "type": "range",
-        "id": "body_scale",
-        "min": 100,
-        "max": 130,
-        "step": 5,
-        "unit": "%",
-        "label": "Font size scale",
-        "default": 100
+        "type": "number",
+        "id": "font_size_h1_mobile",
+        "label": "Font Size (mobile)",
+        "default": 32
+      },
+      {
+        "type": "text",
+        "id": "line_height_h1",
+        "label": "Line height",
+        "default": "1.2"
+      },
+      {
+        "type": "select",
+        "id": "font_family_h1",
+        "label": "Font family",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
+      },
+      
+      {
+        "type": "header",
+        "content": "Font Style H2"
+      },
+      {
+        "type": "number",
+        "id": "font_size_h2",
+        "label": "Font Size",
+        "default": 34
+      },
+      {
+        "type": "number",
+        "id": "font_size_h2_mobile",
+        "label": "Font Size (mobile)",
+        "default": 28
+      },
+      {
+        "type": "text",
+        "id": "line_height_h2",
+        "label": "Line height",
+        "default": "1.24"
+      },
+      {
+        "type": "select",
+        "id": "font_family_h2",
+        "label": "Font family",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
+      },
+      {
+        "type": "header",
+        "content": "Font Style H3"
+      },
+      {
+        "type": "number",
+        "id": "font_size_h3",
+        "label": "Font Size",
+        "default": 28
+      },
+      {
+        "type": "number",
+        "id": "font_size_h3_mobile",
+        "label": "Font Size (mobile)",
+        "default": 24
+      },
+      {
+        "type": "text",
+        "id": "line_height_h3",
+        "label": "Line height",
+        "default": "1.21"
+      },
+      {
+        "type": "select",
+        "id": "font_family_h3",
+        "label": "Font family",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
+      },
+      {
+        "type": "header",
+        "content": "Font Style H4"
+      },
+      {
+        "type": "number",
+        "id": "font_size_h4",
+        "label": "Font Size",
+        "default": 24
+      },
+      {
+        "type": "number",
+        "id": "font_size_h4_mobile",
+        "label": "Font Size (mobile)",
+        "default": 20
+      },
+      {
+        "type": "text",
+        "id": "line_height_h4",
+        "label": "Line height",
+        "default": "1.25"
+      },
+      {
+        "type": "select",
+        "id": "font_family_h4",
+        "label": "Font family",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
+      },
+      {
+        "type": "header",
+        "content": "Font Style H5"
+      },
+      {
+        "type": "number",
+        "id": "font_size_h5",
+        "label": "Font Size",
+        "default": 20
+      },
+      {
+        "type": "number",
+        "id": "font_size_h5_mobile",
+        "label": "Font Size (mobile)",
+        "default": 18
+      },
+      {
+        "type": "text",
+        "id": "line_height_h5",
+        "label": "Line height",
+        "default": "1.3"
+      },
+      {
+        "type": "select",
+        "id": "font_family_h5",
+        "label": "Font family",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
+      },
+      {
+        "type": "header",
+        "content": "Font Style H6"
+      },
+      {
+        "type": "number",
+        "id": "font_size_h6",
+        "label": "Font Size",
+        "default": 16
+      },
+      {
+        "type": "number",
+        "id": "font_size_h6_mobile",
+        "label": "Font Size (mobile)",
+        "default": 16
+      },
+      {
+        "type": "text",
+        "id": "line_height_h6",
+        "label": "Line height",
+        "default": "1.38"
+      },
+      {
+        "type": "select",
+        "id": "font_family_h6",
+        "label": "Font family",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
+      },
+      {
+        "type": "header",
+        "content": "Font Style Body large"
+      },
+      {
+        "type": "number",
+        "id": "font_size_large",
+        "label": "Font Size",
+        "default": 18
+      },
+      {
+        "type": "number",
+        "id": "font_size_large_mobile",
+        "label": "Font Size (mobile)",
+        "default": 16
+      },
+      {
+        "type": "text",
+        "id": "line_height_large",
+        "label": "Line height",
+        "default": "1.5"
+      },
+      {
+        "type": "select",
+        "id": "font_family_large",
+        "label": "Font family",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
+      },
+      {
+        "type": "header",
+        "content": "Font Style Body"
+      },
+      {
+        "type": "number",
+        "id": "font_size_p",
+        "label": "Font Size",
+        "default": 16
+      },
+      {
+        "type": "number",
+        "id": "font_size_p_mobile",
+        "label": "Font Size (mobile)",
+        "default": 14
+      },
+      {
+        "type": "text",
+        "id": "line_height_p",
+        "label": "Line height",
+        "default": "1.5"
+      },
+      {
+        "type": "select",
+        "id": "font_family_p",
+        "label": "Font family",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
+      },
+      {
+        "type": "header",
+        "content": "Font Style Body small"
+      },
+      {
+        "type": "number",
+        "id": "font_size_small",
+        "label": "Font Size",
+        "default": 14
+      },
+      {
+        "type": "number",
+        "id": "font_size_small_mobile",
+        "label": "Font Size (mobile)",
+        "default": 12
+      },
+      {
+        "type": "text",
+        "id": "line_height_small",
+        "label": "Line height",
+        "default": "1.5"
+      },
+      {
+        "type": "select",
+        "id": "font_family_small",
+        "label": "Font family",
+        "options": [
+          {
+            "value": "--font-family-primary",
+            "label": "Primary"
+          },
+          {
+            "value": "--font-family-secondary",
+            "label": "Secondary"
+          }
+        ],
+        "default": "--font-family-primary"
+      }
+    ]
+  },
+  {
+    "name": "Buttons",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Primary"
+      },
+      {
+        "type": "color",
+        "id": "button_primary_background_color",
+        "label": "Background Color",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "button_primary_color",
+        "label": "Color",
+        "default": "#fff"
+      },
+      {
+        "type": "header",
+        "content": "Secondary"
+      },
+      {
+        "type": "color",
+        "id": "button_secondary_background_color",
+        "label": "Background Color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "button_secondary_color",
+        "label": "Color",
+        "default": "#000"
+      },
+      {
+        "type": "header",
+        "content": "Tertiary"
+      },
+      {
+        "type": "color",
+        "id": "button_tertiary_background_color",
+        "label": "Background Color"
+      },
+      {
+        "type": "color",
+        "id": "button_tertiary_color",
+        "label": "Color",
+        "default": "#000"
+      }
+    ]
+  },
+  {
+    "name": "Media",
+    "settings": [
+      {
+        "type": "color",
+        "id": "media_background",
+        "label": "Background Color",
+        "default": "#e1e1e1"
       }
     ]
   },
@@ -110,6 +492,29 @@
           "on_secondary_button": "secondary_button_label",
           "secondary_button_border": "secondary_button_label"
         }
+      }
+    ]
+  },
+  {
+    "name": "Responsiveness",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Breakpoints"
+      },
+      {
+        "type": "number",
+        "id": "breakpoint_small",
+        "label": "Small",
+        "default": 769,
+        "info": "Defines the upper bound for small devices (phones)."
+      },
+      {
+        "type": "number",
+        "id": "breakpoint_medium",
+        "label": "Medium",
+        "default": 993,
+        "info": "Defines the upper bound for medium devices (tablets)."
       }
     ]
   }

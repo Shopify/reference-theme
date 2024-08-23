@@ -1,52 +1,16 @@
-{%- liquid
-  assign block_index = 0
-  for section_blocks in section.blocks
-    assign block_index = block_index
-    if block.id == section_blocks.id
-      break
-    endif
-  endfor
--%}
-
-<embla-slide
-  id="slide-{{ block.id }}"
-  index="{{ block_index }}"
-  class="shopify-block-slide"
+<div
+  class="shopify-block-container {{ block.settings | class_list }} {{ block.settings.position }} {{ block.settings.overflow }} color-{{ block.settings.color_scheme }}"
   {{ block.shopify_attributes }}
 >
-  <div 
-    class="{{ block.settings | class_list }} {{ block.settings.position }} {{ block.settings.overflow }}"
-  >
-    {% content_for "blocks" %}
-  </div>
-</embla-slide>
+  {% content_for "blocks" %}
+</div>
 
 {% schema %}
 {
-  "name": "Slide",
+  "name": "Container",
   "tag": null,
   "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
-    {
-      "type": "header",
-      "content": "Page width"
-    },
-    {
-      "type": "select",
-      "id": "page_width",
-      "label": "Page width",
-      "options": [
-        {
-          "value": "full-width",
-          "label": "Full width"
-        },
-        {
-          "value": "page-width",
-          "label": "Page width"
-        }
-      ],
-      "default": "page-width"
-    },
     {
       "type": "header",
       "content": "Position"
@@ -92,6 +56,18 @@
       "default": ""
     },
     {
+      "type": "style.size_panel",
+      "id": "size",
+      "label": "Size",
+      "default": {
+        "width": "auto",
+
+        "@media (--mobile)": {
+          "width": "100%"
+        }
+      }
+    },
+    {
       "type": "style.spacing_panel",
       "id": "spacing",
       "label": "Spacing"
@@ -123,10 +99,7 @@
   ],
   "presets": [
     {
-      "name": "Slide",
-      "blocks": [
-       
-      ]
+      "name": "Container"
     }
   ]
 }

@@ -1,16 +1,15 @@
 {% comment %} Should make a setting to decide which type of heading we're outputting instead of a heading size one. {% endcomment %}
-<h2
-  class="{{ block.settings | class_list }} {{ block.settings.heading_size }} text-{{ block.settings.alignment }}"
+<{{block.settings.html_tag}}
+  class="shopify-block-heading {{ block.settings | class_list }} {{ block.settings.heading_style }} text-{{ block.settings.alignment }}"
   {{ block.shopify_attributes }}
 >
   {{ block.settings.heading }}
-</h2>
+</{{block.settings.html_tag}}>
 
 {% schema %}
 {
   "name": "Heading",
   "tag": null,
-  "class": "heading-block",
   "settings": [
     {
       "type": "inline_richtext",
@@ -20,64 +19,77 @@
     },
     {
       "type": "select",
-      "id": "heading_size",
-      "label": "Size",
+      "id": "html_tag",
+      "label": "Html tag",
       "options": [
         {
-          "value": "h3",
-          "label": "Small"
+          "value": "h1",
+          "label": "H1"
         },
         {
           "value": "h2",
-          "label": "Medium"
+          "label": "H2"
         },
         {
-          "value": "h1",
-          "label": "Large"
+          "value": "h3",
+          "label": "H3"
         },
         {
-          "value": "h0",
-          "label": "Extra Large"
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        },
+        {
+          "value": "p",
+          "label": "p"
         }
       ],
-      "default": "h2"
+      "default": "p"
     },
     {
       "type": "select",
-      "id": "alignment",
-      "label": "Alignment",
+      "id": "heading_style",
+      "label": "Size",
       "options": [
         {
-          "value": "start",
-          "label": "Start"
+          "value": "h1",
+          "label": "H1"
         },
         {
-          "value": "center",
-          "label": "Center"
+          "value": "h2",
+          "label": "H2"
         },
         {
-          "value": "end",
-          "label": "End"
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
         }
       ],
-      "default": "start"
+      "default": "h4"
     },
     {
-      "type": "style.size_panel",
-      "id": "size",
-      "label": "Size",
-      "default": {
-        "width": "auto",
-
-        "@media (--mobile)": {
-          "width": "100%"
-        }
-      }
-    },
-    {
-      "type": "style.spacing_panel",
-      "id": "spacing",
-      "label": "Spacing"
+      "type": "text_alignment",
+      "id": "alignment",
+      "label": "Text alignment",
+      "default": "center"
     }
   ],
   "presets": [{ "name": "Heading" }]

@@ -75,7 +75,7 @@ You can also do this directly in the JSON file. You must include a `"blocks"` ke
 {
   "sections": {
     "example-section": {
-      "type": "custom-section",
+      "type": "container",
       "blocks": {
         "example-block": {
           "type": "heading",
@@ -147,3 +147,19 @@ You can also apply different classes to different elements, for example:
 ```
 
 As with a normal setting, it is accessed via its ID.
+
+
+## Codeing Guidelines
+### Files 
+- file names should should be formatted as ```kebab-case```
+### HTML 
+ - use as less containers as possible
+### Liquid 
+ - variables should should be formatted as ```snake_case```
+### CSS 
+ - variables should should be formatted as ```kebab-case```
+ - use '--' for variants of a class Example: ```btn btn--secondary```
+### JS 
+ - variables & functions should be formatted as ```camelCase```
+ - do not use ```var``` use ```const``` where ever possible and ```let``` when necessary
+ - use arrow functions ```() => {}``` where possible 

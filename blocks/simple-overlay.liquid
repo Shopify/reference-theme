@@ -1,0 +1,70 @@
+<div
+  class="shopify-block-overlay block-overlay {{ block.settings | class_list }} color-{{ block.settings.color_scheme }}"
+  {{ block.shopify_attributes }}
+>
+  {% content_for "blocks" %}
+</div>
+
+{% schema %}
+{
+  "name": "Simple Overlay",
+  "tag": null,
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    {
+      "type": "select",
+      "id": "overflow",
+      "label": "Overflow",
+      "options": [
+        {
+          "value": "",
+          "label": "visible"
+        },
+        {
+          "value": "overflow-hidden",
+          "label": "hidden"
+        },
+        {
+          "value": "overflow-scroll",
+          "label": "scroll"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing"
+    },
+    {
+      "type": "style.layout_panel",
+      "id": "layout",
+      "label": "Layout",
+      "default": {
+        "flex-direction": "row",
+        "gap": "20px",
+        "justify-content": "center",
+        "align-items": "center",
+        "@media (--mobile)": {
+          "flex-wrap": "wrap"
+        }
+      }
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Simple Overlay"
+    }
+  ]
+}
+{% endschema %}
