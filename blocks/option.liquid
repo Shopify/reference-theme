@@ -1,0 +1,24 @@
+<option value="{{ block.settings.value }}">{{ block.settings.name }}</option>
+
+{% schema %}
+{
+"name": "Option",
+"tag": null,
+"blocks": [],
+"settings": [
+  {
+    "type": "liquid",
+    "id": "name",
+    "label": "Name"
+  },
+  {
+    "type": "text",
+    "id": "value",
+    "label": "Value"
+  }
+],
+"presets": [
+
+]
+}
+{% endschema %}

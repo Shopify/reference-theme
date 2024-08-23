@@ -1,0 +1,58 @@
+
+{% case block.settings.type %}
+  {% when 'custom' %}
+    <theme-select name="{{ block.settings.name }}">
+      {% content_for "blocks" %}
+    </theme-select>
+  {% when 'country' %}
+    <theme-select name="country_code">
+      {% for country in localization.available_countries %}
+        <option {% if country.iso_code == localization.country.iso_code %}selected{% endif %} value="{{ country.iso_code }}">{{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})</option>
+      {% endfor %}
+    </theme-select>
+  {% when 'language' %}
+    <theme-select name="language_code">
+      {% for language in localization.available_languages %}
+        <option value="{{ language.iso_code }}">{{ language.endonym_name | capitalize }}</option>
+      {% endfor %}
+    </theme-select>
+{% endcase %}
+
+
+{% schema %}
+{
+  "name": "Select",
+  "tag": null,
+  "blocks": [{ "type": "option" }],
+  "settings": [
+    {
+      "type": "select",
+      "id": "type",
+      "label": "Type",
+      "options": [
+        {
+          "value": "custom",
+          "label": "custom"
+        },
+        {
+          "value": "country",
+          "label": "Country"
+        },
+        {
+          "value": "language",
+          "label": "Language"
+        }
+      ],
+      "default": "custom"
+    },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Custom name"
+    }
+  ],
+  "presets": [
+
+  ]
+}
+{% endschema %}

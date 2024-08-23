@@ -1,0 +1,109 @@
+{% assign return_to = "back" %}
+{% capture class_list %}shopify-block-container {{ block.settings | class_list }} color-{{ block.settings.color_scheme }}{% endcapture %}
+{% assign type = block.settings.type %}
+{% case type %}
+    {% when 'product' %}
+      {% assign object = product %}
+    {% when 'cart' %}
+      {% assign object = cart %}
+    {% when 'new_comment' %}
+      {% assign object = article %}
+    {% else %}
+      {% assign object = blank %}
+{% endcase %}
+
+{% form type, object, return_to: return_to, class: class_list %}
+  {% content_for "blocks" %}
+{% endform %}
+
+{% schema %}
+{
+  "name": "Form",
+  "tag": null,
+  "blocks": [
+    { "type": "button" }, 
+    { "type": "select" }, 
+    { "type": "@app" }
+  ],
+  "settings": [
+    {
+      "type": "select",
+      "id": "type",
+      "label": "Type",
+      "options": [
+        {
+          "value": "cart",
+          "label": "Cart"
+        },
+        {
+          "value": "contact",
+          "label": "Contact"
+        },
+        {
+          "value": "localization",
+          "label": "Localization"
+        },
+        {
+          "value": "new_comment",
+          "label": "New Comment"
+        },
+        {
+          "value": "product",
+          "label": "Product"
+        },
+        {
+          "value": "storefront_password",
+          "label": "Storefront password"
+        }
+      ],
+      "default": "contact"
+    },
+    {
+      "type": "style.size_panel",
+      "id": "size",
+      "label": "Size",
+      "default": {
+        "width": "auto",
+
+        "@media (--mobile)": {
+          "width": "100%"
+        }
+      }
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing"
+    },
+    {
+      "type": "style.layout_panel",
+      "id": "layout",
+      "label": "Layout",
+      "default": {
+        "flex-direction": "row",
+        "gap": "20px",
+        "justify-content": "center",
+        "align-items": "center",
+        "@media (--mobile)": {
+          "flex-wrap": "wrap"
+        }
+      }
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Form"
+    }
+  ]
+}
+{% endschema %}
