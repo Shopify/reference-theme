@@ -14,6 +14,9 @@ class FormFetch extends HTMLElement {
 
       fetch(this.form.action, {
         method: this.form.method, 
+        headers: {
+          "Accept": "application/json"
+        },
         body: formData
       })
       .then(res => res.json())
