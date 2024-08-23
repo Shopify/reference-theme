@@ -32,7 +32,7 @@
                 "size": {
                   "height": "500px",
                   "width": "100%",
-                  "flex-grow": "1"
+                  "flex-grow": ""
                 },
                 "aspect_ratio_type": "auto",
                 "aspect_ratio": 1,
@@ -228,7 +228,7 @@
             "navigation_style": "embla-bars",
             "spacing": {
             },
-            "color_scheme": ""
+            "color_scheme": "scheme-4"
           }
         }
       },
@@ -237,7 +237,6 @@
         "slide_pbBe6r"
       ],
       "settings": {
-        "title": "Slideshow",
         "page_width": "full-width",
         "size": {
         },
@@ -339,7 +338,6 @@
         "image_9pAGXL"
       ],
       "settings": {
-        "title": "Image with Text",
         "page_width": "page-width",
         "position": "",
         "overflow": "",
@@ -467,7 +465,6 @@
         "simple_overlay_pPFpEn"
       ],
       "settings": {
-        "title": "Image with Text Box",
         "page_width": "full-width",
         "position": "is-relative",
         "overflow": "overflow-hidden",
@@ -568,7 +565,6 @@
         "container_fEXzMB"
       ],
       "settings": {
-        "title": "Image with Text",
         "page_width": "page-width",
         "position": "",
         "overflow": "",
