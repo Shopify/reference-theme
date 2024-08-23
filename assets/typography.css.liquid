@@ -38,12 +38,9 @@
   {{selector}}{
     --font-size: {{ settings[font_size] | append: 'px' }};
     --font-size-mobile: {{ settings[font_size_mobile] | append: 'px' }};
+    --font-size-optimal: calc(var(--font-size-mobile) + (var(--font-size) - var(--font-size-mobile)) * (100vw - var(--screen-width-mobile)) / (var(--screen-width-desktop) - var(--screen-width-mobile)));
     font-family: var({{settings[font_family]}});
-    font-size: clamp(
-      var(--font-size-mobile), 
-      calc(var(--font-size-mobile) + (var(--font-size) - var(--font-size-mobile)) * (100vw - var(--screen-width-mobile)) / (var(--screen-width-desktop) - var(--screen-width-mobile))), 
-      var(--font-size)
-    );
+    font-size: clamp(var(--font-size-mobile), var(--font-size-optimal), var(--font-size));
     font-weight: normal;
     line-height: {{settings[line_height]}};
     letter-spacing: 1.05px;
