@@ -50,16 +50,8 @@
     animation: shine 1s cubic-bezier(0.01, 0.56, 1, 1);
   }
 }
-/* Text background gradient */
-.shopify-block-overlay{
-  & .shopify-block-container{
-    background: radial-gradient(rgba(0,0,0,0.2) 0%,transparent 75%);
-    /* Todo: Use background gradient in section? */
-  }
-}
 
 /* text */
-
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .large, p, .p, small, .small, .btn{
   animation: fade-up ease;
   animation-timeline: view(90svh 0px);
