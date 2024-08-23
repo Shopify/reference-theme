@@ -36,13 +36,15 @@
     {% assign selector = selector | prepend: 'body, ' %}
   {% endif %}
   {{selector}}{
-    --font-size: {{ settings[font_size] | append: 'px' }};
-    --font-size-mobile: {{ settings[font_size_mobile] | append: 'px' }};
-    --font-size-max: {{ settings[font_size] }};
     --font-size-min: {{ settings[font_size_mobile] }};
-    --font-size-optimal: calc(var(--font-size-mobile) + (var(--font-size-max) - var(--font-size-min)) * (100vw - calc(var(--screen-width-mobile) * 1px)) / (var(--screen-width-desktop) - var(--screen-width-mobile)));
+    --font-size-max: {{ settings[font_size] }};
+    --font-size-optimal: calc(calc(var(--font-size-min) * 1px) + (var(--font-size-max) - var(--font-size-min)) * (100vw - calc(var(--screen-width-mobile) * 1px)) / (var(--screen-width-desktop) - var(--screen-width-mobile)));
     font-family: var({{settings[font_family]}});
-    font-size: clamp(var(--font-size-mobile), var(--font-size-optimal), var(--font-size));
+    font-size: clamp(
+      calc(var(--font-size-min) * 1px), 
+      var(--font-size-optimal), 
+      calc(var(--font-size-max) * 1px)
+    );
     font-weight: normal;
     line-height: {{settings[line_height]}};
     letter-spacing: 1.05px;
