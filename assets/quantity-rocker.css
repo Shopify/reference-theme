@@ -1,0 +1,40 @@
+@layer quanity-rocker{
+
+  quantity-rocker{
+    display: block;
+    width: fit-content;
+    font-size: inherit;
+    &::part(wrapper){
+        width: inherit;
+        display: inline-flex;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+    } 
+    &::part(decrement), 
+    &::part(increment),
+    &::part(input){
+        background-color: unset;
+        padding: 2px 7px;
+        border-radius: 0;
+        color: currentColor;
+        border: 1px solid currentColor;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+    }
+    &::part(decrement), 
+    &::part(increment){
+        cursor: pointer;
+    }
+    &::part(input){
+        border-inline: none;
+        width: inherit;
+        text-align:center;
+        appearance: textfield;
+        -moz-appearance: textfield;
+  
+    } 
+  }
+}
