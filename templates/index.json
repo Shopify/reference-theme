@@ -360,113 +360,6 @@
         "color_scheme": ""
       }
     },
-    "container_MfKhrP": {
-      "type": "container",
-      "blocks": {
-        "image_qibpXz": {
-          "type": "image",
-          "settings": {
-            "object_fit": "cover",
-            "size": {
-              "width": "100%",
-              "flex-grow": "1",
-              "height": "auto"
-            },
-            "aspect_ratio_type": "custom",
-            "aspect_ratio": 1,
-            "placeholder": "image"
-          }
-        },
-        "container_fEXzMB": {
-          "type": "container",
-          "settings": {
-            "position": "",
-            "overflow": "",
-            "size": {
-              "width": "100%",
-              "flex-grow": "1"
-            },
-            "spacing": {
-              "padding-block-start": "20px",
-              "padding-block-end": "20px",
-              "padding-inline-end": "20px",
-              "padding-inline-start": "0px"
-            },
-            "layout": {
-              "flex-direction": "column",
-              "align-items": "center",
-              "row-gap": "20px",
-              "column-gap": "20px"
-            },
-            "color_scheme": ""
-          },
-          "blocks": {
-            "heading_N3jWWg": {
-              "type": "heading",
-              "settings": {
-                "heading": "Heading",
-                "html_tag": "p",
-                "heading_style": "h6",
-                "alignment": "center"
-              }
-            },
-            "heading_YcfnDB": {
-              "type": "heading",
-              "settings": {
-                "heading": "Heading",
-                "html_tag": "p",
-                "heading_style": "h3",
-                "alignment": "center"
-              }
-            },
-            "text_7rkG4E": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
-                "text_style": "p",
-                "alignment": "center"
-              }
-            },
-            "link_V8zxcR": {
-              "type": "link",
-              "settings": {
-                "link": "",
-                "label": "Secondary button label",
-                "button_style": "btn btn--primary",
-                "open_in_new_tab": false
-              }
-            }
-          },
-          "block_order": [
-            "heading_N3jWWg",
-            "heading_YcfnDB",
-            "text_7rkG4E",
-            "link_V8zxcR"
-          ]
-        }
-      },
-      "block_order": [
-        "image_qibpXz",
-        "container_fEXzMB"
-      ],
-      "settings": {
-        "page_width": "page-width",
-        "position": "",
-        "overflow": "",
-        "spacing": {
-          "padding-block-start": "80px",
-          "padding-block-end": "80px"
-        },
-        "layout": {
-          "row-gap": "40px",
-          "column-gap": "40px",
-          "justify-content": "flex-start",
-          "align-items": "center",
-          "flex-wrap": "nowrap"
-        },
-        "color_scheme": ""
-      }
-    },
     "container_qKiFGf": {
       "type": "container",
       "blocks": {
@@ -586,12 +479,119 @@
         },
         "color_scheme": ""
       }
+    },
+    "container_MfKhrP": {
+      "type": "container",
+      "blocks": {
+        "image_qibpXz": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "size": {
+              "width": "100%",
+              "flex-grow": "1",
+              "height": "auto"
+            },
+            "aspect_ratio_type": "custom",
+            "aspect_ratio": 1,
+            "placeholder": "image"
+          }
+        },
+        "container_fEXzMB": {
+          "type": "container",
+          "settings": {
+            "position": "",
+            "overflow": "",
+            "size": {
+              "width": "100%",
+              "flex-grow": "1"
+            },
+            "spacing": {
+              "padding-block-start": "20px",
+              "padding-block-end": "20px",
+              "padding-inline-end": "20px",
+              "padding-inline-start": "0px"
+            },
+            "layout": {
+              "flex-direction": "column",
+              "align-items": "center",
+              "row-gap": "20px",
+              "column-gap": "20px"
+            },
+            "color_scheme": ""
+          },
+          "blocks": {
+            "heading_N3jWWg": {
+              "type": "heading",
+              "settings": {
+                "heading": "Heading",
+                "html_tag": "p",
+                "heading_style": "h6",
+                "alignment": "center"
+              }
+            },
+            "heading_YcfnDB": {
+              "type": "heading",
+              "settings": {
+                "heading": "Heading",
+                "html_tag": "p",
+                "heading_style": "h3",
+                "alignment": "center"
+              }
+            },
+            "text_7rkG4E": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+                "text_style": "p",
+                "alignment": "center"
+              }
+            },
+            "link_V8zxcR": {
+              "type": "link",
+              "settings": {
+                "link": "",
+                "label": "Secondary button label",
+                "button_style": "btn btn--primary",
+                "open_in_new_tab": false
+              }
+            }
+          },
+          "block_order": [
+            "heading_N3jWWg",
+            "heading_YcfnDB",
+            "text_7rkG4E",
+            "link_V8zxcR"
+          ]
+        }
+      },
+      "block_order": [
+        "image_qibpXz",
+        "container_fEXzMB"
+      ],
+      "settings": {
+        "page_width": "page-width",
+        "position": "",
+        "overflow": "",
+        "spacing": {
+          "padding-block-start": "80px",
+          "padding-block-end": "80px"
+        },
+        "layout": {
+          "row-gap": "40px",
+          "column-gap": "40px",
+          "justify-content": "flex-start",
+          "align-items": "center",
+          "flex-wrap": "nowrap"
+        },
+        "color_scheme": ""
+      }
     }
   },
   "order": [
     "slideshow_yAwtwT",
     "container_kwzRMC",
-    "container_MfKhrP",
-    "container_qKiFGf"
+    "container_qKiFGf",
+    "container_MfKhrP"
   ]
 }
