@@ -54,6 +54,16 @@
           "button_label": "#27293b",
           "secondary_button_label": "#ffffff"
         }
+      },
+      "scheme-d64ff18b-05a6-4c0f-85a3-edcd6de19b8c": {
+        "settings": {
+          "background": "rgba(0,0,0,0)",
+          "background_gradient": "radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 65%)",
+          "text": "#fff",
+          "button": "#121212",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212"
+        }
       }
     }
   },

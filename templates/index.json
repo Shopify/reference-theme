@@ -68,7 +68,7 @@
                     "layout": {
                       "flex-direction": "column"
                     },
-                    "color_scheme": "scheme-4"
+                    "color_scheme": "scheme-d64ff18b-05a6-4c0f-85a3-edcd6de19b8c"
                   },
                   "blocks": {
                     "heading_xaKTGP": {
@@ -247,7 +247,7 @@
         },
         "slides_per_page": 1,
         "gap": 0,
-        "loop": false,
+        "loop": true,
         "effect": "slide",
         "autoplay_speed": 0,
         "color_scheme": ""
@@ -360,6 +360,126 @@
         "color_scheme": ""
       }
     },
+    "container_qKiFGf": {
+      "type": "container",
+      "blocks": {
+        "image_aXPtd4": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "size": {
+              "width": "100%",
+              "flex-grow": "1",
+              "height": "600px"
+            },
+            "aspect_ratio_type": "auto",
+            "aspect_ratio": 1,
+            "placeholder": "lifestyle-2"
+          }
+        },
+        "simple_overlay_pPFpEn": {
+          "type": "simple-overlay",
+          "settings": {
+            "overflow": "",
+            "spacing": {
+              "padding-block-start": "60px",
+              "padding-block-end": "60px",
+              "padding-inline-start": "60px",
+              "padding-inline-end": "60px"
+            },
+            "layout": {
+              "align-items": "flex-start",
+              "justify-content": "flex-start"
+            },
+            "color_scheme": "scheme-4"
+          },
+          "blocks": {
+            "container_iEEzC6": {
+              "type": "container",
+              "settings": {
+                "position": "",
+                "overflow": "",
+                "size": {
+                  "width": "350px"
+                },
+                "spacing": {
+                  "padding-block-start": "30px",
+                  "padding-block-end": "30px",
+                  "padding-inline-start": "30px",
+                  "padding-inline-end": "30px"
+                },
+                "layout": {
+                  "flex-direction": "column",
+                  "align-items": "flex-start",
+                  "justify-content": "center"
+                },
+                "color_scheme": "scheme-1"
+              },
+              "blocks": {
+                "heading_68NnnY": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "Heading",
+                    "html_tag": "p",
+                    "heading_style": "h6",
+                    "alignment": "center"
+                  }
+                },
+                "heading_d8D9MY": {
+                  "type": "heading",
+                  "settings": {
+                    "heading": "Heading",
+                    "html_tag": "p",
+                    "heading_style": "h4",
+                    "alignment": "center"
+                  }
+                },
+                "text_Kk7KiV": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Share information about your brand with your customers. <\/p>",
+                    "text_style": "p",
+                    "alignment": "left"
+                  }
+                },
+                "link_RKwNdn": {
+                  "type": "link",
+                  "settings": {
+                    "link": "",
+                    "label": "Primary button label",
+                    "button_style": "btn btn--primary",
+                    "open_in_new_tab": false
+                  }
+                }
+              },
+              "block_order": [
+                "heading_68NnnY",
+                "heading_d8D9MY",
+                "text_Kk7KiV",
+                "link_RKwNdn"
+              ]
+            }
+          },
+          "block_order": [
+            "container_iEEzC6"
+          ]
+        }
+      },
+      "block_order": [
+        "image_aXPtd4",
+        "simple_overlay_pPFpEn"
+      ],
+      "settings": {
+        "page_width": "full-width",
+        "position": "is-relative",
+        "overflow": "overflow-hidden",
+        "spacing": {
+        },
+        "layout": {
+        },
+        "color_scheme": ""
+      }
+    },
     "container_MfKhrP": {
       "type": "container",
       "blocks": {
@@ -374,7 +494,7 @@
             },
             "aspect_ratio_type": "custom",
             "aspect_ratio": 1,
-            "placeholder": "image"
+            "placeholder": "collection-6"
           }
         },
         "container_fEXzMB": {
@@ -471,6 +591,7 @@
   "order": [
     "slideshow_yAwtwT",
     "container_kwzRMC",
+    "container_qKiFGf",
     "container_MfKhrP"
   ]
 }
