@@ -10,8 +10,9 @@
     <div
       class="image-wrapper {{ fit }}"
       style="--aspect-ratio: {{ aspect_ratio }};">
+      {% assign product_image = product.featured_image | default: blank %}
       {% render "image-element",
-        image: product.featured_image,
+        image: product_image,
         fit: fit,
         aspect_ratio: aspect_ratio,
         loading: loading,
