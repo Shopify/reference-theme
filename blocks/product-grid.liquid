@@ -5,21 +5,24 @@
     {% assign products = block.settings.collection.products %}
 {% endcase %}
 <div
-  class="{{block.settings.page_width}} {{ block.settings.size | class_list }} color-{{ block.settings.color_scheme }} grid"
-  style="
-    --columns: {{ block.settings.columns }};
-    --rows: {{ block.settings.rows }};
-    --gap: {{ block.settings.gap | append: 'px' }};
-  ">
-  {% if product.size > 0 %}
-    {% for product in products %}
-      {% render "product-card" with product %}
-    {% endfor %}
-  {% else %}
-    {% for i in (1..4) %}
-      {% render "product-card" %}
-    {% endfor %}
-  {% endif %}
+  class="{{block.settings.page_width}} {{ block.settings.spacing | class_list }} color-{{ block.settings.color_scheme }}">
+  <div
+    class="grid"
+    style="
+      --columns: {{ block.settings.columns }};
+      --rows: {{ block.settings.rows }};
+      --gap: {{ block.settings.gap | append: 'px' }};
+    ">
+    {% if product.size > 0 %}
+      {% for product in products %}
+        {% render "product-card" with product %}
+      {% endfor %}
+    {% else %}
+      {% for i in (1..4) %}
+        {% render "product-card" %}
+      {% endfor %}
+    {% endif %}
+  </div>
 </div>
 
 {% schema %}

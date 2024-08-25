@@ -1,13 +1,16 @@
 {% stylesheet %}{% endstylesheet %}
 
 <div
-  class="{{section.settings.page_width}} {{ section.settings.size | class_list }} color-{{ section.settings.color_scheme }} grid"
-  style="
-    --columns: {{ section.settings.columns }};
-    --rows: {{ section.settings.rows }};
-    --gap: {{ section.settings.gap | append: 'px' }};
-  ">
-  {% content_for "blocks" %}
+  class="{{section.settings.page_width}} {{ section.settings.spacing | class_list }} color-{{ section.settings.color_scheme }}">
+  <div
+    class="grid"
+    style="
+      --columns: {{ section.settings.columns }};
+      --rows: {{ section.settings.rows }};
+      --gap: {{ section.settings.gap | append: 'px' }};
+    ">
+    {% content_for "blocks" %}
+  </div>
 </div>
 
 {% schema %}
