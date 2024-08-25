@@ -21,7 +21,7 @@
     %}
   </div>
   {% assign product_title = product.title | default: "Product placeholder" %}
-  {% assign product_url = product.url | default: "#" %}
+  {% assign product_url = product.url | default: "#" %}
   <a href="{{ product_url }}">
     <p class="h5 spacing-top-8">{{ product_title }}</p>
   </a>

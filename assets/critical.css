@@ -143,16 +143,16 @@ a {
   grid-template-rows: repeat(var(--rows), minmax(0, 1fr));
 }
 
-.spacing-top-4{
+.spacing-top-4 {
   padding-top: 4px;
 }
-.spacing-top-8{
+.spacing-top-8 {
   padding-top: 8px;
 }
-.spacing-top-16{
+.spacing-top-16 {
   padding-top: 16px;
 }
-.spacing-top-32{
+.spacing-top-32 {
   padding-top: 32px;
 }
 
