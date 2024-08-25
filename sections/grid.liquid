@@ -4,7 +4,7 @@
   style="
   --columns: {{ section.settings.columns }}; 
   --rows: {{ section.settings.rows }};
-  --gap: {{ section.settings.layout.column_gap }} {{ section.settings.layout.row_gap }};
+  --gap: {{ section.settings.layout | json }};
   "
 >
   {% content_for "blocks" %}
