@@ -4,7 +4,7 @@ class FormFetch extends HTMLElement {
   }
   connectedCallback() {
     this.form = this.querySelector("form");
-    this.onSuccess = this.getAttribute("onsuccess");
+    this.onSuccess = Function(this.getAttribute("onsuccess"));
     this.form.addEventListener("submit", (e) => {
       e.preventDefault();
 
@@ -16,7 +16,7 @@ class FormFetch extends HTMLElement {
       })
         .then((res) => res.text())
         .then((res) => {
-          Function(this.onSuccess);
+          this.onSuccess();
         })
         .catch(console.error);
     });
