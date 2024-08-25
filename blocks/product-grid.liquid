@@ -5,7 +5,7 @@
     {% assign products = block.settings.collection.products %}
 {% endcase %}
 <div
-  class="{{block.settings.page_width}} {{ block.settings.spacing | class_list }} color-{{ block.settings.color_scheme }}">
+  class="{{ block.settings.spacing | class_list }} color-{{ block.settings.color_scheme }}">
   <div
     class="grid"
     style="
@@ -59,26 +59,6 @@
       "type": "collection",
       "id": "collection",
       "label": "Collection"
-    },
-    {
-      "type": "header",
-      "content": "Page width"
-    },
-    {
-      "type": "select",
-      "id": "page_width",
-      "label": "Page width",
-      "options": [
-        {
-          "value": "full-width",
-          "label": "Full width"
-        },
-        {
-          "value": "page-width",
-          "label": "Page width"
-        }
-      ],
-      "default": "page-width"
     },
     {
       "type": "style.spacing_panel",
