@@ -17,18 +17,5 @@
   "bracketSpacing": true,
   "arrowParens": "always",
   "endOfLine": "lf",
-  "overrides": [
-    {
-      "files": "*.css.liquid",
-      "options": {
-        "parser": "liquid-html"
-      }
-    },
-    {
-      "files": ["*.js.liquid"],
-      "options": {
-        "parser": "liquid-html"
-      }
-    }
-  ]
+  "overrides": []
 }
