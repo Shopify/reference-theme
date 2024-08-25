@@ -2,11 +2,10 @@
   class="shopify-block-overlay {{ block.settings | class_list }} color-{{ block.settings.color_scheme }}"
   {{ block.shopify_attributes }}
   style="
-  --top: {{ block.settings.top | append: "%" }}; 
-  --left: {{ block.settings.left | append: "%" }};
-  --translate: {{ block.settings.translateX | append: "%" }} {{ block.settings.translateY | append: "%" }};
-  "
->
+    --top: {{ block.settings.top | append: "%" }};
+    --left: {{ block.settings.left | append: "%" }};
+    --translate: {{ block.settings.translateX | append: "%" }} {{ block.settings.translateY | append: "%" }};
+  ">
   {% content_for "blocks" %}
 </div>
 

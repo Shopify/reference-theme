@@ -1,22 +1,34 @@
 {
-  "plugins": [
-      "@shopify/prettier-plugin-liquid"
-  ],
+  "plugins": ["@shopify/prettier-plugin-liquid"],
   "trailingComma": "all",
   "tabWidth": 2,
   "semi": true,
-  "singleQuote": true,
-  "liquidSingleQuote": true,
-  "embeddedSingleQuote": true,
+  "singleQuote": false,
+  "liquidSingleQuote": false,
+  "embeddedSingleQuote": false,
   "embeddedLanguageFormatting": "auto",
   "singleAttributePerLine": true,
   "htmlWhitespaceSensitivity": "css",
   "singleLineLinkTags": true,
-  "indentSchema": true,
+  "indentSchema": false,
   "printWidth": 120,
   "useTabs": false,
   "bracketSameLine": true,
   "bracketSpacing": true,
   "arrowParens": "always",
-  "endOfLine": "lf"
+  "endOfLine": "lf",
+  "overrides": [
+    {
+      "files": "*.css.liquid",
+      "options": {
+        "parser": "liquid-html"
+      }
+    },
+    {
+      "files": ["*.js.liquid"],
+      "options": {
+        "parser": "liquid-html"
+      }
+    }
+  ]
 }

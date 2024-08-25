@@ -1,18 +1,19 @@
 {% assign navigation_style = block.settings.navigation_style %}
 {% if navigation_style != "" %}
   <div
-    class="shopify-block-slideshow-navigation embla-navigation {{ block.settings | class_list }} {{ navigation_style }} color-{{ block.settings.color_scheme }}"
-  >
+    class="shopify-block-slideshow-navigation embla-navigation {{ block.settings | class_list }} {{ navigation_style }} color-{{ block.settings.color_scheme }}">
     {% for block in section.blocks %}
       <embla-thumbnail
         class=""
         {{ block.shopify_attributes }}
-        index="{{ forloop.index0 }}"
-      >
+        index="{{ forloop.index0 }}">
         {% if navigation_style == "embla-dots" %}
-          <svg width="9" height="9" viewBox="0 0 9 9">
-              <circle class="shadow" cx="4.5" cy="4.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2" />
-              <circle class="progress" cx="4.5" cy="4.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2" pathLength="100" />
+          <svg
+            width="9"
+            height="9"
+            viewBox="0 0 9 9">
+            <circle class="shadow" cx="4.5" cy="4.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2" />
+            <circle class="progress" cx="4.5" cy="4.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2" pathLength="100" />
           </svg>
         {% endif %}
       </embla-thumbnail>
@@ -51,7 +52,7 @@
       "id": "color_scheme",
       "label": "Color scheme",
       "default": "scheme-1"
-    } 
+    }
   ]
 }
 {% endschema %}

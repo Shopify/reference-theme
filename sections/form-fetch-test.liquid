@@ -1,32 +1,38 @@
 <style>
-  form-fetch{
+  form-fetch {
     display: block;
   }
 </style>
-<script type="module" src="{{ 'form-fetch.js' | asset_url }}"></script>
+<script
+  type="module"
+  src="{{ 'form-fetch.js' | asset_url }}"></script>
 {% assign product = section.settings.product %}
 <form-fetch>
-  {% form 'product', product %}
-    <input type="text" name="id" value="{{ product.selected_or_first_available_variant.id }}" hidden>
+  {% form "product", product %}
+    <input
+      type="text"
+      name="id"
+      value="{{ product.selected_or_first_available_variant.id }}"
+      hidden>
 
     <button type="submit">Submit</button>
   {% endform %}
 </form-fetch>
 
 {% schema %}
-  {
-    "name": "Form fetch test",
-    "settings": [
-      {
-        "type": "product",
-        "id": "product",
-        "label": "Product"
-      }
-    ],
-    "presets": [
-      {
-        "name": "Form fetch test"
-      }
-    ]
-  }
+{
+  "name": "Form fetch test",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Form fetch test"
+    }
+  ]
+}
 {% endschema %}

@@ -1,68 +1,86 @@
 <!doctype html>
-<html class="no-js" lang="{{ request.locale.iso_code }}">
+<html
+  class="no-js"
+  lang="{{ request.locale.iso_code }}">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="">
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge">
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1">
+    <meta
+      name="theme-color"
+      content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://cdn.shopify.com">
 
     <title>
       {{ page_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ", " }}"{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
     {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
+      <meta
+        name="description"
+        content="{{ page_description | escape }}">
     {% endif %}
 
     {{ content_for_header }}
 
-    {% render 'preload-fonts' %}
+    {% render "preload-fonts" %}
 
-    {{ 'critical.css' | asset_url | stylesheet_tag }}
-    {{ 'color.css' | asset_url | stylesheet_tag }}
-    {{ 'typography.css' | asset_url | stylesheet_tag }}
-    {{ 'buttons.css' | asset_url | stylesheet_tag }}
+    {{ "critical.css" | asset_url | stylesheet_tag }}
+    {{ "color.css" | asset_url | stylesheet_tag }}
+    {{ "typography.css" | asset_url | stylesheet_tag }}
+    {{ "buttons.css" | asset_url | stylesheet_tag }}
 
     {% assign skin = "modern" %}
     {% case skin %}
-      {% when 'modern' %}
-        {{ 'modern-skin.css' | asset_url | stylesheet_tag }}
-      {% when 'minimal' %}
-        {{ 'minimal-skin.css' | asset_url | stylesheet_tag }}
+      {% when "modern" %}
+        {{ "modern-skin.css" | asset_url | stylesheet_tag }}
+      {% when "minimal" %}
+        {{ "minimal-skin.css" | asset_url | stylesheet_tag }}
     {% endcase %}
-    
-    <script type="module" src="{{ 'embla-slider-component.js' | asset_url }}"></script>
+
+    <script
+      type="module"
+      src="{{ 'embla-slider-component.js' | asset_url }}"></script>
     <link rel="stylesheet" href="{{ 'embla-slider-component.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'embla-slider-component-skin.css' | asset_url }}">
 
-    <script type="module" src="{{ 'theme-select.js' | asset_url }}"></script>
+    <script
+      type="module"
+      src="{{ 'theme-select.js' | asset_url }}"></script>
     <link rel="stylesheet" href="{{ 'theme-select.css' | asset_url }}">
 
-    <script type="module" src="{{ 'quantity-rocker.js' | asset_url }}"></script>
+    <script
+      type="module"
+      src="{{ 'quantity-rocker.js' | asset_url }}"></script>
     <link rel="stylesheet" href="{{ 'quantity-rocker.css' | asset_url }}">
-
- 
   </head>
 
   <body>
-    {% sections 'header-group' %}
+    {% sections "header-group" %}
 
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+    <main
+      id="MainContent"
+      class="content-for-layout focus-none"
+      role="main"
+      tabindex="-1">
       {{ content_for_layout }}
     </main>
 
-    {% sections 'footer-group' %}
+    {% sections "footer-group" %}
 
-    {% render 'seo-global' %}
-
-
+    {% render "seo-global" %}
   </body>
 </html>

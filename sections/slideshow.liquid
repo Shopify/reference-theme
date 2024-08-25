@@ -1,4 +1,3 @@
-
 <style>
   #slideshow-{{section.id}}{
     --slides-per-page: {{section.settings.slides_per_page}};
@@ -6,7 +5,8 @@
   }
 </style>
 
-<embla-slider id="slideshow-{{section.id}}" 
+<embla-slider
+  id="slideshow-{{section.id}}"
   class="{{ section.settings | class_list }} {{ section.settings.page_width }} color-{{ section.settings.color_scheme }}"
   options="loop: {{ section.settings.loop }}, containScroll: trimSnaps, align: start"
   auto-height
@@ -15,8 +15,7 @@
   {% endif %}
   {% if section.settings.effect contains "fade" %}
     fade
-  {% endif %}
->
+  {% endif %}>
   <embla-viewport>
     <embla-slides>
       {% content_for "blocks" %}
@@ -30,7 +29,6 @@
   {% if section.blocks.size > 1 %}
     {% content_for "block", type: "slideshow-navigation", id: "slideshow-navigation" %}
   {% endif %}
-
 </embla-slider>
 
 {% schema %}
@@ -129,7 +127,7 @@
       "id": "color_scheme",
       "label": "Color scheme",
       "default": "scheme-1"
-    } 
+    }
   ],
   "presets": [
     {

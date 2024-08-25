@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "header",
   "name": "Header",
@@ -43,16 +43,13 @@
             "text_FPDTnq": {
               "type": "text",
               "settings": {
-                "text": "<p>Share information about you.<\/p>",
+                "text": "<p>Share information about you.</p>",
                 "text_style": "p",
                 "alignment": "left"
               }
             }
           },
-          "block_order": [
-            "heading_exef7X",
-            "text_FPDTnq"
-          ]
+          "block_order": ["heading_exef7X", "text_FPDTnq"]
         },
         "slide_8bjEmy": {
           "type": "slide",
@@ -83,16 +80,13 @@
             "text_MqQPhD": {
               "type": "text",
               "settings": {
-                "text": "<p>Share information about you.<\/p>",
+                "text": "<p>Share information about you.</p>",
                 "text_style": "p",
                 "alignment": "left"
               }
             }
           },
-          "block_order": [
-            "heading_mqarGJ",
-            "text_MqQPhD"
-          ]
+          "block_order": ["heading_mqarGJ", "text_MqQPhD"]
         },
         "slideshow-controls": {
           "type": "slideshow-controls",
@@ -101,10 +95,8 @@
           "settings": {
             "page_width": "full-width",
             "control_style": "embla-simple",
-            "spacing": {
-            },
-            "layout": {
-            },
+            "spacing": {},
+            "layout": {},
             "color_scheme": ""
           }
         },
@@ -114,21 +106,16 @@
           "static": true,
           "settings": {
             "navigation_style": "embla-bars",
-            "spacing": {
-            },
+            "spacing": {},
             "color_scheme": ""
           }
         }
       },
-      "block_order": [
-        "slide_Ta933P",
-        "slide_8bjEmy"
-      ],
+      "block_order": ["slide_Ta933P", "slide_8bjEmy"],
       "settings": {
         "title": "Announcement Bar",
         "page_width": "full-width",
-        "size": {
-        },
+        "size": {},
         "slides_per_page": 1,
         "gap": 0,
         "loop": false,
@@ -150,9 +137,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_CJHPWc"
-      ],
+      "block_order": ["heading_CJHPWc"],
       "settings": {
         "title": "Header",
         "page_width": "page-width",
@@ -162,14 +147,10 @@
           "padding-block-start": "20px",
           "padding-block-end": "20px"
         },
-        "layout": {
-        },
+        "layout": {},
         "color_scheme": ""
       }
     }
   },
-  "order": [
-    "slideshow_NxYUz7",
-    "container_A3mrUk"
-  ]
+  "order": ["slideshow_NxYUz7", "container_A3mrUk"]
 }

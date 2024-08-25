@@ -64,7 +64,7 @@
         ],
         "default": "--font-family-primary"
       },
-      
+
       {
         "type": "header",
         "content": "Font Style H2"

@@ -12,11 +12,9 @@
   id="slide-{{ block.id }}"
   index="{{ block_index }}"
   class="shopify-block-slide"
-  {{ block.shopify_attributes }}
->
-  <div 
-    class="{{ block.settings | class_list }} {{ block.settings.position }} {{ block.settings.overflow }}"
-  >
+  {{ block.shopify_attributes }}>
+  <div
+    class="{{ block.settings | class_list }} {{ block.settings.position }} {{ block.settings.overflow }}">
     {% content_for "blocks" %}
   </div>
 </embla-slide>
@@ -124,9 +122,7 @@
   "presets": [
     {
       "name": "Slide",
-      "blocks": [
-       
-      ]
+      "blocks": []
     }
   ]
 }
