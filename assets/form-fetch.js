@@ -16,7 +16,7 @@ class FormFetch extends HTMLElement {
       })
         .then((res) => res.text())
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           this.onSuccess();
         })
         .catch(console.error);
