@@ -1,7 +1,7 @@
 {% case block.settings.source_type %}
-  {% when 'product_list' %}
+  {% when "product_list" %}
     {% assign products = block.settings.product_list %}
-  {% when 'collection' %}
+  {% when "collection" %}
     {% assign products = block.settings.collection.products %}
 {% endcase %}
 <div
@@ -13,14 +13,13 @@
   ">
   {% if product.size > 0 %}
     {% for product in products %}
-      {% render 'product-card' with product %}
+      {% render "product-card" with product %}
     {% endfor %}
   {% else %}
-  {% for i in (1..4) %}
-      {% render 'product-card' %}
-  {% endfor %}
+    {% for i in (1..4) %}
+      {% render "product-card" %}
+    {% endfor %}
   {% endif %}
-  
 </div>
 
 {% schema %}
