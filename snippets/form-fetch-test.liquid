@@ -4,9 +4,22 @@
   }
 </style>
 <script type="module" src="{{ 'form-fetch.js' | asset_url }}"></script>
-
+{% assign product = section.settings.product %}
 <form-fetch>
   {% form 'product', product %}
     <input type="text" name="id" value="{{ product.selected_or_first_available_variant.id }}" hidden>
   {% endform %}
 </form-fetch>
+
+{% schema %}
+  {
+    "name": "Form fetch test",
+    "settings": [
+      {
+        "type": "product",
+        "id": "product",
+        "label": "Product"
+      }
+    ]
+  }
+{% endschema %}
