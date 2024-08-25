@@ -8,6 +8,8 @@
 <form-fetch>
   {% form 'product', product %}
     <input type="text" name="id" value="{{ product.selected_or_first_available_variant.id }}" hidden>
+
+    <button type="submit">Submit</button>
   {% endform %}
 </form-fetch>
 
