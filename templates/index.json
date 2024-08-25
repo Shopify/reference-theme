@@ -250,6 +250,48 @@
     "container_FbTMVE": {
       "type": "container",
       "blocks": {
+        "container_aMLrpK": {
+          "type": "container",
+          "settings": {
+            "position": "",
+            "overflow": "",
+            "size": {
+              "width": "100%",
+              "flex-grow": "1"
+            },
+            "spacing": {
+            },
+            "layout": {
+              "justify-content": "space-between",
+              "align-items": "baseline"
+            },
+            "color_scheme": ""
+          },
+          "blocks": {
+            "heading_EiHThL": {
+              "type": "heading",
+              "settings": {
+                "heading": "Top picks",
+                "html_tag": "p",
+                "heading_style": "h3",
+                "alignment": "center"
+              }
+            },
+            "link_dWGw8j": {
+              "type": "link",
+              "settings": {
+                "link": "",
+                "label": "View All",
+                "button_style": "btn btn--primary",
+                "open_in_new_tab": false
+              }
+            }
+          },
+          "block_order": [
+            "heading_EiHThL",
+            "link_dWGw8j"
+          ]
+        },
         "product_grid_dmVhBB": {
           "type": "product-grid",
           "settings": {
@@ -268,6 +310,7 @@
         }
       },
       "block_order": [
+        "container_aMLrpK",
         "product_grid_dmVhBB"
       ],
       "settings": {
@@ -279,6 +322,7 @@
           "padding-block-end": "80px"
         },
         "layout": {
+          "flex-direction": "column"
         },
         "color_scheme": ""
       }
