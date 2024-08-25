@@ -669,6 +669,12 @@
         "rows": 2,
         "color_scheme": ""
       }
+    },
+    "form_fetch_test_WPFMfa": {
+      "type": "form-fetch-test",
+      "settings": {
+        "product": "the-complete-snowboard"
+      }
     }
   },
   "order": [
@@ -676,6 +682,7 @@
     "container_kwzRMC",
     "container_qKiFGf",
     "container_MfKhrP",
-    "grid_RYPCRk"
+    "grid_RYPCRk",
+    "form_fetch_test_WPFMfa"
   ]
 }
