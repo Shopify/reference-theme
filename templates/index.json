@@ -1,12 +1,12 @@
 /*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "slideshow_N8dBMt": {
@@ -18,8 +18,10 @@
             "page_width": "full-width",
             "position": "is-relative",
             "overflow": "overflow-hidden",
-            "spacing": {},
-            "layout": {},
+            "spacing": {
+            },
+            "layout": {
+            },
             "color_scheme": ""
           },
           "blocks": {
@@ -40,8 +42,10 @@
               "type": "simple-overlay",
               "settings": {
                 "overflow": "",
-                "spacing": {},
-                "layout": {},
+                "spacing": {
+                },
+                "layout": {
+                },
                 "color_scheme": "scheme-4"
               },
               "blocks": {
@@ -53,7 +57,8 @@
                     "size": {
                       "width": "45%"
                     },
-                    "spacing": {},
+                    "spacing": {
+                    },
                     "layout": {
                       "flex-direction": "column"
                     },
@@ -72,7 +77,7 @@
                     "text_XMKWyF": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
                         "text_style": "p",
                         "alignment": "center"
                       }
@@ -87,13 +92,22 @@
                       }
                     }
                   },
-                  "block_order": ["heading_yrhEXG", "text_XMKWyF", "link_n4TJwj"]
+                  "block_order": [
+                    "heading_yrhEXG",
+                    "text_XMKWyF",
+                    "link_n4TJwj"
+                  ]
                 }
               },
-              "block_order": ["container_qGD8Xi"]
+              "block_order": [
+                "container_qGD8Xi"
+              ]
             }
           },
-          "block_order": ["image_XDqi4b", "simple_overlay_3eJbeW"]
+          "block_order": [
+            "image_XDqi4b",
+            "simple_overlay_3eJbeW"
+          ]
         },
         "slide_pbBe6r": {
           "type": "slide",
@@ -101,8 +115,10 @@
             "page_width": "full-width",
             "position": "is-relative",
             "overflow": "overflow-hidden",
-            "spacing": {},
-            "layout": {},
+            "spacing": {
+            },
+            "layout": {
+            },
             "color_scheme": ""
           },
           "blocks": {
@@ -124,8 +140,10 @@
               "type": "simple-overlay",
               "settings": {
                 "overflow": "",
-                "spacing": {},
-                "layout": {},
+                "spacing": {
+                },
+                "layout": {
+                },
                 "color_scheme": "scheme-4"
               },
               "blocks": {
@@ -137,7 +155,8 @@
                     "size": {
                       "width": "45%"
                     },
-                    "spacing": {},
+                    "spacing": {
+                    },
                     "layout": {
                       "flex-direction": "column"
                     },
@@ -156,7 +175,7 @@
                     "text_M6kmUC": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+                        "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
                         "text_style": "p",
                         "alignment": "center"
                       }
@@ -171,13 +190,22 @@
                       }
                     }
                   },
-                  "block_order": ["heading_7iJ6Fw", "text_M6kmUC", "link_dBN34e"]
+                  "block_order": [
+                    "heading_7iJ6Fw",
+                    "text_M6kmUC",
+                    "link_dBN34e"
+                  ]
                 }
               },
-              "block_order": ["container_mBFiw9"]
+              "block_order": [
+                "container_mBFiw9"
+              ]
             }
           },
-          "block_order": ["image_UzFUtP", "simple_overlay_VJ6BYa"]
+          "block_order": [
+            "image_UzFUtP",
+            "simple_overlay_VJ6BYa"
+          ]
         },
         "slideshow-controls": {
           "type": "slideshow-controls",
@@ -185,8 +213,10 @@
           "settings": {
             "page_width": "full-width",
             "control_style": "embla-simple",
-            "spacing": {},
-            "layout": {},
+            "spacing": {
+            },
+            "layout": {
+            },
             "color_scheme": ""
           }
         },
@@ -195,15 +225,20 @@
           "static": true,
           "settings": {
             "navigation_style": "embla-bars",
-            "spacing": {},
+            "spacing": {
+            },
             "color_scheme": "scheme-4"
           }
         }
       },
-      "block_order": ["slide_fraa7F", "slide_pbBe6r"],
+      "block_order": [
+        "slide_fraa7F",
+        "slide_pbBe6r"
+      ],
       "settings": {
         "page_width": "full-width",
-        "size": {},
+        "size": {
+        },
         "slides_per_page": 1,
         "gap": 0,
         "loop": true,
@@ -218,22 +253,34 @@
         "product_grid_dmVhBB": {
           "type": "product-grid",
           "settings": {
+            "source_type": "product_list",
+            "product_list": [
+
+            ],
+            "collection": "",
             "page_width": "page-width",
-            "spacing": {},
-            "columns": 3,
+            "spacing": {
+            },
+            "columns": 4,
             "rows": 1,
-            "gap": 5,
+            "gap": 20,
             "color_scheme": ""
           }
         }
       },
-      "block_order": ["product_grid_dmVhBB"],
+      "block_order": [
+        "product_grid_dmVhBB"
+      ],
       "settings": {
         "page_width": "page-width",
         "position": "",
         "overflow": "",
-        "spacing": {},
-        "layout": {},
+        "spacing": {
+          "padding-block-start": "80px",
+          "padding-block-end": "80px"
+        },
+        "layout": {
+        },
         "color_scheme": ""
       }
     },
@@ -285,7 +332,7 @@
             "text_FUUWaw": {
               "type": "text",
               "settings": {
-                "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+                "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
                 "text_style": "p",
                 "alignment": "left"
               }
@@ -300,7 +347,12 @@
               }
             }
           },
-          "block_order": ["heading_HVURpU", "heading_GK6CgU", "text_FUUWaw", "link_C6wdQR"]
+          "block_order": [
+            "heading_HVURpU",
+            "heading_GK6CgU",
+            "text_FUUWaw",
+            "link_C6wdQR"
+          ]
         },
         "image_9pAGXL": {
           "type": "image",
@@ -317,7 +369,10 @@
           }
         }
       },
-      "block_order": ["container_RyTLjV", "image_9pAGXL"],
+      "block_order": [
+        "container_RyTLjV",
+        "image_9pAGXL"
+      ],
       "settings": {
         "page_width": "page-width",
         "position": "",
@@ -413,7 +468,7 @@
                 "text_Kk7KiV": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Share information about your brand with your customers. </p>",
+                    "text": "<p>Share information about your brand with your customers. <\/p>",
                     "text_style": "p",
                     "alignment": "left"
                   }
@@ -428,19 +483,31 @@
                   }
                 }
               },
-              "block_order": ["heading_68NnnY", "heading_d8D9MY", "text_Kk7KiV", "link_RKwNdn"]
+              "block_order": [
+                "heading_68NnnY",
+                "heading_d8D9MY",
+                "text_Kk7KiV",
+                "link_RKwNdn"
+              ]
             }
           },
-          "block_order": ["container_iEEzC6"]
+          "block_order": [
+            "container_iEEzC6"
+          ]
         }
       },
-      "block_order": ["image_aXPtd4", "simple_overlay_pPFpEn"],
+      "block_order": [
+        "image_aXPtd4",
+        "simple_overlay_pPFpEn"
+      ],
       "settings": {
         "page_width": "full-width",
         "position": "is-relative",
         "overflow": "overflow-hidden",
-        "spacing": {},
-        "layout": {},
+        "spacing": {
+        },
+        "layout": {
+        },
         "color_scheme": ""
       }
     },
@@ -506,7 +573,7 @@
             "text_7rkG4E": {
               "type": "text",
               "settings": {
-                "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+                "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
                 "text_style": "p",
                 "alignment": "center"
               }
@@ -521,10 +588,18 @@
               }
             }
           },
-          "block_order": ["heading_N3jWWg", "heading_YcfnDB", "text_7rkG4E", "link_V8zxcR"]
+          "block_order": [
+            "heading_N3jWWg",
+            "heading_YcfnDB",
+            "text_7rkG4E",
+            "link_V8zxcR"
+          ]
         }
       },
-      "block_order": ["image_qibpXz", "container_fEXzMB"],
+      "block_order": [
+        "image_qibpXz",
+        "container_fEXzMB"
+      ],
       "settings": {
         "page_width": "page-width",
         "position": "",
@@ -550,7 +625,8 @@
           "type": "image",
           "settings": {
             "object_fit": "cover",
-            "size": {},
+            "size": {
+            },
             "aspect_ratio_type": "auto",
             "aspect_ratio": 1,
             "placeholder": "image"
@@ -560,7 +636,8 @@
           "type": "image",
           "settings": {
             "object_fit": "cover",
-            "size": {},
+            "size": {
+            },
             "aspect_ratio_type": "auto",
             "aspect_ratio": 1,
             "placeholder": "image"
@@ -570,7 +647,8 @@
           "type": "image",
           "settings": {
             "object_fit": "cover",
-            "size": {},
+            "size": {
+            },
             "aspect_ratio_type": "auto",
             "aspect_ratio": 1,
             "placeholder": "image"
@@ -580,7 +658,8 @@
           "type": "image",
           "settings": {
             "object_fit": "cover",
-            "size": {},
+            "size": {
+            },
             "aspect_ratio_type": "auto",
             "aspect_ratio": 1,
             "placeholder": "image"
@@ -590,7 +669,8 @@
           "type": "image",
           "settings": {
             "object_fit": "cover",
-            "size": {},
+            "size": {
+            },
             "aspect_ratio_type": "auto",
             "aspect_ratio": 1,
             "placeholder": "image"
@@ -600,17 +680,26 @@
           "type": "image",
           "settings": {
             "object_fit": "cover",
-            "size": {},
+            "size": {
+            },
             "aspect_ratio_type": "auto",
             "aspect_ratio": 1,
             "placeholder": "image"
           }
         }
       },
-      "block_order": ["image_8FWpCz", "image_FwzA4m", "image_kxrG7F", "image_rcR4VD", "image_9EnYWj", "image_xwA6EQ"],
+      "block_order": [
+        "image_8FWpCz",
+        "image_FwzA4m",
+        "image_kxrG7F",
+        "image_rcR4VD",
+        "image_9EnYWj",
+        "image_xwA6EQ"
+      ],
       "settings": {
         "page_width": "page-width",
-        "spacing": {},
+        "spacing": {
+        },
         "columns": 3,
         "rows": 2,
         "gap": 5,
