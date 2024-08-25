@@ -21,10 +21,10 @@
     %}
   </div>
   {% assign product_title = product.title | default: "Product placeholder" %}
-  {% assign product_url = product.url | default: "#" %}
-  <a href="{{ product_url }}">
+  {% comment %} {% assign product_url = product.url | default: "#" %} {% endcomment %}
+  {% comment %} <a href="{{ product_url }}"> {% endcomment %}
     <p class="h5 spacing-top-8">{{ product_title }}</p>
-  </a>
+  {% comment %} </a> {% endcomment %}
   <p class="small spacing-top-4">
     {% render "product-price" with product %}
   </p>
