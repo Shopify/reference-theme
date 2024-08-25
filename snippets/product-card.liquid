@@ -19,7 +19,8 @@
         placeholder: placeholder
       %}
     </div>  
-    <p class="h5">{{ product.title | default: "Product placeholder" }}</p>
+    {% assign product_title = product.title | default: "Product placeholder" %}
+    <p class="h5">{{ product_title }}</p>
     <p class="small">
       {% render 'product-price' with product %}
     </p>
