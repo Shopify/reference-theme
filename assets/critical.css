@@ -134,6 +134,7 @@ a {
   --rows: 1;
   --gap: 0px;
   display: grid;
+  width: 100%;
   gap: var(--gap);
   grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
   grid-template-rows: repeat(var(--rows), minmax(0, 1fr));
