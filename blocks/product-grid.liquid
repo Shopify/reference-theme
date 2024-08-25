@@ -1,4 +1,9 @@
-{% assign products = block.settings.product %}
+{% case block.settings.source_type %}
+  {% when 'product_list' %}
+    {% assign products = block.settings.product_list %}
+  {% when 'collection' %}
+    {% assign products = block.settings.collection.products %}
+{% endcase %}
 <div
   class="{{block.settings.page_width}} {{ block.settings.size | class_list }} color-{{ block.settings.color_scheme }} grid"
   style="
@@ -6,9 +11,16 @@
     --rows: {{ block.settings.rows }};
     --gap: {{ block.settings.gap | append: 'px' }};
   ">
-  {% for product in products %}
+  {% if product.size > 0 %}
+    {% for product in products %}
       {% render 'product-card' with product %}
+    {% endfor %}
+  {% else %}
+  {% for i in (1..4) %}
+      {% render 'product-card' %}
   {% endfor %}
+  {% endif %}
+  
 </div>
 
 {% schema %}
@@ -17,9 +29,34 @@
   "tag": null,
   "settings": [
     {
+      "type": "header",
+      "content": "Source"
+    },
+    {
+      "type": "select",
+      "id": "source_type",
+      "label": "Source type",
+      "options": [
+        {
+          "value": "product_list",
+          "label": "Product list"
+        },
+        {
+          "value": "collection",
+          "label": "Collection"
+        }
+      ],
+      "default": "product_list"
+    },
+    {
       "type": "product_list",
-      "id": "products",
+      "id": "product_list",
       "label": "Products"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
     },
     {
       "type": "header",

@@ -1,4 +1,4 @@
 {% if product.price_varies %}
   <span class="price-from">{{ 'product.price.from' | t }}</span>
 {% endif %}
-<span class="price-min">{{ product.price_min | money }}</span>
+<span class="price-min">{{ product.price_min | default: 999 | money }}</span>
