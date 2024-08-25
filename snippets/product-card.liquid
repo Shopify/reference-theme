@@ -1,0 +1,26 @@
+{% assign loading = "lazy" %}
+{% if section.index < 2 %}
+  {% assign loading = "eager" %}
+{% endif %}
+
+{% assign aspect_ratio = "1" %}
+{% assign fit = 'cover' %}
+{% capture placeholder %}product-{% cycle '1', '2', '3', '4', '5', '6' %}{% endcapture %}
+<div class="flex col">
+    <div
+      class="image-wrapper {{ fit }}"
+      style="--aspect-ratio: {{ aspect_ratio }};">
+      {% render "image-element",
+        image: product.featured_image,
+        fit: fit,
+        aspect_ratio: aspect_ratio,
+        loading: loading,
+        sizes: "25vw",
+        placeholder: placeholder
+      %}
+    </div>  
+    <p class="h5">{{ product.title }}</p>
+    <p class="small">
+      {% render 'product-price' with product %}
+    </p>
+</div>

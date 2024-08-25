@@ -1,0 +1,95 @@
+{% assign products = block.settings.product %}
+<div
+  class="{{block.settings.page_width}} {{ block.settings.size | class_list }} color-{{ block.settings.color_scheme }} grid"
+  style="
+    --columns: {{ block.settings.columns }};
+    --rows: {{ block.settings.rows }};
+    --gap: {{ block.settings.gap | append: 'px' }};
+  ">
+  {% for product in products %}
+      {% render 'product-card' with product %}
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Product grid",
+  "tag": null,
+  "settings": [
+    {
+      "type": "product_list",
+      "id": "products",
+      "label": "Products"
+    },
+    {
+      "type": "header",
+      "content": "Page width"
+    },
+    {
+      "type": "select",
+      "id": "page_width",
+      "label": "Page width",
+      "options": [
+        {
+          "value": "full-width",
+          "label": "Full width"
+        },
+        {
+          "value": "page-width",
+          "label": "Page width"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Columns",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "rows",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Rows",
+      "default": 1
+    },
+    {
+      "type": "number",
+      "id": "gap",
+      "label": "Gap",
+      "default": 5,
+      "info": "px (Todo: Replace with input settings once available)"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product grid"
+    }
+  ]
+}
+{% endschema %}
