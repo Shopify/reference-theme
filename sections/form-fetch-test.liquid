@@ -3,11 +3,16 @@
     display: block;
   }
 </style>
+<script>
+  window.addEventListener("success", (e) => {
+    console.log("success");
+  });
+</script>
 <script
   type="module"
   src="{{ 'form-fetch.js' | asset_url }}"></script>
 {% assign product = section.settings.product %}
-<form-fetch>
+<form-fetch onsuccess="window.dispatchEvent(new Event('success'))">
   {% form "product", product %}
     <input
       type="text"
