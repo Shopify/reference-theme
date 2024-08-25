@@ -139,7 +139,9 @@ a {
 .grid{
   --columns: 1;
   --rows: 1;
+  --gap: 0px;
   display:grid;
+  gap: var(--gap);
   grid-template-columns: repeat(var(--columns), 1fr);
   grid-template-rows: repeat(var(--rows), 1fr);
 }
