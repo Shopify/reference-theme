@@ -12,7 +12,7 @@
   type="module"
   src="{{ 'form-fetch.js' | asset_url }}"></script>
 {% assign product = section.settings.product %}
-<form-fetch onsuccess="window.dispatchEvent(new Event('success'))">
+<form-fetch onsuccess="window.dispatchEvent(new Event('success')); console.log('Hello');">
   {% form "product", product %}
     <input
       type="text"
