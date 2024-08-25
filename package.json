@@ -4,7 +4,8 @@
   "description": "This theme has been created to show an implementation of theme blocks. It is designed as a supplement to the [theme block documentation](https://shopify.dev/docs/themes/architecture/blocks/theme-blocks) and can be used as both a reference and a starting point for theme developers to experiment with the new feature.",
   "scripts": {
     "prettier": "prettier",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "check": "shopify theme check"
   },
   "author": "",
   "license": "ISC",

@@ -1,0 +1,91 @@
+<style>
+  :root{
+    --screen-width-mobile: 360;
+    --screen-width-desktop: 1440;
+    --screen-width-span: calc(var(--screen-width-desktop) - var(--screen-width-mobile));
+    --font-family-primary: {{settings.font_family_primary.family}}, {{settings.font_family_primary.fallback_families}};
+    --font-family-secondary: {{settings.font_family_primary.family}}, {{settings.font_family_primary.fallback_families}};
+    --layout-gap: 15px;
+    --page-width: 1200px;
+    --site-gutter: 40px;
+    --media-background: {{ settings.media_background }};
+  }
+  {% comment %} color schemes {% endcomment %}
+  {% assign scheme_classes = 'body' %}
+  {% for scheme in settings.color_schemes -%}
+    {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
+    {% if forloop.index == 1 -%}
+      :root,
+    {%- endif %}
+    .color-{{ scheme.id }} {
+      --color-background: {{ scheme.settings.background }};
+    {% if scheme.settings.background_gradient != empty %}
+      --gradient-background: {{ scheme.settings.background_gradient }};
+    {% else %}
+      --gradient-background: {{ scheme.settings.background }};
+    {% endif %}
+    --color-foreground: {{ scheme.settings.text }};
+  }
+  {% endfor %}
+
+  {{ scheme_classes }} {
+    color: var(--color-foreground);
+    background: var(--gradient-background);
+  }
+
+  {% comment %} typography {% endcomment %}
+  {% for i in 1..9 %}
+    {% assign font_weight = i | times: 100 %}
+    {% assign font_family = settings.font_family_primary.family %}
+    {% assign font = settings.font_family_primary | font_modify: "weight", font_weight %}
+    @font-face {
+      font-family: {{ font_family }};
+      font-weight: {{ font_weight }}
+      src:
+        local("{{ font_family }}"),
+        local("{{ font_family }}"),
+        url("{{ font | font_url }}") format("woff2"),
+        url("{{ font | font_url: "woff" }}") format("woff");
+    }
+  {% endfor %}
+
+  {% assign font_styles = "h1,h2,h3,h4,h5,h6,large,p,small" | split: ',' %}
+
+  {% for font_style in font_styles %}
+    {% assign font_family = 'font_family_' | append: font_style %}
+    {% assign font_size = 'font_size_' | append: font_style %}
+    {% assign font_size_mobile = 'font_size_' | append: font_style | append: '_mobile' %}
+    {% assign line_height = 'line_height_' | append: font_style %}
+    {% assign selector = font_style | append: ', .' | append: font_style %}
+    {% if font_style == 'p' %}
+      {% assign selector = selector | prepend: 'body, ' %}
+    {% endif %}
+    {{selector}}{
+      --font-size-min: {{ settings[font_size_mobile] }};
+      --font-size-max: {{ settings[font_size] }};
+      --font-size-optimal: calc(calc(var(--font-size-min) * 1px) + (var(--font-size-max) - var(--font-size-min)) * (100vw - calc(var(--screen-width-mobile) * 1px)) / var(--screen-width-span));
+
+      font-family: var({{settings[font_family]}});
+      font-size: clamp(calc(var(--font-size-min) * 1px), var(--font-size-optimal), calc(var(--font-size-max) * 1px));
+      font-weight: normal;
+      line-height: {{settings[line_height]}};
+      letter-spacing: 1.05px;
+      margin: 0;
+      color: currentColor;
+    }
+  {% endfor %}
+
+  {% comment %} buttons {% endcomment %}
+  {% assign button_styles = "primary,secondary,tertiary" | split: ',' %}
+  {% assign shopify_buttons = ".shopify-payment-button__button.shopify-payment-button__button--unbranded" %}
+  .btn{
+    {% for button_style in button_styles %}
+      {% assign background_color = "button_" | append: button_style | append: "_background_color" %}
+      {% assign color = "button_" | append: button_style | append: "_color" %}
+      &.btn--{{button_style}}{% if button_style == "secondary" %}, {{ shopify_buttons }}{% endif %}{
+        --background-color: {{ settings[background_color] }};
+        --color: {{ settings[color] }};
+      }
+    {% endfor %}
+  }
+</style>

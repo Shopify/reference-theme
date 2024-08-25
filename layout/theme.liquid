@@ -38,10 +38,8 @@
 
     {% render "preload-fonts" %}
 
+    {% render "theme-styles" %}
     {{ "critical.css" | asset_url | stylesheet_tag }}
-    {{ "color.css" | asset_url | stylesheet_tag }}
-    {{ "typography.css" | asset_url | stylesheet_tag }}
-    {{ "buttons.css" | asset_url | stylesheet_tag }}
 
     {% assign skin = "modern" %}
     {% case skin %}
