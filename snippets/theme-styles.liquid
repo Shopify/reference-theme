@@ -47,6 +47,17 @@
         url("{{ font | font_url }}") format("woff2"),
         url("{{ font | font_url: "woff" }}") format("woff");
     }
+    {% assign font_family = settings.font_family_secondary.family %}
+    {% assign font = settings.font_family_secondary | font_modify: "weight", font_weight %}
+    @font-face {
+      font-family: {{ font_family }};
+      font-weight: {{ font_weight }}
+      src:
+        local("{{ font_family }}"),
+        local("{{ font_family }}"),
+        url("{{ font | font_url }}") format("woff2"),
+        url("{{ font | font_url: "woff" }}") format("woff");
+    }
   {% endfor %}
 
   {% assign font_styles = "h1,h2,h3,h4,h5,h6,large,p,small" | split: ',' %}
@@ -56,6 +67,7 @@
     {% assign font_size = 'font_size_' | append: font_style %}
     {% assign font_size_mobile = 'font_size_' | append: font_style | append: '_mobile' %}
     {% assign line_height = 'line_height_' | append: font_style %}
+    {% assign font_weight = 'font_weight_' | append: font_style %}
     {% assign selector = font_style | append: ', .' | append: font_style %}
     {% if font_style == 'p' %}
       {% assign selector = selector | prepend: 'body, ' %}
@@ -67,7 +79,7 @@
 
       font-family: var({{settings[font_family]}});
       font-size: clamp(calc(var(--font-size-min) * 1px), var(--font-size-optimal), calc(var(--font-size-max) * 1px));
-      font-weight: normal;
+      font-weight: {{settings[font_weight]}};
       line-height: {{settings[line_height]}};
       letter-spacing: 1.05px;
       margin: 0;
