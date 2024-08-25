@@ -31,8 +31,7 @@
                 "object_fit": "cover",
                 "size": {
                   "height": "500px",
-                  "width": "100%",
-                  "flex-grow": ""
+                  "width": "100%"
                 },
                 "aspect_ratio_type": "auto",
                 "aspect_ratio": 1,
@@ -581,12 +580,102 @@
         },
         "color_scheme": ""
       }
+    },
+    "grid_RYPCRk": {
+      "type": "grid",
+      "blocks": {
+        "image_8FWpCz": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "size": {
+            },
+            "aspect_ratio_type": "auto",
+            "aspect_ratio": 1,
+            "placeholder": "image"
+          }
+        },
+        "image_FwzA4m": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "size": {
+            },
+            "aspect_ratio_type": "auto",
+            "aspect_ratio": 1,
+            "placeholder": "image"
+          }
+        },
+        "image_kxrG7F": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "size": {
+            },
+            "aspect_ratio_type": "auto",
+            "aspect_ratio": 1,
+            "placeholder": "image"
+          }
+        },
+        "image_rcR4VD": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "size": {
+            },
+            "aspect_ratio_type": "auto",
+            "aspect_ratio": 1,
+            "placeholder": "image"
+          }
+        },
+        "image_9EnYWj": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "size": {
+            },
+            "aspect_ratio_type": "auto",
+            "aspect_ratio": 1,
+            "placeholder": "image"
+          }
+        },
+        "image_xwA6EQ": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "size": {
+            },
+            "aspect_ratio_type": "auto",
+            "aspect_ratio": 1,
+            "placeholder": "image"
+          }
+        }
+      },
+      "block_order": [
+        "image_8FWpCz",
+        "image_FwzA4m",
+        "image_kxrG7F",
+        "image_rcR4VD",
+        "image_9EnYWj",
+        "image_xwA6EQ"
+      ],
+      "settings": {
+        "page_width": "page-width",
+        "position": "",
+        "overflow": "",
+        "spacing": {
+        },
+        "columns": 3,
+        "rows": 2,
+        "color_scheme": ""
+      }
     }
   },
   "order": [
     "slideshow_N8dBMt",
     "container_kwzRMC",
     "container_qKiFGf",
-    "container_MfKhrP"
+    "container_MfKhrP",
+    "grid_RYPCRk"
   ]
 }
