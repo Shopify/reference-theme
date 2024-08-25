@@ -135,6 +135,15 @@ a {
     }
   }
 }
+
+.grid{
+  --columns: 1;
+  --rows: 1;
+  display:grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+}
+
 /* Overlay */
 .shopify-block-overlay{
   --left: 0;
