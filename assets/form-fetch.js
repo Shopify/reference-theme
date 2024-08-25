@@ -12,11 +12,14 @@ class FormFetch extends HTMLElement {
 
       fetch(this.form.action, {
         method: this.form.method,
+        headers: {
+          "Accept": "application/json"
+        },
         body: formData,
       })
         .then((res) => res.text())
         .then((res) => {
-          // console.log(res);
+          console.log(res)
           this.onSuccess();
         })
         .catch(console.error);
