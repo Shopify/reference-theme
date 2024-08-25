@@ -4,7 +4,7 @@
   style="
   --columns: {{ section.settings.columns }}; 
   --rows: {{ section.settings.rows }};
-  --gap: {{ section.settings.layout | json }};
+  --gap: {{ section.settings.gap | append: 'px' }};
   "
 >
   {% content_for "blocks" %}
@@ -64,13 +64,11 @@
       "default": 1
     },
     {
-      "type": "style.layout_panel",
-      "id": "layout",
-      "label": "Layout",
-      "default": {
-        "gap": "20px",
-      },
-      "info": "Only gap is used. Todo: Replace with new settings when available"
+      "type": "number",
+      "id": "gap",
+      "label": "Gap",
+      "default": 5,
+      "info": "px (Todo: Replace with input settings once available)"
     },
     {
       "type": "header",
