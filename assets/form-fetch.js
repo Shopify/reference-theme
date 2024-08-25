@@ -17,11 +17,7 @@ class FormFetch extends HTMLElement {
         body: formData
       })
       .then(res => res.text())
-      .then(text => {
-        const div = document.createElement('div')
-        div.innerHTML = text.trim()
-        this.appendChild(div)
-      })
+      .then(console.log)
       .catch(console.error)
     })
   }
