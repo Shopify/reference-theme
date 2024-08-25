@@ -1,7 +1,11 @@
 {% stylesheet %}{% endstylesheet %}
 
-<div class="{{section.settings.page_width}} {{ section.settings | class_list }} color-{{ section.settings.color_scheme }} {{ section.settings.position }} {{ section.settings.overflow }} grid"
-  style="--columns: {{ section.settings.columns }}; --rows: {{ section.settings.rows }};"
+<div class="{{section.settings.page_width}} {{ section.settings.size | class_list }} color-{{ section.settings.color_scheme }} grid"
+  style="
+  --columns: {{ section.settings.columns }}; 
+  --rows: {{ section.settings.rows }};
+  --gap: {{ section.settings.layout.gap }};
+  "
 >
   {% content_for "blocks" %}
 </div>
@@ -33,50 +37,6 @@
       "default": "page-width"
     },
     {
-      "type": "header",
-      "content": "Position"
-    },
-    {
-      "type": "select",
-      "id": "position",
-      "label": "Position",
-      "options": [
-        {
-          "value": "",
-          "label": "static"
-        },
-        {
-          "value": "is-relative",
-          "label": "relative"
-        }
-      ],
-      "default": ""
-    },
-    {
-      "type": "header",
-      "content": "Overflow"
-    },
-    {
-      "type": "select",
-      "id": "overflow",
-      "label": "Overflow",
-      "options": [
-        {
-          "value": "",
-          "label": "visible"
-        },
-        {
-          "value": "overflow-hidden",
-          "label": "hidden"
-        },
-        {
-          "value": "overflow-scroll",
-          "label": "scroll"
-        }
-      ],
-      "default": ""
-    },
-    {
       "type": "style.spacing_panel",
       "id": "spacing",
       "label": "Spacing"
@@ -102,6 +62,15 @@
       "step": 1,
       "label": "Rows",
       "default": 1
+    },
+    {
+      "type": "style.layout_panel",
+      "id": "layout",
+      "label": "Layout",
+      "default": {
+        "gap": "20px",
+      },
+      "info": "Only gap is used. Todo: Replace with new settings when available"
     },
     {
       "type": "header",
