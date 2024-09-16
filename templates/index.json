@@ -501,7 +501,9 @@
                 "layout": {
                   "flex-direction": "column",
                   "align-items": "flex-start",
-                  "justify-content": "center"
+                  "justify-content": "center",
+                  "row-gap": "0px",
+                  "column-gap": "0px"
                 },
                 "color_scheme": "scheme-1"
               },
@@ -513,7 +515,7 @@
                     "html_tag": "p",
                     "heading_style": "h6",
                     "alignment": "center",
-                    "spacing_bottom": "none"
+                    "spacing_bottom": "2xs"
                   }
                 },
                 "heading_d8D9MY": {
@@ -523,7 +525,7 @@
                     "html_tag": "p",
                     "heading_style": "h4",
                     "alignment": "center",
-                    "spacing_bottom": "none"
+                    "spacing_bottom": "s"
                   }
                 },
                 "text_Kk7KiV": {
@@ -532,7 +534,7 @@
                     "text": "<p>Share information about your brand with your customers. <\/p>",
                     "text_style": "p",
                     "alignment": "left",
-                    "spacing_bottom": "none"
+                    "spacing_bottom": "l"
                   }
                 },
                 "link_RKwNdn": {
@@ -609,8 +611,8 @@
             "layout": {
               "flex-direction": "column",
               "align-items": "center",
-              "row-gap": "20px",
-              "column-gap": "20px"
+              "row-gap": "0px",
+              "column-gap": "0px"
             },
             "color_scheme": ""
           },
@@ -622,7 +624,7 @@
                 "html_tag": "p",
                 "heading_style": "h6",
                 "alignment": "center",
-                "spacing_bottom": "none"
+                "spacing_bottom": "2xs"
               }
             },
             "heading_YcfnDB": {
@@ -632,7 +634,7 @@
                 "html_tag": "p",
                 "heading_style": "h3",
                 "alignment": "center",
-                "spacing_bottom": "none"
+                "spacing_bottom": "s"
               }
             },
             "text_7rkG4E": {
@@ -641,7 +643,7 @@
                 "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
                 "text_style": "p",
                 "alignment": "center",
-                "spacing_bottom": "none"
+                "spacing_bottom": "l"
               }
             },
             "link_V8zxcR": {
