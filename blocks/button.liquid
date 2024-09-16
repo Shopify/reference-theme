@@ -1,15 +1,17 @@
-<button type="{{ block.settings.type }}">
-  <span class="button-label">
-    {{ block.settings.label }}
-  </span>
-  <svg
-    focusable="false"
-    class="button-spinner"
-    viewBox="0 0 66 66"
-    xmlns="http://www.w3.org/2000/svg">
-    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-  </svg>
-</button>
+<div class="spacing-bottom-{{ block.settings.spacing_bottom }}">
+  <button type="{{ block.settings.type }}">
+    <span class="button-label">
+      {{ block.settings.label }}
+    </span>
+    <svg
+      focusable="false"
+      class="button-spinner"
+      viewBox="0 0 66 66"
+      xmlns="http://www.w3.org/2000/svg">
+      <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+    </svg>
+  </button>
+</div>
 
 {% comment %} Todo: loading & disabled state {% endcomment %}
 {% comment %} Todo: Only inside forms {% endcomment %}
@@ -64,6 +66,23 @@
         }
       ],
       "default": "btn btn--primary"
+    },
+    {
+      "type": "select",
+      "id": "spacing_bottom",
+      "label": "Spacing bottom",
+      "options": [
+        { "value": "none", "label": "none" },
+        { "value": "2xs", "label": "2xs" },
+        { "value": "xs", "label": "xs" },
+        { "value": "s", "label": "s" },
+        { "value": "m", "label": "m" },
+        { "value": "l", "label": "l" },
+        { "value": "xl", "label": "xl" },
+        { "value": "2xl", "label": "2xl" },
+        { "value": "3xl", "label": "3xl" }
+      ],
+      "default": "none"
     }
   ],
   "presets": [

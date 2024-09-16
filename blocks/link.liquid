@@ -1,6 +1,6 @@
 <a
   href="{{ block.settings.link }}"
-  class="shopify-block-link {{ block.settings.button_style }}"
+  class="shopify-block-link {{ block.settings.button_style }} spacing-bottom-{{ block.settings.spacing_bottom }}"
   {%- if block.settings.open_in_new_tab -%}
     target="_blank" rel="noopener noreferrer"
   {%- endif -%}
@@ -55,6 +55,23 @@
       "id": "open_in_new_tab",
       "label": "Open this link in a new window",
       "default": false
+    },
+    {
+      "type": "select",
+      "id": "spacing_bottom",
+      "label": "Spacing bottom",
+      "options": [
+        { "value": "none", "label": "none" },
+        { "value": "2xs", "label": "2xs" },
+        { "value": "xs", "label": "xs" },
+        { "value": "s", "label": "s" },
+        { "value": "m", "label": "m" },
+        { "value": "l", "label": "l" },
+        { "value": "xl", "label": "xl" },
+        { "value": "2xl", "label": "2xl" },
+        { "value": "3xl", "label": "3xl" }
+      ],
+      "default": "none"
     }
   ],
   "presets": [

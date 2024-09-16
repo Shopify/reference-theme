@@ -215,3 +215,29 @@ a {
   background: var(--background-color);
   color: var(--color);
 }
+
+/* Spacing System */
+.spacing-bottom-2xs{
+  padding-bottom: 4px;
+}
+.spacing-bottom-xs{
+  padding-bottom: 8px;
+}
+.spacing-bottom-s{
+  padding-bottom: 12px;
+}
+.spacing-bottom-m{
+  padding-bottom: 16px;
+}
+.spacing-bottom-l{
+  padding-bottom: 20px;
+}
+.spacing-bottom-xl{
+  padding-bottom: 28px;
+}
+.spacing-bottom-2xl{
+  padding-bottom: 40px;
+}
+.spacing-bottom-3xl{
+  padding-bottom: 60px;
+}
