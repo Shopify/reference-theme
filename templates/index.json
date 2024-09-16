@@ -60,7 +60,9 @@
                     "spacing": {
                     },
                     "layout": {
-                      "flex-direction": "column"
+                      "flex-direction": "column",
+                      "row-gap": "0px",
+                      "column-gap": "0px"
                     },
                     "color_scheme": "scheme-d64ff18b-05a6-4c0f-85a3-edcd6de19b8c"
                   },
@@ -71,7 +73,8 @@
                         "heading": "Heading",
                         "html_tag": "p",
                         "heading_style": "h1",
-                        "alignment": "center"
+                        "alignment": "center",
+                        "spacing_bottom": "2xs"
                       }
                     },
                     "text_XMKWyF": {
@@ -79,7 +82,8 @@
                       "settings": {
                         "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
                         "text_style": "p",
-                        "alignment": "center"
+                        "alignment": "center",
+                        "spacing_bottom": "m"
                       }
                     },
                     "link_n4TJwj": {
@@ -88,7 +92,8 @@
                         "link": "",
                         "label": "Primary button label",
                         "button_style": "btn btn--primary",
-                        "open_in_new_tab": false
+                        "open_in_new_tab": false,
+                        "spacing_bottom": "none"
                       }
                     }
                   },
@@ -118,6 +123,8 @@
             "spacing": {
             },
             "layout": {
+              "row-gap": "0px",
+              "column-gap": "0px"
             },
             "color_scheme": ""
           },
@@ -169,7 +176,8 @@
                         "heading": "Heading",
                         "html_tag": "p",
                         "heading_style": "h1",
-                        "alignment": "center"
+                        "alignment": "center",
+                        "spacing_bottom": "2xs"
                       }
                     },
                     "text_M6kmUC": {
@@ -177,7 +185,8 @@
                       "settings": {
                         "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
                         "text_style": "p",
-                        "alignment": "center"
+                        "alignment": "center",
+                        "spacing_bottom": "m"
                       }
                     },
                     "link_dBN34e": {
@@ -186,7 +195,8 @@
                         "link": "",
                         "label": "Primary button label",
                         "button_style": "btn btn--primary",
-                        "open_in_new_tab": false
+                        "open_in_new_tab": false,
+                        "spacing_bottom": "none"
                       }
                     }
                   },
@@ -274,7 +284,8 @@
                 "heading": "Top picks",
                 "html_tag": "p",
                 "heading_style": "h3",
-                "alignment": "center"
+                "alignment": "center",
+                "spacing_bottom": "none"
               }
             },
             "link_dWGw8j": {
@@ -283,7 +294,8 @@
                 "link": "",
                 "label": "View All",
                 "button_style": "btn btn--primary",
-                "open_in_new_tab": false
+                "open_in_new_tab": false,
+                "spacing_bottom": "none"
               }
             }
           },
@@ -348,8 +360,8 @@
             "layout": {
               "flex-direction": "column",
               "align-items": "flex-start",
-              "row-gap": "20px",
-              "column-gap": "20px"
+              "row-gap": "0px",
+              "column-gap": "0px"
             },
             "color_scheme": ""
           },
@@ -360,7 +372,8 @@
                 "heading": "Heading",
                 "html_tag": "p",
                 "heading_style": "h6",
-                "alignment": "center"
+                "alignment": "center",
+                "spacing_bottom": "2xs"
               }
             },
             "heading_GK6CgU": {
@@ -369,7 +382,8 @@
                 "heading": "Heading",
                 "html_tag": "p",
                 "heading_style": "h3",
-                "alignment": "left"
+                "alignment": "left",
+                "spacing_bottom": "s"
               }
             },
             "text_FUUWaw": {
@@ -377,7 +391,8 @@
               "settings": {
                 "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
                 "text_style": "p",
-                "alignment": "left"
+                "alignment": "left",
+                "spacing_bottom": "l"
               }
             },
             "link_C6wdQR": {
@@ -386,7 +401,8 @@
                 "link": "",
                 "label": "Secondary button label",
                 "button_style": "btn btn--primary",
-                "open_in_new_tab": false
+                "open_in_new_tab": false,
+                "spacing_bottom": "none"
               }
             }
           },
@@ -496,7 +512,8 @@
                     "heading": "Heading",
                     "html_tag": "p",
                     "heading_style": "h6",
-                    "alignment": "center"
+                    "alignment": "center",
+                    "spacing_bottom": "none"
                   }
                 },
                 "heading_d8D9MY": {
@@ -505,7 +522,8 @@
                     "heading": "Heading",
                     "html_tag": "p",
                     "heading_style": "h4",
-                    "alignment": "center"
+                    "alignment": "center",
+                    "spacing_bottom": "none"
                   }
                 },
                 "text_Kk7KiV": {
@@ -513,7 +531,8 @@
                   "settings": {
                     "text": "<p>Share information about your brand with your customers. <\/p>",
                     "text_style": "p",
-                    "alignment": "left"
+                    "alignment": "left",
+                    "spacing_bottom": "none"
                   }
                 },
                 "link_RKwNdn": {
@@ -522,7 +541,8 @@
                     "link": "",
                     "label": "Primary button label",
                     "button_style": "btn btn--primary",
-                    "open_in_new_tab": false
+                    "open_in_new_tab": false,
+                    "spacing_bottom": "none"
                   }
                 }
               },
@@ -601,7 +621,8 @@
                 "heading": "Heading",
                 "html_tag": "p",
                 "heading_style": "h6",
-                "alignment": "center"
+                "alignment": "center",
+                "spacing_bottom": "none"
               }
             },
             "heading_YcfnDB": {
@@ -610,7 +631,8 @@
                 "heading": "Heading",
                 "html_tag": "p",
                 "heading_style": "h3",
-                "alignment": "center"
+                "alignment": "center",
+                "spacing_bottom": "none"
               }
             },
             "text_7rkG4E": {
@@ -618,7 +640,8 @@
               "settings": {
                 "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
                 "text_style": "p",
-                "alignment": "center"
+                "alignment": "center",
+                "spacing_bottom": "none"
               }
             },
             "link_V8zxcR": {
@@ -627,7 +650,8 @@
                 "link": "",
                 "label": "Secondary button label",
                 "button_style": "btn btn--primary",
-                "open_in_new_tab": false
+                "open_in_new_tab": false,
+                "spacing_bottom": "none"
               }
             }
           },
