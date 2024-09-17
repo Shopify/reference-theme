@@ -261,6 +261,7 @@ a {
     border-color: var(--color);
     border-radius: 50%;
     border-top-color: transparent;
+    transform-origin: 50% 50%;
   }
   &:not([loading]){
     &::before{
