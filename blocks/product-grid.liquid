@@ -16,7 +16,7 @@
     {% if products.count > 0 %}
       {% for product in products %}
         {% comment %} {% render "product-card" with product %} {% endcomment %}
-        {% content_for "block", type: "product-test", id: "1" %}
+        {% content_for "block", type: "product-test", id: "1", product: product %}
       {% endfor %}
     {% else %}
       {% for i in (1..4) %}
