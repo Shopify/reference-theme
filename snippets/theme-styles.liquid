@@ -96,9 +96,9 @@
       {% assign color = "button_" | append: button_style | append: "_color" %}
       {% assign border_color = "button_" | append: button_style | append: "_border_color" %}
       &.btn--{{button_style}}{% if button_style == "secondary" %}, {{ shopify_buttons }}{% endif %}{
-        --background-color: {{ settings[background_color] | default: "unset" }};
-        --color: {{ settings[color] | default: "unset" }};
-        --border-color: {{ settings[border_color] | default: "unset" }};
+        --background-color: {{ settings[background_color] | default: "transparent" }};
+        --color: {{ settings[color] | default: "transparent" }};
+        --border-color: {{ settings[border_color] | default: "transparent" }};
       }
     {% endfor %}
   }
