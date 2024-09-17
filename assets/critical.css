@@ -226,10 +226,10 @@ a {
   /* &:not([disabled])[pressed],
   &:not([disabled]):hover{
     
-  }
+  }*/
   &[loading]{
-    
-  } */
+    cursor: default;
+  } 
   &[disabled]{
     cursor: default;
   }
