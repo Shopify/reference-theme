@@ -366,7 +366,7 @@
         "product_grid_dmVhBB": {
           "type": "product-grid",
           "settings": {
-            "source_type": "product_list",
+            "source_type": "collection",
             "product_list": [
 
             ],
