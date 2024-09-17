@@ -71,6 +71,10 @@
     border-color: #f6f6f6;
     color: #b6b6b6;
   }
+  &.btn--tertiary:not([disabeld])[pressed],
+  &.btn--tertiary:not([disabeld]):hover{
+    border-color: var(--color-foreground);
+  }
 }
 
 .link{
