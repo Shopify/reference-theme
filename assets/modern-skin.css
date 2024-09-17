@@ -5,6 +5,9 @@
   }
 }
 @keyframes line {
+  0%{
+    width: 0%;
+  }
   100% {
     width: 100%;
   }
@@ -85,7 +88,7 @@
     width: 0;
   }
   &:not([disabled]):hover:after {
-    animation: line 1s cubic-bezier(0.01, 0.56, 1, 1) forwards;
+    animation: line 1s cubic-bezier(0.55, 0, 1, 0.45) both;
   }
 }
 
