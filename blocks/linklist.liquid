@@ -1,8 +1,7 @@
 {% assign linklist = linklists[block.settings.linklist] %}
 {% if block.settings.show_title %}
   <p class="linklist-title">{{ linklist.title }}</p>
-  {% assign block_id = "linklist-heading-" | append: linklist.handle %}
-  {% content_for "block", type: "heading", id: block_id %}
+  {% content_for "block", type: "heading", id: linklist.handle %}
 {% endif %}
 <ul id="linklist-{{ linklist.handle }}" class="linklist">
   
