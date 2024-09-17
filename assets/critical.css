@@ -240,8 +240,9 @@ a {
 
 .btn,
 .link{
-  &::after{
+  &::before{
     content: '';
+    display:block;
     position: absolute;
     left:50%;
     top: 0;
@@ -255,7 +256,7 @@ a {
     border-top-color: transparent;
   }
   &:not([loading]){
-    &::after{
+    &::before{
       opacity: 0;
       pointer-events: none;
     }
