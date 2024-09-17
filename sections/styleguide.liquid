@@ -1,4 +1,4 @@
-{% assign button_styles = 'link, btn btn--primary, btn btn--secondary, btn btn--tertiary' | split: ',' %}
+{% assign button_styles = 'link, btn btn--primary btn--full, btn btn--secondary btn--full, btn btn--tertiary btn--full' | split: ',' %}
 {% assign states = ',loading, disabled, pressed' | split: ',' %}
 <div class="flex col spacing-bottom-2xl">
   <p class="">Buttons</p>
@@ -8,7 +8,7 @@
     {% endfor %}
     {% for button_style in button_styles %}
         {% for state in states %}
-          <button class="{{button_style}} {% unless forloop.first %}btn--full{% endunless %}" {{ state }} type="button">{{ button_style }} {% unless forloop.first %}btn--full{% endunless %}</button>
+          <button class="{{button_style}}" {{ state }} type="button">{{ button_style }}</button>
         {% endfor %}
     {% endfor %}
   </div>
