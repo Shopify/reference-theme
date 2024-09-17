@@ -48,6 +48,7 @@ a {
   color: rgb(var(--color-foreground));
   text-decoration: none;
   cursor: pointer;
+  width: fit-content;
 }
 /* positioning */
 .is-relative {
