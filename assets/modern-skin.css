@@ -84,7 +84,8 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    border-bottom: 1px solid var(--color-foreground);
+    /* border-bottom: 1px solid var(--color-foreground); */
+    height: 1px;
     width: 100%;
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(229,229,229,1) 100%, rgba(229,229,229,1) 100%);
   }
