@@ -54,9 +54,6 @@
     transform: skewX(-20deg);
     background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.25), transparent);
   }
-  &:not([disabled]):hover:after {
-    animation: shine 1s cubic-bezier(0.01, 0.56, 1, 1);
-  }
   &.btn--primary[disabled]{
     background-color: #f6f6f6;
     border-color: #f6f6f6;
@@ -70,6 +67,9 @@
   &.btn--tertiary[disabled]{
     border-color: #f6f6f6;
     color: #b6b6b6;
+  }
+  &.btn--primary:not([disabled]):hover:after {
+    animation: shine 1s cubic-bezier(0.01, 0.56, 1, 1);
   }
   &.btn--tertiary:not([disabeld])[pressed],
   &.btn--tertiary:not([disabeld]):hover{
