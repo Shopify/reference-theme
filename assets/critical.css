@@ -234,7 +234,7 @@ a {
   &[disabled]{
     cursor: default;
   }
-  &.spinner{
+  & .spinner{
     position: absolute;
     left:50%;
     top: 0;
@@ -243,7 +243,7 @@ a {
     aspect-ratio: 1;
   }
   &:not([loading]){
-    &.spinner{
+    & .spinner{
       opacity: 0;
       pointer-events: none;
     }
