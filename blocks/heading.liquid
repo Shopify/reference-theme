@@ -7,9 +7,16 @@
     }
   </style>
 {% endif %}
+{% if block.settings.font_size != blank %}
+  <style>
+    #shopify-block-heading-{{ block.id }}{
+      font-size: {{ block.settings.font_size | append: "px" }};
+    }
+  </style>
+{% endif %}
 
 <{{ block.settings.html_tag }}
-  {% if block.settings.text_color != blank %}id="shopify-block-heading-{{ block.id }}"{% endif %}
+  id="shopify-block-heading-{{ block.id }}"
   class="shopify-block-heading {{ block.settings | class_list }} {{ block.settings.heading_style }} text-{{ block.settings.alignment }} spacing-bottom-{{ block.settings.spacing_bottom }}"
   {{ block.shopify_attributes }}>
   {{ block.settings.heading }}
@@ -125,6 +132,12 @@
       "type": "color_background",
       "id": "text_color",
       "label": "Text color"
+    },
+    {
+      "type": "text",
+      "id": "font_size",
+      "label": "Font size (px)",
+      "info": "Overwrite the font size given by the style."
     }
   ],
   "presets": [{ "name": "Heading" }]
