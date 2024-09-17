@@ -14,7 +14,7 @@
       --gap: {{ block.settings.gap | append: 'px' }};
     ">
     {% if products.count > 0 %}
-      {% for product in products %}
+      {% for product in products limit: 4 %}
         {% render "product-card", product: product %}
       {% endfor %}
     {% else %}
