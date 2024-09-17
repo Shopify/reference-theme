@@ -71,8 +71,8 @@
   &.btn--primary:not([disabled]):hover:after {
     animation: shine 1s cubic-bezier(0.01, 0.56, 1, 1);
   }
-  &.btn--tertiary:not([disabeld])[pressed],
-  &.btn--tertiary:not([disabeld]):hover{
+  &.btn--tertiary:not([disabled])[pressed],
+  &.btn--tertiary:not([disabled]):hover{
     border-color: var(--color-foreground);
   }
 }
