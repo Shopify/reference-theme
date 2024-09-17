@@ -241,6 +241,7 @@ a {
     transform: translateX(-50%);
     height: 100%;
     aspect-ratio: 1;
+    opacity: 1;
   }
   &:not([loading]){
     & .spinner{
