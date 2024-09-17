@@ -1,19 +1,18 @@
 {% assign linklist = linklists[block.settings.linklist] %}
 {% if block.settings.show_title %}
   <p class="linklist-title">{{ linklist.title }}</p>
-  {% content_for "block", type: "heading", id: 'heading' %}
+  {% content_for "block", type: "heading", id: 'test' %}
 {% endif %}
-<ul id="linklist-{{ linklist.handle }}" class="linklist">
+<ul id="linklist-{{ linklist.handle }}" class="linklist {{ block.settings.layout | class_list }}">
   {% for link in linklist.links -%}
-    {% comment %} <li class="linklist-item
+    <li class="linklist-item
       {% if link.active %}link-active{% endif %}
       {% if link.child_active %}link-child-active{% endif %}">
       <a href="{{ link.url }}" class="linklist-link linklist-link-{{ link.handle }}">{{ link.title }}</a>
       {% if link.levels > 0 %}
         {% content_for "block", type: "linklist", id: "test2" %}
       {% endif %}
-    </li> {% endcomment %}
-    {% content_for "block", type: "linklist-link", id: 'link' %}
+    </li>
   {%- endfor %}
 </ul>
 
@@ -33,6 +32,15 @@
       "id": "show_title",
       "label": "Show linklist title",
       "default": true
+    },
+    {
+      "type": "style.layout_panel",
+      "id": "layout",
+      "label": "Layout",
+      "default": {
+        "flex-direction": "column",
+        "gap": "10px"
+      }
     }
   ],
   "presets": [
