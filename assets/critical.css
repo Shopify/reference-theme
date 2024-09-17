@@ -243,11 +243,7 @@ a {
   &[disabled]{
     cursor: default;
   }
-}
-
-.btn,
-.link{
-  &::before{
+  &[loading]::before{
     --spinner-size: 14px;
     --spinner-thickness: 2px;
     --spinner-offset: calc(var(--spinner-size + 2 * var(--spinner-thickness) / -2));
@@ -276,6 +272,7 @@ a {
     }
   }
 }
+
 /* Spacing System */
 .spacing-bottom-2xs{
   padding-bottom: 4px;
