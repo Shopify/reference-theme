@@ -1,7 +1,6 @@
 {% assign linklist = linklists[block.settings.linklist] %}
 {% if block.settings.show_title %}
   <p class="linklist-title">{{ linklist.title }}</p>
-  {% content_for "block", type: "heading", id: 'test' %}
 {% endif %}
 <ul id="linklist-{{ linklist.handle }}" class="linklist {{ block.settings.layout | class_list }}">
   {% for link in linklist.links -%}
@@ -10,7 +9,7 @@
       {% if link.child_active %}link-child-active{% endif %}">
       <a href="{{ link.url }}" class="linklist-link linklist-link-{{ link.handle }}">{{ link.title }}</a>
       {% if link.levels > 0 %}
-        {% content_for "block", type: "linklist", id: "test2" %}
+        
       {% endif %}
     </li>
   {%- endfor %}
