@@ -1,7 +1,7 @@
 {% assign button_styles = 'btn btn--primary, btn btn--secondary, btn btn--tertiary, link' | split: ',' %}
 {% assign states = ',loading, disabled, pressed' | split: ',' %}
 <p class="">Buttons</p>
-<div class="grid col-4">
+<div class="grid" style="--columns: 4;">
   {% for state in states %}
     <p class="">{{ state }}</p>
   {% endfor %}
