@@ -234,6 +234,10 @@ a {
   &[disabled]{
     cursor: default;
   }
+}
+
+.btn,
+.link{
   & .spinner{
     position: absolute;
     left:50%;
@@ -250,7 +254,6 @@ a {
     }
   }
 }
-
 /* Spacing System */
 .spacing-bottom-2xs{
   padding-bottom: 4px;
