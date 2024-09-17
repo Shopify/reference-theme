@@ -94,10 +94,11 @@
     {% for button_style in button_styles %}
       {% assign background_color = "button_" | append: button_style | append: "_background_color" %}
       {% assign color = "button_" | append: button_style | append: "_color" %}
+      {% assign border_color = "button_" | append: button_style | append: "_border_color" %}
       &.btn--{{button_style}}{% if button_style == "secondary" %}, {{ shopify_buttons }}{% endif %}{
-        --background-color: {{ settings[background_color] }};
-        --color: {{ settings[color] }};
-        border: 1px solid {{ settings[background_color] }};
+        --background-color: {{ settings[background_color] | default: "unset" }};
+        --color: {{ settings[color] | default: "unset" }};
+        border: 1px solid {{ settings[border_color] | default: "unset" }};
         &:not([disabled])[pressed],
         &:not([disabled]):hover{
         

@@ -859,6 +859,12 @@
         "default": "#fff"
       },
       {
+        "type": "color",
+        "id": "button_primary_border_color",
+        "label": "Border Color",
+        "default": "#000"
+      },
+      {
         "type": "header",
         "content": "Secondary"
       },
@@ -875,6 +881,12 @@
         "default": "#000"
       },
       {
+        "type": "color",
+        "id": "button_secondary_border_color",
+        "label": "Border Color",
+        "default": "#000"
+      },
+      {
         "type": "header",
         "content": "Tertiary"
       },
@@ -888,7 +900,12 @@
         "id": "button_tertiary_color",
         "label": "Color",
         "default": "#000"
-      }
+      },
+      {
+        "type": "color",
+        "id": "button_tertiary_border_color",
+        "label": "Border Color"
+      },
     ]
   },
   {
