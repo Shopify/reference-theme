@@ -49,13 +49,19 @@
   &:not([disabled]):hover:after {
     animation: shine 1s cubic-bezier(0.01, 0.56, 1, 1);
   }
-  &[disabled]{
+  &.btn--primary[disabled]{
+    background-color: #f6f6f6;
+    border-color: #f6f6f6;
+    color: #b6b6b6;
+  }
+  &.btn--secondary[disabled]{
     background-color: #f6f6f6;
     border-color: #b6b6b6;
     color: #b6b6b6;
   }
-  &.btn--primary[disabled]{
+  &.btn--tertiary[disabled]{
     border-color: #f6f6f6;
+    color: #b6b6b6;
   }
 }
 
