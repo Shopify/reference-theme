@@ -33,7 +33,12 @@ html .page-width {
   max-width: 100%;
   width: 100%;
 }
-
+button{
+  background-color: unset;
+  outline: unset;
+  border: none;
+  padding: unset;
+}
 /* links */
 .link,
 a {
