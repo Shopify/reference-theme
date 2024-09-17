@@ -268,12 +268,6 @@ a {
       border-width: var(--spinner-thickness);
     }
   }
-  &:not([loading]){
-    &::before{
-      opacity: 0;
-      pointer-events: none;
-    }
-  }
 }
 
 /* Spacing System */
