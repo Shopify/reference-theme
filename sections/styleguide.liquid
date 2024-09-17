@@ -1,0 +1,30 @@
+{% assign button_styles = 'btn btn--primary, btn btn--secondary, btn btn--tertiary, link' | split: ',' %}
+{% assign states = ',loading, disabled, pressed' | split: ',' %}
+<p class="">Buttons</p>
+<div class="grid col-4">
+  {% for state in states %}
+    <p class="">{{ state }}</p>
+  {% endfor %}
+  {% for button_style in button_styles %}
+      {% for state in states %}
+        <button class="button_style" {{ state }} type="button">{{ button_style }}</button>
+      {% endfor %}
+  {% endfor %}
+</div>
+
+{% schema %}
+  {
+    "name": "Styleguide",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "This section shows all font & button styles, aswell as color schemes."
+      }
+    ],
+    "presets": [
+      {
+        "name": "Styleguide"
+      }
+    ]
+  }
+{% endschema %}
