@@ -1,15 +1,165 @@
 /*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "type": "footer",
   "name": "Footer group",
-  "sections": {},
-  "order": []
+  "sections": {
+    "container_yQ86Km": {
+      "type": "container",
+      "blocks": {
+        "container_KgQW7g": {
+          "type": "container",
+          "settings": {
+            "position": "",
+            "overflow": "",
+            "size": {
+              "width": "100%",
+              "flex-grow": "1"
+            },
+            "spacing": {
+            },
+            "layout": {
+              "justify-content": "flex-start"
+            },
+            "color_scheme": ""
+          },
+          "blocks": {
+            "linklist_riPkzy": {
+              "type": "linklist",
+              "settings": {
+                "linklist": "main-menu",
+                "show_title": true,
+                "layout": {
+                }
+              }
+            }
+          },
+          "block_order": [
+            "linklist_riPkzy"
+          ]
+        },
+        "container_MbRBVE": {
+          "type": "container",
+          "settings": {
+            "position": "",
+            "overflow": "",
+            "size": {
+              "width": "100%",
+              "flex-grow": "1"
+            },
+            "spacing": {
+            },
+            "layout": {
+              "justify-content": "flex-start"
+            },
+            "color_scheme": ""
+          },
+          "blocks": {
+            "linklist_yiyzPw": {
+              "type": "linklist",
+              "settings": {
+                "linklist": "main-menu",
+                "show_title": true,
+                "layout": {
+                }
+              }
+            }
+          },
+          "block_order": [
+            "linklist_yiyzPw"
+          ]
+        },
+        "container_LHe6Fn": {
+          "type": "container",
+          "settings": {
+            "position": "",
+            "overflow": "",
+            "size": {
+              "width": "100%",
+              "flex-grow": "1"
+            },
+            "spacing": {
+            },
+            "layout": {
+              "justify-content": "flex-start"
+            },
+            "color_scheme": ""
+          },
+          "blocks": {
+            "linklist_K3NxU4": {
+              "type": "linklist",
+              "settings": {
+                "linklist": "main-menu",
+                "show_title": true,
+                "layout": {
+                }
+              }
+            }
+          },
+          "block_order": [
+            "linklist_K3NxU4"
+          ]
+        },
+        "container_CxYYjX": {
+          "type": "container",
+          "settings": {
+            "position": "",
+            "overflow": "",
+            "size": {
+              "width": "100%",
+              "flex-grow": "1"
+            },
+            "spacing": {
+            },
+            "layout": {
+              "justify-content": "flex-start"
+            },
+            "color_scheme": ""
+          },
+          "blocks": {
+            "linklist_kUdb8d": {
+              "type": "linklist",
+              "settings": {
+                "linklist": "main-menu",
+                "show_title": true,
+                "layout": {
+                }
+              }
+            }
+          },
+          "block_order": [
+            "linklist_kUdb8d"
+          ]
+        }
+      },
+      "block_order": [
+        "container_KgQW7g",
+        "container_MbRBVE",
+        "container_LHe6Fn",
+        "container_CxYYjX"
+      ],
+      "settings": {
+        "page_width": "page-width",
+        "position": "",
+        "overflow": "",
+        "spacing": {
+          "padding-block-start": "80px",
+          "padding-block-end": "80px"
+        },
+        "layout": {
+        },
+        "color_scheme": ""
+      }
+    }
+  },
+  "order": [
+    "container_yQ86Km"
+  ]
 }

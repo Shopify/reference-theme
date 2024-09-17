@@ -1156,31 +1156,6 @@
         },
         "color_scheme": ""
       }
-    },
-    "container_pePfew": {
-      "type": "container",
-      "blocks": {
-        "linklist_nac6UP": {
-          "type": "linklist",
-          "settings": {
-            "linklist": "main-menu",
-            "show_title": true
-          }
-        }
-      },
-      "block_order": [
-        "linklist_nac6UP"
-      ],
-      "settings": {
-        "page_width": "page-width",
-        "position": "",
-        "overflow": "",
-        "spacing": {
-        },
-        "layout": {
-        },
-        "color_scheme": ""
-      }
     }
   },
   "order": [
@@ -1191,7 +1166,6 @@
     "container_MfKhrP",
     "grid_RYPCRk",
     "container_JaaAJ7",
-    "container_eFCEN9",
-    "container_pePfew"
+    "container_eFCEN9"
   ]
 }
