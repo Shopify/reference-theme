@@ -4,6 +4,11 @@
     left: -200%;
   }
 }
+@keyframes line {
+  100% {
+    width: 100%;
+  }
+}
 
 @keyframes fade-up {
   from {
@@ -62,6 +67,25 @@
   &.btn--tertiary[disabled]{
     border-color: #f6f6f6;
     color: #b6b6b6;
+  }
+}
+
+.link{
+  position: relative;
+  &[disabled]{
+    color: #b6b6b6;
+  }
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom: 1px solid var(--color-foreground);
+    width: 0;
+  }
+  &:not([disabled]):hover:after {
+    animation: line 1s cubic-bezier(0.01, 0.56, 1, 1);
   }
 }
 
