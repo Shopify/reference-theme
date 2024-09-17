@@ -8,7 +8,7 @@
     {% endfor %}
     {% for button_style in button_styles %}
         {% for state in states %}
-          <button class="{{button_style}} btn--full" {{ state }} type="button">{{ button_style }}</button>
+          <button class="{{button_style}} {% unless forloop.first %}btn--full{% endunless %}" {{ state }} type="button">{{ button_style }} {% unless forloop.first %}btn--full{% endunless %}</button>
         {% endfor %}
     {% endfor %}
   </div>
