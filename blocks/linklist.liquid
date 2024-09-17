@@ -11,7 +11,7 @@
       {% if link.child_active %}link-child-active{% endif %}">
       <a href="{{ link.url }}" class="linklist-link linklist-link-{{ link.handle }}">{{ link.title }}</a>
       {% if link.levels > 0 %}
-        {% content_for "block", type: "heading", id: "test2" %}
+        {% content_for "block", type: "linklist", id: "test2" %}
       {% endif %}
     </li>
   {%- endfor %}
