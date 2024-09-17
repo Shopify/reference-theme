@@ -97,8 +97,8 @@
       &.btn--{{button_style}}{% if button_style == "secondary" %}, {{ shopify_buttons }}{% endif %}{
         --background-color: {{ settings[background_color] }};
         --color: {{ settings[color] }};
-        &[pressed],
-        &:hover{
+        &:not([disabled])[pressed],
+        &:not([disabled]):hover{
         
         }
         &[loading]{
