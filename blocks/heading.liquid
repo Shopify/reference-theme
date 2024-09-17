@@ -1,5 +1,15 @@
-{% comment %} Should make a setting to decide which type of heading we're outputting instead of a heading size one. {% endcomment %}
+{% if block.settings.text_color != blank %}
+  <style>
+    #shopify-block-heading-{{ block.id }}{
+      background: {{ block.settings.text_color }};
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+{% endif %}
+
 <{{ block.settings.html_tag }}
+  {% if block.settings.text_color != blank %}id="shopify-block-heading-{{ block.id }}"{% endif %}
   class="shopify-block-heading {{ block.settings | class_list }} {{ block.settings.heading_style }} text-{{ block.settings.alignment }} spacing-bottom-{{ block.settings.spacing_bottom }}"
   {{ block.shopify_attributes }}>
   {{ block.settings.heading }}
@@ -106,6 +116,15 @@
         { "value": "3xl", "label": "3xl" }
       ],
       "default": "none"
+    },
+    {
+      "type": "header",
+      "content": "Advanced"
+    },
+    {
+      "type": "color_background",
+      "id": "text_color",
+      "label": "Text color"
     }
   ],
   "presets": [{ "name": "Heading" }]
