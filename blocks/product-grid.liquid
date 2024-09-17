@@ -13,7 +13,7 @@
       --rows: {{ block.settings.rows }};
       --gap: {{ block.settings.gap | append: 'px' }};
     ">
-    {% if product.count > 0 %}
+    {% if products.count > 0 %}
       {% for product in products %}
         {% comment %} {% render "product-card" with product %} {% endcomment %}
         {% content_for "block", type: "product-test", id: "1" %}
