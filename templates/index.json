@@ -366,30 +366,18 @@
         "product_grid_dmVhBB": {
           "type": "product-grid",
           "settings": {
-            "source_type": "collection",
+            "source_type": "product_list",
             "product_list": [
 
             ],
-            "collection": "automated-collection",
+            "collection": "",
             "spacing": {
             },
             "columns": 4,
             "rows": 1,
             "gap": 20,
             "color_scheme": ""
-          },
-          "blocks": {
-            "1": {
-              "type": "product-test",
-              "static": true,
-              "settings": {
-                "product": ""
-              }
-            }
-          },
-          "block_order": [
-
-          ]
+          }
         }
       },
       "block_order": [
