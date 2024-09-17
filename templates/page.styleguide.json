@@ -12,10 +12,24 @@
     "main": {
       "type": "container",
       "settings": {
+        "page_width": "page-width",
+        "position": "",
+        "overflow": "",
+        "spacing": {
+        },
+        "layout": {
+        },
+        "color_scheme": ""
+      }
+    },
+    "styleguide_rzN9HH": {
+      "type": "styleguide",
+      "settings": {
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "styleguide_rzN9HH"
   ]
 }
