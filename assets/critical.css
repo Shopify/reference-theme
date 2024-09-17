@@ -219,6 +219,9 @@ a {
   border-radius: 0;
   background: var(--background-color);
   color: var(--color);
+  .btn--full{
+    width: 100%;
+  }
 }
 
 /* Spacing System */
