@@ -45,12 +45,13 @@
                 "heading_cikhk3": {
                   "type": "heading",
                   "settings": {
-                    "heading": "Heading",
+                    "heading": "Text Gradient Demo",
                     "html_tag": "p",
                     "heading_style": "h1",
                     "alignment": "center",
                     "spacing_bottom": "none",
-                    "text_color": "linear-gradient(116deg, rgba(196, 102, 238, 1), rgba(82, 218, 236, 1) 100%)"
+                    "text_color": "linear-gradient(116deg, rgba(196, 102, 238, 1), rgba(82, 218, 236, 1) 100%)",
+                    "font_size": "72"
                   }
                 }
               },
@@ -126,7 +127,8 @@
                         "heading_style": "h1",
                         "alignment": "center",
                         "spacing_bottom": "2xs",
-                        "text_color": ""
+                        "text_color": "",
+                        "font_size": ""
                       }
                     },
                     "text_zDEDay": {
@@ -230,7 +232,8 @@
                         "heading_style": "h1",
                         "alignment": "center",
                         "spacing_bottom": "2xs",
-                        "text_color": ""
+                        "text_color": "",
+                        "font_size": ""
                       }
                     },
                     "text_M6kmUC": {
@@ -340,7 +343,8 @@
                 "heading_style": "h3",
                 "alignment": "center",
                 "spacing_bottom": "none",
-                "text_color": ""
+                "text_color": "",
+                "font_size": ""
               }
             },
             "link_dWGw8j": {
@@ -429,7 +433,8 @@
                 "heading_style": "h6",
                 "alignment": "center",
                 "spacing_bottom": "2xs",
-                "text_color": ""
+                "text_color": "",
+                "font_size": ""
               }
             },
             "heading_GK6CgU": {
@@ -440,7 +445,8 @@
                 "heading_style": "h3",
                 "alignment": "left",
                 "spacing_bottom": "s",
-                "text_color": ""
+                "text_color": "",
+                "font_size": ""
               }
             },
             "text_FUUWaw": {
@@ -573,7 +579,8 @@
                     "heading_style": "h6",
                     "alignment": "center",
                     "spacing_bottom": "2xs",
-                    "text_color": ""
+                    "text_color": "",
+                    "font_size": ""
                   }
                 },
                 "heading_d8D9MY": {
@@ -584,7 +591,8 @@
                     "heading_style": "h4",
                     "alignment": "center",
                     "spacing_bottom": "s",
-                    "text_color": ""
+                    "text_color": "",
+                    "font_size": ""
                   }
                 },
                 "text_Kk7KiV": {
@@ -684,7 +692,8 @@
                 "heading_style": "h6",
                 "alignment": "center",
                 "spacing_bottom": "2xs",
-                "text_color": ""
+                "text_color": "",
+                "font_size": ""
               }
             },
             "heading_YcfnDB": {
@@ -695,7 +704,8 @@
                 "heading_style": "h3",
                 "alignment": "center",
                 "spacing_bottom": "s",
-                "text_color": ""
+                "text_color": "",
+                "font_size": ""
               }
             },
             "text_7rkG4E": {
