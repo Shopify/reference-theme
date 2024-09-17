@@ -219,7 +219,7 @@ a {
   border-radius: 0;
   background: var(--background-color);
   color: var(--color);
-  .btn--full{
+  &.btn--full{
     width: 100%;
   }
 }
