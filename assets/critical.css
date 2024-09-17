@@ -234,6 +234,20 @@ a {
   &[disabled]{
     cursor: default;
   }
+  &.spinner{
+    position: absolute;
+    left:50%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 100%;
+    aspect-ratio: 1;
+  }
+  &:not([loading]){
+    &.spinner{
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
 }
 
 /* Spacing System */
