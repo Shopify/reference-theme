@@ -52,6 +52,7 @@
   &[disabled]{
     background-color: #f6f6f6;
     color: #b6b6b6;
+    border-color: #b6b6b6;
   }
 }
 
