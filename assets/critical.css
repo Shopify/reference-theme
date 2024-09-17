@@ -1,3 +1,5 @@
+
+
 * {
   box-sizing: border-box;
   word-break: break-word;
@@ -238,7 +240,8 @@ a {
 
 .btn,
 .link{
-  & .spinner{
+  &::after{
+    content: '';
     position: absolute;
     left:50%;
     top: 0;
@@ -246,9 +249,13 @@ a {
     height: 100%;
     aspect-ratio: 1;
     opacity: 1;
+    animation: spin 1s linear infinite;
+    border-color: var(--color);
+    border-radius: 50%;
+    border-top-color: transparent;
   }
   &:not([loading]){
-    & .spinner{
+    &::after{
       opacity: 0;
       pointer-events: none;
     }
