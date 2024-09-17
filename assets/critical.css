@@ -253,7 +253,6 @@ a {
     position: absolute;
     left:50%;
     top: 0;
-    transform: translateX(-50%);
     height: 100%;
     aspect-ratio: 1;
     opacity: 1;
