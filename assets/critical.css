@@ -246,7 +246,7 @@ a {
   &[loading]::before{
     --spinner-size: 14px;
     --spinner-thickness: 2px;
-    --spinner-offset: calc(var(--spinner-size + 2 * var(--spinner-thickness) / -2));
+    --spinner-offset: calc(calc(var(--spinner-size + calc(2 * var(--spinner-thickness))) / -2));
     content: '';
     display:block;
     position: absolute;
