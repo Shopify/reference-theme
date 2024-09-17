@@ -49,6 +49,10 @@
   &:not([disabled]):hover:after {
     animation: shine 1s cubic-bezier(0.01, 0.56, 1, 1);
   }
+  &[disabled]{
+    background-color: #f6f6f6;
+    color: #b6b6b6;
+  }
 }
 
 /* text */
