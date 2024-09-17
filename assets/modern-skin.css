@@ -85,7 +85,7 @@
     width: 0;
   }
   &:not([disabled]):hover:after {
-    animation: line 1s cubic-bezier(0.01, 0.56, 1, 1);
+    animation: line 1s cubic-bezier(0.01, 0.56, 1, 1) forwards;
   }
 }
 
