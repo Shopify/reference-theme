@@ -73,7 +73,10 @@
   }
   &.btn--tertiary:not([disabled])[pressed],
   &.btn--tertiary:not([disabled]):hover{
-    border-color: var(--color-foreground);
+    border-color: var(--color);
+  }
+  &[loading]{
+    color: var(--background-color);
   }
 }
 
