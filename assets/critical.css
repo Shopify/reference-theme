@@ -12,6 +12,7 @@
   word-break: break-word;
   hyphens: auto;
   margin: 0;
+  outline: none;
 }
 
 body {
