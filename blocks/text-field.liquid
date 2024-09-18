@@ -1,6 +1,7 @@
 {% capture attributes %}
   id="{{ block.id }}"
   name="{{ block.settings.name }}"
+  class="text-field"
   {% if block.settings.pattern %}pattern="{{ block.settings.pattern }}"{% endif %}
   {% if block.settings.placeholder %}placeholder="{{ block.settings.placeholder }}"{% endif %}
   {% if block.settings.max_length %}maxlength="{{ block.settings.max_length }}"{% endif %}
