@@ -1,5 +1,10 @@
-
-<input type="text"
+{% if block.settings.multiline %}
+  {% assign tag = "<textarea" %}
+{% else %}
+  {% assign tag = '<input type="text"' %}
+{% endif %}
+<{{ tag }}
+  name="{{ block.settings.name }}"
   {% if block.settings.pattern %}pattern="{{ block.settings.pattern }}"{% endif %}
   {% if block.settings.placeholder %}placeholder="{{ block.settings.placeholder }}"{% endif %}
   {% if block.settings.max_length %}maxlength="{{ block.settings.max_length }}"{% endif %}
@@ -16,6 +21,17 @@
       "id": "required",
       "label": "Required",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "multiline",
+      "label": "Muliline",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Name"
     },
     {
       "type": "text",
