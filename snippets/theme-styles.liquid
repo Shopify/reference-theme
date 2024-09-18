@@ -70,7 +70,7 @@
     {% assign font_weight = 'font_weight_' | append: font_style %}
     {% assign selector = font_style | append: ', .' | append: font_style %}
     {% if font_style == 'p' %}
-      {% assign selector = selector | prepend: 'body, ' %}
+      {% assign selector = selector | prepend: 'body, textarea, ' %}
     {% endif %}
     {{selector}}{
       --font-size-min: {{ settings[font_size_mobile] }};
