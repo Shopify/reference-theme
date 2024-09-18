@@ -1,0 +1,48 @@
+
+<input type="text"
+  {% if block.settings.pattern %}pattern="{{ block.settings.pattern }}"{% endif %}
+  {% if block.settings.placeholder %}placeholder="{{ block.settings.placeholder }}"{% endif %}
+  {% if block.settings.max_length %}maxlength="{{ block.settings.max_length }}"{% endif %}
+  {% if block.settings.required %} required {% endif %}
+/>
+
+{% schema %}
+{
+  "name": "Text field",
+  "tag": null,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "required",
+      "label": "Required",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label"
+    },
+    {
+      "type": "text",
+      "id": "pattern",
+      "label": "Pattern",
+      "info": "A regular expression to validate the input."
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Placeholder"
+    },
+    {
+      "type": "number",
+      "id": "max_length",
+      "label": "Max length"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text field"
+    }
+  ]
+}
+{% endschema %}
