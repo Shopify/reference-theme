@@ -1,5 +1,8 @@
 {% assign button_styles = 'link, btn btn--primary btn--full, btn btn--secondary btn--full, btn btn--tertiary btn--full' | split: ',' %}
 {% assign states = ',loading, disabled, pressed' | split: ',' %}
+{% assign heading_styles = "h1,h2,h3,h4,h5,h6" | split: ',' %}
+{% assign body_styles = "large,p,small" | split: ',' %}
+
 <div class="flex col spacing-bottom-2xl">
   <div class="flex col spacing-bottom-xl">
     <p class="h3 spacing-bottom-m">Buttons</p>
@@ -24,8 +27,6 @@
       }
     </style>
     <div class="flex col" style="--gap:10px;">
-      {% assign heading_styles = "h1,h2,h3,h4,h5,h6" | split: ',' %}
-      {% assign body_styles = "large,p,small" | split: ',' %}
       {% for heading_style in heading_styles %}
           <p class="line-height-highlight {{ heading_style }}">Heading {{ heading_style }}</p>
       {% endfor %}
