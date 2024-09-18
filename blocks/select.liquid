@@ -1,0 +1,57 @@
+<div class="form-element">
+  <label {% if block.settings.label_hidden %}hidden{% endif %} class="form-input-label" for="{{ block.id }}">{{ block.settings.label }}</label>
+  {% capture attributes %}
+    id="{{ block.id }}"
+    name="{{ block.settings.name }}"
+    class="select"
+    {% if block.settings.placeholder %}placeholder="{{ block.settings.placeholder }}"{% endif %}
+    {% if block.settings.required %} required {% endif %}
+    {{ block.shopify_attributes }}
+  {% endcapture %}
+  <theme-select
+    {{ attributes }}
+  >
+    {% content_for "blocks" %}
+  </theme-select>
+</div>
+{% schema %}
+{
+  "name": "Select",
+  "tag": null,
+  "blocks": [{ "type": "option" }],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "required",
+      "label": "Required",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "label_hidden",
+      "label": "Label hidden",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Name"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Placeholder"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Select"
+    }
+  ]
+}
+{% endschema %}
