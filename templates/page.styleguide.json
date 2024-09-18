@@ -22,8 +22,9 @@
           "settings": {
             "required": false,
             "multiline": false,
+            "label_hidden": false,
             "name": "",
-            "label": "",
+            "label": "Text field",
             "pattern": "",
             "placeholder": ""
           }
@@ -33,8 +34,9 @@
           "settings": {
             "required": false,
             "multiline": true,
+            "label_hidden": false,
             "name": "",
-            "label": "",
+            "label": "Multiline text field",
             "pattern": "",
             "placeholder": ""
           }
