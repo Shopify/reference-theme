@@ -8,7 +8,7 @@
     {% if block.settings.required %} required {% endif %}
     {{ block.shopify_attributes }}
   {% endcapture %}
-  
+
   <theme-select
     {{ attributes }}
   >
@@ -19,7 +19,7 @@
 {
   "name": "Select",
   "tag": null,
-  "blocks": [{ "type": "option" }],
+  "blocks": [],
   "settings": [
     {
       "type": "checkbox",
@@ -35,13 +35,13 @@
     },
     {
       "type": "text",
-      "id": "name",
-      "label": "Name"
+      "id": "label",
+      "label": "Label"
     },
     {
       "type": "text",
-      "id": "label",
-      "label": "Label"
+      "id": "name",
+      "label": "Name"
     },
     {
       "type": "text",
