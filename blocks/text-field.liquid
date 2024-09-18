@@ -1,15 +1,23 @@
-{% if block.settings.multiline %}
-  {% assign tag = 'textarea rows="5"' %}
-{% else %}
-  {% assign tag = 'input type="text"' %}
-{% endif %}
-<{{ tag }}
+{% capture attributes %}
+  id="{{ block.id }}"
   name="{{ block.settings.name }}"
   {% if block.settings.pattern %}pattern="{{ block.settings.pattern }}"{% endif %}
   {% if block.settings.placeholder %}placeholder="{{ block.settings.placeholder }}"{% endif %}
   {% if block.settings.max_length %}maxlength="{{ block.settings.max_length }}"{% endif %}
   {% if block.settings.required %} required {% endif %}
-/>
+  {{ block.shopify_attributes }}
+{% endcapture %}
+
+{% if block.settings.multiline %}
+  <textarea rows="5"
+  {{ attributes }}
+  ></textarea>
+{% else %}
+  <input type="text"
+    {{ attributes }}
+  >
+{% endif %}
+
 
 {% schema %}
 {
