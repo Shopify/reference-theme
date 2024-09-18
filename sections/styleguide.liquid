@@ -1,6 +1,6 @@
 {% assign button_styles = 'link, btn btn--primary btn--full, btn btn--secondary btn--full, btn btn--tertiary btn--full' | split: ',' %}
 {% assign states = ',loading, disabled, pressed' | split: ',' %}
-<div class="flex col spacing-bottom-2xl">
+<div class="flex col spacing-bottom-2xl" style="--gap:10px;">
   <p class="">Buttons</p>
   <div class="grid" style="--columns: 4; --gap: 20px;">
     {% for state in states %}
