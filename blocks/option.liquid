@@ -3,7 +3,7 @@
   {% if block.settings.selected %}selected{% endif %}
   {% if block.settings.disabled %}disabled{% endif %}
 >
-  {{ block.settings.label }}
+  {{ block.settings.title }}
 </option>
 
 {% schema %}
@@ -30,7 +30,7 @@
     },
     {
       "type": "text",
-      "id": "label",
+      "id": "title",
       "label": "Label"
     }
   ],

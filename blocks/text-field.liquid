@@ -1,6 +1,6 @@
 
 <div class="form-element">
-  <label {% if block.settings.label_hidden %}hidden{% endif %} class="form-input-label" for="{{ block.id }}">{{ block.settings.label }}</label>
+  <label {% if block.settings.label_hidden %}hidden{% endif %} class="form-input-label" for="{{ block.id }}">{{ block.settings.title }}</label>
   {% capture attributes %}
     id="{{ block.id }}"
     name="{{ block.settings.name }}"
@@ -52,7 +52,7 @@
     },
     {
       "type": "text",
-      "id": "label",
+      "id": "title",
       "label": "Label"
     },
     {
