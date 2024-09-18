@@ -15,14 +15,21 @@
     {% endfor %}
   </div>
   <p class="">Typography</p>
-  {% assign heading_styles = "h1,h2,h3,h4,h5,h6" | split: ',' %}
-  {% assign body_styles = "large,p,small" | split: ',' %}
-  {% for heading_style in heading_styles %}
-      <p class="{{ heading_style }}">Heading {{ heading_style }}</p>
+  <style>
+    .line-height-highlight{
+      background-color: #e8e8e8;
+    }
+  </style>
+  <div class="flex col" style="--gap=10px;">
+    {% assign heading_styles = "h1,h2,h3,h4,h5,h6" | split: ',' %}
+    {% assign body_styles = "large,p,small" | split: ',' %}
+    {% for heading_style in heading_styles %}
+        <p class="line-height-highlight {{ heading_style }}">Heading {{ heading_style }}</p>
+    {% endfor %}
+    {% for body_style in body_styles %}
+      <p class="line-height-highlight {{ body_style }}">Body {{ body_style }}</p>
   {% endfor %}
-  {% for body_style in body_styles %}
-    <p class="{{ body_style }}">Body {{ body_style }}</p>
-{% endfor %}
+  </div>
 </div>
 {% schema %}
   {
