@@ -1,3 +1,7 @@
+
+
+<label {% if block.settings.label_hidden %}hidden{% endif %} class="form-input-label" for="{{ block.id }}">{{ block.settings.label }}</label>
+
 {% capture attributes %}
   id="{{ block.id }}"
   name="{{ block.settings.name }}"
@@ -35,6 +39,12 @@
       "type": "checkbox",
       "id": "multiline",
       "label": "Muliline",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "label_hidden",
+      "label": "Label hidden",
       "default": false
     },
     {
