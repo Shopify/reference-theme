@@ -46,10 +46,47 @@
           "settings": {
             "required": false,
             "label_hidden": false,
-            "name": "",
             "label": "Select",
+            "name": "",
             "placeholder": "Select a value"
-          }
+          },
+          "blocks": {
+            "option_UyWNUp": {
+              "type": "option",
+              "settings": {
+                "selected": false,
+                "disabled": false,
+                "label_hidden": false,
+                "value": "a",
+                "label": "Option A"
+              }
+            },
+            "option_e8jDWB": {
+              "type": "option",
+              "settings": {
+                "selected": false,
+                "disabled": false,
+                "label_hidden": false,
+                "value": "b",
+                "label": "Option B"
+              }
+            },
+            "option_YCqPhQ": {
+              "type": "option",
+              "settings": {
+                "selected": false,
+                "disabled": false,
+                "label_hidden": false,
+                "value": "c",
+                "label": "Option C"
+              }
+            }
+          },
+          "block_order": [
+            "option_UyWNUp",
+            "option_e8jDWB",
+            "option_YCqPhQ"
+          ]
         }
       },
       "block_order": [
