@@ -40,11 +40,22 @@
             "pattern": "",
             "placeholder": "Placeholder"
           }
+        },
+        "select_Bcdyg8": {
+          "type": "select",
+          "settings": {
+            "required": false,
+            "label_hidden": false,
+            "name": "",
+            "label": "Select",
+            "placeholder": "Select a value"
+          }
         }
       },
       "block_order": [
         "text_field_ANxHgG",
-        "text_field_TmqNgV"
+        "text_field_TmqNgV",
+        "select_Bcdyg8"
       ],
       "settings": {
         "page_width": "page-width",
