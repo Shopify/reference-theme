@@ -24,7 +24,7 @@
             "multiline": false,
             "label_hidden": false,
             "name": "",
-            "label": "Text field",
+            "title": "Singleline Text field",
             "pattern": "",
             "placeholder": "Placeholder"
           }
@@ -36,7 +36,7 @@
             "multiline": true,
             "label_hidden": false,
             "name": "",
-            "label": "Multiline text field",
+            "title": "Multiline Text field",
             "pattern": "",
             "placeholder": "Placeholder"
           }
@@ -46,7 +46,7 @@
           "settings": {
             "required": false,
             "label_hidden": false,
-            "label": "Select",
+            "title": "Select",
             "name": "",
             "placeholder": "Select a value"
           },
@@ -56,9 +56,8 @@
               "settings": {
                 "selected": false,
                 "disabled": false,
-                "label_hidden": false,
                 "value": "a",
-                "label": "Option A"
+                "title": "Option A"
               }
             },
             "option_e8jDWB": {
@@ -66,9 +65,8 @@
               "settings": {
                 "selected": false,
                 "disabled": false,
-                "label_hidden": false,
                 "value": "b",
-                "label": "Option B"
+                "title": "Option B"
               }
             },
             "option_YCqPhQ": {
@@ -76,9 +74,8 @@
               "settings": {
                 "selected": false,
                 "disabled": false,
-                "label_hidden": false,
                 "value": "c",
-                "label": "Option C"
+                "title": "Option C"
               }
             }
           },
