@@ -13,6 +13,8 @@
   hyphens: auto;
   margin: 0;
   outline: none;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 body {
