@@ -1,7 +1,7 @@
 {% if block.settings.multiline %}
-  {% assign tag = "<textarea" %}
+  {% assign tag = "textarea" %}
 {% else %}
-  {% assign tag = '<input type="text"' %}
+  {% assign tag = 'input type="text"' %}
 {% endif %}
 <{{ tag }}
   name="{{ block.settings.name }}"
