@@ -20,13 +20,13 @@
         "text_field_ANxHgG": {
           "type": "text-field",
           "settings": {
-            "required": false,
+            "required": true,
             "multiline": false,
             "label_hidden": false,
             "name": "",
             "label": "Text field",
             "pattern": "",
-            "placeholder": ""
+            "placeholder": "Placeholder"
           }
         },
         "text_field_TmqNgV": {
@@ -38,7 +38,7 @@
             "name": "",
             "label": "Multiline text field",
             "pattern": "",
-            "placeholder": ""
+            "placeholder": "Placeholder"
           }
         }
       },
