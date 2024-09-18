@@ -1,28 +1,26 @@
 
-
-<label {% if block.settings.label_hidden %}hidden{% endif %} class="form-input-label" for="{{ block.id }}">{{ block.settings.label }}</label>
-
-{% capture attributes %}
-  id="{{ block.id }}"
-  name="{{ block.settings.name }}"
-  class="text-field"
-  {% if block.settings.pattern %}pattern="{{ block.settings.pattern }}"{% endif %}
-  {% if block.settings.placeholder %}placeholder="{{ block.settings.placeholder }}"{% endif %}
-  {% if block.settings.max_length %}maxlength="{{ block.settings.max_length }}"{% endif %}
-  {% if block.settings.required %} required {% endif %}
-  {{ block.shopify_attributes }}
-{% endcapture %}
-
-{% if block.settings.multiline %}
-  <textarea rows="5"
-  {{ attributes }}
-  ></textarea>
-{% else %}
-  <input type="text"
+<div class="form-element">
+  <label {% if block.settings.label_hidden %}hidden{% endif %} class="form-input-label" for="{{ block.id }}">{{ block.settings.label }}</label>
+  {% capture attributes %}
+    id="{{ block.id }}"
+    name="{{ block.settings.name }}"
+    class="text-field"
+    {% if block.settings.pattern %}pattern="{{ block.settings.pattern }}"{% endif %}
+    {% if block.settings.placeholder %}placeholder="{{ block.settings.placeholder }}"{% endif %}
+    {% if block.settings.max_length %}maxlength="{{ block.settings.max_length }}"{% endif %}
+    {% if block.settings.required %} required {% endif %}
+    {{ block.shopify_attributes }}
+  {% endcapture %}
+  {% if block.settings.multiline %}
+    <textarea rows="5"
     {{ attributes }}
-  >
-{% endif %}
-
+    ></textarea>
+  {% else %}
+    <input type="text"
+      {{ attributes }}
+    >
+  {% endif %}
+</div>
 
 {% schema %}
 {

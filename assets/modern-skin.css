@@ -144,3 +144,8 @@ small,
     animation-timeline: view(90svh 0px);
   }
 }
+
+.form-element{
+  display: flex;
+  flex-direction: column;
+}
