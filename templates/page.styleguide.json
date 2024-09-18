@@ -9,8 +9,29 @@
 */
 {
   "sections": {
+    "styleguide_rzN9HH": {
+      "type": "styleguide",
+      "settings": {
+      }
+    },
     "main": {
       "type": "container",
+      "blocks": {
+        "text_field_ANxHgG": {
+          "type": "text-field",
+          "settings": {
+            "required": false,
+            "multiline": false,
+            "name": "",
+            "label": "",
+            "pattern": "",
+            "placeholder": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_field_ANxHgG"
+      ],
       "settings": {
         "page_width": "page-width",
         "position": "",
@@ -21,15 +42,10 @@
         },
         "color_scheme": ""
       }
-    },
-    "styleguide_rzN9HH": {
-      "type": "styleguide",
-      "settings": {
-      }
     }
   },
   "order": [
-    "main",
-    "styleguide_rzN9HH"
+    "styleguide_rzN9HH",
+    "main"
   ]
 }

@@ -175,24 +175,10 @@
         },
         "color_scheme": ""
       }
-    },
-    "container_R8cbNr": {
-      "type": "container",
-      "settings": {
-        "page_width": "page-width",
-        "position": "",
-        "overflow": "",
-        "spacing": {
-        },
-        "layout": {
-        },
-        "color_scheme": ""
-      }
     }
   },
   "order": [
     "slideshow_NxYUz7",
-    "container_A3mrUk",
-    "container_R8cbNr"
+    "container_A3mrUk"
   ]
 }
