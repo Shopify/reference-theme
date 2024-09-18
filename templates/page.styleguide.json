@@ -51,6 +51,7 @@
         "position": "",
         "overflow": "",
         "spacing": {
+          "padding-block-end": "80px"
         },
         "layout": {
           "flex-direction": "column"
