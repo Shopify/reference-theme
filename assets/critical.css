@@ -21,6 +21,11 @@ body {
   text-rendering: optimizeSpeed;
 }
 
+input[type="text"],
+textarea{
+  border: 1px solid #000; 
+}
+
 /* layout  */
 html .page-width {
   width: 100%;
