@@ -234,7 +234,7 @@ a {
   &.btn--full{
     width: 100%;
   }
-  /* &:not([disabled])[pressed],
+  /* &:not([disabled])[hovered],
   &:not([disabled]):hover{
     
   }

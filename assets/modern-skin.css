@@ -71,7 +71,7 @@
   &.btn--primary:not([disabled]):not([loading]):hover:after {
     animation: shine 1s cubic-bezier(0.01, 0.56, 1, 1);
   }
-  &.btn--tertiary:not([disabled]):not([loading])[pressed],
+  &.btn--tertiary:not([disabled]):not([loading])[hovered],
   &.btn--tertiary:not([disabled]):not([loading]):hover{
     border-color: var(--color);
   }
@@ -105,7 +105,7 @@
     z-index: 0;
     width: 100%;
   }
-  &:not([disabled]):not([loading])[pressed]:after,
+  &:not([disabled]):not([loading])[hovered]:after,
   &:not([disabled]):not([loading]):hover:after {
     animation: line 0.3s cubic-bezier(0.65, 0, 0.35, 1) both;
   }
