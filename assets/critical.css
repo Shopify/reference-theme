@@ -24,9 +24,7 @@ body {
 input[type="text"],
 textarea{
   border: 1px solid #000; 
-  ::-webkit-input-placeholder{
-    font-family: var(--font-family-primary);
-  }
+  font-family: var(--font-family-primary);
 }
 
 
