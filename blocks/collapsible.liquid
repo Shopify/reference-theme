@@ -1,5 +1,5 @@
 <collapsible-outer 
-  {% if block.settings.collapsed %}
+  {% if block.settings.open %}
     open="true"
   {% endif %}
   class="spacing-bottom-{{ block.settings.spacing_bottom }}"
@@ -21,9 +21,9 @@
   "settings": [
     {
       "type": "checkbox",
-      "id": "collapsed",
-      "label": "Initialy collapsed",
-      "default": true
+      "id": "open",
+      "label": "Open",
+      "default": false
     },
     {
       "type": "select",
