@@ -15,13 +15,22 @@
         "heading_6z8zyA": {
           "type": "heading",
           "settings": {
-            "heading": "Heading",
+            "heading": "Shipping policy",
             "html_tag": "p",
             "heading_style": "h4",
             "alignment": "left",
             "spacing_bottom": "none",
             "text_color": "",
             "font_size": ""
+          }
+        },
+        "text_DNKEUP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "text_style": "p",
+            "alignment": "left",
+            "spacing_bottom": "none"
           }
         },
         "collapsible_FJiRPm": {
@@ -44,9 +53,9 @@
               "type": "heading",
               "static": true,
               "settings": {
-                "heading": "Heading",
+                "heading": "Where do you ship to?",
                 "html_tag": "p",
-                "heading_style": "h4",
+                "heading_style": "h5",
                 "alignment": "left",
                 "spacing_bottom": "none",
                 "text_color": "",
@@ -57,11 +66,47 @@
           "block_order": [
             "text_89qA6G"
           ]
+        },
+        "collapsible_CTB49K": {
+          "type": "collapsible",
+          "settings": {
+            "title": "Collapsible title",
+            "spacing_bottom": "none"
+          },
+          "blocks": {
+            "text_D668Cj": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+                "text_style": "p",
+                "alignment": "left",
+                "spacing_bottom": "none"
+              }
+            },
+            "collapsible-label": {
+              "type": "heading",
+              "static": true,
+              "settings": {
+                "heading": "How long will my order take?",
+                "html_tag": "p",
+                "heading_style": "h5",
+                "alignment": "left",
+                "spacing_bottom": "none",
+                "text_color": "",
+                "font_size": ""
+              }
+            }
+          },
+          "block_order": [
+            "text_D668Cj"
+          ]
         }
       },
       "block_order": [
         "heading_6z8zyA",
-        "collapsible_FJiRPm"
+        "text_DNKEUP",
+        "collapsible_FJiRPm",
+        "collapsible_CTB49K"
       ],
       "settings": {
         "page_width": "page-width",
