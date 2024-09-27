@@ -151,11 +151,21 @@
                     "pattern": "",
                     "placeholder": ""
                   }
+                },
+                "button_dbjXVf": {
+                  "type": "button",
+                  "settings": {
+                    "type": "submit",
+                    "label": "Submit",
+                    "button_style": "btn btn--primary",
+                    "spacing_bottom": "none"
+                  }
                 }
               },
               "block_order": [
                 "container_jdwE68",
-                "text_field_pGdWkE"
+                "text_field_pGdWkE",
+                "button_dbjXVf"
               ]
             }
           },
@@ -173,7 +183,9 @@
         "overflow": "",
         "spacing": {
           "padding-block-start": "60px",
-          "padding-block-end": "60px"
+          "padding-block-end": "60px",
+          "padding-inline-start": "0px",
+          "padding-inline-end": "0px"
         },
         "layout": {
         },
