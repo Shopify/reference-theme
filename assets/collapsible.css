@@ -25,3 +25,9 @@ collapsible-content {
   background-color: #fff;
   z-index: 0;
 }
+collapsible-outer[open] .collapsible-icon .collapsible-icon--open{
+  display: none;
+}
+collapsible-outer .collapsible-icon .collapsible-icon--close{
+  display: none;
+}
