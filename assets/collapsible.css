@@ -14,6 +14,7 @@ collapsible-outer {
   overflow: hidden;
   height: auto;
   position: relative;
+  width:100%;
   transition: height 0.3s ease;
 }
 collapsible-content {
