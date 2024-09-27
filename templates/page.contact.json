@@ -11,11 +11,190 @@
   "sections": {
     "main": {
       "type": "container",
+      "blocks": {
+        "image_kx49eM": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "size": {
+              "width": "100%",
+              "flex-grow": "1",
+              "height": "200px"
+            },
+            "aspect_ratio_type": "auto",
+            "aspect_ratio": 1,
+            "placeholder": "lifestyle-2"
+          }
+        },
+        "simple_overlay_nKFykn": {
+          "type": "simple-overlay",
+          "settings": {
+            "overflow": "",
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": "scheme-d64ff18b-05a6-4c0f-85a3-edcd6de19b8c"
+          },
+          "blocks": {
+            "heading_3BEkDt": {
+              "type": "heading",
+              "settings": {
+                "heading": "Contact us",
+                "html_tag": "p",
+                "heading_style": "h1",
+                "alignment": "center",
+                "spacing_bottom": "none",
+                "text_color": "",
+                "font_size": ""
+              }
+            }
+          },
+          "block_order": [
+            "heading_3BEkDt"
+          ]
+        }
+      },
+      "block_order": [
+        "image_kx49eM",
+        "simple_overlay_nKFykn"
+      ],
       "settings": {
+        "page_width": "full-width",
+        "position": "is-relative",
+        "overflow": "",
+        "spacing": {
+        },
+        "layout": {
+        },
+        "color_scheme": ""
+      }
+    },
+    "container_NzNprM": {
+      "type": "container",
+      "blocks": {
+        "contact_form_eY3K8m": {
+          "type": "contact-form",
+          "settings": {
+          },
+          "blocks": {
+            "container_tNLmQA": {
+              "type": "container",
+              "settings": {
+                "position": "",
+                "overflow": "",
+                "size": {
+                  "width": "100%",
+                  "flex-grow": "1"
+                },
+                "spacing": {
+                },
+                "layout": {
+                  "flex-direction": "column",
+                  "align-items": "stretch"
+                },
+                "color_scheme": ""
+              },
+              "blocks": {
+                "container_jdwE68": {
+                  "type": "container",
+                  "settings": {
+                    "position": "",
+                    "overflow": "",
+                    "size": {
+                    },
+                    "spacing": {
+                    },
+                    "layout": {
+                    },
+                    "color_scheme": ""
+                  },
+                  "blocks": {
+                    "text_field_gJVEbc": {
+                      "type": "text-field",
+                      "settings": {
+                        "required": false,
+                        "multiline": false,
+                        "label_hidden": false,
+                        "name": "",
+                        "title": "Name",
+                        "pattern": "",
+                        "placeholder": ""
+                      }
+                    },
+                    "text_field_7GqrX8": {
+                      "type": "text-field",
+                      "settings": {
+                        "required": false,
+                        "multiline": false,
+                        "label_hidden": false,
+                        "name": "",
+                        "title": "Email",
+                        "pattern": "",
+                        "placeholder": ""
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_field_gJVEbc",
+                    "text_field_7GqrX8"
+                  ]
+                },
+                "text_field_pGdWkE": {
+                  "type": "text-field",
+                  "settings": {
+                    "required": false,
+                    "multiline": true,
+                    "label_hidden": false,
+                    "name": "",
+                    "title": "Message",
+                    "pattern": "",
+                    "placeholder": ""
+                  }
+                },
+                "button_dbjXVf": {
+                  "type": "button",
+                  "settings": {
+                    "type": "submit",
+                    "label": "Submit",
+                    "button_style": "btn btn--primary",
+                    "spacing_bottom": "none"
+                  }
+                }
+              },
+              "block_order": [
+                "container_jdwE68",
+                "text_field_pGdWkE",
+                "button_dbjXVf"
+              ]
+            }
+          },
+          "block_order": [
+            "container_tNLmQA"
+          ]
+        }
+      },
+      "block_order": [
+        "contact_form_eY3K8m"
+      ],
+      "settings": {
+        "page_width": "page-width",
+        "position": "",
+        "overflow": "",
+        "spacing": {
+          "padding-block-start": "60px",
+          "padding-block-end": "60px",
+          "padding-inline-start": "0px",
+          "padding-inline-end": "0px"
+        },
+        "layout": {
+        },
+        "color_scheme": ""
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "container_NzNprM"
   ]
 }
