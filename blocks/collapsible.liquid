@@ -1,4 +1,8 @@
-<collapsible-outer class="spacing-bottom-{{ block.settings.spacing_bottom }}"
+<collapsible-outer 
+  {% if block.settings.collapsed %}
+    open="true"
+  {% endif %}
+  class="spacing-bottom-{{ block.settings.spacing_bottom }}"
   {{ block.shopify_attributes }}>
   <collapsible-label class="">
     {% comment %} Todo: Add collapsible icons {% endcomment %}
@@ -16,10 +20,10 @@
   "blocks": [{ "type": "@theme" },{ "type": "@app" }],
   "settings": [
     {
-      "type": "text",
-      "id": "title",
-      "label": "Title",
-      "default": "Collapsible title"
+      "type": "checkbox",
+      "id": "collapsed",
+      "label": "Initialy collapsed",
+      "default": true
     },
     {
       "type": "select",
