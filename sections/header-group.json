@@ -46,7 +46,7 @@
             "text_FPDTnq": {
               "type": "text",
               "settings": {
-                "text": "<p>Share information about you.<\/p>",
+                "text": "<p>Share information about you.</p>",
                 "text_style": "p",
                 "alignment": "left",
                 "spacing_bottom": "none"
@@ -90,7 +90,7 @@
             "text_MqQPhD": {
               "type": "text",
               "settings": {
-                "text": "<p>Share information about you.<\/p>",
+                "text": "<p>Share information about you.</p>",
                 "text_style": "p",
                 "alignment": "left",
                 "spacing_bottom": "none"
@@ -158,10 +158,21 @@
             "text_color": "",
             "font_size": ""
           }
+        },
+        "linklist_f7VBe3": {
+          "type": "linklist",
+          "settings": {
+            "linklist": "footer",
+            "show_title": false,
+            "layout": {
+              "flex-direction": "row"
+            }
+          }
         }
       },
       "block_order": [
-        "heading_CJHPWc"
+        "heading_CJHPWc",
+        "linklist_f7VBe3"
       ],
       "settings": {
         "page_width": "page-width",
