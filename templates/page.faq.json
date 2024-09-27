@@ -69,7 +69,7 @@
                 "html_tag": "p",
                 "heading_style": "h5",
                 "alignment": "left",
-                "spacing_bottom": "none",
+                "spacing_bottom": "s",
                 "text_color": "",
                 "font_size": ""
               }
@@ -103,7 +103,7 @@
                 "html_tag": "p",
                 "heading_style": "h5",
                 "alignment": "left",
-                "spacing_bottom": "none",
+                "spacing_bottom": "s",
                 "text_color": "",
                 "font_size": ""
               }
@@ -168,7 +168,7 @@
                 "html_tag": "p",
                 "heading_style": "h5",
                 "alignment": "left",
-                "spacing_bottom": "none",
+                "spacing_bottom": "s",
                 "text_color": "",
                 "font_size": ""
               }
