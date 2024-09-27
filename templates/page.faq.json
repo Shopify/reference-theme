@@ -69,7 +69,7 @@
                 "html_tag": "p",
                 "heading_style": "h5",
                 "alignment": "left",
-                "spacing_bottom": "none",
+                "spacing_bottom": "s",
                 "text_color": "",
                 "font_size": ""
               }
@@ -103,7 +103,7 @@
                 "html_tag": "p",
                 "heading_style": "h5",
                 "alignment": "left",
-                "spacing_bottom": "none",
+                "spacing_bottom": "s",
                 "text_color": "",
                 "font_size": ""
               }
@@ -112,6 +112,16 @@
           "block_order": [
             "text_D668Cj"
           ]
+        },
+        "spacer_GHfFiV": {
+          "type": "spacer",
+          "settings": {
+            "size": {
+              "height": "20px"
+            },
+            "spacing": {
+            }
+          }
         },
         "heading_HG9iYY": {
           "type": "heading",
@@ -158,7 +168,7 @@
                 "html_tag": "p",
                 "heading_style": "h5",
                 "alignment": "left",
-                "spacing_bottom": "none",
+                "spacing_bottom": "s",
                 "text_color": "",
                 "font_size": ""
               }
@@ -175,6 +185,7 @@
         "text_DNKEUP",
         "collapsible_FJiRPm",
         "collapsible_CTB49K",
+        "spacer_GHfFiV",
         "heading_HG9iYY",
         "text_eq7KwE",
         "collapsible_W7B9aA"
@@ -184,8 +195,8 @@
         "position": "",
         "overflow": "",
         "spacing": {
-          "padding-block-start": "80px",
-          "padding-block-end": "80px"
+          "padding-block-start": "60px",
+          "padding-block-end": "60px"
         },
         "layout": {
           "flex-direction": "column",
