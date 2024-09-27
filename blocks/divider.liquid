@@ -1,0 +1,24 @@
+<div
+  class="shopify-block-divider {{ block.settings | class_list }}"
+  {{ block.shopify_attributes }}>
+  <hr>
+</div>
+
+{% schema %}
+{
+  "name": "Divider",
+  "tag": null,
+  "settings": [
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Divider"
+    }
+  ]
+}
+{% endschema %}
