@@ -28,6 +28,6 @@ collapsible-content {
 collapsible-outer[open] .collapsible-icon .collapsible-icon--open{
   display: none;
 }
-collapsible-outer .collapsible-icon .collapsible-icon--close{
+collapsible-outer:not([open]) .collapsible-icon .collapsible-icon--close{
   display: none;
 }
