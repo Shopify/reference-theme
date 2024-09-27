@@ -2,7 +2,7 @@
   {% if block.settings.open %}
     open="true"
   {% endif %}
-  class="spacing-bottom-{{ block.settings.spacing_bottom }}"
+  class="shopify-block-collapsible"
   {{ block.shopify_attributes }}>
   <collapsible-label class="full-width flex row space-between">
     {% comment %} Todo: Add collapsible icons {% endcomment %}
@@ -28,23 +28,6 @@
       "id": "open",
       "label": "Open",
       "default": false
-    },
-    {
-      "type": "select",
-      "id": "spacing_bottom",
-      "label": "Spacing bottom",
-      "options": [
-        { "value": "none", "label": "none" },
-        { "value": "2xs", "label": "2xs" },
-        { "value": "xs", "label": "xs" },
-        { "value": "s", "label": "s" },
-        { "value": "m", "label": "m" },
-        { "value": "l", "label": "l" },
-        { "value": "xl", "label": "xl" },
-        { "value": "2xl", "label": "2xl" },
-        { "value": "3xl", "label": "3xl" }
-      ],
-      "default": "none"
     }
   ],
   "presets": [
