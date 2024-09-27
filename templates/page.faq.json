@@ -195,8 +195,8 @@
         "position": "",
         "overflow": "",
         "spacing": {
-          "padding-block-start": "80px",
-          "padding-block-end": "80px"
+          "padding-block-start": "60px",
+          "padding-block-end": "60px"
         },
         "layout": {
           "flex-direction": "column",
