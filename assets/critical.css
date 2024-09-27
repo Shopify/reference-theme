@@ -303,3 +303,10 @@ a {
 .spacing-bottom-3xl{
   padding-bottom: 60px;
 }
+
+ul.linklist{
+  padding: 0;
+  & li.linklist-item{
+    list-style: none;
+  }
+}
