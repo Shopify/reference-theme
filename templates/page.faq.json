@@ -113,6 +113,16 @@
             "text_D668Cj"
           ]
         },
+        "spacer_GHfFiV": {
+          "type": "spacer",
+          "settings": {
+            "size": {
+              "height": "20px"
+            },
+            "spacing": {
+            }
+          }
+        },
         "heading_HG9iYY": {
           "type": "heading",
           "settings": {
@@ -175,6 +185,7 @@
         "text_DNKEUP",
         "collapsible_FJiRPm",
         "collapsible_CTB49K",
+        "spacer_GHfFiV",
         "heading_HG9iYY",
         "text_eq7KwE",
         "collapsible_W7B9aA"
