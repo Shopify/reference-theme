@@ -1,0 +1,48 @@
+<collapsible-outer class="spacing-bottom-{{ block.settings.spacing_bottom }}"
+  {{ block.shopify_attributes }}>
+  <collapsible-label class="">
+    {% comment %} Todo: Add collapsible icons {% endcomment %}
+    {% content_for "block", type: "heading", id: "collapsible-label" %}
+  </collapsible-label>
+  <collapsible-content class="">
+    {% content_for "blocks" %}
+  </collapsible-content>
+</collapsible-outer>
+
+{% schema %}
+{
+  "name": "Collapsible",
+  "tag": null,
+  "blocks": [{ "type": "@theme" },{ "type": "@app" }],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Collapsible title"
+    },
+    {
+      "type": "select",
+      "id": "spacing_bottom",
+      "label": "Spacing bottom",
+      "options": [
+        { "value": "none", "label": "none" },
+        { "value": "2xs", "label": "2xs" },
+        { "value": "xs", "label": "xs" },
+        { "value": "s", "label": "s" },
+        { "value": "m", "label": "m" },
+        { "value": "l", "label": "l" },
+        { "value": "xl", "label": "xl" },
+        { "value": "2xl", "label": "2xl" },
+        { "value": "3xl", "label": "3xl" }
+      ],
+      "default": "none"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collapsible"
+    }
+  ]
+}
+{% endschema %}
