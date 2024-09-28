@@ -19,7 +19,7 @@
         },
         "columns": 4,
         "rows": 1,
-        "gap": 5,
+        "gap": 20,
         "color_scheme": ""
       }
     }
