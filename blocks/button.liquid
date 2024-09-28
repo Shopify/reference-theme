@@ -1,37 +1,16 @@
 <div class="spacing-bottom-{{ block.settings.spacing_bottom }}">
-  <button class="{{ block.settings.button_style }}" type="{{ block.settings.type }}">
+  <button class="{{ block.settings.button_style }}" type="submit">
     {{ block.settings.label }}
   </button>
 </div>
 
-{% comment %} Todo: loading & disabled state {% endcomment %}
 {% comment %} Todo: Only inside forms {% endcomment %}
 {% comment %} Todo: custom actions for type button? {% endcomment %}
 {% schema %}
 {
-  "name": "Button",
+  "name": "Submit button",
   "tag": null,
   "settings": [
-    {
-      "type": "select",
-      "id": "type",
-      "label": "Type",
-      "options": [
-        {
-          "value": "submit",
-          "label": "Submit"
-        },
-        {
-          "value": "reset",
-          "label": "Reset"
-        },
-        {
-          "value": "button",
-          "label": "Button"
-        }
-      ],
-      "default": "submit"
-    },
     {
       "type": "text",
       "id": "label",
