@@ -1,7 +1,8 @@
 {% stylesheet %}{% endstylesheet %}
-
-<div class="{{section.settings.page_width}} {{ section.settings | class_list }} color-{{ section.settings.color_scheme }} {{ section.settings.position }} {{ section.settings.overflow }}">
-  {% content_for "blocks" %}
+<div class="color-{{ section.settings.color_scheme }} full-width {{ section.settings.overflow }} {{ section.settings | class_list }} {{ section.settings.position }}">
+  <div class="{{section.settings.page_width}}">
+    {% content_for "blocks" %}
+  </div>
 </div>
 
 {% schema %}
