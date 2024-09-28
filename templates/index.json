@@ -95,6 +95,8 @@
                         "link": "",
                         "label": "Primary button label",
                         "button_style": "btn btn--primary",
+                        "small": false,
+                        "full_width": false,
                         "open_in_new_tab": false,
                         "spacing_bottom": "none"
                       }
@@ -201,6 +203,8 @@
                         "link": "",
                         "label": "Primary button label",
                         "button_style": "btn btn--primary",
+                        "small": false,
+                        "full_width": false,
                         "open_in_new_tab": false,
                         "spacing_bottom": "none"
                       }
@@ -221,58 +225,6 @@
           "block_order": [
             "image_UzFUtP",
             "simple_overlay_VJ6BYa"
-          ]
-        },
-        "slide_fraa7F": {
-          "type": "slide",
-          "settings": {
-            "page_width": "full-width",
-            "position": "is-relative",
-            "overflow": "overflow-hidden",
-            "spacing": {
-            },
-            "layout": {
-            },
-            "color_scheme": ""
-          },
-          "blocks": {
-            "container_dYTQfi": {
-              "type": "container",
-              "settings": {
-                "position": "",
-                "overflow": "",
-                "size": {
-                  "height": "500px",
-                  "width": "100%",
-                  "flex-grow": "1"
-                },
-                "spacing": {
-                },
-                "layout": {
-                },
-                "color_scheme": "scheme-4"
-              },
-              "blocks": {
-                "heading_cikhk3": {
-                  "type": "heading",
-                  "settings": {
-                    "heading": "Text Gradient Demo",
-                    "html_tag": "p",
-                    "heading_style": "h1",
-                    "alignment": "center",
-                    "spacing_bottom": "none",
-                    "text_color": "linear-gradient(116deg, rgba(196, 102, 238, 1), rgba(82, 218, 236, 1) 100%)",
-                    "font_size": "72"
-                  }
-                }
-              },
-              "block_order": [
-                "heading_cikhk3"
-              ]
-            }
-          },
-          "block_order": [
-            "container_dYTQfi"
           ]
         },
         "slideshow-controls": {
@@ -301,8 +253,7 @@
       },
       "block_order": [
         "slide_dXc3an",
-        "slide_pbBe6r",
-        "slide_fraa7F"
+        "slide_pbBe6r"
       ],
       "settings": {
         "page_width": "full-width",
@@ -354,7 +305,9 @@
               "settings": {
                 "link": "",
                 "label": "View All",
-                "button_style": "btn btn--primary",
+                "button_style": "btn btn--tertiary",
+                "small": true,
+                "full_width": false,
                 "open_in_new_tab": false,
                 "spacing_bottom": "none"
               }
@@ -466,6 +419,8 @@
                 "link": "",
                 "label": "Secondary button label",
                 "button_style": "btn btn--primary",
+                "small": false,
+                "full_width": false,
                 "open_in_new_tab": false,
                 "spacing_bottom": "none"
               }
@@ -614,6 +569,8 @@
                     "link": "",
                     "label": "Primary button label",
                     "button_style": "btn btn--primary",
+                    "small": false,
+                    "full_width": false,
                     "open_in_new_tab": false,
                     "spacing_bottom": "none"
                   }
@@ -728,6 +685,8 @@
                 "link": "",
                 "label": "Secondary button label",
                 "button_style": "btn btn--primary",
+                "small": false,
+                "full_width": false,
                 "open_in_new_tab": false,
                 "spacing_bottom": "none"
               }
@@ -1046,6 +1005,8 @@
                         "link": "",
                         "label": "Primary button label",
                         "button_style": "btn btn--primary",
+                        "small": false,
+                        "full_width": false,
                         "open_in_new_tab": false,
                         "spacing_bottom": "none"
                       }
@@ -1175,6 +1136,31 @@
         "color_scheme": ""
       }
     },
+    "container_fiNUUq": {
+      "type": "container",
+      "blocks": {
+        "divider_LyBJaP": {
+          "type": "divider",
+          "settings": {
+            "spacing": {
+            }
+          }
+        }
+      },
+      "block_order": [
+        "divider_LyBJaP"
+      ],
+      "settings": {
+        "page_width": "full-width",
+        "position": "",
+        "overflow": "",
+        "spacing": {
+        },
+        "layout": {
+        },
+        "color_scheme": ""
+      }
+    },
     "container_HL9qmF": {
       "type": "container",
       "blocks": {
@@ -1238,6 +1224,8 @@
                 "link": "",
                 "label": "Tertiary button label",
                 "button_style": "btn btn--tertiary",
+                "small": true,
+                "full_width": false,
                 "open_in_new_tab": false,
                 "spacing_bottom": "none"
               }
@@ -1310,6 +1298,8 @@
                 "link": "",
                 "label": "Tertiary button label",
                 "button_style": "btn btn--tertiary",
+                "small": true,
+                "full_width": false,
                 "open_in_new_tab": false,
                 "spacing_bottom": "none"
               }
@@ -1382,6 +1372,8 @@
                 "link": "",
                 "label": "Tertiary button label",
                 "button_style": "btn btn--tertiary",
+                "small": true,
+                "full_width": false,
                 "open_in_new_tab": false,
                 "spacing_bottom": "none"
               }
@@ -1423,6 +1415,7 @@
     "grid_RYPCRk",
     "container_JaaAJ7",
     "container_eFCEN9",
+    "container_fiNUUq",
     "container_HL9qmF"
   ]
 }
