@@ -1,3 +1,6 @@
+<div
+  class="image-wrapper {{ fit }}"
+  style="--aspect-ratio: {{ aspect_ratio }};">
 {% liquid
   comment
     image -> image object
@@ -45,3 +48,5 @@
     echo placeholder | placeholder_svg_tag
   endif
 %}
+
+</div>

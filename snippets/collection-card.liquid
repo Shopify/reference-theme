@@ -7,9 +7,7 @@
 {% assign fit = "cover" %}
 {% capture placeholder %}collection-{% cycle '1', '2', '3', '4', '5', '6' %}{% endcapture %}
 <div class="flex col">
-  <div
-    class="image-wrapper {{ fit }}"
-    style="--aspect-ratio: {{ aspect_ratio }};">
+
     {% assign collection_image = collection.featured_image | default: blank %}
     {% render "image-element",
       image: collection_image,
@@ -19,7 +17,6 @@
       sizes: "25vw",
       placeholder: placeholder
     %}
-  </div>
   {% assign collection_title = collection.title | default: "Collection placeholder" %}
     <p class="h5 spacing-top-8">{{ collection_title }}</p>
 </div>

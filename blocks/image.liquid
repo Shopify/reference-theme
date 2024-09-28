@@ -11,9 +11,6 @@
 <div
   class="shopify-block-{{ block.type }} {{ block.settings | class_list }} spacing-bottom-{{ block.settings.spacing_bottom }}"
   {{ block.shopify_attributes }}>
-  <div
-    class="image-wrapper {{ block.settings.object_fit }}"
-    style="--aspect-ratio: {{aspect_ratio}};">
     {% render "image-element",
       image: block.settings.image,
       fit: block.settings.object_fit,
@@ -22,7 +19,6 @@
       sizes: "100vw",
       placeholder: block.settings.placeholder
     %}
-  </div>
 </div>
 
 {% schema %}
