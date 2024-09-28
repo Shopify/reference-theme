@@ -1,6 +1,6 @@
 {% if block.settings.text_color != blank %}
   <style>
-    #shopify-block-heading-{{ block.id }}{
+    #shopify-block-{{ block.id }}{
       background: {{ block.settings.text_color }};
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -9,15 +9,15 @@
 {% endif %}
 {% if block.settings.font_size != blank %}
   <style>
-    #shopify-block-heading-{{ block.id }}{
+    #shopify-block-{{ block.id }}{
       font-size: {{ block.settings.font_size | append: "px" }};
     }
   </style>
 {% endif %}
 
 <{{ block.settings.html_tag }}
-  id="shopify-block-heading-{{ block.id }}"
-  class="shopify-block-heading {{ block.settings | class_list }} {{ block.settings.heading_style }} text-{{ block.settings.alignment }} spacing-bottom-{{ block.settings.spacing_bottom }}"
+  id="shopify-block-{{ block.id }}"
+  class="shopify-block-{{block.type}} {{ block.settings | class_list }} {{ block.settings.heading_style }} text-{{ block.settings.alignment }} spacing-bottom-{{ block.settings.spacing_bottom }}"
   {{ block.shopify_attributes }}>
   {{ block.settings.heading }}
 </{{ block.settings.html_tag }}>

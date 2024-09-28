@@ -1,7 +1,7 @@
 {% assign navigation_style = block.settings.navigation_style %}
 {% if navigation_style != "" %}
   <div
-    class="shopify-block-slideshow-navigation embla-navigation {{ block.settings | class_list }} {{ navigation_style }} color-{{ block.settings.color_scheme }}">
+    class="shopify-block-{{ block.type }} embla-navigation {{ block.settings | class_list }} {{ navigation_style }} color-{{ block.settings.color_scheme }}">
     {% for block in section.blocks %}
       <embla-thumbnail
         class=""

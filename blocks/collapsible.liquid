@@ -2,7 +2,7 @@
   {% if block.settings.open %}
     open="true"
   {% endif %}
-  class="shopify-block-collapsible"
+  class="shopify-block-{{block.type}}"
   {{ block.shopify_attributes }}>
   <collapsible-label class="full-width flex row space-between">
     {% comment %} Todo: Add collapsible icons {% endcomment %}

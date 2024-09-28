@@ -11,7 +11,7 @@
 <embla-slide
   id="slide-{{ block.id }}"
   index="{{ block_index }}"
-  class="shopify-block-slide"
+  class="shopify-block-{{ block.type }}"
   {{ block.shopify_attributes }}>
   <div
     class="{{ block.settings | class_list }} {{ block.settings.position }} {{ block.settings.overflow }}">

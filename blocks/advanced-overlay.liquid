@@ -1,5 +1,5 @@
 <div
-  class="shopify-block-overlay {{ block.settings | class_list }} color-{{ block.settings.color_scheme }}"
+  class="shopify-block-{{block.type}} {{ block.settings | class_list }} color-{{ block.settings.color_scheme }}"
   {{ block.shopify_attributes }}
   style="
     --top: {{ block.settings.top | append: "%" }};
