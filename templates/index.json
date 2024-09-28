@@ -95,6 +95,8 @@
                         "link": "",
                         "label": "Primary button label",
                         "button_style": "btn btn--primary",
+                        "small": false,
+                        "full_width": false,
                         "open_in_new_tab": false,
                         "spacing_bottom": "none"
                       }
@@ -201,6 +203,8 @@
                         "link": "",
                         "label": "Primary button label",
                         "button_style": "btn btn--primary",
+                        "small": false,
+                        "full_width": false,
                         "open_in_new_tab": false,
                         "spacing_bottom": "none"
                       }
@@ -355,6 +359,8 @@
                 "link": "",
                 "label": "View All",
                 "button_style": "btn btn--primary",
+                "small": false,
+                "full_width": false,
                 "open_in_new_tab": false,
                 "spacing_bottom": "none"
               }
@@ -466,6 +472,8 @@
                 "link": "",
                 "label": "Secondary button label",
                 "button_style": "btn btn--primary",
+                "small": false,
+                "full_width": false,
                 "open_in_new_tab": false,
                 "spacing_bottom": "none"
               }
@@ -614,6 +622,8 @@
                     "link": "",
                     "label": "Primary button label",
                     "button_style": "btn btn--primary",
+                    "small": false,
+                    "full_width": false,
                     "open_in_new_tab": false,
                     "spacing_bottom": "none"
                   }
@@ -728,6 +738,8 @@
                 "link": "",
                 "label": "Secondary button label",
                 "button_style": "btn btn--primary",
+                "small": false,
+                "full_width": false,
                 "open_in_new_tab": false,
                 "spacing_bottom": "none"
               }
@@ -1046,6 +1058,8 @@
                         "link": "",
                         "label": "Primary button label",
                         "button_style": "btn btn--primary",
+                        "small": false,
+                        "full_width": false,
                         "open_in_new_tab": false,
                         "spacing_bottom": "none"
                       }
@@ -1238,6 +1252,8 @@
                 "link": "",
                 "label": "Tertiary button label",
                 "button_style": "btn btn--tertiary",
+                "small": true,
+                "full_width": false,
                 "open_in_new_tab": false,
                 "spacing_bottom": "none"
               }
@@ -1310,6 +1326,8 @@
                 "link": "",
                 "label": "Tertiary button label",
                 "button_style": "btn btn--tertiary",
+                "small": true,
+                "full_width": false,
                 "open_in_new_tab": false,
                 "spacing_bottom": "none"
               }
@@ -1382,6 +1400,8 @@
                 "link": "",
                 "label": "Tertiary button label",
                 "button_style": "btn btn--tertiary",
+                "small": true,
+                "full_width": false,
                 "open_in_new_tab": false,
                 "spacing_bottom": "none"
               }
