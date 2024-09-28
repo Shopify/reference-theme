@@ -9,7 +9,7 @@
 {% endif %}
 
 <div
-  class="shopify-block-image {{ block.settings | class_list }}"
+  class="shopify-block-image {{ block.settings | class_list }} spacing-bottom-{{ block.settings.spacing_bottom }}"
   {{ block.shopify_attributes }}>
   <div
     class="image-wrapper {{ block.settings.object_fit }}"
@@ -80,6 +80,23 @@
       "id": "aspect_ratio",
       "label": "Custom aspect ratio",
       "default": 1
+    },
+    {
+      "type": "select",
+      "id": "spacing_bottom",
+      "label": "Spacing bottom",
+      "options": [
+        { "value": "none", "label": "none" },
+        { "value": "2xs", "label": "2xs" },
+        { "value": "xs", "label": "xs" },
+        { "value": "s", "label": "s" },
+        { "value": "m", "label": "m" },
+        { "value": "l", "label": "l" },
+        { "value": "xl", "label": "xl" },
+        { "value": "2xl", "label": "2xl" },
+        { "value": "3xl", "label": "3xl" }
+      ],
+      "default": "none"
     },
     {
       "type": "select",
