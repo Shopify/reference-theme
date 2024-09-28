@@ -1,6 +1,10 @@
 <a
   href="{{ block.settings.link }}"
-  class="shopify-block-link {{ block.settings.button_style }} spacing-bottom-{{ block.settings.spacing_bottom }}"
+  class="shopify-block-link 
+  {{ block.settings.button_style }} 
+  spacing-bottom-{{ block.settings.spacing_bottom }}
+  {% if block.settings.small %}btn--small{% endif %} 
+   {% if block.settings.full_width %}btn--full{% endif %}"
   {%- if block.settings.open_in_new_tab -%}
     target="_blank" rel="noopener noreferrer"
   {%- endif -%}
@@ -9,6 +13,7 @@
     {{ block.settings.label }}
   </span>
 </a>
+
 
 {% schema %}
 {
@@ -49,6 +54,18 @@
         }
       ],
       "default": "btn btn--primary"
+    },
+    {
+      "type": "checkbox",
+      "id": "small",
+      "label": "Small",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
     },
     {
       "type": "checkbox",
