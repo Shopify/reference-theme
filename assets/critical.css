@@ -225,7 +225,7 @@ a {
 /* buttons */
 
 .btn {
-  --padding: 10px 30px;
+  --padding: 8px 16px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -243,7 +243,7 @@ a {
     width: 100%;
   }
   &.btn--small{
-    --padding: 8px 16px;
+    --padding: 4px 8px;
   }
   /* &:not([disabled])[hovered],
   &:not([disabled]):hover{
