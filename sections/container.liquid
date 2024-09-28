@@ -1,5 +1,5 @@
 {% stylesheet %}{% endstylesheet %}
-<div class="color-{{ section.settings.color_scheme }} full-width {{ section.settings.overflow }}{{ section.settings.position }}">
+<div class="color-{{ section.settings.color_scheme }} full-width {{ section.settings.overflow }} {{ section.settings.position }}">
   <div class="{{section.settings.page_width}} {{ section.settings | class_list }} ">
     {% content_for "blocks" %}
   </div>
