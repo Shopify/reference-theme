@@ -1,18 +1,30 @@
 /*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
       "type": "list-collections",
-      "settings": {}
+      "settings": {
+        "page_width": "page-width",
+        "spacing": {
+          "padding-block-start": "60px",
+          "padding-block-end": "60px"
+        },
+        "columns": 4,
+        "rows": 1,
+        "gap": 5,
+        "color_scheme": ""
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }
