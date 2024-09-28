@@ -180,7 +180,7 @@ a {
 }
 
 /* Overlay */
-.shopify-block-overlay {
+.block-overlay {
   --left: 0;
   --right: 0;
   --translate: 0 0;
