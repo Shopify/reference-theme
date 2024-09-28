@@ -225,10 +225,11 @@ a {
 /* buttons */
 
 .btn {
+  --padding: 10px 30px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  padding: 10px 30px;
+  padding: var(--padding);
   appearance: none;
   -webkit-appearance: none;
   width: fit-content;
@@ -240,6 +241,9 @@ a {
   color: var(--color);
   &.btn--full{
     width: 100%;
+  }
+  &.btn--small{
+    --padding: 8px 16px;
   }
   /* &:not([disabled])[hovered],
   &:not([disabled]):hover{
