@@ -14,14 +14,50 @@
     "container_yQ86Km": {
       "type": "container",
       "blocks": {
+        "container_kDyf8g": {
+          "type": "container",
+          "settings": {
+            "position": "",
+            "overflow": "",
+            "size": {
+              "flex-basis": "15%"
+            },
+            "spacing": {
+            },
+            "layout": {
+              "align-items": "flex-start",
+              "justify-content": "flex-start",
+              "flex-direction": "column"
+            },
+            "color_scheme": ""
+          },
+          "blocks": {
+            "image_7BEbXc": {
+              "type": "image",
+              "settings": {
+                "object_fit": "cover",
+                "size": {
+                },
+                "aspect_ratio_type": "auto",
+                "aspect_ratio": 1,
+                "spacing_bottom": "none",
+                "placeholder": "image"
+              }
+            }
+          },
+          "block_order": [
+            "image_7BEbXc"
+          ]
+        },
         "container_KgQW7g": {
           "type": "container",
           "settings": {
             "position": "",
             "overflow": "",
             "size": {
-              "width": "100%",
-              "flex-grow": "1"
+              "width": "auto",
+              "flex-grow": "",
+              "flex-basis": "15%"
             },
             "spacing": {
             },
@@ -45,14 +81,15 @@
             "linklist_riPkzy"
           ]
         },
-        "container_qMVe9U": {
+        "container_YxdMNY": {
           "type": "container",
           "settings": {
             "position": "",
             "overflow": "",
             "size": {
-              "width": "100%",
-              "flex-grow": "1"
+              "width": "auto",
+              "flex-grow": "",
+              "flex-basis": "15%"
             },
             "spacing": {
             },
@@ -62,7 +99,7 @@
             "color_scheme": "scheme-2"
           },
           "blocks": {
-            "linklist_bdaFga": {
+            "linklist_VpmP4N": {
               "type": "linklist",
               "settings": {
                 "linklist": "main-menu",
@@ -73,17 +110,18 @@
             }
           },
           "block_order": [
-            "linklist_bdaFga"
+            "linklist_VpmP4N"
           ]
         },
-        "container_EYyXap": {
+        "container_GTLUXG": {
           "type": "container",
           "settings": {
             "position": "",
             "overflow": "",
             "size": {
-              "width": "100%",
-              "flex-grow": "1"
+              "width": "auto",
+              "flex-grow": "",
+              "flex-basis": "15%"
             },
             "spacing": {
             },
@@ -93,7 +131,7 @@
             "color_scheme": "scheme-2"
           },
           "blocks": {
-            "linklist_mt8NrW": {
+            "linklist_pQUhcr": {
               "type": "linklist",
               "settings": {
                 "linklist": "main-menu",
@@ -104,46 +142,15 @@
             }
           },
           "block_order": [
-            "linklist_mt8NrW"
-          ]
-        },
-        "container_QW47g4": {
-          "type": "container",
-          "settings": {
-            "position": "",
-            "overflow": "",
-            "size": {
-              "width": "100%",
-              "flex-grow": "1"
-            },
-            "spacing": {
-            },
-            "layout": {
-              "justify-content": "flex-start"
-            },
-            "color_scheme": "scheme-2"
-          },
-          "blocks": {
-            "linklist_V8VrAz": {
-              "type": "linklist",
-              "settings": {
-                "linklist": "main-menu",
-                "show_title": true,
-                "layout": {
-                }
-              }
-            }
-          },
-          "block_order": [
-            "linklist_V8VrAz"
+            "linklist_pQUhcr"
           ]
         }
       },
       "block_order": [
+        "container_kDyf8g",
         "container_KgQW7g",
-        "container_qMVe9U",
-        "container_EYyXap",
-        "container_QW47g4"
+        "container_YxdMNY",
+        "container_GTLUXG"
       ],
       "settings": {
         "page_width": "page-width",
@@ -154,6 +161,8 @@
           "padding-block-end": "80px"
         },
         "layout": {
+          "align-items": "flex-start",
+          "justify-content": "flex-start"
         },
         "color_scheme": "scheme-2"
       }
