@@ -68,7 +68,7 @@
             "heading_NhJqMg": {
               "type": "heading",
               "settings": {
-                "heading": "Heading",
+                "heading": "Heading{{ product.title }}",
                 "html_tag": "p",
                 "heading_style": "h4",
                 "alignment": "left",
