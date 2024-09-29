@@ -1,7 +1,7 @@
 
 <div class="cart-discount-applications">
-  {% for discount_allocation in cart.cart_level_discount_allocations %}
-      {% render 'discount-allocation', discount_allocation: discount_allocation %}
+  {% for discount_application in cart.cart_level_discount_applications %}
+      {% render 'discount-application', discount_application: discount_application %}
   {% endfor %}
 </div>
 <div class="flex row space-between">
