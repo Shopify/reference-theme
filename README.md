@@ -168,7 +168,7 @@ As with a normal setting, it is accessed via its ID.
 
 - variables should be formatted as `kebab-case`
 - use '--' for variants of a class Example: `btn btn--secondary`
-- every block should have a class `shopify-block-<name of the block>`
+- every block should have a class `shopify-block--<name of the block>`
 
 ### JS
 

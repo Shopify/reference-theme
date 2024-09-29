@@ -9,7 +9,7 @@
 {% endif %}
 
 <div
-  class="shopify-block-{{ block.type }} {{ block.settings | class_list }} spacing-bottom-{{ block.settings.spacing_bottom }}"
+  class="shopify-block--image {{ block.settings | class_list }} spacing-bottom-{{ block.settings.spacing_bottom }}"
   {{ block.shopify_attributes }}>
     {% render "image-element",
       image: block.settings.image,

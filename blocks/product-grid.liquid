@@ -5,7 +5,7 @@
     {% assign products = block.settings.collection.products %}
 {% endcase %}
 <div
-  class="shopify-block-{{ block.type }} {{ block.settings.spacing | class_list }} color-{{ block.settings.color_scheme }}">
+  class="shopify-block--product-grid {{ block.settings.spacing | class_list }} color-{{ block.settings.color_scheme }}">
   <div
     class="grid"
     style="
