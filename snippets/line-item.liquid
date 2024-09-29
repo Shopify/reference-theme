@@ -32,26 +32,28 @@
             {% endfor %}
           </div>
         </div>
-  
-        <quantity-rocker
-          class="p spacing-bottom-2xs"
-          {% unless line_item.variant.inventory_management == nil %}
-            {% assign inventory_quantity = line_item.variant.inventory_quantity | at_most: 999 %}
-            {% if inventory_quantity < 0 %}
-              {% assign inventory_quantity = 999 %}
-            {% endif %}
-            min="0"
-            max="{{ inventory_quantity }}"
-          {% endunless %}
-          value="{{ line_item.quantity }}"
-          name="updates[]"
-          data-line-item-key="{{ line_item.key }}">
-        </quantity-rocker>
+        <div class="flex row">
+          <quantity-rocker
+            class="p spacing-bottom-2xs"
+            {% unless line_item.variant.inventory_management == nil %}
+              {% assign inventory_quantity = line_item.variant.inventory_quantity | at_most: 999 %}
+              {% if inventory_quantity < 0 %}
+                {% assign inventory_quantity = 999 %}
+              {% endif %}
+              min="0"
+              max="{{ inventory_quantity }}"
+            {% endunless %}
+            value="{{ line_item.quantity }}"
+            name="updates[]"
+            data-line-item-key="{{ line_item.key }}">
+          </quantity-rocker>
+          <a href="{{ line_item.url_to_remove }}" data-line-item-key="{{ line_item.key }}" name="line-item-remove">
+            {% render 'icon', icon: 'delete' %}
+          </a>
+        </div>
+        
       </div>
       <div class="flex col right">
-        {% comment %} <a href="{{ line_item.url_to_remove }}" data-line-item-key="{{ line_item.key }}" name="line-item-remove">
-          {% render 'icon', icon: 'delete' %}
-        </a> {% endcomment %}
         <p class="p">
           {% assign highest_price = line_item.original_price %}
           {% if highest_price < line_item.variant.compare_at_price %}
