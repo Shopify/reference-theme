@@ -1,7 +1,7 @@
 {% stylesheet %}{% endstylesheet %}
 
 <div
-  class="{{section.settings.page_width}} {{ section.settings.spacing | class_list }} color-{{ section.settings.color_scheme }}">
+  class="{{ section.settings.spacing | class_list }} color-{{ section.settings.color_scheme }}">
   <div
     class="grid"
     style="
@@ -20,24 +20,12 @@
   "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
     {
-      "type": "header",
-      "content": "Page width"
-    },
-    {
-      "type": "select",
-      "id": "page_width",
-      "label": "Page width",
-      "options": [
-        {
-          "value": "full-width",
-          "label": "Full width"
-        },
-        {
-          "value": "page-width",
-          "label": "Page width"
-        }
-      ],
-      "default": "page-width"
+      "type": "style.size_panel",
+      "id": "size",
+      "label": "Size",
+      "default": {
+        "width": "auto"
+      }
     },
     {
       "type": "style.spacing_panel",

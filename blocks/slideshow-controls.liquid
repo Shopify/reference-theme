@@ -1,6 +1,6 @@
 {% if block.settings.control_style != "" %}
   {% assign color_schema_class = "color-" | append: block.settings.color_scheme %}
-  <div class="shopify-block--slideshow-controls embla-controls {{ block.settings | class_list }} {{ block.settings.control_style }}  {{ block.settings.page_width }}">
+  <div class="shopify-block--slideshow-controls embla-controls {{ block.settings | class_list }} {{ block.settings.control_style }}">
     <embla-prev
       class="{{ color_schema_class }}">
       {% render 'icon', icon: 'chevron-left' %}
@@ -17,22 +17,6 @@
   "name": "Slideshow controls",
   "tag": null,
   "settings": [
-    {
-      "type": "select",
-      "id": "page_width",
-      "label": "Page width",
-      "options": [
-        {
-          "value": "full-width",
-          "label": "Full width"
-        },
-        {
-          "value": "page-width",
-          "label": "Page width"
-        }
-      ],
-      "default": "full-width"
-    },
     {
       "type": "select",
       "id": "control_style",

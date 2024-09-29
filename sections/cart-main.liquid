@@ -2,7 +2,7 @@
 <div class="color-{{ section.settings.color_scheme }} full-width {{ section.settings.overflow }} {{ section.settings.position }}">
   <cart-form section="{{section.id}}">
     {% form "cart", cart %}
-      <div class="{{section.settings.page_width}} {{ section.settings | class_list }} ">
+      <div class="{{ section.settings | class_list }} ">
         {% content_for "blocks" %}
       </div>
     {% endform %}
@@ -15,26 +15,6 @@
   "tag": "section",
   "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
-    {
-      "type": "header",
-      "content": "Page width"
-    },
-    {
-      "type": "select",
-      "id": "page_width",
-      "label": "Page width",
-      "options": [
-        {
-          "value": "full-width",
-          "label": "Full width"
-        },
-        {
-          "value": "page-width",
-          "label": "Page width"
-        }
-      ],
-      "default": "page-width"
-    },
     {
       "type": "header",
       "content": "Position"
@@ -78,6 +58,14 @@
         }
       ],
       "default": ""
+    },
+    {
+      "type": "style.size_panel",
+      "id": "size",
+      "label": "Size",
+      "default": {
+        "width": "auto"
+      }
     },
     {
       "type": "style.spacing_panel",

@@ -15,7 +15,6 @@
         "slide_dXc3an": {
           "type": "slide",
           "settings": {
-            "page_width": "full-width",
             "position": "is-relative",
             "overflow": "overflow-hidden",
             "spacing": {
@@ -122,7 +121,6 @@
         "slide_pbBe6r": {
           "type": "slide",
           "settings": {
-            "page_width": "full-width",
             "position": "is-relative",
             "overflow": "overflow-hidden",
             "spacing": {
@@ -231,7 +229,6 @@
           "type": "slideshow-controls",
           "static": true,
           "settings": {
-            "page_width": "full-width",
             "control_style": "embla-simple",
             "spacing": {
             },
@@ -256,7 +253,6 @@
         "slide_pbBe6r"
       ],
       "settings": {
-        "page_width": "full-width",
         "size": {
         },
         "slides_per_page": 1,
@@ -340,7 +336,6 @@
         "product_grid_dmVhBB"
       ],
       "settings": {
-        "page_width": "page-width",
         "position": "",
         "overflow": "",
         "spacing": {
@@ -454,7 +449,6 @@
         "image_9pAGXL"
       ],
       "settings": {
-        "page_width": "page-width",
         "position": "",
         "overflow": "",
         "spacing": {
@@ -594,7 +588,6 @@
         "simple_overlay_pPFpEn"
       ],
       "settings": {
-        "page_width": "full-width",
         "position": "is-relative",
         "overflow": "overflow-hidden",
         "spacing": {
@@ -705,7 +698,6 @@
         "container_fEXzMB"
       ],
       "settings": {
-        "page_width": "page-width",
         "position": "",
         "overflow": "",
         "spacing": {
@@ -807,7 +799,6 @@
         "image_xwA6EQ"
       ],
       "settings": {
-        "page_width": "page-width",
         "spacing": {
           "padding-block-start": "0px",
           "padding-block-end": "0px"
@@ -1035,7 +1026,6 @@
         "container_xYiEh8"
       ],
       "settings": {
-        "page_width": "page-width",
         "position": "",
         "overflow": "",
         "spacing": {
@@ -1124,7 +1114,6 @@
         "image_WJCmaM"
       ],
       "settings": {
-        "page_width": "page-width",
         "position": "",
         "overflow": "",
         "spacing": {
@@ -1151,7 +1140,6 @@
         "divider_LyBJaP"
       ],
       "settings": {
-        "page_width": "full-width",
         "position": "",
         "overflow": "",
         "spacing": {
@@ -1393,7 +1381,6 @@
         "container_cThEpp"
       ],
       "settings": {
-        "page_width": "page-width",
         "position": "",
         "overflow": "",
         "spacing": {

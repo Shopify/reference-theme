@@ -30,15 +30,6 @@ textarea{
 
 
 /* layout  */
-html .page-width {
-  width: 100%;
-  max-width: var(--page-width);
-  margin-inline: auto;
-  padding-inline: var(--site-gutter);
-  @media (max-width: 750px) {
-    --site-gutter: 20px;
-  }
-}
 .full-width {
   width: 100%;
 }

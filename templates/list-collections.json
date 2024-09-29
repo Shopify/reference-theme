@@ -12,7 +12,6 @@
     "main": {
       "type": "list-collections",
       "settings": {
-        "page_width": "page-width",
         "spacing": {
           "padding-block-start": "60px",
           "padding-block-end": "60px"
