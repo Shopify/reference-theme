@@ -23,10 +23,10 @@ class ProductForm extends HTMLElement {
     super();
   }
   connectedCallback() {
-    const productUrlInput = this.querySelector(`[name="id"]`);
+    const productUrlInput = this.querySelector(`[name="url"]`);
     const variantIdInput = this.querySelector(`[name="id"]`);
     const sellingPlanInput = this.querySelector(`[name="selling_plan"]`);
-    variantIdInput.addEventListener('input', () => {
+    variantIdInput.addEventListener('change', () => {
       console.log(productUrlInput?.value, variantIdInput?.value, sellingPlanInput?.value);
     });
   }
