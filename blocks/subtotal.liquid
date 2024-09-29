@@ -20,7 +20,11 @@
   </p>
 </div>
 {% endif %}
-
+<div class="cart-discount-applications">
+  {% for discount_allocation in cart.cart_level_discount_allocations %}
+      {% render 'discount-allocation', discount_allocation: discount_allocation %}
+  {% endfor %}
+</div>
 {% schema %}
 {
   "name": "Subtotal",
