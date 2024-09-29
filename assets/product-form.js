@@ -24,6 +24,9 @@ class ProductForm extends HTMLElement {
   constructor() {
     super();
   }
+  get section() {
+    return this.getAttribute("section") || "product-main";
+  }
   replaceView(html) {
     this.replaceWith(html);
   }
