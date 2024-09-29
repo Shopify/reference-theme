@@ -1,7 +1,9 @@
 
 <div class="flex row line-item ">
-  <div class="flex line-item-image">
-    {% render 'image-element', image: line_item.image, aspect_ratio: 1, fit: 'cover', sizes: "100px" %}
+  <div class="flex col top line-item-image">
+    <div class="flex">
+      {% render 'image-element', image: line_item.image, aspect_ratio: 1, fit: 'cover', sizes: "100px" %}
+    </div>
   </div>
   <div class="flex col space-between full-width">
     <div class="flex row space-between full-width">
