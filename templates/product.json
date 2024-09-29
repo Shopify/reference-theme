@@ -18,7 +18,9 @@
             "position": "",
             "overflow": "",
             "size": {
-              "width": "50%"
+              "width": "auto",
+              "flex-grow": "",
+              "flex-basis": "50%"
             },
             "spacing": {
             },
