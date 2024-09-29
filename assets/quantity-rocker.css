@@ -1,5 +1,6 @@
 @layer quanity-rocker {
   quantity-rocker {
+    --border-color: #e1e1e1;
     display: block;
     width: fit-content;
     font-size: inherit;
@@ -17,7 +18,7 @@
       padding: 2px 7px;
       border-radius: 0;
       color: currentColor;
-      border: 1px solid currentColor;
+      border: 1px solid var(--border-color);
       font-size: inherit;
       font-family: inherit;
       font-weight: inherit;
