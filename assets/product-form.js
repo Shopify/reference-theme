@@ -24,6 +24,9 @@ class ProductForm extends HTMLElement {
   constructor() {
     super();
   }
+  replaceView(html) {
+    this.replaceWith(html);
+  }
   updateView() {
     const productUrlInput = this.querySelector(`form [name="url"]`);
     const variantIdInput = this.querySelector(`form [name="id"]`);
@@ -36,7 +39,20 @@ class ProductForm extends HTMLElement {
     if(!!sellingPlanInput?.value) {
       fetchUrl.searchParams.set('selling_plan', sellingPlanInput.value);
     }
-    console.log(fetchUrl.href);
+    history.replaceState(null, "", fetchUrl.href);
+    fetchUrl.searchParams.set('sections', this.getAttribute('section'));
+    this.loading = true;
+    fetch(fetchUrl.href, {headers: {Accept: "application/json"}})
+    .then((res) => res.json())
+    .then((res) => {
+      this.loading = true;
+      replaceView(res.sections[this.section]);
+      this.loading = false;
+    })
+    .catch((err) => {
+      console.error(err);
+      this.loading = false;
+    });
   }
   connectedCallback() {
     const variantIdInput = this.querySelector(`form [name="id"]`);
