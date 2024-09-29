@@ -154,7 +154,6 @@
                 "button_dbjXVf": {
                   "type": "button",
                   "settings": {
-                    "type": "submit",
                     "label": "Submit",
                     "button_style": "btn btn--primary",
                     "spacing_bottom": "none"

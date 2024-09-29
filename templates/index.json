@@ -338,9 +338,16 @@
       "settings": {
         "position": "",
         "overflow": "",
+        "size": {
+          "width": "auto",
+          "flex-grow": "",
+          "max-width": "1200px"
+        },
         "spacing": {
           "padding-block-start": "80px",
-          "padding-block-end": "80px"
+          "padding-block-end": "80px",
+          "padding-inline-start": "40px",
+          "padding-inline-end": "40px"
         },
         "layout": {
           "flex-direction": "column"
@@ -451,6 +458,8 @@
       "settings": {
         "position": "",
         "overflow": "",
+        "size": {
+        },
         "spacing": {
           "padding-block-start": "80px",
           "padding-block-end": "80px"
@@ -590,6 +599,8 @@
       "settings": {
         "position": "is-relative",
         "overflow": "overflow-hidden",
+        "size": {
+        },
         "spacing": {
         },
         "layout": {
@@ -700,6 +711,8 @@
       "settings": {
         "position": "",
         "overflow": "",
+        "size": {
+        },
         "spacing": {
           "padding-block-start": "80px",
           "padding-block-end": "80px"
@@ -799,6 +812,8 @@
         "image_xwA6EQ"
       ],
       "settings": {
+        "size": {
+        },
         "spacing": {
           "padding-block-start": "0px",
           "padding-block-end": "0px"
@@ -1028,6 +1043,8 @@
       "settings": {
         "position": "",
         "overflow": "",
+        "size": {
+        },
         "spacing": {
           "padding-block-start": "80px",
           "padding-block-end": "80px"
@@ -1116,6 +1133,8 @@
       "settings": {
         "position": "",
         "overflow": "",
+        "size": {
+        },
         "spacing": {
           "padding-block-start": "0px",
           "padding-block-end": "80px"
@@ -1142,6 +1161,8 @@
       "settings": {
         "position": "",
         "overflow": "",
+        "size": {
+        },
         "spacing": {
         },
         "layout": {
@@ -1383,6 +1404,8 @@
       "settings": {
         "position": "",
         "overflow": "",
+        "size": {
+        },
         "spacing": {
           "padding-block-start": "0px",
           "padding-block-end": "60px"
