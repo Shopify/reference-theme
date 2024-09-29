@@ -64,8 +64,7 @@
                 "size": {
                   "flex-basis": "66%",
                   "@media (--mobile)": {
-                    "width": "auto",
-                    "flex-basis": ""
+                    "width": "auto"
                   }
                 },
                 "spacing": {
@@ -126,7 +125,6 @@
                 "size": {
                   "flex-basis": "33%",
                   "@media (--mobile)": {
-                    "flex-basis": ""
                   }
                 },
                 "spacing": {
@@ -194,12 +192,17 @@
       "settings": {
         "position": "",
         "overflow": "",
+        "size": {
+          "max-width": "1200px"
+        },
         "spacing": {
           "padding-block-start": "60px",
           "padding-block-end": "60px",
           "@media (--mobile)": {
             "padding-block-end": "0px"
-          }
+          },
+          "padding-inline-start": "40px",
+          "padding-inline-end": "40px"
         },
         "layout": {
           "flex-direction": "column",
