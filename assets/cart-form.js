@@ -10,7 +10,9 @@ class CartForm extends HTMLElement {
     quantities.forEach((qty) => {
       qty.addEventListener("change", (e) => {
         this.loading = true;
-        this.updateCart({ [qty.dataset.lineItemKey]: Number(qty.value) }).then((res) => {
+        this.updateCart({ [qty.dataset.lineItemKey]: Number(qty.value) })
+        .then((res) => {
+          console.log(res)
           this.updateView(res.sections[this.section]);
           this.loading = false;
         });
@@ -44,15 +46,15 @@ class CartForm extends HTMLElement {
         Accept: "application/json",
       },
     })
-      .then((res) => res.json())
-      .then((res) => {
-        this.updateView(res.sections[this.section]);
-        this.loading = false;
-      })
-      .catch((err) => {
-        console.error(err);
-        this.loading = false;
-      });
+    .then((res) => res.json())
+    .then((res) => {
+      this.updateView(res.sections[this.section]);
+      this.loading = false;
+    })
+    .catch((err) => {
+      console.error(err);
+      this.loading = false;
+    });
   }
 
   updateView(htmlString) {
