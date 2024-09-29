@@ -11,7 +11,7 @@
   assign fit = fit | default: "cover"
   assign aspect_ratio = aspect_ratio
   if aspect_ratio == 'auto' 
-    assign aspect_ratio = image.aspect_ratio | round: 6
+    assign aspect_ratio = image.aspect_ratio | default: 1.0 | round: 6
   elsif aspect_ratio != blank
     if aspect_ratio contains '/'
       assign numerator = aspect_ratio | split: '/' | first | times: 1.0
