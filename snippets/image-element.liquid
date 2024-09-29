@@ -37,7 +37,7 @@
     assign placeholder = placeholder | default: "image"
     if image != blank
       if image.src contains ".svg"
-        assign style = "object-fit: " | append: fit | append: ";"
+        assign style = "object-fit: " | append: fit | append: "; object-position: " | append: image.presentation.focal_point | append: ";"
         echo image | image_url: width: image.width, height: image.height | image_tag: style: style
       else
         assign widths = widths | default: "300, 400, 500, 650, 900, 1100, 1300, 1600"
