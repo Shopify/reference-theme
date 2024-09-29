@@ -155,10 +155,7 @@ input,
 textarea{
   padding: 8px 10px;
 }
-/* Cart */
-.line-item{
-  --gap: 10px;
-}
+
 .discount-allocation{
   --gap: 5px;
 }

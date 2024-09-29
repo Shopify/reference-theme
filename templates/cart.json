@@ -131,6 +131,11 @@
                 "color_scheme": "scheme-3"
               },
               "blocks": {
+                "cart_summary_6JcHTj": {
+                  "type": "cart-summary",
+                  "settings": {
+                  }
+                },
                 "text_field_yaBYXL": {
                   "type": "text-field",
                   "settings": {
@@ -156,6 +161,7 @@
                 }
               },
               "block_order": [
+                "cart_summary_6JcHTj",
                 "text_field_yaBYXL",
                 "button_NNKn6H"
               ]
