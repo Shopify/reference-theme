@@ -23,6 +23,7 @@
             },
             "aspect_ratio_type": "auto",
             "aspect_ratio": 1,
+            "spacing_bottom": "none",
             "placeholder": "lifestyle-1"
           }
         },
@@ -62,7 +63,12 @@
       "settings": {
         "position": "is-relative",
         "overflow": "",
+        "size": {
+          "max-width": ""
+        },
         "spacing": {
+          "padding-inline-start": "0px",
+          "padding-inline-end": "0px"
         },
         "layout": {
         },
@@ -235,9 +241,14 @@
       "settings": {
         "position": "",
         "overflow": "",
+        "size": {
+          "max-width": "1200px"
+        },
         "spacing": {
           "padding-block-start": "60px",
-          "padding-block-end": "60px"
+          "padding-block-end": "60px",
+          "padding-inline-start": "40px",
+          "padding-inline-end": "40px"
         },
         "layout": {
           "flex-direction": "column",
