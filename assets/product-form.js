@@ -27,9 +27,6 @@ class ProductForm extends HTMLElement {
   get section() {
     return this.getAttribute("section") || "product-main";
   }
-  replaceView(html) {
-    this.replaceWith(html);
-  }
   updateView() {
     const productUrlInput = this.querySelector(`form [name="url"]`);
     const variantIdInput = this.querySelector(`form [name="id"]`);
@@ -49,9 +46,11 @@ class ProductForm extends HTMLElement {
     fetch(fetchUrl.href)
     .then((res) => res.json())
     .then((res) => {
-      this.loading = true;
-      console.log(res);
       this.replaceView(res[this.section]);
+      const template = document.createElement("template");
+      template.innerHTML = data.trim();
+      const new_form = template.content.querySelector('product-form');
+      this.replaceWith(new_form);
       this.loading = false;
     })
     .catch((err) => {
