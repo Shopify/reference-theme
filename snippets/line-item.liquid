@@ -3,68 +3,74 @@
   <div class="line-item-image">
     {% render 'image-element', image: line_item.image, aspect_ratio: 1, fit: 'cover', sizes: "100px" %}
   </div>
-  <div class="flex row space-between full-width">
-    <div class="flex col space-between">
-      <div class="flex col">
-        <p class="h6 spacing-bottom-2xs">{{ line_item.product.title }}</p>
-        {% unless line_item.product.has_only_default_variant %}
-          <div class="flex row middle line-item-options spacing-bottom-2xs">
-            {% for option in line_item.variant.options %}
-              {% assign option_name = line_item.product.options_with_values[forloop.index0].name %}
-              <p class="p">
-                <span>{{ option_name }}</span>:&nbsp;<span>{{ option.name }}</span>
-              </p>
-              {% unless forloop.last %}
-                <div class="line-item-divider"></div>
-              {% endunless %}
+  <div class="flex col">
+    <div class="flex row space-between full-width">
+      <div class="flex col space-between">
+        <div class="flex col">
+          <p class="h6 spacing-bottom-2xs">{{ line_item.product.title }}</p>
+          {% unless line_item.product.has_only_default_variant %}
+            <div class="flex row middle line-item-options spacing-bottom-2xs">
+              {% for option in line_item.variant.options %}
+                {% assign option_name = line_item.product.options_with_values[forloop.index0].name %}
+                <p class="p">
+                  <span>{{ option_name }}</span>:&nbsp;<span>{{ option.name }}</span>
+                </p>
+                {% unless forloop.last %}
+                  <div class="line-item-divider"></div>
+                {% endunless %}
+              {% endfor %}
+            </div>
+          {% endunless %}
+          <div class="line-item-discount-applications">
+            {% for discount_allocation in line_item.line_level_discount_allocations %}
+                <div class="discount-application flex row middle">
+                  {% render 'icon', icon: 'discount', size: "18px" %}
+                  <p class="small">{{ discount_allocation.discount_application.title }} (-{{ discount_allocation.discount_application.total_allocated_amount | money }})</p>
+                </div>
             {% endfor %}
           </div>
-        {% endunless %}
-        <div class="line-item-discount-applications">
-          {% for discount_allocation in line_item.line_level_discount_allocations %}
-              <div class="discount-application flex row middle">
-                {% render 'icon', icon: 'discount', size: "18px" %}
-                <p class="small">{{ discount_allocation.discount_application.title }} (-{{ discount_allocation.discount_application.total_allocated_amount | money }})</p>
-              </div>
-          {% endfor %}
         </div>
+  
+        <quantity-rocker
+          class="p"
+          {% unless line_item.variant.inventory_management == nil %}
+            {% assign inventory_quantity = line_item.variant.inventory_quantity | at_most: 999 %}
+            {% if inventory_quantity < 0 %}
+              {% assign inventory_quantity = 999 %}
+            {% endif %}
+            min="0"
+            max="{{ inventory_quantity }}"
+          {% endunless %}
+          value="{{ line_item.quantity }}"
+          name="updates[]"
+          data-line-item-key="{{ line_item.key }}">
+        </quantity-rocker>
       </div>
-     
-    
-      <quantity-rocker
-        class="p"
-        {% unless line_item.variant.inventory_management == nil %}
-          {% assign inventory_quantity = line_item.variant.inventory_quantity | at_most: 999 %}
-          {% if inventory_quantity < 0 %}
-            {% assign inventory_quantity = 999 %}
+      <div class="flex col space-between between right">
+        <a href="{{ line_item.url_to_remove }}" data-line-item-key="{{ line_item.key }}" name="line-item-remove">
+          {% render 'icon', icon: 'delete' %}
+        </a>
+        <p class="p">
+          {% assign highest_price = line_item.original_price %}
+          {% if highest_price < line_item.variant.compare_at_price %}
+            {% assign highest_price = line_item.variant.compare_at_price %}
           {% endif %}
-          min="0"
-          max="{{ inventory_quantity }}"
-        {% endunless %}
-        value="{{ line_item.quantity }}"
-        name="updates[]"
-        data-line-item-key="{{ line_item.key }}">
-      </quantity-rocker>
+          {% if highest_price < line_item.variant.price %}
+            {% assign highest_price = line_item.variant.price %}
+          {% endif %}
+          {% if line_item.final_price != highest_price %}
+            <span class="line-item-price-original">{{ highest_price | money }}</span>
+          {% endif %}
+          <span class="line-item-price-final {% if line_item.final_price != highest_price %}line-item-price-final--discounted{% endif %}">
+            {{- line_item.final_price | money -}}
+          </span>
+        </p>
+      </div>
     </div>
-    <div class="flex col space-between between right">
-      <a href="{{ line_item.url_to_remove }}" data-line-item-key="{{ line_item.key }}" name="line-item-remove">
-        {% render 'icon', icon: 'delete' %}
-      </a>
-      <p class="p">
-        {% assign highest_price = line_item.original_price %}
-        {% if highest_price < line_item.variant.compare_at_price %}
-          {% assign highest_price = line_item.variant.compare_at_price %}
-        {% endif %}
-        {% if highest_price < line_item.variant.price %}
-          {% assign highest_price = line_item.variant.price %}
-        {% endif %}
-        {% if line_item.final_price != highest_price %}
-          <span class="line-item-price-original">{{ highest_price | money }}</span>
-        {% endif %}
-        <span class="line-item-price-final {% if line_item.final_price != highest_price %}line-item-price-final--discounted{% endif %}">
-          {{- line_item.final_price | money -}}
-        </span>
-      </p>
-    </div>
+    {% if line_item.has_components %}
+      {% for component in line_item.item_components %}
+        {% render 'line-component', component: component  %}
+      {% endfor %}
+    {% endif %}
   </div>
 </div>
