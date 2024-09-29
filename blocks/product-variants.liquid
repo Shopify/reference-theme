@@ -11,6 +11,9 @@
   .product-options {
     gap: 20px;
   }
+  .product-option {
+    gap: 10px;
+  }
   .product-option-values {
     gap: 10px;
   }
@@ -30,11 +33,11 @@
   }
 </style>
 
-<div class="flex col">
+<div class="flex col product-options">
   <input type="hidden" name="url" value="{{ product.url }}">
   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id | default: product.variants.first.id }}">
   {%- for option in product.options_with_values -%}
-    <div class="flex col product-options">
+    <div class="flex col product-option">
       <p class="h4">{{ option.name }}</p>
       <div class="flex row wrap product-option-values">
         {%- for option_value in option.values -%}
