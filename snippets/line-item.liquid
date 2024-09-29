@@ -67,10 +67,12 @@
         </p>
       </div>
     </div>
-    {% if line_item.has_components %}
-      {% for component in line_item.item_components %}
-        {% render 'line-component', component: component  %}
-      {% endfor %}
+    {% if line_item.item_components.size > 0 %}
+      <div class="flex col line-item-components">
+        {% for component in line_item.item_components %}
+          {% render 'line-component', component: component  %}
+        {% endfor %}
+      </div>
     {% endif %}
   </div>
 </div>
