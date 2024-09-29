@@ -51,7 +51,7 @@
         </div>
         
       </div>
-      <div class="flex row right">
+      <div class="flex row right" style="--gap:10px;">
         <div class="flex col right">
           <p class="p">
             {% assign highest_price = line_item.original_price %}
@@ -71,7 +71,7 @@
             </span>
           </p>
         </div>
-        <div class="flex">
+        <div class="flex col">
           <a href="{{ line_item.url_to_remove }}" data-line-item-key="{{ line_item.key }}" name="line-item-remove">
             {% render 'icon', icon: 'delete' %}
           </a>
