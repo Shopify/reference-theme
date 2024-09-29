@@ -59,10 +59,23 @@
             "spacing": {
             },
             "layout": {
+              "flex-direction": "column"
             },
             "color_scheme": ""
           },
           "blocks": {
+            "heading_NhJqMg": {
+              "type": "heading",
+              "settings": {
+                "heading": "Heading",
+                "html_tag": "p",
+                "heading_style": "h4",
+                "alignment": "center",
+                "spacing_bottom": "none",
+                "text_color": "",
+                "font_size": ""
+              }
+            },
             "image_lorem": {
               "type": "image",
               "settings": {
@@ -79,6 +92,7 @@
             }
           },
           "block_order": [
+            "heading_NhJqMg",
             "image_lorem"
           ]
         }
