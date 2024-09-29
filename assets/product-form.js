@@ -42,7 +42,7 @@ class ProductForm extends HTMLElement {
     const variantIdInput = this.querySelector(`form [name="id"]`);
     const sellingPlanInput = this.querySelector(`form [name="selling_plan"]`);
     variantIdInput?.addEventListener('input', this.updateView.bind(this));
-    sellingPlanInput?.addEventListener('input', this.updateView.bind(this));
+    sellingPlanInput?.addEventListener('input', this.updateView.bind(this)); 
   }
 }
 customElements.define("product-form", ProductForm);
