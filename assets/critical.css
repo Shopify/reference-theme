@@ -23,7 +23,8 @@ body {
 
 input[type="text"],
 textarea{
-  border: 1px solid #000; 
+  border: 1px solid #e1e1e1; 
+  background-color: transparent;
   font-family: var(--font-family-primary);
 }
 
