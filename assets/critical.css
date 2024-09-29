@@ -315,3 +315,11 @@ ul.linklist{
     list-style: none;
   }
 }
+
+.theme-icon{
+  --size: 24px;
+  --width: var(--size);
+  --height: var(--size);
+  width: var(--width);
+  height: var(--height);
+}
