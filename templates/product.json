@@ -76,10 +76,16 @@
                 "text_color": "",
                 "font_size": ""
               }
+            },
+            "product_variants_UcdALU": {
+              "type": "product-variants",
+              "settings": {
+              }
             }
           },
           "block_order": [
-            "heading_NhJqMg"
+            "heading_NhJqMg",
+            "product_variants_UcdALU"
           ]
         }
       },
