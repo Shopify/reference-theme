@@ -31,8 +31,8 @@
             "image_aHdeep": {
               "type": "image",
               "settings": {
-                "image": "shopify://shop_images/putting-on-your-shoes_925x_7e781b44-5254-42a3-baa3-2984286e2ee2.jpg",
-                "object_fit": "contain",
+                "image": "shopify://shop_images/putting-on-your-shoes_925x_469d88fd-1298-4c8c-83ee-c291c0716e68.jpg",
+                "object_fit": "cover",
                 "size": {
                   "width": "100%"
                 },
