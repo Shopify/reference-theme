@@ -2,5 +2,5 @@
 {% assign width = width | default: size %}
 {% assign height = height | default: size %}
 <div class="theme-icon" style="--size: {{ size }}; --width: {{ width }}; --height: {{ height }};">
-  {{ icon | inline_asset_content }}
+  {{ icon | append: ".svg" | inline_asset_content }}
 </div>
