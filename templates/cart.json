@@ -46,7 +46,7 @@
               "flex-grow": "1"
             },
             "spacing": {
-              "padding-block-start": "20px"
+              "padding-block-start": "40px"
             },
             "layout": {
               "align-items": "flex-start",
@@ -75,6 +75,10 @@
                     "size": {
                     },
                     "spacing": {
+                      "padding-block-start": "20px",
+                      "padding-block-end": "20px",
+                      "padding-inline-start": "20px",
+                      "padding-inline-end": "20px"
                     },
                     "layout": {
                       "flex-direction": "column"
