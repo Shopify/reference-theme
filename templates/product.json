@@ -19,7 +19,6 @@
             "overflow": "",
             "size": {
               "width": "auto",
-              "flex-grow": "",
               "flex-basis": "50%"
             },
             "spacing": {
@@ -35,11 +34,10 @@
                 "image": "shopify://shop_images/putting-on-your-shoes_925x_3eb2de8e-cb99-479d-b708-0a411f34018a.jpg",
                 "object_fit": "cover",
                 "size": {
-                  "width": "100%",
-                  "flex-grow": ""
+                  "width": "100%"
                 },
                 "aspect_ratio_type": "custom",
-                "aspect_ratio": 0,
+                "aspect_ratio": "auto",
                 "spacing_bottom": "none",
                 "placeholder": "image"
               }
