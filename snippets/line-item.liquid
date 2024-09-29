@@ -68,11 +68,27 @@
       </div>
     </div>
     {% if line_item.item_components.size > 0 %}
-      <div class="flex col line-item-components">
-        {% for component in line_item.item_components %}
-          {% render 'line-component', component: component  %}
-        {% endfor %}
-      </div>
+        <collapsible-outer 
+          open="true"
+          class="line-item-components"
+          {{ block.shopify_attributes }}>
+          <collapsible-label class="full-width flex row space-between">
+            <p class="p">items</p>
+            <div class="collapsible-icon">
+              <div class="collapsible-icon--open">
+                {% render 'icon', icon: 'chevron-down' %}
+              </div>
+              <div class="collapsible-icon--close">
+                {% render 'icon', icon: 'chevron-up' %}
+              </div>
+            </div>
+          </collapsible-label>
+          <collapsible-content class="">
+            {% for component in line_item.item_components %}
+              {% render 'line-component', component: component  %}
+            {% endfor %}
+          </collapsible-content>
+        </collapsible-outer>
     {% endif %}
   </div>
 </div>
