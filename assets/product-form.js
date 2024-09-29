@@ -43,7 +43,7 @@ class ProductForm extends HTMLElement {
       fetchUrl.searchParams.set('selling_plan', sellingPlanInput.value);
     }
     history.replaceState(null, "", fetchUrl.href);
-    fetchUrl.searchParams.set('sections', this.getAttribute('section'));
+    fetchUrl.searchParams.set('sections', this.section);
     this.loading = true;
     fetch(fetchUrl.href, {headers: {Accept: "application/json"}})
     .then((res) => res.json())
