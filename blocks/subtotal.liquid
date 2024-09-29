@@ -1,3 +1,9 @@
+
+<div class="cart-discount-applications">
+  {% for discount_allocation in cart.cart_level_discount_allocations %}
+      {% render 'discount-allocation', discount_allocation: discount_allocation %}
+  {% endfor %}
+</div>
 <div class="flex row space-between">
   <p class="h6">{{ "cart.subtotal" | t }}</p>
   <p class="h6">{{ cart.total_price | money }}</p>
@@ -20,11 +26,7 @@
   </p>
 </div>
 {% endif %}
-<div class="cart-discount-applications">
-  {% for discount_allocation in cart.cart_level_discount_allocations %}
-      {% render 'discount-allocation', discount_allocation: discount_allocation %}
-  {% endfor %}
-</div>
+
 {% schema %}
 {
   "name": "Subtotal",
