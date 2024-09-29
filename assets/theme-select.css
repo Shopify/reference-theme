@@ -1,6 +1,7 @@
 theme-select {
   display: block;
   position: relative;
+  font-size: inherit;
   --background-dropdown: #fff;
   --background-selected: #fff;
   --border-width: 1px;
