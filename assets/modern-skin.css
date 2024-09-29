@@ -167,6 +167,9 @@ textarea{
   & .line-item-quantity{
     --gap: 5px;
   }
+  & .line-item-components{
+    --gap: 5px;
+  }
 }
 .line-component{
   --gap: 10px;

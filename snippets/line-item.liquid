@@ -76,7 +76,7 @@
     </div>
     {% if line_item.item_components.size > 0 %}
         <collapsible-outer 
-          class="line-item-components"
+          class=""
           {{ block.shopify_attributes }}>
           <collapsible-label class="full-width flex row spacing-bottom-xs">
             <div class="collapsible-icon">
@@ -90,7 +90,7 @@
               </div>
             </div>
           </collapsible-label>
-          <collapsible-content class="">
+          <collapsible-content class="flex col line-item-components">
             {% for component in line_item.item_components %}
               {% render 'line-component', component: component  %}
             {% endfor %}
