@@ -17,6 +17,14 @@
     "main": {
       "type": "container",
       "blocks": {
+        "quantity_rocker_qNCwMm": {
+          "type": "quantity-rocker",
+          "settings": {
+            "label_hidden": false,
+            "name": "",
+            "title": ""
+          }
+        },
         "text_field_ANxHgG": {
           "type": "text-field",
           "settings": {
@@ -87,6 +95,7 @@
         }
       },
       "block_order": [
+        "quantity_rocker_qNCwMm",
         "text_field_ANxHgG",
         "text_field_TmqNgV",
         "select_Bcdyg8"
