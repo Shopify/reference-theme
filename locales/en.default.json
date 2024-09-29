@@ -26,6 +26,8 @@
     "subtotal": "Subtotal",
     "vat": "VAT",
     "incl_vat": "included",
-    "excl_vat": "excluded"
+    "excl_vat": "excluded",
+    "shipping": "Shipping",
+    "calculated_at_checkout": "calculated at checkout"
   }
 }
