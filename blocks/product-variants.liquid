@@ -8,6 +8,9 @@
   product-option-value[selected] {
     border: 2px solid black;
   }
+  product-option-value .product-option-values {
+    gap: 10px;
+  }
   product-option-value .product-swatch {
     background-color: var(--swatch-color, transparent);
     width: 50px;
@@ -30,7 +33,7 @@
   {%- for option in product.options_with_values -%}
     <div class="flex col">
       <p class="h4">{{ option.name }}</p>
-      <div class="flex row wrap gap-small">
+      <div class="flex row wrap product-option-values">
         {%- for option_value in option.values -%}
           <product-option-value {% if option_value.selected %}selected {% endif %}variant-id="{{ option_value.variant.id }}" product-url="{{ option_value.product_url | default: product.url }}">
             {%- if option_value.swatch != blank -%}
