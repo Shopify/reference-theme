@@ -6,7 +6,7 @@
   {% for discount_application in cart.cart_level_discount_applications %}
     <div class="discount-allocation flex row middle space-between">
       <div class="flex row middle">
-        {% render 'icon', icon: 'discount', size: "14px" %}
+        {% render 'icon', icon: 'discount', size: "18px" %}
         <p class="small">{{ discount_application.title }} </p>
       </div>
       <p class="small">-{{ discount_application.total_allocated_amount | money }}</p>

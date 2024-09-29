@@ -22,7 +22,7 @@
       <div class="line-item-discount-applications">
         {% for discount_allocation in line_item.line_level_discount_allocations %}
             <div class="discount-allocation flex row middle">
-              {% render 'icon', icon: 'discount', size: "14px" %}
+              {% render 'icon', icon: 'discount', size: "18px" %}
               <p class="small">{{ discount_allocation.discount_application.title }} (-{{ discount_allocation.discount_application.total_allocated_amount | money }})</p>
             </div>
         {% endfor %}
