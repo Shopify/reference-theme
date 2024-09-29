@@ -165,6 +165,12 @@ textarea{
     flex-basis: 120px;
   }
 }
+.line-component{
+  --gap: 10px;
+  & .line-item-image{
+    flex-basis: 80px;
+  }
+}
 .line-item-price-original{
   color: #b6b6b6;
   text-decoration: line-through;

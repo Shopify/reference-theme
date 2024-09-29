@@ -1,6 +1,6 @@
 
-<div class="flex row line-item ">
-  <div class="line-item-image">
+<div class="flex row line-component ">
+  <div class="line-component-image">
     {% render 'image-element', image: component.image, aspect_ratio: 1, fit: 'cover', sizes: "100px" %}
   </div>
   <div class="flex row space-between full-width">
@@ -8,14 +8,14 @@
       <div class="flex col">
         <p class="h6 spacing-bottom-2xs">{{ component.product.title }}</p>
         {% unless component.product.has_only_default_variant %}
-          <div class="flex row middle line-item-options spacing-bottom-2xs">
+          <div class="flex row middle line-component-options spacing-bottom-2xs">
             {% for option in component.variant.options %}
               {% assign option_name = component.product.options_with_values[forloop.index0].name %}
               <p class="p">
                 <span>{{ option_name }}</span>:&nbsp;<span>{{ option.name }}</span>
               </p>
               {% unless forloop.last %}
-                <div class="line-item-divider"></div>
+                <div class="line-component-divider"></div>
               {% endunless %}
             {% endfor %}
           </div>
@@ -33,9 +33,9 @@
           {% assign highest_price = component.variant.price %}
         {% endif %}
         {% if component.final_price != highest_price %}
-          <span class="line-item-price-original">{{ highest_price | money }}</span>
+          <span class="line-component-price-original">{{ highest_price | money }}</span>
         {% endif %}
-        <span class="line-item-price-final {% if component.final_price != highest_price %}line-item-price-final--discounted{% endif %}">
+        <span class="line-component-price-final {% if component.final_price != highest_price %}line-component-price-final--discounted{% endif %}">
           {{- component.final_price | money -}}
         </span>
       </p>
