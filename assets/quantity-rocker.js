@@ -1,5 +1,4 @@
 class QuantityRocker extends HTMLElement {
-  #initialized = false;
   #value = 1;
   #min = 0;
   #max = 999;
@@ -10,12 +9,10 @@ class QuantityRocker extends HTMLElement {
 
   constructor() {
     super();
+    this.#shadow = this.attachShadow({ mode: "open" });
   }
   connectedCallback() {
-    this.#shadow = this.attachShadow({ mode: "open" });
     this.render();
-
-    this.#initialized = true;
   }
 
   render() {

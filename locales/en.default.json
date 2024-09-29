@@ -24,10 +24,14 @@
   },
   "cart": {
     "subtotal": "Subtotal",
-    "vat": "VAT",
-    "incl_vat": "included",
-    "excl_vat": "excluded",
+    "total": "Total",
+    "incl_vat": "incl. VAT",
+    "excl_vat": "excl. VAT",
     "shipping": "Shipping",
-    "calculated_at_checkout": "calculated at checkout"
+    "calculated_at_checkout": "calculated at checkout",
+    "line_item": {
+      "hide_items": "Hide {{ count }} items",
+      "show_items": "Hide {{ count }} items"
+    }
   }
 }

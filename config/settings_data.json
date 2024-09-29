@@ -11,6 +11,14 @@
   "current": {
     "font_family_primary": "basic_commercial_n4",
     "font_family_secondary": "basic_commercial_n4",
+    "font_size_h6": 16,
+    "font_size_h6_mobile": 14,
+    "font_size_large": 16,
+    "font_size_large_mobile": 14,
+    "font_size_p": 14,
+    "font_size_p_mobile": 12,
+    "font_size_small": 12,
+    "font_size_small_mobile": 10,
     "button_tertiary_border_color": "#e1e1e1",
     "content_for_index": [
 

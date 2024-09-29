@@ -30,17 +30,11 @@ textarea{
 
 
 /* layout  */
-html .page-width {
-  width: 100%;
-  max-width: var(--page-width);
-  margin-inline: auto;
-  padding-inline: var(--site-gutter);
-  @media (max-width: 750px) {
-    --site-gutter: 20px;
-  }
-}
 .full-width {
   width: 100%;
+}
+html .styles\:spacing.theme-section{
+  margin-inline: auto;
 }
 
 .shopify-section {
@@ -93,6 +87,9 @@ a {
     @media (max-width: 750px) {
       --gap: 10px;
     }
+  }
+  &.wrap{
+    flex-wrap: wrap;
   }
   &.col {
     flex-direction: column;
@@ -322,4 +319,8 @@ ul.linklist{
   --height: var(--size);
   width: var(--width);
   height: var(--height);
+  & svg{
+    width: var(--width);
+    height: var(--height);
+  }
 }

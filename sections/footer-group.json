@@ -56,7 +56,6 @@
             "overflow": "",
             "size": {
               "width": "auto",
-              "flex-grow": "",
               "flex-basis": "15%"
             },
             "spacing": {
@@ -88,7 +87,6 @@
             "overflow": "",
             "size": {
               "width": "auto",
-              "flex-grow": "",
               "flex-basis": "15%"
             },
             "spacing": {
@@ -120,7 +118,6 @@
             "overflow": "",
             "size": {
               "width": "auto",
-              "flex-grow": "",
               "flex-basis": "15%"
             },
             "spacing": {
@@ -153,12 +150,16 @@
         "container_GTLUXG"
       ],
       "settings": {
-        "page_width": "page-width",
         "position": "",
         "overflow": "",
+        "size": {
+          "max-width": "1200px"
+        },
         "spacing": {
           "padding-block-start": "80px",
-          "padding-block-end": "80px"
+          "padding-block-end": "80px",
+          "padding-inline-start": "40px",
+          "padding-inline-end": "40px"
         },
         "layout": {
           "align-items": "flex-start",

@@ -23,6 +23,7 @@
             },
             "aspect_ratio_type": "auto",
             "aspect_ratio": "1 / 1",
+            "spacing_bottom": "none",
             "placeholder": "lifestyle-2"
           }
         },
@@ -60,9 +61,10 @@
         "simple_overlay_nKFykn"
       ],
       "settings": {
-        "page_width": "full-width",
         "position": "is-relative",
         "overflow": "",
+        "size": {
+        },
         "spacing": {
         },
         "layout": {
@@ -155,9 +157,11 @@
                 "button_dbjXVf": {
                   "type": "button",
                   "settings": {
-                    "type": "submit",
                     "label": "Submit",
+                    "name": "",
                     "button_style": "btn btn--primary",
+                    "small": false,
+                    "full_width": false,
                     "spacing_bottom": "none"
                   }
                 }
@@ -178,14 +182,16 @@
         "contact_form_eY3K8m"
       ],
       "settings": {
-        "page_width": "page-width",
         "position": "",
         "overflow": "",
+        "size": {
+          "max-width": "600px"
+        },
         "spacing": {
           "padding-block-start": "60px",
           "padding-block-end": "60px",
-          "padding-inline-start": "0px",
-          "padding-inline-end": "0px"
+          "padding-inline-start": "40px",
+          "padding-inline-end": "40px"
         },
         "layout": {
         },

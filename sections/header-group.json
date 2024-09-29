@@ -17,7 +17,6 @@
         "slide_Ta933P": {
           "type": "slide",
           "settings": {
-            "page_width": "page-width",
             "position": "is-relative",
             "overflow": "",
             "spacing": {
@@ -61,7 +60,6 @@
         "slide_8bjEmy": {
           "type": "slide",
           "settings": {
-            "page_width": "page-width",
             "position": "",
             "overflow": "",
             "spacing": {
@@ -107,7 +105,6 @@
           "disabled": true,
           "static": true,
           "settings": {
-            "page_width": "full-width",
             "control_style": "embla-simple",
             "spacing": {
             },
@@ -133,7 +130,6 @@
         "slide_8bjEmy"
       ],
       "settings": {
-        "page_width": "full-width",
         "size": {
         },
         "slides_per_page": 1,
@@ -175,7 +171,6 @@
         "linklist_f7VBe3"
       ],
       "settings": {
-        "page_width": "page-width",
         "position": "",
         "overflow": "",
         "spacing": {
