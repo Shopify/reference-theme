@@ -12,7 +12,6 @@ class CartForm extends HTMLElement {
         this.loading = true;
         this.updateCart({ [qty.dataset.lineItemKey]: Number(qty.value) })
         .then((res) => {
-          console.log(res)
           this.updateView(res.sections[this.section]);
           this.loading = false;
         });
