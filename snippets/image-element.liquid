@@ -32,7 +32,7 @@
     assign aspect_ratio = image.aspect_ratio | default: 1.0 | round: 7
   endif
 %}
-<div class="image-wrapper {{ fit }}" style="--aspect-ratio: {{ aspect_ratio }};" data-nan="{{ '%' | times: 1.0 }}">
+<div class="image-wrapper {{ fit }}" style="--aspect-ratio: {{ aspect_ratio }};">
   {% liquid
     assign placeholder = placeholder | default: "image"
     if image != blank
