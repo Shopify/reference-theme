@@ -10,8 +10,9 @@ class ProductOptionValue extends HTMLElement {
       const variantIdInput = form.querySelector(`[name="id"]`);
       const productUrlInput = form.querySelector(`[name="url"]`);
       this.addEventListener('click', () => {
-        productUrlInput?.setAttribute('value', productUrl);
-        variantIdInput?.setAttribute('value', variantId);
+        productUrlInput.value = productUrl;
+        variantIdInput.value = variantId;
+
       });
     }
   }
