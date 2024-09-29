@@ -118,10 +118,10 @@ a {
       justify-content: baseline;
     }
     &.stretch {
-      justify-content: stretch;
+      align-items: stretch;
     }
     &.space-between {
-      align-items: space-between;
+      justify-content: space-between;
     }
   }
   &.row {
