@@ -131,11 +131,6 @@
                 "color_scheme": "scheme-3"
               },
               "blocks": {
-                "cart_summary_6JcHTj": {
-                  "type": "cart-summary",
-                  "settings": {
-                  }
-                },
                 "text_field_yaBYXL": {
                   "type": "text-field",
                   "settings": {
@@ -146,6 +141,11 @@
                     "title": "Discount",
                     "pattern": "",
                     "placeholder": "Discount code"
+                  }
+                },
+                "cart_summary_6JcHTj": {
+                  "type": "cart-summary",
+                  "settings": {
                   }
                 },
                 "button_NNKn6H": {
@@ -161,8 +161,8 @@
                 }
               },
               "block_order": [
-                "cart_summary_6JcHTj",
                 "text_field_yaBYXL",
+                "cart_summary_6JcHTj",
                 "button_NNKn6H"
               ]
             }
