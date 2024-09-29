@@ -21,7 +21,7 @@
       </div>
       <div class="line-item-discount-applications">
         {% for discount_allocation in line_item.line_level_discount_allocations %}
-            {% render 'discount-application', discount_allocation: discount_allocation.discount_application %}
+            {% render 'discount-application', discount_application: discount_allocation.discount_application %}
         {% endfor %}
       </div>
       {% assign inventory_quantity = line_item.variant.inventory_quantity | at_most: 999 %}
