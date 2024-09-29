@@ -1,0 +1,29 @@
+<script>
+  window.Shopify = window.Shopify || {}
+  Shopify.shopID = {{ shop.id }}
+  Shopify.routes = {
+    accountAddressesUrl: "{{ routes.account_addresses_url }}",
+    accountLoginUrl: "{{ routes.account_login_url }}",
+    accountLogoutUrl: "{{ routes.account_logout_url }}",
+    accountRecoverUrl: "{{ routes.account_recover_url }}",
+    accountRegisterUrl: "{{ routes.account_register_url }}",
+    accountUrl: "{{ routes.account_url }}",
+    allProductsCollectionUrl: "{{ routes.all_products_collection_url }}",
+    cartUrl: "{{ routes.cart_url }}",
+    cartAddUrl: "{{ routes.cart_add_url }}",
+    cartChangeUrl: "{{ routes.cart_change_url }}",
+    cartClearUrl: "{{ routes.cart_clear_url }}",
+    cartUpdateUrl: "{{ routes.cart_update_url }}",
+    collectionsUrl: "{{ routes.collections_url }}",
+    predictiveSearchUrl: "{{ routes.predictive_search_url }}",
+    productRecommendationsUrl: "{{ routes.product_recommendations_url }}",
+    rootUrl: "{{ routes.root_url }}",
+    searchUrl: "{{ routes.search_url }}"
+  }
+  Shopify.currency = Shopify.currency || {}
+  Shopify.currency.moneyFormat = {{ shop.money_format | json }};
+
+  Shopify.theme = Shopify.theme || {}
+  Shopify.theme.cart = Shopify.theme.cart || {}
+  Shopify.theme.cart.action = '{{ settings.add_to_cart_action }}'
+</script>

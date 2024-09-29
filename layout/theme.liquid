@@ -39,6 +39,7 @@
     {% render "preload-fonts" %}
 
     {% render "theme-styles" %}
+    {% render "theme-js" %}
     {{ "critical.css" | asset_url | stylesheet_tag }}
 
     {% assign skin = "modern" %}
