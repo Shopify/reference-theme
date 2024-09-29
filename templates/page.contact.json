@@ -22,7 +22,7 @@
               "height": "200px"
             },
             "aspect_ratio_type": "auto",
-            "aspect_ratio": 1,
+            "aspect_ratio": "1 / 1",
             "placeholder": "lifestyle-2"
           }
         },

@@ -34,7 +34,7 @@
                   "width": "100%"
                 },
                 "aspect_ratio_type": "auto",
-                "aspect_ratio": 1,
+                "aspect_ratio": "1 / 1",
                 "spacing_bottom": "none",
                 "placeholder": "lifestyle-1"
               }
@@ -144,7 +144,7 @@
                   "flex-grow": "1"
                 },
                 "aspect_ratio_type": "auto",
-                "aspect_ratio": 1,
+                "aspect_ratio": "1 / 1",
                 "spacing_bottom": "none",
                 "placeholder": "lifestyle-1"
               }
@@ -443,7 +443,7 @@
               "height": "auto"
             },
             "aspect_ratio_type": "custom",
-            "aspect_ratio": 1,
+            "aspect_ratio": "1 / 1",
             "spacing_bottom": "none",
             "placeholder": "image"
           }
@@ -484,7 +484,7 @@
               "height": "600px"
             },
             "aspect_ratio_type": "auto",
-            "aspect_ratio": 1,
+            "aspect_ratio": "1 / 1",
             "spacing_bottom": "none",
             "placeholder": "lifestyle-2"
           }
@@ -617,7 +617,7 @@
               "height": "auto"
             },
             "aspect_ratio_type": "custom",
-            "aspect_ratio": 1,
+            "aspect_ratio": "1 / 1",
             "spacing_bottom": "none",
             "placeholder": "collection-6"
           }
@@ -732,7 +732,7 @@
             "size": {
             },
             "aspect_ratio_type": "auto",
-            "aspect_ratio": 1,
+            "aspect_ratio": "1 / 1",
             "spacing_bottom": "none",
             "placeholder": "image"
           }
@@ -744,7 +744,7 @@
             "size": {
             },
             "aspect_ratio_type": "auto",
-            "aspect_ratio": 1,
+            "aspect_ratio": "1 / 1",
             "spacing_bottom": "none",
             "placeholder": "image"
           }
@@ -756,7 +756,7 @@
             "size": {
             },
             "aspect_ratio_type": "auto",
-            "aspect_ratio": 1,
+            "aspect_ratio": "1 / 1",
             "spacing_bottom": "none",
             "placeholder": "image"
           }
@@ -768,7 +768,7 @@
             "size": {
             },
             "aspect_ratio_type": "auto",
-            "aspect_ratio": 1,
+            "aspect_ratio": "1 / 1",
             "spacing_bottom": "none",
             "placeholder": "image"
           }
@@ -780,7 +780,7 @@
             "size": {
             },
             "aspect_ratio_type": "auto",
-            "aspect_ratio": 1,
+            "aspect_ratio": "1 / 1",
             "spacing_bottom": "none",
             "placeholder": "image"
           }
@@ -792,7 +792,7 @@
             "size": {
             },
             "aspect_ratio_type": "auto",
-            "aspect_ratio": 1,
+            "aspect_ratio": "1 / 1",
             "spacing_bottom": "none",
             "placeholder": "image"
           }
@@ -846,7 +846,7 @@
                   "flex-grow": "1"
                 },
                 "aspect_ratio_type": "auto",
-                "aspect_ratio": 1,
+                "aspect_ratio": "1 / 1",
                 "spacing_bottom": "none",
                 "placeholder": "image"
               }
@@ -939,7 +939,7 @@
                   "flex-grow": "1"
                 },
                 "aspect_ratio_type": "auto",
-                "aspect_ratio": 1,
+                "aspect_ratio": "1 / 1",
                 "spacing_bottom": "none",
                 "placeholder": "image"
               }
@@ -1058,7 +1058,7 @@
               "width": "150px"
             },
             "aspect_ratio_type": "custom",
-            "aspect_ratio": 2,
+            "aspect_ratio": "2 / 1",
             "spacing_bottom": "none",
             "placeholder": "image"
           }
@@ -1071,7 +1071,7 @@
               "width": "150px"
             },
             "aspect_ratio_type": "custom",
-            "aspect_ratio": 2,
+            "aspect_ratio": "2 / 1",
             "spacing_bottom": "none",
             "placeholder": "image"
           }
@@ -1084,7 +1084,7 @@
               "width": "150px"
             },
             "aspect_ratio_type": "custom",
-            "aspect_ratio": 2,
+            "aspect_ratio": "2 / 1",
             "spacing_bottom": "none",
             "placeholder": "image"
           }
@@ -1097,7 +1097,7 @@
               "width": "150px"
             },
             "aspect_ratio_type": "custom",
-            "aspect_ratio": 2,
+            "aspect_ratio": "2 / 1",
             "spacing_bottom": "none",
             "placeholder": "image"
           }
@@ -1110,7 +1110,7 @@
               "width": "150px"
             },
             "aspect_ratio_type": "custom",
-            "aspect_ratio": 2,
+            "aspect_ratio": "2 / 1",
             "spacing_bottom": "none",
             "placeholder": "image"
           }
@@ -1192,7 +1192,7 @@
                   "flex-grow": "1"
                 },
                 "aspect_ratio_type": "auto",
-                "aspect_ratio": 1,
+                "aspect_ratio": "1 / 1",
                 "spacing_bottom": "m",
                 "placeholder": "image"
               }
@@ -1266,7 +1266,7 @@
                   "flex-grow": "1"
                 },
                 "aspect_ratio_type": "auto",
-                "aspect_ratio": 1,
+                "aspect_ratio": "1 / 1",
                 "spacing_bottom": "m",
                 "placeholder": "image"
               }
@@ -1340,7 +1340,7 @@
                   "flex-grow": "1"
                 },
                 "aspect_ratio_type": "auto",
-                "aspect_ratio": 1,
+                "aspect_ratio": "1 / 1",
                 "spacing_bottom": "m",
                 "placeholder": "image"
               }
