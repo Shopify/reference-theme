@@ -1,3 +1,12 @@
+<style>
+  product-option-value {
+    padding: 10px;
+  }
+  product-option-value[selected] {
+    background: red;
+  }
+</style>
+
 <div class="flex col">
   <input type="hidden" name="url" value="{{ product.url }}">
   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id | default: product.variants.first.id }}">
@@ -6,7 +15,7 @@
       <p class="h4">{{ option.name }}</p>
       <div class="flex row wrap gap-small">
         {%- for option_value in option.values -%}
-          <product-option-value class="spacing-s" variant-id="{{ option_value.variant.id }}" product-url="{{ option_value.product_url | default: product.url }}">
+          <product-option-value {% if option_value.selected %}selected {% endif %}variant-id="{{ option_value.variant.id }}" product-url="{{ option_value.product_url | default: product.url }}">
             {{ option_value.name }}
           </product-option-value>
         {%- endfor -%}
