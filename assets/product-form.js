@@ -30,10 +30,10 @@ class ProductForm extends HTMLElement {
     const sellingPlanInput = this.querySelector(`form [name="selling_plan"]`);
     const fetchUrl = new URL(location);
     fetchUrl.path = productUrlInput.value;
-    if(!!variantIdInput.value) {
+    if(!!variantIdInput?.value) {
       fetchUrl.searchParams.set('variant', variantIdInput.value);
     }
-    if(!!sellingPlanInput.value) {
+    if(!!sellingPlanInput?.value) {
       fetchUrl.searchParams.set('selling_plan', sellingPlanInput.value);
     }
     console.log(fetchUrl.href);
