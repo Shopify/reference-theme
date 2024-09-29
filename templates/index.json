@@ -459,10 +459,13 @@
         "position": "",
         "overflow": "",
         "size": {
+          "max-width": "1200px"
         },
         "spacing": {
           "padding-block-start": "80px",
-          "padding-block-end": "80px"
+          "padding-block-end": "80px",
+          "padding-inline-start": "40px",
+          "padding-inline-end": "40px"
         },
         "layout": {
           "row-gap": "40px",
@@ -600,6 +603,7 @@
         "position": "is-relative",
         "overflow": "overflow-hidden",
         "size": {
+          "max-width": ""
         },
         "spacing": {
         },
@@ -712,10 +716,13 @@
         "position": "",
         "overflow": "",
         "size": {
+          "max-width": "1200px"
         },
         "spacing": {
           "padding-block-start": "80px",
-          "padding-block-end": "80px"
+          "padding-block-end": "80px",
+          "padding-inline-start": "40px",
+          "padding-inline-end": "40px"
         },
         "layout": {
           "row-gap": "40px",
@@ -813,10 +820,13 @@
       ],
       "settings": {
         "size": {
+          "max-width": "1200px"
         },
         "spacing": {
           "padding-block-start": "0px",
-          "padding-block-end": "0px"
+          "padding-block-end": "0px",
+          "padding-inline-start": "40px",
+          "padding-inline-end": "40px"
         },
         "columns": 3,
         "rows": 2,
@@ -1044,10 +1054,13 @@
         "position": "",
         "overflow": "",
         "size": {
+          "max-width": "1200px"
         },
         "spacing": {
           "padding-block-start": "80px",
-          "padding-block-end": "80px"
+          "padding-block-end": "80px",
+          "padding-inline-start": "40px",
+          "padding-inline-end": "40px"
         },
         "layout": {
         },
@@ -1134,36 +1147,13 @@
         "position": "",
         "overflow": "",
         "size": {
+          "max-width": "1200px"
         },
         "spacing": {
           "padding-block-start": "0px",
-          "padding-block-end": "80px"
-        },
-        "layout": {
-        },
-        "color_scheme": ""
-      }
-    },
-    "container_fiNUUq": {
-      "type": "container",
-      "blocks": {
-        "divider_LyBJaP": {
-          "type": "divider",
-          "settings": {
-            "spacing": {
-            }
-          }
-        }
-      },
-      "block_order": [
-        "divider_LyBJaP"
-      ],
-      "settings": {
-        "position": "",
-        "overflow": "",
-        "size": {
-        },
-        "spacing": {
+          "padding-block-end": "80px",
+          "padding-inline-end": "40px",
+          "padding-inline-start": "40px"
         },
         "layout": {
         },
@@ -1405,10 +1395,12 @@
         "position": "",
         "overflow": "",
         "size": {
+          "max-width": "1200px"
         },
         "spacing": {
           "padding-block-start": "0px",
-          "padding-block-end": "60px"
+          "padding-block-end": "60px",
+          "padding-inline-end": "40px"
         },
         "layout": {
         },
@@ -1425,7 +1417,6 @@
     "grid_RYPCRk",
     "container_JaaAJ7",
     "container_eFCEN9",
-    "container_fiNUUq",
     "container_HL9qmF"
   ]
 }
