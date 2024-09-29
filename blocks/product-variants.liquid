@@ -16,7 +16,16 @@
       <div class="flex row wrap gap-small">
         {%- for option_value in option.values -%}
           <product-option-value {% if option_value.selected %}selected {% endif %}variant-id="{{ option_value.variant.id }}" product-url="{{ option_value.product_url | default: product.url }}">
-            {{ option_value.name }}
+            {%- if option_value.swatch != blank -%}
+              {%- assign swatch = option_value.swatch -%}
+              {%- if swatch.color -%}
+                {{ swatch.color }}
+              {%- else -%}
+                {%- render 'image-element', image: swatch.image, sizes: '50px', widhts: '50,100,150' -%}
+              {%- endif -%}
+            {% else %}
+              {{ option_value.name }}
+            {%- endif -%}
           </product-option-value>
         {%- endfor -%}
       </div>
