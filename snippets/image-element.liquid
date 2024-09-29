@@ -18,7 +18,11 @@
       assign denominator = aspect_ratio | split: '/' | last | times: 1.0
       assign aspect_ratio = numerator | divided_by: denominator | round: 6
     else
-      assign aspect_ratio = aspect_ratio | times: 1.0 | round: 6
+      if aspect_ratio < 0.000001
+        assign aspect_ratio = 1.0
+      else
+        assign aspect_ratio = aspect_ratio | times: 1.0 | round: 6
+      endif
     endif
   else 
     assign aspect_ratio = 1.0
