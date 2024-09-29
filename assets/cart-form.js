@@ -65,7 +65,11 @@ class CartForm extends HTMLElement {
 
   async updateCart(updates) {
     return new Promise((resolve) => {
-      Shopify.theme.cart.updateCart({ updates }, true, resolve);
+      Shopify.theme.cart.update({ updates }, {
+        events: true,
+        callback: (cart) => {},
+        sections: [this.section]
+      });
     });
   }
   set loading(v) {
