@@ -7,7 +7,7 @@
   </div>
   <div class="flex col space-between full-width">
     <div class="flex row space-between full-width">
-      <div class="flex col space-between">
+      <div class="flex col">
         <div class="flex col">
           <p class="h6 spacing-bottom-2xs">{{ line_item.product.title }}</p>
           {% unless line_item.product.has_only_default_variant %}
@@ -34,7 +34,7 @@
         </div>
   
         <quantity-rocker
-          class="p"
+          class="p spacing-bottom-2xs"
           {% unless line_item.variant.inventory_management == nil %}
             {% assign inventory_quantity = line_item.variant.inventory_quantity | at_most: 999 %}
             {% if inventory_quantity < 0 %}
@@ -47,35 +47,11 @@
           name="updates[]"
           data-line-item-key="{{ line_item.key }}">
         </quantity-rocker>
-
-        {% if line_item.item_components.size > 0 %}
-          <collapsible-outer 
-            class="line-item-components"
-            {{ block.shopify_attributes }}>
-            <collapsible-label class="full-width flex row space-between">
-              <div class="collapsible-icon">
-                <div class="collapsible-icon--open flex row middle">
-                  <p class="p">Show {{line_item.item_components.size}} items</p>
-                  {% render 'icon', icon: 'chevron-down', size: "14px" %}
-                </div>
-                <div class="collapsible-icon--close flex row middle">
-                  <p class="p">Hide {{line_item.item_components.size}} items</p>
-                  {% render 'icon', icon: 'chevron-up', size: "14px" %}
-                </div>
-              </div>
-            </collapsible-label>
-            <collapsible-content class="">
-              {% for component in line_item.item_components %}
-                {% render 'line-component', component: component  %}
-              {% endfor %}
-            </collapsible-content>
-          </collapsible-outer>
-      {% endif %}
       </div>
-      <div class="flex col space-between between right">
-        <a href="{{ line_item.url_to_remove }}" data-line-item-key="{{ line_item.key }}" name="line-item-remove">
+      <div class="flex col right">
+        {% comment %} <a href="{{ line_item.url_to_remove }}" data-line-item-key="{{ line_item.key }}" name="line-item-remove">
           {% render 'icon', icon: 'delete' %}
-        </a>
+        </a> {% endcomment %}
         <p class="p">
           {% assign highest_price = line_item.original_price %}
           {% if highest_price < line_item.variant.compare_at_price %}
@@ -93,5 +69,28 @@
         </p>
       </div>
     </div>
+    {% if line_item.item_components.size > 0 %}
+        <collapsible-outer 
+          class="line-item-components"
+          {{ block.shopify_attributes }}>
+          <collapsible-label class="full-width flex row space-between">
+            <div class="collapsible-icon">
+              <div class="collapsible-icon--open flex row middle">
+                <p class="p">Show {{line_item.item_components.size}} items</p>
+                {% render 'icon', icon: 'chevron-down', size: "14px" %}
+              </div>
+              <div class="collapsible-icon--close flex row middle">
+                <p class="p">Hide {{line_item.item_components.size}} items</p>
+                {% render 'icon', icon: 'chevron-up', size: "14px" %}
+              </div>
+            </div>
+          </collapsible-label>
+          <collapsible-content class="">
+            {% for component in line_item.item_components %}
+              {% render 'line-component', component: component  %}
+            {% endfor %}
+          </collapsible-content>
+        </collapsible-outer>
+    {% endif %}
   </div>
 </div>
