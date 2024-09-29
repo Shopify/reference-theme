@@ -4,7 +4,10 @@
 </div>
 <div class="cart-discount-applications">
   {% for discount_application in cart.cart_level_discount_applications %}
-      {% render 'discount-application', discount_application: discount_application %}
+    <div class="discount-allocation flex row middle space-between">
+      {% render 'icon', icon: 'discount', size: "14px" %}
+      <p class="small">{{ discount_application.title }} (-{{ discount_application.total_allocated_amount | money }})</p>
+    </div>
   {% endfor %}
 </div>
 <div class="flex row space-between">
