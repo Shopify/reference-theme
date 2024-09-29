@@ -81,11 +81,11 @@
           <collapsible-label class="full-width flex row spacing-bottom-xs">
             <div class="collapsible-icon">
               <div class="collapsible-icon--open flex row middle">
-                <p class="p">Show {{line_item.item_components.size}} items</p>
+                <p class="p">{{ "cart.line_item.show_items" | t: count: line_item.item_components.size }}</p>
                 {% render 'icon', icon: 'chevron-down', size: "14px" %}
               </div>
               <div class="collapsible-icon--close flex row middle">
-                <p class="p">Hide {{line_item.item_components.size}} items</p>
+                <p class="p">{{ "cart.line_item.hide_items" | t: count: line_item.item_components.size }}</p>
                 {% render 'icon', icon: 'chevron-up', size: "14px" %}
               </div>
             </div>
