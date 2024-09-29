@@ -16,7 +16,10 @@
     if aspect_ratio contains '/'
       assign numerator = aspect_ratio | split: '/' | first | times: 1.0
       assign denominator = aspect_ratio | split: '/' | last | times: 1.0
-      assign aspect_ratio = numerator | divided_by: denominator | round: 7
+      if numerator > 0.000001 and denominator > 0.000001
+        assign aspect_ratio = numerator | divided_by: denominator | round: 7
+      else
+        assign aspect_ratio = image.aspect_ratio | default: 1.0 | round: 7
     else
       if aspect_ratio < 0.000001
         assign aspect_ratio = image.aspect_ratio | default: 1.0 | round: 7
