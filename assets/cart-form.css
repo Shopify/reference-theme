@@ -1,0 +1,9 @@
+
+cart-form {
+  display: block;
+}
+
+cart-form[loading] {
+  opacity: 0.5;
+  pointer-events: none;
+}

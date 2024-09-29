@@ -1,0 +1,113 @@
+
+<div class="color-{{ section.settings.color_scheme }} full-width {{ section.settings.overflow }} {{ section.settings.position }}">
+  <cart-form section="cart-main">
+    {% form "cart", cart %}
+      <div class="{{section.settings.page_width}} {{ section.settings | class_list }} ">
+        {% content_for "blocks" %}
+      </div>
+    {% endform %}
+  </cart-form>
+</div>
+
+{% schema %}
+{
+  "name": "Cart main",
+  "tag": "section",
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Page width"
+    },
+    {
+      "type": "select",
+      "id": "page_width",
+      "label": "Page width",
+      "options": [
+        {
+          "value": "full-width",
+          "label": "Full width"
+        },
+        {
+          "value": "page-width",
+          "label": "Page width"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "Position"
+    },
+    {
+      "type": "select",
+      "id": "position",
+      "label": "Position",
+      "options": [
+        {
+          "value": "",
+          "label": "static"
+        },
+        {
+          "value": "is-relative",
+          "label": "relative"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "Overflow"
+    },
+    {
+      "type": "select",
+      "id": "overflow",
+      "label": "Overflow",
+      "options": [
+        {
+          "value": "",
+          "label": "visible"
+        },
+        {
+          "value": "overflow-hidden",
+          "label": "hidden"
+        },
+        {
+          "value": "overflow-scroll",
+          "label": "scroll"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing"
+    },
+    {
+      "type": "style.layout_panel",
+      "id": "layout",
+      "label": "Layout",
+      "default": {
+        "flex-direction": "row",
+        "gap": "20px",
+        "justify-content": "center",
+        "align-items": "center",
+        "@media (--mobile)": {
+          "flex-wrap": "wrap"
+        }
+      }
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ]
+}
+{% endschema %}
