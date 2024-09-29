@@ -1,5 +1,5 @@
 
 <div class="discount-allocation flex row middle">
-  {{ "discount.svg" | inline_asset_content }}
+  {% render 'icon', icon: 'discount' %}
   <p class="small">{{ discount_application.title }} (-{{ discount_application.total_allocated_amount | money }})</p>
 </div>

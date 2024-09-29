@@ -3,11 +3,11 @@
   <div class="shopify-block--slideshow-controls embla-controls {{ block.settings | class_list }} {{ block.settings.control_style }}  {{ block.settings.page_width }}">
     <embla-prev
       class="{{ color_schema_class }}">
-      {{ "chevron-left.svg" | inline_asset_content }}
+      {% render 'icon', icon: 'chevron-left' %}
     </embla-prev>
     <embla-next
       class="{{ color_schema_class }}">
-      {{ "chevron-right.svg" | inline_asset_content }}
+      {% render 'icon', icon: 'chevron-right' %}
     </embla-next>
   </div>
 {% endif %}
