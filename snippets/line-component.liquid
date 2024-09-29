@@ -21,24 +21,6 @@
           </div>
         {% endunless %}
       </div>
-     
-    </div>
-    <div class="flex col space-between between right">
-      <p class="p">
-        {% assign highest_price = component.original_price %}
-        {% if highest_price < component.variant.compare_at_price %}
-          {% assign highest_price = component.variant.compare_at_price %}
-        {% endif %}
-        {% if highest_price < component.variant.price %}
-          {% assign highest_price = component.variant.price %}
-        {% endif %}
-        {% if component.final_price != highest_price %}
-          <span class="line-component-price-original">{{ highest_price | money }}</span>
-        {% endif %}
-        <span class="line-component-price-final {% if component.final_price != highest_price %}line-component-price-final--discounted{% endif %}">
-          {{- component.final_price | money -}}
-        </span>
-      </p>
     </div>
   </div>
 </div>

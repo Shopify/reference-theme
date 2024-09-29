@@ -168,7 +168,7 @@ textarea{
 .line-component{
   --gap: 10px;
   & .line-item-image{
-    flex-basis: 80px;
+    flex-basis: 60px;
   }
 }
 .line-item-price-original{
