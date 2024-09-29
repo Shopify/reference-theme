@@ -7,18 +7,29 @@
     <div class="flex col space-between">
       <div class="flex col">
         <p class="h6">{{ line_item.product.title }}</p>
-        <div class="flex row middle line-item-options">
-          {% for option in line_item.variant.options %}
-            {% assign option_name = line_item.product.options_with_values[forloop.index0].name %}
-            <p class="p">
-              <span>{{ option_name }}</span>:&nbsp;<span>{{ option.name }}</span>
-            </p>
-            {% unless forloop.last %}
-              <div class="line-item-divider"></div>
-            {% endunless %}
-          {% endfor %}
-        </div>
+        {% unless line_item.product.has_only_default_variant %}
+          <div class="flex row middle line-item-options">
+            {% for option in line_item.variant.options %}
+              {% assign option_name = line_item.product.options_with_values[forloop.index0].name %}
+              <p class="p">
+                <span>{{ option_name }}</span>:&nbsp;<span>{{ option.name }}</span>
+              </p>
+              {% unless forloop.last %}
+                <div class="line-item-divider"></div>
+              {% endunless %}
+            {% endfor %}
+          </div>
+        {% endunless %}
       </div>
+      <div class="line-item-discount-applications">
+        {% for discount_allocation in line_item.line_level_discount_allocations %}
+            <div class="discount-application flex row middle">
+              {% render 'icon', icon: 'discount', size: "18px" %}
+              <p class="small">{{ discount_allocation.discount_application.title }} (-{{ discount_allocation.discount_application.total_allocated_amount | money }})</p>
+            </div>
+        {% endfor %}
+      </div>
+    
       <quantity-rocker
         class="p"
         {% unless line_item.variant.inventory_management == nil %}
@@ -50,14 +61,6 @@
           <span class="line-item-price-original">{{ highest_price | money }}</span>
         {% endif %}
       </p>
-      <div class="line-item-discount-applications">
-        {% for discount_allocation in line_item.line_level_discount_allocations %}
-            <div class="discount-application flex row middle">
-              {% render 'icon', icon: 'discount', size: "18px" %}
-              <p class="small">{{ discount_allocation.discount_application.title }} (-{{ discount_allocation.discount_application.total_allocated_amount | money }})</p>
-            </div>
-        {% endfor %}
-      </div>
       <p class="p">
         <span class="line-item-price-final {% if line_item.final_price != highest_price %}line-item-price-final--discounted{% endif %}">
           {{- line_item.final_price | money -}}
