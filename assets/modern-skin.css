@@ -162,7 +162,7 @@ textarea{
 .line-item{
   --gap: 10px;
   & .line-item-image{
-    flex-basis: 120px;
+    flex-basis: 140px;
   }
 }
 .line-component{
