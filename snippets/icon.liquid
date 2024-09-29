@@ -1,6 +1,4 @@
 {% assign size = size | default: "24px" %}
-{% assign width = width | default: size %}
-{% assign height = height | default: size %}
-<div class="theme-icon" style="--size: {{ size }}; --width: {{ width }}; --height: {{ height }};">
+<div class="theme-icon" style="--size: {{ size }}; --width: {{ width }} var(--size); --height: {{ height }} var(--size);">
   {{ icon | append: ".svg" | inline_asset_content }}
 </div>
