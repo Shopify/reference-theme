@@ -21,7 +21,7 @@
               {%- if swatch.color -%}
                 {{ swatch.color }}
               {%- else -%}
-                {%- render 'image-element', image: swatch.image, sizes: '50px', widhts: '50,100,150' -%}
+                {%- render 'image-element', image: swatch.image, aspect-ratio: 1, fit: 'cover', sizes: '50px', widhts: '50,100,150' -%}
               {%- endif -%}
             {% else %}
               {{ option_value.name }}
