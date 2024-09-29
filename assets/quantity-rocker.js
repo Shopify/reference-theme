@@ -1,5 +1,4 @@
 class QuantityRocker extends HTMLElement {
-  #initialized = false;
   #value = 1;
   #min = 0;
   #max = 999;
@@ -14,11 +13,10 @@ class QuantityRocker extends HTMLElement {
   connectedCallback() {
     this.#shadow = this.attachShadow({ mode: "open" });
     this.render();
-
-    this.#initialized = true;
   }
 
   render() {
+    this.#shadow = this.#shadow || this.attachShadow({ mode: "open" });
     this.#shadow.innerHTML = `
       <style>
         input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
