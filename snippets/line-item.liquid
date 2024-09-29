@@ -1,6 +1,6 @@
 
 <div class="flex row top line-item ">
-  <div class="line-item-image">
+  <div class="flex line-item-image">
     {% render 'image-element', image: line_item.image, aspect_ratio: 1, fit: 'cover', sizes: "100px" %}
   </div>
   <div class="flex col full-width">
@@ -23,7 +23,7 @@
           {% endunless %}
           <div class="line-item-discount-applications">
             {% for discount_allocation in line_item.line_level_discount_allocations %}
-                <div class="discount-application flex row middle">
+                <div class="discount-application flex row middle spacing-bottom-2xs">
                   {% render 'icon', icon: 'discount', size: "18px" %}
                   <p class="small">{{ discount_allocation.discount_application.title }} (-{{ discount_allocation.discount_application.total_allocated_amount | money }})</p>
                 </div>
