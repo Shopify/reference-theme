@@ -1,18 +1,66 @@
 /*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
       "type": "product-main",
-      "settings": {}
+      "blocks": {
+        "container_wbCr8p": {
+          "type": "container",
+          "settings": {
+            "position": "",
+            "overflow": "",
+            "size": {
+              "width": "50%"
+            },
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          }
+        },
+        "container_EGyyUF": {
+          "type": "container",
+          "settings": {
+            "position": "",
+            "overflow": "",
+            "size": {
+              "width": "50%"
+            },
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "container_wbCr8p",
+        "container_EGyyUF"
+      ],
+      "settings": {
+        "page_width": "page-width",
+        "position": "",
+        "overflow": "",
+        "spacing": {
+        },
+        "layout": {
+          "flex-wrap": "nowrap"
+        },
+        "color_scheme": ""
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }
