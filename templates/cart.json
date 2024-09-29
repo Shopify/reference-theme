@@ -151,7 +151,8 @@
                     "name": "discount",
                     "title": "Discount",
                     "pattern": "",
-                    "placeholder": "Discount code"
+                    "placeholder": "Discount code",
+                    "spacing_bottom": "xs"
                   }
                 },
                 "cart_summary_6JcHTj": {
