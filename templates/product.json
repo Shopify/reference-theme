@@ -36,10 +36,10 @@
                 "object_fit": "cover",
                 "size": {
                   "width": "100%",
-                  "flex-grow": "1"
+                  "flex-grow": ""
                 },
                 "aspect_ratio_type": "custom",
-                "aspect_ratio": 1,
+                "aspect_ratio": 0,
                 "spacing_bottom": "none",
                 "placeholder": "image"
               }
