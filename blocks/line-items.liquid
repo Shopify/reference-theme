@@ -1,35 +1,51 @@
-<div class="shopify-block-{{block.type}} spacing-bottom-{{ block.settings.spacing_bottom }} flex col">
-  {% if cart.empty? %}
-    {% content_for "block", type: "container", id: "cart-empty" %}
-  {% else %}
-    {% for line_item in cart.items %}
-      {% render 'line-item', line_item: line_item %}
-    {% endfor %}
-    
-  {% endif %}
+
+
+<div
+  class="shopify-block-{{block.type}} {{ block.settings | class_list }} color-{{ block.settings.color_scheme }}"
+  {{ block.shopify_attributes }}>
+  <div class="shopify-block-{{block.type}} spacing-bottom-{{ block.settings.spacing_bottom }} flex col">
+    {% if cart.empty? %}
+      {% content_for "block", type: "container", id: "cart-empty" %}
+    {% else %}
+      {% for line_item in cart.items %}
+        {% render 'line-item', line_item: line_item %}
+      {% endfor %}
+    {% endif %}
+  </div>
 </div>
 
 {% schema %}
 {
-  "name": "Line Items",
+  "name": "Line items",
   "tag": null,
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
     {
-      "type": "select",
-      "id": "spacing_bottom",
-      "label": "Spacing bottom",
-      "options": [
-        { "value": "none", "label": "none" },
-        { "value": "2xs", "label": "2xs" },
-        { "value": "xs", "label": "xs" },
-        { "value": "s", "label": "s" },
-        { "value": "m", "label": "m" },
-        { "value": "l", "label": "l" },
-        { "value": "xl", "label": "xl" },
-        { "value": "2xl", "label": "2xl" },
-        { "value": "3xl", "label": "3xl" }
-      ],
-      "default": "none"
+      "type": "style.size_panel",
+      "id": "size",
+      "label": "Size",
+      "default": {
+        "width": "auto",
+
+        "@media (--mobile)": {
+          "width": "100%"
+        }
+      }
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
     }
   ],
   "presets": [
