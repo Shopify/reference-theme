@@ -80,6 +80,9 @@
                     "position": "",
                     "overflow": "",
                     "size": {
+                      "@media (--mobile)": {
+                        "width": "auto"
+                      }
                     },
                     "spacing": {
                       "padding-block-start": "20px",
@@ -121,7 +124,10 @@
                 "position": "",
                 "overflow": "",
                 "size": {
-                  "flex-basis": "33%"
+                  "flex-basis": "33%",
+                  "@media (--mobile)": {
+                    "flex-basis": ""
+                  }
                 },
                 "spacing": {
                   "padding-block-start": "20px",
