@@ -1,18 +1,99 @@
 /*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
       "type": "container",
-      "settings": {}
+      "blocks": {
+        "heading_DpUWbP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cart",
+            "html_tag": "p",
+            "heading_style": "h1",
+            "alignment": "center",
+            "spacing_bottom": "none",
+            "text_color": "",
+            "font_size": ""
+          }
+        },
+        "link_dmGXQX": {
+          "type": "link",
+          "settings": {
+            "link": "",
+            "label": "Continue shopping",
+            "button_style": "link",
+            "small": false,
+            "full_width": false,
+            "open_in_new_tab": false,
+            "spacing_bottom": "none"
+          }
+        },
+        "container_xfeyEh": {
+          "type": "container",
+          "settings": {
+            "position": "",
+            "overflow": "",
+            "size": {
+            },
+            "spacing": {
+            },
+            "layout": {
+              "flex-direction": "row"
+            },
+            "color_scheme": ""
+          },
+          "blocks": {
+            "container_fHmF6d": {
+              "type": "container",
+              "settings": {
+                "position": "",
+                "overflow": "",
+                "size": {
+                },
+                "spacing": {
+                },
+                "layout": {
+                },
+                "color_scheme": ""
+              }
+            }
+          },
+          "block_order": [
+            "container_fHmF6d"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_DpUWbP",
+        "link_dmGXQX",
+        "container_xfeyEh"
+      ],
+      "settings": {
+        "page_width": "page-width",
+        "position": "",
+        "overflow": "",
+        "spacing": {
+          "padding-block-start": "60px",
+          "padding-block-end": "60px"
+        },
+        "layout": {
+          "flex-direction": "column",
+          "align-items": "center",
+          "justify-content": "flex-start"
+        },
+        "color_scheme": ""
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }
