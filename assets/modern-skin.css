@@ -155,3 +155,9 @@ input,
 textarea{
   padding: 8px 10px;
 }
+
+.discount-allocation{
+  --gap: 5px;
+  padding: 4px 5px;
+  background-color: #b6b6b6;
+}
