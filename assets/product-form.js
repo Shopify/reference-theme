@@ -12,7 +12,8 @@ class ProductOptionValue extends HTMLElement {
       this.addEventListener('click', () => {
         productUrlInput.value = productUrl;
         variantIdInput.value = variantId;
-
+        productUrlInput.dispatchEvent(new Event('input'));
+        variantIdInput.dispatchEvent(new Event('input'));
       });
     }
   }
