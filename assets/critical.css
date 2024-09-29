@@ -88,6 +88,9 @@ a {
       --gap: 10px;
     }
   }
+  &.wrap{
+    flex-wrap: wrap;
+  }
   &.col {
     flex-direction: column;
     &.top {
