@@ -7,7 +7,7 @@
 
 <embla-slider
   id="slideshow-{{section.id}}"
-  class="{{ section.settings | class_list }} {{ section.settings.page_width }} color-{{ section.settings.color_scheme }}"
+  class="theme-section {{ section.settings | class_list }} color-{{ section.settings.color_scheme }}"
   options="loop: {{ section.settings.loop }}, containScroll: trimSnaps, align: start"
   auto-height
   {% if section.settings.autoplay_speed != 0 %}
@@ -37,26 +37,6 @@
   "tag": "section",
   "blocks": [{ "type": "slide" }],
   "settings": [
-    {
-      "type": "header",
-      "content": "Page width"
-    },
-    {
-      "type": "select",
-      "id": "page_width",
-      "label": "Page width",
-      "options": [
-        {
-          "value": "full-width",
-          "label": "Full width"
-        },
-        {
-          "value": "page-width",
-          "label": "Page width"
-        }
-      ],
-      "default": "page-width"
-    },
     {
       "type": "style.size_panel",
       "id": "size",

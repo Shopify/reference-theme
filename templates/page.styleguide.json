@@ -101,11 +101,15 @@
         "select_Bcdyg8"
       ],
       "settings": {
-        "page_width": "page-width",
         "position": "",
         "overflow": "",
+        "size": {
+          "max-width": "1200px"
+        },
         "spacing": {
-          "padding-block-end": "80px"
+          "padding-block-end": "80px",
+          "padding-inline-start": "40px",
+          "padding-inline-end": "40px"
         },
         "layout": {
           "flex-direction": "column"

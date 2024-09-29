@@ -8,8 +8,12 @@
     {% comment %} Todo: Add collapsible icons {% endcomment %}
     {% content_for "block", type: "heading", id: "collapsible-label" %}
     <div class="collapsible-icon">
-      <div class="collapsible-icon--open">{{ "plus.svg" | inline_asset_content }}</div>
-      <div class="collapsible-icon--close">{{ "minus.svg" | inline_asset_content }}</div>
+      <div class="collapsible-icon--open">
+        {% render 'icon', icon: 'plus' %}
+      </div>
+      <div class="collapsible-icon--close">
+        {% render 'icon', icon: 'minus' %}
+      </div>
     </div>
   </collapsible-label>
   <collapsible-content class="">
