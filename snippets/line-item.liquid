@@ -19,15 +19,6 @@
           {% endfor %}
         </div>
       </div>
-      <div class="line-item-discount-applications">
-        {% for discount_allocation in line_item.line_level_discount_allocations %}
-            <div class="discount-application flex row middle">
-              {% render 'icon', icon: 'discount', size: "18px" %}
-              <p class="small">{{ discount_allocation.discount_application.title }} (-{{ discount_allocation.discount_application.total_allocated_amount | money }})</p>
-            </div>
-        {% endfor %}
-      </div>
-    
       <quantity-rocker
         class="p"
         {% unless line_item.variant.inventory_management == nil %}
@@ -58,6 +49,16 @@
         {% if line_item.final_price != highest_price %}
           <span class="line-item-price-original">{{ highest_price | money }}</span>
         {% endif %}
+      </p>
+      <div class="line-item-discount-applications">
+        {% for discount_allocation in line_item.line_level_discount_allocations %}
+            <div class="discount-application flex row middle">
+              {% render 'icon', icon: 'discount', size: "18px" %}
+              <p class="small">{{ discount_allocation.discount_application.title }} (-{{ discount_allocation.discount_application.total_allocated_amount | money }})</p>
+            </div>
+        {% endfor %}
+      </div>
+      <p class="p">
         <span class="line-item-price-final {% if line_item.final_price != highest_price %}line-item-price-final--discounted{% endif %}">
           {{- line_item.final_price | money -}}
         </span>
