@@ -143,6 +143,11 @@
                     "placeholder": "Discount code"
                   }
                 },
+                "cart_summary_6JcHTj": {
+                  "type": "cart-summary",
+                  "settings": {
+                  }
+                },
                 "button_NNKn6H": {
                   "type": "button",
                   "settings": {
@@ -157,6 +162,7 @@
               },
               "block_order": [
                 "text_field_yaBYXL",
+                "cart_summary_6JcHTj",
                 "button_NNKn6H"
               ]
             }
