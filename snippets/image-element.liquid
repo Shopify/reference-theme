@@ -20,6 +20,7 @@
         assign aspect_ratio = numerator | divided_by: denominator | round: 7
       else
         assign aspect_ratio = image.aspect_ratio | default: 1.0 | round: 7
+      endif
     else
       if aspect_ratio < 0.000001
         assign aspect_ratio = image.aspect_ratio | default: 1.0 | round: 7
