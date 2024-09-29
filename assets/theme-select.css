@@ -5,10 +5,10 @@ theme-select {
   --background-selected: #fff;
   --border-width: 1px;
   --border-color: #e1e1e1;
-  --divider-color: #0008;
+  --divider-color: #e1e1e1;
   --hover-color: #0001;
-  --padding-block: 3px;
-  --padding-inline: 5px;
+  --padding-block: 8px;
+  --padding-inline: 10px;
   --padding: var(--padding-block) var(--padding-inline);
 }
 theme-select::part(selected-value) {
