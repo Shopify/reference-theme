@@ -36,6 +36,11 @@
       <a href="{{ line_item.url_to_remove }}" data-line-item-key="{{ line_item.key }}" name="line-item-remove">
         {{ "delete" | inline_asset_content }}
       </a>
+      <div class="">
+      {% for discount_allocation in line_item.discount_allocations %}
+          {% render 'discount-allocation', discount_allocation: discount_allocation %}
+      {% endfor %}
+      </div>
       <p class="p">
         {% assign highest_price = line_item.original_price %}
         {% if highest_price < line_item.variant.compare_at_price %}
