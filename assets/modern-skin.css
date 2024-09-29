@@ -156,6 +156,9 @@ textarea{
   padding: 8px 10px;
 }
 
+.line-item{
+  --gap: 10px;
+}
 .discount-application{
   --gap: 5px;
 }
