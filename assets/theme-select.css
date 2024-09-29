@@ -1,9 +1,10 @@
 theme-select {
   display: block;
   position: relative;
-  --background: #fff;
+  --background-dropdown: #fff;
+  --background-selected: #fff;
   --border-width: 1px;
-  --border-color: #000;
+  --border-color: #e1e1e1;
   --divider-color: #0008;
   --hover-color: #0001;
   --padding-block: 3px;
@@ -22,7 +23,7 @@ theme-select::part(selected-value) {
   border: var(--border-width) solid var(--border-color);
   padding: var(--padding);
   padding-right: calc(var(--icon-diagonal) + calc(2 * var(--padding-inline)));
-  background-color: var(--background);
+  background-color: var(--background-selected);
   cursor: pointer;
 }
 theme-select:not([open])::part(dropdown) {
@@ -39,7 +40,7 @@ theme-select::part(dropdown) {
   width: calc(100% - 2 * var(--border-width));
   border: var(--border-width) solid var(--border-color);
   border-top: none;
-  background-color: var(--background);
+  background-color: var(--background-dropdown);
 }
 theme-select::part(option) {
   display: block;
