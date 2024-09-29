@@ -37,7 +37,7 @@
         {{ "delete" | inline_asset_content }}
       </a>
       <div class="">
-      {% for discount_allocation in line_item.discount_allocations %}
+      {% for discount_allocation in line_item.line_level_discount_allocations %}
           {% render 'discount-allocation', discount_allocation: discount_allocation %}
       {% endfor %}
       </div>
