@@ -24,14 +24,25 @@ class ProductForm extends HTMLElement {
   constructor() {
     super();
   }
+  updateView() {
+    const productUrlInput = this.querySelector(`form [name="url"]`);
+    const variantIdInput = this.querySelector(`form [name="id"]`);
+    const sellingPlanInput = this.querySelector(`form [name="selling_plan"]`);
+    const fetchUrl = new URL(location);
+    fetchUrl.path = productUrlInput.value;
+    if(!!variantIdInput.value) {
+      fetchUrl.searchParams.set('variant', variantIdInput.value);
+    }
+    if(!!sellingPlanInput.value) {
+      fetchUrl.searchParams.set('selling_plan', sellingPlanInput.value);
+    }
+    console.log(fetchUrl.href);
+  }
   connectedCallback() {
-    const productUrlInput = this.querySelector(`[name="url"]`);
-    const variantIdInput = this.querySelector(`[name="id"]`);
-    const sellingPlanInput = this.querySelector(`[name="selling_plan"]`);
-    console.log(productUrlInput, variantIdInput, sellingPlanInput);
-    variantIdInput.addEventListener('input', () => {
-      console.log(productUrlInput?.value, variantIdInput?.value, sellingPlanInput?.value);
-    });
+    const variantIdInput = this.querySelector(`form [name="id"]`);
+    const sellingPlanInput = this.querySelector(`form [name="selling_plan"]`);
+    variantIdInput.addEventListener('input', this.updateView.bind(this));
+    sellingPlanInput.addEventListener('input', this.updateView.bind(this));
   }
 }
 customElements.define("product-form", ProductForm);
