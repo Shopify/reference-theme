@@ -125,8 +125,8 @@
                 "layout": {
                   "flex-direction": "column",
                   "align-items": "stretch",
-                  "row-gap": "0px",
-                  "column-gap": "0px"
+                  "row-gap": "10px",
+                  "column-gap": "10px"
                 },
                 "color_scheme": "scheme-3"
               },
