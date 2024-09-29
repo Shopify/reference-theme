@@ -1,13 +1,13 @@
 
 <div class="line-item flex row">
-  <div class="line-item--image">
+  <div class="line-item-image">
     {% render 'image-element', image: line_item.image, aspect_ratio: 1, fit: 'cover', sizes: "100px" %}
   </div>
   <div class="flex row space-between full-width">
     <div class="flex col space-between">
       <div class="flex col">
         <p class="h6">{{ line_item.product.title }}</p>
-        <div class="flex row middle line-item--options">
+        <div class="flex row middle line-item-options">
           {% for option in line_item.variant.options %}
             {% assign option_name = line_item.product.options_with_values[forloop.index0].name %}
             <p class="p">
@@ -18,6 +18,11 @@
             {% endunless %}
           {% endfor %}
         </div>
+      </div>
+      <div class="line-item-discount-applications">
+        {% for discount_allocation in line_item.line_level_discount_allocations %}
+            {% render 'discount-allocation', discount_allocation: discount_allocation %}
+        {% endfor %}
       </div>
       {% assign inventory_quantity = line_item.variant.inventory_quantity | at_most: 999 %}
       {% if inventory_quantity < 0 %}
@@ -36,11 +41,6 @@
       <a href="{{ line_item.url_to_remove }}" data-line-item-key="{{ line_item.key }}" name="line-item-remove">
         {{ "delete" | inline_asset_content }}
       </a>
-      <div class="">
-      {% for discount_allocation in line_item.line_level_discount_allocations %}
-          {% render 'discount-allocation', discount_allocation: discount_allocation %}
-      {% endfor %}
-      </div>
       <p class="p">
         {% assign highest_price = line_item.original_price %}
         {% if highest_price < line_item.variant.compare_at_price %}

@@ -159,3 +159,7 @@ textarea{
 .discount-allocation{
   --gap: 5px;
 }
+.line-item-price-original{
+  color: #b6b6b6;
+  text-decoration: line-through;
+}
