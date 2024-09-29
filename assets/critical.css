@@ -320,6 +320,8 @@ ul.linklist{
   --size: 24px;
   --width: var(--size);
   --height: var(--size);
+  width: var(--width);
+  height: var(--height);
   & svg{
     width: var(--width);
     height: var(--height);
