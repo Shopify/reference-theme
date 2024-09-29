@@ -161,6 +161,9 @@ textarea{
 }
 .line-item{
   --gap: 10px;
+  & .line-item-image{
+    flex-basis: 120px;
+  }
 }
 .line-item-price-original{
   color: #b6b6b6;
