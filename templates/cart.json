@@ -11,6 +11,132 @@
   "sections": {
     "main": {
       "type": "cart-main",
+      "blocks": {
+        "heading_c7cpQQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cart",
+            "html_tag": "p",
+            "heading_style": "h1",
+            "alignment": "center",
+            "spacing_bottom": "m",
+            "text_color": "",
+            "font_size": ""
+          }
+        },
+        "link_MUBwby": {
+          "type": "link",
+          "settings": {
+            "link": "",
+            "label": "Link label",
+            "button_style": "link",
+            "small": false,
+            "full_width": false,
+            "open_in_new_tab": false,
+            "spacing_bottom": "none"
+          }
+        },
+        "container_jfWrTh": {
+          "type": "container",
+          "settings": {
+            "position": "",
+            "overflow": "",
+            "size": {
+            },
+            "spacing": {
+              "padding-block-start": "20px"
+            },
+            "layout": {
+              "align-items": "flex-start",
+              "justify-content": "flex-start"
+            },
+            "color_scheme": ""
+          },
+          "blocks": {
+            "line_items_rzaDfi": {
+              "type": "line-items",
+              "settings": {
+                "spacing_bottom": "none"
+              },
+              "blocks": {
+                "cart-empty": {
+                  "type": "container",
+                  "static": true,
+                  "settings": {
+                    "position": "",
+                    "overflow": "",
+                    "size": {
+                    },
+                    "spacing": {
+                    },
+                    "layout": {
+                    },
+                    "color_scheme": ""
+                  }
+                }
+              },
+              "block_order": [
+
+              ]
+            },
+            "container_AKG3JD": {
+              "type": "container",
+              "settings": {
+                "position": "",
+                "overflow": "",
+                "size": {
+                },
+                "spacing": {
+                  "padding-block-start": "20px",
+                  "padding-block-end": "20px",
+                  "padding-inline-start": "20px",
+                  "padding-inline-end": "20px"
+                },
+                "layout": {
+                },
+                "color_scheme": "scheme-3"
+              },
+              "blocks": {
+                "button_NNKn6H": {
+                  "type": "button",
+                  "settings": {
+                    "label": "Check out",
+                    "button_style": "btn btn--primary",
+                    "spacing_bottom": "none"
+                  }
+                }
+              },
+              "block_order": [
+                "button_NNKn6H"
+              ]
+            }
+          },
+          "block_order": [
+            "line_items_rzaDfi",
+            "container_AKG3JD"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_c7cpQQ",
+        "link_MUBwby",
+        "container_jfWrTh"
+      ],
+      "settings": {
+        "page_width": "page-width",
+        "position": "",
+        "overflow": "",
+        "spacing": {
+          "padding-block-start": "60px",
+          "padding-block-end": "60px"
+        },
+        "layout": {
+          "flex-direction": "column",
+          "row-gap": "0px",
+          "column-gap": "0px"
+        },
+        "color_scheme": ""
+      }
     }
   },
   "order": [
