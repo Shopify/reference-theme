@@ -46,7 +46,7 @@ class ProductForm extends HTMLElement {
     .then((res) => res.json())
     .then((res) => {
       this.loading = true;
-      replaceView(res.sections[this.section]);
+      this.replaceView(res.sections[this.section]);
       this.loading = false;
     })
     .catch((err) => {
