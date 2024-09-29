@@ -2,6 +2,17 @@
   <p class="h6">{{ "cart.subtotal" | t }}</p>
   <p class="h6">{{ cart.total_price | money }}</p>
 </div>
+<div class="flex row space-between">
+  <p class="h6">{{ "cart.subtotal" | t }}</p>
+  <p class="h6">
+  {% if cart.taxes_included %}
+    {{ "cart.incl_vat" | t }}
+  {% else %}
+    {{ "cart.excl_vat" | t }}
+  {% endif %}
+  </p>
+</div>
+
 
 {% schema %}
 {

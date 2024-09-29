@@ -23,6 +23,8 @@
     }
   },
   "cart": {
-    "subtotal": "Subtotal"
+    "subtotal": "Subtotal",
+    "incl_vat": "incl. VAT",
+    "excl_vat": "plus VAT"
   }
 }
