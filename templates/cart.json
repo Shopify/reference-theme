@@ -131,11 +131,6 @@
                 "color_scheme": "scheme-3"
               },
               "blocks": {
-                "subtotal_GFHPGw": {
-                  "type": "subtotal",
-                  "settings": {
-                  }
-                },
                 "text_field_yaBYXL": {
                   "type": "text-field",
                   "settings": {
@@ -161,7 +156,6 @@
                 }
               },
               "block_order": [
-                "subtotal_GFHPGw",
                 "text_field_yaBYXL",
                 "button_NNKn6H"
               ]
