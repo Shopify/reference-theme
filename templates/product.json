@@ -35,7 +35,8 @@
                 "image": "shopify://shop_images/putting-on-your-shoes_925x_3eb2de8e-cb99-479d-b708-0a411f34018a.jpg",
                 "object_fit": "cover",
                 "size": {
-                  "width": "auto"
+                  "width": "100%",
+                  "flex-grow": "1"
                 },
                 "aspect_ratio_type": "custom",
                 "aspect_ratio": 1,
