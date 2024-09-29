@@ -123,20 +123,31 @@
                   "padding-inline-end": "20px"
                 },
                 "layout": {
+                  "flex-direction": "column",
+                  "align-items": "stretch"
                 },
                 "color_scheme": "scheme-3"
               },
               "blocks": {
+                "subtotal_GFHPGw": {
+                  "type": "subtotal",
+                  "settings": {
+                  }
+                },
                 "button_NNKn6H": {
                   "type": "button",
                   "settings": {
                     "label": "Check out",
+                    "name": "checkout",
                     "button_style": "btn btn--primary",
+                    "small": false,
+                    "full_width": true,
                     "spacing_bottom": "none"
                   }
                 }
               },
               "block_order": [
+                "subtotal_GFHPGw",
                 "button_NNKn6H"
               ]
             }
