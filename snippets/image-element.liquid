@@ -62,7 +62,7 @@
           endif
           echo image | image_url: width: crop_width, crop: "region", crop_width: crop_width, crop_height: crop_height, crop_left: crop_left, crop_top: crop_top | image_tag: widths: widths, loading: loading, sizes: sizes, style: "object-position: 50% 50%; object-fit: cover;"
         else
-          assign style = "object-fit: " | append: fit | append: "; object-position: {{ image.presentation.focal_point }}"
+          assign style = "object-fit: " | append: fit | append: "; object-position: " | append: image.presentation.focal_point | append: ";"
           echo image | image_url: width: image.width | image_tag: widths: widths, loading: loading, sizes: sizes, style: style
         endif
       endif
