@@ -63,7 +63,7 @@
                 },
                 "spacing": {
                 },
-                "color_scheme": "scheme-3"
+                "color_scheme": "scheme-1"
               },
               "blocks": {
                 "cart-empty": {
@@ -124,7 +124,9 @@
                 },
                 "layout": {
                   "flex-direction": "column",
-                  "align-items": "stretch"
+                  "align-items": "stretch",
+                  "row-gap": "10px",
+                  "column-gap": "10px"
                 },
                 "color_scheme": "scheme-3"
               },
