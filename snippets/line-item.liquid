@@ -32,9 +32,9 @@
             {% endfor %}
           </div>
         </div>
-        <div class="line-item-quantity flex row middle">
+        <div class="line-item-quantity flex row middle spacing-bottom-2xs">
           <quantity-rocker
-            class="p spacing-bottom-2xs"
+            class="p"
             {% unless line_item.variant.inventory_management == nil %}
               {% assign inventory_quantity = line_item.variant.inventory_quantity | at_most: 999 %}
               {% if inventory_quantity < 0 %}
