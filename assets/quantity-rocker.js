@@ -16,7 +16,6 @@ class QuantityRocker extends HTMLElement {
   }
 
   render() {
-    this.#shadow = this.#shadow || this.attachShadow({ mode: "open" });
     this.#shadow.innerHTML = `
       <style>
         input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
