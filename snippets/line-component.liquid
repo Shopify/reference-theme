@@ -6,12 +6,12 @@
   <div class="flex row space-between full-width">
     <div class="flex col space-between">
       <div class="flex col">
-        <p class="h6 spacing-bottom-2xs">{{ component.product.title }}</p>
+        <p class="p spacing-bottom-2xs">{{ component.product.title }}</p>
         {% unless component.product.has_only_default_variant %}
           <div class="flex row middle line-component-options spacing-bottom-2xs">
             {% for option in component.variant.options %}
               {% assign option_name = component.product.options_with_values[forloop.index0].name %}
-              <p class="p">
+              <p class="small">
                 <span>{{ option_name }}</span>:&nbsp;<span>{{ option.name }}</span>
               </p>
               {% unless forloop.last %}
