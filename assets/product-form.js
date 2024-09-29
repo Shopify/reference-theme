@@ -46,7 +46,6 @@ class ProductForm extends HTMLElement {
     fetch(fetchUrl.href)
     .then((res) => res.json())
     .then((res) => {
-      this.replaceView(res[this.section]);
       const template = document.createElement("template");
       template.innerHTML = data.trim();
       const new_form = template.content.querySelector('product-form');
