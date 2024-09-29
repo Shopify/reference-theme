@@ -37,7 +37,7 @@
                 "size": {
                   "width": "auto"
                 },
-                "aspect_ratio_type": "auto",
+                "aspect_ratio_type": "custom",
                 "aspect_ratio": 1,
                 "spacing_bottom": "none",
                 "placeholder": "image"
