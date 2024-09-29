@@ -1,8 +1,8 @@
-<div class="flex row space-between">
+<div class="flex row space-between spacing-bottom-xs">
   <p class="h6">{{ "cart.subtotal" | t }}</p>
   <p class="h6">{{ cart.items_subtotal_price | money }}</p>
 </div>
-<div class="cart-discount-applications">
+<div class="cart-discount-applications spacing-bottom-xs">
   {% for discount_application in cart.cart_level_discount_applications %}
     <div class="discount-application flex row middle space-between">
       <div class="flex row middle discount-application-title">
@@ -13,11 +13,11 @@
     </div>
   {% endfor %}
 </div>
-<div class="flex row space-between">
+<div class="flex row space-between spacing-bottom-2xs">
   <p class="h6">{{ "cart.total" | t }}</p>
   <p class="h6">{{ cart.total_price | money }}</p>
 </div>
-<div class="flex row right">
+<div class="flex row right spacing-bottom-xs">
   <p class="small">
   {% if cart.taxes_included %}
     {{ "cart.incl_vat" | t }}
@@ -27,7 +27,7 @@
   </p>
 </div>
 {% if cart.requires_shipping %}
-  <div class="flex row space-between">
+  <div class="flex row space-between spacing-bottom-xs">
     <p class="small">{{ "cart.shipping" | t }}</p>
     <p class="small">
       {{ "cart.calculated_at_checkout" | t }}

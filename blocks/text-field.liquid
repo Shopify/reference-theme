@@ -1,5 +1,5 @@
 
-<div class="shopify-block--text-field form-element">
+<div class="shopify-block--text-field form-element spacing-bottom-{{ block.settings.spacing_bottom }}">
   <label {% if block.settings.label_hidden %}hidden{% endif %} class="form-input-label" for="{{ block.id }}">{{ block.settings.title }}</label>
   {% capture attributes %}
     id="{{ block.id }}"
@@ -70,6 +70,23 @@
       "type": "number",
       "id": "max_length",
       "label": "Max length"
+    },
+    {
+      "type": "select",
+      "id": "spacing_bottom",
+      "label": "Spacing bottom",
+      "options": [
+        { "value": "none", "label": "none" },
+        { "value": "2xs", "label": "2xs" },
+        { "value": "xs", "label": "xs" },
+        { "value": "s", "label": "s" },
+        { "value": "m", "label": "m" },
+        { "value": "l", "label": "l" },
+        { "value": "xl", "label": "xl" },
+        { "value": "2xl", "label": "2xl" },
+        { "value": "3xl", "label": "3xl" }
+      ],
+      "default": "none"
     }
   ],
   "presets": [
