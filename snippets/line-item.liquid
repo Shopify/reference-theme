@@ -39,7 +39,7 @@
     </div>
     <div class="flex col space-between between right">
       <a href="{{ line_item.url_to_remove }}" data-line-item-key="{{ line_item.key }}" name="line-item-remove">
-        {{ "delete" | inline_asset_content }}
+        {{ "delete.svg" | inline_asset_content }}
       </a>
       <p class="p">
         {% assign highest_price = line_item.original_price %}
