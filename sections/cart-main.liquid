@@ -2,7 +2,7 @@
 <div class="color-{{ section.settings.color_scheme }} full-width {{ section.settings.overflow }} {{ section.settings.position }}">
   <cart-form section="{{section.id}}">
     {% form "cart", cart %}
-      <div class="{{ section.settings | class_list }} ">
+      <div class="theme-section {{ section.settings | class_list }} ">
         {% content_for "blocks" %}
       </div>
     {% endform %}

@@ -33,6 +33,9 @@ textarea{
 .full-width {
   width: 100%;
 }
+.theme-section{
+  margin-inline: auto;
+}
 
 .shopify-section {
   display: flex;
