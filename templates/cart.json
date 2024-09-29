@@ -136,8 +136,8 @@
                 "layout": {
                   "flex-direction": "column",
                   "align-items": "stretch",
-                  "row-gap": "10px",
-                  "column-gap": "10px"
+                  "row-gap": "0px",
+                  "column-gap": "0px"
                 },
                 "color_scheme": "scheme-3"
               },
@@ -198,13 +198,13 @@
         "spacing": {
           "padding-block-start": "60px",
           "padding-block-end": "60px",
+          "padding-inline-start": "40px",
+          "padding-inline-end": "40px",
           "@media (--mobile)": {
             "padding-block-end": "0px",
             "padding-inline-start": "0px",
             "padding-inline-end": "0px"
-          },
-          "padding-inline-start": "40px",
-          "padding-inline-end": "40px"
+          }
         },
         "layout": {
           "flex-direction": "column",
