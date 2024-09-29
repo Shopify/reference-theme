@@ -73,11 +73,11 @@
           {{ block.shopify_attributes }}>
           <collapsible-label class="full-width flex row space-between">
             <div class="collapsible-icon">
-              <div class="collapsible-icon--open">
+              <div class="collapsible-icon--open flex row">
                 <p class="p">Show {{line_item.item_components.size}} items</p>
                 {% render 'icon', icon: 'plus' %}
               </div>
-              <div class="collapsible-icon--close">
+              <div class="collapsible-icon--close  flex row">
                 <p class="p">Hide {{line_item.item_components.size}} items</p>
                 {% render 'icon', icon: 'minus' %}
               </div>
