@@ -1,10 +1,26 @@
-{% comment %} Should make a setting to decide which type of heading we're outputting instead of a heading size one. {% endcomment %}
-<{{block.settings.html_tag}}
-  class="shopify-block-heading {{ block.settings | class_list }} {{ block.settings.heading_style }} text-{{ block.settings.alignment }}"
-  {{ block.shopify_attributes }}
->
+{% if block.settings.text_color != blank %}
+  <style>
+    #shopify-block--{{ block.id }}{
+      background: {{ block.settings.text_color }};
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+{% endif %}
+{% if block.settings.font_size != blank %}
+  <style>
+    #shopify-block--{{ block.id }}{
+      font-size: {{ block.settings.font_size | append: "px" }};
+    }
+  </style>
+{% endif %}
+
+<{{ block.settings.html_tag }}
+  id="shopify-block--{{ block.id }}"
+  class="shopify-block--heading {{ block.settings | class_list }} {{ block.settings.heading_style }} text-{{ block.settings.alignment }} spacing-bottom-{{ block.settings.spacing_bottom }}"
+  {{ block.shopify_attributes }}>
   {{ block.settings.heading }}
-</{{block.settings.html_tag}}>
+</{{ block.settings.html_tag }}>
 
 {% schema %}
 {
@@ -90,6 +106,38 @@
       "id": "alignment",
       "label": "Text alignment",
       "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "spacing_bottom",
+      "label": "Spacing bottom",
+      "options": [
+        { "value": "none", "label": "none" },
+        { "value": "2xs", "label": "2xs" },
+        { "value": "xs", "label": "xs" },
+        { "value": "s", "label": "s" },
+        { "value": "m", "label": "m" },
+        { "value": "l", "label": "l" },
+        { "value": "xl", "label": "xl" },
+        { "value": "2xl", "label": "2xl" },
+        { "value": "3xl", "label": "3xl" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "header",
+      "content": "Advanced"
+    },
+    {
+      "type": "color_background",
+      "id": "text_color",
+      "label": "Text color"
+    },
+    {
+      "type": "text",
+      "id": "font_size",
+      "label": "Font size (px)",
+      "info": "Overwrite the font size given by the style."
     }
   ],
   "presets": [{ "name": "Heading" }]

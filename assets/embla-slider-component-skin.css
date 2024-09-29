@@ -1,23 +1,23 @@
-embla-slider{
-  position: relative;  
+embla-slider {
+  position: relative;
 }
-embla-slider[fade]{
-  & embla-slide.is-snapped{
+embla-slider[fade] {
+  & embla-slide.is-snapped {
     transition: opacity 0.4s;
-  }  
+  }
 }
 /* Navigation */
-.embla-navigation{
+.embla-navigation {
   position: absolute;
   bottom: 0;
   width: 100%;
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 5px;
-  &.embla-dots{
-    & embla-thumbnail{
+  &.embla-dots {
+    & embla-thumbnail {
       background-color: currentColor;
       border-radius: 50%;
       height: 6px;
@@ -25,44 +25,43 @@ embla-slider[fade]{
       width: 6px;
       position: relative;
       & svg {
-        display:none;
-        & .progress{
+        display: none;
+        & .progress {
           stroke-dasharray: 100;
           stroke-dashoffset: 100;
         }
       }
-      &.is-selected{
+      &.is-selected {
         background-color: transparent;
         width: 9px;
         height: 9px;
         opacity: 1;
         & svg {
-          display:block;
+          display: block;
           transform: rotate(-90deg);
           position: absolute;
           top: 0;
           left: 0;
-          & .shadow{
+          & .shadow {
             opacity: 0.4;
           }
-          & .progress{
+          & .progress {
             stroke-dashoffset: 0;
             transition: stroke-dashoffset var(--autoplay-speed) linear;
           }
         }
       }
     }
-    
   }
-  &.embla-bars{
-    & embla-thumbnail{
+  &.embla-bars {
+    & embla-thumbnail {
       position: relative;
       height: 6px;
       overflow: hidden;
       position: relative;
       vertical-align: top;
       width: 120px;
-      &::before{
+      &::before {
         content: "";
         display: block;
         position: absolute;
@@ -71,7 +70,7 @@ embla-slider[fade]{
         height: 100%;
         opacity: 0.4;
       }
-      &::after{
+      &::after {
         content: "";
         display: block;
         position: absolute;
@@ -81,27 +80,27 @@ embla-slider[fade]{
         height: 100%;
         background-color: currentColor;
       }
-      &.is-selected::after{
+      &.is-selected::after {
         transform: translateX(0%);
         transition: transform var(--autoplay-speed) linear;
       }
     }
   }
 }
-embla-slider:not([autoplay]) .embla-navigation.embla-dots embla-thumbnail.is-selected{
+embla-slider:not([autoplay]) .embla-navigation.embla-dots embla-thumbnail.is-selected {
   background-color: currentColor;
   opacity: 1;
 }
 /* Controls - Prev & Next */
-.embla-controls{
-  &.embla-simple{
-    display:flex;
+.embla-controls {
+  &.embla-simple {
+    display: flex;
     transform: translateY(50%);
     position: absolute;
     right: 0;
     bottom: 0;
     & embla-next,
-    & embla-prev{
+    & embla-prev {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -109,32 +108,32 @@ embla-slider:not([autoplay]) .embla-navigation.embla-dots embla-thumbnail.is-sel
       border-radius: 50%;
       padding: 10px;
       box-shadow: 0 5px 5px #0000001a;
-      &:hover{
+      &:hover {
         transform: scale(1.12);
       }
-      &:active{
-        transform: scale(1.0);
+      &:active {
+        transform: scale(1);
       }
     }
   }
 }
 /* Progress bar */
-.embla-progress{
+.embla-progress {
   position: relative;
   width: 100%;
   height: 6px;
-  &::before{
+  &::before {
     content: "";
-    display:block;
+    display: block;
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
     background-color: currentColor;
-    opacity: .4;
+    opacity: 0.4;
   }
-  &::after{
+  &::after {
     content: "";
     display: block;
     height: 100%;

@@ -50,6 +50,58 @@
       },
       {
         "type": "select",
+        "id": "font_weight_h1",
+        "label": "Weight",
+        "default": "400",
+        "options": [
+          {
+            "value": "100",
+            "label": "Thin"
+          },
+          {
+            "value": "200",
+            "label": "Extra Light"
+          },
+          {
+            "value": "300",
+            "label": "Light"
+          },
+          {
+            "value": "350",
+            "label": "Book"
+          },
+          {
+            "value": "400",
+            "label": "Normal (Regular)"
+          },
+          {
+            "value": "500",
+            "label": "Medium"
+          },
+          {
+            "value": "600",
+            "label": "Semi Bold"
+          },
+          {
+            "value": "700",
+            "label": "Bold"
+          },
+          {
+            "value": "800",
+            "label": "Extra Bold"
+          },
+          {
+            "value": "900",
+            "label": "Black"
+          },
+          {
+            "value": "950",
+            "label": "Extra Black"
+          }
+        ]
+      },
+      {
+        "type": "select",
         "id": "font_family_h1",
         "label": "Font family",
         "options": [
@@ -64,7 +116,7 @@
         ],
         "default": "--font-family-primary"
       },
-      
+
       {
         "type": "header",
         "content": "Font Style H2"
@@ -86,6 +138,58 @@
         "id": "line_height_h2",
         "label": "Line height",
         "default": "1.24"
+      },
+      {
+        "type": "select",
+        "id": "font_weight_h2",
+        "label": "Weight",
+        "default": "400",
+        "options": [
+          {
+            "value": "100",
+            "label": "Thin"
+          },
+          {
+            "value": "200",
+            "label": "Extra Light"
+          },
+          {
+            "value": "300",
+            "label": "Light"
+          },
+          {
+            "value": "350",
+            "label": "Book"
+          },
+          {
+            "value": "400",
+            "label": "Normal (Regular)"
+          },
+          {
+            "value": "500",
+            "label": "Medium"
+          },
+          {
+            "value": "600",
+            "label": "Semi Bold"
+          },
+          {
+            "value": "700",
+            "label": "Bold"
+          },
+          {
+            "value": "800",
+            "label": "Extra Bold"
+          },
+          {
+            "value": "900",
+            "label": "Black"
+          },
+          {
+            "value": "950",
+            "label": "Extra Black"
+          }
+        ]
       },
       {
         "type": "select",
@@ -127,6 +231,58 @@
       },
       {
         "type": "select",
+        "id": "font_weight_h3",
+        "label": "Weight",
+        "default": "400",
+        "options": [
+          {
+            "value": "100",
+            "label": "Thin"
+          },
+          {
+            "value": "200",
+            "label": "Extra Light"
+          },
+          {
+            "value": "300",
+            "label": "Light"
+          },
+          {
+            "value": "350",
+            "label": "Book"
+          },
+          {
+            "value": "400",
+            "label": "Normal (Regular)"
+          },
+          {
+            "value": "500",
+            "label": "Medium"
+          },
+          {
+            "value": "600",
+            "label": "Semi Bold"
+          },
+          {
+            "value": "700",
+            "label": "Bold"
+          },
+          {
+            "value": "800",
+            "label": "Extra Bold"
+          },
+          {
+            "value": "900",
+            "label": "Black"
+          },
+          {
+            "value": "950",
+            "label": "Extra Black"
+          }
+        ]
+      },
+      {
+        "type": "select",
         "id": "font_family_h3",
         "label": "Font family",
         "options": [
@@ -162,6 +318,58 @@
         "id": "line_height_h4",
         "label": "Line height",
         "default": "1.25"
+      },
+      {
+        "type": "select",
+        "id": "font_weight_h4",
+        "label": "Weight",
+        "default": "400",
+        "options": [
+          {
+            "value": "100",
+            "label": "Thin"
+          },
+          {
+            "value": "200",
+            "label": "Extra Light"
+          },
+          {
+            "value": "300",
+            "label": "Light"
+          },
+          {
+            "value": "350",
+            "label": "Book"
+          },
+          {
+            "value": "400",
+            "label": "Normal (Regular)"
+          },
+          {
+            "value": "500",
+            "label": "Medium"
+          },
+          {
+            "value": "600",
+            "label": "Semi Bold"
+          },
+          {
+            "value": "700",
+            "label": "Bold"
+          },
+          {
+            "value": "800",
+            "label": "Extra Bold"
+          },
+          {
+            "value": "900",
+            "label": "Black"
+          },
+          {
+            "value": "950",
+            "label": "Extra Black"
+          }
+        ]
       },
       {
         "type": "select",
@@ -203,6 +411,58 @@
       },
       {
         "type": "select",
+        "id": "font_weight_h5",
+        "label": "Weight",
+        "default": "400",
+        "options": [
+          {
+            "value": "100",
+            "label": "Thin"
+          },
+          {
+            "value": "200",
+            "label": "Extra Light"
+          },
+          {
+            "value": "300",
+            "label": "Light"
+          },
+          {
+            "value": "350",
+            "label": "Book"
+          },
+          {
+            "value": "400",
+            "label": "Normal (Regular)"
+          },
+          {
+            "value": "500",
+            "label": "Medium"
+          },
+          {
+            "value": "600",
+            "label": "Semi Bold"
+          },
+          {
+            "value": "700",
+            "label": "Bold"
+          },
+          {
+            "value": "800",
+            "label": "Extra Bold"
+          },
+          {
+            "value": "900",
+            "label": "Black"
+          },
+          {
+            "value": "950",
+            "label": "Extra Black"
+          }
+        ]
+      },
+      {
+        "type": "select",
         "id": "font_family_h5",
         "label": "Font family",
         "options": [
@@ -238,6 +498,58 @@
         "id": "line_height_h6",
         "label": "Line height",
         "default": "1.38"
+      },
+      {
+        "type": "select",
+        "id": "font_weight_h6",
+        "label": "Weight",
+        "default": "400",
+        "options": [
+          {
+            "value": "100",
+            "label": "Thin"
+          },
+          {
+            "value": "200",
+            "label": "Extra Light"
+          },
+          {
+            "value": "300",
+            "label": "Light"
+          },
+          {
+            "value": "350",
+            "label": "Book"
+          },
+          {
+            "value": "400",
+            "label": "Normal (Regular)"
+          },
+          {
+            "value": "500",
+            "label": "Medium"
+          },
+          {
+            "value": "600",
+            "label": "Semi Bold"
+          },
+          {
+            "value": "700",
+            "label": "Bold"
+          },
+          {
+            "value": "800",
+            "label": "Extra Bold"
+          },
+          {
+            "value": "900",
+            "label": "Black"
+          },
+          {
+            "value": "950",
+            "label": "Extra Black"
+          }
+        ]
       },
       {
         "type": "select",
@@ -279,6 +591,58 @@
       },
       {
         "type": "select",
+        "id": "font_weight_large",
+        "label": "Weight",
+        "default": "400",
+        "options": [
+          {
+            "value": "100",
+            "label": "Thin"
+          },
+          {
+            "value": "200",
+            "label": "Extra Light"
+          },
+          {
+            "value": "300",
+            "label": "Light"
+          },
+          {
+            "value": "350",
+            "label": "Book"
+          },
+          {
+            "value": "400",
+            "label": "Normal (Regular)"
+          },
+          {
+            "value": "500",
+            "label": "Medium"
+          },
+          {
+            "value": "600",
+            "label": "Semi Bold"
+          },
+          {
+            "value": "700",
+            "label": "Bold"
+          },
+          {
+            "value": "800",
+            "label": "Extra Bold"
+          },
+          {
+            "value": "900",
+            "label": "Black"
+          },
+          {
+            "value": "950",
+            "label": "Extra Black"
+          }
+        ]
+      },
+      {
+        "type": "select",
         "id": "font_family_large",
         "label": "Font family",
         "options": [
@@ -314,6 +678,58 @@
         "id": "line_height_p",
         "label": "Line height",
         "default": "1.5"
+      },
+      {
+        "type": "select",
+        "id": "font_weight_p",
+        "label": "Weight",
+        "default": "400",
+        "options": [
+          {
+            "value": "100",
+            "label": "Thin"
+          },
+          {
+            "value": "200",
+            "label": "Extra Light"
+          },
+          {
+            "value": "300",
+            "label": "Light"
+          },
+          {
+            "value": "350",
+            "label": "Book"
+          },
+          {
+            "value": "400",
+            "label": "Normal (Regular)"
+          },
+          {
+            "value": "500",
+            "label": "Medium"
+          },
+          {
+            "value": "600",
+            "label": "Semi Bold"
+          },
+          {
+            "value": "700",
+            "label": "Bold"
+          },
+          {
+            "value": "800",
+            "label": "Extra Bold"
+          },
+          {
+            "value": "900",
+            "label": "Black"
+          },
+          {
+            "value": "950",
+            "label": "Extra Black"
+          }
+        ]
       },
       {
         "type": "select",
@@ -355,6 +771,58 @@
       },
       {
         "type": "select",
+        "id": "font_weight_small",
+        "label": "Weight",
+        "default": "400",
+        "options": [
+          {
+            "value": "100",
+            "label": "Thin"
+          },
+          {
+            "value": "200",
+            "label": "Extra Light"
+          },
+          {
+            "value": "300",
+            "label": "Light"
+          },
+          {
+            "value": "350",
+            "label": "Book"
+          },
+          {
+            "value": "400",
+            "label": "Normal (Regular)"
+          },
+          {
+            "value": "500",
+            "label": "Medium"
+          },
+          {
+            "value": "600",
+            "label": "Semi Bold"
+          },
+          {
+            "value": "700",
+            "label": "Bold"
+          },
+          {
+            "value": "800",
+            "label": "Extra Bold"
+          },
+          {
+            "value": "900",
+            "label": "Black"
+          },
+          {
+            "value": "950",
+            "label": "Extra Black"
+          }
+        ]
+      },
+      {
+        "type": "select",
         "id": "font_family_small",
         "label": "Font family",
         "options": [
@@ -391,6 +859,12 @@
         "default": "#fff"
       },
       {
+        "type": "color",
+        "id": "button_primary_border_color",
+        "label": "Border Color",
+        "default": "#000"
+      },
+      {
         "type": "header",
         "content": "Secondary"
       },
@@ -407,6 +881,12 @@
         "default": "#000"
       },
       {
+        "type": "color",
+        "id": "button_secondary_border_color",
+        "label": "Border Color",
+        "default": "#000"
+      },
+      {
         "type": "header",
         "content": "Tertiary"
       },
@@ -420,7 +900,12 @@
         "id": "button_tertiary_color",
         "label": "Color",
         "default": "#000"
-      }
+      },
+      {
+        "type": "color",
+        "id": "button_tertiary_border_color",
+        "label": "Border Color"
+      },
     ]
   },
   {

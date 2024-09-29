@@ -1,0 +1,118 @@
+<div
+  class="shopify-block--advanced-overlay {{ block.settings | class_list }} color-{{ block.settings.color_scheme }}"
+  {{ block.shopify_attributes }}
+  style="
+    --top: {{ block.settings.top | append: "%" }};
+    --left: {{ block.settings.left | append: "%" }};
+    --translate: {{ block.settings.translateX | append: "%" }} {{ block.settings.translateY | append: "%" }};
+  ">
+  {% content_for "blocks" %}
+</div>
+
+{% schema %}
+{
+  "name": "Advanced Overlay",
+  "tag": null,
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    {
+      "type": "select",
+      "id": "overflow",
+      "label": "Overflow",
+      "options": [
+        {
+          "value": "",
+          "label": "visible"
+        },
+        {
+          "value": "overflow-hidden",
+          "label": "hidden"
+        },
+        {
+          "value": "overflow-scroll",
+          "label": "scroll"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing"
+    },
+    {
+      "type": "style.layout_panel",
+      "id": "layout",
+      "label": "Layout",
+      "default": {
+        "flex-direction": "row",
+        "gap": "20px",
+        "justify-content": "center",
+        "align-items": "center",
+        "@media (--mobile)": {
+          "flex-wrap": "wrap"
+        }
+      }
+    },
+    {
+      "type": "header",
+      "content": "Positioning"
+    },
+    {
+      "type": "range",
+      "id": "top",
+      "min": -100,
+      "max": 100,
+      "step": 2,
+      "unit": "%",
+      "label": "Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "left",
+      "min": -100,
+      "max": 100,
+      "step": 2,
+      "unit": "%",
+      "label": "Left",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "translateX",
+      "min": -100,
+      "max": 100,
+      "step": 2,
+      "unit": "%",
+      "label": "Translate (x)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "translateY",
+      "min": -100,
+      "max": 100,
+      "step": 2,
+      "unit": "%",
+      "label": "Translate (y)",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Advanced Overlay"
+    }
+  ]
+}
+{% endschema %}

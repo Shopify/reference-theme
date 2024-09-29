@@ -1,0 +1,121 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "styleguide_rzN9HH": {
+      "type": "styleguide",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "container",
+      "blocks": {
+        "quantity_rocker_qNCwMm": {
+          "type": "quantity-rocker",
+          "settings": {
+            "label_hidden": false,
+            "name": "",
+            "title": ""
+          }
+        },
+        "text_field_ANxHgG": {
+          "type": "text-field",
+          "settings": {
+            "required": true,
+            "multiline": false,
+            "label_hidden": false,
+            "name": "",
+            "title": "Singleline Text field",
+            "pattern": "",
+            "placeholder": "Placeholder"
+          }
+        },
+        "text_field_TmqNgV": {
+          "type": "text-field",
+          "settings": {
+            "required": false,
+            "multiline": true,
+            "label_hidden": false,
+            "name": "",
+            "title": "Multiline Text field",
+            "pattern": "",
+            "placeholder": "Placeholder"
+          }
+        },
+        "select_Bcdyg8": {
+          "type": "select",
+          "settings": {
+            "required": false,
+            "label_hidden": false,
+            "title": "Select",
+            "name": "",
+            "placeholder": "Select a value"
+          },
+          "blocks": {
+            "option_UyWNUp": {
+              "type": "option",
+              "settings": {
+                "selected": false,
+                "disabled": false,
+                "value": "a",
+                "title": "Option A"
+              }
+            },
+            "option_e8jDWB": {
+              "type": "option",
+              "settings": {
+                "selected": false,
+                "disabled": false,
+                "value": "b",
+                "title": "Option B"
+              }
+            },
+            "option_YCqPhQ": {
+              "type": "option",
+              "settings": {
+                "selected": false,
+                "disabled": false,
+                "value": "c",
+                "title": "Option C"
+              }
+            }
+          },
+          "block_order": [
+            "option_UyWNUp",
+            "option_e8jDWB",
+            "option_YCqPhQ"
+          ]
+        }
+      },
+      "block_order": [
+        "quantity_rocker_qNCwMm",
+        "text_field_ANxHgG",
+        "text_field_TmqNgV",
+        "select_Bcdyg8"
+      ],
+      "settings": {
+        "page_width": "page-width",
+        "position": "",
+        "overflow": "",
+        "spacing": {
+          "padding-block-end": "80px"
+        },
+        "layout": {
+          "flex-direction": "column"
+        },
+        "color_scheme": ""
+      }
+    }
+  },
+  "order": [
+    "styleguide_rzN9HH",
+    "main"
+  ]
+}

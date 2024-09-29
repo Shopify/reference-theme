@@ -1,0 +1,21 @@
+{
+  "plugins": ["@shopify/prettier-plugin-liquid"],
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "semi": true,
+  "singleQuote": false,
+  "liquidSingleQuote": false,
+  "embeddedSingleQuote": false,
+  "embeddedLanguageFormatting": "auto",
+  "singleAttributePerLine": true,
+  "htmlWhitespaceSensitivity": "css",
+  "singleLineLinkTags": true,
+  "indentSchema": false,
+  "printWidth": 120,
+  "useTabs": false,
+  "bracketSameLine": true,
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "overrides": []
+}

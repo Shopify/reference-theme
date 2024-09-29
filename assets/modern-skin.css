@@ -4,6 +4,14 @@
     left: -200%;
   }
 }
+@keyframes line {
+  0%{
+    width: 0%;
+  }
+  100% {
+    width: 100%
+  }
+}
 
 @keyframes fade-up {
   from {
@@ -35,35 +43,126 @@
 }
 
 /* buttons */
-.btn{
+.btn {
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 150%;
     width: 200%;
     height: 100%;
     transform: skewX(-20deg);
-    background-image: linear-gradient(to right,transparent, rgba(255,255,255,.25),transparent);
+    background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.25), transparent);
   }
-  &:hover:after {
+  &.btn--primary[disabled]{
+    background-color: #f6f6f6;
+    border-color: #f6f6f6;
+    color: #b6b6b6;
+  }
+  &.btn--secondary[disabled]{
+    background-color: #f6f6f6;
+    border-color: #b6b6b6;
+    color: #b6b6b6;
+  }
+  &.btn--tertiary[disabled]{
+    border-color: #f6f6f6;
+    color: #b6b6b6;
+  }
+  &.btn--primary:not([disabled]):not([loading]):hover:after {
     animation: shine 1s cubic-bezier(0.01, 0.56, 1, 1);
+  }
+  &.btn--tertiary:not([disabled]):not([loading])[hovered],
+  &.btn--tertiary:not([disabled]):not([loading]):hover{
+    border-color: var(--color);
+  }
+  &[loading]{
+    color: var(--background-color);
+  }
+}
+
+.link{
+  position: relative;
+  &[disabled]{
+    color: #b6b6b6;
+  }
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom: 1px solid var(--color-foreground);
+    width:0%;
+    z-index: 1;
+  }
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom: 1px solid #b6b6b6;
+    z-index: 0;
+    width: 100%;
+  }
+  &:not([disabled]):not([loading])[hovered]:after,
+  &:not([disabled]):not([loading]):hover:after {
+    animation: line 0.3s cubic-bezier(0.65, 0, 0.35, 1) both;
   }
 }
 
 /* text */
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .large, p, .p, small, .small, .btn{
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+.large,
+p,
+.p,
+small,
+.small,
+.btn {
   animation: fade-up ease;
   animation-timeline: view(90svh 0px);
 }
 
-.image-wrapper > img, 
-.image-wrapper > svg{
+.image-wrapper > img,
+.image-wrapper > svg {
   animation: fade-in ease;
   animation-timeline: view(90svh 0px);
-  & > img, 
-  & > svg{
+  & > img,
+  & > svg {
     animation: scale-in ease;
     animation-timeline: view(90svh 0px);
   }
+}
+
+.form-element{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+input,
+textarea{
+  padding: 8px 10px;
+}
+/* Cart */
+.line-item{
+  --gap: 10px;
+}
+.discount-allocation{
+  --gap: 5px;
+}
+.line-item-price-original{
+  color: #b6b6b6;
+  text-decoration: line-through;
 }

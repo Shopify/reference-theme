@@ -1,0 +1,53 @@
+<div class="shopify-block--linklist flex col">
+  {% assign linklist = linklists[block.settings.linklist] %}
+  {% if block.settings.show_title %}
+    <p class="linklist-title">{{ linklist.title }}</p>
+  {% endif %}
+  <ul id="linklist-{{ linklist.handle }}" class="linklist {{ block.settings.layout | class_list }}">
+    {% for link in linklist.links -%}
+      <li class="linklist-item
+        {% if link.active %}link-active{% endif %}
+        {% if link.child_active %}link-child-active{% endif %}">
+        <a href="{{ link.url }}" class="link linklist-link linklist-link-{{ link.handle }}">{{ link.title }}</a>
+        {% if link.levels > 0 %}
+          
+        {% endif %}
+      </li>
+    {%- endfor %}
+  </ul>
+</div>
+
+{% schema %}
+{
+  "name": "Linklist",
+  "tag": null,
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "linklist",
+      "label": "Link list",
+      "info": "Select a link list to display"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show linklist title",
+      "default": true
+    },
+    {
+      "type": "style.layout_panel",
+      "id": "layout",
+      "label": "Layout",
+      "default": {
+        "flex-direction": "column",
+        "gap": "10px"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "Linklist"
+    }
+  ]
+}
+{% endschema %}

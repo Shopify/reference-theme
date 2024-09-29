@@ -1,0 +1,5 @@
+{% if product.price_varies %}
+  <span class="price-from">{{ "product.price.from" | t }}</span>
+{% endif %}
+{% assign product_price = product.price_min | default: 999 %}
+<span class="price-min">{{ product_price | money }}</span>

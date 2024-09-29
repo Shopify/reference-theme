@@ -1,0 +1,22 @@
+{% assign loading = "lazy" %}
+{% if section.index < 2 %}
+  {% assign loading = "eager" %}
+{% endif %}
+
+{% assign aspect_ratio = "1" %}
+{% assign fit = "cover" %}
+{% capture placeholder %}image-{% cycle '1', '2', '3', '4', '5', '6' %}{% endcapture %}
+<div class="flex col">
+  
+  {% assign article_image = article.featured_image | default: blank %}
+  {% render "image-element",
+    image: article_image,
+    fit: fit,
+    aspect_ratio: aspect_ratio,
+    loading: loading,
+    sizes: "25vw",
+    placeholder: placeholder
+  %}
+  {% assign article_title = article.title | default: "article placeholder" %}
+    <p class="h5 spacing-top-8">{{ article_title }}</p>
+</div>

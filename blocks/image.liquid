@@ -1,29 +1,24 @@
-{% assign loading = 'lazy' %}
+{% assign loading = "lazy" %}
 {% if section.index < 2 %}
-  {% assign loading = 'eager' %}
+  {% assign loading = "eager" %}
 {% endif %}
 
-{% assign aspect_ratio = 'auto' %}
+{% assign aspect_ratio = "auto" %}
 {% if block.settings.aspect_ratio_type == "custom" %}
   {% assign aspect_ratio = block.settings.aspect_ratio %}
 {% endif %}
 
-
 <div
-  class="shopify-block-image {{ block.settings | class_list }}"
-  {{ block.shopify_attributes }}
->
-  <div class="image-wrapper {{ block.settings.object_fit }}"
-  style="--aspect-ratio: {{aspect_ratio}};">
-    {% render 'image-element', 
-      image: block.settings.image, 
+  class="shopify-block--image {{ block.settings | class_list }} spacing-bottom-{{ block.settings.spacing_bottom }}"
+  {{ block.shopify_attributes }}>
+    {% render "image-element",
+      image: block.settings.image,
       fit: block.settings.object_fit,
       aspect_ratio: aspect_ratio,
       loading: loading,
-      sizes: '100vw',
+      sizes: "100vw",
       placeholder: block.settings.placeholder
     %}
-  </div>
 </div>
 
 {% schema %}
@@ -57,7 +52,7 @@
       "id": "size",
       "label": "Size",
       "default": {
-        "width": "auto",
+        "width": "auto"
       }
     },
     {
@@ -81,6 +76,23 @@
       "id": "aspect_ratio",
       "label": "Custom aspect ratio",
       "default": 1
+    },
+    {
+      "type": "select",
+      "id": "spacing_bottom",
+      "label": "Spacing bottom",
+      "options": [
+        { "value": "none", "label": "none" },
+        { "value": "2xs", "label": "2xs" },
+        { "value": "xs", "label": "xs" },
+        { "value": "s", "label": "s" },
+        { "value": "m", "label": "m" },
+        { "value": "l", "label": "l" },
+        { "value": "xl", "label": "xl" },
+        { "value": "2xl", "label": "2xl" },
+        { "value": "3xl", "label": "3xl" }
+      ],
+      "default": "none"
     },
     {
       "type": "select",
@@ -152,8 +164,6 @@
       "info": "A placeholder allows you to prototype a section without the actual content."
     }
   ],
-  "presets": [
-    { "name": "Image" }
-  ]
+  "presets": [{ "name": "Image" }]
 }
 {% endschema %}

@@ -1,0 +1,114 @@
+{% case block.settings.source_type %}
+  {% when "product_list" %}
+    {% assign products = block.settings.product_list %}
+  {% when "collection" %}
+    {% assign products = block.settings.collection.products %}
+{% endcase %}
+<div
+  class="shopify-block--product-grid {{ block.settings.spacing | class_list }} color-{{ block.settings.color_scheme }}">
+  <div
+    class="grid"
+    style="
+      --columns: {{ block.settings.columns }};
+      --rows: {{ block.settings.rows }};
+      --gap: {{ block.settings.gap | append: 'px' }};
+    ">
+    {% if products.count > 0 %}
+      {% for product in products limit: 4 %}
+        {% render "product-card", product: product %}
+      {% endfor %}
+    {% else %}
+      {% for i in (1..4) %}
+        {% render "product-card" %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product grid",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Source"
+    },
+    {
+      "type": "select",
+      "id": "source_type",
+      "label": "Source type",
+      "options": [
+        {
+          "value": "product_list",
+          "label": "Product list"
+        },
+        {
+          "value": "collection",
+          "label": "Collection"
+        }
+      ],
+      "default": "product_list"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Products"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Columns",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "rows",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Rows",
+      "default": 1
+    },
+    {
+      "type": "number",
+      "id": "gap",
+      "label": "Gap",
+      "default": 5,
+      "info": "px (Todo: Replace with input settings once available)"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product grid"
+    }
+  ]
+}
+{% endschema %}

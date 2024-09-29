@@ -1,0 +1,43 @@
+
+<div class="cart-discount-applications">
+  {% for discount_application in cart.cart_level_discount_applications %}
+      {% render 'discount-application', discount_application: discount_application %}
+  {% endfor %}
+</div>
+<div class="flex row space-between">
+  <p class="h6">{{ "cart.subtotal" | t }}</p>
+  <p class="h6">{{ cart.total_price | money }}</p>
+</div>
+<div class="flex row space-between">
+  <p class="small">{{ "cart.vat" | t }}</p>
+  <p class="small">
+  {% if cart.taxes_included %}
+    {{ "cart.incl_vat" | t }}
+  {% else %}
+    {{ "cart.excl_vat" | t }}
+  {% endif %}
+  </p>
+</div>
+{% if cart.requires_shipping %}
+<div class="flex row space-between">
+  <p class="small">{{ "cart.shipping" | t }}</p>
+  <p class="small">
+    {{ "cart.calculated_at_checkout" | t }}
+  </p>
+</div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Subtotal",
+  "tag": null,
+  "settings": [
+    
+  ],
+  "presets": [
+    {
+      "name": "Subtotal"
+    }
+  ]
+}
+{% endschema %}

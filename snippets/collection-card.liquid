@@ -1,0 +1,22 @@
+{% assign loading = "lazy" %}
+{% if section.index < 2 %}
+  {% assign loading = "eager" %}
+{% endif %}
+
+{% assign aspect_ratio = "1" %}
+{% assign fit = "cover" %}
+{% capture placeholder %}collection-{% cycle '1', '2', '3', '4', '5', '6' %}{% endcapture %}
+<div class="flex col">
+
+    {% assign collection_image = collection.featured_image | default: blank %}
+    {% render "image-element",
+      image: collection_image,
+      fit: fit,
+      aspect_ratio: aspect_ratio,
+      loading: loading,
+      sizes: "25vw",
+      placeholder: placeholder
+    %}
+  {% assign collection_title = collection.title | default: "Collection placeholder" %}
+    <p class="h5 spacing-top-8">{{ collection_title }}</p>
+</div>

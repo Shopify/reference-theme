@@ -1,0 +1,81 @@
+
+<div class="shopify-block--text-field form-element">
+  <label {% if block.settings.label_hidden %}hidden{% endif %} class="form-input-label" for="{{ block.id }}">{{ block.settings.title }}</label>
+  {% capture attributes %}
+    id="{{ block.id }}"
+    name="{{ block.settings.name }}"
+    class="text-field"
+    {% if block.settings.pattern %}pattern="{{ block.settings.pattern }}"{% endif %}
+    {% if block.settings.placeholder %}placeholder="{{ block.settings.placeholder }}"{% endif %}
+    {% if block.settings.max_length %}maxlength="{{ block.settings.max_length }}"{% endif %}
+    {% if block.settings.required %} required {% endif %}
+    {{ block.shopify_attributes }}
+  {% endcapture %}
+  {% if block.settings.multiline %}
+    <textarea rows="5"
+    {{ attributes }}
+    ></textarea>
+  {% else %}
+    <input type="text"
+      {{ attributes }}
+    >
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Text field",
+  "tag": null,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "required",
+      "label": "Required",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "multiline",
+      "label": "Muliline",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "label_hidden",
+      "label": "Label hidden",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Name"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Label"
+    },
+    {
+      "type": "text",
+      "id": "pattern",
+      "label": "Pattern",
+      "info": "A regular expression to validate the input."
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Placeholder"
+    },
+    {
+      "type": "number",
+      "id": "max_length",
+      "label": "Max length"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text field"
+    }
+  ]
+}
+{% endschema %}
