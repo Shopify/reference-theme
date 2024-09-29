@@ -42,6 +42,8 @@
             "position": "",
             "overflow": "",
             "size": {
+              "width": "100%",
+              "flex-grow": "1"
             },
             "spacing": {
               "padding-block-start": "20px"
@@ -56,7 +58,12 @@
             "line_items_rzaDfi": {
               "type": "line-items",
               "settings": {
-                "spacing_bottom": "none"
+                "size": {
+                  "flex-basis": "66%"
+                },
+                "spacing": {
+                },
+                "color_scheme": "scheme-3"
               },
               "blocks": {
                 "cart-empty": {
@@ -70,9 +77,27 @@
                     "spacing": {
                     },
                     "layout": {
+                      "flex-direction": "column"
                     },
                     "color_scheme": ""
-                  }
+                  },
+                  "blocks": {
+                    "heading_9tfEiD": {
+                      "type": "heading",
+                      "settings": {
+                        "heading": "Your cart is currently empty.",
+                        "html_tag": "p",
+                        "heading_style": "h6",
+                        "alignment": "center",
+                        "spacing_bottom": "none",
+                        "text_color": "",
+                        "font_size": ""
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "heading_9tfEiD"
+                  ]
                 }
               },
               "block_order": [
@@ -85,6 +110,7 @@
                 "position": "",
                 "overflow": "",
                 "size": {
+                  "flex-basis": "33%"
                 },
                 "spacing": {
                   "padding-block-start": "20px",
