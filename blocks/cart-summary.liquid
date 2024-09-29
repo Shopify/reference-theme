@@ -1,4 +1,7 @@
-
+<div class="flex row space-between">
+  <p class="h6">{{ "cart.subtotal" | t }}</p>
+  <p class="h6">{{ cart.items_subtotal_price | money }}</p>
+</div>
 <div class="cart-discount-applications">
   {% for discount_application in cart.cart_level_discount_applications %}
       {% render 'discount-application', discount_application: discount_application %}
