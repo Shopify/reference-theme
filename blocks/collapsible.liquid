@@ -1,0 +1,39 @@
+<collapsible-outer 
+  {% if block.settings.open %}
+    open="true"
+  {% endif %}
+  class="shopify-block--collapsible"
+  {{ block.shopify_attributes }}>
+  <collapsible-label class="full-width flex row space-between">
+    {% comment %} Todo: Add collapsible icons {% endcomment %}
+    {% content_for "block", type: "heading", id: "collapsible-label" %}
+    <div class="collapsible-icon">
+      <div class="collapsible-icon--open">{{ "plus.svg" | inline_asset_content }}</div>
+      <div class="collapsible-icon--close">{{ "minus.svg" | inline_asset_content }}</div>
+    </div>
+  </collapsible-label>
+  <collapsible-content class="">
+    {% content_for "blocks" %}
+  </collapsible-content>
+</collapsible-outer>
+
+{% schema %}
+{
+  "name": "Collapsible",
+  "tag": null,
+  "blocks": [{ "type": "@theme" },{ "type": "@app" }],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "open",
+      "label": "Open",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collapsible"
+    }
+  ]
+}
+{% endschema %}

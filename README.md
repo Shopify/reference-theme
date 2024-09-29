@@ -16,10 +16,10 @@ Theme blocks are a new feature for online stores that allow theme developers to 
 
 ### Benefits of theme blocks
 
-* Less duplicate code
-* More consistent merchant experience
-* Theme blocks can be nested
-* More flexible sections
+- Less duplicate code
+- More consistent merchant experience
+- Theme blocks can be nested
+- More flexible sections
 
 ## Creating theme blocks
 
@@ -50,6 +50,7 @@ For more details, see the [theme block documentation](https://shopify.dev/docs/t
 }
 {% endschema %}
 ```
+
 </details>
 
 Note that a preset is required for a theme block to appear in the editor, the same as for sections.
@@ -64,7 +65,7 @@ Note that theme blocks and local blocks cannot be used in the same section.
 
 ## Referencing theme blocks in JSON templates
 
-To include theme blocks in your JSON templates, add a section that accepts them in the editor and then click "add block" in the section sidebar.  You will see a list of theme blocks and can add them to the section.
+To include theme blocks in your JSON templates, add a section that accepts them in the editor and then click "add block" in the section sidebar. You will see a list of theme blocks and can add them to the section.
 
 You can also do this directly in the JSON file. You must include a `"blocks"` key and a `"block_order"` key in your section.
 
@@ -95,6 +96,7 @@ You can also do this directly in the JSON file. You must include a `"blocks"` ke
   ]
 }
 ```
+
 </details>
 
 ## Nesting blocks
@@ -115,7 +117,7 @@ A block must have at least one preset to appear for selection in the Theme Edito
 
 ## Theme block targeting
 
-A section or group that accepts theme blocks can indicate either that it accepts all blocks (and apps) by adding `"blocks": [{ "type": "@theme" }, { "type": "@app" }]` to the schema.  Or it can target specific blocks by adding `"blocks": [{ "type": "slide" }]`
+A section or group that accepts theme blocks can indicate either that it accepts all blocks (and apps) by adding `"blocks": [{ "type": "@theme" }, { "type": "@app" }]` to the schema. Or it can target specific blocks by adding `"blocks": [{ "type": "slide" }]`
 
 ## Static theme blocks
 
@@ -125,19 +127,19 @@ Theme blocks can be referenced directly in Liquid using `content_for` as follows
   {% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}
 ```
 
-Settings for these blocks can be configured by the merchant via the theme editor.  They can also be configured by the theme developer in presets.  Their usage in presets is the same as a normal theme block except it includes  `"static": true` and requires a matching `id` to the one in the corresponding Liquid.
+Settings for these blocks can be configured by the merchant via the theme editor. They can also be configured by the theme developer in presets. Their usage in presets is the same as a normal theme block except it includes `"static": true` and requires a matching `id` to the one in the corresponding Liquid.
 
 ## Styles
 
-Style settings can now be added to sections and blocks.  These are new input setting types that offer CSS styles for merchants to customize.
+Style settings can now be added to sections and blocks. These are new input setting types that offer CSS styles for merchants to customize.
 
 Currently the categories that exist are:
 
-* `"type": "style.size_panel"` - This panel includes CSS properties like `width`, `height`, and `flex-grow`.
-* `"type": "style.spacing_panel"` - This panel includes CSS properties like `flex-direction`, `justify-content`, and `align items`.
-* `"type": "style.layout_panel"` - This panel includes CSS properties like `padding` and `margin`.
+- `"type": "style.size_panel"` - This panel includes CSS properties like `width`, `height`, and `flex-grow`.
+- `"type": "style.spacing_panel"` - This panel includes CSS properties like `flex-direction`, `justify-content`, and `align items`.
+- `"type": "style.layout_panel"` - This panel includes CSS properties like `padding` and `margin`.
 
-These settings are applied via the new filter `class_list`, which renders the set of classes that correspond to the used style settings within a section or block.  It is used as follows: `<div class="{{ block.settings | class_list }}">`.  In a section, `section.settings` is used instead.
+These settings are applied via the new filter `class_list`, which renders the set of classes that correspond to the used style settings within a section or block. It is used as follows: `<div class="{{ block.settings | class_list }}">`. In a section, `section.settings` is used instead.
 
 You can also apply different classes to different elements, for example:
 
@@ -148,18 +150,28 @@ You can also apply different classes to different elements, for example:
 
 As with a normal setting, it is accessed via its ID.
 
-
 ## Codeing Guidelines
-### Files 
-- file names should should be formatted as ```kebab-case```
-### HTML 
- - use as less containers as possible
-### Liquid 
- - variables should should be formatted as ```snake_case```
-### CSS 
- - variables should should be formatted as ```kebab-case```
- - use '--' for variants of a class Example: ```btn btn--secondary```
-### JS 
- - variables & functions should be formatted as ```camelCase```
- - do not use ```var``` use ```const``` where ever possible and ```let``` when necessary
- - use arrow functions ```() => {}``` where possible 
+
+### Files
+
+- file names should be formatted as `kebab-case`
+
+### HTML
+
+- use as less containers as possible
+
+### Liquid
+
+- variables should be formatted as `snake_case`
+
+### CSS
+
+- variables should be formatted as `kebab-case`
+- use '--' for variants of a class Example: `btn btn--secondary`
+- every block should have a class `shopify-block--<name of the block>`
+
+### JS
+
+- variables & functions should be formatted as `camelCase`
+- do not use `var` use `const` where ever possible and `let` when necessary
+- use arrow functions `() => {}` where possible

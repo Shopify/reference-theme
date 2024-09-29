@@ -1,45 +1,29 @@
-<button type="{{ block.settings.type }}">
-  <span class="button-label">
+<div class="shopify-block--button spacing-bottom-{{ block.settings.spacing_bottom }}">
+  <button class="{{ block.settings.button_style }}
+    {% if block.settings.small %}btn--small{% endif %} 
+   {% if block.settings.full_width %}btn--full{% endif %}" type="submit"
+   name="{{ block.settings.name }}">
     {{ block.settings.label }}
-  </span>
-  <svg focusable="false" class="button-spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-  </svg>
-</button>
+  </button>
+</div>
 
-{% comment %} Todo: loading & disabled state {% endcomment %}
 {% comment %} Todo: Only inside forms {% endcomment %}
 {% comment %} Todo: custom actions for type button? {% endcomment %}
 {% schema %}
 {
-  "name": "Button",
+  "name": "Submit button",
   "tag": null,
   "settings": [
-    {
-      "type": "select",
-      "id": "type",
-      "label": "Type",
-      "options": [
-        {
-          "value": "submit",
-          "label": "Submit"
-        },
-        {
-          "value": "reset",
-          "label": "Reset"
-        },
-        {
-          "value": "button",
-          "label": "Button"
-        }
-      ],
-      "default": "submit"
-    },
     {
       "type": "text",
       "id": "label",
       "label": "Label",
       "default": "Button label"
+    },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Name"
     },
     {
       "type": "select",
@@ -60,6 +44,35 @@
         }
       ],
       "default": "btn btn--primary"
+    },
+    {
+      "type": "checkbox",
+      "id": "small",
+      "label": "Small",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "spacing_bottom",
+      "label": "Spacing bottom",
+      "options": [
+        { "value": "none", "label": "none" },
+        { "value": "2xs", "label": "2xs" },
+        { "value": "xs", "label": "xs" },
+        { "value": "s", "label": "s" },
+        { "value": "m", "label": "m" },
+        { "value": "l", "label": "l" },
+        { "value": "xl", "label": "xl" },
+        { "value": "2xl", "label": "2xl" },
+        { "value": "3xl", "label": "3xl" }
+      ],
+      "default": "none"
     }
   ],
   "presets": [

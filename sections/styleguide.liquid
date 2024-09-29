@@ -1,0 +1,54 @@
+{% assign button_styles = 'link, btn btn--primary btn--full, btn btn--secondary btn--full, btn btn--tertiary btn--full' | split: ',' %}
+{% assign states = ',loading, disabled, hovered' | split: ',' %}
+{% assign heading_styles = "h1,h2,h3,h4,h5,h6" | split: ',' %}
+{% assign body_styles = "large,p,small" | split: ',' %}
+
+<div class="flex col spacing-bottom-2xl">
+  <div class="flex col spacing-bottom-xl">
+    <p class="h5 spacing-bottom-m">Buttons</p>
+    <div class="grid" style="--columns: 4; --gap: 20px;">
+      {% for state in states %}
+        <p class="">{{ state }}</p>
+      {% endfor %}
+      {% for button_style in button_styles %}
+          {% for state in states %}
+            <button class="{{button_style}}" {{ state }} type="button">
+              {{ button_style }}
+            </button>
+          {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="flex col spacing-bottom-xl">
+    <p class="h5 spacing-bottom-m">Typography</p>
+    <style>
+      .line-height-highlight{
+        border-block: 1px solid #e8e8e8;
+      }
+    </style>
+    <div class="flex col" style="--gap:10px;">
+      {% for heading_style in heading_styles %}
+          <p class="line-height-highlight {{ heading_style }}">Heading {{ heading_style }}</p>
+      {% endfor %}
+      {% for body_style in body_styles %}
+        <p class="line-height-highlight {{ body_style }}">Body {{ body_style }}</p>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Styleguide",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "This section shows all font & button styles, aswell as color schemes."
+      }
+    ],
+    "presets": [
+      {
+        "name": "Styleguide"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,30 @@
+<div
+  class="shopify-block--spacer {{ block.settings | class_list }}"
+  {{ block.shopify_attributes }}>
+</div>
+
+{% schema %}
+{
+  "name": "Spacer",
+  "tag": null,
+  "settings": [
+    {
+      "type": "style.size_panel",
+      "id": "size",
+      "label": "Size",
+      "default": {
+        "width": "auto",
+
+        "@media (--mobile)": {
+          "width": "100%"
+        }
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "Spacer"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,4 @@
+<span class="price">{{ variant.price | money }}</span>
+{% if variant.compare_at_price != blank %}
+  <span class="price-before">{{ variant.compare_at_price | money }}</span>
+{% endif %}

@@ -1,0 +1,17 @@
+{
+  "name": "modular-theme",
+  "version": "1.0.0",
+  "description": "This theme has been created to show an implementation of theme blocks. It is designed as a supplement to the [theme block documentation](https://shopify.dev/docs/themes/architecture/blocks/theme-blocks) and can be used as both a reference and a starting point for theme developers to experiment with the new feature.",
+  "scripts": {
+    "prettier": "prettier",
+    "format": "prettier --write .",
+    "check": "shopify theme check"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@shopify/prettier-plugin-liquid": "^1.5.0",
+    "prettier": "^3.3.3"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}

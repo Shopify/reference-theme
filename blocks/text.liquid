@@ -1,7 +1,6 @@
 <div
-  class="shopify-block-text {{ block.settings | class_list }} {{ block.settings.text_style }} text-{{ block.settings.alignment }}"
-  {{ block.shopify_attributes }}
->
+  class="shopify-block--text {{ block.settings | class_list }} {{ block.settings.text_style }} text-{{ block.settings.alignment }} spacing-bottom-{{ block.settings.spacing_bottom }}"
+  {{ block.shopify_attributes }}>
   {{ block.settings.text }}
 </div>
 
@@ -41,6 +40,23 @@
       "id": "alignment",
       "label": "Text alignment",
       "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "spacing_bottom",
+      "label": "Spacing bottom",
+      "options": [
+        { "value": "none", "label": "none" },
+        { "value": "2xs", "label": "2xs" },
+        { "value": "xs", "label": "xs" },
+        { "value": "s", "label": "s" },
+        { "value": "m", "label": "m" },
+        { "value": "l", "label": "l" },
+        { "value": "xl", "label": "xl" },
+        { "value": "2xl", "label": "2xl" },
+        { "value": "3xl", "label": "3xl" }
+      ],
+      "default": "none"
     }
   ],
   "presets": [{ "name": "Text" }]

@@ -11,6 +11,7 @@
   "current": {
     "font_family_primary": "basic_commercial_n4",
     "font_family_secondary": "basic_commercial_n4",
+    "button_tertiary_border_color": "#e1e1e1",
     "content_for_index": [
 
     ],
@@ -59,7 +60,7 @@
         "settings": {
           "background": "rgba(0,0,0,0)",
           "background_gradient": "radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 65%)",
-          "text": "#fff",
+          "text": "#ffffff",
           "button": "#121212",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212"

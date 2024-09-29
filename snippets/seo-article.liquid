@@ -1,62 +1,77 @@
 <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "mainEntityOfPage": "{{ article.url }}",
-        "articleSection": {{ blog.title | json }},
-        "keywords": "{{ article.tags | join: ', ' }}",
-        "headline": {{ article.title | json }},
-        "description": {{ article.excerpt_or_content | strip_html | truncatewords: 25 | json }},
-        "dateCreated": "{{ article.created_at | date: '%Y-%m-%dT%T' }}",
-        "datePublished": "{{ article.published_at | date: '%Y-%m-%dT%T' }}",
-        "dateModified": "{{ article.published_at | date: '%Y-%m-%dT%T' }}",
-        "image": {
-        "@type": "ImageObject",
-        "url": "https:{{ article.image | image_url: width: 1024 }}",
-        "image": "https:{{ article.image | image_url: width: 1024 }}",
-        "name": {{ article.image.alt | json }},
-        "width": "1024",
-        "height": "1024"
-        },
-        "author": {
-        "@type": "Person",
-        "name": "{{ article.user.first_name | escape }} {{ article.user.last_name | escape }}",
-        "givenName": {{ article.user.first_name | json }},
-        "familyName": {{ article.user.last_name | json }}
-        },
-        "publisher": {
-        "@type": "Organization",
-        "name": {{ shop.name | json }}
-        },
-        "commentCount": {{ article.comments_count }},
-        "comment": [
-        {%- for comment in article.comments limit: 5 -%}
-            {
-            "@type": "Comment",
-            "author": {{ comment.author | json }},
-            "datePublished": "{{ comment.created_at | date: '%Y-%m-%dT%T' }}",
-            "text": {{ comment.content | json }}
-            }{%- unless forloop.last -%},{%- endunless -%}
-        {%- endfor -%}
-        ]
-    }
+  {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": "{{ article.url }}",
+      "articleSection": {{ blog.title | json }},
+      "keywords": "{{ article.tags | join: ', ' }}",
+      "headline": {{ article.title | json }},
+      "description": {{ article.excerpt_or_content | strip_html | truncatewords: 25 | json }},
+      "dateCreated": "{{ article.created_at | date: '%Y-%m-%dT%T' }}",
+      "datePublished": "{{ article.published_at | date: '%Y-%m-%dT%T' }}",
+      "dateModified": "{{ article.published_at | date: '%Y-%m-%dT%T' }}",
+      "image": {
+      "@type": "ImageObject",
+      "url": "https:{{ article.image | image_url: width: 1024 }}",
+      "image": "https:{{ article.image | image_url: width: 1024 }}",
+      "name": {{ article.image.alt | json }},
+      "width": "1024",
+      "height": "1024"
+      },
+      "author": {
+      "@type": "Person",
+      "name": "{{ article.user.first_name | escape }} {{ article.user.last_name | escape }}",
+      "givenName": {{ article.user.first_name | json }},
+      "familyName": {{ article.user.last_name | json }}
+      },
+      "publisher": {
+      "@type": "Organization",
+      "name": {{ shop.name | json }}
+      },
+      "commentCount": {{ article.comments_count }},
+      "comment": [
+      {%- for comment in article.comments limit: 5 -%}
+          {
+          "@type": "Comment",
+          "author": {{ comment.author | json }},
+          "datePublished": "{{ comment.created_at | date: '%Y-%m-%dT%T' }}",
+          "text": {{ comment.content | json }}
+          }{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+      ]
+  }
 </script>
 
-<meta property="og:type" content="article">
-<meta property="og:title" content="{{ article.title | strip_html | escape }}">
+<meta
+  property="og:type"
+  content="article">
+<meta
+  property="og:title"
+  content="{{ article.title | strip_html | escape }}">
 
 {% if article.image %}
-
-  <meta property="og:image" content="http:{{ article.image | image_url: width: 1024 }}">
-  <meta property="og:image:secure_url" content="https:{{ article.image | image_url: width: 1024 }}">
-  <meta property="og:image:width" content="1024">
-  <meta property="og:image:height" content="1024">
-
+  <meta
+    property="og:image"
+    content="http:{{ article.image | image_url: width: 1024 }}">
+  <meta
+    property="og:image:secure_url"
+    content="https:{{ article.image | image_url: width: 1024 }}">
+  <meta
+    property="og:image:width"
+    content="1024">
+  <meta
+    property="og:image:height"
+    content="1024">
 {% endif %}
 
-
-<meta name="twitter:title" content="{{ article.title | escape }}">
-<meta name="twitter:description" content="{{ article.excerpt_or_content | strip_html | truncatewords: 140, '' | escape }}">
+<meta
+  name="twitter:title"
+  content="{{ article.title | escape }}">
+<meta
+  name="twitter:description"
+  content="{{ article.excerpt_or_content | strip_html | truncatewords: 140, '' | escape }}">
 {% if article.image %}
-    <meta name="twitter:image" content="https:{{ article.image | image_url: width: 600, height: 600, crop: 'center' }}">
+  <meta
+    name="twitter:image"
+    content="https:{{ article.image | image_url: width: 600, height: 600, crop: 'center' }}">
 {% endif %}

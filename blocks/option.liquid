@@ -1,0 +1,43 @@
+<option 
+  value={{ block.settings.value }}
+  {% if block.settings.selected %}selected{% endif %}
+  {% if block.settings.disabled %}disabled{% endif %}
+>
+  {{ block.settings.title }}
+</option>
+
+{% schema %}
+{
+  "name": "Option",
+  "tag": null,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "selected",
+      "label": "Selected",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "disabled",
+      "label": "Disabled",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "value",
+      "label": "Value"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Option"
+    }
+  ]
+}
+{% endschema %}

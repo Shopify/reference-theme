@@ -1,0 +1,63 @@
+
+<div class="shopify-block--quantity-rocker form-element">
+  <label {% if block.settings.label_hidden %}hidden{% endif %} class="form-input-label" for="{{ block.id }}">{{ block.settings.title }}</label>
+  {% capture attributes %}
+    id="{{ block.id }}"
+    name="{{ block.settings.name }}"
+    class="quantity-rocker"
+    {% if block.settings.min %}min="{{ block.settings.min }}"{% endif %}
+    {% if block.settings.max %}max="{{ block.settings.max }}"{% endif %}
+    {% if block.settings.default %}value="{{ block.settings.default }}"{% endif %}
+    {% if block.settings.required %} required {% endif %}
+    {{ block.shopify_attributes }}
+  {% endcapture %}
+
+    <quantity-rocker
+      {{ attributes }}
+    ></quantity-rocker>
+</div>
+
+{% schema %}
+{
+  "name": "Quantity rocker",
+  "tag": null,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "label_hidden",
+      "label": "Label hidden",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Name"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Label"
+    },
+    {
+      "type": "number",
+      "id": "min",
+      "label": "Min"
+    },
+    {
+      "type": "number",
+      "id": "max",
+      "label": "Max"
+    },
+    {
+      "type": "number",
+      "id": "default",
+      "label": "Default"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quantity rocker"
+    }
+  ]
+}
+{% endschema %}

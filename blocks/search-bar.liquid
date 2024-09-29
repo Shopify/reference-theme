@@ -1,0 +1,37 @@
+<form action="{{ routes.search_url }}">
+  {% content_for "block", type: "text-field", id: "search-field" %}
+  {% content_for "block", type: "button", id: "submit-button" %}
+</form>
+
+
+{% schema %}
+{
+  "name": "Search bar",
+  "tag": null,
+  "blocks": [],
+  "settings": [
+
+  ],
+  "presets": [
+    {
+      "name": "Search bar",
+      "blocks": [
+        {
+          "type":"text-field",
+          "static": true,
+          "id": "search-field",
+          "settings": {
+            "name": "q",
+            "placeholder": "Search"
+          }
+        },
+        {
+          "type":"button",
+          "static": true,
+          "id": "submit-button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

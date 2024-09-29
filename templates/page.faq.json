@@ -1,0 +1,256 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "container_WWRbXa": {
+      "type": "container",
+      "blocks": {
+        "image_DTGLHz": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "size": {
+              "width": "100%",
+              "flex-grow": "1",
+              "height": "200px"
+            },
+            "aspect_ratio_type": "auto",
+            "aspect_ratio": 1,
+            "placeholder": "lifestyle-1"
+          }
+        },
+        "simple_overlay_rePtkU": {
+          "type": "simple-overlay",
+          "settings": {
+            "overflow": "",
+            "spacing": {
+            },
+            "layout": {
+            },
+            "color_scheme": "scheme-d64ff18b-05a6-4c0f-85a3-edcd6de19b8c"
+          },
+          "blocks": {
+            "heading_bMBYmQ": {
+              "type": "heading",
+              "settings": {
+                "heading": "FAQ",
+                "html_tag": "p",
+                "heading_style": "h1",
+                "alignment": "center",
+                "spacing_bottom": "none",
+                "text_color": "",
+                "font_size": ""
+              }
+            }
+          },
+          "block_order": [
+            "heading_bMBYmQ"
+          ]
+        }
+      },
+      "block_order": [
+        "image_DTGLHz",
+        "simple_overlay_rePtkU"
+      ],
+      "settings": {
+        "page_width": "full-width",
+        "position": "is-relative",
+        "overflow": "",
+        "spacing": {
+        },
+        "layout": {
+        },
+        "color_scheme": ""
+      }
+    },
+    "main": {
+      "type": "container",
+      "blocks": {
+        "heading_6z8zyA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shipping policy",
+            "html_tag": "p",
+            "heading_style": "h3",
+            "alignment": "left",
+            "spacing_bottom": "none",
+            "text_color": "",
+            "font_size": ""
+          }
+        },
+        "text_DNKEUP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "text_style": "p",
+            "alignment": "left",
+            "spacing_bottom": "m"
+          }
+        },
+        "collapsible_FJiRPm": {
+          "type": "collapsible",
+          "settings": {
+            "open": false
+          },
+          "blocks": {
+            "text_89qA6G": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+                "text_style": "p",
+                "alignment": "left",
+                "spacing_bottom": "none"
+              }
+            },
+            "collapsible-label": {
+              "type": "heading",
+              "static": true,
+              "settings": {
+                "heading": "Where do you ship to?",
+                "html_tag": "p",
+                "heading_style": "h5",
+                "alignment": "left",
+                "spacing_bottom": "s",
+                "text_color": "",
+                "font_size": ""
+              }
+            }
+          },
+          "block_order": [
+            "text_89qA6G"
+          ]
+        },
+        "collapsible_CTB49K": {
+          "type": "collapsible",
+          "settings": {
+            "open": false
+          },
+          "blocks": {
+            "text_D668Cj": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+                "text_style": "p",
+                "alignment": "left",
+                "spacing_bottom": "none"
+              }
+            },
+            "collapsible-label": {
+              "type": "heading",
+              "static": true,
+              "settings": {
+                "heading": "How long will my order take?",
+                "html_tag": "p",
+                "heading_style": "h5",
+                "alignment": "left",
+                "spacing_bottom": "s",
+                "text_color": "",
+                "font_size": ""
+              }
+            }
+          },
+          "block_order": [
+            "text_D668Cj"
+          ]
+        },
+        "spacer_GHfFiV": {
+          "type": "spacer",
+          "settings": {
+            "size": {
+              "height": "20px"
+            }
+          }
+        },
+        "heading_HG9iYY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Returns and exchanges",
+            "html_tag": "p",
+            "heading_style": "h3",
+            "alignment": "left",
+            "spacing_bottom": "none",
+            "text_color": "",
+            "font_size": ""
+          }
+        },
+        "text_eq7KwE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "text_style": "p",
+            "alignment": "left",
+            "spacing_bottom": "m"
+          }
+        },
+        "collapsible_W7B9aA": {
+          "type": "collapsible",
+          "settings": {
+            "open": false
+          },
+          "blocks": {
+            "text_jKH7Vi": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+                "text_style": "p",
+                "alignment": "left",
+                "spacing_bottom": "none"
+              }
+            },
+            "collapsible-label": {
+              "type": "heading",
+              "static": true,
+              "settings": {
+                "heading": "How do I ship my order back to you?",
+                "html_tag": "p",
+                "heading_style": "h5",
+                "alignment": "left",
+                "spacing_bottom": "s",
+                "text_color": "",
+                "font_size": ""
+              }
+            }
+          },
+          "block_order": [
+            "text_jKH7Vi"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_6z8zyA",
+        "text_DNKEUP",
+        "collapsible_FJiRPm",
+        "collapsible_CTB49K",
+        "spacer_GHfFiV",
+        "heading_HG9iYY",
+        "text_eq7KwE",
+        "collapsible_W7B9aA"
+      ],
+      "settings": {
+        "page_width": "page-width",
+        "position": "",
+        "overflow": "",
+        "spacing": {
+          "padding-block-start": "60px",
+          "padding-block-end": "60px"
+        },
+        "layout": {
+          "flex-direction": "column",
+          "align-items": "stretch"
+        },
+        "color_scheme": ""
+      }
+    }
+  },
+  "order": [
+    "container_WWRbXa",
+    "main"
+  ]
+}

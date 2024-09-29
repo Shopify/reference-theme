@@ -1,15 +1,19 @@
 <a
   href="{{ block.settings.link }}"
-  class="shopify-block-link {{ block.settings.button_style }}"
+  class="shopify-block--link
+  {{ block.settings.button_style }} 
+  spacing-bottom-{{ block.settings.spacing_bottom }}
+  {% if block.settings.small %}btn--small{% endif %} 
+   {% if block.settings.full_width %}btn--full{% endif %}"
   {%- if block.settings.open_in_new_tab -%}
     target="_blank" rel="noopener noreferrer"
   {%- endif -%}
-  {{ block.shopify_attributes }}
->
+  {{ block.shopify_attributes }}>
   <span>
     {{ block.settings.label }}
   </span>
 </a>
+
 
 {% schema %}
 {
@@ -53,9 +57,38 @@
     },
     {
       "type": "checkbox",
+      "id": "small",
+      "label": "Small",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
+    {
+      "type": "checkbox",
       "id": "open_in_new_tab",
       "label": "Open this link in a new window",
       "default": false
+    },
+    {
+      "type": "select",
+      "id": "spacing_bottom",
+      "label": "Spacing bottom",
+      "options": [
+        { "value": "none", "label": "none" },
+        { "value": "2xs", "label": "2xs" },
+        { "value": "xs", "label": "xs" },
+        { "value": "s", "label": "s" },
+        { "value": "m", "label": "m" },
+        { "value": "l", "label": "l" },
+        { "value": "xl", "label": "xl" },
+        { "value": "2xl", "label": "2xl" },
+        { "value": "3xl", "label": "3xl" }
+      ],
+      "default": "none"
     }
   ],
   "presets": [
@@ -70,21 +103,21 @@
       "name": "Button (primary)",
       "settings": {
         "label": "Primary button label",
-        "button_style": "btn btn--primary",
+        "button_style": "btn btn--primary"
       }
     },
     {
       "name": "Button (secondary)",
       "settings": {
         "label": "Secondary button label",
-        "button_style": "btn btn--secondary",
+        "button_style": "btn btn--secondary"
       }
     },
     {
       "name": "Button (tertiary)",
       "settings": {
         "label": "Tertiary button label",
-        "button_style": "btn btn--tertiary",
+        "button_style": "btn btn--tertiary"
       }
     }
   ]

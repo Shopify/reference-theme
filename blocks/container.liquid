@@ -1,7 +1,6 @@
 <div
-  class="shopify-block-container {{ block.settings | class_list }} {{ block.settings.position }} {{ block.settings.overflow }} color-{{ block.settings.color_scheme }}"
-  {{ block.shopify_attributes }}
->
+  class="shopify-block--container {{ block.settings | class_list }} {{ block.settings.position }} {{ block.settings.overflow }} color-{{ block.settings.color_scheme }}"
+  {{ block.shopify_attributes }}>
   {% content_for "blocks" %}
 </div>
 

@@ -1,0 +1,93 @@
+{% stylesheet %}{% endstylesheet %}
+
+<div
+  class="{{section.settings.page_width}} {{ section.settings.spacing | class_list }} color-{{ section.settings.color_scheme }}">
+  <div
+    class="grid"
+    style="
+      --columns: {{ section.settings.columns }};
+      --rows: {{ section.settings.rows }};
+      --gap: {{ section.settings.gap | append: 'px' }};
+    ">
+    {% content_for "blocks" %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Grid",
+  "tag": "section",
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Page width"
+    },
+    {
+      "type": "select",
+      "id": "page_width",
+      "label": "Page width",
+      "options": [
+        {
+          "value": "full-width",
+          "label": "Full width"
+        },
+        {
+          "value": "page-width",
+          "label": "Page width"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Columns",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "rows",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Rows",
+      "default": 1
+    },
+    {
+      "type": "number",
+      "id": "gap",
+      "label": "Gap",
+      "default": 5,
+      "info": "px (Todo: Replace with input settings once available)"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Grid"
+    }
+  ]
+}
+{% endschema %}

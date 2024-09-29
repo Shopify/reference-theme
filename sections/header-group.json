@@ -37,15 +37,19 @@
                 "heading": "Heading",
                 "html_tag": "p",
                 "heading_style": "h6",
-                "alignment": "right"
+                "alignment": "right",
+                "spacing_bottom": "none",
+                "text_color": "",
+                "font_size": ""
               }
             },
             "text_FPDTnq": {
               "type": "text",
               "settings": {
-                "text": "<p>Share information about you.<\/p>",
+                "text": "<p>Share information about you.</p>",
                 "text_style": "p",
-                "alignment": "left"
+                "alignment": "left",
+                "spacing_bottom": "none"
               }
             }
           },
@@ -77,15 +81,19 @@
                 "heading": "Heading",
                 "html_tag": "p",
                 "heading_style": "h6",
-                "alignment": "right"
+                "alignment": "right",
+                "spacing_bottom": "none",
+                "text_color": "",
+                "font_size": ""
               }
             },
             "text_MqQPhD": {
               "type": "text",
               "settings": {
-                "text": "<p>Share information about you.<\/p>",
+                "text": "<p>Share information about you.</p>",
                 "text_style": "p",
-                "alignment": "left"
+                "alignment": "left",
+                "spacing_bottom": "none"
               }
             }
           },
@@ -125,7 +133,6 @@
         "slide_8bjEmy"
       ],
       "settings": {
-        "title": "Announcement Bar",
         "page_width": "full-width",
         "size": {
         },
@@ -146,15 +153,28 @@
             "heading": "Modular Theme",
             "html_tag": "p",
             "heading_style": "h5",
-            "alignment": "center"
+            "alignment": "center",
+            "spacing_bottom": "none",
+            "text_color": "",
+            "font_size": ""
+          }
+        },
+        "linklist_f7VBe3": {
+          "type": "linklist",
+          "settings": {
+            "linklist": "footer",
+            "show_title": false,
+            "layout": {
+              "flex-direction": "row"
+            }
           }
         }
       },
       "block_order": [
-        "heading_CJHPWc"
+        "heading_CJHPWc",
+        "linklist_f7VBe3"
       ],
       "settings": {
-        "title": "Header",
         "page_width": "page-width",
         "position": "",
         "overflow": "",

@@ -1,115 +1,132 @@
-<meta property="og:type" content="product.group">
-<meta property="og:title" content="{{ collection.title | strip_html | escape }}">
-<meta property="og:image" content="http:{{ collection.image | default: collection.products.first.featured_media | image_url: width: 1024 }}">
-<meta property="og:image:secure_url" content="https:{{ collection.image | default: collection.products.first.featured_media | image_url: width: 1024 }}">
-<meta property="og:image:width" content="1024">
-<meta property="og:image:height" content="1024">
+<meta
+  property="og:type"
+  content="product.group">
+<meta
+  property="og:title"
+  content="{{ collection.title | strip_html | escape }}">
+<meta
+  property="og:image"
+  content="http:{{ collection.image | default: collection.products.first.featured_media | image_url: width: 1024 }}">
+<meta
+  property="og:image:secure_url"
+  content="https:{{ collection.image | default: collection.products.first.featured_media | image_url: width: 1024 }}">
+<meta
+  property="og:image:width"
+  content="1024">
+<meta
+  property="og:image:height"
+  content="1024">
 
-<meta name="twitter:title" content="{{ collection.title | escape }}">
-<meta name="twitter:description" content="{{ collection.description | strip_html | truncatewords: 140, '' | escape }}">
-<meta name="twitter:image" content="https:{{ collection.image | default: collection.products.first.featured_media | image_url: width: 600, height: 600, crop: 'center' }}">
-
+<meta
+  name="twitter:title"
+  content="{{ collection.title | escape }}">
+<meta
+  name="twitter:description"
+  content="{{ collection.description | strip_html | truncatewords: 140, '' | escape }}">
+<meta
+  name="twitter:image"
+  content="https:{{ collection.image | default: collection.products.first.featured_media | image_url: width: 600, height: 600, crop: 'center' }}">
 
 <script type="application/ld+json">
-{
-    "@context": "http://schema.org/",
-    "@type": "Organization",
-    "name": {{ shop.name | json }},
-    "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": {{ collection.title | json }},
-        "itemListElement": [
-            {% paginate collection.products by 12 %}
-                {% for product in collection.products %}
-                    {%- assign days_product_price_valid_until = 10 | times: 86400 -%}
-                    {%- assign has_reviews = false -%}
-                    {%- assign rating_value = blank -%}
-                    {%- assign review_count = blank -%}
-                    {%- if product.metafields.spr.reviews != blank -%}
-                    {%- assign rating_value_review_array = product.metafields.spr.reviews | split: 'meta itemprop="ratingValue" content="' -%}
-                    {%- assign rating_value_arr = rating_value_review_array[1] | split: '"' -%}
-                    {%- assign rating_value = rating_value_arr[0] -%}
-                    {%- assign review_count_str_array = product.metafields.spr.reviews | split: 'meta itemprop="reviewCount" content="' -%}
-                    {%- assign review_count_arr = review_count_str_array[1] | split: '"' -%}
-                    {%- assign review_count = review_count_arr[0] -%}
-                    
-                    {%- unless review_count == blank -%}
-                        {%- assign has_reviews = true -%}
-                    {%- endunless -%}
-                    {%- endif -%}
-                    {
-                        "@type": "Offer",
-                        "itemOffered": {
-                            "@type": "Product",
-                            "name": {{ product.title | json }},
-                            "price": {{ product.price | money_without_currency | replace: ',', '.' | json }},
-                            "priceCurrency": {{ shop.currency | json }},
-                            "offers": [
-                                {%- for variant in product.variants -%}
-                                    {%- assign gtin_option = 'gtin' -%}
-                                    {%- if variant.barcode != blank -%}
-                                        {%- assign gtin_string_length = variant.barcode | size -%}
-                                        {%- if gtin_string_length == 8 or gtin_string_length == 12 or gtin_string_length == 13 or gtin_string_length == 14 -%}
-                                            {%- assign is_valid_gtin_length = true -%}
-                                        {% else %}
-                                            {%- assign is_valid_gtin_length = false -%}
-                                        {%- endif -%}
-                                    {%- endif -%}
-                                    {
-                                    "@type": "Offer",
-                                    "name": {{ variant.title | json }},
-                                    "availability": {%- if variant.available -%}"https://schema.org/InStock"{%- else -%}"https://schema.org/OutOfStock"{%- endif -%},
-                                    "price": {{ variant.price | money_without_currency | replace: ',', '.' | json }},
-                                    "priceCurrency": {{ shop.currency | json }},
-                                    "priceValidUntil": "{{ 'now' | date: '%s' | plus: days_product_price_valid_until | date: '%Y-%m-%d' }}",
-                                    {%- if variant.sku != blank -%}
-                                        "sku": {{ variant.sku | json }},
-                                    {%- endif -%}
-                                    {%- if variant.barcode != blank and is_valid_gtin_length %}
-                                        "{{ gtin_option }}": {{ variant.barcode | json }},
-                                        "productId": {{ variant.barcode | json }},
-                                    {%- elsif variant.barcode != blank %}
-                                        "mpn": {{ variant.barcode | json }},
-                                        "productId": {{ variant.barcode | json }},
-                                    {%- endif %}
-                                    "url": "{{ request.path }}{{ variant.url }}"
-                                    }{% unless forloop.last %},{% endunless %}
-                                {%- endfor -%}
-                            ],
-                            {%- if has_reviews -%}
-                                "aggregateRating": {
-                                "@type": "AggregateRating",
-                                "ratingValue": "{{ rating_value }}",
-                                "reviewCount": "{{ review_count }}"
-                                },
-                            {%- endif %}
-                            "brand": {
-                                "name": {{ product.vendor | json }}
-                            },
-                            "description": {{ product.description | strip_html | json }},
-                            "category": {{ product.type | json }},
-                            "url": "{{ request.path }}{{ product.url }}",
-                            "sku": {{ product.selected_or_first_available_variant.sku | json }},
-                                "aggregateRating": {
-                            "@type": "AggregateRating",
-                            "ratingValue": "5",
-                            "bestRating": "5",
-                            "worstRating": "1",
-                            "ratingCount": "1"
-                            },
-                            "image": {
-                                "@type": "ImageObject",
-                                "url": "https:{{ product.featured_image | image_url: width: 1024 }}",
-                                "image": "https:{{ product.featured_image | image_url: width: 1024 }}",
-                                "name": {{ product.featured_image.alt | json }},
-                                "width": "1024",
-                                "height": "1024"
-                            }
-                        }
-                    }{% unless forloop.last %},{% endunless %}
-                {% endfor %}
-            {% endpaginate %}
-        ]
-    }
-}
+  {
+      "@context": "http://schema.org/",
+      "@type": "Organization",
+      "name": {{ shop.name | json }},
+      "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": {{ collection.title | json }},
+          "itemListElement": [
+              {% paginate collection.products by 12 %}
+                  {% for product in collection.products %}
+                      {%- assign days_product_price_valid_until = 10 | times: 86400 -%}
+                      {%- assign has_reviews = false -%}
+                      {%- assign rating_value = blank -%}
+                      {%- assign review_count = blank -%}
+                      {%- if product.metafields.spr.reviews != blank -%}
+                      {%- assign rating_value_review_array = product.metafields.spr.reviews | split: 'meta itemprop="ratingValue" content="' -%}
+                      {%- assign rating_value_arr = rating_value_review_array[1] | split: '"' -%}
+                      {%- assign rating_value = rating_value_arr[0] -%}
+                      {%- assign review_count_str_array = product.metafields.spr.reviews | split: 'meta itemprop="reviewCount" content="' -%}
+                      {%- assign review_count_arr = review_count_str_array[1] | split: '"' -%}
+                      {%- assign review_count = review_count_arr[0] -%}
+
+                      {%- unless review_count == blank -%}
+                          {%- assign has_reviews = true -%}
+                      {%- endunless -%}
+                      {%- endif -%}
+                      {
+                          "@type": "Offer",
+                          "itemOffered": {
+                              "@type": "Product",
+                              "name": {{ product.title | json }},
+                              "price": {{ product.price | money_without_currency | replace: ',', '.' | json }},
+                              "priceCurrency": {{ shop.currency | json }},
+                              "offers": [
+                                  {%- for variant in product.variants -%}
+                                      {%- assign gtin_option = 'gtin' -%}
+                                      {%- if variant.barcode != blank -%}
+                                          {%- assign gtin_string_length = variant.barcode | size -%}
+                                          {%- if gtin_string_length == 8 or gtin_string_length == 12 or gtin_string_length == 13 or gtin_string_length == 14 -%}
+                                              {%- assign is_valid_gtin_length = true -%}
+                                          {% else %}
+                                              {%- assign is_valid_gtin_length = false -%}
+                                          {%- endif -%}
+                                      {%- endif -%}
+                                      {
+                                      "@type": "Offer",
+                                      "name": {{ variant.title | json }},
+                                      "availability": {%- if variant.available -%}"https://schema.org/InStock"{%- else -%}"https://schema.org/OutOfStock"{%- endif -%},
+                                      "price": {{ variant.price | money_without_currency | replace: ',', '.' | json }},
+                                      "priceCurrency": {{ shop.currency | json }},
+                                      "priceValidUntil": "{{ 'now' | date: '%s' | plus: days_product_price_valid_until | date: '%Y-%m-%d' }}",
+                                      {%- if variant.sku != blank -%}
+                                          "sku": {{ variant.sku | json }},
+                                      {%- endif -%}
+                                      {%- if variant.barcode != blank and is_valid_gtin_length %}
+                                          "{{ gtin_option }}": {{ variant.barcode | json }},
+                                          "productId": {{ variant.barcode | json }},
+                                      {%- elsif variant.barcode != blank %}
+                                          "mpn": {{ variant.barcode | json }},
+                                          "productId": {{ variant.barcode | json }},
+                                      {%- endif %}
+                                      "url": "{{ request.path }}{{ variant.url }}"
+                                      }{% unless forloop.last %},{% endunless %}
+                                  {%- endfor -%}
+                              ],
+                              {%- if has_reviews -%}
+                                  "aggregateRating": {
+                                  "@type": "AggregateRating",
+                                  "ratingValue": "{{ rating_value }}",
+                                  "reviewCount": "{{ review_count }}"
+                                  },
+                              {%- endif %}
+                              "brand": {
+                                  "name": {{ product.vendor | json }}
+                              },
+                              "description": {{ product.description | strip_html | json }},
+                              "category": {{ product.type | json }},
+                              "url": "{{ request.path }}{{ product.url }}",
+                              "sku": {{ product.selected_or_first_available_variant.sku | json }},
+                                  "aggregateRating": {
+                              "@type": "AggregateRating",
+                              "ratingValue": "5",
+                              "bestRating": "5",
+                              "worstRating": "1",
+                              "ratingCount": "1"
+                              },
+                              "image": {
+                                  "@type": "ImageObject",
+                                  "url": "https:{{ product.featured_image | image_url: width: 1024 }}",
+                                  "image": "https:{{ product.featured_image | image_url: width: 1024 }}",
+                                  "name": {{ product.featured_image.alt | json }},
+                                  "width": "1024",
+                                  "height": "1024"
+                              }
+                          }
+                      }{% unless forloop.last %},{% endunless %}
+                  {% endfor %}
+              {% endpaginate %}
+          ]
+      }
+  }
 </script>

@@ -11,7 +11,63 @@
   "sections": {
     "main": {
       "type": "container",
+      "blocks": {
+        "heading_7JNz3m": {
+          "type": "heading",
+          "settings": {
+            "heading": "404",
+            "html_tag": "p",
+            "heading_style": "h1",
+            "alignment": "center",
+            "spacing_bottom": "m",
+            "text_color": "",
+            "font_size": "72"
+          }
+        },
+        "heading_CUjgVq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ooops... the page was not found.",
+            "html_tag": "p",
+            "heading_style": "h4",
+            "alignment": "center",
+            "spacing_bottom": "xl",
+            "text_color": "",
+            "font_size": ""
+          }
+        },
+        "link_WREwty": {
+          "type": "link",
+          "settings": {
+            "link": "/",
+            "label": "Back to shop",
+            "button_style": "btn btn--secondary",
+            "small": false,
+            "full_width": false,
+            "open_in_new_tab": false,
+            "spacing_bottom": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_7JNz3m",
+        "heading_CUjgVq",
+        "link_WREwty"
+      ],
       "settings": {
+        "page_width": "page-width",
+        "position": "",
+        "overflow": "",
+        "spacing": {
+          "padding-block-start": "60px",
+          "padding-block-end": "60px"
+        },
+        "layout": {
+          "flex-direction": "column",
+          "row-gap": "0px",
+          "column-gap": "0px"
+        },
+        "color_scheme": ""
       }
     }
   },
