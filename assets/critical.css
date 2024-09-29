@@ -33,7 +33,7 @@ textarea{
 .full-width {
   width: 100%;
 }
-.theme-section{
+html .styles\:spacing .theme-section{
   margin-inline: auto;
 }
 
