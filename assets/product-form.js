@@ -28,7 +28,7 @@ class ProductForm extends HTMLElement {
     const variantIdInput = this.querySelector(`[name="id"]`);
     const sellingPlanInput = this.querySelector(`[name="selling_plan"]`);
     console.log(productUrlInput, variantIdInput, sellingPlanInput);
-    variantIdInput.addEventListener('change', () => {
+    variantIdInput.addEventListener('input', () => {
       console.log(productUrlInput?.value, variantIdInput?.value, sellingPlanInput?.value);
     });
   }
