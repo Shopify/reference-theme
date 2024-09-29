@@ -59,7 +59,8 @@
             "spacing": {
             },
             "layout": {
-              "flex-direction": "column"
+              "flex-direction": "column",
+              "align-items": "flex-start"
             },
             "color_scheme": ""
           },
@@ -70,30 +71,15 @@
                 "heading": "Heading",
                 "html_tag": "p",
                 "heading_style": "h4",
-                "alignment": "center",
+                "alignment": "left",
                 "spacing_bottom": "none",
                 "text_color": "",
                 "font_size": ""
               }
-            },
-            "image_lorem": {
-              "type": "image",
-              "settings": {
-                "image": "shopify://shop_images/putting-on-your-shoes_925x_469d88fd-1298-4c8c-83ee-c291c0716e68.jpg",
-                "object_fit": "cover",
-                "size": {
-                  "width": "100%"
-                },
-                "aspect_ratio_type": "custom",
-                "aspect_ratio": "4 / 3",
-                "spacing_bottom": "none",
-                "placeholder": "image"
-              }
             }
           },
           "block_order": [
-            "heading_NhJqMg",
-            "image_lorem"
+            "heading_NhJqMg"
           ]
         }
       },
