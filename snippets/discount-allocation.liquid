@@ -1,5 +1,9 @@
-{{ discount_allocation.amount }}
-{{ discount_allocation.discount_application.title }}
-{{ discount_allocation.discount_application.total_allocated_amount }}
-{{ discount_allocation.discount_application.value }}
+{{ discount_allocation.amount }} |
+{{ discount_allocation.discount_application.title }} |
+{{ discount_allocation.discount_application.total_allocated_amount }} |
+{{ discount_allocation.discount_application.value }} |
 {{ discount_allocation.discount_application.value_type }}
+{% comment %} <div class="discount-allocation flex row">
+  {{ "discount.svg" | inline_asset_content }}
+  <p class="small">{{ discount_allocation.discount_application.title }} ({{ discount_allocation.amount | money }})</p>
+</div> {% endcomment %}
