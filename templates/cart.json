@@ -199,7 +199,9 @@
           "padding-block-start": "60px",
           "padding-block-end": "60px",
           "@media (--mobile)": {
-            "padding-block-end": "0px"
+            "padding-block-end": "0px",
+            "padding-inline-start": "0px",
+            "padding-inline-end": "0px"
           },
           "padding-inline-start": "40px",
           "padding-inline-end": "40px"
