@@ -12,5 +12,8 @@
     "price": {
       "from": "from"
     }
+  },
+  "cart": {
+    "subtotal": "Subtotal"
   }
 }

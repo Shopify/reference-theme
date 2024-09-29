@@ -1,0 +1,19 @@
+<div class="flex row space-between">
+  <p class="">{{ "cart.subtotal" | t }}</p>
+  <p class="">{{ cart.total_price | money }}</p>
+</div>
+
+{% schema %}
+{
+  "name": "Subtotal",
+  "tag": null,
+  "settings": [
+    
+  ],
+  "presets": [
+    {
+      "name": "Subtotal"
+    }
+  ]
+}
+{% endschema %}
