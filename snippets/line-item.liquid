@@ -23,16 +23,17 @@
               {% endfor %}
             </div>
           {% endunless %}
-          <div class="line-item-discount-applications">
+          <div class="line-item-discount-applications spacing-bottom-xs">
             {% for discount_allocation in line_item.line_level_discount_allocations %}
-                <div class="discount-application flex row middle spacing-bottom-2xs">
+              
+                <div class="discount-application flex row middle {% unless forloop.last %}spacing-bottom-2xs{% endunless %}">
                   {% render 'icon', icon: 'discount', size: "18px" %}
                   <p class="small">{{ discount_allocation.discount_application.title }} (-{{ discount_allocation.discount_application.total_allocated_amount | money }})</p>
                 </div>
             {% endfor %}
           </div>
         </div>
-        <div class="line-item-quantity flex row middle spacing-bottom-2xs">
+        <div class="line-item-quantity flex row middle spacing-bottom-xs">
           <quantity-rocker
             class="p"
             {% unless line_item.variant.inventory_management == nil %}
