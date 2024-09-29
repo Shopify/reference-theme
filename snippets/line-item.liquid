@@ -24,14 +24,17 @@
             {% render 'discount-application', discount_application: discount_allocation.discount_application %}
         {% endfor %}
       </div>
-      {% assign inventory_quantity = line_item.variant.inventory_quantity | at_most: 999 %}
-      {% if inventory_quantity < 0 %}
-        {% assign inventory_quantity = 999 %}
-      {% endif %}
+    
       <quantity-rocker
-        min="0"
         class="p"
-        max="{{ inventory_quantity }}"
+        {% unless line_item.variant.inventory_management == nil %}
+          {% assign inventory_quantity = line_item.variant.inventory_quantity | at_most: 999 %}
+          {% if inventory_quantity < 0 %}
+            {% assign inventory_quantity = 999 %}
+          {% endif %}
+          min="0"
+          max="{{ inventory_quantity }}"
+        {% endunless %}
         value="{{ line_item.quantity }}"
         name="updates[]"
         data-line-item-key="{{ line_item.key }}">
