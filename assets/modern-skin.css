@@ -164,6 +164,9 @@ textarea{
   & .line-item-image{
     flex-basis: 140px;
   }
+  & .line-item-quantity{
+    --gap: 5px;
+  }
 }
 .line-component{
   --gap: 10px;
