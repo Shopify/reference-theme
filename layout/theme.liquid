@@ -50,37 +50,27 @@
         {{ "minimal-skin.css" | asset_url | stylesheet_tag }}
     {% endcase %}
 
-    <script
-      defer
-      src="{{ 'embla-carousel.umd.js' | asset_url }}"></script>
-    <script
-      defer
-      src="{{ 'embla-slider-component.js' | asset_url }}"></script>
+    <script defer src="{{ 'embla-carousel.umd.js' | asset_url }}"></script>
+    <script defer src="{{ 'embla-slider-component.js' | asset_url }}"></script>
     <link rel="stylesheet" href="{{ 'embla-slider-component.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'embla-slider-component-skin.css' | asset_url }}">
 
-    <script
-      type="module"
-      src="{{ 'theme-select.js' | asset_url }}"></script>
+    <script type="module" src="{{ 'theme-select.js' | asset_url }}"></script>
     <link rel="stylesheet" href="{{ 'theme-select.css' | asset_url }}">
 
-    <script
-      type="module"
-      src="{{ 'collapsible.js' | asset_url }}"></script>
+    <script type="module" src="{{ 'collapsible.js' | asset_url }}"></script>
     <link rel="stylesheet" href="{{ 'collapsible.css' | asset_url }}">
 
-    <script
-      type="module"
-      src="{{ 'quantity-rocker.js' | asset_url }}"></script>
+    <script type="module" src="{{ 'quantity-rocker.js' | asset_url }}"></script>
     <link rel="stylesheet" href="{{ 'quantity-rocker.css' | asset_url }}">
 
-    <script
-      type="module"
-      src="{{ 'cart.js' | asset_url }}"></script>
-    <script
-      type="module"
-      src="{{ 'cart-form.js' | asset_url }}"></script>
+    <script type="module" src="{{ 'cart.js' | asset_url }}"></script>
+    <script type="module" src="{{ 'cart-form.js' | asset_url }}"></script>
     <link rel="stylesheet" href="{{ 'cart-form.css' | asset_url }}">
+
+    {%- if template.name == 'product' -%}
+      <script type="module" src="{{ 'product-form.js' | asset_url }}"></script>
+    {%- endif -%}
   </head>
 
   <body>
