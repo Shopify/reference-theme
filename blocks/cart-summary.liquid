@@ -5,7 +5,7 @@
 <div class="cart-discount-applications">
   {% for discount_application in cart.cart_level_discount_applications %}
     <div class="discount-application flex row middle space-between">
-      <div class="flex row middle">
+      <div class="flex row middle discount-application-title">
         {% render 'icon', icon: 'discount', size: "18px" %}
         <p class="small">{{ discount_application.title }} </p>
       </div>

@@ -158,6 +158,9 @@ textarea{
 
 .discount-application{
   --gap: 5px;
+  & .discount-application-title{
+    --gap: 5px;
+  }
 }
 .line-item{
   --gap: 10px;
