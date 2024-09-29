@@ -6,7 +6,7 @@
       <p class="h4">{{ option.name }}</p>
       <div class="flex row wrap gap-small">
         {%- for option_value in option.values -%}
-          <product-option-value class="spacing-s" variant-id="{{ option_value.variant.id }}" product-url="{{ option_value.product_url }}">
+          <product-option-value class="spacing-s" variant-id="{{ option_value.variant.id }}" product-url="{{ option_value.product_url | default: product.url }}">
             {{ option_value.name }}
           </product-option-value>
         {%- endfor -%}
