@@ -1,5 +1,7 @@
 <div class="shopify-block-{{block.type}} spacing-bottom-{{ block.settings.spacing_bottom }}">
-  <button class="{{ block.settings.button_style }}" type="submit">
+  <button class="{{ block.settings.button_style }}
+    {% if block.settings.small %}btn--small{% endif %} 
+   {% if block.settings.full_width %}btn--full{% endif %}" type="submit">
     {{ block.settings.label }}
   </button>
 </div>
@@ -36,6 +38,18 @@
         }
       ],
       "default": "btn btn--primary"
+    },
+    {
+      "type": "checkbox",
+      "id": "small",
+      "label": "Small",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
     },
     {
       "type": "select",
