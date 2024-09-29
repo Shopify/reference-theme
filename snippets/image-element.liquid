@@ -9,8 +9,22 @@
     placeholder -> svg placeholder handle
   endcomment
   assign fit = fit | default: "cover"
+  assign aspect_ratio = aspect_ratio
+  if aspect_ratio == 'auto' 
+    assign aspect_ratio = image.aspect_ratio | round: 6
+  elsif aspect_ratio != blank
+    if aspect_ratio contains '/'
+      assign numerator = aspect_ratio | split: '/' | first | times: 1.0
+      assign denominator = aspect_ratio | split: '/' | last | times: 1.0
+      assign aspect_ratio = numerator | divided_by: denominator | round: 6
+    else
+      assign aspect_ratio = aspect_ratio | times: 1.0 | round: 6
+    endif
+  else 
+    assign aspect_ratio = 1.0
+  endif
 %}
-<div class="image-wrapper {{ fit }}" style="--aspect-ratio: {{ aspect_ratio | default: image.aspect_ratio }};">
+<div class="image-wrapper {{ fit }}" style="--aspect-ratio: {{ aspect_ratio }};">
   {% liquid
     assign placeholder = placeholder | default: "image"
     if image != blank
@@ -21,7 +35,7 @@
         assign widths = widths | default: "300, 400, 500, 650, 900, 1100, 1300, 1600"
         assign loading = loading | default: "lazy"
         assign sizes = sizes | default: "100vw"
-        if aspect_ratio != blank and fit == "cover" 
+        if aspect_ratio != image.aspect_ratio and fit == "cover" 
           assign aspect_ratio = aspect_ratio | times: 1.0
           assign crop_left = 0
           assign crop_top = 0
@@ -29,14 +43,14 @@
           assign crop_height = image.height
           if aspect_ratio > image.aspect_ratio
             assign crop_height = image.width | divided_by: aspect_ratio
-            assign focus_vertical_shift = image.presentation.focal_point.y | default: 50.0 | minus: 50 | divided_by: 100.0 | times: image.height | round
+            assign focus_vertical_shift = image.presentation.focal_point.y | default: 50.0 | minus: 50.0 | divided_by: 100.0 | times: image.height | round
             assign margin_block = image.height | minus: crop_height
-            assign crop_top = margin_block | divided_by: 2.0 | round | plus: focus_vertical_shift | at_least: 0 | at_most: margin_block
+            assign crop_top = margin_block | divided_by: 2.0 | round | plus: focus_vertical_shift | at_least: 0.0 | at_most: margin_block
           else
             assign crop_width = image.height | times: aspect_ratio
-            assign focus_horizontal_shift = image.presentation.focal_point.x | default: 50.0 | minus: 50 | divided_by: 100.0 | times: image.width | round
+            assign focus_horizontal_shift = image.presentation.focal_point.x | default: 50.0 | minus: 50.0 | divided_by: 100.0 | times: image.width | round
             assign margin_inline = image.width | minus: crop_width
-            assign crop_left = margin_inline | divided_by: 2.0 | round | plus: focus_horizontal_shift | at_least: 0 | at_most: margin_inline
+            assign crop_left = margin_inline | divided_by: 2.0 | round | plus: focus_horizontal_shift | at_least: 0.0 | at_most: margin_inline
           endif
           echo image | image_url: width: crop_width, crop: "region", crop_width: crop_width, crop_height: crop_height, crop_left: crop_left, crop_top: crop_top | image_tag: widths: widths, loading: loading, sizes: sizes, style: "object-position: 50% 50%; object-fit: cover;"
         else
