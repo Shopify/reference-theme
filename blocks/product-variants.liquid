@@ -1,11 +1,14 @@
 <div class="flex col">
-  <input type="hidden" value="{{ product.selected_or_first_available_variant.id | default: product.variants.first.id }}">
+  <input type="hidden" name="url" value="{{ product.url }}">
+  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id | default: product.variants.first.id }}">
   {%- for option in product.options_with_values -%}
     <div class="flex col">
       <p class="h4">{{ option.name }}</p>
       <div class="flex row wrap gap-small">
         {%- for option_value in option.values -%}
-          <p data-variant-id="{{ option_value.variant.id }}" data-product-url="{{ option_value.product_url }}">{{ option_value.name }}</p>
+          <product-option-value class="spacing-s" variant-id="{{ option_value.variant.id }}" product-url="{{ option_value.product_url }}">
+            {{ option_value.name }}
+          </product-option-value>
         {%- endfor -%}
       </div>
     </div>
