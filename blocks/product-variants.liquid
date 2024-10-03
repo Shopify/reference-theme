@@ -2,6 +2,7 @@
   product-option-value {
     border: 2px solid black;
     cursor: pointer;
+    border-radius: 50%
   }
   product-option-value[sold-out] {
     opacity: 0.5;
@@ -26,15 +27,12 @@
   .product-option-values {
     gap: 10px;
   }
-  product-option-value:has(.product-swatch img),
-  product-option-value .product-swatch:has(img) {
-    border-radius: 50%;
-  }
   product-option-value .product-swatch {
     background-color: var(--swatch-color, transparent);
     width: 44px;
     aspect-ratio: 1;
     position: relative;
+    border-radius: 50%;
   }
   product-option-value .product-swatch img{
     position: absolute;
@@ -50,6 +48,11 @@
   }
   product-option-value:not([selected]) .product-swatch {
     width: 50px;
+  }
+  product-option-value:has(img)
+  product-option-value:has(.product-option-name),
+  product-option-value .product-swatch:has(img) {
+    border-radius: 0;
   }
 </style>
 
