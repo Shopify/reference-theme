@@ -26,6 +26,10 @@
   .product-option-values {
     gap: 10px;
   }
+  product-option-value:has(.product-swatch img),
+  product-option-value .product-swatch:has(img) {
+    border-radius: 50%;
+  }
   product-option-value .product-swatch {
     background-color: var(--swatch-color, transparent);
     width: 44px;
