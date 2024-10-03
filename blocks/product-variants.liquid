@@ -45,7 +45,7 @@
   {%- for option in product.options_with_values -%}
     {%- assign selected_value = option.values | where: 'selected', true | first -%}
     <div class="flex col product-option">
-      <p class="h6">{{ option.name }}:{% if selected_value.swatch != blank %} {{ selected_value.name }}{% endif %}</p>
+      <p class="h6"><strong>{{ option.name }}</strong>:{% if selected_value.swatch != blank %} {{ selected_value.name }}{% endif %}</p>
       <div class="flex row wrap product-option-values">
         {%- for option_value in option.values -%}
           <product-option-value {% if option_value.selected %}selected {% endif %}variant-id="{{ option_value.variant.id }}" product-url="{{ option_value.product_url | default: product.url }}">
