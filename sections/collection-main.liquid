@@ -39,10 +39,12 @@
     <div class="grid collection-grid" style="--columns: 4; --gap: 30px;">
       {%- for product in collection.products -%}
         <div class="flex col product-grid-item">
+          {%- assign first_matched_variant = product.variants | where: 'matched', true | first -%}
           {%- assign first_variant = product.first_available_variant | default: product.variants.first -%}
+          {%- assign product_image = first_matched_variant.image | default: product.featured_image -%}
           <h5>{{ product.title }}</h5>
           <a href="{{ first_variant.url | within: collection }}" class="flex col full-width">
-            {%- render 'image-element', image: product.featured_image, aspect_ratio: 1, fit: 'cover', sizes: '25vw' -%}
+            {%- render 'image-element', image: product_image, aspect_ratio: 1, fit: 'cover', sizes: '25vw' -%}
           </a>
           {%- unless product.has_only_default_variant or product.variants.size < 2 -%}
             <div class="flex row wrap swatches" style="--gap: 15px;">
