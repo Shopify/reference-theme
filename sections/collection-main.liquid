@@ -6,9 +6,11 @@
       {%- for product in collection.products -%}
         <a href="{{ product.url }}" class="flex col product-grid-item">
           <h5>{{ product.title }}</h5>
-          <div class="flex col">
-            {%- for variant in product.variants -%}
-              <p>{{ variant.title }}</p>
+          <div class="flex row wrap">
+            {%- for option in product.options_with_values limit: 1 -%}
+              {%- for option_value in option.values -%}
+                <a href="{{ option_value.variant.url | within: collection }}">{{ option_value.name }}</a>
+              {%- endfor -%}
             {%- endfor -%}
           </div>
         </a>
