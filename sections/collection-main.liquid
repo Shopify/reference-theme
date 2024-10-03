@@ -2,7 +2,7 @@
 
 <div class="color-{{ section.settings.color_scheme }} full-width {{ section.settings.overflow }} {{ section.settings.position }}">
   {%- paginate collection.products by 24 -%}
-    <div class="grid col-4 medium_col-2 small_col-1">
+    <div class="grid" style="--columns: 4;">
       {%- for product in collection.products -%}
         <div class="flex col product-grid-item">
           <h5>{{ product.title }}</h5>
