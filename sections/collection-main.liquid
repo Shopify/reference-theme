@@ -1,13 +1,21 @@
 
 <style>
+  .collection-grid {
+    padding: 30px;
+  }
+  .swatches {
+    padding-top: 15px;
+  }
   .grid-item-swatch {
     aspect-ratio: 1;
+    width: 40px;
+    background-color: var(--background-color);
   }
 </style>
 
 <div class="color-{{ section.settings.color_scheme }} full-width {{ section.settings.overflow }} {{ section.settings.position }}">
   {%- paginate collection.products by 24 -%}
-    <div class="grid" style="--columns: 4; --gap: 30px;">
+    <div class="grid collection-grid" style="--columns: 4; --gap: 30px;">
       {%- for product in collection.products -%}
         <div class="flex col product-grid-item">
           {%- assign first_variant = product.first_available_variant | default: product.variants.first -%}
@@ -15,7 +23,7 @@
           <a href="{{ first_variant.url | within: collection }}" class="flex col">
             {%- render 'image-element', image: product.featured_image, aspect_ratio: 1, fit: 'cover', sizes: '25vw' -%}
           </a>
-          <div class="flex row wrap" style="--gap: 15px;">
+          <div class="flex row wrap swatches" style="--gap: 15px;">
             {%- for option in product.options_with_values limit: 1 -%}
               {%- for option_value in option.values -%}
                 {%- if option_value.swatch != blank -%}
