@@ -5,7 +5,7 @@
     <div class="grid" style="--columns: 4; --gap: 30px;">
       {%- for product in collection.products -%}
         <div class="flex col product-grid-item">
-          {%- assign first_variant = product.first_available_variant -%}
+          {%- assign first_variant = product.first_available_variant | default: product.variants.first -%}
           <h5>{{ product.title }}</h5>
           <a href="{{ first_variant.url | within: collection }}" class="flex col">
             {%- render 'image-element', image: product.featured_image, aspect_ratio: 1, fit: 'cover', sizes: '25vw' -%}
