@@ -1,4 +1,9 @@
 
+<style>
+  .grid-item-swatch {
+    aspect-ratio: 1;
+  }
+</style>
 
 <div class="color-{{ section.settings.color_scheme }} full-width {{ section.settings.overflow }} {{ section.settings.position }}">
   {%- paginate collection.products by 24 -%}
@@ -10,10 +15,20 @@
           <a href="{{ first_variant.url | within: collection }}" class="flex col">
             {%- render 'image-element', image: product.featured_image, aspect_ratio: 1, fit: 'cover', sizes: '25vw' -%}
           </a>
-          <div class="flex row wrap">
+          <div class="flex row wrap" style="--gap: 15px;">
             {%- for option in product.options_with_values limit: 1 -%}
               {%- for option_value in option.values -%}
-                <a href="{{ option_value.variant.url | within: collection }}">{{ option_value.name }}</a>
+                {%- if option_value.swatch != blank -%}
+                  <a href="{{ option_value.variant.url | within: collection }}" class="flex col grid-item-swatch" style="--background-color: {{ option_value.swatch.color }}">
+                    {%- if option_value.swatch.image != blank -%}
+                      {%- render 'image-element', image: option_value.swatch.image, sizes: '40px', aspect_ratio: 1, fit: 'cover' -%}
+                    {%- endif -%}
+                  </a>
+                {%- else -%}
+                  <a href="{{ option_value.variant.url | within: collection }}" class="flex col grid-item-swatch">
+                    {{ option_value.name }}
+                  </a>
+                {%- endif -%}
               {%- endfor -%}
             {%- endfor -%}
           </div>
