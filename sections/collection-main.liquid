@@ -24,23 +24,25 @@
           <a href="{{ first_variant.url | within: collection }}" class="flex col full-width">
             {%- render 'image-element', image: product.featured_image, aspect_ratio: 1, fit: 'cover', sizes: '25vw' -%}
           </a>
-          <div class="flex row wrap swatches" style="--gap: 15px;">
-            {%- for option in product.options_with_values limit: 1 -%}
-              {%- for option_value in option.values -%}
-                {%- if option_value.swatch != blank -%}
-                  <a href="{{ option_value.variant.url | within: collection }}" class="flex col grid-item-swatch" style="--background-color: {{ option_value.swatch.color }}">
-                    {%- if option_value.swatch.image != blank -%}
-                      {%- render 'image-element', image: option_value.swatch.image, sizes: '40px', aspect_ratio: 1, fit: 'cover' -%}
-                    {%- endif -%}
-                  </a>
-                {%- else -%}
-                  <a href="{{ option_value.variant.url | within: collection }}" class="flex col grid-item-swatch">
-                    {{ option_value.name }}
-                  </a>
-                {%- endif -%}
+          {%- unless product.has_only_default_variant or product.variants.size < 2 -%}
+            <div class="flex row wrap swatches" style="--gap: 15px;">
+              {%- for option in product.options_with_values limit: 1 -%}
+                {%- for option_value in option.values -%}
+                  {%- if option_value.swatch != blank -%}
+                    <a href="{{ option_value.variant.url | within: collection }}" class="flex col grid-item-swatch" style="--background-color: {{ option_value.swatch.color }}">
+                      {%- if option_value.swatch.image != blank -%}
+                        {%- render 'image-element', image: option_value.swatch.image, sizes: '40px', aspect_ratio: 1, fit: 'cover' -%}
+                      {%- endif -%}
+                    </a>
+                    {%- else -%}
+                    <a href="{{ option_value.variant.url | within: collection }}" class="flex col grid-item-swatch">
+                      {{ option_value.name }}
+                    </a>
+                  {%- endif -%}
+                {%- endfor -%}
               {%- endfor -%}
-            {%- endfor -%}
-          </div>
+            </div>
+          {%- endunless -%}
         </div>
       {%- endfor -%}
     </div>
