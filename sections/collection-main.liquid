@@ -7,7 +7,7 @@
         <div class="flex col product-grid-item">
           <h5>{{ product.title }}</h5>
           <a href="{{product.url}}" class="flex col">
-            {%- render 'image-element', image: product.featured_image, aspect_ratio: 1, fit: 'cover' -%}
+            {%- render 'image-element', image: product.featured_image, aspect_ratio: 1, fit: 'cover', sizes: '25vw' -%}
           </a>
           <div class="flex row wrap">
             {%- for option in product.options_with_values limit: 1 -%}
