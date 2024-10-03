@@ -43,7 +43,7 @@
   <input type="hidden" name="url" value="{{ product.url }}">
   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id | default: product.variants.first.id }}">
   {%- for option in product.options_with_values -%}
-    {%- assign selected_value = option.values | where: 'selected', 'true' | first -%}
+    {%- assign selected_value = option.values | where: 'selected', true | first -%}
     <div class="flex col product-option">
       <p class="h6">{{ option.name }}:{% if selected_value.swatch != blank %} {{ selected_value.name }}{% endif %}</p>
       <div class="flex row wrap product-option-values">
