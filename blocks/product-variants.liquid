@@ -3,6 +3,10 @@
     border: 2px solid black;
     cursor: pointer;
   }
+  product-option-value[sold-out] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
   product-option-value .product-option-name {
     padding: 10px;
     height: 40px;
@@ -56,7 +60,7 @@
         <p class="h6"><strong>{{ option.name }}:</strong>{% if selected_value.swatch != blank %} {{ selected_value.name }}{% endif %}</p>
         <div class="flex row wrap product-option-values">
           {%- for option_value in option.values -%}
-            <product-option-value {% if option_value.selected %}selected {% endif %}variant-id="{{ option_value.variant.id }}" product-url="{{ option_value.product_url | default: product.url }}">
+            <product-option-value {% unless option_value.available %}sold-out {% endunless %}{% if option_value.selected %}selected {% endif %}variant-id="{{ option_value.variant.id }}" product-url="{{ option_value.product_url | default: product.url }}">
               {%- if option_value.swatch != blank -%}
                 <div class="product-swatch flex col" {%- if option_value.swatch.color != blank -%}style="--swatch-color: {{ option_value.swatch.color }};"{%- endif -%}>
                   {%- if option_value.swatch.image != blank -%}
