@@ -22,18 +22,6 @@
   }
 </style>
 
-
-<div class="flex col">
-  {%- for filter in collection.filters -%}
-    <h5>{{ filter.name }}: {{ filter.param_name }}</h5>
-    <ul>
-      {%- for filter_value in filter.values -%}
-        <h5>{{ filter_value.label }}: {{ filter_value.url_to_add }}</h5>
-      {%- endfor -%}
-    </ul>
-  {%- endfor -%}
-</div>
-
 <div class="color-{{ section.settings.color_scheme }} full-width {{ section.settings.overflow }} {{ section.settings.position }}">
   {%- paginate collection.products by 24 -%}
     <div class="grid collection-grid" style="--columns: 4; --gap: 30px;">
