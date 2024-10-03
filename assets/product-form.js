@@ -42,10 +42,10 @@ class ProductForm extends HTMLElement {
     history.replaceState(null, "", fetchUrl.href);
     fetchUrl.searchParams.set('sections', this.section);
     this.loading = true;
-    console.log(fetchUrl.href);
     fetch(fetchUrl.href)
     .then((res) => res.json())
     .then((res) => {
+      const data = res[this.section];
       const template = document.createElement("template");
       template.innerHTML = data.trim();
       const new_form = template.content.querySelector('product-form');
