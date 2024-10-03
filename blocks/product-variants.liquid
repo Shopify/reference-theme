@@ -4,6 +4,7 @@
     height: 40px;
     width: auto;
     min-width: 40px;
+    white-space: nowrap;
   }
   product-option-value {
     border: 2px solid black;
@@ -54,7 +55,7 @@
                 {%- endif -%}
               </div>
             {% else %}
-              <div class="product-option-name">
+              <div class="product-option-name flex row center middle">
                 <p>{{ option_value.name }}</p>
               </div>
             {%- endif -%}
