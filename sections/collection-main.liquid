@@ -7,10 +7,18 @@
     padding-top: 15px;
   }
   .grid-item-swatch {
-    aspect-ratio: 1;
+    height: 40px;
     width: 40px;
+    min-width: max-content;
     border: 2px solid black;
     background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid-item-swatch p{
+    padding: 10px;
   }
 </style>
 
@@ -36,7 +44,7 @@
                     </a>
                     {%- else -%}
                     <a href="{{ option_value.variant.url | within: collection }}" class="flex col grid-item-swatch">
-                      {{ option_value.name }}
+                      <p>{{ option_value.name }}</p>
                     </a>
                   {%- endif -%}
                 {%- endfor -%}
