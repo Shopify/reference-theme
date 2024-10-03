@@ -4,8 +4,11 @@
   {%- paginate collection.products by 24 -%}
     <div class="grid col-4 medium_col-2 small_col-1">
       {%- for product in collection.products -%}
-        <a href="{{ product.url }}" class="flex col product-grid-item">
+        <div class="flex col product-grid-item" style="aspect-ratio: 2/3;">
           <h5>{{ product.title }}</h5>
+          <div class="flex col">
+            {%- render 'image-element', image: product.featured_image -%}
+          </div>
           <div class="flex row wrap">
             {%- for option in product.options_with_values limit: 1 -%}
               {%- for option_value in option.values -%}
@@ -13,7 +16,7 @@
               {%- endfor -%}
             {%- endfor -%}
           </div>
-        </a>
+        </div>
       {%- endfor -%}
     </div>
     {{- paginate | default_pagination -}}

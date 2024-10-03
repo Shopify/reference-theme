@@ -40,31 +40,33 @@
 </style>
 
 <div class="flex col product-options">
-  <input type="hidden" name="url" value="{{ product.url }}">
   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id | default: product.variants.first.id }}">
-  {%- for option in product.options_with_values -%}
-    {%- assign selected_value = option.values | where: 'selected', true | first -%}
-    <div class="flex col product-option">
-      <p class="h6"><strong>{{ option.name }}:</strong>{% if selected_value.swatch != blank %} {{ selected_value.name }}{% endif %}</p>
-      <div class="flex row wrap product-option-values">
-        {%- for option_value in option.values -%}
-          <product-option-value {% if option_value.selected %}selected {% endif %}variant-id="{{ option_value.variant.id }}" product-url="{{ option_value.product_url | default: product.url }}">
-            {%- if option_value.swatch != blank -%}
-              <div class="product-swatch flex col" {%- if option_value.swatch.color != blank -%}style="--swatch-color: {{ option_value.swatch.color }};"{%- endif -%}>
-                {%- if option_value.swatch.image != blank -%}
-                  {%- render 'image-element', image: option_value.swatch.image, aspect_ratio: 1, fit: 'cover', sizes: '50px', widths: '50,100,150' -%}
-                {%- endif -%}
-              </div>
-            {% else %}
-              <div class="product-option-name flex row center middle">
-                <p>{{ option_value.name }}</p>
-              </div>
-            {%- endif -%}
-          </product-option-value>
-        {%- endfor -%}
+  <input type="hidden" name="url" value="{{ product.url }}">
+  {%- unless product.has_only_default_variant or product.variants.size < 2 -%}
+    {%- for option in product.options_with_values -%}
+      {%- assign selected_value = option.values | where: 'selected', true | first -%}
+      <div class="flex col product-option">
+        <p class="h6"><strong>{{ option.name }}:</strong>{% if selected_value.swatch != blank %} {{ selected_value.name }}{% endif %}</p>
+        <div class="flex row wrap product-option-values">
+          {%- for option_value in option.values -%}
+            <product-option-value {% if option_value.selected %}selected {% endif %}variant-id="{{ option_value.variant.id }}" product-url="{{ option_value.product_url | default: product.url }}">
+              {%- if option_value.swatch != blank -%}
+                <div class="product-swatch flex col" {%- if option_value.swatch.color != blank -%}style="--swatch-color: {{ option_value.swatch.color }};"{%- endif -%}>
+                  {%- if option_value.swatch.image != blank -%}
+                    {%- render 'image-element', image: option_value.swatch.image, aspect_ratio: 1, fit: 'cover', sizes: '50px', widths: '50,100,150' -%}
+                  {%- endif -%}
+                </div>
+              {% else %}
+                <div class="product-option-name flex row center middle">
+                  <p>{{ option_value.name }}</p>
+                </div>
+              {%- endif -%}
+            </product-option-value>
+          {%- endfor -%}
+        </div>
       </div>
-    </div>
-  {%- endfor -%}
+    {%- endfor -%}
+  {%- endunless -%}
 </div>
 
 {% schema %}
