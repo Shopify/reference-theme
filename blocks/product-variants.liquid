@@ -6,11 +6,7 @@
     min-width: 40px;
     white-space: nowrap;
   }
-  product-option-value {
-    border: 2px solid black;
-  }
-  product-option-value[selected] {
-    border: 2px solid black;
+  product-option-value[selected] .product-option-name {
     background-color: black;
     color: white;
   }
@@ -36,6 +32,10 @@
     top: 0;
     left: 0;
     display: flex;
+  }
+  product-option-value[selected] .product-swatch {
+    margin: 4px;
+    border: 2px solid black;
   }
 </style>
 
