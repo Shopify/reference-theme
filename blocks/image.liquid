@@ -1,6 +1,7 @@
-<div
-  class="{{ block.settings | class_list }} image-block image-block--{{ block.settings.object_fit }}"
-  {{ block.shopify_attributes }}
+{% if block.settings.image or request.design_mode %}
+  <div
+    class="{{ block.settings | class_list }} image-block image-block--{{ block.settings.object_fit }}"
+    {{ block.shopify_attributes }}
 >
   {%- if block.settings.image -%}
     {{
@@ -12,8 +13,9 @@
     <div class="placeholder-image">
       {{ 'detailed-apparel-1' | placeholder_svg_tag: 'image-placeholder-svg' }}
     </div>
-  {%- endif -%}
-</div>
+    {%- endif -%}
+  </div>
+{% endif %}
 
 {% schema %}
 {

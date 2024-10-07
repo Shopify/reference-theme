@@ -1,12 +1,12 @@
-<div class="full-width {{ section.settings | class_list }} color-{{ section.settings.color_scheme }} featured-product-section">
-  {% if section.settings.product != blank or request.design_mode %}
+{% if section.settings.product != blank or request.design_mode %}
+  <div class="full-width {{ section.settings | class_list }} color-{{ section.settings.color_scheme }} featured-product-section">
     {% content_for "blocks" %}
-  {% endif %}
-</div>
+  </div>
+{% endif %}
 
 {% schema %}
 {
-  "name": "Featured product (keep)",
+  "name": "Featured product (empty)",
   "class": "section--has-background",
   "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
@@ -52,7 +52,7 @@
   ],
   "presets": [
     {
-      "name": "Featured product (keep)",
+      "name": "Featured product (remove)",
       "blocks": [
         {
           "type": "product-medias",
