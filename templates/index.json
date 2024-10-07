@@ -200,19 +200,19 @@
           },
           "blocks": {
             "4b76e504-9f68-46b8-a889-725b04a52125": {
-              "type": "collection-card",
+              "type": "collection-card-keep",
               "settings": {
                 "collection": ""
               }
             },
             "fa489ade-cc68-4a10-9b84-e7060b1a50dc": {
-              "type": "collection-card",
+              "type": "collection-card-keep",
               "settings": {
                 "collection": ""
               }
             },
             "ef24d42e-05f9-42af-a984-2b83969ebd60": {
-              "type": "collection-card",
+              "type": "collection-card-keep",
               "settings": {
                 "collection": ""
               }
@@ -411,7 +411,7 @@
                   }
                 },
                 "collection_card_hXFmdj": {
-                  "type": "collection-card",
+                  "type": "collection-card-keep",
                   "settings": {
                     "collection": "",
                     "size": {
@@ -430,7 +430,7 @@
               ]
             },
             "collection_card_WcXMHL": {
-              "type": "collection-card",
+              "type": "collection-card-keep",
               "settings": {
                 "collection": "",
                 "size": {
