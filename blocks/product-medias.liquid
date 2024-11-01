@@ -1,5 +1,4 @@
 {% liquid
-  assign target = product
   if block.settings.product != blank
     assign target = block.settings.product
   endif
@@ -57,7 +56,7 @@
 
 {% schema %}
 {
-  "name": "Product (medias)",
+  "name": "Product (media)",
   "tag": null,
   "settings": [
     {
@@ -89,6 +88,13 @@
       "label": "Spacing"
     }
   ],
-  "presets": [{ "name": "Product (media)" }]
+  "presets": [
+    {
+      "name": "Product (media)",
+      "settings": {
+        "product": "{{ context.product }}"
+      }
+    }
+  ]
 }
 {% endschema %}

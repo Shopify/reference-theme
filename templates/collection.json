@@ -1,32 +1,77 @@
 {
   "sections": {
-    "group": {
+    "collection-header": {
       "type": "custom-section",
       "blocks": {
-        "text_RBVHTC": {
-          "type": "text",
+        "heading_mqAgUH": {
+          "type": "heading",
           "settings": {
-            "text": "<p>This template is not available in the Theme blocks developer preview.<\/p>",
-            "text_style": "",
-            "alignment": "center"
+            "heading": "{{ context.collection.title }}",
+            "heading_size": "h1",
+            "alignment": "start",
+            "size": {
+            },
+            "spacing": {
+            }
           }
         }
       },
       "block_order": [
-        "text_RBVHTC"
+        "heading_mqAgUH"
       ],
       "settings": {
-        "layout": {
-          "justify-content": "center"
-        },
         "spacing": {
-          "padding": "100px 0px"
+          "padding-block-end": "0px"
         },
-        "color_scheme": "scheme-2"
+        "layout": {
+          "justify-content": "flex-start"
+        }
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection-product-card": {
+          "type": "product-card",
+          "static": true,
+          "settings": {
+            "product": "{{ context.product }}"
+          },
+          "blocks": {
+            "product_medias_Gawh7G": {
+              "type": "product-medias",
+              "settings": {
+                "product": "{{ context.product }}",
+                "media_featured": true,
+              }
+            },
+            "title_zGnXr7": {
+              "type": "product-title",
+              "settings": {
+                "product": "{{ context.product }}",
+                "heading_size": "h5",
+              }
+            },
+            "price_fiTWdm": {
+              "type": "price",
+              "settings": {
+                "product": "{{ context.product }}"
+              }
+            }
+          },
+          "block_order": [
+            "product_medias_Gawh7G",
+            "title_zGnXr7",
+            "price_fiTWdm"
+          ]
+        }
+      },
+      "settings": {
       }
     }
   },
   "order": [
-    "group"
+    "collection-header",
+    "main-collection"
   ]
 }

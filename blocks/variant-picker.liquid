@@ -1,5 +1,5 @@
 {%- liquid
-  assign product = block.settings.product | default: product
+  assign product = block.settings.product
   assign product_form_id = 'product-form-' | append: section.id | append: product.id
 -%}
 
@@ -83,6 +83,11 @@
       "label": "Spacing"
     }
   ],
-  "presets": [{ "name": "Product (variant picker)" }]
+  "presets": [
+    {
+      "name": "Product (variant picker)",
+      "settings": { "product": "{{ context.product }}" }
+    }
+  ]
 }
 {% endschema %}

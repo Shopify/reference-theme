@@ -1,0 +1,55 @@
+<div
+  class="full-width {{ section.settings | class_list }} color-{{ section.settings.color_scheme }}"
+>
+  {% if collection.products_count > 0 %}
+    <div class="filters-wrapper">
+      <span class="products-count">{{ collection.products_count }} products</span>
+    </div>
+  {% endif %}
+  {% if collection.products.size > 0 %}
+    {% paginate collection.products by section.settings.num_products_per_page %}
+      <ul class="product-grid product-grid--{{ section.id }}">
+        {% for product in collection.products %}
+          <li>
+            {% content_for "block", type: "product-card", id: "collection-product-card", context.product: product %}
+          </li>
+        {% endfor %}
+      </ul>
+      {% render 'pagination', paginate: paginate %}
+    {% endpaginate %}
+  {% else %}
+    <p>No products found.</p>
+  {% endif %}
+  {% content_for "blocks" %}
+</div>
+{% schema %}
+{
+  "name": "Main collection",
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    {
+      "type": "range",
+      "id": "num_products_per_page",
+      "label": "Number of products per page",
+      "min": 3,
+      "max": 24,
+      "step": 3,
+      "default": 9
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing",
+      "default": {
+        "padding": "20px"
+      }
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ]
+}
+{% endschema %}

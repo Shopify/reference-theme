@@ -107,7 +107,7 @@
             "link_qxd3Gx": {
               "type": "link",
               "settings": {
-                "link": "https:\/\/shopify.dev\/docs\/themes\/architecture\/blocks",
+                "link": "https:\/\/shopify.dev\/docs\/themes\/architecture\/blocks\/theme-blocks",
                 "label": "Developer documentation",
                 "style_class": "link",
                 "open_in_new_tab": true,

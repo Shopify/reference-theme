@@ -1,0 +1,35 @@
+<div
+  class="full-width {{ section.settings | class_list }} color-{{ section.settings.color_scheme }}"
+>
+  <ul class="product-grid product-grid--{{ section.id }}">
+    {% for collection in collections %}
+      <li>
+        {% content_for "block", type: "collection-card", id: "collection-card", context.collection: collection %}
+      </li>
+    {% endfor %}
+  </ul>
+  {% content_for "blocks" %}
+</div>
+
+{% schema %}
+{
+  "name": "Collections list page",
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing",
+      "default": {
+        "padding": "20px"
+      }
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ]
+}
+{% endschema %}

@@ -1,65 +1,23 @@
 <div
-  class="{{ block.settings | class_list }} resource-card resource-card-{{ block.id }}"
+  class="resource-card {{ block.settings | class_list }}}"
   {{ block.shopify_attributes }}
 >
-  {% style %}
-    .resource-card-{{ block.id }} img {
-      aspect-ratio: {{ block.settings.ratio }};
-    }
-  {% endstyle %}
-
-  {%- if block.settings.collection != blank -%}
-    <div class="resource-card__image-wrapper">
-      {%- if block.settings.collection.featured_image -%}
-        {{
-          block.settings.collection.featured_image
-          | image_url: width: 1000
-          | image_tag: widths: '200, 400, 800, 1000'
-        }}
-      {%- endif -%}
-    </div>
-    <a href="{{ block.settings.collection.url }}" class="link link--with-icon">
-      {{ block.settings.collection.title }}
-      <svg
-        class="icon"
-        aria-hidden="true"
-        focusable="false"
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-      >
-        {%- render 'icon', icon: 'arrow' -%}
-      </svg>
-    </a>
-  {%- else -%}
-    <div
-      class="resource-card__image-wrapper placeholder-image"
-      style="aspect-ratio:{% if block.settings.ratio == 'auto' %}1{% else %}{{ block.settings.ratio }}{% endif %};"
-    >
-      {{ 'collection-apparel-1' | placeholder_svg_tag: 'product-placeholder-svg' }}
-    </div>
-    <a href="#" class="link link--with-icon">
-      <span>Your collection's name</span>
-      <svg
-        class="icon"
-        aria-hidden="true"
-        focusable="false"
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-      >
-        {%- render 'icon', icon: 'arrow' -%}
-      </svg>
-    </a>
-  {%- endif -%}
+  <a
+    class="card-link"
+    href="{{ block.settings.collection.url }}"
+  >
+  </a>
+  {% content_for "blocks" %}
 </div>
 
 {% schema %}
 {
   "name": "Collection card",
   "tag": null,
+  "blocks": [
+    { "type": "@theme" },
+    { "type": "@app" }
+  ],
   "settings": [
     {
       "type": "collection",
@@ -81,34 +39,45 @@
       "label": "Spacing"
     },
     {
-      "type": "paragraph",
-      "content": "Width is automatically optimized for mobile."
+      "type": "style.layout_panel",
+      "id": "layout",
+      "label": "Layout",
+      "default": {
+        "flex-wrap": "nowrap",
+        "gap": "5px",
+        "flex-direction": "column",
+        "align-items": "flex-start",
+
+        "@media (--mobile)": {
+          "flex-wrap": "wrap"
+        }
+      }
     },
     {
-      "type": "select",
-      "id": "ratio",
-      "label": "Image ratio",
-      "options": [
-        {
-          "value": "auto",
-          "label": "Adapt to image"
-        },
-        {
-          "value": "1",
-          "label": "Square"
-        },
-        {
-          "value": "16 / 9",
-          "label": "Landscape"
-        },
-        {
-          "value": "2 / 3",
-          "label": "Portrait"
-        }
-      ],
-      "default": "auto"
+      "type": "paragraph",
+      "content": "Width is automatically optimized for mobile."
     }
   ],
-  "presets": [{ "name": "Collection card" }]
+  "presets": [
+    {
+      "name": "Collection card",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "image",
+          "settings": {
+            "image": "{{ context.collection.image }}"
+          }
+        },
+        {
+          "type": "collection-title",
+          "settings": {
+            "collection": "{{ context.collection }}",
+            "heading_size": "h4"
+          }
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}

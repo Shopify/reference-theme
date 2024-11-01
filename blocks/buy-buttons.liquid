@@ -1,5 +1,5 @@
 {% liquid
-  assign product = block.settings.product | default: product
+  assign product = block.settings.product
 %}
 <div
   class="{{ block.settings.size | class_list }} {{ block.settings.spacing | class_list }}"
@@ -76,7 +76,7 @@
           class="product-form__submit button button--add-to-cart button--primary"
           disabled
         >
-          No product!
+          Sold out
         </button>
       </div>
     </div>
@@ -123,6 +123,11 @@
       }
     }
   ],
-  "presets": [{ "name": "Product (buy buttons)" }]
+  "presets": [
+    { 
+      "name": "Product (buy buttons)",
+      "settings": { "product": "{{ context.product }}" }
+    }
+  ]
 }
 {% endschema %}

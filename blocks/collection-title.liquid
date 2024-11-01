@@ -1,40 +1,47 @@
-<div
-  class="{{ block.settings | class_list }} text-block {{ block.settings.text_style }} text-{{ block.settings.alignment }}"
+<h2
+  class="title-block {{ block.settings | class_list }} {{ block.settings.heading_size }} text-{{ block.settings.alignment }}"
   {{ block.shopify_attributes }}
 >
-  {{ block.settings.text }}
-</div>
+  {{ block.settings.collection.title | default: 'Example collection title' }}
+</h2>
 
 {% schema %}
 {
-  "name": "Text",
+  "name": "Collection (title)",
   "tag": null,
   "settings": [
     {
-      "type": "richtext",
-      "id": "text",
-      "label": "Text",
-      "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
     },
     {
       "type": "select",
-      "id": "text_style",
-      "label": "Style",
+      "id": "heading_size",
+      "label": "Size",
       "options": [
         {
-          "value": "",
-          "label": "Body"
+          "value": "h5",
+          "label": "Extra Small"
         },
         {
-          "value": "text-block-subtitle",
-          "label": "Subtitle"
+          "value": "h4",
+          "label": "Small"
         },
         {
-          "value": "text-block-caption",
-          "label": "Caption"
+          "value": "h3",
+          "label": "Medium"
+        },
+        {
+          "value": "h2",
+          "label": "Large"
+        },
+        {
+          "value": "h1",
+          "label": "Extra Large"
         }
       ],
-      "default": ""
+      "default": "h2"
     },
     {
       "type": "select",
@@ -74,6 +81,13 @@
       "label": "Spacing"
     }
   ],
-  "presets": [{ "name": "Text" }]
+  "presets": [
+    {
+      "name": "Collection (title)",
+      "settings": {
+        "collection": "{{ context.collection }}"
+      }
+    }
+  ]
 }
 {% endschema %}

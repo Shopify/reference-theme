@@ -1,0 +1,47 @@
+<div class="full-width {{ section.settings | class_list }} color-{{ section.settings.color_scheme }} featured-product-section">
+  {% content_for "blocks" %}
+</div>
+
+{% schema %}
+{
+  "name": "Product information",
+  "class": "section--has-background",
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing",
+      "default": {
+        "padding": "20px"
+      }
+    },
+    {
+      "type": "style.layout_panel",
+      "id": "layout",
+      "label": "Layout",
+      "default": {
+        "flex-direction": "row",
+        "gap": "20px",
+        "justify-content": "center",
+        "align-items": "flex-start",
+
+        "@media (--mobile)": {
+          "flex-wrap": "wrap",
+          "gap": "10px"
+        }
+      }
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ]
+}
+{% endschema %}
