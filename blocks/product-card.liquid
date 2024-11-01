@@ -1,37 +1,20 @@
-<div class="{{ block.settings | class_list }}" {{ block.shopify_attributes }}>
-  {% style %}
-    #shopify-block-{{ block.id }} img  {
-      aspect-ratio: {{ block.settings.ratio }};
-    }
-  {% endstyle %}
-
-  {% if block.settings.product != blank %}
-    <div class="resource-card__image-wrapper">
-      {%- if block.settings.product.featured_image -%}
-        {{ block.settings.product.featured_image | image_url: width: 1000 | image_tag: widths: '200, 400, 800, 1000' }}
-      {%- endif -%}
-    </div>
-    <a href="{{ block.settings.product.url }}" class="link">
-      {{ block.settings.product.title }}
-    </a>
-    <p>{{ block.settings.product.price | money_with_currency }}</p>
-  {%- else -%}
-    <div
-      class="resource-card__image-wrapper placeholder-image"
-      style="aspect-ratio:{% if block.settings.ratio == 'auto' %}1{% else %}{{ block.settings.ratio }}{% endif %};"
-    >
-      {{ 'product-apparel-1' | placeholder_svg_tag: 'product-placeholder-svg' }}
-    </div>
-    <a href="#" class="link">Example product title </a>
-    <p>{{ 1999 | money_with_currency }}</p>
-  {% endif %}
+<div
+  class="resource-card {{ block.settings | class_list }}"
+  {{ block.shopify_attributes }}
+>
+  <a
+    class="card-link"
+    href="{{ block.settings.product.url }}"
+  >
+  </a>
+  {% content_for "blocks" %}
 </div>
 
 {% schema %}
 {
   "name": "Product card",
   "tag": null,
-  "class": "resource-card",
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
     {
       "type": "product",
@@ -53,34 +36,56 @@
       "label": "Spacing"
     },
     {
-      "type": "paragraph",
-      "content": "Width is automatically optimized for mobile."
+      "type": "style.layout_panel",
+      "id": "layout",
+      "label": "Layout",
+      "default": {
+        "flex-wrap": "nowrap",
+        "gap": "5px",
+        "flex-direction": "column",
+        "align-items": "flex-start",
+
+        "@media (--mobile)": {
+          "flex-wrap": "wrap"
+        }
+      }
     },
     {
-      "type": "select",
-      "id": "ratio",
-      "label": "Image ratio",
-      "options": [
-        {
-          "value": "auto",
-          "label": "Adapt to image"
-        },
-        {
-          "value": "1",
-          "label": "Square"
-        },
-        {
-          "value": "16 / 9",
-          "label": "Landscape"
-        },
-        {
-          "value": "2 / 3",
-          "label": "Portrait"
-        }
-      ],
-      "default": "auto"
+      "type": "paragraph",
+      "content": "Width is automatically optimized for mobile."
     }
   ],
-  "presets": [{ "name": "Product card" }]
+  "presets": [
+    {
+      "name": "Product card",
+      "settings": {
+        "layout": {
+          "flex-direction": "column"
+        }
+      },
+      "blocks": [
+        {
+          "type": "product-medias",
+          "settings": {
+            "product": "{{ context.product }}",
+            "media_featured": true
+          }
+        },
+        {
+          "type": "product-title",
+          "settings": {
+            "product": "{{ context.product }}",
+            "heading_size": "h5"
+          }
+        },
+        {
+          "type": "price",
+          "settings": {
+            "product": "{{ context.product }}"
+          }
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}

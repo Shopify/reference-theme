@@ -80,13 +80,14 @@
             {
               "type": "text",
               "settings": {
-                "text": "<p>Vendor: {{ section.settings.product.vendor }}<\/p>"
+                "text": "<p>{{ section.settings.product.vendor }}<\/p>"
               }
             },
             {
-              "type": "text",
+              "type": "product-title",
               "settings": {
-                "text": "<h1>Title: {{ section.settings.product.title }}<\/h1>"
+                "heading_size": "h1",
+                "product": "{{ section.settings.product }}"
               }
             },
             {
@@ -121,6 +122,7 @@
               "settings": {
                 "label": "View full details",
                 "icon": "arrow",
+                "link": "{{ section.settings.product.url }}",
                 "icon_position": "right",
                 "style_class": "link",
                 "spacing": {

@@ -1,5 +1,4 @@
 {% liquid
-  assign target = product
   if block.settings.product != blank
     assign target = block.settings.product
   endif
@@ -57,6 +56,11 @@
       "label": "Spacing"
     }
   ],
-  "presets": [{ "name": "Product (quantity select)" }]
+  "presets": [
+    {
+      "name": "Product (quantity select)",
+      "settings": { "product": "{{ context.product }}" }
+    }
+  ]
 }
 {% endschema %}

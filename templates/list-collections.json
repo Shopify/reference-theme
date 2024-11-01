@@ -1,32 +1,70 @@
 {
   "sections": {
-    "group": {
+    "collection-list-header": {
       "type": "custom-section",
       "blocks": {
-        "text_atpxrF": {
-          "type": "text",
+        "collection-list-heading": {
+          "type": "heading",
           "settings": {
-            "text": "<p>This template is not available in the Theme blocks developer preview.<\/p>",
-            "text_style": "",
-            "alignment": "center"
+            "heading": "Collections",
+            "heading_size": "h1",
+            "alignment": "start",
+            "size": {
+            },
+            "spacing": {
+            }
           }
         }
       },
       "block_order": [
-        "text_atpxrF"
+        "collection-list-heading"
       ],
       "settings": {
-        "layout": {
-          "justify-content": "center"
-        },
         "spacing": {
-          "padding": "100px 0px"
+          "padding-block-end": "0px"
         },
-        "color_scheme": "scheme-2"
+        "layout": {
+          "justify-content": "flex-start"
+        }
+      }
+    },
+    "main-collection": {
+      "type": "main-list-collections",
+      "blocks": {
+        "collection-card": {
+          "type": "collection-card",
+          "static": true,
+          "settings": {
+            "product": "{{ context.collection }}"
+          },
+          "blocks": {
+            "collection-image": {
+              "type": "image",
+              "settings": {
+                "image": "{{ context.collection.image }}",
+                "media_featured": true
+              }
+            },
+            "collection-title": {
+              "type": "collection-title",
+              "settings": {
+                "product": "{{ context.collection }}",
+                "heading_size": "h4"
+              }
+            }
+          },
+          "block_order": [
+            "collection-image",
+            "collection-title"
+          ]
+        }
+      },
+      "settings": {
       }
     }
   },
   "order": [
-    "group"
+    "collection-list-header",
+    "main-collection"
   ]
 }

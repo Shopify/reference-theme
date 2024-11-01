@@ -1,6 +1,6 @@
 {
   "type": "footer",
-  "name": "Footer group",
+  "name": "Footer",
   "sections": {
     "f3655535-32dc-4b1a-8f58-041cd0dce0ec": {
       "type": "custom-section",
@@ -218,7 +218,7 @@
                 "text_mWDYXd": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+                    "text": "<p>Add details about your store’s mission or values. Give your visitors an idea of your approach to customer service, sustainability, and more.<\/p>",
                     "text_style": "",
                     "alignment": "start"
                   }

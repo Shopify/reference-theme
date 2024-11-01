@@ -1,0 +1,109 @@
+{% liquid
+  assign products = block.settings.collection.products
+  if products == none
+    assign products = (1..block.settings.columns_desktop)
+  endif
+%}
+
+<div
+  class="{{ block.settings | class_list }} color-{{ block.settings.color_scheme }}"
+>
+  {% if products != blank %}
+    <ul
+      class="product-grid product-grid--{{ section.id }}"
+      style="--product-grid-columns-desktop: repeat({{ block.settings.columns_desktop}}, 1fr);"
+    >
+      {% for product in products limit: block.settings.products_to_show %}
+        <li>
+          {% content_for "block", type: "product-card", id: "product-grid-item", context.product: product %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No products found.</p>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Product grid",
+  "class": "product-grid-block",
+  "blocks": [],
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 25,
+      "step": 1,
+      "default": 4,
+      "label": "Maximum products to show"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 4,
+      "label": "Number of columns on desktop"
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing",
+      "default": {
+        "padding": "20px"
+      }
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product grid",
+      "blocks": [
+        {
+          "id": "product-grid-item",
+          "type": "product-card",
+          "static": true,
+          "settings": {
+            "product": "{{ context.product }}"
+          },
+          "blocks": [
+            {
+              "type": "product-medias",
+              "settings": {
+                "product": "{{ context.product }}",
+                "media_featured": true
+              }
+            },
+            {
+              "type": "product-title",
+              "settings": {
+                "product": "{{ context.product }}",
+                "heading_size": "h5"
+              }
+            },
+            {
+              "type": "price",
+              "settings": {
+                "product": "{{ context.product }}"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
