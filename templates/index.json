@@ -4,7 +4,7 @@
       "type": "slideshow",
       "blocks": {
         "slide_mEbteL": {
-          "type": "slide",
+          "type": "_slide",
           "settings": {
             "layout": {
               "flex-direction": "row"
@@ -82,7 +82,7 @@
           ]
         },
         "slide_aWAGX7": {
-          "type": "slide",
+          "type": "_slide",
           "settings": {
             "layout": {
               "flex-direction": "row"
