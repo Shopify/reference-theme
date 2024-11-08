@@ -115,9 +115,11 @@ A block must have at least one preset to appear for selection in the Theme Edito
 
 ## Theme block targeting
 
-A section or group that accepts theme blocks can indicate either that it accepts all blocks (and apps) by adding `"blocks": [{ "type": "@theme" }, { "type": "@app" }]` to the schema.  Or it can target specific blocks by adding `"blocks": [{ "type": "slide" }]`. By default, theme blocks are available in all sections and theme blocks.
+A section or group that accepts theme blocks can indicate either that it accepts all blocks (and apps) by adding `"blocks": [{ "type": "@theme" }, { "type": "@app" }]` to the schema.  Or it can target specific blocks by adding `"blocks": [{ "type": "slide" }]`.
 
-There are cases where you might want to limit the blocks that are available in sections. For example, slides are a type of block that should only be available in slideshow sections. To prevent the default behavior, theme developers can name the block with an underscore prefix. All underscore prefixed blocks would be excluded from appearing in the block picker for blocks and sections that accept blocks with type @theme. Those blocks and sections will need to explicitly add the block by base filename. Ex: `"blocks": [ { "type": "_slide" } ]`
+By default, the block picker will show all theme blocks, but there are cases where you might want to control the blocks that are available to add. Theme developers can name a block with an underscore prefix to exclude it from appearing in the block picker for sections and theme blocks that accept blocks with type `@theme`.
+
+For example, `slide` is a type of block that should only be available in `slideshow` sections. This can be done by naming your slide block `blocks/_slide` and in your `slideshow` section, you can target it by using `"blocks": [{ "type": "_slide" }]`.
 
 ## Static theme blocks
 
