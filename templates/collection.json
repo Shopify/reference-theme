@@ -6,7 +6,7 @@
         "heading_mqAgUH": {
           "type": "heading",
           "settings": {
-            "heading": "{{ context.collection.title }}",
+            "heading": "{{ closest.collection.title }}",
             "heading_size": "h1",
             "alignment": "start",
             "size": {
@@ -35,27 +35,27 @@
           "type": "product-card",
           "static": true,
           "settings": {
-            "product": "{{ context.product }}"
+            "product": "{{ closest.product }}"
           },
           "blocks": {
             "product_medias_Gawh7G": {
               "type": "product-medias",
               "settings": {
-                "product": "{{ context.product }}",
+                "product": "{{ closest.product }}",
                 "media_featured": true,
               }
             },
             "title_zGnXr7": {
               "type": "product-title",
               "settings": {
-                "product": "{{ context.product }}",
+                "product": "{{ closest.product }}",
                 "heading_size": "h5",
               }
             },
             "price_fiTWdm": {
               "type": "price",
               "settings": {
-                "product": "{{ context.product }}"
+                "product": "{{ closest.product }}"
               }
             }
           },

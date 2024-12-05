@@ -67,21 +67,21 @@
         {
           "type": "product-medias",
           "settings": {
-            "product": "{{ context.product }}",
+            "product": "{{ closest.product }}",
             "media_featured": true
           }
         },
         {
           "type": "product-title",
           "settings": {
-            "product": "{{ context.product }}",
+            "product": "{{ closest.product }}",
             "heading_size": "h5"
           }
         },
         {
           "type": "price",
           "settings": {
-            "product": "{{ context.product }}"
+            "product": "{{ closest.product }}"
           }
         }
       ]

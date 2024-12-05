@@ -11,7 +11,7 @@
       <ul class="product-grid product-grid--{{ section.id }}">
         {% for product in collection.products %}
           <li>
-            {% content_for "block", type: "product-card", id: "collection-product-card", context.product: product %}
+            {% content_for "block", type: "product-card", id: "collection-product-card", closest.product: product %}
           </li>
         {% endfor %}
       </ul>
