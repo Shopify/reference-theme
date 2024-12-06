@@ -6,7 +6,7 @@
         "9c8f7c42-604a-41de-a594-12f7c7f0e653": {
           "type": "product-medias",
           "settings": {
-            "product": "{{ context.product }}",
+            "product": "{{ closest.product }}",
             "media_featured": true,
             "size": {
               "width": "100%",
@@ -32,7 +32,7 @@
             "8e624812-3736-4121-9762-3bb2c48e1b7c": {
               "type": "text",
               "settings": {
-                "text": "<p>{{ context.product.vendor }}<\/p>",
+                "text": "<p>{{ closest.product.vendor }}<\/p>",
                 "text_style": "text-block-caption",
                 "alignment": "start"
               }
@@ -40,7 +40,7 @@
             "product-title_MgtBgC": {
               "type": "product-title",
               "settings": {
-                "product": "{{ context.product }}",
+                "product": "{{ closest.product }}",
                 "heading_size": "h1",
                 "alignment": "start"
               }
@@ -48,25 +48,25 @@
             "85c04f16-a58b-4d58-bc70-ad8f9d1e75a3": {
               "type": "price",
               "settings": {
-                "product": "{{ context.product }}"
+                "product": "{{ closest.product }}"
               }
             },
             "0ab4dad4-d9a4-4064-8512-5d6974e32100": {
               "type": "variant-picker",
               "settings": {
-                "product": "{{ context.product }}"
+                "product": "{{ closest.product }}"
               }
             },
             "13857f6b-f089-4d09-8bf0-f55ec052560d": {
               "type": "quantity-selector",
               "settings": {
-                "product": "{{ context.product }}"
+                "product": "{{ closest.product }}"
               }
             },
             "7e6064f3-e925-4883-b434-2d96eb09a467": {
               "type": "buy-buttons",
               "settings": {
-                "product": "{{ context.product }}",
+                "product": "{{ closest.product }}",
                 "show_dynamic_checkout": true,
                 "spacing": {
                   "padding": "15px 0"
@@ -76,7 +76,7 @@
             "41c0675b-741c-4bc1-8edb-5291a98632e6": {
               "type": "product-description",
               "settings": {
-                "product": "{{ context.product }}"
+                "product": "{{ closest.product }}"
               }
             },
             "group_a3Nwet": {

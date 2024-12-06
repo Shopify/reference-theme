@@ -15,7 +15,7 @@
     >
       {% for product in products limit: block.settings.products_to_show %}
         <li>
-          {% content_for "block", type: "product-card", id: "product-grid-item", context.product: product %}
+          {% content_for "block", type: "product-card", id: "product-grid-item", closest.product: product %}
         </li>
       {% endfor %}
     </ul>
@@ -77,27 +77,27 @@
           "type": "product-card",
           "static": true,
           "settings": {
-            "product": "{{ context.product }}"
+            "product": "{{ closest.product }}"
           },
           "blocks": [
             {
               "type": "product-medias",
               "settings": {
-                "product": "{{ context.product }}",
+                "product": "{{ closest.product }}",
                 "media_featured": true
               }
             },
             {
               "type": "product-title",
               "settings": {
-                "product": "{{ context.product }}",
+                "product": "{{ closest.product }}",
                 "heading_size": "h5"
               }
             },
             {
               "type": "price",
               "settings": {
-                "product": "{{ context.product }}"
+                "product": "{{ closest.product }}"
               }
             }
           ]

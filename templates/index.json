@@ -206,7 +206,7 @@
               "type": "product-card",
               "static": true,
               "settings": {
-                "product": "{{ context.product }}",
+                "product": "{{ closest.product }}",
                 "size": {
                 },
                 "spacing": {
@@ -218,7 +218,7 @@
                 "product_medias_6MgirX": {
                   "type": "product-medias",
                   "settings": {
-                    "product": "{{ context.product }}",
+                    "product": "{{ closest.product }}",
                     "media_featured": true,
                     "size": {
                     },
@@ -229,7 +229,7 @@
                 "product_title_rxBEdE": {
                   "type": "product-title",
                   "settings": {
-                    "product": "{{ context.product }}",
+                    "product": "{{ closest.product }}",
                     "heading_size": "h5",
                     "alignment": "start",
                     "size": {
@@ -241,7 +241,7 @@
                 "price_RhcUJE": {
                   "type": "price",
                   "settings": {
-                    "product": "{{ context.product }}",
+                    "product": "{{ closest.product }}",
                     "size": {
                     },
                     "spacing": {
@@ -324,7 +324,7 @@
                 "image_JPFbHD": {
                   "type": "image",
                   "settings": {
-                    "image": "{{ context.collection.image }}",
+                    "image": "{{ closest.collection.image }}",
                     "object_fit": "cover",
                     "spacing": {
                     },
@@ -335,7 +335,7 @@
                 "collection_title_6TbyVH": {
                   "type": "collection-title",
                   "settings": {
-                    "collection": "{{ context.collection }}",
+                    "collection": "{{ closest.collection }}",
                     "heading_size": "h4",
                     "alignment": "start",
                     "size": {
@@ -365,7 +365,7 @@
                 "image_CPj9m9": {
                   "type": "image",
                   "settings": {
-                    "image": "{{ context.collection.image }}",
+                    "image": "{{ closest.collection.image }}",
                     "object_fit": "cover",
                     "spacing": {
                     },
@@ -376,7 +376,7 @@
                 "collection_title_wnEkaU": {
                   "type": "collection-title",
                   "settings": {
-                    "collection": "{{ context.collection }}",
+                    "collection": "{{ closest.collection }}",
                     "heading_size": "h4",
                     "alignment": "start",
                     "size": {
@@ -406,7 +406,7 @@
                 "image_NzHXGX": {
                   "type": "image",
                   "settings": {
-                    "image": "{{ context.collection.image }}",
+                    "image": "{{ closest.collection.image }}",
                     "object_fit": "cover",
                     "spacing": {
                     },
@@ -417,7 +417,7 @@
                 "collection_title_3CnknM": {
                   "type": "collection-title",
                   "settings": {
-                    "collection": "{{ context.collection }}",
+                    "collection": "{{ closest.collection }}",
                     "heading_size": "h4",
                     "alignment": "start",
                     "size": {
@@ -649,7 +649,7 @@
                     "image_i6GYY7": {
                       "type": "image",
                       "settings": {
-                        "image": "{{ context.collection.image }}",
+                        "image": "{{ closest.collection.image }}",
                         "object_fit": "cover",
                         "spacing": {
                         },
@@ -660,7 +660,7 @@
                     "collection_title_gjenUt": {
                       "type": "collection-title",
                       "settings": {
-                        "collection": "{{ context.collection }}",
+                        "collection": "{{ closest.collection }}",
                         "heading_size": "h4",
                         "alignment": "start",
                         "size": {
@@ -696,7 +696,7 @@
                 "image_wHhybY": {
                   "type": "image",
                   "settings": {
-                    "image": "{{ context.collection.image }}",
+                    "image": "{{ closest.collection.image }}",
                     "object_fit": "cover",
                     "spacing": {
                     },
@@ -707,7 +707,7 @@
                 "collection_title_eqPK3z": {
                   "type": "collection-title",
                   "settings": {
-                    "collection": "{{ context.collection }}",
+                    "collection": "{{ closest.collection }}",
                     "heading_size": "h4",
                     "alignment": "start",
                     "size": {

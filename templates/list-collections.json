@@ -35,20 +35,20 @@
           "type": "collection-card",
           "static": true,
           "settings": {
-            "product": "{{ context.collection }}"
+            "product": "{{ closest.collection }}"
           },
           "blocks": {
             "collection-image": {
               "type": "image",
               "settings": {
-                "image": "{{ context.collection.image }}",
+                "image": "{{ closest.collection.image }}",
                 "media_featured": true
               }
             },
             "collection-title": {
               "type": "collection-title",
               "settings": {
-                "product": "{{ context.collection }}",
+                "product": "{{ closest.collection }}",
                 "heading_size": "h4"
               }
             }
