@@ -4,15 +4,10 @@
       "type": "custom-section",
       "blocks": {
         "collection-list-heading": {
-          "type": "heading",
+          "type": "text",
           "settings": {
-            "heading": "Collections",
-            "heading_size": "h1",
-            "alignment": "start",
-            "size": {
-            },
-            "spacing": {
-            }
+            "text": "<h1>Collections</h1>",
+            "alignment": "start"
           }
         }
       },

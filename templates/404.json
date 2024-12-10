@@ -1,20 +1,19 @@
-{
+ {
   "sections": {
     "group": {
       "type": "custom-section",
       "blocks": {
         "heading_HzQryn": {
-          "type": "heading",
+          "type": "text",
           "settings": {
-            "heading": "404",
-            "heading_size": "h0",
+            "text": "<h1>404</h1>",
             "alignment": "start"
           }
         },
         "text_4KQrBa": {
           "type": "text",
           "settings": {
-            "text": "<p>Page not found.<\/p>",
+            "text": "<p>Page not found.</p>",
             "text_style": "",
             "alignment": "start"
           }

@@ -36,14 +36,6 @@
                 "color_scheme": ""
               },
               "blocks": {
-                "heading_kCqTbY": {
-                  "type": "heading",
-                  "settings": {
-                    "heading": "Image slide",
-                    "heading_size": "h1",
-                    "alignment": "start"
-                  }
-                },
                 "text_BFbgT7": {
                   "type": "text",
                   "settings": {
@@ -71,7 +63,6 @@
                 }
               },
               "block_order": [
-                "heading_kCqTbY",
                 "text_BFbgT7",
                 "link_U9yyFk"
               ]
@@ -114,14 +105,6 @@
                 "color_scheme": ""
               },
               "blocks": {
-                "heading_Uk7RcX": {
-                  "type": "heading",
-                  "settings": {
-                    "heading": "Image slide",
-                    "heading_size": "h1",
-                    "alignment": "start"
-                  }
-                },
                 "text_ertfGh": {
                   "type": "text",
                   "settings": {
@@ -149,7 +132,6 @@
                 }
               },
               "block_order": [
-                "heading_Uk7RcX",
                 "text_ertfGh",
                 "link_cgTzUH"
               ]
@@ -175,16 +157,11 @@
     "custom_section_9k9gDW": {
       "type": "custom-section",
       "blocks": {
-        "heading_BHYEy3": {
-          "type": "heading",
+        "text_BHYEy3": {
+          "type": "text",
           "settings": {
-            "heading": "Featured collection",
-            "heading_size": "h2",
-            "alignment": "start",
-            "size": {
-            },
-            "spacing": {
-            }
+            "text": "<h2>Featured collection</h2>",
+            "alignment": "start"
           }
         },
         "product_grid_pe83Xe": {
@@ -262,7 +239,7 @@
         }
       },
       "block_order": [
-        "heading_BHYEy3",
+        "text_BHYEy3",
         "product_grid_pe83Xe"
       ],
       "settings": {
@@ -279,10 +256,9 @@
       "type": "custom-section",
       "blocks": {
         "41e666be-a592-4acf-9961-469beb09b1eb": {
-          "type": "heading",
+          "type": "text",
           "settings": {
-            "heading": "Collections",
-            "heading_size": "h2",
+            "text": "<h2>Collections</h2>",
             "alignment": "start",
             "size": {
             },
@@ -499,16 +475,11 @@
             "color_scheme": "scheme-3"
           },
           "blocks": {
-            "heading_zQL3DW": {
-              "type": "heading",
+            "text_zQL3DW": {
+              "type": "text",
               "settings": {
-                "heading": "Image with text",
-                "heading_size": "h1",
-                "alignment": "start",
-                "size": {
-                },
-                "spacing": {
-                }
+                "text": "<h1>Image with text</h1>",
+                "alignment": "start"
               }
             },
             "text_mEFQnx": {
@@ -544,7 +515,7 @@
             }
           },
           "block_order": [
-            "heading_zQL3DW",
+            "text_zQL3DW",
             "text_mEFQnx",
             "link_Jq4Bj3"
           ]
@@ -569,16 +540,11 @@
     "custom_section_UB43TV": {
       "type": "custom-section",
       "blocks": {
-        "heading_N7jmpy": {
-          "type": "heading",
+        "text_N7jmpy": {
+          "type": "text",
           "settings": {
-            "heading": "Multimedia collage",
-            "heading_size": "h2",
-            "alignment": "start",
-            "size": {
-            },
-            "spacing": {
-            }
+            "text": "<h2>Multimedia collage</h2>",
+            "alignment": "start"
           }
         },
         "group_LrBxgw": {
@@ -730,7 +696,7 @@
         }
       },
       "block_order": [
-        "heading_N7jmpy",
+        "text_N7jmpy",
         "group_LrBxgw"
       ],
       "settings": {
@@ -750,16 +716,11 @@
     "custom_section_MiX6gV": {
       "type": "custom-section",
       "blocks": {
-        "heading_y84T7H": {
-          "type": "heading",
+        "text_y84T7H": {
+          "type": "text",
           "settings": {
-            "heading": "Collapsible content",
-            "heading_size": "h2",
-            "alignment": "start",
-            "size": {
-            },
-            "spacing": {
-            }
+            "text": "<h2>Collapsible content</h2>",
+            "alignment": "start"
           }
         },
         "group_iabYjG": {
@@ -808,18 +769,6 @@
                     "color_scheme": ""
                   },
                   "blocks": {
-                    "heading_YjGWBG": {
-                      "type": "heading",
-                      "settings": {
-                        "heading": "Heading",
-                        "heading_size": "h2",
-                        "alignment": "start",
-                        "size": {
-                        },
-                        "spacing": {
-                        }
-                      }
-                    },
                     "text_PkQ8zn": {
                       "type": "text",
                       "settings": {
@@ -834,7 +783,6 @@
                     }
                   },
                   "block_order": [
-                    "heading_YjGWBG",
                     "text_PkQ8zn"
                   ]
                 },
@@ -888,18 +836,6 @@
                     "color_scheme": ""
                   },
                   "blocks": {
-                    "heading_UHa3p9": {
-                      "type": "heading",
-                      "settings": {
-                        "heading": "Heading",
-                        "heading_size": "h2",
-                        "alignment": "start",
-                        "size": {
-                        },
-                        "spacing": {
-                        }
-                      }
-                    },
                     "text_Vkg9zR": {
                       "type": "text",
                       "settings": {
@@ -914,7 +850,6 @@
                     }
                   },
                   "block_order": [
-                    "heading_UHa3p9",
                     "text_Vkg9zR"
                   ]
                 },
@@ -968,18 +903,6 @@
                     "color_scheme": ""
                   },
                   "blocks": {
-                    "heading_zWmidf": {
-                      "type": "heading",
-                      "settings": {
-                        "heading": "Heading",
-                        "heading_size": "h2",
-                        "alignment": "start",
-                        "size": {
-                        },
-                        "spacing": {
-                        }
-                      }
-                    },
                     "text_knXnFF": {
                       "type": "text",
                       "settings": {
@@ -994,7 +917,6 @@
                     }
                   },
                   "block_order": [
-                    "heading_zWmidf",
                     "text_knXnFF"
                   ]
                 },
@@ -1047,18 +969,6 @@
                     "color_scheme": ""
                   },
                   "blocks": {
-                    "heading_DgNRJD": {
-                      "type": "heading",
-                      "settings": {
-                        "heading": "Heading",
-                        "heading_size": "h2",
-                        "alignment": "start",
-                        "size": {
-                        },
-                        "spacing": {
-                        }
-                      }
-                    },
                     "text_PHPiVJ": {
                       "type": "text",
                       "settings": {
@@ -1073,7 +983,6 @@
                     }
                   },
                   "block_order": [
-                    "heading_DgNRJD",
                     "text_PHPiVJ"
                   ]
                 },
@@ -1112,7 +1021,7 @@
         }
       },
       "block_order": [
-        "heading_y84T7H",
+        "text_y84T7H",
         "group_iabYjG"
       ],
       "settings": {
@@ -1132,16 +1041,11 @@
     "custom_section_YmTwNm": {
       "type": "custom-section",
       "blocks": {
-        "heading_HebfQi": {
-          "type": "heading",
+        "text_HebfQi": {
+          "type": "text",
           "settings": {
-            "heading": "Subscribe to our newsletter",
-            "heading_size": "h2",
-            "alignment": "center",
-            "size": {
-            },
-            "spacing": {
-            }
+            "text": "<h2>Subscribe to our newsletter</h2>",
+            "alignment": "center"
           }
         },
         "text_b37mxx": {
@@ -1167,7 +1071,7 @@
         }
       },
       "block_order": [
-        "heading_HebfQi",
+        "text_HebfQi",
         "text_b37mxx",
         "newsletter_nfLQzr"
       ],
@@ -1220,18 +1124,6 @@
                 "width": 50
               }
             },
-            "heading_RkUtPK": {
-              "type": "heading",
-              "settings": {
-                "heading": "Heading",
-                "heading_size": "h3",
-                "alignment": "center",
-                "size": {
-                },
-                "spacing": {
-                }
-              }
-            },
             "text_gJfdq3": {
               "type": "text",
               "settings": {
@@ -1247,7 +1139,6 @@
           },
           "block_order": [
             "icon_xwdHtL",
-            "heading_RkUtPK",
             "text_gJfdq3"
           ]
         },
@@ -1283,18 +1174,6 @@
                 "width": 50
               }
             },
-            "heading_hdw3ft": {
-              "type": "heading",
-              "settings": {
-                "heading": "Heading",
-                "heading_size": "h3",
-                "alignment": "center",
-                "size": {
-                },
-                "spacing": {
-                }
-              }
-            },
             "text_9dxFC9": {
               "type": "text",
               "settings": {
@@ -1310,7 +1189,6 @@
           },
           "block_order": [
             "icon_RqBeKL",
-            "heading_hdw3ft",
             "text_9dxFC9"
           ]
         },
@@ -1346,18 +1224,6 @@
                 "width": 50
               }
             },
-            "heading_QjnkWX": {
-              "type": "heading",
-              "settings": {
-                "heading": "Heading",
-                "heading_size": "h3",
-                "alignment": "center",
-                "size": {
-                },
-                "spacing": {
-                }
-              }
-            },
             "text_TNH97M": {
               "type": "text",
               "settings": {
@@ -1373,7 +1239,6 @@
           },
           "block_order": [
             "icon_zgezqB",
-            "heading_QjnkWX",
             "text_TNH97M"
           ]
         }

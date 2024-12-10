@@ -152,11 +152,10 @@
                 "color_scheme": "scheme-3"
               },
               "blocks": {
-                "heading_F6mpHV": {
-                  "type": "heading",
+                "text_F6mpHV": {
+                  "type": "text",
                   "settings": {
-                    "heading": "Get to know us",
-                    "heading_size": "h3",
+                    "text": "<h3>Get to know us</h3>",
                     "alignment": "start"
                   }
                 },
@@ -184,7 +183,7 @@
                 }
               },
               "block_order": [
-                "heading_F6mpHV",
+                "text_F6mpHV",
                 "link_AJyYJ4",
                 "link_BGUyPc"
               ]
@@ -207,11 +206,10 @@
                 "color_scheme": "scheme-3"
               },
               "blocks": {
-                "heading_aGWxfA": {
-                  "type": "heading",
+                "text_aGWxfA": {
+                  "type": "text",
                   "settings": {
-                    "heading": "Our mission",
-                    "heading_size": "h3",
+                    "text": "<h3>Our mission</h3>",
                     "alignment": "start"
                   }
                 },
@@ -225,7 +223,7 @@
                 }
               },
               "block_order": [
-                "heading_aGWxfA",
+                "text_aGWxfA",
                 "text_mWDYXd"
               ]
             }

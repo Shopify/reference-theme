@@ -7,17 +7,14 @@
     href="{{ block.settings.collection.url }}"
   >
   </a>
-  {% content_for "blocks" %}
+  {% content_for 'blocks' %}
 </div>
 
 {% schema %}
 {
   "name": "Collection card",
   "tag": null,
-  "blocks": [
-    { "type": "@theme" },
-    { "type": "@app" }
-  ],
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
     {
       "type": "collection",

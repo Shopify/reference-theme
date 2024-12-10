@@ -1,10 +1,13 @@
+{% comment %} [START nesting.block_render] {% endcomment %}
 <div
   class="{{ block.settings | class_list }} group-block group-block--{{ block.id }} color-{{ block.settings.color_scheme }}"
   {{ block.shopify_attributes }}
 >
-  {% content_for "blocks" %}
+  {% content_for 'blocks' %}
 </div>
+{% comment %} [END nesting.block_render] {% endcomment %}
 
+{% comment %} [START nesting.block_schema] {% endcomment %}
 {% schema %}
 {
   "name": "Group",
@@ -73,10 +76,9 @@
       },
       "blocks": [
         {
-          "type": "heading",
+          "type": "text",
           "settings": {
-            "heading": "Column",
-            "heading_size": "h3"
+            "text": "<h3>Column</h3>"
           }
         },
         {
@@ -90,3 +92,4 @@
   ]
 }
 {% endschema %}
+{% comment %} [END nesting.block_schema] {% endcomment %}

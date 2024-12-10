@@ -1,10 +1,29 @@
+{% stylesheet %}
+  .text-block-subtitle {
+    font-size: 1.8rem;
+    line-height: calc(1 + 0.8 / var(--font-body-scale));
+    letter-spacing: 0.06rem;
+    color: rgba(var(--color-foreground), 0.7);
+  }
+
+  .text-block-caption {
+    font-size: 1rem;
+    letter-spacing: 0.13rem;
+    line-height: calc(1 + 0.2 / var(--font-body-scale));
+    text-transform: uppercase;
+  }
+{% endstylesheet %}
+
+{% comment %} [START block.markup] {% endcomment %}
 <div
   class="{{ block.settings | class_list }} text-block {{ block.settings.text_style }} text-{{ block.settings.alignment }}"
   {{ block.shopify_attributes }}
 >
   {{ block.settings.text }}
 </div>
+{% comment %} [END block.markup] {% endcomment %}
 
+{% comment %} [START block.preset] {% endcomment %}
 {% schema %}
 {
   "name": "Text",
@@ -74,6 +93,15 @@
       "label": "Spacing"
     }
   ],
-  "presets": [{ "name": "Text" }]
+  "presets": [
+    { "name": "Text" },
+    {
+      "name": "Heading",
+      "settings": {
+        "text": "<h2>Heading<\/h2>"
+      }
+    }
+  ]
 }
 {% endschema %}
+{% comment %} [END block.preset {% endcomment %}

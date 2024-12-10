@@ -1,3 +1,12 @@
+{% stylesheet %}
+  .payment-icons__list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+{% endstylesheet %}
+
 <span class="visually-hidden">Payment methods</span>
 <ul class="list payment-icons__list" role="list">
   {%- for type in shop.enabled_payment_types -%}

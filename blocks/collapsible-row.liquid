@@ -1,8 +1,41 @@
+{% stylesheet %}
+  details {
+    width: 100%;
+    border-block-start: 1px solid rgba(var(--color-foreground), 0.08);
+  }
+
+  summary {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    padding-block: 1.5rem;
+    padding-inline: 0;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  summary:hover {
+    text-decoration: underline;
+    background-color: rgba(var(--color-foreground), 0.04);
+  }
+
+  summary .icon-caret {
+    margin-inline-start: auto;
+    height: 0.6rem;
+    margin-right: 1.5rem;
+  }
+
+  details[open] > summary .icon-caret {
+    transform: rotate(180deg);
+  }
+{% endstylesheet %}
+
 <details class="{{ block.settings | class_list }} details" {{ block.shopify_attributes }}>
-  {% content_for "block", type: "collapsible-row-summary", id: "collapsible-row-summary" %}
+  {% content_for 'block', type: 'collapsible-row-summary', id: 'collapsible-row-summary' %}
 
   <div>
-    {% content_for "blocks" %}
+    {% content_for 'blocks' %}
   </div>
 </details>
 
@@ -45,7 +78,10 @@
           },
           "blocks": [
             {
-              "type": "heading"
+              "type": "text",
+              "settings": {
+                "text": "<h3>Collapsible content</h3>"
+              }
             },
             {
               "type": "text"

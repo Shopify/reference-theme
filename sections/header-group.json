@@ -57,10 +57,9 @@
           },
           "blocks": {
             "heading_HeFnwz": {
-              "type": "heading",
+              "type": "text",
               "settings": {
-                "heading": "<a href=\"\/\" title=\"\/\">Store name<\/a>",
-                "heading_size": "h2",
+                "text": "<h2><a href=\"/\" title=\"/\">Store name</a></h2>",
                 "alignment": "start"
               }
             }

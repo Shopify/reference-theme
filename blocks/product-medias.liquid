@@ -1,3 +1,45 @@
+{% stylesheet %}
+  .media-block {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .layout--row > .media-block {
+    align-self: flex-start;
+  }
+
+  .media-block:where(.column) {
+    flex-direction: column;
+  }
+
+  .media-block > div {
+    display: flex;
+  }
+
+  .media-block:not(.column) > div {
+    flex-grow: 1;
+  }
+
+  .media-block:has(div:nth-child(2)) {
+    flex-wrap: wrap;
+  }
+
+  .media-block > div:not(:only-child) {
+    max-width: 50%;
+  }
+
+  .media-block.column > div {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .media-block .placeholder-image svg {
+    position: relative;
+  }
+{% endstylesheet %}
+
 {% liquid
   if block.settings.product != blank
     assign target = block.settings.product

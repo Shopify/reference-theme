@@ -53,7 +53,7 @@
     {%- endif -%}
   </div>
   <div class="{{ block.settings | class_list }} slide__content">
-    {% content_for "blocks" %}
+    {% content_for 'blocks' %}
   </div>
 </div>
 
@@ -117,10 +117,9 @@
           },
           "blocks": [
             {
-              "type": "heading",
+              "type": "text",
               "settings": {
-                "heading": "Image slide",
-                "heading_size": "h1"
+                "text": "<h1>Image slide</h1>"
               }
             },
             {

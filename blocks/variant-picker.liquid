@@ -1,3 +1,52 @@
+{% stylesheet %}
+  .variant-block label {
+    display: inline-block;
+    padding-block: 8px;
+  }
+
+  .variant-select {
+    position: relative;
+  }
+
+  .variant-select svg {
+    position: absolute;
+    height: 6px;
+    top: 50%;
+    transform: translatey(-50%);
+    right: 1rem;
+    pointer-events: none;
+  }
+
+  .variant-block select {
+    width: 100%;
+    padding-block: 12px;
+    padding-inline: 10px 30px;
+    border-radius: 4px;
+    border: 1px solid #000;
+    appearance: none;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  class ProductInputs extends HTMLElement {
+    constructor() {
+      super();
+      this.section = this.closest('.shopify-section');
+      this.hiddenVariantInput = this.section.querySelector(`input[name="id"]`);
+      this.inputElement = this.querySelector(`[name="id"]`);
+      this.addEventListener('change', this.#updateHiddenInput);
+    }
+
+    #updateHiddenInput = () => {
+      this.hiddenVariantInput.value = this.inputElement.value;
+    };
+  }
+
+  if (!customElements.get('product-inputs')) {
+    customElements.define('product-inputs', ProductInputs);
+  }
+{% endjavascript %}
+
 {%- liquid
   assign product = block.settings.product
   assign product_form_id = 'product-form-' | append: section.id | append: product.id
