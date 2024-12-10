@@ -1,9 +1,10 @@
-{% stylesheet %}{% endstylesheet %}
-
 <div class="full-width {{ section.settings | class_list }} color-{{ section.settings.color_scheme }}">
-  {% content_for "blocks" %}
+  {% comment %} [START section.render_blocks] {% endcomment %}
+  {% content_for 'blocks' %}
+  {% comment %} [END section.render_blocks] {% endcomment %}
 </div>
 
+{% comment %} [START section.blocks] {% endcomment %}
 {% schema %}
 {
   "name": "Custom section",
@@ -91,10 +92,9 @@
           },
           "blocks": [
             {
-              "type": "heading",
+              "type": "text",
               "settings": {
-                "heading": "Image with text",
-                "heading_size": "h1"
+                "text": "<h1>Image with text</h1>"
               }
             },
             {
@@ -129,9 +129,9 @@
       },
       "blocks": [
         {
-          "type": "heading",
+          "type": "text",
           "settings": {
-            "heading": "Collapsible content"
+            "text": "<h2>Collapsible content</h2>"
           }
         },
         {
@@ -175,7 +175,7 @@
                   },
                   "blocks": [
                     {
-                      "type": "heading"
+                      "type": "text"
                     },
                     {
                       "type": "text"
@@ -216,7 +216,7 @@
                   },
                   "blocks": [
                     {
-                      "type": "heading"
+                      "type": "text"
                     },
                     {
                       "type": "text"
@@ -257,7 +257,7 @@
                   },
                   "blocks": [
                     {
-                      "type": "heading"
+                      "type": "text"
                     },
                     {
                       "type": "text"
@@ -298,7 +298,7 @@
                   },
                   "blocks": [
                     {
-                      "type": "heading"
+                      "type": "text"
                     },
                     {
                       "type": "text"
@@ -324,9 +324,9 @@
       },
       "blocks": [
         {
-          "type": "heading",
+          "type": "text",
           "settings": {
-            "heading": "Collections"
+            "text": "<h2>Collections</h2>"
           }
         },
         {
@@ -411,9 +411,9 @@
       "name": "Collage",
       "blocks": [
         {
-          "type": "heading",
+          "type": "text",
           "settings": {
-            "heading": "Multimedia collage"
+            "text": "<h2>Multimedia collage</h2>"
           }
         },
         {
@@ -514,9 +514,9 @@
           },
           "blocks": [
             {
-              "type": "heading",
+              "type": "text",
               "settings": {
-                "heading_size": "h1",
+                "text": "<h1>Rich text</h1>",
                 "alignment": "center"
               }
             },
@@ -551,10 +551,9 @@
       },
       "blocks": [
         {
-          "type": "heading",
+          "type": "text",
           "settings": {
-            "heading": "Multicolumn",
-            "heading_size": "h2"
+            "text": "<h2>Multicolumn</h2>"
           }
         },
         {
@@ -582,10 +581,9 @@
               },
               "blocks": [
                 {
-                  "type": "heading",
+                  "type": "text",
                   "settings": {
-                    "heading": "Column",
-                    "heading_size": "h3"
+                    "text": "<h3>Column</h3>"
                   }
                 },
                 {
@@ -613,10 +611,9 @@
               },
               "blocks": [
                 {
-                  "type": "heading",
+                  "type": "text",
                   "settings": {
-                    "heading": "Column",
-                    "heading_size": "h3"
+                    "text": "<h3>Column</h3>"
                   }
                 },
                 {
@@ -644,10 +641,9 @@
               },
               "blocks": [
                 {
-                  "type": "heading",
+                  "type": "text",
                   "settings": {
-                    "heading": "Column",
-                    "heading_size": "h3"
+                    "text": "<h3>Column</h3>"
                   }
                 },
                 {
@@ -697,10 +693,9 @@
       },
       "blocks": [
         {
-          "type": "heading",
+          "type": "text",
           "settings": {
-            "heading": "Subscribe to our newsletter",
-            "heading_size": "h2",
+            "text": "<h2>Subscribe to our newsletter</h2>",
             "alignment": "center"
           }
         },
@@ -753,10 +748,9 @@
               }
             },
             {
-              "type": "heading",
+              "type": "text",
               "settings": {
-                "heading": "Heading",
-                "heading_size": "h3",
+                "text": "<h3>Heading</h3>",
                 "alignment": "center"
               }
             },
@@ -794,10 +788,9 @@
               }
             },
             {
-              "type": "heading",
+              "type": "text",
               "settings": {
-                "heading": "Heading",
-                "heading_size": "h3",
+                "text": "<h3>Heading</h3>",
                 "alignment": "center"
               }
             },
@@ -835,10 +828,9 @@
               }
             },
             {
-              "type": "heading",
+              "type": "text",
               "settings": {
-                "heading": "Heading",
-                "heading_size": "h3",
+                "text": "<h3>Heading</h3>",
                 "alignment": "center"
               }
             },
@@ -864,10 +856,9 @@
       },
       "blocks": [
         {
-          "type": "heading",
+          "type": "text",
           "settings": {
-            "heading": "Featured collection",
-            "heading_size": "h2",
+            "text": "<h2>Featured collection</h2>",
             "alignment": "start"
           }
         },
@@ -916,3 +907,4 @@
   ]
 }
 {% endschema %}
+{% comment %} [END section.blocks] {% endcomment %}

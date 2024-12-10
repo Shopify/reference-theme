@@ -1,12 +1,98 @@
+{% stylesheet %}
+  .quantity-block label {
+    display: inline-block;
+    padding-block: 8px;
+  }
+
+  .quantity-button-wrapper {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .minus-button {
+    border-start-start-radius: 4px;
+    border-end-start-radius: 4px;
+  }
+
+  .plus-button {
+    border-start-end-radius: 4px;
+    border-end-end-radius: 4px;
+  }
+
+  .quantity-button {
+    width: min(25%, fit-content);
+    border: 1px solid #000;
+    background-color: #fff;
+    padding: 12px;
+    font-size: calc(var(--font-body-scale) * 1.8rem);
+  }
+
+  .quantity-input {
+    width: 100%;
+    border-inline-width: 0px;
+    border-block-width: 1px;
+    padding: 12px;
+    color: currentColor;
+    font-size: calc(var(--font-body-scale) * 1.6rem);
+    font-weight: 500;
+    text-align: center;
+    background-color: #fff;
+    width: 100%;
+    flex-grow: 1;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .quantity-input::-webkit-outer-spin-button,
+  .quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .quantity-input[type='number'] {
+    -moz-appearance: textfield;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  class QuantityInput extends HTMLElement {
+    constructor() {
+      super();
+      this.inputElement = this.querySelector('input');
+      this.#prepareEventHandlers();
+    }
+
+    #prepareEventHandlers() {
+      const minusButton = this.querySelector('[name="minus"]');
+      const plusButton = this.querySelector('[name="plus"]');
+
+      [minusButton, plusButton].forEach((button) => {
+        button.addEventListener('click', this.#onButtonClick);
+      });
+    }
+
+    #onButtonClick = (event) => {
+      event.preventDefault();
+      const currentValue = parseInt(this.inputElement.value);
+      const newValue = event.target.name === 'plus' ? currentValue + 1 : currentValue - 1;
+      this.inputElement.value = newValue > 0 ? newValue : 1;
+    };
+  }
+
+  if (!customElements.get('quantity-input')) {
+    customElements.define('quantity-input', QuantityInput);
+  }
+{% endjavascript %}
+
 {% liquid
   if block.settings.product != blank
     assign target = block.settings.product
   endif
 
-  assign product_form_id = 'product-form-' | append: section.id | append: product.id
+  assign product_form_id = 'product-form-' | append: section.id
 %}
 
-<product-inputs
+<div
   class="{{ block.settings | class_list }} quantity-block"
   {{ block.shopify_attributes }}
   data-section="{{ section.id }}{{ target.id }}"
@@ -26,7 +112,7 @@
     >
     <button class="quantity-button plus-button" type="button" name="plus">+</button>
   </quantity-input>
-</product-inputs>
+</div>
 
 {% schema %}
 {

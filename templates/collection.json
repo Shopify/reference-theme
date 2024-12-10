@@ -4,15 +4,10 @@
       "type": "custom-section",
       "blocks": {
         "heading_mqAgUH": {
-          "type": "heading",
+          "type": "text",
           "settings": {
-            "heading": "{{ closest.collection.title }}",
-            "heading_size": "h1",
-            "alignment": "start",
-            "size": {
-            },
-            "spacing": {
-            }
+            "text": "<h1>{{ closest.collection.title }}</h1>",
+            "alignment": "start"
           }
         }
       },

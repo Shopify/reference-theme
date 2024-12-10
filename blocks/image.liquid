@@ -1,3 +1,17 @@
+{% stylesheet %}
+  .image-block img {
+    height: 100%;
+  }
+
+  .image-block--cover img {
+    object-fit: cover;
+  }
+
+  .image-block--contain img {
+    object-fit: contain;
+  }
+{% endstylesheet %}
+
 <div
   class="{{ block.settings | class_list }} image-block image-block--{{ block.settings.object_fit }}"
   {{ block.shopify_attributes }}

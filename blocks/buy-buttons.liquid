@@ -1,22 +1,54 @@
 {% liquid
   assign product = block.settings.product
 %}
+
+{% stylesheet %}
+  .product-form__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .button--add-to-cart {
+    border-radius: 4px;
+    padding-block: 12px;
+    padding-inline: 12px;
+  }
+
+  .product-form__buttons > * {
+    width: 100%;
+  }
+  .button--product-submit {
+    border: 1px solid rgb(var(--color-secondary-button-text));
+    background: rgba(var(--color-secondary-button), 1);
+    color: rgb(var(--color-secondary-button-text));
+  }
+
+  .shopify-payment-button .shopify-payment-button__button {
+    width: 100%;
+    line-height: normal;
+    padding-block: 12px;
+  }
+
+  .shopify-payment-button__button.shopify-payment-button__button--unbranded:hover:not([disabled]) {
+    background-color: rgba(var(--color-button), 0.9);
+  }
+
+  .shopify-payment-button__more-options.shopify-payment-button__button--hidden {
+    display: none;
+  }
+{% endstylesheet %}
+
 <div
   class="{{ block.settings.size | class_list }} {{ block.settings.spacing | class_list }}"
   {{ block.shopify_attributes }}
 >
-  {% style %}
-    #ProductSubmitButton-{{ section.id }}-{{ product.id }} {
-      border: 1px solid rgb(var(--color-secondary-button-text));
-      background: rgba(var(--color-secondary-button), 1);
-      color: rgb(var(--color-secondary-button-text));
-    }
-  {% endstyle %}
-
   {%- if product != blank -%}
-    {%- assign product_form_id = 'product-form-' | append: section.id | append: product.id | append: block.id -%}
+    {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
-    <product-form data-section="{{ section.id }}{{ product.id }}">
+    <form id="{{ product_form_id }}">
       {%- form 'product',
         product,
         id: product_form_id,
@@ -32,20 +64,11 @@
             disabled
           {% endif %}
         >
-        <input
-          type="hidden"
-          name="quantity"
-          value="1"
-          min="1"
-          {% if product.selected_or_first_available_variant.available == false %}
-            disabled
-          {% endif %}
-        >
 
         <div class="{{ block.settings.layout | class_list }} product-form__buttons">
           <button
             id="ProductSubmitButton-{{ section.id }}-{{ product.id }}"
-            class="button button--add-to-cart"
+            class="button button--add-to-cart button--product-submit"
             type="submit"
             name="add"
             {% if product.selected_or_first_available_variant.available == false %}
@@ -66,7 +89,7 @@
           {%- endif -%}
         </div>
       {%- endform -%}
-    </product-form>
+    </form>
   {%- else -%}
     <div class="product-form">
       <div class="product-form__buttons form">
@@ -124,7 +147,7 @@
     }
   ],
   "presets": [
-    { 
+    {
       "name": "Product (buy buttons)",
       "settings": { "product": "{{ closest.product }}" }
     }

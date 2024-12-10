@@ -1,3 +1,90 @@
+{% stylesheet %}
+  .pagination-wrapper {
+    margin-top: 4rem;
+  }
+
+  @media screen and (min-width: 990px) {
+    .pagination-wrapper {
+      margin-top: 5rem;
+    }
+  }
+
+  .pagination__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pagination__list > li {
+    flex: 1 0 4.4rem;
+    max-width: 4.4rem;
+  }
+
+  .pagination__item {
+    color: rgb(var(--color-foreground));
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 4.4rem;
+    width: 100%;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  .pagination__item.link:hover {
+    text-decoration: none;
+  }
+
+  a.pagination__item:hover::after {
+    height: 0.1rem;
+  }
+
+  .pagination__item .icon-caret {
+    height: 0.6rem;
+  }
+
+  .pagination__item--current::after {
+    height: 0.1rem;
+  }
+
+  .pagination__item--current::after,
+  .pagination__item:hover::after {
+    content: '';
+    display: block;
+    width: 2rem;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: currentColor;
+  }
+
+  .pagination__item--next .icon {
+    transform: rotate(-90deg);
+  }
+
+  .pagination__item--next:hover .icon {
+    transform: rotate(-90deg) scale(1.07);
+  }
+
+  .pagination__item--prev .icon {
+    transform: rotate(90deg);
+  }
+
+  .pagination__item--prev:hover .icon {
+    transform: rotate(90deg) scale(1.07);
+  }
+
+  .filters-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 20px;
+  }
+{% endstylesheet %}
+
 <div
   class="full-width {{ section.settings | class_list }} color-{{ section.settings.color_scheme }}"
 >
@@ -20,7 +107,7 @@
   {% else %}
     <p>No products found.</p>
   {% endif %}
-  {% content_for "blocks" %}
+  {% content_for 'blocks' %}
 </div>
 {% schema %}
 {

@@ -1,3 +1,21 @@
+{% stylesheet %}
+  .link-block {
+    display: inline-flex;
+  }
+
+  .link-block-icon-right {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .link-block svg {
+    fill: rgb(var(--fill-link-icon-color));
+  }
+
+  .link--with-icon {
+    gap: 5px;
+  }
+{% endstylesheet %}
 <a
   href="{{ block.settings.link }}"
   class="{{ block.settings | class_list }} link-block link-block-icon-{{ block.settings.icon_position }} {{ block.settings.style_class }}{% if block.settings.icon != "none" %} link--with-icon{% endif %}"

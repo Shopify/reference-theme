@@ -1,3 +1,11 @@
+{% stylesheet %}
+  .price-block {
+    display: flex;
+    gap: 5px;
+    width: fit-content;
+  }
+{% endstylesheet %}
+
 <div class="price-block {{ block.settings | class_list }}" {{ block.shopify_attributes }}>
   {%- liquid
     if block.settings.product != blank

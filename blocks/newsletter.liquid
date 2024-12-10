@@ -1,3 +1,65 @@
+{% stylesheet %}
+  .newsletter-block {
+    position: relative;
+    overflow: auto;
+  }
+
+  .newsletter-block .contact-form {
+    width: max(150px, 100%);
+    min-height: 44px;
+  }
+
+  .newsletter-block__form-inputs {
+    position: relative;
+  }
+
+  .newsletter-block input {
+    width: 100%;
+    padding: 22px 44px 8px 12px;
+    background: var(--gradient-background);
+    color: rgb(var(--color-foreground));
+  }
+
+  .newsletter-block label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .newsletter-block input::placeholder {
+    opacity: 0;
+  }
+
+  .newsletter-block input:focus + label,
+  .newsletter-block input:not(:placeholder-shown) + label {
+    font-size: 0.8rem;
+    transform: translateY(-120%);
+  }
+
+  .newsletter-block button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    min-width: 44px;
+    padding-inline: 0;
+    background-color: transparent;
+    color: var(--color-foreground);
+  }
+
+  .newsletter-block svg {
+    width: 15px;
+  }
+
+  .field__input {
+    padding-block: 12px;
+    padding-inline: 8px;
+    border: 1px solid rgb(var(--color-foreground));
+  }
+{% endstylesheet %}
+
 <div class="newsletter-block {{ block.settings | class_list }}">
   <div class="newsletter-form">
     {%- form 'customer' -%}
